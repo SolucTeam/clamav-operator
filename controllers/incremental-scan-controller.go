@@ -17,10 +17,9 @@ import (
 	"k8s.io/apimachinery/pkg/api/errors"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/types"
-	"sigs.k8s.io/controller-runtime/pkg/client"
 	"sigs.k8s.io/controller-runtime/pkg/log"
 
-	clamavv1alpha1 "gitlab.tooling.cloudgouv-eu-west-1.numspot.internal/platform-iac/clamav-operator/api/v1alpha1"
+	clamavv1alpha1 "github.com/SolucTeam/clamav-operator/api/v1alpha1"
 )
 
 // getScanCache récupère le cache de scan pour un node

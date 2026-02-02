@@ -8,7 +8,7 @@ import (
 	"github.com/prometheus/client_golang/prometheus"
 	"sigs.k8s.io/controller-runtime/pkg/metrics"
 
-	clamavv1alpha1 "gitlab.tooling.cloudgouv-eu-west-1.numspot.internal/platform-iac/clamav-operator/api/v1alpha1"
+	clamavv1alpha1 "github.com/SolucTeam/clamav-operator/api/v1alpha1"
 )
 
 var (

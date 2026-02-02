@@ -80,6 +80,20 @@ type NodeScanSpec struct {
 	// +kubebuilder:default=86400
 	// +optional
 	TTLSecondsAfterFinished *int32 `json:"ttlSecondsAfterFinished,omitempty"`
+
+	// Strategy defines the scan strategy to use
+	// +kubebuilder:validation:Enum=full;incremental;modified-only;smart
+	// +kubebuilder:default=full
+	// +optional
+	Strategy ScanStrategy `json:"strategy,omitempty"`
+
+	// IncrementalConfig configures incremental scan behavior
+	// +optional
+	IncrementalConfig *IncrementalScanConfig `json:"incrementalConfig,omitempty"`
+
+	// ForceFullScan forces a full scan even if incremental is enabled
+	// +optional
+	ForceFullScan bool `json:"forceFullScan,omitempty"`
 }
 
 // NodeScanPhase represents the current phase of a NodeScan
@@ -170,6 +184,22 @@ type NodeScanStatus struct {
 	// LastTransitionTime is the last time the phase transitioned
 	// +optional
 	LastTransitionTime *metav1.Time `json:"lastTransitionTime,omitempty"`
+
+	// StrategyUsed is the actual strategy that was used for this scan
+	// +optional
+	StrategyUsed ScanStrategy `json:"strategyUsed,omitempty"`
+
+	// FilesSkippedIncremental is the number of files skipped due to incremental scan
+	// +optional
+	FilesSkippedIncremental int64 `json:"filesSkippedIncremental,omitempty"`
+
+	// CacheHitRate is the percentage of files that were skipped (0-100)
+	// +optional
+	CacheHitRate float64 `json:"cacheHitRate,omitempty"`
+
+	// TimeSaved is the estimated time saved by incremental scanning (in seconds)
+	// +optional
+	TimeSaved int64 `json:"timeSaved,omitempty"`
 }
 
 // +kubebuilder:object:root=true

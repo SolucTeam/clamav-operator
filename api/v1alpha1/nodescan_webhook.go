@@ -17,9 +17,8 @@ limitations under the License.
 package v1alpha1
 
 import (
-	"fmt"
-
 	"k8s.io/apimachinery/pkg/runtime"
+	"k8s.io/apimachinery/pkg/util/validation/field"
 	ctrl "sigs.k8s.io/controller-runtime"
 	logf "sigs.k8s.io/controller-runtime/pkg/log"
 	"sigs.k8s.io/controller-runtime/pkg/webhook"
@@ -44,20 +43,10 @@ var _ webhook.Validator = &NodeScan{}
 func (r *NodeScan) ValidateCreate() (admission.Warnings, error) {
 	nodescanlog.Info("validate create", "name", r.Name)
 
-	if r.Spec.NodeName == "" {
-		return nil, fmt.Errorf("nodeName is required")
-	}
+	allErrs := r.validateNodeScan()
 
-	if r.Spec.MaxConcurrent < 1 || r.Spec.MaxConcurrent > 20 {
-		return nil, fmt.Errorf("maxConcurrent must be between 1 and 20")
-	}
-
-	if r.Spec.FileTimeout != 0 && r.Spec.FileTimeout < 1000 {
-		return nil, fmt.Errorf("fileTimeout must be at least 1000ms (1 second)")
-	}
-
-	if r.Spec.MaxFileSize != 0 && r.Spec.MaxFileSize < 0 {
-		return nil, fmt.Errorf("maxFileSize must be positive")
+	if len(allErrs) > 0 {
+		return nil, allErrs.ToAggregate()
 	}
 
 	return nil, nil
@@ -69,14 +58,20 @@ func (r *NodeScan) ValidateUpdate(old runtime.Object) (admission.Warnings, error
 
 	oldNodeScan := old.(*NodeScan)
 
+	var allErrs field.ErrorList
+
 	// Prevent changing nodeName after creation
 	if r.Spec.NodeName != oldNodeScan.Spec.NodeName {
-		return nil, fmt.Errorf("nodeName cannot be changed after creation")
+		allErrs = append(allErrs, field.Forbidden(
+			field.NewPath("spec").Child("nodeName"),
+			"nodeName cannot be changed after creation"))
 	}
 
-	// Validate other fields like in create
-	if r.Spec.MaxConcurrent < 1 || r.Spec.MaxConcurrent > 20 {
-		return nil, fmt.Errorf("maxConcurrent must be between 1 and 20")
+	// Validate other fields
+	allErrs = append(allErrs, r.validateNodeScan()...)
+
+	if len(allErrs) > 0 {
+		return nil, allErrs.ToAggregate()
 	}
 
 	return nil, nil
@@ -88,4 +83,50 @@ func (r *NodeScan) ValidateDelete() (admission.Warnings, error) {
 
 	// No validation needed for delete
 	return nil, nil
+}
+
+// validateNodeScan performs comprehensive validation of NodeScan spec
+func (r *NodeScan) validateNodeScan() field.ErrorList {
+	var allErrs field.ErrorList
+	specPath := field.NewPath("spec")
+
+	// Validate nodeName
+	allErrs = append(allErrs, ValidateNodeName(r.Spec.NodeName, specPath.Child("nodeName"))...)
+
+	// Validate priority
+	allErrs = append(allErrs, ValidatePriority(r.Spec.Priority, specPath.Child("priority"))...)
+
+	// Validate paths if specified
+	if len(r.Spec.Paths) > 0 {
+		allErrs = append(allErrs, ValidatePaths(r.Spec.Paths, specPath.Child("paths"))...)
+	}
+
+	// Validate exclude patterns if specified
+	if len(r.Spec.ExcludePatterns) > 0 {
+		allErrs = append(allErrs, ValidateExcludePatterns(r.Spec.ExcludePatterns, specPath.Child("excludePatterns"))...)
+	}
+
+	// Validate maxConcurrent
+	allErrs = append(allErrs, ValidateNodeScanConcurrent(r.Spec.MaxConcurrent, specPath.Child("maxConcurrent"))...)
+
+	// Validate fileTimeout
+	allErrs = append(allErrs, ValidateFileTimeout(r.Spec.FileTimeout, specPath.Child("fileTimeout"))...)
+
+	// Validate maxFileSize
+	allErrs = append(allErrs, ValidateMaxFileSize(r.Spec.MaxFileSize, specPath.Child("maxFileSize"))...)
+
+	// Validate resources if specified
+	if r.Spec.Resources != nil {
+		allErrs = append(allErrs, validateResources(r.Spec.Resources, specPath.Child("resources"))...)
+	}
+
+	// Validate TTL
+	if r.Spec.TTLSecondsAfterFinished != nil && *r.Spec.TTLSecondsAfterFinished < 0 {
+		allErrs = append(allErrs, field.Invalid(
+			specPath.Child("ttlSecondsAfterFinished"),
+			*r.Spec.TTLSecondsAfterFinished,
+			"must be non-negative"))
+	}
+
+	return allErrs
 }

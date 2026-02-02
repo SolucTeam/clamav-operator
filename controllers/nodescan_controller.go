@@ -27,7 +27,6 @@ import (
 	batchv1 "k8s.io/api/batch/v1"
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/api/errors"
-	"k8s.io/apimachinery/pkg/api/resource"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/types"
@@ -39,11 +38,15 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/controller/controllerutil"
 	"sigs.k8s.io/controller-runtime/pkg/log"
 
-	clamavv1alpha1 "gitlab.tooling.cloudgouv-eu-west-1.numspot.internal/platform-iac/clamav-operator/api/v1alpha1"
+	clamavv1alpha1 "github.com/SolucTeam/clamav-operator/api/v1alpha1"
 )
 
 const (
 	nodeScanFinalizer = "clamav.platform.numspot.com/finalizer"
+	// maxParseRetries is the maximum number of times to retry parsing job results
+	maxParseRetries = 5
+	// parseRetryAnnotation tracks the number of parse retry attempts
+	parseRetryAnnotation = "clamav.platform.numspot.com/parse-retries"
 )
 
 // NodeScanReconciler reconciles a NodeScan object
@@ -203,9 +206,42 @@ func (r *NodeScanReconciler) Reconcile(ctx context.Context, req ctrl.Request) (c
 				nodeScan.Status.Duration = int64(now.Sub(nodeScan.Status.StartTime.Time).Seconds())
 			}
 
-			// Parse results from Job
+			// Parse results from Job with retry on transient errors
 			if err := r.parseJobResults(ctx, &nodeScan, &existingJob); err != nil {
-				log.Error(err, "failed to parse job results")
+				// Track retry count in annotations
+				retryCount := 0
+				if nodeScan.Annotations != nil {
+					if val, ok := nodeScan.Annotations[parseRetryAnnotation]; ok {
+						fmt.Sscanf(val, "%d", &retryCount)
+					}
+				}
+				retryCount++
+
+				if retryCount >= maxParseRetries {
+					// Max retries exceeded - mark as completed with partial results
+					log.Error(err, "max parse retries exceeded, completing with partial results",
+						"retries", retryCount)
+					r.Recorder.Event(&nodeScan, corev1.EventTypeWarning, "ParseResultsMaxRetries",
+						fmt.Sprintf("Failed to parse scan results after %d attempts: %v", retryCount, err))
+					// Continue with completion - don't block on parse failures
+				} else {
+					// Update retry count annotation
+					if nodeScan.Annotations == nil {
+						nodeScan.Annotations = make(map[string]string)
+					}
+					nodeScan.Annotations[parseRetryAnnotation] = fmt.Sprintf("%d", retryCount)
+					if err := r.Update(ctx, &nodeScan); err != nil {
+						log.Error(err, "failed to update retry annotation")
+					}
+
+					log.Error(err, "failed to parse job results, will retry",
+						"attempt", retryCount, "maxRetries", maxParseRetries)
+					r.Recorder.Event(&nodeScan, corev1.EventTypeWarning, "ParseResultsFailed",
+						fmt.Sprintf("Failed to parse scan results (attempt %d/%d): %v", retryCount, maxParseRetries, err))
+					// Requeue with exponential backoff
+					backoff := time.Duration(retryCount*10) * time.Second
+					return ctrl.Result{RequeueAfter: backoff}, nil
+				}
 			}
 
 			r.Recorder.Event(&nodeScan, corev1.EventTypeNormal, "ScanCompleted",
@@ -309,22 +345,18 @@ func (r *NodeScanReconciler) constructJobForNodeScan(nodeScan *clamavv1alpha1.No
 		{Name: "MAX_FILE_SIZE", Value: fmt.Sprintf("%d", maxFileSize)},
 	}
 
-	// Resources
-	resources := &corev1.ResourceRequirements{
-		Requests: corev1.ResourceList{
-			corev1.ResourceCPU:    resource.MustParse("500m"),
-			corev1.ResourceMemory: resource.MustParse("512Mi"),
-		},
-		Limits: corev1.ResourceList{
-			corev1.ResourceCPU:    resource.MustParse("2000m"),
-			corev1.ResourceMemory: resource.MustParse("1Gi"),
-		},
-	}
-
+	// Resources - apply in priority order:
+	// 1. NodeScan.Spec.Resources (explicit)
+	// 2. ScanPolicy.Spec.Resources (policy-defined)
+	// 3. Priority-based defaults (high/medium/low)
+	var resources corev1.ResourceRequirements
 	if nodeScan.Spec.Resources != nil {
-		resources = nodeScan.Spec.Resources
+		resources = *nodeScan.Spec.Resources
 	} else if scanPolicy != nil && scanPolicy.Spec.Resources != nil {
-		resources = scanPolicy.Spec.Resources
+		resources = *scanPolicy.Spec.Resources
+	} else {
+		// Use priority-based default resources
+		resources = GetResourcesForPriority(nodeScan.Spec.Priority)
 	}
 
 	// Job name
@@ -398,7 +430,7 @@ func (r *NodeScanReconciler) constructJobForNodeScan(nodeScan *clamavv1alpha1.No
 									MountPath: "/results",
 								},
 							},
-							Resources: *resources,
+							Resources: resources,
 							SecurityContext: &corev1.SecurityContext{
 								Privileged:             ptr.To(true),
 								ReadOnlyRootFilesystem: ptr.To(false),

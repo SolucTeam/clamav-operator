@@ -17,9 +17,8 @@ limitations under the License.
 package v1alpha1
 
 import (
-	"fmt"
-
 	"k8s.io/apimachinery/pkg/runtime"
+	"k8s.io/apimachinery/pkg/util/validation/field"
 	ctrl "sigs.k8s.io/controller-runtime"
 	logf "sigs.k8s.io/controller-runtime/pkg/log"
 	"sigs.k8s.io/controller-runtime/pkg/webhook"
@@ -44,8 +43,10 @@ var _ webhook.Validator = &ClusterScan{}
 func (r *ClusterScan) ValidateCreate() (admission.Warnings, error) {
 	clusterscanlog.Info("validate create", "name", r.Name)
 
-	if r.Spec.Concurrent < 1 || r.Spec.Concurrent > 50 {
-		return nil, fmt.Errorf("concurrent must be between 1 and 50")
+	allErrs := r.validateClusterScan()
+
+	if len(allErrs) > 0 {
+		return nil, allErrs.ToAggregate()
 	}
 
 	return nil, nil
@@ -55,8 +56,10 @@ func (r *ClusterScan) ValidateCreate() (admission.Warnings, error) {
 func (r *ClusterScan) ValidateUpdate(old runtime.Object) (admission.Warnings, error) {
 	clusterscanlog.Info("validate update", "name", r.Name)
 
-	if r.Spec.Concurrent < 1 || r.Spec.Concurrent > 50 {
-		return nil, fmt.Errorf("concurrent must be between 1 and 50")
+	allErrs := r.validateClusterScan()
+
+	if len(allErrs) > 0 {
+		return nil, allErrs.ToAggregate()
 	}
 
 	return nil, nil
@@ -68,4 +71,50 @@ func (r *ClusterScan) ValidateDelete() (admission.Warnings, error) {
 
 	// No validation needed for delete
 	return nil, nil
+}
+
+// validateClusterScan performs comprehensive validation of ClusterScan spec
+func (r *ClusterScan) validateClusterScan() field.ErrorList {
+	var allErrs field.ErrorList
+	specPath := field.NewPath("spec")
+
+	// Validate concurrent (1-50)
+	allErrs = append(allErrs, ValidateClusterScanConcurrent(r.Spec.Concurrent, specPath.Child("concurrent"))...)
+
+	// Validate priority
+	allErrs = append(allErrs, ValidatePriority(r.Spec.Priority, specPath.Child("priority"))...)
+
+	// Validate NodeScanTemplate if provided
+	if r.Spec.NodeScanTemplate != nil {
+		templatePath := specPath.Child("nodeScanTemplate")
+
+		// Validate paths in template
+		if len(r.Spec.NodeScanTemplate.Paths) > 0 {
+			allErrs = append(allErrs, ValidatePaths(r.Spec.NodeScanTemplate.Paths, templatePath.Child("paths"))...)
+		}
+
+		// Validate maxConcurrent in template
+		allErrs = append(allErrs, ValidateNodeScanConcurrent(
+			r.Spec.NodeScanTemplate.MaxConcurrent,
+			templatePath.Child("maxConcurrent"))...)
+
+		// Validate resources in template
+		if r.Spec.NodeScanTemplate.Resources != nil {
+			allErrs = append(allErrs, validateResources(
+				r.Spec.NodeScanTemplate.Resources,
+				templatePath.Child("resources"))...)
+		}
+	}
+
+	// Validate nodeSelector if provided
+	if r.Spec.NodeSelector != nil {
+		if len(r.Spec.NodeSelector.MatchLabels) == 0 && len(r.Spec.NodeSelector.MatchExpressions) == 0 {
+			allErrs = append(allErrs, field.Invalid(
+				specPath.Child("nodeSelector"),
+				r.Spec.NodeSelector,
+				"nodeSelector must have at least one matchLabel or matchExpression"))
+		}
+	}
+
+	return allErrs
 }

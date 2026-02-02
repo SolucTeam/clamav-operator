@@ -19,7 +19,7 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/client"
 	"sigs.k8s.io/controller-runtime/pkg/log"
 
-	clamavv1alpha1 "gitlab.tooling.cloudgouv-eu-west-1.numspot.internal/platform-iac/clamav-operator/api/v1alpha1"
+	clamavv1alpha1 "github.com/SolucTeam/clamav-operator/api/v1alpha1"
 )
 
 // ScanScheduleReconciler reconciles a ScanSchedule object
@@ -57,9 +57,6 @@ func (r *ScanScheduleReconciler) Reconcile(ctx context.Context, req ctrl.Request
 
 	// Update next schedule time
 	scanSchedule.Status.NextScheduleTime = &metav1.Time{Time: nextRun}
-
-	// ✅ Enregistrer métrique
-	recordScanScheduleNextRun(scanSchedule.Namespace, scanSchedule.Name, float64(nextRun.Unix()))
 
 	// Check if suspended
 	if scanSchedule.Spec.Suspend {
@@ -114,8 +111,8 @@ func (r *ScanScheduleReconciler) Reconcile(ctx context.Context, req ctrl.Request
 
 		if err := r.Create(ctx, clusterScan); err != nil {
 			log.Error(err, "failed to create cluster scan")
-			// ✅ Enregistrer métrique d'échec
-			recordScanScheduleExecution(scanSchedule.Namespace, scanSchedule.Name, false)
+			// Enregistrer métrique d'échec
+			recordScanScheduleExecution(scanSchedule.Namespace, scanSchedule.Name, "failed")
 			return ctrl.Result{}, err
 		}
 
@@ -130,8 +127,8 @@ func (r *ScanScheduleReconciler) Reconcile(ctx context.Context, req ctrl.Request
 		r.Recorder.Event(&scanSchedule, corev1.EventTypeNormal, "ScanCreated",
 			fmt.Sprintf("Created ClusterScan %s", clusterScan.Name))
 
-		// ✅ Enregistrer métrique de succès
-		recordScanScheduleExecution(scanSchedule.Namespace, scanSchedule.Name, true)
+		// Enregistrer métrique de succès
+		recordScanScheduleExecution(scanSchedule.Namespace, scanSchedule.Name, "success")
 	}
 
 	// Clean up completed scans

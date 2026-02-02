@@ -268,6 +268,6 @@ limitations under the License.
 ## Support
 
 Pour toute question ou problème :
-- 🐛 [Issues](https://gitlab.tooling.cloudgouv-eu-west-1.numspot.internal/platform-iac/clamav-operator/-/issues)
+- 🐛 [Issues](https://github.com/SolucTeam/clamav-operator/issues)
 - 💬 Slack : `#platform-security`
 - 📧 Email : platform-team@numspot.com

@@ -19,6 +19,7 @@ package main
 import (
 	"flag"
 	"os"
+	"strings"
 
 	// Import all Kubernetes client auth plugins (e.g. Azure, GCP, OIDC, etc.)
 	// to ensure that exec-entrypoint and run can make use of them.
@@ -34,10 +35,16 @@ import (
 	metricsserver "sigs.k8s.io/controller-runtime/pkg/metrics/server"
 	"sigs.k8s.io/controller-runtime/pkg/webhook"
 
-	clamavv1alpha1 "gitlab.tooling.cloudgouv-eu-west-1.numspot.internal/platform-iac/clamav-operator/api/v1alpha1"
-	"gitlab.tooling.cloudgouv-eu-west-1.numspot.internal/platform-iac/clamav-operator/controllers"
+	clamavv1alpha1 "github.com/SolucTeam/clamav-operator/api/v1alpha1"
+	"github.com/SolucTeam/clamav-operator/controllers"
 	//+kubebuilder:scaffold:imports
 )
+
+// splitHostname parses a Kubernetes service hostname like "svc.namespace.svc.cluster.local"
+// and returns the components [serviceName, namespace, ...]
+func splitHostname(hostname string) []string {
+	return strings.Split(hostname, ".")
+}
 
 var (
 	scheme   = runtime.NewScheme()
@@ -58,6 +65,8 @@ func main() {
 	var scannerImage string
 	var clamavHost string
 	var clamavPort int
+	var skipStartupChecks bool
+	var scannerServiceAccount string
 
 	flag.StringVar(&metricsAddr, "metrics-bind-address", ":8080", "The address the metric endpoint binds to.")
 	flag.StringVar(&probeAddr, "health-probe-bind-address", ":8081", "The address the probe endpoint binds to.")
@@ -70,6 +79,10 @@ func main() {
 		"ClamAV service host")
 	flag.IntVar(&clamavPort, "clamav-port", 3310,
 		"ClamAV service port")
+	flag.BoolVar(&skipStartupChecks, "skip-startup-checks", false,
+		"Skip startup validation checks (not recommended for production)")
+	flag.StringVar(&scannerServiceAccount, "scanner-service-account", "clamav-scanner",
+		"Name of the ServiceAccount used by scanner jobs")
 
 	opts := zap.Options{
 		Development: true,
@@ -99,11 +112,43 @@ func main() {
 		os.Exit(1)
 	}
 
-	// ✅ AJOUTÉ : Créer le Clientset pour accéder aux logs des pods
+	// Create the Clientset for accessing pod logs and performing startup checks
 	clientset, err := kubernetes.NewForConfig(config)
 	if err != nil {
 		setupLog.Error(err, "unable to create kubernetes clientset")
 		os.Exit(1)
+	}
+
+	// Run startup validation checks
+	if !skipStartupChecks {
+		namespace := controllers.GetNamespace()
+		setupLog.Info("Running startup validation checks", "namespace", namespace)
+
+		checker := controllers.NewStartupChecker(clientset, namespace, scannerServiceAccount)
+		ctx := ctrl.SetupSignalHandler()
+
+		if err := checker.RunAllChecks(ctx); err != nil {
+			setupLog.Error(err, "Startup validation failed",
+				"hint", "Use --skip-startup-checks to bypass (not recommended for production)")
+			os.Exit(1)
+		}
+
+		// Optional: Check ClamAV connectivity (warning only, not fatal)
+		clamavNamespace := "clamav"
+		if parts := splitHostname(clamavHost); len(parts) >= 2 {
+			clamavNamespace = parts[1]
+		}
+		clamavServiceName := "clamav"
+		if parts := splitHostname(clamavHost); len(parts) >= 1 {
+			clamavServiceName = parts[0]
+		}
+		if err := controllers.ValidateClamAVConnectivity(ctx, clientset, clamavNamespace, clamavServiceName, int32(clamavPort)); err != nil {
+			setupLog.Info("ClamAV connectivity check warning", "error", err)
+		}
+
+		setupLog.Info("All startup validation checks passed")
+	} else {
+		setupLog.Info("Skipping startup validation checks (--skip-startup-checks=true)")
 	}
 
 	// Setup controllers

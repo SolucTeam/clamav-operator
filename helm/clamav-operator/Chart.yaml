@@ -10,9 +10,9 @@ keywords:
   - security
   - operator
   - scanning
-home: https://gitlab.tooling.cloudgouv-eu-west-1.numspot.internal/platform-iac/clamav-operator
+home: https://github.com/SolucTeam/clamav-operator
 sources:
-  - https://gitlab.tooling.cloudgouv-eu-west-1.numspot.internal/platform-iac/clamav-operator
+  - https://github.com/SolucTeam/clamav-operator
 maintainers:
   - name: Platform Team
     email: platform-team@numspot.com

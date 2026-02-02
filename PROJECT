@@ -6,7 +6,7 @@ domain: platform.numspot.com
 layout:
 - go.kubebuilder.io/v4
 projectName: clamav-operator
-repo: gitlab.tooling.cloudgouv-eu-west-1.numspot.internal/platform-iac/clamav-operator
+repo: github.com/SolucTeam/clamav-operator
 resources:
 - api:
     crdVersion: v1
@@ -15,7 +15,7 @@ resources:
   domain: platform.numspot.com
   group: clamav
   kind: NodeScan
-  path: gitlab.tooling.cloudgouv-eu-west-1.numspot.internal/platform-iac/clamav-operator/api/v1alpha1
+  path: github.com/SolucTeam/clamav-operator/api/v1alpha1
   version: v1alpha1
   webhooks:
     validation: true
@@ -26,7 +26,7 @@ resources:
   domain: platform.numspot.com
   group: clamav
   kind: ClusterScan
-  path: gitlab.tooling.cloudgouv-eu-west-1.numspot.internal/platform-iac/clamav-operator/api/v1alpha1
+  path: github.com/SolucTeam/clamav-operator/api/v1alpha1
   version: v1alpha1
 - api:
     crdVersion: v1
@@ -35,7 +35,7 @@ resources:
   domain: platform.numspot.com
   group: clamav
   kind: ScanPolicy
-  path: gitlab.tooling.cloudgouv-eu-west-1.numspot.internal/platform-iac/clamav-operator/api/v1alpha1
+  path: github.com/SolucTeam/clamav-operator/api/v1alpha1
   version: v1alpha1
 - api:
     crdVersion: v1
@@ -44,6 +44,6 @@ resources:
   domain: platform.numspot.com
   group: clamav
   kind: ScanSchedule
-  path: gitlab.tooling.cloudgouv-eu-west-1.numspot.internal/platform-iac/clamav-operator/api/v1alpha1
+  path: github.com/SolucTeam/clamav-operator/api/v1alpha1
   version: v1alpha1
 version: "3"
