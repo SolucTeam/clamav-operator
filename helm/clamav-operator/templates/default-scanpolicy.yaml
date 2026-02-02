@@ -1,0 +1,12 @@
+{{- if .Values.defaultScanPolicy.enabled }}
+apiVersion: clamav.platform.numspot.com/v1alpha1
+kind: ScanPolicy
+metadata:
+  name: {{ .Values.defaultScanPolicy.name }}
+  namespace: {{ .Release.Namespace }}
+  labels:
+    {{- include "clamav-operator.labels" . | nindent 4 }}
+    app.kubernetes.io/component: scan-policy
+spec:
+  {{- toYaml .Values.defaultScanPolicy.spec | nindent 2 }}
+{{- end }}

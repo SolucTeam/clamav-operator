@@ -1,0 +1,125 @@
+{{- if .Values.rbac.create }}
+---
+apiVersion: {{ include "clamav-operator.rbac.apiVersion" . }}
+kind: ClusterRole
+metadata:
+  name: {{ include "clamav-operator.fullname" . }}-manager-role
+  labels:
+    {{- include "clamav-operator.labels" . | nindent 4 }}
+rules:
+{{- toYaml .Values.rbac.clusterRoleRules | nindent 2 }}
+---
+apiVersion: {{ include "clamav-operator.rbac.apiVersion" . }}
+kind: ClusterRoleBinding
+metadata:
+  name: {{ include "clamav-operator.fullname" . }}-manager-rolebinding
+  labels:
+    {{- include "clamav-operator.labels" . | nindent 4 }}
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: {{ include "clamav-operator.fullname" . }}-manager-role
+subjects:
+- kind: ServiceAccount
+  name: {{ include "clamav-operator.serviceAccountName" . }}
+  namespace: {{ .Release.Namespace }}
+---
+apiVersion: {{ include "clamav-operator.rbac.apiVersion" . }}
+kind: Role
+metadata:
+  name: {{ include "clamav-operator.fullname" . }}-leader-election-role
+  namespace: {{ .Release.Namespace }}
+  labels:
+    {{- include "clamav-operator.labels" . | nindent 4 }}
+rules:
+- apiGroups:
+  - ""
+  resources:
+  - configmaps
+  verbs:
+  - get
+  - list
+  - watch
+  - create
+  - update
+  - patch
+  - delete
+- apiGroups:
+  - coordination.k8s.io
+  resources:
+  - leases
+  verbs:
+  - get
+  - list
+  - watch
+  - create
+  - update
+  - patch
+  - delete
+- apiGroups:
+  - ""
+  resources:
+  - events
+  verbs:
+  - create
+  - patch
+---
+apiVersion: {{ include "clamav-operator.rbac.apiVersion" . }}
+kind: RoleBinding
+metadata:
+  name: {{ include "clamav-operator.fullname" . }}-leader-election-rolebinding
+  namespace: {{ .Release.Namespace }}
+  labels:
+    {{- include "clamav-operator.labels" . | nindent 4 }}
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: {{ include "clamav-operator.fullname" . }}-leader-election-role
+subjects:
+- kind: ServiceAccount
+  name: {{ include "clamav-operator.serviceAccountName" . }}
+  namespace: {{ .Release.Namespace }}
+---
+# Scanner ServiceAccount RBAC
+apiVersion: {{ include "clamav-operator.rbac.apiVersion" . }}
+kind: ClusterRole
+metadata:
+  name: {{ include "clamav-operator.fullname" . }}-scanner-role
+  labels:
+    {{- include "clamav-operator.labels" . | nindent 4 }}
+    app.kubernetes.io/component: scanner
+rules:
+- apiGroups:
+  - ""
+  resources:
+  - nodes
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - batch
+  resources:
+  - jobs
+  verbs:
+  - create
+  - get
+  - list
+  - watch
+---
+apiVersion: {{ include "clamav-operator.rbac.apiVersion" . }}
+kind: ClusterRoleBinding
+metadata:
+  name: {{ include "clamav-operator.fullname" . }}-scanner-rolebinding
+  labels:
+    {{- include "clamav-operator.labels" . | nindent 4 }}
+    app.kubernetes.io/component: scanner
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: {{ include "clamav-operator.fullname" . }}-scanner-role
+subjects:
+- kind: ServiceAccount
+  name: {{ include "clamav-operator.scannerServiceAccountName" . }}
+  namespace: {{ .Release.Namespace }}
+{{- end }}

@@ -1,0 +1,135 @@
+{{- if .Values.crds.install }}
+---
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: scancaches.clamav.platform.numspot.com
+  annotations:
+    {{- if .Values.crds.keep }}
+    "helm.sh/resource-policy": keep
+    {{- end }}
+  labels:
+    {{- include "clamav-operator.labels" . | nindent 4 }}
+spec:
+  group: clamav.platform.numspot.com
+  names:
+    kind: ScanCache
+    listKind: ScanCacheList
+    plural: scancaches
+    shortNames:
+    - sc
+    - scancache
+    singular: scancache
+  scope: Namespaced
+  versions:
+  - additionalPrinterColumns:
+    - jsonPath: .spec.nodeName
+      name: Node
+      type: string
+    - jsonPath: .spec.totalFiles
+      name: Files
+      type: integer
+    - jsonPath: .spec.lastFullScan
+      name: LastFullScan
+      type: integer
+    - jsonPath: .spec.scanCount
+      name: ScanCount
+      type: integer
+    - jsonPath: .status.size
+      name: Size
+      type: integer
+    - jsonPath: .metadata.creationTimestamp
+      name: Age
+      type: date
+    name: v1alpha1
+    schema:
+      openAPIV3Schema:
+        description: ScanCache stores file metadata cache for incremental scans
+        properties:
+          apiVersion:
+            type: string
+          kind:
+            type: string
+          metadata:
+            type: object
+          spec:
+            properties:
+              nodeName:
+                description: Name of the node being scanned
+                minLength: 1
+                type: string
+              lastFullScan:
+                description: Timestamp of last full scan
+                format: int64
+                type: integer
+              lastIncrementalScan:
+                description: Timestamp of last incremental scan
+                format: int64
+                type: integer
+              scanCount:
+                description: Number of scans since last full scan
+                format: int32
+                type: integer
+              files:
+                description: File metadata entries (max 10000)
+                items:
+                  properties:
+                    path:
+                      type: string
+                    modTime:
+                      format: int64
+                      type: integer
+                    size:
+                      format: int64
+                      type: integer
+                    hash:
+                      type: string
+                    lastScanned:
+                      format: int64
+                      type: integer
+                    scanResult:
+                      enum:
+                      - clean
+                      - infected
+                      type: string
+                  required:
+                  - path
+                  - modTime
+                  - size
+                  - lastScanned
+                  - scanResult
+                  type: object
+                type: array
+              totalFiles:
+                description: Total number of files tracked
+                format: int64
+                type: integer
+              cacheVersion:
+                description: Cache format version
+                type: string
+            required:
+            - nodeName
+            - scanCount
+            - totalFiles
+            - cacheVersion
+            type: object
+          status:
+            properties:
+              lastUpdated:
+                description: Last update timestamp
+                format: date-time
+                type: string
+              size:
+                description: Cache size in bytes
+                format: int64
+                type: integer
+              compressed:
+                description: Whether cache is compressed
+                type: boolean
+            type: object
+        type: object
+    served: true
+    storage: true
+    subresources:
+      status: {}
+{{- end }}

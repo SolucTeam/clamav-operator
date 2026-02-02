@@ -1,0 +1,181 @@
+# Production values for clamav-operator
+
+operator:
+  replicaCount: 2
+  
+  image:
+    tag: v1.0.0
+  
+  resources:
+    limits:
+      cpu: 1000m
+      memory: 512Mi
+    requests:
+      cpu: 200m
+      memory: 256Mi
+  
+  leaderElection:
+    enabled: true
+  
+  affinity:
+    podAntiAffinity:
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - weight: 100
+        podAffinityTerm:
+          labelSelector:
+            matchExpressions:
+            - key: app.kubernetes.io/name
+              operator: In
+              values:
+              - clamav-operator
+          topologyKey: kubernetes.io/hostname
+  
+  priorityClassName: system-cluster-critical
+
+scanner:
+  image:
+    tag: "1.0.3"
+  
+  clamav:
+    host: clamav.clamav.svc.cluster.local
+    port: 3310
+  
+  resources:
+    requests:
+      cpu: 1000m
+      memory: 1Gi
+    limits:
+      cpu: 4000m
+      memory: 2Gi
+
+monitoring:
+  serviceMonitor:
+    enabled: true
+    interval: 60s
+    scrapeTimeout: 30s
+  
+  prometheusRule:
+    enabled: true
+    labels:
+      prometheus: kube-prometheus
+    rules:
+      - alert: ClamAVMalwareDetectedCritical
+        expr: increase(clamav_files_infected_total[5m]) > 0
+        for: 1m
+        labels:
+          severity: critical
+          team: security
+          environment: production
+        annotations:
+          summary: "🚨 MALWARE DÉTECTÉ - Production"
+          description: "{{ $value }} fichiers infectés détectés sur {{ $labels.node }}"
+          runbook_url: "https://docs.numspot.com/runbooks/clamav-malware"
+      
+      - alert: ClamAVScanFailedWarning
+        expr: clamav_nodescan_failed > 0
+        for: 10m
+        labels:
+          severity: warning
+          team: platform
+          environment: production
+        annotations:
+          summary: "Scans ClamAV échoués"
+          description: "{{ $value }} scans ont échoué"
+      
+      - alert: ClamAVNoRecentScans
+        expr: time() - clamav_nodescan_last_completion_timestamp > 43200
+        for: 2h
+        labels:
+          severity: warning
+          team: platform
+          environment: production
+        annotations:
+          summary: "Pas de scan ClamAV récent"
+          description: "Aucun scan depuis plus de 12 heures"
+
+defaultScanPolicy:
+  enabled: true
+  name: production-policy
+  spec:
+    paths:
+      - /var/lib
+      - /opt
+      - /usr/local
+      - /home
+    
+    excludePatterns:
+      - "*.tmp"
+      - "*.log"
+      - "/var/lib/docker/overlay2/*"
+      - "/var/lib/containerd/*"
+      - "/var/lib/kubelet/pods/*"
+    
+    maxConcurrent: 10
+    fileTimeout: 300000
+    maxFileSize: 1073741824  # 1GB
+    
+    resources:
+      requests:
+        cpu: 1000m
+        memory: 1Gi
+      limits:
+        cpu: 4000m
+        memory: 2Gi
+    
+    notifications:
+      slack:
+        enabled: true
+        webhookSecretRef:
+          name: slack-webhook-secret
+          key: url
+        channel: "#security-alerts-prod"
+        onlyOnInfection: true
+      
+      email:
+        enabled: true
+        smtpServer: smtp.gmail.com:587
+        smtpAuthSecretRef:
+          name: smtp-credentials
+        from: clamav@numspot.com
+        recipients:
+          - security@numspot.com
+          - soc@numspot.com
+          - oncall@numspot.com
+        onlyOnInfection: true
+
+networkPolicy:
+  enabled: true
+  policyTypes:
+    - Ingress
+    - Egress
+  ingress:
+    - from:
+      - namespaceSelector:
+          matchLabels:
+            name: monitoring
+      ports:
+      - protocol: TCP
+        port: 8080
+  egress:
+    # Kubernetes API
+    - to:
+      - namespaceSelector: {}
+      ports:
+      - protocol: TCP
+        port: 6443
+    # ClamAV service
+    - to:
+      - namespaceSelector:
+          matchLabels:
+            kubernetes.io/metadata.name: clamav
+      ports:
+      - protocol: TCP
+        port: 3310
+    # DNS
+    - to:
+      - namespaceSelector:
+          matchLabels:
+            kubernetes.io/metadata.name: kube-system
+      ports:
+      - protocol: UDP
+        port: 53

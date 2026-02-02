@@ -1,0 +1,75 @@
+# Development values for clamav-operator
+
+operator:
+  replicaCount: 1
+  
+  image:
+    tag: latest
+    pullPolicy: Always
+  
+  resources:
+    limits:
+      cpu: 500m
+      memory: 256Mi
+    requests:
+      cpu: 100m
+      memory: 128Mi
+  
+  leaderElection:
+    enabled: false
+
+scanner:
+  image:
+    tag: latest
+    pullPolicy: Always
+  
+  clamav:
+    host: clamav.clamav.svc.cluster.local
+    port: 3310
+  
+  resources:
+    requests:
+      cpu: 200m
+      memory: 256Mi
+    limits:
+      cpu: 1000m
+      memory: 512Mi
+
+monitoring:
+  serviceMonitor:
+    enabled: false
+  
+  prometheusRule:
+    enabled: false
+
+defaultScanPolicy:
+  enabled: true
+  name: dev-policy
+  spec:
+    paths:
+      - /var/lib
+      - /opt
+    
+    excludePatterns:
+      - "*.tmp"
+      - "/var/lib/docker/*"
+    
+    maxConcurrent: 3
+    fileTimeout: 120000
+    maxFileSize: 104857600  # 100MB
+    
+    resources:
+      requests:
+        cpu: 200m
+        memory: 256Mi
+      limits:
+        cpu: 1000m
+        memory: 512Mi
+
+networkPolicy:
+  enabled: false
+
+# Variables d'environnement additionnelles pour le debug
+env:
+  - name: LOG_LEVEL
+    value: "debug"

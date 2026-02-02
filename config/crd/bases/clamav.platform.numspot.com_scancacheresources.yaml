@@ -1,0 +1,132 @@
+---
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  annotations:
+    controller-gen.kubebuilder.io/version: v0.17.0
+  name: scancacheresources.clamav.platform.numspot.com
+spec:
+  group: clamav.platform.numspot.com
+  names:
+    kind: ScanCacheResource
+    listKind: ScanCacheResourceList
+    plural: scancacheresources
+    shortNames:
+    - sc
+    - scancache
+    singular: scancacheresource
+  scope: Namespaced
+  versions:
+  - name: v1alpha1
+    schema:
+      openAPIV3Schema:
+        description: ScanCacheResource stocke le cache des fichiers scannés par node
+        properties:
+          apiVersion:
+            description: |-
+              APIVersion defines the versioned schema of this representation of an object.
+              Servers should convert recognized schemas to the latest internal value, and
+              may reject unrecognized values.
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+            type: string
+          kind:
+            description: |-
+              Kind is a string value representing the REST resource this object represents.
+              Servers may infer this from the endpoint the client submits requests to.
+              Cannot be updated.
+              In CamelCase.
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+            type: string
+          metadata:
+            type: object
+          spec:
+            description: ScanCache contient le cache des fichiers scannés
+            properties:
+              cacheVersion:
+                description: CacheVersion version du format de cache (pour migrations
+                  futures)
+                type: string
+              files:
+                description: |-
+                  Files métadonnées des fichiers scannés
+                  Limité à 10000 entrées pour éviter une CR trop grosse
+                items:
+                  description: FileMetadata contient les métadonnées d'un fichier
+                    scanné
+                  properties:
+                    hash:
+                      description: Hash SHA256 du fichier (optionnel)
+                      type: string
+                    lastScanned:
+                      description: LastScanned timestamp du dernier scan
+                      format: int64
+                      type: integer
+                    modTime:
+                      description: ModTime timestamp de modification
+                      format: int64
+                      type: integer
+                    path:
+                      description: Path du fichier
+                      type: string
+                    scanResult:
+                      description: ScanResult résultat du dernier scan (clean/infected)
+                      type: string
+                    size:
+                      description: Size en bytes
+                      format: int64
+                      type: integer
+                  required:
+                  - lastScanned
+                  - modTime
+                  - path
+                  - scanResult
+                  - size
+                  type: object
+                type: array
+              lastFullScan:
+                description: LastFullScan timestamp du dernier scan complet
+                format: int64
+                type: integer
+              lastIncrementalScan:
+                description: LastIncrementalScan timestamp du dernier scan incrémental
+                format: int64
+                type: integer
+              nodeName:
+                description: NodeName du node scanné
+                type: string
+              scanCount:
+                description: ScanCount nombre de scans effectués depuis le dernier
+                  full scan
+                format: int32
+                type: integer
+              totalFiles:
+                description: TotalFiles nombre total de fichiers trackés
+                format: int64
+                type: integer
+            required:
+            - cacheVersion
+            - lastFullScan
+            - nodeName
+            - scanCount
+            - totalFiles
+            type: object
+          status:
+            description: ScanCacheResourceStatus définit le status d'un ScanCache
+            properties:
+              compressed:
+                description: Compressed indique si le cache est compressé
+                type: boolean
+              lastUpdated:
+                description: LastUpdated timestamp de dernière mise à jour
+                format: date-time
+                type: string
+              size:
+                description: Size taille du cache en bytes
+                format: int64
+                type: integer
+            type: object
+        type: object
+    served: true
+    storage: true
+    subresources:
+      status: {}
