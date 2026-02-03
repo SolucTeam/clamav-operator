@@ -1,24 +1,37 @@
 # Default values for clamav-operator.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
+#
+# Environment-specific configurations:
+# - Development: Use lower resources, disable HA features
+# - Production: Use higher resources, enable HA and monitoring
+#
+# To customize for your environment, override these values with:
+#   helm install clamav-operator ./helm/clamav-operator -f custom-values.yaml
 
-# Operator configuration
+# =============================================================================
+# OPERATOR CONFIGURATION
+# =============================================================================
 operator:
   # Number of operator replicas
+  # Development: 1, Production: 2 (for HA)
   replicaCount: 1
-  
+
   image:
-    repository: registry.tooling.cloudgouv-eu-west-1.numspot.cloud/platform-iac/clamav-operator
+    # Image repository - update for your private registry
+    repository: ghcr.io/solucteam/clamav-operator
     pullPolicy: IfNotPresent
     # Overrides the image tag whose default is the chart appVersion.
+    # Development: "latest", Production: specific version like "v1.0.0"
     tag: ""
-  
-  imagePullSecrets:
-    - name: numspot-registry
-  
+
+  # Image pull secrets for private registries
+  imagePullSecrets: []
+  # - name: regcred
+
   nameOverride: ""
   fullnameOverride: ""
-  
+
   serviceAccount:
     # Specifies whether a service account should be created
     create: true
@@ -29,16 +42,16 @@ operator:
     # The name of the service account to use.
     # If not set and create is true, a name is generated using the fullname template
     name: ""
-  
+
   podAnnotations: {}
   podLabels: {}
-  
+
   podSecurityContext:
     runAsNonRoot: true
     runAsUser: 65532
     runAsGroup: 65532
     fsGroup: 65532
-  
+
   securityContext:
     allowPrivilegeEscalation: false
     capabilities:
@@ -47,14 +60,21 @@ operator:
     readOnlyRootFilesystem: true
     runAsNonRoot: true
     runAsUser: 65532
-  
-  # Service for metrics
+
+  # Service for metrics and health
   service:
     type: ClusterIP
     port: 8080
     metricsPort: 8080
     healthPort: 8081
-  
+
+  # Resource limits and requests
+  # Development:
+  #   limits: { cpu: 500m, memory: 256Mi }
+  #   requests: { cpu: 100m, memory: 128Mi }
+  # Production:
+  #   limits: { cpu: 1000m, memory: 512Mi }
+  #   requests: { cpu: 200m, memory: 256Mi }
   resources:
     limits:
       cpu: 500m
@@ -62,43 +82,65 @@ operator:
     requests:
       cpu: 100m
       memory: 128Mi
-  
+
   # Leader election settings
   leaderElection:
+    # Disable in development for simpler debugging
     enabled: true
     leaseDuration: 15s
     renewDeadline: 10s
     retryPeriod: 2s
-  
+
   # Node selector for operator pod
   nodeSelector: {}
-  
+
   tolerations: []
-  
+
+  # Pod anti-affinity for HA (recommended for production)
+  # Production example:
+  #   podAntiAffinity:
+  #     preferredDuringSchedulingIgnoredDuringExecution:
+  #     - weight: 100
+  #       podAffinityTerm:
+  #         labelSelector:
+  #           matchExpressions:
+  #           - key: app.kubernetes.io/name
+  #             operator: In
+  #             values:
+  #             - clamav-operator
+  #         topologyKey: kubernetes.io/hostname
   affinity: {}
-  
-  # Priority class name
+
+  # Priority class name for production: system-cluster-critical
   priorityClassName: ""
 
-# ClamAV scanner configuration
+# =============================================================================
+# SCANNER CONFIGURATION
+# =============================================================================
 scanner:
   image:
-    repository: registry.tooling.cloudgouv-eu-west-1.numspot.cloud/platform-runtime/clamav-node-scanner
+    repository: ghcr.io/solucteam/clamav-node-scanner
     tag: "1.0.3"
     pullPolicy: IfNotPresent
-  
+
   # ClamAV service configuration
   clamav:
     host: clamav.clamav.svc.cluster.local
     port: 3310
-  
+
   # ServiceAccount for scanner jobs
   serviceAccount:
     create: true
     name: clamav-scanner
     annotations: {}
-  
+
   # Default resources for scanner jobs
+  # Development:
+  #   requests: { cpu: 200m, memory: 256Mi }
+  #   limits: { cpu: 1000m, memory: 512Mi }
+  # Production:
+  #   requests: { cpu: 1000m, memory: 1Gi }
+  #   limits: { cpu: 4000m, memory: 2Gi }
   resources:
     requests:
       cpu: 500m
@@ -106,23 +148,27 @@ scanner:
     limits:
       cpu: 2000m
       memory: 1Gi
-  
-  # Image pull secrets for scanner jobs
-  imagePullSecrets:
-    - name: numspot-registry
 
-# Custom Resource Definitions
+  # Image pull secrets for scanner jobs
+  imagePullSecrets: []
+  # - name: regcred
+
+# =============================================================================
+# CUSTOM RESOURCE DEFINITIONS
+# =============================================================================
 crds:
   # Install CRDs as part of helm install
   install: true
-  # Keep CRDs on helm uninstall
+  # Keep CRDs on helm uninstall (recommended: true to avoid data loss)
   keep: true
 
-# RBAC configuration
+# =============================================================================
+# RBAC CONFIGURATION
+# =============================================================================
 rbac:
   # Create RBAC resources
   create: true
-  
+
   # ClusterRole rules for the operator
   clusterRoleRules:
     - apiGroups:
@@ -149,6 +195,14 @@ rbac:
         - get
         - list
     - apiGroups:
+        - ""
+      resources:
+        - services
+        - endpoints
+      verbs:
+        - get
+        - list
+    - apiGroups:
         - batch
       resources:
         - jobs
@@ -161,12 +215,13 @@ rbac:
         - patch
         - delete
     - apiGroups:
-        - clamav.platform.numspot.com
+        - clamav.io
       resources:
         - nodescans
         - clusterscans
         - scanpolicies
         - scanschedules
+        - scancacheresources
       verbs:
         - create
         - delete
@@ -176,35 +231,39 @@ rbac:
         - update
         - watch
     - apiGroups:
-        - clamav.platform.numspot.com
+        - clamav.io
       resources:
         - nodescans/finalizers
         - clusterscans/finalizers
         - scanpolicies/finalizers
         - scanschedules/finalizers
+        - scancacheresources/finalizers
       verbs:
         - update
     - apiGroups:
-        - clamav.platform.numspot.com
+        - clamav.io
       resources:
         - nodescans/status
         - clusterscans/status
         - scanpolicies/status
         - scanschedules/status
+        - scancacheresources/status
       verbs:
         - get
         - patch
         - update
 
-# Webhook configuration
+# =============================================================================
+# WEBHOOK CONFIGURATION
+# =============================================================================
 webhook:
   enabled: true
   port: 9443
-  
+
   # Certificate management
   certManager:
     enabled: false
-  
+
   # If certManager is disabled, use these certificates
   certificates:
     # Auto-generate self-signed certificates
@@ -214,26 +273,30 @@ webhook:
     tlsCert: ""
     tlsKey: ""
 
-# Monitoring configuration
+# =============================================================================
+# MONITORING CONFIGURATION
+# =============================================================================
 monitoring:
   # Enable ServiceMonitor for Prometheus Operator
   serviceMonitor:
-    enabled: true
+    # Development: false, Production: true
+    enabled: false
     # Prometheus instance selector
     selector:
       prometheus: kube-prometheus
-    # Scrape interval
+    # Scrape interval (Production: 60s)
     interval: 30s
     # Scrape timeout
     scrapeTimeout: 30s
     # Additional labels
     labels: {}
-    # Honorlabels
+    # Honor labels
     honorLabels: false
-  
+
   # Enable PrometheusRule for alerts
   prometheusRule:
-    enabled: true
+    # Development: false, Production: true
+    enabled: false
     # Additional labels
     labels: {}
     # Alert rules
@@ -247,7 +310,7 @@ monitoring:
         annotations:
           summary: "Malware detected on node {{ $labels.node }}"
           description: "{{ $value }} infected files detected"
-      
+
       - alert: ClamAVScanFailed
         expr: clamav_nodescan_failed > 0
         for: 5m
@@ -257,7 +320,7 @@ monitoring:
         annotations:
           summary: "ClamAV scan failed"
           description: "{{ $value }} scans have failed"
-      
+
       - alert: ClamAVNoRecentScans
         expr: time() - clamav_nodescan_last_completion_timestamp > 86400
         for: 1h
@@ -268,23 +331,39 @@ monitoring:
           summary: "No recent ClamAV scans"
           description: "No scans completed in the last 24 hours"
 
-# Default ScanPolicy to create
+# =============================================================================
+# DEFAULT SCAN POLICY
+# =============================================================================
 defaultScanPolicy:
+  # Create a default ScanPolicy resource
   enabled: true
   name: default-policy
   spec:
+    # Paths to scan
     paths:
       - /var/lib
       - /opt
       - /usr/local
+
+    # Exclude patterns
     excludePatterns:
       - "*.tmp"
       - "*.log"
       - "/var/lib/docker/overlay2/*"
       - "/var/lib/containerd/*"
+
+    # Maximum concurrent file scans
+    # Development: 3, Production: 10
     maxConcurrent: 5
+
+    # File timeout in milliseconds
     fileTimeout: 300000
+
+    # Maximum file size to scan in bytes (500MB)
+    # Development: 104857600 (100MB), Production: 1073741824 (1GB)
     maxFileSize: 524288000
+
+    # Resources for scan jobs
     resources:
       requests:
         cpu: 500m
@@ -293,8 +372,30 @@ defaultScanPolicy:
         cpu: 2000m
         memory: 1Gi
 
-# Network policies
+    # Notifications (configure for production)
+    # notifications:
+    #   slack:
+    #     enabled: true
+    #     webhookSecretRef:
+    #       name: slack-webhook-secret
+    #       key: url
+    #     channel: "#security-alerts"
+    #     onlyOnInfection: true
+    #   email:
+    #     enabled: true
+    #     smtpServer: smtp.example.com:587
+    #     smtpAuthSecretRef:
+    #       name: smtp-credentials
+    #     from: clamav@example.com
+    #     recipients:
+    #       - security@example.com
+    #     onlyOnInfection: true
+
+# =============================================================================
+# NETWORK POLICIES
+# =============================================================================
 networkPolicy:
+  # Enable network policies (recommended for production)
   enabled: false
   policyTypes:
     - Ingress
@@ -308,21 +409,36 @@ networkPolicy:
       - protocol: TCP
         port: 8080
   egress:
+    # Kubernetes API
     - to:
       - namespaceSelector: {}
       ports:
       - protocol: TCP
-        port: 6443  # Kubernetes API
+        port: 6443
+    # ClamAV service
     - to:
       - namespaceSelector:
           matchLabels:
-            name: clamav
+            kubernetes.io/metadata.name: clamav
       ports:
       - protocol: TCP
-        port: 3310  # ClamAV
+        port: 3310
+    # DNS
+    - to:
+      - namespaceSelector:
+          matchLabels:
+            kubernetes.io/metadata.name: kube-system
+      ports:
+      - protocol: UDP
+        port: 53
+
+# =============================================================================
+# ADDITIONAL CONFIGURATION
+# =============================================================================
 
 # Additional environment variables for the operator
 env: []
+# Development example:
 # - name: LOG_LEVEL
 #   value: "debug"
 

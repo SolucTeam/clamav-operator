@@ -10,12 +10,12 @@ webhooks:
     service:
       name: webhook-service
       namespace: system
-      path: /validate-clamav-platform-numspot-com-v1alpha1-clusterscan
+      path: /validate-clamav-io-v1alpha1-clusterscan
   failurePolicy: Fail
   name: vclusterscan.kb.io
   rules:
   - apiGroups:
-    - clamav.platform.numspot.com
+    - clamav.io
     apiVersions:
     - v1alpha1
     operations:
@@ -30,12 +30,12 @@ webhooks:
     service:
       name: webhook-service
       namespace: system
-      path: /validate-clamav-platform-numspot-com-v1alpha1-nodescan
+      path: /validate-clamav-io-v1alpha1-nodescan
   failurePolicy: Fail
   name: vnodescan.kb.io
   rules:
   - apiGroups:
-    - clamav.platform.numspot.com
+    - clamav.io
     apiVersions:
     - v1alpha1
     operations:

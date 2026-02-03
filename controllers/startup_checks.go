@@ -1,5 +1,5 @@
 /*
-Copyright 2025 Platform Team - Numspot.
+Copyright 2025 The ClamAV Operator Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -56,8 +56,8 @@ func NewStartupChecker(clientset kubernetes.Interface, namespace, scannerSAName 
 			{APIGroup: "", Resource: "pods/log", Verbs: []string{"get"}, Namespace: namespace},
 			{APIGroup: "batch", Resource: "jobs", Verbs: []string{"create", "get", "list", "watch", "delete"}, Namespace: namespace},
 			{APIGroup: "", Resource: "nodes", Verbs: []string{"get", "list", "watch"}, Namespace: ""},
-			{APIGroup: "clamav.platform.numspot.com", Resource: "nodescans", Verbs: []string{"get", "list", "watch", "create", "update", "patch", "delete"}, Namespace: namespace},
-			{APIGroup: "clamav.platform.numspot.com", Resource: "nodescans/status", Verbs: []string{"get", "update", "patch"}, Namespace: namespace},
+			{APIGroup: "clamav.io", Resource: "nodescans", Verbs: []string{"get", "list", "watch", "create", "update", "patch", "delete"}, Namespace: namespace},
+			{APIGroup: "clamav.io", Resource: "nodescans/status", Verbs: []string{"get", "update", "patch"}, Namespace: namespace},
 		},
 	}
 }

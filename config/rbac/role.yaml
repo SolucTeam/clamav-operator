@@ -45,7 +45,7 @@ rules:
   - update
   - watch
 - apiGroups:
-  - clamav.platform.numspot.com
+  - clamav.io
   resources:
   - clusterscans
   - nodescans
@@ -59,7 +59,7 @@ rules:
   - update
   - watch
 - apiGroups:
-  - clamav.platform.numspot.com
+  - clamav.io
   resources:
   - clusterscans/finalizers
   - nodescans/finalizers
@@ -67,7 +67,7 @@ rules:
   verbs:
   - update
 - apiGroups:
-  - clamav.platform.numspot.com
+  - clamav.io
   resources:
   - clusterscans/status
   - nodescans/status
@@ -77,7 +77,7 @@ rules:
   - patch
   - update
 - apiGroups:
-  - clamav.platform.numspot.com
+  - clamav.io
   resources:
   - scanpolicies
   verbs:

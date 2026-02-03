@@ -1,5 +1,5 @@
 /*
-Copyright 2025 Platform Team - Numspot.
+Copyright 2025 The ClamAV Operator Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -42,11 +42,11 @@ import (
 )
 
 const (
-	nodeScanFinalizer = "clamav.platform.numspot.com/finalizer"
+	nodeScanFinalizer = "clamav.io/finalizer"
 	// maxParseRetries is the maximum number of times to retry parsing job results
 	maxParseRetries = 5
 	// parseRetryAnnotation tracks the number of parse retry attempts
-	parseRetryAnnotation = "clamav.platform.numspot.com/parse-retries"
+	parseRetryAnnotation = "clamav.io/parse-retries"
 )
 
 // NodeScanReconciler reconciles a NodeScan object
@@ -60,10 +60,10 @@ type NodeScanReconciler struct {
 	ClamavPort   int
 }
 
-// +kubebuilder:rbac:groups=clamav.platform.numspot.com,resources=nodescans,verbs=get;list;watch;create;update;patch;delete
-// +kubebuilder:rbac:groups=clamav.platform.numspot.com,resources=nodescans/status,verbs=get;update;patch
-// +kubebuilder:rbac:groups=clamav.platform.numspot.com,resources=nodescans/finalizers,verbs=update
-// +kubebuilder:rbac:groups=clamav.platform.numspot.com,resources=scanpolicies,verbs=get;list;watch
+// +kubebuilder:rbac:groups=clamav.io,resources=nodescans,verbs=get;list;watch;create;update;patch;delete
+// +kubebuilder:rbac:groups=clamav.io,resources=nodescans/status,verbs=get;update;patch
+// +kubebuilder:rbac:groups=clamav.io,resources=nodescans/finalizers,verbs=update
+// +kubebuilder:rbac:groups=clamav.io,resources=scanpolicies,verbs=get;list;watch
 // +kubebuilder:rbac:groups=batch,resources=jobs,verbs=get;list;watch;create;update;patch;delete
 // +kubebuilder:rbac:groups="",resources=nodes,verbs=get;list;watch
 // +kubebuilder:rbac:groups="",resources=events,verbs=create;patch
@@ -378,9 +378,9 @@ func (r *NodeScanReconciler) constructJobForNodeScan(nodeScan *clamavv1alpha1.No
 			Labels: map[string]string{
 				"app.kubernetes.io/name":                    "clamav",
 				"app.kubernetes.io/component":               "scanner",
-				"clamav.platform.numspot.com/nodescan":      nodeScan.Name,
-				"clamav.platform.numspot.com/node":          nodeScan.Spec.NodeName,
-				"clamav.platform.numspot.com/scan-priority": nodeScan.Spec.Priority,
+				"clamav.io/nodescan":      nodeScan.Name,
+				"clamav.io/node":          nodeScan.Spec.NodeName,
+				"clamav.io/scan-priority": nodeScan.Spec.Priority,
 			},
 		},
 		Spec: batchv1.JobSpec{
@@ -410,9 +410,8 @@ func (r *NodeScanReconciler) constructJobForNodeScan(nodeScan *clamavv1alpha1.No
 					Tolerations: []corev1.Toleration{
 						{Operator: corev1.TolerationOpExists},
 					},
-					ImagePullSecrets: []corev1.LocalObjectReference{
-						{Name: "numspot-registry"},
-					},
+					// ImagePullSecrets can be configured via Helm values or ScanPolicy
+					ImagePullSecrets: []corev1.LocalObjectReference{},
 					Containers: []corev1.Container{
 						{
 							Name:            "scanner",

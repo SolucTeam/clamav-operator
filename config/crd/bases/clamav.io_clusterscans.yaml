@@ -4,9 +4,9 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.17.0
-  name: clusterscans.clamav.platform.numspot.com
+  name: clusterscans.clamav.io
 spec:
-  group: clamav.platform.numspot.com
+  group: clamav.io
   names:
     kind: ClusterScan
     listKind: ClusterScanList

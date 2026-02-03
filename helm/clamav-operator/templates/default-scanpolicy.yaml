@@ -1,5 +1,5 @@
 {{- if .Values.defaultScanPolicy.enabled }}
-apiVersion: clamav.platform.numspot.com/v1alpha1
+apiVersion: clamav.io/v1alpha1
 kind: ScanPolicy
 metadata:
   name: {{ .Values.defaultScanPolicy.name }}

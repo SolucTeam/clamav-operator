@@ -1,5 +1,5 @@
 /*
-Copyright 2025 Platform Team - Numspot.
+Copyright 2025 The ClamAV Operator Authors.
 
 Scan Incrémental - Controller Implementation (FIXED VERSION)
 Note: Les métriques sont maintenant définies dans metrics.go
@@ -41,7 +41,7 @@ func (r *NodeScanReconciler) getScanCache(ctx context.Context, nodeName, namespa
 				Labels: map[string]string{
 					"app.kubernetes.io/name":      "clamav",
 					"app.kubernetes.io/component": "scan-cache",
-					"clamav.platform.numspot.com/node": nodeName,
+					"clamav.io/node": nodeName,
 				},
 			},
 			Spec: clamavv1alpha1.ScanCache{
@@ -289,7 +289,7 @@ func (r *NodeScanReconciler) createScanCacheConfigMap(ctx context.Context,
 			Labels: map[string]string{
 				"app.kubernetes.io/name":      "clamav",
 				"app.kubernetes.io/component": "scan-cache",
-				"clamav.platform.numspot.com/node": nodeScan.Spec.NodeName,
+				"clamav.io/node": nodeScan.Spec.NodeName,
 			},
 		},
 		Data: map[string]string{

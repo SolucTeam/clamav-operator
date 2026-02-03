@@ -102,7 +102,7 @@ Values are resolved in the following order (highest priority first):
 ### Minimal Configuration
 
 ```yaml
-apiVersion: clamav.platform.numspot.com/v1alpha1
+apiVersion: clamav.io/v1alpha1
 kind: NodeScan
 metadata:
   name: quick-scan
@@ -114,7 +114,7 @@ spec:
 ### Full Configuration
 
 ```yaml
-apiVersion: clamav.platform.numspot.com/v1alpha1
+apiVersion: clamav.io/v1alpha1
 kind: NodeScan
 metadata:
   name: detailed-scan

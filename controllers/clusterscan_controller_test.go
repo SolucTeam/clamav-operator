@@ -1,5 +1,5 @@
 /*
-Copyright 2025 Platform Team - Numspot.
+Copyright 2025 The ClamAV Operator Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -195,7 +195,7 @@ func TestClusterScanReconciler_Reconcile_Completion(t *testing.T) {
 			Name:      "test-cluster-scan-node-1",
 			Namespace: "default",
 			Labels: map[string]string{
-				"clamav.platform.numspot.com/clusterscan": "test-cluster-scan",
+				"clamav.io/clusterscan": "test-cluster-scan",
 			},
 		},
 		Spec: clamavv1alpha1.NodeScanSpec{
@@ -288,7 +288,7 @@ func TestClusterScanReconciler_Deletion(t *testing.T) {
 			Name:      "test-cluster-scan-node-1",
 			Namespace: "default",
 			Labels: map[string]string{
-				"clamav.platform.numspot.com/clusterscan": "test-cluster-scan",
+				"clamav.io/clusterscan": "test-cluster-scan",
 			},
 		},
 		Spec: clamavv1alpha1.NodeScanSpec{

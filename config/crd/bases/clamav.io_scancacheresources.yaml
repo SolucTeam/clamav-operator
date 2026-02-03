@@ -4,9 +4,9 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.17.0
-  name: scancacheresources.clamav.platform.numspot.com
+  name: scancacheresources.clamav.io
 spec:
-  group: clamav.platform.numspot.com
+  group: clamav.io
   names:
     kind: ScanCacheResource
     listKind: ScanCacheResourceList

@@ -1,56 +1,81 @@
-# Guide de Déploiement ClamAV Operator
+# ClamAV Operator Deployment Guide
 
-## 📋 Table des Matières
+## Table of Contents
 
-1. [Prérequis](#prérequis)
+1. [Prerequisites](#prerequisites)
 2. [Installation](#installation)
 3. [Configuration](#configuration)
-4. [Exemples d'utilisation](#exemples-dutilisation)
+4. [Usage Examples](#usage-examples)
 5. [Troubleshooting](#troubleshooting)
 
-## Prérequis
+## Prerequisites
 
-### Cluster Kubernetes
+### Kubernetes Cluster
 
 - Kubernetes 1.24+
-- kubectl configuré
-- Accès admin au cluster
+- kubectl configured
+- Admin access to the cluster
 
 ### ClamAV Service
 
-ClamAV doit être déployé et accessible :
+ClamAV must be deployed and accessible:
 
 ```bash
-# Vérifier que ClamAV est disponible
+# Verify ClamAV is available
 kubectl get svc -n clamav clamav
 
-# Tester la connectivité
+# Test connectivity
 kubectl run -it --rm debug --image=busybox --restart=Never -- \
   nc -zv clamav.clamav.svc.cluster.local 3310
 ```
 
 ## Installation
 
-### Étape 1 : Créer le namespace
+### Option 1: Using Helm (Recommended)
+
+```bash
+# Create namespace
+kubectl create namespace clamav-system
+
+# Install using Helm
+helm install clamav-operator ./helm/clamav-operator -n clamav-system
+
+# Or with custom values
+helm install clamav-operator ./helm/clamav-operator -n clamav-system -f custom-values.yaml
+```
+
+### Option 2: Using Kustomize
+
+```bash
+# Create namespace
+kubectl create namespace clamav-system
+
+# Install CRDs
+kubectl apply -k config/crd
+
+# Deploy the operator
+make deploy IMG=ghcr.io/solucteam/clamav-operator:latest
+```
+
+### Option 3: Manual Installation
+
+#### Step 1: Create namespace
 
 ```bash
 kubectl create namespace clamav-system
 ```
 
-### Étape 2 : Installer les CRDs
+#### Step 2: Install CRDs
 
 ```bash
-# Depuis le repository local
-kubectl apply -k config/crd
-
-# Ou depuis les fichiers individuels
-kubectl apply -f config/crd/bases/clamav.platform.numspot.com_nodescans.yaml
-kubectl apply -f config/crd/bases/clamav.platform.numspot.com_clusterscans.yaml
-kubectl apply -f config/crd/bases/clamav.platform.numspot.com_scanpolicies.yaml
-kubectl apply -f config/crd/bases/clamav.platform.numspot.com_scanschedules.yaml
+kubectl apply -f config/crd/bases/clamav.io_nodescans.yaml
+kubectl apply -f config/crd/bases/clamav.io_clusterscans.yaml
+kubectl apply -f config/crd/bases/clamav.io_scanpolicies.yaml
+kubectl apply -f config/crd/bases/clamav.io_scanschedules.yaml
+kubectl apply -f config/crd/bases/clamav.io_scancacheresources.yaml
 ```
 
-### Étape 3 : Créer le ServiceAccount et RBAC
+#### Step 3: Create RBAC
 
 ```bash
 kubectl apply -f config/rbac/service_account.yaml
@@ -60,37 +85,30 @@ kubectl apply -f config/rbac/leader_election_role.yaml
 kubectl apply -f config/rbac/leader_election_role_binding.yaml
 ```
 
-### Étape 4 : Déployer l'Operator
+#### Step 4: Deploy the Operator
 
 ```bash
-# Méthode 1 : Via Kustomize (recommandé)
-make deploy IMG=registry.tooling.cloudgouv-eu-west-1.numspot.cloud/platform-iac/clamav-operator:latest
-
-# Méthode 2 : Fichier all-in-one
-kubectl apply -f dist/install.yaml
-
-# Méthode 3 : Manifests individuels
 kubectl apply -f config/manager/manager.yaml
 ```
 
-### Étape 5 : Vérifier le déploiement
+### Verify Installation
 
 ```bash
-# Vérifier que l'operator est running
+# Verify operator is running
 kubectl get pods -n clamav-system
 
-# Vérifier les logs
+# Check logs
 kubectl logs -n clamav-system deployment/clamav-operator-controller-manager -f
 
-# Vérifier les CRDs
+# Verify CRDs
 kubectl get crd | grep clamav
 ```
 
 ## Configuration
 
-### ServiceAccount pour les Scans
+### Scanner ServiceAccount
 
-Les jobs de scan nécessitent un ServiceAccount avec permissions :
+Scanner jobs require a ServiceAccount with appropriate permissions:
 
 ```bash
 kubectl apply -f - <<EOF
@@ -98,7 +116,7 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: clamav-scanner
-  namespace: clamav
+  namespace: clamav-system
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
@@ -119,7 +137,7 @@ metadata:
 subjects:
   - kind: ServiceAccount
     name: clamav-scanner
-    namespace: clamav
+    namespace: clamav-system
 roleRef:
   kind: ClusterRole
   name: clamav-scanner-role
@@ -127,45 +145,47 @@ roleRef:
 EOF
 ```
 
-### ImagePullSecret
+### Private Registry (Optional)
 
-Si votre registry est privé :
+If your container images are in a private registry:
 
 ```bash
-kubectl create secret docker-registry numspot-registry \
-  --docker-server=registry.tooling.cloudgouv-eu-west-1.numspot.cloud \
+kubectl create secret docker-registry regcred \
+  --docker-server=your-registry.example.com \
   --docker-username=YOUR_USERNAME \
   --docker-password=YOUR_PASSWORD \
-  --namespace=clamav
+  --namespace=clamav-system
 ```
 
-## Exemples d'utilisation
+Then update your Helm values or deployment to reference the secret.
 
-### 1. Créer une ScanPolicy
+## Usage Examples
+
+### 1. Create a ScanPolicy
 
 ```bash
 kubectl apply -f - <<EOF
-apiVersion: clamav.platform.numspot.com/v1alpha1
+apiVersion: clamav.io/v1alpha1
 kind: ScanPolicy
 metadata:
-  name: production-policy
-  namespace: clamav
+  name: default-policy
+  namespace: clamav-system
 spec:
   paths:
     - /var/lib
     - /opt
     - /usr/local
-  
+
   excludePatterns:
     - "*.tmp"
     - "*.log"
     - "/var/lib/docker/overlay2/*"
     - "/var/lib/containerd/*"
-  
+
   maxConcurrent: 5
   fileTimeout: 300000
   maxFileSize: 524288000
-  
+
   resources:
     requests:
       cpu: 500m
@@ -176,197 +196,198 @@ spec:
 EOF
 ```
 
-### 2. Scanner un node
+### 2. Scan a Node
 
 ```bash
 kubectl apply -f - <<EOF
-apiVersion: clamav.platform.numspot.com/v1alpha1
+apiVersion: clamav.io/v1alpha1
 kind: NodeScan
 metadata:
   name: scan-worker-01
-  namespace: clamav
+  namespace: clamav-system
 spec:
   nodeName: worker-01
-  scanPolicy: production-policy
+  scanPolicy: default-policy
   priority: high
 EOF
 
-# Surveiller le scan
-kubectl get nodescan scan-worker-01 -n clamav -w
+# Monitor the scan
+kubectl get nodescan scan-worker-01 -n clamav-system -w
 
-# Voir les détails
-kubectl describe nodescan scan-worker-01 -n clamav
+# View details
+kubectl describe nodescan scan-worker-01 -n clamav-system
 ```
 
-### 3. Scanner tout le cluster
+### 3. Scan the Entire Cluster
 
 ```bash
 kubectl apply -f - <<EOF
-apiVersion: clamav.platform.numspot.com/v1alpha1
+apiVersion: clamav.io/v1alpha1
 kind: ClusterScan
 metadata:
   name: full-cluster-scan
-  namespace: clamav
+  namespace: clamav-system
 spec:
   nodeSelector:
     matchLabels:
       node-role.kubernetes.io/worker: ""
-  scanPolicy: production-policy
+  scanPolicy: default-policy
   concurrent: 3
 EOF
 
-# Surveiller la progression
-kubectl get clusterscan full-cluster-scan -n clamav -w
+# Monitor progress
+kubectl get clusterscan full-cluster-scan -n clamav-system -w
 
-# Voir les scans par node
-kubectl get nodescan -n clamav -l clamav.platform.numspot.com/clusterscan=full-cluster-scan
+# View node scans
+kubectl get nodescan -n clamav-system -l clamav.io/clusterscan=full-cluster-scan
 ```
 
-### 4. Planifier des scans automatiques
+### 4. Schedule Automatic Scans
 
 ```bash
 kubectl apply -f - <<EOF
-apiVersion: clamav.platform.numspot.com/v1alpha1
+apiVersion: clamav.io/v1alpha1
 kind: ScanSchedule
 metadata:
   name: daily-full-scan
-  namespace: clamav
+  namespace: clamav-system
 spec:
   schedule: "0 2 * * *"
-  
+
   clusterScan:
     nodeSelector:
       matchLabels:
         node-role.kubernetes.io/worker: ""
-    scanPolicy: production-policy
+    scanPolicy: default-policy
     concurrent: 2
-  
+
   successfulScansHistoryLimit: 10
   failedScansHistoryLimit: 3
   concurrencyPolicy: Forbid
 EOF
 
-# Vérifier le schedule
-kubectl get scanschedule daily-full-scan -n clamav
+# Verify schedule
+kubectl get scanschedule daily-full-scan -n clamav-system
 
-# Voir l'historique des scans créés
-kubectl get clusterscan -n clamav -l clamav.platform.numspot.com/schedule=daily-full-scan
+# View scan history
+kubectl get clusterscan -n clamav-system -l clamav.io/schedule=daily-full-scan
 ```
 
 ## Troubleshooting
 
-### L'operator ne démarre pas
+### Operator Not Starting
 
 ```bash
-# Vérifier les events
+# Check events
 kubectl get events -n clamav-system --sort-by='.lastTimestamp'
 
-# Vérifier les logs
+# Check logs
 kubectl logs -n clamav-system deployment/clamav-operator-controller-manager
 
-# Vérifier les permissions
+# Check permissions
 kubectl auth can-i --list --as=system:serviceaccount:clamav-system:clamav-operator-controller-manager
 ```
 
-### Les scans ne se créent pas
+### Scans Not Creating
 
 ```bash
-# Vérifier que le node existe
+# Verify node exists
 kubectl get node <node-name>
 
-# Vérifier les events du NodeScan
-kubectl describe nodescan <scan-name> -n clamav
+# Check NodeScan events
+kubectl describe nodescan <scan-name> -n clamav-system
 
-# Vérifier les permissions du ServiceAccount
-kubectl auth can-i create jobs --as=system:serviceaccount:clamav:clamav-scanner -n clamav
+# Check ServiceAccount permissions
+kubectl auth can-i create jobs --as=system:serviceaccount:clamav-system:clamav-scanner -n clamav-system
 ```
 
-### Les jobs échouent
+### Jobs Failing
 
 ```bash
-# Voir les logs du job
-kubectl logs -n clamav -l clamav.platform.numspot.com/nodescan=<scan-name>
+# View job logs
+kubectl logs -n clamav-system -l clamav.io/nodescan=<scan-name>
 
-# Vérifier la connexion à ClamAV
+# Check ClamAV connectivity
 kubectl run -it --rm debug --image=busybox --restart=Never -- \
   nc -zv clamav.clamav.svc.cluster.local 3310
 
-# Vérifier l'image du scanner
-kubectl describe job -n clamav <job-name>
+# Check scanner image
+kubectl describe job -n clamav-system <job-name>
 ```
 
-### Webhooks ne fonctionnent pas
+### Webhooks Not Working
 
 ```bash
-# Vérifier que les webhooks sont configurés
+# Check webhook configuration
 kubectl get validatingwebhookconfigurations
 
-# Vérifier les certificats
+# Check certificates
 kubectl get secret -n clamav-system webhook-server-cert
 
-# Désactiver temporairement les webhooks
+# Temporarily disable webhooks (not recommended for production)
 kubectl delete validatingwebhookconfigurations clamav-operator-validating-webhook-configuration
 ```
 
 ## Monitoring
 
-### Métriques Prometheus
+### Prometheus Metrics
 
-L'operator expose des métriques sur le port 8080 :
+The operator exposes metrics on port 8080:
 
 ```bash
-# Port-forward vers l'operator
+# Port-forward to operator
 kubectl port-forward -n clamav-system deployment/clamav-operator-controller-manager 8080:8080
 
-# Accéder aux métriques
+# Access metrics
 curl http://localhost:8080/metrics | grep clamav
 ```
 
 ### Grafana Dashboard
 
-Importer le dashboard depuis `config/grafana/dashboard.json`
+Import the dashboard from `config/grafana/dashboard.json`
 
-## Mise à jour
+## Upgrade
 
-### Mise à jour de l'operator
+### Upgrading the Operator
 
 ```bash
-# Build nouvelle version
-make docker-build IMG=registry.../clamav-operator:v1.1.0
-make docker-push IMG=registry.../clamav-operator:v1.1.0
+# Build new version
+make docker-build IMG=ghcr.io/solucteam/clamav-operator:v1.1.0
+make docker-push IMG=ghcr.io/solucteam/clamav-operator:v1.1.0
 
-# Mettre à jour le déploiement
-make deploy IMG=registry.../clamav-operator:v1.1.0
+# Update deployment
+make deploy IMG=ghcr.io/solucteam/clamav-operator:v1.1.0
 ```
 
-### Mise à jour des CRDs
+### Upgrading CRDs
 
 ```bash
-# Générer les nouveaux manifests
+# Generate new manifests
 make manifests
 
-# Appliquer les CRDs
+# Apply CRDs
 kubectl apply -k config/crd
 ```
 
-## Désinstallation
+## Uninstallation
 
 ```bash
-# Supprimer l'operator
+# Remove operator
 make undeploy
 
-# Supprimer les CRDs (attention: supprime toutes les ressources !)
-kubectl delete crd nodescans.clamav.platform.numspot.com
-kubectl delete crd clusterscans.clamav.platform.numspot.com
-kubectl delete crd scanpolicies.clamav.platform.numspot.com
-kubectl delete crd scanschedules.clamav.platform.numspot.com
+# Remove CRDs (caution: deletes all resources!)
+kubectl delete crd nodescans.clamav.io
+kubectl delete crd clusterscans.clamav.io
+kubectl delete crd scanpolicies.clamav.io
+kubectl delete crd scanschedules.clamav.io
+kubectl delete crd scancacheresources.clamav.io
 
-# Supprimer le namespace
+# Remove namespace
 kubectl delete namespace clamav-system
 ```
 
 ## Support
 
-- 📖 Documentation : https://docs.clamav-operator.io
-- 🐛 Issues : https://gitlab.../platform-iac/clamav-operator/-/issues
-- 💬 Slack : #clamav-operator
+- Documentation: [GitHub Wiki](https://github.com/SolucTeam/clamav-operator/wiki)
+- Issues: [GitHub Issues](https://github.com/SolucTeam/clamav-operator/issues)
+- Discussions: [GitHub Discussions](https://github.com/SolucTeam/clamav-operator/discussions)

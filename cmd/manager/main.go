@@ -1,5 +1,5 @@
 /*
-Copyright 2025 Platform Team - Numspot.
+Copyright 2025 The ClamAV Operator Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -73,7 +73,7 @@ func main() {
 	flag.BoolVar(&enableLeaderElection, "leader-elect", false,
 		"Enable leader election for controller manager. "+
 			"Enabling this will ensure there is only one active controller manager.")
-	flag.StringVar(&scannerImage, "scanner-image", "registry.tooling.cloudgouv-eu-west-1.numspot.cloud/platform-runtime/clamav-node-scanner:1.0.3",
+	flag.StringVar(&scannerImage, "scanner-image", "ghcr.io/solucteam/clamav-node-scanner:1.0.3",
 		"Container image for the ClamAV scanner")
 	flag.StringVar(&clamavHost, "clamav-host", "clamav.clamav.svc.cluster.local",
 		"ClamAV service host")
@@ -105,7 +105,7 @@ func main() {
 		}),
 		HealthProbeBindAddress: probeAddr,
 		LeaderElection:         enableLeaderElection,
-		LeaderElectionID:       "clamav-operator.platform.numspot.com",
+		LeaderElectionID:       "clamav-operator.clamav.io",
 	})
 	if err != nil {
 		setupLog.Error(err, "unable to start manager")

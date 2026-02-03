@@ -1,5 +1,5 @@
 /*
-Copyright 2025 Platform Team - Numspot.
+Copyright 2025 The ClamAV Operator Authors.
 */
 
 package controllers
@@ -29,10 +29,10 @@ type ScanScheduleReconciler struct {
 	Recorder record.EventRecorder
 }
 
-// +kubebuilder:rbac:groups=clamav.platform.numspot.com,resources=scanschedules,verbs=get;list;watch;create;update;patch;delete
-// +kubebuilder:rbac:groups=clamav.platform.numspot.com,resources=scanschedules/status,verbs=get;update;patch
-// +kubebuilder:rbac:groups=clamav.platform.numspot.com,resources=scanschedules/finalizers,verbs=update
-// +kubebuilder:rbac:groups=clamav.platform.numspot.com,resources=clusterscans,verbs=get;list;watch;create;update;patch;delete
+// +kubebuilder:rbac:groups=clamav.io,resources=scanschedules,verbs=get;list;watch;create;update;patch;delete
+// +kubebuilder:rbac:groups=clamav.io,resources=scanschedules/status,verbs=get;update;patch
+// +kubebuilder:rbac:groups=clamav.io,resources=scanschedules/finalizers,verbs=update
+// +kubebuilder:rbac:groups=clamav.io,resources=clusterscans,verbs=get;list;watch;create;update;patch;delete
 
 func (r *ScanScheduleReconciler) Reconcile(ctx context.Context, req ctrl.Request) (ctrl.Result, error) {
 	log := log.FromContext(ctx)
@@ -103,7 +103,7 @@ func (r *ScanScheduleReconciler) Reconcile(ctx context.Context, req ctrl.Request
 				Name:      fmt.Sprintf("%s-%d", scanSchedule.Name, now.Unix()),
 				Namespace: scanSchedule.Namespace,
 				Labels: map[string]string{
-					"clamav.platform.numspot.com/schedule": scanSchedule.Name,
+					"clamav.io/schedule": scanSchedule.Name,
 				},
 			},
 			Spec: scanSchedule.Spec.ClusterScan,
@@ -147,7 +147,7 @@ func (r *ScanScheduleReconciler) cleanupHistory(ctx context.Context, scanSchedul
 	// Get all ClusterScans for this schedule
 	clusterScans := &clamavv1alpha1.ClusterScanList{}
 	if err := r.List(ctx, clusterScans, client.InNamespace(scanSchedule.Namespace),
-		client.MatchingLabels{"clamav.platform.numspot.com/schedule": scanSchedule.Name}); err != nil {
+		client.MatchingLabels{"clamav.io/schedule": scanSchedule.Name}); err != nil {
 		return err
 	}
 

@@ -1,76 +1,60 @@
 # ClamAV Operator Helm Chart
 
-Helm chart pour déployer le ClamAV Operator dans Kubernetes.
+Helm chart for deploying the ClamAV Operator in Kubernetes.
 
-## Prérequis
+## Prerequisites
 
 - Kubernetes 1.24+
 - Helm 3.0+
-- ClamAV déployé et accessible dans le cluster
+- ClamAV deployed and accessible in the cluster
 
 ## Installation
 
-### Ajouter le repository Helm (optionnel si vous avez un registry Helm)
+### Install from local sources
 
 ```bash
-helm repo add clamav-operator https://charts.numspot.com
-helm repo update
-```
-
-### Installer le chart
-
-```bash
-# Installation simple avec valeurs par défaut
-helm install clamav-operator clamav-operator/clamav-operator \
+# Create namespace and install
+helm install clamav-operator ./helm/clamav-operator \
   --namespace clamav-system \
   --create-namespace
 
-# Installation avec fichier de valeurs personnalisé
-helm install clamav-operator clamav-operator/clamav-operator \
+# Install with custom values
+helm install clamav-operator ./helm/clamav-operator \
   --namespace clamav-system \
   --create-namespace \
   --values my-values.yaml
 
-# Installation avec paramètres en ligne
-helm install clamav-operator clamav-operator/clamav-operator \
+# Install with inline parameters
+helm install clamav-operator ./helm/clamav-operator \
   --namespace clamav-system \
   --create-namespace \
   --set operator.image.tag=v1.0.0 \
   --set scanner.clamav.host=clamav.clamav.svc.cluster.local
 ```
 
-### Installation depuis les sources locales
-
-```bash
-cd helm/clamav-operator
-helm install clamav-operator . \
-  --namespace clamav-system \
-  --create-namespace
-```
-
 ## Configuration
 
-### Paramètres principaux
+### Main Parameters
 
-| Paramètre | Description | Valeur par défaut |
-|-----------|-------------|-------------------|
-| `operator.replicaCount` | Nombre de replicas de l'operator | `1` |
-| `operator.image.repository` | Repository de l'image operator | `registry.../clamav-operator` |
-| `operator.image.tag` | Tag de l'image operator | `""` (chart version) |
-| `operator.resources.limits.cpu` | CPU limit operator | `500m` |
-| `operator.resources.limits.memory` | Memory limit operator | `256Mi` |
-| `scanner.image.repository` | Repository de l'image scanner | `registry.../clamav-node-scanner` |
-| `scanner.image.tag` | Tag de l'image scanner | `1.0.3` |
-| `scanner.clamav.host` | Host du service ClamAV | `clamav.clamav.svc.cluster.local` |
-| `scanner.clamav.port` | Port du service ClamAV | `3310` |
-| `crds.install` | Installer les CRDs | `true` |
-| `crds.keep` | Garder les CRDs lors du uninstall | `true` |
-| `rbac.create` | Créer les ressources RBAC | `true` |
-| `monitoring.serviceMonitor.enabled` | Activer ServiceMonitor Prometheus | `true` |
-| `monitoring.prometheusRule.enabled` | Activer PrometheusRule | `true` |
-| `defaultScanPolicy.enabled` | Créer une ScanPolicy par défaut | `true` |
+| Parameter | Description | Default |
+|-----------|-------------|---------|
+| `operator.replicaCount` | Number of operator replicas | `1` |
+| `operator.image.repository` | Operator image repository | `ghcr.io/solucteam/clamav-operator` |
+| `operator.image.tag` | Operator image tag | `""` (chart version) |
+| `operator.resources.limits.cpu` | Operator CPU limit | `500m` |
+| `operator.resources.limits.memory` | Operator memory limit | `256Mi` |
+| `scanner.image.repository` | Scanner image repository | `ghcr.io/solucteam/clamav-node-scanner` |
+| `scanner.image.tag` | Scanner image tag | `1.0.3` |
+| `scanner.clamav.host` | ClamAV service host | `clamav.clamav.svc.cluster.local` |
+| `scanner.clamav.port` | ClamAV service port | `3310` |
+| `crds.install` | Install CRDs | `true` |
+| `crds.keep` | Keep CRDs on uninstall | `true` |
+| `rbac.create` | Create RBAC resources | `true` |
+| `monitoring.serviceMonitor.enabled` | Enable Prometheus ServiceMonitor | `false` |
+| `monitoring.prometheusRule.enabled` | Enable PrometheusRule | `false` |
+| `defaultScanPolicy.enabled` | Create default ScanPolicy | `true` |
 
-### Exemple de fichier values personnalisé
+### Example Custom Values File
 
 ```yaml
 # my-values.yaml
@@ -89,7 +73,7 @@ operator:
 
 scanner:
   clamav:
-    host: clamav.prod.svc.cluster.local
+    host: clamav.clamav.svc.cluster.local
     port: 3310
   resources:
     limits:
@@ -116,26 +100,26 @@ defaultScanPolicy:
     maxConcurrent: 10
 ```
 
-## Utilisation après installation
+## Post-Installation Usage
 
-### Vérifier le déploiement
+### Verify Deployment
 
 ```bash
-# Vérifier que l'operator est running
+# Check operator is running
 kubectl get pods -n clamav-system
 
-# Vérifier les CRDs
+# Check CRDs
 kubectl get crd | grep clamav
 
-# Vérifier les logs
+# Check logs
 kubectl logs -n clamav-system deployment/clamav-operator-controller-manager -f
 ```
 
-### Scanner un node
+### Scan a Node
 
 ```bash
 kubectl apply -f - <<EOF
-apiVersion: clamav.platform.numspot.com/v1alpha1
+apiVersion: clamav.io/v1alpha1
 kind: NodeScan
 metadata:
   name: scan-worker-01
@@ -146,15 +130,15 @@ spec:
   priority: high
 EOF
 
-# Surveiller le scan
+# Watch the scan
 kubectl get nodescan -n clamav-system -w
 ```
 
-### Scanner tout le cluster
+### Scan the Entire Cluster
 
 ```bash
 kubectl apply -f - <<EOF
-apiVersion: clamav.platform.numspot.com/v1alpha1
+apiVersion: clamav.io/v1alpha1
 kind: ClusterScan
 metadata:
   name: full-cluster-scan
@@ -168,92 +152,93 @@ spec:
 EOF
 ```
 
-## Mise à jour
+## Upgrade
 
 ```bash
-# Mise à jour avec nouvelle version
-helm upgrade clamav-operator clamav-operator/clamav-operator \
+# Upgrade with new version
+helm upgrade clamav-operator ./helm/clamav-operator \
   --namespace clamav-system \
   --values my-values.yaml
 
-# Mise à jour avec nouveau tag d'image
-helm upgrade clamav-operator clamav-operator/clamav-operator \
+# Upgrade with new image tag
+helm upgrade clamav-operator ./helm/clamav-operator \
   --namespace clamav-system \
   --reuse-values \
   --set operator.image.tag=v1.1.0
 ```
 
-## Désinstallation
+## Uninstallation
 
 ```bash
-# Désinstaller le chart (garde les CRDs par défaut)
+# Uninstall the chart (keeps CRDs by default)
 helm uninstall clamav-operator --namespace clamav-system
 
-# Supprimer les CRDs manuellement si nécessaire
-kubectl delete crd nodescans.clamav.platform.numspot.com
-kubectl delete crd clusterscans.clamav.platform.numspot.com
-kubectl delete crd scanpolicies.clamav.platform.numspot.com
-kubectl delete crd scanschedules.clamav.platform.numspot.com
+# Manually delete CRDs if needed
+kubectl delete crd nodescans.clamav.io
+kubectl delete crd clusterscans.clamav.io
+kubectl delete crd scanpolicies.clamav.io
+kubectl delete crd scanschedules.clamav.io
+kubectl delete crd scancacheresources.clamav.io
 ```
 
 ## Monitoring
 
-Le chart crée automatiquement :
-- Un **ServiceMonitor** pour Prometheus Operator
-- Des **PrometheusRules** avec alertes pré-configurées
+The chart can automatically create:
+- A **ServiceMonitor** for Prometheus Operator
+- **PrometheusRules** with pre-configured alerts
 
-### Métriques disponibles
+### Available Metrics
 
 ```promql
-# Scans en cours
+# Running scans
 clamav_nodescan_running
 
-# Fichiers infectés
+# Infected files
 sum(clamav_files_infected_total)
 
-# Durée des scans
+# Scan duration
 avg(clamav_scan_duration_seconds)
 ```
 
-### Alertes pré-configurées
+### Pre-configured Alerts
 
-- **ClamAVMalwareDetected** - Malware détecté
-- **ClamAVScanFailed** - Scan échoué
-- **ClamAVNoRecentScans** - Pas de scan récent
+- **ClamAVMalwareDetected** - Malware detected
+- **ClamAVScanFailed** - Scan failed
+- **ClamAVNoRecentScans** - No recent scans
 
 ## Troubleshooting
 
-### L'operator ne démarre pas
+### Operator Not Starting
 
 ```bash
-# Vérifier les events
+# Check events
 kubectl get events -n clamav-system --sort-by='.lastTimestamp'
 
-# Vérifier les logs
+# Check logs
 kubectl logs -n clamav-system deployment/clamav-operator-controller-manager
 
-# Vérifier RBAC
+# Check RBAC
 kubectl auth can-i --list --as=system:serviceaccount:clamav-system:clamav-operator
 ```
 
-### Les scans ne se créent pas
+### Scans Not Creating
 
 ```bash
-# Vérifier que le ServiceAccount scanner existe
+# Check scanner ServiceAccount exists
 kubectl get sa -n clamav-system clamav-scanner
 
-# Vérifier les permissions
+# Check permissions
 kubectl auth can-i create jobs --as=system:serviceaccount:clamav-system:clamav-scanner
 ```
 
-### Webhooks ne fonctionnent pas
+### Webhooks Not Working
 
 ```bash
-# Vérifier les certificats
+# Check certificates
 kubectl get secret -n clamav-system clamav-operator-webhook-server-cert
 
-# Désactiver temporairement
-helm upgrade clamav-operator clamav-operator/clamav-operator \
+# Temporarily disable webhooks
+helm upgrade clamav-operator ./helm/clamav-operator \
   --namespace clamav-system \
   --reuse-values \
   --set webhook.enabled=false
@@ -261,9 +246,9 @@ helm upgrade clamav-operator clamav-operator/clamav-operator \
 
 ## Support
 
-- Documentation : https://docs.clamav-operator.io
-- Issues : https://gitlab.../platform-iac/clamav-operator/-/issues
-- Slack : #clamav-operator
+- Documentation: [GitHub Wiki](https://github.com/SolucTeam/clamav-operator/wiki)
+- Issues: [GitHub Issues](https://github.com/SolucTeam/clamav-operator/issues)
+- Discussions: [GitHub Discussions](https://github.com/SolucTeam/clamav-operator/discussions)
 
 ## License
 

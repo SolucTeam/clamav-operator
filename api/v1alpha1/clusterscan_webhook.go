@@ -1,5 +1,5 @@
 /*
-Copyright 2025 Platform Team - Numspot.
+Copyright 2025 The ClamAV Operator Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -35,7 +35,7 @@ func (r *ClusterScan) SetupWebhookWithManager(mgr ctrl.Manager) error {
 		Complete()
 }
 
-// +kubebuilder:webhook:path=/validate-clamav-platform-numspot-com-v1alpha1-clusterscan,mutating=false,failurePolicy=fail,sideEffects=None,groups=clamav.platform.numspot.com,resources=clusterscans,verbs=create;update,versions=v1alpha1,name=vclusterscan.kb.io,admissionReviewVersions=v1
+// +kubebuilder:webhook:path=/validate-clamav-io-v1alpha1-clusterscan,mutating=false,failurePolicy=fail,sideEffects=None,groups=clamav.io,resources=clusterscans,verbs=create;update,versions=v1alpha1,name=vclusterscan.kb.io,admissionReviewVersions=v1
 
 var _ webhook.Validator = &ClusterScan{}
 

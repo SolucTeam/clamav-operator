@@ -1,5 +1,5 @@
 /*
-Copyright 2025 Platform Team - Numspot.
+Copyright 2025 The ClamAV Operator Authors.
 */
 
 package controllers
@@ -23,7 +23,7 @@ import (
 )
 
 const (
-	clusterScanFinalizer = "clamav.platform.numspot.com/clusterscan-finalizer"
+	clusterScanFinalizer = "clamav.io/clusterscan-finalizer"
 )
 
 // ClusterScanReconciler reconciles a ClusterScan object
@@ -33,10 +33,10 @@ type ClusterScanReconciler struct {
 	Recorder record.EventRecorder
 }
 
-// +kubebuilder:rbac:groups=clamav.platform.numspot.com,resources=clusterscans,verbs=get;list;watch;create;update;patch;delete
-// +kubebuilder:rbac:groups=clamav.platform.numspot.com,resources=clusterscans/status,verbs=get;update;patch
-// +kubebuilder:rbac:groups=clamav.platform.numspot.com,resources=clusterscans/finalizers,verbs=update
-// +kubebuilder:rbac:groups=clamav.platform.numspot.com,resources=nodescans,verbs=get;list;watch;create;update;patch;delete
+// +kubebuilder:rbac:groups=clamav.io,resources=clusterscans,verbs=get;list;watch;create;update;patch;delete
+// +kubebuilder:rbac:groups=clamav.io,resources=clusterscans/status,verbs=get;update;patch
+// +kubebuilder:rbac:groups=clamav.io,resources=clusterscans/finalizers,verbs=update
+// +kubebuilder:rbac:groups=clamav.io,resources=nodescans,verbs=get;list;watch;create;update;patch;delete
 // +kubebuilder:rbac:groups="",resources=nodes,verbs=get;list;watch
 // +kubebuilder:rbac:groups="",resources=events,verbs=create;patch
 
@@ -94,7 +94,7 @@ func (r *ClusterScanReconciler) Reconcile(ctx context.Context, req ctrl.Request)
 	// Create or check NodeScans
 	existingNodeScans := &clamavv1alpha1.NodeScanList{}
 	if err := r.List(ctx, existingNodeScans, client.InNamespace(clusterScan.Namespace),
-		client.MatchingLabels{"clamav.platform.numspot.com/clusterscan": clusterScan.Name}); err != nil {
+		client.MatchingLabels{"clamav.io/clusterscan": clusterScan.Name}); err != nil {
 		return ctrl.Result{}, err
 	}
 
@@ -221,8 +221,8 @@ func (r *ClusterScanReconciler) createNodeScanForNode(ctx context.Context, clust
 			Name:      fmt.Sprintf("%s-%s", clusterScan.Name, nodeName),
 			Namespace: clusterScan.Namespace,
 			Labels: map[string]string{
-				"clamav.platform.numspot.com/clusterscan": clusterScan.Name,
-				"clamav.platform.numspot.com/node":        nodeName,
+				"clamav.io/clusterscan": clusterScan.Name,
+				"clamav.io/node":        nodeName,
 			},
 		},
 		Spec: clamavv1alpha1.NodeScanSpec{
@@ -268,7 +268,7 @@ func (r *ClusterScanReconciler) cleanupClusterScan(ctx context.Context, clusterS
 	// Delete all NodeScans owned by this ClusterScan
 	nodeScans := &clamavv1alpha1.NodeScanList{}
 	if err := r.List(ctx, nodeScans, client.InNamespace(clusterScan.Namespace),
-		client.MatchingLabels{"clamav.platform.numspot.com/clusterscan": clusterScan.Name}); err != nil {
+		client.MatchingLabels{"clamav.io/clusterscan": clusterScan.Name}); err != nil {
 		return err
 	}
 

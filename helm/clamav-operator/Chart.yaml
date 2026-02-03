@@ -14,7 +14,7 @@ home: https://github.com/SolucTeam/clamav-operator
 sources:
   - https://github.com/SolucTeam/clamav-operator
 maintainers:
-  - name: Platform Team
-    email: platform-team@numspot.com
+  - name: ClamAV Operator Contributors
+    email: clamav-operator@users.noreply.github.com
 icon: https://www.clamav.net/assets/clamav-trademark.png
 kubeVersion: ">=1.24.0-0"
