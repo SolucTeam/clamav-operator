@@ -1,5 +1,6 @@
 bin/k8s/**/kubectl
 bin/k8s/**/kube-apiserver
+bin/k8s/**/etcd
 # Binaries for programs and plugins
 *.exe
 *.exe~

@@ -123,10 +123,73 @@ scanner:
     tag: "1.0.3"
     pullPolicy: IfNotPresent
 
-  # ClamAV service configuration
+  # Scan mode: "standalone" or "remote"
+  # - standalone: clamscan binary + signatures embedded in the scanner image.
+  #   Zero network dependency, each node scans locally.
+  # - remote: connects to a central clamd service (legacy behaviour).
+  mode: standalone
+
+  # ClamAV remote service configuration (used only when mode=remote)
   clamav:
     host: clamav.clamav.svc.cluster.local
     port: 3310
+
+  # Standalone-mode binary paths (override if your image differs)
+  standalone:
+    clamscanPath: /usr/bin/clamscan
+    clamavDbPath: /var/lib/clamav
+
+  # ---------------------------------------------------------------------------
+  # Freshclam – ClamAV signature updates
+  # ---------------------------------------------------------------------------
+  freshclam:
+    # Enable automatic signature updates via freshclam CronJob.
+    # Set to false for air-gapped environments where signatures are
+    # pre-loaded into the scanner image at build time.
+    enabled: true
+    # Cron schedule – default every 6 hours
+    schedule: "0 */6 * * *"
+    image:
+      repository: clamav/clamav
+      tag: "1.3"
+      pullPolicy: IfNotPresent
+    resources:
+      requests:
+        cpu: 100m
+        memory: 128Mi
+      limits:
+        cpu: 500m
+        memory: 256Mi
+
+  # ---------------------------------------------------------------------------
+  # Signature persistence
+  # ---------------------------------------------------------------------------
+  signatures:
+    # Use a PersistentVolumeClaim to store signatures across restarts.
+    # When false an emptyDir is used (signatures re-downloaded on every
+    # freshclam run or must be baked into the image for airgap).
+    persistent: false
+    pvcName: clamav-signatures
+    storageClass: ""
+    accessMode: ReadWriteOnce
+    size: 1Gi
+
+  # ---------------------------------------------------------------------------
+  # Incremental scan settings
+  # ---------------------------------------------------------------------------
+  incremental:
+    enabled: true
+    # Strategy: "full" | "incremental" | "smart"
+    # - full: scan every file every time
+    # - incremental: only scan new/modified files since last run
+    # - smart: full scan periodically, incremental in between
+    strategy: smart
+    # For smart strategy: run a full scan every N incremental scans
+    fullScanInterval: 10
+    # Maximum file age in hours to consider for incremental scans
+    maxFileAgeHours: 24
+    # Skip files whose mtime+size haven't changed since last scan
+    skipUnchangedFiles: true
 
   # ServiceAccount for scanner jobs
   serviceAccount:

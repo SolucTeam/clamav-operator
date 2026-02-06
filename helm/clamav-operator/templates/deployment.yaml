@@ -48,8 +48,21 @@ spec:
         - --health-probe-bind-address=:{{ .Values.operator.service.healthPort }}
         - --metrics-bind-address=:{{ .Values.operator.service.metricsPort }}
         - --scanner-image={{ include "clamav-operator.scannerImage" . }}
+        - --scan-mode={{ .Values.scanner.mode }}
+        {{- if eq .Values.scanner.mode "remote" }}
         - --clamav-host={{ .Values.scanner.clamav.host }}
         - --clamav-port={{ .Values.scanner.clamav.port }}
+        {{- else }}
+        - --clamscan-path={{ .Values.scanner.standalone.clamscanPath }}
+        - --clamav-db-path={{ .Values.scanner.standalone.clamavDbPath }}
+        - --freshclam-enabled={{ .Values.scanner.freshclam.enabled }}
+        {{- end }}
+        {{- if .Values.scanner.incremental.enabled }}
+        - --incremental-enabled=true
+        - --scan-strategy={{ .Values.scanner.incremental.strategy }}
+        - --max-file-age-hours={{ .Values.scanner.incremental.maxFileAgeHours }}
+        - --skip-unchanged-files={{ .Values.scanner.incremental.skipUnchangedFiles }}
+        {{- end }}
         {{- range .Values.env }}
         - --{{ .name | lower | replace "_" "-" }}={{ .value }}
         {{- end }}

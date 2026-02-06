@@ -1,0 +1,422 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "clamav-operator.fullname" . }}-scanner-script
+  namespace: {{ .Release.Namespace }}
+  labels:
+    {{- include "clamav-operator.labels" . | nindent 4 }}
+    app.kubernetes.io/component: scanner
+data:
+  node-scanner-standalone.js: |
+    #!/usr/bin/env node
+    // node-scanner-standalone.js
+    // Supports both standalone (local clamscan) and remote (clamd) modes.
+    const NodeClam = require('clamscan');
+    const fs = require('fs').promises;
+    const path = require('path');
+
+    // =========================================================================
+    // CONFIGURATION
+    // =========================================================================
+    const CONFIG = {
+        nodeName: process.env.NODE_NAME || 'unknown',
+        hostRoot: process.env.HOST_ROOT || '/host',
+        resultsDir: process.env.RESULTS_DIR || '/results',
+        pathsToScan: (process.env.PATHS_TO_SCAN || '/host/var/lib,/host/opt').split(','),
+        maxConcurrent: parseInt(process.env.MAX_CONCURRENT || '5'),
+        fileTimeout: parseInt(process.env.FILE_TIMEOUT || '300000'),
+        maxFileSize: parseInt(process.env.MAX_FILE_SIZE || '104857600'),
+
+        // Mode: "standalone" (local clamscan binary) | "remote" (clamd service)
+        scanMode: process.env.SCAN_MODE || 'standalone',
+
+        // Standalone settings
+        clamscanPath: process.env.CLAMSCAN_PATH || '/usr/bin/clamscan',
+        clamavDbPath: process.env.CLAMAV_DB_PATH || '/var/lib/clamav',
+
+        // Remote settings (fallback / legacy)
+        clamavHost: process.env.CLAMAV_HOST,
+        clamavPort: parseInt(process.env.CLAMAV_PORT || '3310'),
+
+        excludePatterns: [
+            /\/proc\//,
+            /\/sys\//,
+            /\/dev\//,
+            /\/run\//,
+            /\.sock$/,
+            /\.pid$/
+        ]
+    };
+
+    // Incremental scan configuration
+    const INCREMENTAL_CONFIG = {
+        enabled: process.env.INCREMENTAL_ENABLED === 'true',
+        strategy: process.env.SCAN_STRATEGY || 'full',
+        maxFileAgeHours: parseInt(process.env.MAX_FILE_AGE_HOURS || '24'),
+        skipUnchangedFiles: process.env.SKIP_UNCHANGED_FILES !== 'false',
+    };
+
+    // Runtime caches and statistics
+    let SCAN_CACHE = {};
+    const stats = {
+        filesScanned: 0,
+        filesInfected: 0,
+        filesSkipped: 0,
+        errors: 0,
+        startTime: Date.now()
+    };
+    const incrementalStats = {
+        filesSkipped: 0,
+        cacheHits: 0,
+        cacheMisses: 0,
+        newFiles: 0,
+        modifiedFiles: 0
+    };
+
+    // =========================================================================
+    // LOGGER
+    // =========================================================================
+    class Logger {
+        log(level, message, data = {}) {
+            console.log(JSON.stringify({
+                timestamp: new Date().toISOString(),
+                level,
+                service: 'clamav-scanner',
+                node_name: CONFIG.nodeName,
+                scan_mode: CONFIG.scanMode,
+                message,
+                ...data
+            }));
+        }
+        info(message, data) { this.log('INFO', message, data); }
+        warn(message, data) { this.log('WARN', message, data); }
+        error(message, data) { this.log('ERROR', message, data); }
+        debug(message, data) { this.log('DEBUG', message, data); }
+    }
+    const logger = new Logger();
+
+    // =========================================================================
+    // SCANNER INITIALISATION
+    // =========================================================================
+    async function initScanner() {
+        logger.info('Initialisation du scanner', {
+            mode: CONFIG.scanMode,
+            clamscan_path: CONFIG.clamscanPath,
+            clamav_db: CONFIG.clamavDbPath,
+            remote_host: CONFIG.clamavHost
+        });
+
+        if (CONFIG.scanMode === 'standalone') {
+            return initStandaloneScanner();
+        } else {
+            return initRemoteScanner();
+        }
+    }
+
+    // Mode Standalone — local clamscan binary, zero network dependency
+    async function initStandaloneScanner() {
+        logger.info('Mode standalone - Utilisation de clamscan local');
+
+        // Verify clamscan binary exists
+        try {
+            await fs.access(CONFIG.clamscanPath);
+        } catch {
+            throw new Error(`clamscan not found at ${CONFIG.clamscanPath}`);
+        }
+
+        // Verify at least one signature database is present
+        const dbFiles = ['main.cvd', 'main.cld', 'daily.cvd', 'daily.cld'];
+        let hasSignatures = false;
+        for (const file of dbFiles) {
+            try {
+                await fs.access(path.join(CONFIG.clamavDbPath, file));
+                hasSignatures = true;
+                break;
+            } catch { /* try next */ }
+        }
+        if (!hasSignatures) {
+            throw new Error(`No ClamAV signatures found in ${CONFIG.clamavDbPath}`);
+        }
+
+        const clamscan = await new NodeClam().init({
+            removeInfected: false,
+            quarantineInfected: false,
+            debugMode: false,
+            clamscan: {
+                path: CONFIG.clamscanPath,
+                db: CONFIG.clamavDbPath,
+                scanArchives: true,
+                active: true
+            },
+            clamdscan: {
+                active: false
+            },
+            preference: 'clamscan'
+        });
+
+        const version = await clamscan.getVersion();
+        logger.info('Scanner standalone initialisé', { version });
+        return clamscan;
+    }
+
+    // Mode Remote — connect to an external clamd daemon (legacy)
+    async function initRemoteScanner() {
+        if (!CONFIG.clamavHost) {
+            throw new Error('CLAMAV_HOST required for remote mode');
+        }
+        logger.info('Mode remote - Connexion à clamd distant', {
+            host: CONFIG.clamavHost,
+            port: CONFIG.clamavPort
+        });
+
+        const clamscan = await new NodeClam().init({
+            removeInfected: false,
+            quarantineInfected: false,
+            debugMode: false,
+            clamdscan: {
+                socket: false,
+                host: CONFIG.clamavHost,
+                port: CONFIG.clamavPort,
+                timeout: CONFIG.fileTimeout,
+                localFallback: false,
+                active: true
+            },
+            preference: 'clamdscan'
+        });
+
+        await clamscan.ping();
+        const version = await clamscan.getVersion();
+        logger.info('Connexion clamd établie', { version });
+        return clamscan;
+    }
+
+    // =========================================================================
+    // FILE SCANNING
+    // =========================================================================
+    function shouldExclude(filePath) {
+        return CONFIG.excludePatterns.some(pattern => pattern.test(filePath));
+    }
+
+    async function shouldScanFile(filePath, fileStats) {
+        if (!INCREMENTAL_CONFIG.enabled || INCREMENTAL_CONFIG.strategy === 'full') {
+            return { shouldScan: true, reason: 'full_scan' };
+        }
+
+        const cachedFile = SCAN_CACHE[filePath];
+        if (!cachedFile) {
+            incrementalStats.newFiles++;
+            incrementalStats.cacheMisses++;
+            return { shouldScan: true, reason: 'new_file' };
+        }
+
+        incrementalStats.cacheHits++;
+        const fileMtime = Math.floor(fileStats.mtimeMs / 1000);
+
+        if (fileMtime > cachedFile.modTime || fileStats.size !== cachedFile.size) {
+            incrementalStats.modifiedFiles++;
+            return { shouldScan: true, reason: 'modified' };
+        }
+
+        incrementalStats.filesSkipped++;
+        return { shouldScan: false, reason: 'unchanged' };
+    }
+
+    async function scanFile(clamscan, filePath) {
+        if (shouldExclude(filePath)) {
+            stats.filesSkipped++;
+            return { skipped: true };
+        }
+
+        try {
+            const fileStats = await fs.stat(filePath);
+
+            if (!fileStats.isFile()) {
+                stats.filesSkipped++;
+                return { skipped: true, reason: 'not_regular_file' };
+            }
+            if (fileStats.size > CONFIG.maxFileSize) {
+                stats.filesSkipped++;
+                return { skipped: true, reason: 'too_large' };
+            }
+
+            if (INCREMENTAL_CONFIG.enabled) {
+                const { shouldScan, reason } = await shouldScanFile(filePath, fileStats);
+                if (!shouldScan) {
+                    return { skipped: true, reason, incremental: true };
+                }
+            }
+
+            const { file, isInfected, viruses } = await clamscan.isInfected(filePath);
+            stats.filesScanned++;
+
+            // Update cache for incremental runs
+            if (INCREMENTAL_CONFIG.enabled) {
+                SCAN_CACHE[filePath] = {
+                    path: filePath,
+                    modTime: Math.floor(fileStats.mtimeMs / 1000),
+                    size: fileStats.size,
+                    lastScanned: Math.floor(Date.now() / 1000),
+                    scanResult: isInfected ? 'infected' : 'clean'
+                };
+            }
+
+            if (isInfected) {
+                stats.filesInfected++;
+                logger.warn('Fichier infecté détecté', {
+                    alert: 'INFECTED_FILE',
+                    file_path: file,
+                    virus_names: viruses
+                });
+                return { infected: true, file, viruses };
+            }
+            return { infected: false, file };
+        } catch (error) {
+            stats.errors++;
+            logger.error('Erreur lors du scan', { file: filePath, error: error.message });
+            return { error: true, file: filePath, message: error.message };
+        }
+    }
+
+    async function scanDirectory(clamscan, dirPath, results) {
+        try {
+            const entries = await fs.readdir(dirPath, { withFileTypes: true });
+            const files = [];
+            const dirs = [];
+
+            for (const entry of entries) {
+                const fullPath = path.join(dirPath, entry.name);
+                if (entry.isDirectory()) dirs.push(fullPath);
+                else if (entry.isFile()) files.push(fullPath);
+            }
+
+            // Scan in batches of maxConcurrent
+            for (let i = 0; i < files.length; i += CONFIG.maxConcurrent) {
+                const batch = files.slice(i, i + CONFIG.maxConcurrent);
+                const batchResults = await Promise.all(
+                    batch.map(f => scanFile(clamscan, f))
+                );
+                for (const result of batchResults) {
+                    if (result.infected) {
+                        results.infected.push({ file: result.file, viruses: result.viruses });
+                    } else if (result.error) {
+                        results.errors.push({ file: result.file, error: result.message });
+                    }
+                }
+
+                // Progress logging every 500 files
+                if ((stats.filesScanned + incrementalStats.filesSkipped) % 500 === 0) {
+                    logger.info('Progression', {
+                        scanned: stats.filesScanned,
+                        skipped: incrementalStats.filesSkipped,
+                        infected: stats.filesInfected
+                    });
+                }
+            }
+
+            // Recurse into subdirectories
+            for (const subDir of dirs) {
+                if (!shouldExclude(subDir)) {
+                    await scanDirectory(clamscan, subDir, results);
+                }
+            }
+        } catch (error) {
+            logger.error('Erreur répertoire', { directory: dirPath, error: error.message });
+        }
+    }
+
+    // =========================================================================
+    // REPORT GENERATION
+    // =========================================================================
+    async function generateReport(results) {
+        const duration = Math.round((Date.now() - stats.startTime) / 1000);
+        const dateStr = new Date().toISOString().replace(/[:.]/g, '-');
+
+        const report = {
+            node: CONFIG.nodeName,
+            scanMode: CONFIG.scanMode,
+            scanDate: new Date().toISOString(),
+            duration,
+            strategy: INCREMENTAL_CONFIG.strategy,
+            incremental: INCREMENTAL_CONFIG.enabled ? {
+                enabled: true,
+                filesSkipped: incrementalStats.filesSkipped,
+                cacheHits: incrementalStats.cacheHits,
+                newFiles: incrementalStats.newFiles,
+                modifiedFiles: incrementalStats.modifiedFiles
+            } : { enabled: false },
+            statistics: {
+                filesScanned: stats.filesScanned,
+                filesInfected: stats.filesInfected,
+                filesSkipped: stats.filesSkipped,
+                errors: stats.errors
+            },
+            infected: results.infected,
+            errors: results.errors.slice(0, 100)
+        };
+
+        const reportPath = path.join(
+            CONFIG.resultsDir,
+            `${CONFIG.nodeName}_scan_${dateStr}.json`
+        );
+        await fs.writeFile(reportPath, JSON.stringify(report, null, 2));
+
+        const summaryPath = path.join(
+            CONFIG.resultsDir,
+            `${CONFIG.nodeName}_summary_${dateStr}.txt`
+        );
+        await fs.writeFile(summaryPath, [
+            `STATUS=${results.infected.length > 0 ? 'INFECTED' : 'CLEAN'}`,
+            `NODE=${CONFIG.nodeName}`,
+            `MODE=${CONFIG.scanMode}`,
+            `SCANNED=${stats.filesScanned}`,
+            `INFECTED=${stats.filesInfected}`,
+            `DURATION=${duration}s`
+        ].join('\n'));
+
+        return report;
+    }
+
+    // =========================================================================
+    // MAIN
+    // =========================================================================
+    async function main() {
+        logger.info('Démarrage du scan ClamAV', {
+            node: CONFIG.nodeName,
+            mode: CONFIG.scanMode,
+            paths: CONFIG.pathsToScan
+        });
+
+        const results = { infected: [], errors: [] };
+
+        try {
+            const clamscan = await initScanner();
+
+            for (const scanPath of CONFIG.pathsToScan) {
+                try {
+                    await fs.access(scanPath);
+                    logger.info('Scan du chemin', { path: scanPath });
+                    await scanDirectory(clamscan, scanPath, results);
+                } catch {
+                    logger.warn('Chemin non trouvé', { path: scanPath });
+                }
+            }
+
+            await generateReport(results);
+
+            logger.info('Scan terminé', {
+                duration: Math.round((Date.now() - stats.startTime) / 1000),
+                scanned: stats.filesScanned,
+                infected: stats.filesInfected,
+                status: results.infected.length > 0 ? 'INFECTED' : 'CLEAN'
+            });
+
+            process.exit(0);
+        } catch (error) {
+            logger.error('Erreur fatale', { error: error.message, stack: error.stack });
+            process.exit(1);
+        }
+    }
+
+    process.on('SIGTERM', () => process.exit(0));
+    process.on('SIGINT', () => process.exit(0));
+    main();
