@@ -67,19 +67,19 @@ jobs:
           
           if [ -z "$LAST_TAG" ]; then
             echo "should_release=true" >> $GITHUB_OUTPUT
-            echo "First release - will create v0.1.0"
+            echo "📦 First release - will create v0.1.0"
             exit 0
           fi
           
           # Chercher des commits conventionnels depuis la dernière release
-          COMMITS=$(git log $LAST_TAG..HEAD --oneline)
+          COMMITS=$(git log $LAST_TAG..HEAD --oneline 2>/dev/null || git log --oneline)
           
           if echo "$COMMITS" | grep -qE '^[a-f0-9]+ (feat|fix|perf|refactor)(\(.+\))?!?:'; then
             echo "should_release=true" >> $GITHUB_OUTPUT
-            echo "Found releasable commits"
+            echo "✅ Found releasable commits since $LAST_TAG"
           else
             echo "should_release=false" >> $GITHUB_OUTPUT
-            echo "No releasable commits found"
+            echo "ℹ️  No releasable commits found since $LAST_TAG"
           fi
 
       - name: Calculate next version
@@ -87,13 +87,24 @@ jobs:
         if: steps.check.outputs.should_release == 'true'
         run: |
           # Obtenir la dernière version
-          LAST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "v0.0.0")
-          VERSION=${LAST_TAG#v}  # Supprimer le 'v'
+          LAST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
+          
+          if [ -z "$LAST_TAG" ]; then
+            echo "📦 First release - starting with v0.1.0"
+            VERSION="0.0.0"
+          else
+            VERSION=${LAST_TAG#v}  # Supprimer le 'v'
+            echo "📦 Current version: $LAST_TAG"
+          fi
           
           IFS='.' read -r MAJOR MINOR PATCH <<< "$VERSION"
           
           # Analyser les commits depuis la dernière version
-          COMMITS=$(git log $LAST_TAG..HEAD --format=%s)
+          if [ -z "$LAST_TAG" ]; then
+            COMMITS=$(git log --format=%s)
+          else
+            COMMITS=$(git log $LAST_TAG..HEAD --format=%s 2>/dev/null || git log --format=%s)
+          fi
           
           # Déterminer le type de bump
           BUMP_TYPE="${{ github.event.inputs.version_bump }}"
@@ -128,7 +139,7 @@ jobs:
           
           NEW_VERSION="$MAJOR.$MINOR.$PATCH"
           echo "version=$NEW_VERSION" >> $GITHUB_OUTPUT
-          echo "Next version will be: v$NEW_VERSION (bump: $BUMP_TYPE)"
+          echo "✨ Next version will be: v$NEW_VERSION (bump: $BUMP_TYPE)"
 
       - name: Generate changelog
         id: changelog
@@ -137,34 +148,37 @@ jobs:
           LAST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
           
           if [ -z "$LAST_TAG" ]; then
+            # Premier release - utiliser tous les commits
             RANGE="HEAD"
+            echo "📝 Generating changelog for first release (all commits)"
           else
             RANGE="$LAST_TAG..HEAD"
+            echo "📝 Generating changelog from $LAST_TAG to HEAD"
           fi
           
           # Générer le changelog
           cat > changelog.md << 'EOF'
-          ## 🚀 Features
+## 🚀 Features
+
+EOF
           
-          EOF
-          
-          git log $RANGE --format="* %s (%h)" --grep="^feat" >> changelog.md || echo "_No new features_" >> changelog.md
-          
-          cat >> changelog.md << 'EOF'
-          
-          ## 🐛 Bug Fixes
-          
-          EOF
-          
-          git log $RANGE --format="* %s (%h)" --grep="^fix" >> changelog.md || echo "_No bug fixes_" >> changelog.md
+          git log $RANGE --format="* %s (%h)" --grep="^feat" >> changelog.md 2>/dev/null || echo "_No new features_" >> changelog.md
           
           cat >> changelog.md << 'EOF'
+
+## 🐛 Bug Fixes
+
+EOF
           
-          ## 🔧 Other Changes
+          git log $RANGE --format="* %s (%h)" --grep="^fix" >> changelog.md 2>/dev/null || echo "_No bug fixes_" >> changelog.md
           
-          EOF
+          cat >> changelog.md << 'EOF'
+
+## 🔧 Other Changes
+
+EOF
           
-          git log $RANGE --format="* %s (%h)" --grep="^(chore|docs|style|refactor|perf|test|build|ci)" >> changelog.md || echo "_No other changes_" >> changelog.md
+          git log $RANGE --format="* %s (%h)" --grep="^(chore|docs|style|refactor|perf|test|build|ci)" >> changelog.md 2>/dev/null || echo "_No other changes_" >> changelog.md
           
           # Stocker le changelog
           CHANGELOG=$(cat changelog.md)
@@ -220,20 +234,27 @@ jobs:
             echo "" >> CHANGELOG.md
           fi
           
-          # Ajouter la nouvelle version
-          {
-            echo ""
-            echo "## [$VERSION] - $DATE"
-            echo ""
-            cat changelog.md
-          } >> CHANGELOG.md.tmp
+          # Créer un fichier temporaire avec la nouvelle version
+          cat > changelog.tmp << EOF
+## [$VERSION] - $DATE
+
+${{ needs.analyze.outputs.changelog }}
+
+EOF
           
-          # Fusionner avec l'ancien CHANGELOG
-          head -n 4 CHANGELOG.md > CHANGELOG.md.new
-          cat CHANGELOG.md.tmp >> CHANGELOG.md.new
-          tail -n +5 CHANGELOG.md >> CHANGELOG.md.new
-          mv CHANGELOG.md.new CHANGELOG.md
-          rm changelog.md.tmp
+          # Insérer après l'en-tête du CHANGELOG
+          if grep -q "^## \[" CHANGELOG.md 2>/dev/null; then
+            # Il y a déjà des versions - insérer avant la première
+            awk '/^## \[/{print ""; system("cat changelog.tmp"); print; next} 1' CHANGELOG.md > CHANGELOG.md.new
+            mv CHANGELOG.md.new CHANGELOG.md
+          else
+            # Première version - ajouter à la fin
+            cat changelog.tmp >> CHANGELOG.md
+          fi
+          
+          rm -f changelog.tmp
+          
+          echo "✅ CHANGELOG.md updated with version $VERSION"
 
       - name: Commit CHANGELOG
         run: |
@@ -253,7 +274,7 @@ jobs:
     needs: [analyze, release]
     steps:
       - name: Trigger docker-build workflow
-        uses: actions/github-script@v8
+        uses: actions/github-script@v7
         with:
           script: |
             await github.rest.actions.createWorkflowDispatch({

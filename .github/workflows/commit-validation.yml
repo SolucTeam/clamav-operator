@@ -66,6 +66,12 @@ jobs:
             BASE_SHA="${{ github.event.pull_request.base.sha }}"
             HEAD_SHA="${{ github.event.pull_request.head.sha }}"
             COMMITS=$(git rev-list $BASE_SHA..$HEAD_SHA)
+            
+            # Vérifier si c'est une PR de Dependabot
+            if [ "${{ github.actor }}" = "dependabot[bot]" ]; then
+              echo "✅ Dependabot PR - commits are automatically validated"
+              exit 0
+            fi
           else
             # Pour un push, vérifier seulement le dernier commit
             COMMITS="${{ github.sha }}"
@@ -114,6 +120,7 @@ jobs:
             echo "     fix(api): correct validation error"
             echo "     docs: update README with examples"
             echo "     feat!: breaking change in configuration"
+            echo "     build(deps): bump package version"
             echo ""
             echo "   Learn more: https://www.conventionalcommits.org"
             echo ""
@@ -146,9 +153,10 @@ jobs:
             chore
             revert
           requireScope: false
-          subjectPattern: ^[A-Z].+$
-          subjectPatternError: |
-            Le sujet doit commencer par une majuscule.
+          # Supprimer la règle de majuscule pour supporter Dependabot
+          # subjectPattern: ^[A-Z].+$
+          # subjectPatternError: |
+          #   Le sujet doit commencer par une majuscule.
           wip: false
 
   # ===========================================================================
@@ -166,12 +174,18 @@ jobs:
           echo "🔍 Validating branch name: $BRANCH"
           echo ""
           
-          # Pattern pour les noms de branches
-          if echo "$BRANCH" | grep -qE '^(feature|fix|hotfix|refactor|docs|test|chore)/[a-z0-9-]+$'; then
+          # Accepter les branches des bots de dépendances
+          if echo "$BRANCH" | grep -qE '^(dependabot|renovate)/'; then
+            echo "✅ Dependency bot branch: $BRANCH"
+            exit 0
+          fi
+          
+          # Pattern pour les noms de branches normales
+          if echo "$BRANCH" | grep -qE '^(feature|feat|fix|hotfix|refactor|docs|test|chore)/[a-z0-9-]+$'; then
             echo "✅ Branch name follows conventions"
             echo ""
             echo "Branch: $BRANCH"
-          elif echo "$BRANCH" | grep -qE '^(main|master|develop|staging|production)$'; then
+          elif echo "$BRANCH" | grep -qE '^(main|master|develop|development|staging|production)$'; then
             echo "✅ Protected branch: $BRANCH"
           else
             echo "❌ Invalid branch name: $BRANCH"
@@ -182,13 +196,15 @@ jobs:
             echo ""
             echo "   type/description-in-kebab-case"
             echo ""
-            echo "   Valid types: feature, fix, hotfix, refactor, docs, test, chore"
+            echo "   Valid types: feature, feat, fix, hotfix, refactor, docs, test, chore"
             echo ""
             echo "   Examples:"
             echo "     feature/add-auto-release"
             echo "     fix/scanner-memory-leak"
             echo "     docs/update-readme"
             echo "     refactor/cleanup-controllers"
+            echo ""
+            echo "   Note: Branches from Dependabot and Renovate are automatically accepted"
             echo ""
             exit 1
           fi
