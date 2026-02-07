@@ -1,0 +1,251 @@
+# =============================================================================
+# Validation des Commits (Conventional Commits)
+# =============================================================================
+# Vérifie que tous les commits suivent le format Conventional Commits
+#
+# Format attendu :
+#   type(scope?): description
+#
+# Types valides :
+#   - feat:     nouvelle fonctionnalité
+#   - fix:      correction de bug
+#   - docs:     documentation
+#   - style:    formatage, espaces, etc
+#   - refactor: refactoring du code
+#   - perf:     amélioration des performances
+#   - test:     ajout/modification de tests
+#   - build:    système de build, dépendances
+#   - ci:       CI/CD, workflows
+#   - chore:    tâches diverses
+#
+# Exemples valides :
+#   feat: add auto-release workflow
+#   fix(scanner): correct memory leak in scan job
+#   docs: update installation guide
+#   feat!: breaking change in API
+# =============================================================================
+
+name: Commit Validation
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, edited]
+  push:
+    branches:
+      - main
+      - develop
+      - 'feature/**'
+      - 'fix/**'
+
+jobs:
+  # ===========================================================================
+  # Job 1 - Valider les messages de commit
+  # ===========================================================================
+  validate-commits:
+    name: Validate Commit Messages
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Nécessaire pour voir tous les commits
+
+      - name: Validate commit messages
+        run: |
+          #!/bin/bash
+          set -e
+          
+          echo "🔍 Validating commit messages..."
+          echo ""
+          
+          # Pattern pour Conventional Commits
+          PATTERN='^(feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert)(\(.+\))?(!)?: .{1,100}'
+          
+          # Obtenir la liste des commits à vérifier
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            BASE_SHA="${{ github.event.pull_request.base.sha }}"
+            HEAD_SHA="${{ github.event.pull_request.head.sha }}"
+            COMMITS=$(git rev-list $BASE_SHA..$HEAD_SHA)
+          else
+            # Pour un push, vérifier seulement le dernier commit
+            COMMITS="${{ github.sha }}"
+          fi
+          
+          INVALID_COMMITS=()
+          VALID_COUNT=0
+          
+          for COMMIT in $COMMITS; do
+            MESSAGE=$(git log -1 --format=%s $COMMIT)
+            COMMIT_SHORT=$(git rev-parse --short $COMMIT)
+            
+            if echo "$MESSAGE" | grep -qE "$PATTERN"; then
+              echo "✅ $COMMIT_SHORT: $MESSAGE"
+              VALID_COUNT=$((VALID_COUNT + 1))
+            else
+              echo "❌ $COMMIT_SHORT: $MESSAGE"
+              INVALID_COMMITS+=("$COMMIT_SHORT: $MESSAGE")
+            fi
+          done
+          
+          echo ""
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+          
+          if [ ${#INVALID_COMMITS[@]} -eq 0 ]; then
+            echo "✅ All $VALID_COUNT commit(s) follow Conventional Commits format"
+            exit 0
+          else
+            echo "❌ Found ${#INVALID_COMMITS[@]} invalid commit(s):"
+            echo ""
+            for COMMIT in "${INVALID_COMMITS[@]}"; do
+              echo "  • $COMMIT"
+            done
+            echo ""
+            echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+            echo ""
+            echo "ℹ️  Conventional Commits Format:"
+            echo ""
+            echo "   type(scope?): description"
+            echo ""
+            echo "   Valid types: feat, fix, docs, style, refactor, perf,"
+            echo "                test, build, ci, chore, revert"
+            echo ""
+            echo "   Examples:"
+            echo "     feat: add new scanner mode"
+            echo "     fix(api): correct validation error"
+            echo "     docs: update README with examples"
+            echo "     feat!: breaking change in configuration"
+            echo ""
+            echo "   Learn more: https://www.conventionalcommits.org"
+            echo ""
+            exit 1
+          fi
+
+  # ===========================================================================
+  # Job 2 - Valider le titre de la PR
+  # ===========================================================================
+  validate-pr-title:
+    name: Validate PR Title
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    steps:
+      - name: Check PR title
+        uses: amannn/action-semantic-pull-request@v5
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          types: |
+            feat
+            fix
+            docs
+            style
+            refactor
+            perf
+            test
+            build
+            ci
+            chore
+            revert
+          requireScope: false
+          subjectPattern: ^[A-Z].+$
+          subjectPatternError: |
+            Le sujet doit commencer par une majuscule.
+          wip: false
+
+  # ===========================================================================
+  # Job 3 - Vérifier que la branche suit les conventions de nommage
+  # ===========================================================================
+  validate-branch:
+    name: Validate Branch Name
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    steps:
+      - name: Check branch name
+        run: |
+          BRANCH="${{ github.head_ref }}"
+          
+          echo "🔍 Validating branch name: $BRANCH"
+          echo ""
+          
+          # Pattern pour les noms de branches
+          if echo "$BRANCH" | grep -qE '^(feature|fix|hotfix|refactor|docs|test|chore)/[a-z0-9-]+$'; then
+            echo "✅ Branch name follows conventions"
+            echo ""
+            echo "Branch: $BRANCH"
+          elif echo "$BRANCH" | grep -qE '^(main|master|develop|staging|production)$'; then
+            echo "✅ Protected branch: $BRANCH"
+          else
+            echo "❌ Invalid branch name: $BRANCH"
+            echo ""
+            echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+            echo ""
+            echo "ℹ️  Branch Naming Convention:"
+            echo ""
+            echo "   type/description-in-kebab-case"
+            echo ""
+            echo "   Valid types: feature, fix, hotfix, refactor, docs, test, chore"
+            echo ""
+            echo "   Examples:"
+            echo "     feature/add-auto-release"
+            echo "     fix/scanner-memory-leak"
+            echo "     docs/update-readme"
+            echo "     refactor/cleanup-controllers"
+            echo ""
+            exit 1
+          fi
+
+  # ===========================================================================
+  # Job 4 - Vérifier les fichiers modifiés
+  # ===========================================================================
+  check-files:
+    name: Check Modified Files
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v41
+
+      - name: Check for sensitive files
+        run: |
+          SENSITIVE_FILES=(
+            ".env"
+            "*.key"
+            "*.pem"
+            "*.crt"
+            "*secret*"
+            "*password*"
+            "*.p12"
+            "*.pfx"
+          )
+          
+          echo "🔍 Checking for sensitive files..."
+          echo ""
+          
+          FOUND_SENSITIVE=false
+          
+          for FILE in ${{ steps.changed-files.outputs.all_changed_files }}; do
+            for PATTERN in "${SENSITIVE_FILES[@]}"; do
+              if [[ "$FILE" == $PATTERN ]]; then
+                echo "⚠️  WARNING: Potentially sensitive file detected: $FILE"
+                FOUND_SENSITIVE=true
+              fi
+            done
+          done
+          
+          echo ""
+          
+          if [ "$FOUND_SENSITIVE" = true ]; then
+            echo "⚠️  Please verify that no secrets are committed"
+            echo ""
+            echo "If these files are intentional, you can:"
+            echo "  1. Add them to .gitignore"
+            echo "  2. Use git-secrets or similar tools"
+            echo "  3. Store secrets in GitHub Secrets"
+          else
+            echo "✅ No sensitive files detected"
+          fi

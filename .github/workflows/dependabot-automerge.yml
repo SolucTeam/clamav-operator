@@ -1,0 +1,151 @@
+# =============================================================================
+# Auto-merge Dependabot PRs
+# =============================================================================
+# Fusionne automatiquement les PRs de Dependabot si :
+#   1. Les tests passent avec succès
+#   2. C'est une mise à jour mineure ou patch (pas majeure)
+#   3. Les checks de sécurité passent
+#
+# Les mises à jour majeures nécessitent toujours une revue manuelle
+# =============================================================================
+
+name: Dependabot Auto-merge
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  # ===========================================================================
+  # Job 1 - Vérifier si c'est une PR Dependabot éligible
+  # ===========================================================================
+  check-dependabot:
+    name: Check Dependabot PR
+    runs-on: ubuntu-latest
+    if: github.actor == 'dependabot[bot]'
+    outputs:
+      is_eligible: ${{ steps.check.outputs.is_eligible }}
+      update_type: ${{ steps.metadata.outputs.update-type }}
+    steps:
+      - name: Dependabot metadata
+        id: metadata
+        uses: dependabot/fetch-metadata@v1
+        with:
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
+
+      - name: Check if eligible for auto-merge
+        id: check
+        run: |
+          UPDATE_TYPE="${{ steps.metadata.outputs.update-type }}"
+          
+          echo "Update type: $UPDATE_TYPE"
+          
+          # Auto-merge seulement pour patch et minor
+          if [[ "$UPDATE_TYPE" == "version-update:semver-patch" ]] || \
+             [[ "$UPDATE_TYPE" == "version-update:semver-minor" ]]; then
+            echo "✅ Eligible for auto-merge (update type: $UPDATE_TYPE)"
+            echo "is_eligible=true" >> $GITHUB_OUTPUT
+          else
+            echo "❌ Not eligible for auto-merge (update type: $UPDATE_TYPE)"
+            echo "ℹ️  Major updates require manual review"
+            echo "is_eligible=false" >> $GITHUB_OUTPUT
+          fi
+
+  # ===========================================================================
+  # Job 2 - Attendre que tous les checks passent
+  # ===========================================================================
+  wait-for-checks:
+    name: Wait for Checks
+    runs-on: ubuntu-latest
+    needs: check-dependabot
+    if: needs.check-dependabot.outputs.is_eligible == 'true'
+    steps:
+      - name: Wait for status checks
+        uses: lewagon/wait-on-check-action@v1.3.3
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          check-regexp: '(test|build|security|lint).*'
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          wait-interval: 30
+          running-workflow-name: 'Wait for Checks'
+
+  # ===========================================================================
+  # Job 3 - Approuver et merger la PR
+  # ===========================================================================
+  auto-merge:
+    name: Auto-merge PR
+    runs-on: ubuntu-latest
+    needs: [check-dependabot, wait-for-checks]
+    if: needs.check-dependabot.outputs.is_eligible == 'true'
+    steps:
+      - name: Approve PR
+        run: |
+          gh pr review "$PR_URL" --approve --body "✅ Auto-approved by Dependabot workflow (update type: ${{ needs.check-dependabot.outputs.update_type }})"
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Enable auto-merge
+        run: |
+          gh pr merge "$PR_URL" --auto --squash --delete-branch
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Comment on PR
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: '🤖 **Auto-merge enabled**\n\n' +
+                    'Cette PR sera automatiquement fusionnée dès que tous les checks seront au vert.\n\n' +
+                    '**Type de mise à jour :** `${{ needs.check-dependabot.outputs.update_type }}`\n' +
+                    '**Stratégie :** Squash merge avec suppression de la branche'
+            });
+
+  # ===========================================================================
+  # Job 4 - Notifier si la PR n'est pas éligible
+  # ===========================================================================
+  notify-manual-review:
+    name: Notify Manual Review Required
+    runs-on: ubuntu-latest
+    needs: check-dependabot
+    if: |
+      github.actor == 'dependabot[bot]' && 
+      needs.check-dependabot.outputs.is_eligible == 'false'
+    steps:
+      - name: Comment on PR
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: '⚠️ **Revue manuelle requise**\n\n' +
+                    'Cette PR contient une mise à jour majeure et nécessite une revue manuelle.\n\n' +
+                    '**Type de mise à jour :** `${{ needs.check-dependabot.outputs.update_type }}`\n\n' +
+                    '**Actions à effectuer :**\n' +
+                    '1. ✅ Vérifier les breaking changes dans le changelog\n' +
+                    '2. ✅ Tester localement si nécessaire\n' +
+                    '3. ✅ Vérifier que tous les tests passent\n' +
+                    '4. ✅ Approuver et merger manuellement'
+            });
+
+      - name: Add label
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              labels: ['needs-review', 'major-update']
+            });

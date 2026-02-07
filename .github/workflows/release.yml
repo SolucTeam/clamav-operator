@@ -1,0 +1,266 @@
+# =============================================================================
+# Auto Release avec Semantic Versioning
+# =============================================================================
+# Crée automatiquement des releases GitHub basées sur les Conventional Commits
+# 
+# Format des commits :
+#   feat: nouvelle fonctionnalité  → version MINOR (1.0.0 → 1.1.0)
+#   fix: correction de bug          → version PATCH (1.0.0 → 1.0.1)
+#   BREAKING CHANGE:                → version MAJOR (1.0.0 → 2.0.0)
+#
+# Déclencheurs :
+#   - Push sur main avec des commits feat/fix
+#   - Manuel via workflow_dispatch
+# =============================================================================
+
+name: Auto Release
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - '**.md'
+      - 'docs/**'
+      - '.github/**'
+      - '!.github/workflows/release.yml'
+  workflow_dispatch:
+    inputs:
+      version_bump:
+        description: 'Version bump type'
+        required: true
+        default: 'auto'
+        type: choice
+        options:
+          - auto
+          - major
+          - minor
+          - patch
+
+permissions:
+  contents: write
+  pull-requests: write
+  packages: write
+
+jobs:
+  # ===========================================================================
+  # Job 1 - Analyser les commits et déterminer la version
+  # ===========================================================================
+  analyze:
+    name: Analyze Commits
+    runs-on: ubuntu-latest
+    outputs:
+      should_release: ${{ steps.check.outputs.should_release }}
+      version: ${{ steps.semver.outputs.version }}
+      changelog: ${{ steps.changelog.outputs.changelog }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Nécessaire pour l'historique complet
+
+      - name: Check if should release
+        id: check
+        run: |
+          # Vérifier s'il y a des commits avec feat: ou fix: depuis la dernière release
+          LAST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
+          
+          if [ -z "$LAST_TAG" ]; then
+            echo "should_release=true" >> $GITHUB_OUTPUT
+            echo "First release - will create v0.1.0"
+            exit 0
+          fi
+          
+          # Chercher des commits conventionnels depuis la dernière release
+          COMMITS=$(git log $LAST_TAG..HEAD --oneline)
+          
+          if echo "$COMMITS" | grep -qE '^[a-f0-9]+ (feat|fix|perf|refactor)(\(.+\))?!?:'; then
+            echo "should_release=true" >> $GITHUB_OUTPUT
+            echo "Found releasable commits"
+          else
+            echo "should_release=false" >> $GITHUB_OUTPUT
+            echo "No releasable commits found"
+          fi
+
+      - name: Calculate next version
+        id: semver
+        if: steps.check.outputs.should_release == 'true'
+        run: |
+          # Obtenir la dernière version
+          LAST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "v0.0.0")
+          VERSION=${LAST_TAG#v}  # Supprimer le 'v'
+          
+          IFS='.' read -r MAJOR MINOR PATCH <<< "$VERSION"
+          
+          # Analyser les commits depuis la dernière version
+          COMMITS=$(git log $LAST_TAG..HEAD --format=%s)
+          
+          # Déterminer le type de bump
+          BUMP_TYPE="${{ github.event.inputs.version_bump }}"
+          
+          if [ "$BUMP_TYPE" = "auto" ] || [ -z "$BUMP_TYPE" ]; then
+            if echo "$COMMITS" | grep -qE '^(feat|fix|perf|refactor).*!:|^BREAKING CHANGE:'; then
+              BUMP_TYPE="major"
+            elif echo "$COMMITS" | grep -qE '^feat(\(.+\))?:'; then
+              BUMP_TYPE="minor"
+            elif echo "$COMMITS" | grep -qE '^fix(\(.+\))?:'; then
+              BUMP_TYPE="patch"
+            else
+              BUMP_TYPE="patch"
+            fi
+          fi
+          
+          # Incrémenter la version
+          case "$BUMP_TYPE" in
+            major)
+              MAJOR=$((MAJOR + 1))
+              MINOR=0
+              PATCH=0
+              ;;
+            minor)
+              MINOR=$((MINOR + 1))
+              PATCH=0
+              ;;
+            patch)
+              PATCH=$((PATCH + 1))
+              ;;
+          esac
+          
+          NEW_VERSION="$MAJOR.$MINOR.$PATCH"
+          echo "version=$NEW_VERSION" >> $GITHUB_OUTPUT
+          echo "Next version will be: v$NEW_VERSION (bump: $BUMP_TYPE)"
+
+      - name: Generate changelog
+        id: changelog
+        if: steps.check.outputs.should_release == 'true'
+        run: |
+          LAST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
+          
+          if [ -z "$LAST_TAG" ]; then
+            RANGE="HEAD"
+          else
+            RANGE="$LAST_TAG..HEAD"
+          fi
+          
+          # Générer le changelog
+          cat > changelog.md << 'EOF'
+          ## 🚀 Features
+          
+          EOF
+          
+          git log $RANGE --format="* %s (%h)" --grep="^feat" >> changelog.md || echo "_No new features_" >> changelog.md
+          
+          cat >> changelog.md << 'EOF'
+          
+          ## 🐛 Bug Fixes
+          
+          EOF
+          
+          git log $RANGE --format="* %s (%h)" --grep="^fix" >> changelog.md || echo "_No bug fixes_" >> changelog.md
+          
+          cat >> changelog.md << 'EOF'
+          
+          ## 🔧 Other Changes
+          
+          EOF
+          
+          git log $RANGE --format="* %s (%h)" --grep="^(chore|docs|style|refactor|perf|test|build|ci)" >> changelog.md || echo "_No other changes_" >> changelog.md
+          
+          # Stocker le changelog
+          CHANGELOG=$(cat changelog.md)
+          echo "changelog<<EOF" >> $GITHUB_OUTPUT
+          echo "$CHANGELOG" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+  # ===========================================================================
+  # Job 2 - Créer la release et les tags
+  # ===========================================================================
+  release:
+    name: Create Release
+    runs-on: ubuntu-latest
+    needs: analyze
+    if: needs.analyze.outputs.should_release == 'true'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Create and push tag
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          TAG="v${{ needs.analyze.outputs.version }}"
+          git tag -a "$TAG" -m "Release $TAG"
+          git push origin "$TAG"
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: v${{ needs.analyze.outputs.version }}
+          name: Release v${{ needs.analyze.outputs.version }}
+          body: ${{ needs.analyze.outputs.changelog }}
+          draft: false
+          prerelease: false
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Update CHANGELOG.md
+        run: |
+          VERSION="v${{ needs.analyze.outputs.version }}"
+          DATE=$(date +%Y-%m-%d)
+          
+          # Créer ou mettre à jour CHANGELOG.md
+          if [ ! -f CHANGELOG.md ]; then
+            echo "# Changelog" > CHANGELOG.md
+            echo "" >> CHANGELOG.md
+            echo "All notable changes to this project will be documented in this file." >> CHANGELOG.md
+            echo "" >> CHANGELOG.md
+          fi
+          
+          # Ajouter la nouvelle version
+          {
+            echo ""
+            echo "## [$VERSION] - $DATE"
+            echo ""
+            cat changelog.md
+          } >> CHANGELOG.md.tmp
+          
+          # Fusionner avec l'ancien CHANGELOG
+          head -n 4 CHANGELOG.md > CHANGELOG.md.new
+          cat CHANGELOG.md.tmp >> CHANGELOG.md.new
+          tail -n +5 CHANGELOG.md >> CHANGELOG.md.new
+          mv CHANGELOG.md.new CHANGELOG.md
+          rm changelog.md.tmp
+
+      - name: Commit CHANGELOG
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          git add CHANGELOG.md
+          git commit -m "chore: update CHANGELOG for v${{ needs.analyze.outputs.version }}" || echo "No changes to commit"
+          git push origin main || echo "Nothing to push"
+
+  # ===========================================================================
+  # Job 3 - Déclencher le build des images Docker avec le nouveau tag
+  # ===========================================================================
+  trigger-build:
+    name: Trigger Docker Build
+    runs-on: ubuntu-latest
+    needs: [analyze, release]
+    steps:
+      - name: Trigger docker-build workflow
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.actions.createWorkflowDispatch({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_id: 'docker-build.yml',
+              ref: 'main'
+            });
+            
+            console.log('Docker build workflow triggered for v${{ needs.analyze.outputs.version }}');
