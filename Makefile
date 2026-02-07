@@ -1,5 +1,6 @@
 # Image URL to use all building/pushing image targets
 IMG ?= registry.tooling.cloudgouv-eu-west-1.numspot.cloud/platform-iac/clamav-operator:latest
+SCANNER_IMG ?= ghcr.io/solucteam/clamav-node-scanner:latest
 
 # ENVTEST_K8S_VERSION refers to the version of kubebuilder assets to be downloaded by envtest binary.
 ENVTEST_K8S_VERSION = 1.29.0
@@ -99,6 +100,24 @@ docker-build: ## Build docker image with the manager.
 .PHONY: docker-push
 docker-push: ## Push docker image with the manager.
 	$(CONTAINER_TOOL) push ${IMG}
+
+.PHONY: docker-build-scanner
+docker-build-scanner: ## Build docker image for the standalone scanner.
+	$(CONTAINER_TOOL) build -t ${SCANNER_IMG} scanner/
+
+.PHONY: docker-build-scanner-airgap
+docker-build-scanner-airgap: ## Build scanner image without downloading signatures (air-gap).
+	$(CONTAINER_TOOL) build --build-arg DOWNLOAD_SIGS=false -t ${SCANNER_IMG}-airgap scanner/
+
+.PHONY: docker-push-scanner
+docker-push-scanner: ## Push the standalone scanner image.
+	$(CONTAINER_TOOL) push ${SCANNER_IMG}
+
+.PHONY: docker-build-all
+docker-build-all: docker-build docker-build-scanner ## Build all docker images (operator + scanner).
+
+.PHONY: docker-push-all
+docker-push-all: docker-push docker-push-scanner ## Push all docker images.
 
 # PLATFORMS defines the target platforms for the manager image be built to provide support to multiple
 # architectures. (i.e. make docker-buildx IMG=myregistry/mypoperator:0.0.1). To use this option you need to:

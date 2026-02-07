@@ -1,0 +1,364 @@
+# =============================================================================
+# ClamAV Operator — Docker Build & Push
+# =============================================================================
+# Builds two images:
+#   1. clamav-operator        — Go operator (build/Dockerfile)
+#   2. clamav-node-scanner    — Node.js standalone scanner (scanner/Dockerfile)
+#
+# Triggers:
+#   • push to main / release branches  → build + push
+#   • pull request to main             → build only (no push)
+#   • manual dispatch                  → build + optional push
+#   • tags v*                          → build + push with semver tags
+# =============================================================================
+
+name: Docker Build & Push
+
+on:
+  push:
+    branches:
+      - main
+      - "release/**"
+    tags:
+      - "v*"
+    paths:
+      - "build/**"
+      - "cmd/**"
+      - "api/**"
+      - "controllers/**"
+      - "pkg/**"
+      - "go.mod"
+      - "go.sum"
+      - "scanner/**"
+      - ".github/workflows/docker-build.yml"
+
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "build/**"
+      - "cmd/**"
+      - "api/**"
+      - "controllers/**"
+      - "pkg/**"
+      - "go.mod"
+      - "go.sum"
+      - "scanner/**"
+      - ".github/workflows/docker-build.yml"
+
+  workflow_dispatch:
+    inputs:
+      push_images:
+        description: "Push images to registry"
+        required: false
+        default: "false"
+        type: boolean
+      scanner_download_sigs:
+        description: "Download ClamAV signatures during scanner build"
+        required: false
+        default: "true"
+        type: boolean
+
+# ─── Permissions ──────────────────────────────────────────────────────────────
+permissions:
+  contents: read
+  packages: write       # Push to GHCR
+  id-token: write       # For cosign signing (optional)
+
+# ─── Concurrency ─────────────────────────────────────────────────────────────
+concurrency:
+  group: docker-${{ github.ref }}
+  cancel-in-progress: true
+
+# ─── Environment ──────────────────────────────────────────────────────────────
+env:
+  REGISTRY: ghcr.io
+  OPERATOR_IMAGE: ghcr.io/${{ github.repository_owner }}/clamav-operator
+  SCANNER_IMAGE: ghcr.io/${{ github.repository_owner }}/clamav-node-scanner
+
+jobs:
+  # ===========================================================================
+  # Job 1 — Lint & Test (runs in parallel with builds)
+  # ===========================================================================
+  test:
+    name: Lint & Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # ── Go tests (operator) ──────────────────────────────────────────────
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+          cache: true
+
+      - name: Go vet
+        run: go vet ./...
+
+      - name: Go test
+        run: go test ./... -short -count=1
+
+      # ── Node.js tests (scanner) ─────────────────────────────────────────
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: scanner/package-lock.json
+
+      - name: Install scanner dependencies
+        working-directory: scanner
+        run: npm ci --ignore-scripts 2>/dev/null || npm install --ignore-scripts
+
+      - name: Run scanner tests
+        working-directory: scanner
+        run: node --test src/__tests__/
+
+  # ===========================================================================
+  # Job 2 — Build & Push: clamav-operator (Go)
+  # ===========================================================================
+  build-operator:
+    name: "Build: clamav-operator"
+    runs-on: ubuntu-latest
+    needs: test
+    outputs:
+      image_digest: ${{ steps.build-push.outputs.digest }}
+      image_tags: ${{ steps.meta.outputs.tags }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # ── Docker meta (tags & labels) ──────────────────────────────────────
+      - name: Docker meta
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.OPERATOR_IMAGE }}
+          tags: |
+            # branch name
+            type=ref,event=branch
+            # PR number
+            type=ref,event=pr
+            # semver from tag
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+            type=semver,pattern={{major}}
+            # short SHA
+            type=sha,prefix=sha-
+            # latest for default branch
+            type=raw,value=latest,enable=${{ github.ref == 'refs/heads/main' }}
+
+      # ── Buildx setup ────────────────────────────────────────────────────
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      # ── Registry login ──────────────────────────────────────────────────
+      - name: Login to GHCR
+        if: github.event_name != 'pull_request'
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      # ── Build & push ────────────────────────────────────────────────────
+      - name: Build and push operator image
+        id: build-push
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: build/Dockerfile
+          platforms: linux/amd64,linux/arm64
+          push: ${{ github.event_name != 'pull_request' && (github.event.inputs.push_images != 'false' || true) }}
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=gha,scope=operator
+          cache-to: type=gha,mode=max,scope=operator
+          build-args: |
+            TARGETOS=linux
+
+      # ── Summary ─────────────────────────────────────────────────────────
+      - name: Image summary
+        run: |
+          echo "## Operator Image" >> $GITHUB_STEP_SUMMARY
+          echo "**Digest:** \`${{ steps.build-push.outputs.digest }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "**Tags:**" >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+          echo "${{ steps.meta.outputs.tags }}" >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+
+  # ===========================================================================
+  # Job 3 — Build & Push: clamav-node-scanner (Node.js + ClamAV standalone)
+  # ===========================================================================
+  build-scanner:
+    name: "Build: clamav-node-scanner"
+    runs-on: ubuntu-latest
+    needs: test
+    outputs:
+      image_digest: ${{ steps.build-push.outputs.digest }}
+      image_tags: ${{ steps.meta.outputs.tags }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # ── Docker meta ─────────────────────────────────────────────────────
+      - name: Docker meta
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.SCANNER_IMAGE }}
+          tags: |
+            type=ref,event=branch
+            type=ref,event=pr
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+            type=semver,pattern={{major}}
+            type=sha,prefix=sha-
+            type=raw,value=latest,enable=${{ github.ref == 'refs/heads/main' }}
+
+      # ── Buildx setup ────────────────────────────────────────────────────
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      # ── Registry login ──────────────────────────────────────────────────
+      - name: Login to GHCR
+        if: github.event_name != 'pull_request'
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      # ── Build & push ────────────────────────────────────────────────────
+      - name: Build and push scanner image
+        id: build-push
+        uses: docker/build-push-action@v6
+        with:
+          context: scanner/
+          file: scanner/Dockerfile
+          platforms: linux/amd64,linux/arm64
+          push: ${{ github.event_name != 'pull_request' }}
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=gha,scope=scanner
+          cache-to: type=gha,mode=max,scope=scanner
+          build-args: |
+            DOWNLOAD_SIGS=${{ github.event.inputs.scanner_download_sigs || 'true' }}
+
+      # ── Summary ─────────────────────────────────────────────────────────
+      - name: Image summary
+        run: |
+          echo "## Scanner Image" >> $GITHUB_STEP_SUMMARY
+          echo "**Digest:** \`${{ steps.build-push.outputs.digest }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "**Tags:**" >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+          echo "${{ steps.meta.outputs.tags }}" >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+
+  # ===========================================================================
+  # Job 4 — Build scanner air-gap variant (no signature download)
+  # ===========================================================================
+  build-scanner-airgap:
+    name: "Build: clamav-node-scanner (airgap)"
+    runs-on: ubuntu-latest
+    needs: test
+    # Only build airgap variant on tags or main branch
+    if: github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/tags/v')
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Docker meta
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.SCANNER_IMAGE }}
+          # Suffix all tags with -airgap
+          flavor: |
+            suffix=-airgap,onlatest=true
+          tags: |
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+            type=sha,prefix=sha-
+            type=raw,value=latest,enable=${{ github.ref == 'refs/heads/main' }}
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Login to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push scanner airgap image
+        uses: docker/build-push-action@v6
+        with:
+          context: scanner/
+          file: scanner/Dockerfile
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=gha,scope=scanner-airgap
+          cache-to: type=gha,mode=max,scope=scanner-airgap
+          build-args: |
+            DOWNLOAD_SIGS=false
+
+  # ===========================================================================
+  # Job 5 — Security scan with Trivy
+  # ===========================================================================
+  security-scan:
+    name: "Security Scan"
+    runs-on: ubuntu-latest
+    needs: [build-operator, build-scanner]
+    if: github.event_name != 'pull_request'
+    strategy:
+      matrix:
+        include:
+          - image_name: operator
+            image_ref: ${{ needs.build-operator.outputs.image_tags }}
+          - image_name: scanner
+            image_ref: ${{ needs.build-scanner.outputs.image_tags }}
+    steps:
+      - name: Login to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      # Extract first tag from the multi-line tags output
+      - name: Resolve image tag
+        id: resolve
+        run: |
+          TAG=$(echo "${{ matrix.image_ref }}" | head -n 1)
+          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+
+      - name: Trivy vulnerability scan
+        uses: aquasecurity/trivy-action@0.28.0
+        with:
+          image-ref: ${{ steps.resolve.outputs.tag }}
+          format: "sarif"
+          output: "trivy-${{ matrix.image_name }}.sarif"
+          severity: "CRITICAL,HIGH"
+          ignore-unfixed: true
+
+      - name: Upload Trivy SARIF
+        uses: github/codeql-action/upload-sarif@v3
+        if: always()
+        with:
+          sarif_file: "trivy-${{ matrix.image_name }}.sarif"
+          category: "trivy-${{ matrix.image_name }}"

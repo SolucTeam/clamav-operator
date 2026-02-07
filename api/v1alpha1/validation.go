@@ -18,6 +18,7 @@ package v1alpha1
 
 import (
 	"fmt"
+	"path/filepath"
 	"regexp"
 	"strings"
 
@@ -135,17 +136,48 @@ func ValidateExcludePatterns(patterns []string, fldPath *field.Path) field.Error
 			allErrs = append(allErrs, field.Invalid(patternField, pattern, "pattern cannot be empty"))
 		}
 
-		// Validate regex syntax if it looks like a regex
-		if strings.ContainsAny(pattern, "^$.*+?[](){}|\\") {
+		// Validate the pattern: support both glob patterns (*.tmp, /var/lib/docker/*)
+		// and regex patterns (^/tmp/.*\.log$).
+		// A pattern is treated as regex only if it contains explicit regex anchors
+		// or constructs that are not valid in globs.
+		if isRegexPattern(pattern) {
 			_, err := regexp.Compile(pattern)
 			if err != nil {
 				allErrs = append(allErrs, field.Invalid(patternField, pattern,
 					fmt.Sprintf("invalid regex pattern: %v", err)))
 			}
+		} else {
+			// Validate as a glob pattern
+			_, err := filepath.Match(pattern, "")
+			if err != nil {
+				allErrs = append(allErrs, field.Invalid(patternField, pattern,
+					fmt.Sprintf("invalid glob pattern: %v", err)))
+			}
 		}
 	}
 
 	return allErrs
+}
+
+// isRegexPattern returns true if the pattern looks like an intentional regex
+// (contains anchors or regex-specific constructs) rather than a simple glob.
+// Glob patterns like "*.tmp" or "/var/lib/docker/*" are NOT treated as regex.
+func isRegexPattern(pattern string) bool {
+	// Patterns starting with ^ or ending with $ are clearly regex
+	if strings.HasPrefix(pattern, "^") || strings.HasSuffix(pattern, "$") {
+		return true
+	}
+	// Patterns containing regex-specific constructs: character classes with
+	// quantifiers, alternation, groups, look-aheads, etc.
+	// Note: [] and {} are valid in globs too, but + and | are regex-only.
+	if strings.ContainsAny(pattern, "+|") {
+		return true
+	}
+	// Escaped characters like \d, \w, \s indicate regex
+	if strings.Contains(pattern, `\d`) || strings.Contains(pattern, `\w`) || strings.Contains(pattern, `\s`) {
+		return true
+	}
+	return false
 }
 
 // ValidateNodeName validates a node name

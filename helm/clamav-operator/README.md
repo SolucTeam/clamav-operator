@@ -6,14 +6,14 @@ Helm chart for deploying the ClamAV Operator in Kubernetes.
 
 - Kubernetes 1.24+
 - Helm 3.0+
-- ClamAV deployed and accessible in the cluster
+- **No external ClamAV service required** (standalone mode is the default)
 
 ## Installation
 
 ### Install from local sources
 
 ```bash
-# Create namespace and install
+# Create namespace and install (standalone mode by default)
 helm install clamav-operator ./helm/clamav-operator \
   --namespace clamav-system \
   --create-namespace
@@ -28,13 +28,13 @@ helm install clamav-operator ./helm/clamav-operator \
 helm install clamav-operator ./helm/clamav-operator \
   --namespace clamav-system \
   --create-namespace \
-  --set operator.image.tag=v1.0.0 \
-  --set scanner.clamav.host=clamav.clamav.svc.cluster.local
+  --set scanner.mode=standalone \
+  --set scanner.freshclam.enabled=true
 ```
 
 ## Configuration
 
-### Main Parameters
+### Operator Parameters
 
 | Parameter | Description | Default |
 |-----------|-------------|---------|
@@ -43,22 +43,128 @@ helm install clamav-operator ./helm/clamav-operator \
 | `operator.image.tag` | Operator image tag | `""` (chart version) |
 | `operator.resources.limits.cpu` | Operator CPU limit | `500m` |
 | `operator.resources.limits.memory` | Operator memory limit | `256Mi` |
+
+### Scanner Parameters
+
+| Parameter | Description | Default |
+|-----------|-------------|---------|
 | `scanner.image.repository` | Scanner image repository | `ghcr.io/solucteam/clamav-node-scanner` |
 | `scanner.image.tag` | Scanner image tag | `1.0.3` |
+| `scanner.mode` | Scan mode: `standalone` or `remote` | `standalone` |
+| `scanner.resources.requests.cpu` | Scanner CPU request | `500m` |
+| `scanner.resources.requests.memory` | Scanner memory request | `512Mi` |
+| `scanner.resources.limits.cpu` | Scanner CPU limit | `2000m` |
+| `scanner.resources.limits.memory` | Scanner memory limit | `1Gi` |
+
+### Scanner Standalone Parameters
+
+| Parameter | Description | Default |
+|-----------|-------------|---------|
+| `scanner.standalone.clamscanPath` | Path to clamscan binary | `/usr/bin/clamscan` |
+| `scanner.standalone.clamavDbPath` | Path to signature database | `/var/lib/clamav` |
+
+### Scanner Remote Parameters (Legacy)
+
+| Parameter | Description | Default |
+|-----------|-------------|---------|
 | `scanner.clamav.host` | ClamAV service host | `clamav.clamav.svc.cluster.local` |
 | `scanner.clamav.port` | ClamAV service port | `3310` |
+
+### Freshclam Parameters (Standalone Only)
+
+| Parameter | Description | Default |
+|-----------|-------------|---------|
+| `scanner.freshclam.enabled` | Enable signature auto-update CronJob | `true` |
+| `scanner.freshclam.schedule` | Cron schedule for updates | `0 */6 * * *` |
+| `scanner.freshclam.image.repository` | Freshclam image | `clamav/clamav` |
+| `scanner.freshclam.image.tag` | Freshclam image tag | `1.3` |
+| `scanner.freshclam.resources.limits.cpu` | Freshclam CPU limit | `500m` |
+| `scanner.freshclam.resources.limits.memory` | Freshclam memory limit | `256Mi` |
+
+### Signature Persistence Parameters
+
+| Parameter | Description | Default |
+|-----------|-------------|---------|
+| `scanner.signatures.persistent` | Use a PVC for signatures | `false` |
+| `scanner.signatures.pvcName` | PVC name | `clamav-signatures` |
+| `scanner.signatures.storageClass` | StorageClass (empty = default) | `""` |
+| `scanner.signatures.accessMode` | PVC access mode | `ReadWriteOnce` |
+| `scanner.signatures.size` | PVC size | `1Gi` |
+
+### Incremental Scan Parameters
+
+| Parameter | Description | Default |
+|-----------|-------------|---------|
+| `scanner.incremental.enabled` | Enable incremental scanning | `true` |
+| `scanner.incremental.strategy` | Strategy: `full`, `incremental`, `smart` | `smart` |
+| `scanner.incremental.fullScanInterval` | Full scan every N incremental runs (smart) | `10` |
+| `scanner.incremental.maxFileAgeHours` | Max file age for incremental scans | `24` |
+| `scanner.incremental.skipUnchangedFiles` | Skip files with same mtime+size | `true` |
+
+### Other Parameters
+
+| Parameter | Description | Default |
+|-----------|-------------|---------|
 | `crds.install` | Install CRDs | `true` |
 | `crds.keep` | Keep CRDs on uninstall | `true` |
 | `rbac.create` | Create RBAC resources | `true` |
 | `monitoring.serviceMonitor.enabled` | Enable Prometheus ServiceMonitor | `false` |
 | `monitoring.prometheusRule.enabled` | Enable PrometheusRule | `false` |
 | `defaultScanPolicy.enabled` | Create default ScanPolicy | `true` |
+| `networkPolicy.enabled` | Enable network policies | `false` |
 
-### Example Custom Values File
+## Example Values Files
+
+### Standalone with Incremental Scanning (Recommended)
 
 ```yaml
-# my-values.yaml
+# standalone-values.yaml
+scanner:
+  mode: standalone
+  freshclam:
+    enabled: true
+    schedule: "0 */6 * * *"
+  incremental:
+    enabled: true
+    strategy: smart
+  signatures:
+    persistent: true
 
+monitoring:
+  serviceMonitor:
+    enabled: true
+  prometheusRule:
+    enabled: true
+```
+
+### Air-Gap (No Internet)
+
+```yaml
+# airgap-values.yaml
+scanner:
+  mode: standalone
+  freshclam:
+    enabled: false
+  image:
+    repository: my-registry.internal/clamav-node-scanner
+    tag: "1.1.0-airgap"
+```
+
+### Remote Mode (Legacy)
+
+```yaml
+# remote-values.yaml
+scanner:
+  mode: remote
+  clamav:
+    host: clamav.clamav.svc.cluster.local
+    port: 3310
+```
+
+### Production HA
+
+```yaml
+# production-values.yaml
 operator:
   replicaCount: 2
   image:
@@ -72,9 +178,15 @@ operator:
       memory: 256Mi
 
 scanner:
-  clamav:
-    host: clamav.clamav.svc.cluster.local
-    port: 3310
+  mode: standalone
+  freshclam:
+    enabled: true
+  incremental:
+    enabled: true
+    strategy: smart
+  signatures:
+    persistent: true
+    storageClass: gp3
   resources:
     limits:
       cpu: 4000m
@@ -86,6 +198,9 @@ monitoring:
     interval: 60s
   prometheusRule:
     enabled: true
+
+networkPolicy:
+  enabled: true
 
 defaultScanPolicy:
   enabled: true
@@ -105,14 +220,12 @@ defaultScanPolicy:
 ### Verify Deployment
 
 ```bash
-# Check operator is running
 kubectl get pods -n clamav-system
-
-# Check CRDs
 kubectl get crd | grep clamav
-
-# Check logs
 kubectl logs -n clamav-system deployment/clamav-operator-controller-manager -f
+
+# Verify freshclam CronJob (standalone mode)
+kubectl get cronjob -n clamav-system
 ```
 
 ### Scan a Node
@@ -130,7 +243,6 @@ spec:
   priority: high
 EOF
 
-# Watch the scan
 kubectl get nodescan -n clamav-system -w
 ```
 
@@ -164,7 +276,15 @@ helm upgrade clamav-operator ./helm/clamav-operator \
 helm upgrade clamav-operator ./helm/clamav-operator \
   --namespace clamav-system \
   --reuse-values \
-  --set operator.image.tag=v1.1.0
+  --set operator.image.tag=v1.1.0 \
+  --set scanner.image.tag=1.1.0
+
+# Migrate from remote to standalone
+helm upgrade clamav-operator ./helm/clamav-operator \
+  --namespace clamav-system \
+  --reuse-values \
+  --set scanner.mode=standalone \
+  --set scanner.freshclam.enabled=true
 ```
 
 ## Uninstallation
@@ -179,65 +299,66 @@ kubectl delete crd clusterscans.clamav.io
 kubectl delete crd scanpolicies.clamav.io
 kubectl delete crd scanschedules.clamav.io
 kubectl delete crd scancacheresources.clamav.io
+
+# Remove PVC (if persistent signatures)
+kubectl delete pvc -n clamav-system clamav-signatures
 ```
 
 ## Monitoring
 
-The chart can automatically create:
-- A **ServiceMonitor** for Prometheus Operator
-- **PrometheusRules** with pre-configured alerts
+The chart can automatically create a **ServiceMonitor** for Prometheus Operator and **PrometheusRules** with pre-configured alerts.
 
 ### Available Metrics
 
 ```promql
-# Running scans
 clamav_nodescan_running
-
-# Infected files
 sum(clamav_files_infected_total)
-
-# Scan duration
 avg(clamav_scan_duration_seconds)
 ```
 
 ### Pre-configured Alerts
 
-- **ClamAVMalwareDetected** - Malware detected
-- **ClamAVScanFailed** - Scan failed
-- **ClamAVNoRecentScans** - No recent scans
+- **ClamAVMalwareDetected** — Malware detected
+- **ClamAVScanFailed** — Scan failed
+- **ClamAVNoRecentScans** — No recent scans
 
 ## Troubleshooting
 
 ### Operator Not Starting
 
 ```bash
-# Check events
 kubectl get events -n clamav-system --sort-by='.lastTimestamp'
-
-# Check logs
 kubectl logs -n clamav-system deployment/clamav-operator-controller-manager
-
-# Check RBAC
 kubectl auth can-i --list --as=system:serviceaccount:clamav-system:clamav-operator
 ```
 
-### Scans Not Creating
+### Scanner Failing (Standalone)
 
 ```bash
-# Check scanner ServiceAccount exists
-kubectl get sa -n clamav-system clamav-scanner
+kubectl logs -n clamav-system -l clamav.io/nodescan=<scan-name>
+# "No ClamAV signatures found" → build with DOWNLOAD_SIGS=true or set freshclam.enabled=true
+```
 
-# Check permissions
-kubectl auth can-i create jobs --as=system:serviceaccount:clamav-system:clamav-scanner
+### Scanner Failing (Remote)
+
+```bash
+kubectl logs -n clamav-system -l clamav.io/nodescan=<scan-name>
+kubectl run -it --rm debug --image=busybox --restart=Never -- \
+  nc -zv clamav.clamav.svc.cluster.local 3310
+```
+
+### Freshclam CronJob Failing
+
+```bash
+kubectl get cronjob -n clamav-system
+kubectl logs -n clamav-system -l app.kubernetes.io/component=freshclam --tail=50
+# Air-gap? Set scanner.freshclam.enabled=false
 ```
 
 ### Webhooks Not Working
 
 ```bash
-# Check certificates
 kubectl get secret -n clamav-system clamav-operator-webhook-server-cert
-
-# Temporarily disable webhooks
 helm upgrade clamav-operator ./helm/clamav-operator \
   --namespace clamav-system \
   --reuse-values \

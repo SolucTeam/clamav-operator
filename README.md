@@ -15,42 +15,173 @@ The ClamAV Operator enables automated antivirus scanning across your Kubernetes 
 ## Features
 
 - Kubernetes-native API with Custom Resource Definitions (CRDs)
+- **Standalone scanner mode** — clamscan + signatures embedded in the scanner image, zero network dependency
+- **Remote scanner mode** — connects to a central clamd service (legacy)
+- **Air-gap support** — signatures pre-loaded in the image, no internet required
+- **Incremental scanning** — only scan new/modified files, with smart strategy alternating full/incremental
 - Parallel scans with concurrency control
 - Reusable scan policies with resource management
 - Automatic scheduling (cron-based)
-- Incremental scanning with caching support
+- Freshclam CronJob for automatic signature updates
 - Notifications (Slack, Email, Webhook)
 - Prometheus metrics
 - Kubernetes events
 - Webhook validation
 - Priority-based resource allocation
 - Startup validation checks
+- Multi-architecture Docker images (amd64/arm64)
+
+## Architecture
+
+```
+                    ┌─────────────────────────────────────────┐
+                    │           ClamAV Operator               │
+                    │  ┌───────────────────────────────────┐  │
+                    │  │          Controllers              │  │
+                    │  │  - NodeScan Controller            │  │
+                    │  │  - ClusterScan Controller         │  │
+                    │  │  - ScanPolicy Controller          │  │
+                    │  │  - ScanSchedule Controller        │  │
+                    │  │  - ScanCache Controller           │  │
+                    │  └───────────────────────────────────┘  │
+                    └──────────────────┬──────────────────────┘
+                                       │
+                                       ▼
+                          ┌───────────────────────┐
+                          │    Kubernetes API     │
+                          │    - CRDs             │
+                          │    - Jobs             │
+                          │    - Nodes            │
+                          └───────────┬───────────┘
+                                      │
+                    ┌─────────────────┼─────────────────┐
+                    │                 │                 │
+                    ▼                 ▼                 ▼
+           ┌──────────────┐  ┌──────────────┐  ┌──────────────┐
+           │ Scanner Job  │  │ Scanner Job  │  │ Scanner Job  │
+           │   (Node 1)   │  │   (Node 2)   │  │   (Node N)   │
+           │  ┌────────┐  │  │  ┌────────┐  │  │  ┌────────┐  │
+           │  │clamscan│  │  │  │clamscan│  │  │  │clamscan│  │
+           │  │ local  │  │  │  │ local  │  │  │  │ local  │  │
+           │  └────────┘  │  │  └────────┘  │  │  └────────┘  │
+           └──────────────┘  └──────────────┘  └──────────────┘
+                  ↑ Standalone mode: scan locally, zero network
+```
+
+In **remote mode** (legacy), each scanner Job connects to a central ClamAV service instead of using a local binary.
 
 ## Requirements
 
 - Kubernetes 1.24+
-- ClamAV deployed in the cluster (service available)
 - kubectl configured
 - Helm 3.x (for Helm installation)
+- **No external ClamAV service required** (standalone mode is the default)
+
+## Quick Start
+
+### Install with Helm
+
+```bash
+# Install the operator (standalone mode by default — no ClamAV service needed)
+helm install clamav-operator ./helm/clamav-operator \
+  -n clamav-system --create-namespace
+```
+
+### Scan a Node
+
+```yaml
+apiVersion: clamav.io/v1alpha1
+kind: NodeScan
+metadata:
+  name: scan-worker-01
+  namespace: clamav-system
+spec:
+  nodeName: worker-01
+  priority: high
+  scanPolicy: default-policy
+```
+
+```bash
+kubectl apply -f nodescan.yaml
+kubectl get nodescan -n clamav-system -w
+```
+
+## Scanner Modes
+
+### Standalone (Default)
+
+Each scanner Job carries its own `clamscan` binary and virus signatures. Scans execute locally on each node with zero network dependency. This eliminates the central ClamAV service as a single point of failure.
+
+```yaml
+scanner:
+  mode: standalone
+  freshclam:
+    enabled: true               # auto-update signatures every 6h
+    schedule: "0 */6 * * *"
+```
+
+### Air-Gap (Standalone without internet)
+
+For disconnected environments, signatures are baked into the scanner image at build time. No downloads at runtime.
+
+```yaml
+scanner:
+  mode: standalone
+  freshclam:
+    enabled: false              # no internet access needed
+```
+
+Build the air-gap image:
+
+```bash
+make docker-build-scanner-airgap
+```
+
+### Remote (Legacy)
+
+Connects to a central clamd service. Use this if you already have ClamAV deployed separately.
+
+```yaml
+scanner:
+  mode: remote
+  clamav:
+    host: clamav.clamav.svc.cluster.local
+    port: 3310
+```
+
+## Incremental Scanning
+
+The operator supports three scanning strategies to optimize performance:
+
+| Strategy | Description |
+|----------|-------------|
+| `full` | Scan every file on every run |
+| `incremental` | Only scan new or modified files since the last run |
+| `smart` | Alternate between incremental and full scans automatically |
+
+```yaml
+scanner:
+  incremental:
+    enabled: true
+    strategy: smart
+    fullScanInterval: 10        # full scan every 10 incremental runs
+    maxFileAgeHours: 24
+    skipUnchangedFiles: true
+```
 
 ## Installation
 
 ### Using Helm (Recommended)
 
 ```bash
-# Add the repository (if published)
-helm repo add solucteam https://solucteam.github.io/charts
-
-# Install the operator
-helm install clamav-operator solucteam/clamav-operator -n clamav-system --create-namespace
-
-# Or install from local chart
+# Install from local chart
 helm install clamav-operator ./helm/clamav-operator -n clamav-system --create-namespace
+
+# Or with custom values
+helm install clamav-operator ./helm/clamav-operator -n clamav-system -f custom-values.yaml
 ```
 
 ### Custom Configuration
-
-Create a custom values file to override defaults:
 
 ```yaml
 # custom-values.yaml
@@ -62,8 +193,14 @@ operator:
       memory: 512Mi
 
 scanner:
-  clamav:
-    host: my-clamav.namespace.svc.cluster.local
+  mode: standalone
+  freshclam:
+    enabled: true
+  incremental:
+    enabled: true
+    strategy: smart
+  signatures:
+    persistent: true            # store signatures on a PVC
 
 monitoring:
   serviceMonitor:
@@ -72,38 +209,59 @@ monitoring:
     enabled: true
 ```
 
-```bash
-helm install clamav-operator ./helm/clamav-operator -n clamav-system -f custom-values.yaml
-```
-
 ### Using kubectl
 
 ```bash
-# Install the CRDs
 kubectl apply -f config/crd/bases/
-
-# Deploy the operator
 kubectl apply -f dist/install.yaml
 ```
 
 ### Build from Source
 
 ```bash
-# Clone the repository
 git clone https://github.com/SolucTeam/clamav-operator.git
 cd clamav-operator
 
-# Generate manifests
-make manifests
+# Build all images (operator + scanner)
+make docker-build-all
 
-# Build the Docker image
+# Or build individually
 make docker-build IMG=ghcr.io/solucteam/clamav-operator:latest
+make docker-build-scanner SCANNER_IMG=ghcr.io/solucteam/clamav-node-scanner:latest
+make docker-build-scanner-airgap   # air-gap variant
 
-# Push the image
-make docker-push IMG=ghcr.io/solucteam/clamav-operator:latest
+# Push
+make docker-push-all
 
 # Deploy
 make deploy IMG=ghcr.io/solucteam/clamav-operator:latest
+```
+
+## Project Structure
+
+```
+clamav-operator/
+├── api/v1alpha1/           # CRD type definitions (Go)
+├── build/Dockerfile        # Operator image (Go)
+├── cmd/manager/            # Operator entry point
+├── controllers/            # Reconcilers (NodeScan, ClusterScan, …)
+├── scanner/                # Standalone scanner (Node.js)
+│   ├── Dockerfile          # Scanner image (Node.js + ClamAV)
+│   ├── package.json
+│   └── src/
+│       ├── index.js        # Entry point
+│       ├── config.js       # Environment-driven configuration
+│       ├── logger.js       # Structured JSON logging
+│       ├── init-scanner.js # Standalone / remote init
+│       ├── scanner.js      # Recursive directory scan
+│       ├── incremental.js  # Incremental cache & smart strategy
+│       ├── report.js       # JSON + text report generation
+│       └── __tests__/      # Unit tests
+├── helm/clamav-operator/   # Helm chart
+├── config/                 # Kustomize bases (CRDs, RBAC, webhooks)
+├── .github/workflows/      # CI/CD (Docker build + Trivy scan)
+├── Makefile
+└── docs/
 ```
 
 ## Usage
@@ -214,10 +372,15 @@ spec:
 
 | Variable | Description | Default |
 |----------|-------------|---------|
-| `POD_NAMESPACE` | Namespace where the operator runs | Auto-detected |
+| `SCAN_MODE` | Scanner mode (`standalone` or `remote`) | `standalone` |
 | `SCANNER_IMAGE` | Image for scanner jobs | From Helm values |
-| `CLAMAV_HOST` | ClamAV service hostname | `clamav.clamav.svc.cluster.local` |
-| `CLAMAV_PORT` | ClamAV service port | `3310` |
+| `CLAMAV_HOST` | ClamAV service hostname (remote mode) | `clamav.clamav.svc.cluster.local` |
+| `CLAMAV_PORT` | ClamAV service port (remote mode) | `3310` |
+| `CLAMSCAN_PATH` | Path to clamscan binary (standalone mode) | `/usr/bin/clamscan` |
+| `CLAMAV_DB_PATH` | Path to signature databases (standalone mode) | `/var/lib/clamav` |
+| `UPDATE_SIGNATURES` | Run freshclam before scanning | `false` |
+| `INCREMENTAL_ENABLED` | Enable incremental scanning | `false` |
+| `SCAN_STRATEGY` | Scan strategy (`full`, `incremental`, `smart`) | `full` |
 | `SCANNER_SERVICE_ACCOUNT` | ServiceAccount for scanner jobs | `clamav-scanner` |
 | `ENABLE_LEADER_ELECTION` | Enable leader election for HA | `true` |
 
@@ -233,11 +396,21 @@ The operator automatically allocates resources based on scan priority:
 | medium   | 100m        | 256Mi          | 1000m     | 512Mi        |
 | low      | 50m         | 128Mi          | 500m      | 256Mi        |
 
+## CI/CD
+
+The project includes a GitHub Actions workflow (`.github/workflows/docker-build.yml`) that builds and pushes both images:
+
+| Image | Registry | Description |
+|-------|----------|-------------|
+| `clamav-operator` | `ghcr.io/<owner>/clamav-operator` | Go operator |
+| `clamav-node-scanner` | `ghcr.io/<owner>/clamav-node-scanner` | Node.js standalone scanner |
+| `clamav-node-scanner:*-airgap` | `ghcr.io/<owner>/clamav-node-scanner` | Scanner without pre-downloaded signatures |
+
+The workflow runs on push to `main`, release branches, version tags (`v*`), and pull requests. It includes multi-arch builds (amd64/arm64), GHA caching, and Trivy security scanning.
+
 ## Monitoring
 
 ### Prometheus Metrics
-
-The operator exposes the following metrics:
 
 ```promql
 # Active scans
@@ -259,10 +432,14 @@ Pre-configured dashboards are available in `config/grafana/`.
 
 ### Logs
 
-Operator logs are structured in JSON:
+Operator and scanner logs are structured in JSON:
 
 ```bash
+# Operator logs
 kubectl logs -n clamav-system deployment/clamav-operator-controller-manager -f
+
+# Scanner job logs
+kubectl logs -n clamav-system -l clamav.io/nodescan=scan-worker-01
 ```
 
 ## Development
@@ -270,70 +447,32 @@ kubectl logs -n clamav-system deployment/clamav-operator-controller-manager -f
 ### Setup
 
 ```bash
-# Install dependencies
 go mod download
-
-# Generate code
 make generate
-
-# Run tests
 make test
 
-# Run the operator locally
-make run
+# Scanner tests
+cd scanner && node --test src/__tests__/
 ```
 
 ### Running Tests
 
 ```bash
-# Unit tests
+# Go unit tests
 make test
+
+# Node.js scanner tests
+cd scanner && node --test src/__tests__/
 
 # Integration tests (requires cluster)
 make test-e2e
-
-# Coverage report
-make test-coverage
 ```
 
-## Architecture
+### Building Images Locally
 
-```
-                    ┌─────────────────────────────────────────┐
-                    │           ClamAV Operator               │
-                    │  ┌───────────────────────────────────┐  │
-                    │  │          Controllers              │  │
-                    │  │  - NodeScan Controller            │  │
-                    │  │  - ClusterScan Controller         │  │
-                    │  │  - ScanPolicy Controller          │  │
-                    │  │  - ScanSchedule Controller        │  │
-                    │  │  - ScanCache Controller           │  │
-                    │  └───────────────────────────────────┘  │
-                    └──────────────────┬──────────────────────┘
-                                       │
-                                       ▼
-                          ┌───────────────────────┐
-                          │    Kubernetes API     │
-                          │    - CRDs             │
-                          │    - Jobs             │
-                          │    - Nodes            │
-                          └───────────┬───────────┘
-                                      │
-                    ┌─────────────────┼─────────────────┐
-                    │                 │                 │
-                    ▼                 ▼                 ▼
-           ┌──────────────┐  ┌──────────────┐  ┌──────────────┐
-           │ Scanner Job  │  │ Scanner Job  │  │ Scanner Job  │
-           │   (Node 1)   │  │   (Node 2)   │  │   (Node N)   │
-           └──────┬───────┘  └──────┬───────┘  └──────┬───────┘
-                  │                 │                 │
-                  └─────────────────┴─────────────────┘
-                                    │
-                                    ▼
-                          ┌───────────────────────┐
-                          │    ClamAV Service     │
-                          │    (clamd daemon)     │
-                          └───────────────────────┘
+```bash
+make docker-build-all           # Build operator + scanner
+make docker-build-scanner-airgap # Build air-gap scanner variant
 ```
 
 ## API Reference
@@ -384,25 +523,26 @@ make test-coverage
 
 **Scan job not starting:**
 ```bash
-# Check operator logs
 kubectl logs -n clamav-system deployment/clamav-operator-controller-manager
-
-# Check events
 kubectl get events -n clamav-system --sort-by='.lastTimestamp'
 ```
 
-**ClamAV service not reachable:**
+**Standalone scanner — no signatures found:**
 ```bash
-# Verify ClamAV service
-kubectl get svc -n clamav
+# Check the scanner image contains signatures
+kubectl logs -n clamav-system -l clamav.io/nodescan=<scan-name>
+# Look for: "No ClamAV signatures found"
+# Fix: ensure the image was built with DOWNLOAD_SIGS=true, or inject signatures
+```
 
-# Test connectivity
+**Remote mode — ClamAV service not reachable:**
+```bash
+kubectl get svc -n clamav
 kubectl run test --rm -it --image=busybox -- nc -zv clamav.clamav.svc.cluster.local 3310
 ```
 
 **Permission denied errors:**
 ```bash
-# Verify RBAC
 kubectl auth can-i create jobs --as=system:serviceaccount:clamav-system:clamav-operator -n clamav-system
 ```
 

@@ -4,9 +4,12 @@
 
 1. [Prerequisites](#prerequisites)
 2. [Installation](#installation)
-3. [Configuration](#configuration)
-4. [Usage Examples](#usage-examples)
-5. [Troubleshooting](#troubleshooting)
+3. [Scanner Modes](#scanner-modes)
+4. [Configuration](#configuration)
+5. [Usage Examples](#usage-examples)
+6. [Upgrade](#upgrade)
+7. [Troubleshooting](#troubleshooting)
+8. [Uninstallation](#uninstallation)
 
 ## Prerequisites
 
@@ -16,44 +19,85 @@
 - kubectl configured
 - Admin access to the cluster
 
-### ClamAV Service
+### ClamAV Service (Remote Mode Only)
 
-ClamAV must be deployed and accessible:
+If using `scanner.mode: remote`, ClamAV must be deployed and accessible:
 
 ```bash
-# Verify ClamAV is available
 kubectl get svc -n clamav clamav
-
-# Test connectivity
 kubectl run -it --rm debug --image=busybox --restart=Never -- \
   nc -zv clamav.clamav.svc.cluster.local 3310
 ```
+
+In **standalone mode** (default), no external ClamAV service is required — the scanner image embeds its own `clamscan` binary and signatures.
 
 ## Installation
 
 ### Option 1: Using Helm (Recommended)
 
 ```bash
-# Create namespace
 kubectl create namespace clamav-system
 
-# Install using Helm
+# Standalone mode (default — no ClamAV service needed)
 helm install clamav-operator ./helm/clamav-operator -n clamav-system
 
 # Or with custom values
 helm install clamav-operator ./helm/clamav-operator -n clamav-system -f custom-values.yaml
 ```
 
+#### Standalone Mode (Default)
+
+```yaml
+# custom-values.yaml — standalone with incremental scanning
+scanner:
+  mode: standalone
+  freshclam:
+    enabled: true
+    schedule: "0 */6 * * *"
+  incremental:
+    enabled: true
+    strategy: smart
+  signatures:
+    persistent: true
+```
+
+#### Air-Gap Mode (No Internet)
+
+```yaml
+# airgap-values.yaml
+scanner:
+  mode: standalone
+  freshclam:
+    enabled: false       # signatures are pre-loaded in the image
+  image:
+    repository: my-registry.internal/clamav-node-scanner
+    tag: "1.1.0-airgap"
+```
+
+Build the air-gap image:
+
+```bash
+make docker-build-scanner-airgap
+# or
+docker build --build-arg DOWNLOAD_SIGS=false -t my-registry.internal/clamav-node-scanner:1.1.0-airgap scanner/
+```
+
+#### Remote Mode (Legacy)
+
+```yaml
+# remote-values.yaml — connects to existing ClamAV service
+scanner:
+  mode: remote
+  clamav:
+    host: clamav.clamav.svc.cluster.local
+    port: 3310
+```
+
 ### Option 2: Using Kustomize
 
 ```bash
-# Create namespace
 kubectl create namespace clamav-system
-
-# Install CRDs
 kubectl apply -k config/crd
-
-# Deploy the operator
 make deploy IMG=ghcr.io/solucteam/clamav-operator:latest
 ```
 
@@ -94,21 +138,43 @@ kubectl apply -f config/manager/manager.yaml
 ### Verify Installation
 
 ```bash
-# Verify operator is running
 kubectl get pods -n clamav-system
-
-# Check logs
 kubectl logs -n clamav-system deployment/clamav-operator-controller-manager -f
-
-# Verify CRDs
 kubectl get crd | grep clamav
 ```
+
+## Scanner Modes
+
+### Standalone Mode
+
+The standalone scanner embeds `clamscan` and ClamAV virus signatures directly in the scanner container image. Each scanner Job runs locally on the target node with zero network dependency.
+
+**Advantages:** no SPOF, no network latency, works in air-gapped environments.
+
+**Signature updates** are handled by an optional `freshclam` CronJob that runs on a configurable schedule (default: every 6 hours). When `scanner.signatures.persistent: true`, signatures are stored on a PVC shared across runs.
+
+### Remote Mode
+
+The remote scanner connects to a central `clamd` service. This is the legacy behavior, useful if you already manage a ClamAV deployment separately.
+
+**Requirement:** a reachable clamd service (configured via `scanner.clamav.host` / `scanner.clamav.port`).
+
+### Mode Comparison
+
+| Feature | Standalone | Remote |
+|---------|-----------|--------|
+| Network dependency | None | Requires clamd service |
+| SPOF | None | Central clamd |
+| Air-gap support | Yes | No |
+| Signature management | In-image or freshclam CronJob | Managed by clamd |
+| Latency | Local I/O only | Network round-trip per file |
+| Resource per node | Higher (clamscan in each pod) | Lower (thin client) |
 
 ## Configuration
 
 ### Scanner ServiceAccount
 
-Scanner jobs require a ServiceAccount with appropriate permissions:
+Scanner jobs require a ServiceAccount with appropriate permissions (created automatically by the Helm chart):
 
 ```bash
 kubectl apply -f - <<EOF
@@ -157,7 +223,13 @@ kubectl create secret docker-registry regcred \
   --namespace=clamav-system
 ```
 
-Then update your Helm values or deployment to reference the secret.
+Then set in your Helm values:
+
+```yaml
+scanner:
+  imagePullSecrets:
+    - name: regcred
+```
 
 ## Usage Examples
 
@@ -211,10 +283,7 @@ spec:
   priority: high
 EOF
 
-# Monitor the scan
 kubectl get nodescan scan-worker-01 -n clamav-system -w
-
-# View details
 kubectl describe nodescan scan-worker-01 -n clamav-system
 ```
 
@@ -235,10 +304,7 @@ spec:
   concurrent: 3
 EOF
 
-# Monitor progress
 kubectl get clusterscan full-cluster-scan -n clamav-system -w
-
-# View node scans
 kubectl get nodescan -n clamav-system -l clamav.io/clusterscan=full-cluster-scan
 ```
 
@@ -266,11 +332,64 @@ spec:
   concurrencyPolicy: Forbid
 EOF
 
-# Verify schedule
 kubectl get scanschedule daily-full-scan -n clamav-system
+```
 
-# View scan history
-kubectl get clusterscan -n clamav-system -l clamav.io/schedule=daily-full-scan
+### 5. Check Freshclam Signature Updates (Standalone Mode)
+
+```bash
+# View freshclam CronJob
+kubectl get cronjob -n clamav-system -l app.kubernetes.io/component=freshclam
+
+# View last signature update
+kubectl get jobs -n clamav-system -l app.kubernetes.io/component=freshclam --sort-by=.status.startTime
+
+# Check signature PVC (if persistent)
+kubectl get pvc -n clamav-system clamav-signatures
+```
+
+## Upgrade
+
+### Upgrading the Operator
+
+```bash
+# Using Helm
+helm upgrade clamav-operator ./helm/clamav-operator \
+  --namespace clamav-system \
+  --values my-values.yaml
+
+# Or just update image tags
+helm upgrade clamav-operator ./helm/clamav-operator \
+  --namespace clamav-system \
+  --reuse-values \
+  --set operator.image.tag=v1.1.0 \
+  --set scanner.image.tag=1.1.0
+```
+
+### Migrating from Remote to Standalone
+
+1. Update your values:
+
+```yaml
+scanner:
+  mode: standalone       # was: remote
+  freshclam:
+    enabled: true
+```
+
+2. Upgrade the release:
+
+```bash
+helm upgrade clamav-operator ./helm/clamav-operator -n clamav-system -f values.yaml
+```
+
+3. The operator will now create scanner Jobs with `SCAN_MODE=standalone` and the local clamscan binary. The ClamAV service is no longer needed.
+
+### Upgrading CRDs
+
+```bash
+make manifests
+kubectl apply -k config/crd
 ```
 
 ## Troubleshooting
@@ -278,53 +397,62 @@ kubectl get clusterscan -n clamav-system -l clamav.io/schedule=daily-full-scan
 ### Operator Not Starting
 
 ```bash
-# Check events
 kubectl get events -n clamav-system --sort-by='.lastTimestamp'
-
-# Check logs
 kubectl logs -n clamav-system deployment/clamav-operator-controller-manager
-
-# Check permissions
 kubectl auth can-i --list --as=system:serviceaccount:clamav-system:clamav-operator-controller-manager
 ```
 
 ### Scans Not Creating
 
 ```bash
-# Verify node exists
 kubectl get node <node-name>
-
-# Check NodeScan events
 kubectl describe nodescan <scan-name> -n clamav-system
-
-# Check ServiceAccount permissions
 kubectl auth can-i create jobs --as=system:serviceaccount:clamav-system:clamav-scanner -n clamav-system
 ```
 
-### Jobs Failing
+### Scanner Job Failing (Standalone)
 
 ```bash
-# View job logs
+# Check scanner logs
+kubectl logs -n clamav-system -l clamav.io/nodescan=<scan-name>
+
+# Common errors:
+#   "clamscan not found" → scanner image missing ClamAV binaries
+#   "No ClamAV signatures found" → build image with DOWNLOAD_SIGS=true or inject signatures
+#   "Error: Permission denied" → check securityContext and hostPID settings
+```
+
+### Scanner Job Failing (Remote)
+
+```bash
 kubectl logs -n clamav-system -l clamav.io/nodescan=<scan-name>
 
 # Check ClamAV connectivity
 kubectl run -it --rm debug --image=busybox --restart=Never -- \
   nc -zv clamav.clamav.svc.cluster.local 3310
 
-# Check scanner image
 kubectl describe job -n clamav-system <job-name>
+```
+
+### Freshclam CronJob Failing
+
+```bash
+# Check CronJob status
+kubectl get cronjob -n clamav-system
+
+# Check latest Job logs
+kubectl logs -n clamav-system -l app.kubernetes.io/component=freshclam --tail=50
+
+# Common issue: network not reachable (expected in air-gap → set freshclam.enabled=false)
 ```
 
 ### Webhooks Not Working
 
 ```bash
-# Check webhook configuration
 kubectl get validatingwebhookconfigurations
-
-# Check certificates
 kubectl get secret -n clamav-system webhook-server-cert
 
-# Temporarily disable webhooks (not recommended for production)
+# Temporarily disable
 kubectl delete validatingwebhookconfigurations clamav-operator-validating-webhook-configuration
 ```
 
@@ -332,55 +460,33 @@ kubectl delete validatingwebhookconfigurations clamav-operator-validating-webhoo
 
 ### Prometheus Metrics
 
-The operator exposes metrics on port 8080:
-
 ```bash
-# Port-forward to operator
 kubectl port-forward -n clamav-system deployment/clamav-operator-controller-manager 8080:8080
-
-# Access metrics
 curl http://localhost:8080/metrics | grep clamav
 ```
 
 ### Grafana Dashboard
 
-Import the dashboard from `config/grafana/dashboard.json`
-
-## Upgrade
-
-### Upgrading the Operator
-
-```bash
-# Build new version
-make docker-build IMG=ghcr.io/solucteam/clamav-operator:v1.1.0
-make docker-push IMG=ghcr.io/solucteam/clamav-operator:v1.1.0
-
-# Update deployment
-make deploy IMG=ghcr.io/solucteam/clamav-operator:v1.1.0
-```
-
-### Upgrading CRDs
-
-```bash
-# Generate new manifests
-make manifests
-
-# Apply CRDs
-kubectl apply -k config/crd
-```
+Import the dashboard from `config/grafana/dashboard.json`.
 
 ## Uninstallation
 
 ```bash
 # Remove operator
+helm uninstall clamav-operator --namespace clamav-system
+
+# Or using make
 make undeploy
 
-# Remove CRDs (caution: deletes all resources!)
+# Remove CRDs (caution: deletes all scan resources!)
 kubectl delete crd nodescans.clamav.io
 kubectl delete crd clusterscans.clamav.io
 kubectl delete crd scanpolicies.clamav.io
 kubectl delete crd scanschedules.clamav.io
 kubectl delete crd scancacheresources.clamav.io
+
+# Remove PVC (if persistent signatures were used)
+kubectl delete pvc -n clamav-system clamav-signatures
 
 # Remove namespace
 kubectl delete namespace clamav-system

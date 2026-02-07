@@ -1,0 +1,28 @@
+{
+  "name": "clamav-node-scanner",
+  "version": "1.1.0",
+  "description": "ClamAV node scanner for Kubernetes — standalone & remote modes with incremental scanning",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node --test src/__tests__/",
+    "lint": "eslint src/"
+  },
+  "keywords": [
+    "clamav",
+    "antivirus",
+    "scanner",
+    "kubernetes",
+    "security"
+  ],
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "clamscan": "^2.2.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0"
+  }
+}
