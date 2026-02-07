@@ -26,7 +26,6 @@ on:
       - "cmd/**"
       - "api/**"
       - "controllers/**"
-      - "pkg/**"
       - "go.mod"
       - "go.sum"
       - "scanner/**"
@@ -51,12 +50,12 @@ on:
       push_images:
         description: "Push images to registry"
         required: false
-        default: "false"
+        default: false
         type: boolean
       scanner_download_sigs:
         description: "Download ClamAV signatures during scanner build"
         required: false
-        default: "true"
+        default: true
         type: boolean
 
 # ─── Permissions ──────────────────────────────────────────────────────────────
@@ -64,6 +63,7 @@ permissions:
   contents: read
   packages: write       # Push to GHCR
   id-token: write       # For cosign signing (optional)
+  security-events: write 
 
 # ─── Concurrency ─────────────────────────────────────────────────────────────
 concurrency:
@@ -357,7 +357,7 @@ jobs:
           ignore-unfixed: true
 
       - name: Upload Trivy SARIF
-        uses: github/codeql-action/upload-sarif@v3
+        uses: github/codeql-action/upload-sarif@v4
         if: always()
         with:
           sarif_file: "trivy-${{ matrix.image_name }}.sarif"
