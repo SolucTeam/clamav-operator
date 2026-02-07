@@ -41,6 +41,8 @@ permissions:
   contents: write
   pull-requests: write
   packages: write
+  actions: write
+  security-events: write
 
 jobs:
   # ===========================================================================
