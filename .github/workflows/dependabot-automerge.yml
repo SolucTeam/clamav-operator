@@ -64,14 +64,77 @@ jobs:
     needs: check-dependabot
     if: needs.check-dependabot.outputs.is_eligible == 'true'
     steps:
-      - name: Wait for status checks
-        uses: lewagon/wait-on-check-action@v1.3.3
+      - name: Wait for required checks
+        uses: actions/github-script@v8
         with:
-          ref: ${{ github.event.pull_request.head.sha }}
-          check-regexp: '(test|build|security|lint).*'
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          wait-interval: 30
-          running-workflow-name: 'Wait for Checks'
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const requiredChecks = [
+              'Lint & Test',
+              'Build: clamav-operator',
+              'Build: clamav-node-scanner'
+            ];
+            
+            const maxAttempts = 60; // 30 minutes max (30 secondes * 60)
+            let attempt = 0;
+            
+            while (attempt < maxAttempts) {
+              attempt++;
+              
+              console.log(`Attempt ${attempt}/${maxAttempts}: Checking status...`);
+              
+              // Récupérer les check runs pour ce commit
+              const { data: checkRuns } = await github.rest.checks.listForRef({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                ref: '${{ github.event.pull_request.head.sha }}'
+              });
+              
+              // Vérifier le statut des checks requis
+              const checkStatuses = {};
+              for (const check of checkRuns.check_runs) {
+                if (requiredChecks.includes(check.name)) {
+                  checkStatuses[check.name] = {
+                    status: check.status,
+                    conclusion: check.conclusion
+                  };
+                }
+              }
+              
+              // Afficher l'état actuel
+              console.log('Check statuses:', JSON.stringify(checkStatuses, null, 2));
+              
+              // Vérifier si tous les checks requis sont terminés
+              const allCompleted = requiredChecks.every(name => 
+                checkStatuses[name] && checkStatuses[name].status === 'completed'
+              );
+              
+              if (!allCompleted) {
+                console.log('Some checks are still running, waiting 30 seconds...');
+                await new Promise(resolve => setTimeout(resolve, 30000));
+                continue;
+              }
+              
+              // Vérifier si tous les checks ont réussi
+              const allSuccess = requiredChecks.every(name =>
+                checkStatuses[name] && checkStatuses[name].conclusion === 'success'
+              );
+              
+              if (allSuccess) {
+                console.log('✅ All required checks passed!');
+                return;
+              }
+              
+              // Si des checks ont échoué
+              const failedChecks = requiredChecks.filter(name =>
+                checkStatuses[name] && checkStatuses[name].conclusion !== 'success'
+              );
+              
+              console.log('❌ Some checks failed:', failedChecks);
+              throw new Error(`Required checks failed: ${failedChecks.join(', ')}`);
+            }
+            
+            throw new Error('Timeout waiting for checks to complete');
 
   # ===========================================================================
   # Job 3 - Approuver et merger la PR
