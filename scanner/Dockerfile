@@ -46,7 +46,7 @@ RUN ls -la /var/lib/clamav/ && \
      echo "WARNING: no main signature database found")
 
 # ─── Stage 2: Node.js application ────────────────────────────────────────────
-FROM node:20-bookworm-slim AS app-builder
+FROM node:25-bookworm-slim AS app-builder
 
 WORKDIR /app
 COPY package.json package-lock.json* ./
@@ -54,7 +54,7 @@ RUN npm ci --omit=dev --ignore-scripts 2>/dev/null || npm install --omit=dev --i
 COPY src/ src/
 
 # ─── Stage 3: Final runtime image ────────────────────────────────────────────
-FROM node:20-bookworm-slim
+FROM node:25-bookworm-slim
 
 LABEL maintainer="SolucTeam <contact@solucteam.com>"
 LABEL description="ClamAV standalone node scanner for Kubernetes"
