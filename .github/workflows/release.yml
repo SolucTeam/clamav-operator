@@ -1,287 +1,273 @@
 # =============================================================================
-# Auto Release avec Semantic Versioning
+# Validation des Commits (Conventional Commits)
 # =============================================================================
-# Crée automatiquement des releases GitHub basées sur les Conventional Commits
-# 
-# Format des commits :
-#   feat: nouvelle fonctionnalité  → version MINOR (1.0.0 → 1.1.0)
-#   fix: correction de bug          → version PATCH (1.0.0 → 1.0.1)
-#   BREAKING CHANGE:                → version MAJOR (1.0.0 → 2.0.0)
+# Vérifie que tous les commits suivent le format Conventional Commits
 #
-# Déclencheurs :
-#   - Push sur main avec des commits feat/fix
-#   - Manuel via workflow_dispatch
+# Format attendu :
+#   type(scope?): description
+#
+# Types valides :
+#   - feat:     nouvelle fonctionnalité
+#   - fix:      correction de bug
+#   - docs:     documentation
+#   - style:    formatage, espaces, etc
+#   - refactor: refactoring du code
+#   - perf:     amélioration des performances
+#   - test:     ajout/modification de tests
+#   - build:    système de build, dépendances
+#   - ci:       CI/CD, workflows
+#   - chore:    tâches diverses
+#
+# Exemples valides :
+#   feat: add auto-release workflow
+#   fix(scanner): correct memory leak in scan job
+#   docs: update installation guide
+#   feat!: breaking change in API
 # =============================================================================
 
-name: Auto Release
+name: Commit Validation
 
 on:
+  pull_request:
+    types: [opened, synchronize, reopened, edited]
   push:
     branches:
       - main
-    paths-ignore:
-      - '**.md'
-      - 'docs/**'
-      - '.github/**'
-      - '!.github/workflows/release.yml'
-  workflow_dispatch:
-    inputs:
-      version_bump:
-        description: 'Version bump type'
-        required: true
-        default: 'auto'
-        type: choice
-        options:
-          - auto
-          - major
-          - minor
-          - patch
-
-permissions:
-  contents: write
-  pull-requests: write
-  packages: write
+      - develop
+      - 'feature/**'
+      - 'fix/**'
 
 jobs:
   # ===========================================================================
-  # Job 1 - Analyser les commits et déterminer la version
+  # Job 1 - Valider les messages de commit
   # ===========================================================================
-  analyze:
-    name: Analyze Commits
+  validate-commits:
+    name: Validate Commit Messages
     runs-on: ubuntu-latest
-    outputs:
-      should_release: ${{ steps.check.outputs.should_release }}
-      version: ${{ steps.semver.outputs.version }}
-      changelog: ${{ steps.changelog.outputs.changelog }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Nécessaire pour l'historique complet
+          fetch-depth: 0  # Nécessaire pour voir tous les commits
 
-      - name: Check if should release
-        id: check
+      - name: Validate commit messages
         run: |
-          # Vérifier s'il y a des commits avec feat: ou fix: depuis la dernière release
-          LAST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
+          #!/bin/bash
+          set -e
           
-          if [ -z "$LAST_TAG" ]; then
-            echo "should_release=true" >> $GITHUB_OUTPUT
-            echo "📦 First release - will create v0.1.0"
+          echo "🔍 Validating commit messages..."
+          echo ""
+          
+          # Pattern pour Conventional Commits
+          PATTERN='^(feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert)(\(.+\))?(!)?: .{1,100}'
+          
+          # Obtenir la liste des commits à vérifier
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            BASE_SHA="${{ github.event.pull_request.base.sha }}"
+            HEAD_SHA="${{ github.event.pull_request.head.sha }}"
+            COMMITS=$(git rev-list $BASE_SHA..$HEAD_SHA)
+            
+            # Vérifier si c'est une PR de Dependabot
+            if [ "${{ github.actor }}" = "dependabot[bot]" ]; then
+              echo "✅ Dependabot PR - commits are automatically validated"
+              exit 0
+            fi
+          else
+            # Pour un push, vérifier seulement le dernier commit
+            COMMITS="${{ github.sha }}"
+          fi
+          
+          INVALID_COMMITS=()
+          VALID_COUNT=0
+          
+          for COMMIT in $COMMITS; do
+            MESSAGE=$(git log -1 --format=%s $COMMIT)
+            COMMIT_SHORT=$(git rev-parse --short $COMMIT)
+            
+            # Accepter les commits de merge automatiques de GitHub
+            if echo "$MESSAGE" | grep -qE '^Merge (branch|pull request) '; then
+              echo "✅ $COMMIT_SHORT: $MESSAGE (merge commit)"
+              VALID_COUNT=$((VALID_COUNT + 1))
+            elif echo "$MESSAGE" | grep -qE "$PATTERN"; then
+              echo "✅ $COMMIT_SHORT: $MESSAGE"
+              VALID_COUNT=$((VALID_COUNT + 1))
+            else
+              echo "❌ $COMMIT_SHORT: $MESSAGE"
+              INVALID_COMMITS+=("$COMMIT_SHORT: $MESSAGE")
+            fi
+          done
+          
+          echo ""
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+          
+          if [ ${#INVALID_COMMITS[@]} -eq 0 ]; then
+            echo "✅ All $VALID_COUNT commit(s) follow Conventional Commits format"
+            exit 0
+          else
+            echo "❌ Found ${#INVALID_COMMITS[@]} invalid commit(s):"
+            echo ""
+            for COMMIT in "${INVALID_COMMITS[@]}"; do
+              echo "  • $COMMIT"
+            done
+            echo ""
+            echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+            echo ""
+            echo "ℹ️  Conventional Commits Format:"
+            echo ""
+            echo "   type(scope?): description"
+            echo ""
+            echo "   Valid types: feat, fix, docs, style, refactor, perf,"
+            echo "                test, build, ci, chore, revert"
+            echo ""
+            echo "   Examples:"
+            echo "     feat: add new scanner mode"
+            echo "     fix(api): correct validation error"
+            echo "     docs: update README with examples"
+            echo "     feat!: breaking change in configuration"
+            echo "     build(deps): bump package version"
+            echo ""
+            echo "   Note: Merge commits from GitHub are automatically accepted"
+            echo ""
+            echo "   Learn more: https://www.conventionalcommits.org"
+            echo ""
+            exit 1
+          fi
+
+  # ===========================================================================
+  # Job 2 - Valider le titre de la PR
+  # ===========================================================================
+  validate-pr-title:
+    name: Validate PR Title
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    steps:
+      - name: Check PR title
+        uses: amannn/action-semantic-pull-request@v5
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          types: |
+            feat
+            fix
+            docs
+            style
+            refactor
+            perf
+            test
+            build
+            ci
+            chore
+            revert
+          requireScope: false
+          # Supprimer la règle de majuscule pour supporter Dependabot
+          # subjectPattern: ^[A-Z].+$
+          # subjectPatternError: |
+          #   Le sujet doit commencer par une majuscule.
+          wip: false
+
+  # ===========================================================================
+  # Job 3 - Vérifier que la branche suit les conventions de nommage
+  # ===========================================================================
+  validate-branch:
+    name: Validate Branch Name
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    steps:
+      - name: Check branch name
+        run: |
+          BRANCH="${{ github.head_ref }}"
+          
+          echo "🔍 Validating branch name: $BRANCH"
+          echo ""
+          
+          # Accepter les branches des bots de dépendances
+          if echo "$BRANCH" | grep -qE '^(dependabot|renovate)/'; then
+            echo "✅ Dependency bot branch: $BRANCH"
             exit 0
           fi
           
-          # Chercher des commits conventionnels depuis la dernière release
-          COMMITS=$(git log $LAST_TAG..HEAD --oneline 2>/dev/null || git log --oneline)
-          
-          if echo "$COMMITS" | grep -qE '^[a-f0-9]+ (feat|fix|perf|refactor)(\(.+\))?!?:'; then
-            echo "should_release=true" >> $GITHUB_OUTPUT
-            echo "✅ Found releasable commits since $LAST_TAG"
+          # Pattern pour les noms de branches normales
+          if echo "$BRANCH" | grep -qE '^(feature|feat|fix|hotfix|refactor|docs|test|chore)/[a-z0-9-]+$'; then
+            echo "✅ Branch name follows conventions"
+            echo ""
+            echo "Branch: $BRANCH"
+          elif echo "$BRANCH" | grep -qE '^(main|master|develop|development|staging|production)$'; then
+            echo "✅ Protected branch: $BRANCH"
           else
-            echo "should_release=false" >> $GITHUB_OUTPUT
-            echo "ℹ️  No releasable commits found since $LAST_TAG"
+            echo "❌ Invalid branch name: $BRANCH"
+            echo ""
+            echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+            echo ""
+            echo "ℹ️  Branch Naming Convention:"
+            echo ""
+            echo "   type/description-in-kebab-case"
+            echo ""
+            echo "   Valid types: feature, feat, fix, hotfix, refactor, docs, test, chore"
+            echo ""
+            echo "   Examples:"
+            echo "     feature/add-auto-release"
+            echo "     fix/scanner-memory-leak"
+            echo "     docs/update-readme"
+            echo "     refactor/cleanup-controllers"
+            echo ""
+            echo "   Note: Branches from Dependabot and Renovate are automatically accepted"
+            echo ""
+            exit 1
           fi
-
-      - name: Calculate next version
-        id: semver
-        if: steps.check.outputs.should_release == 'true'
-        run: |
-          # Obtenir la dernière version
-          LAST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
-          
-          if [ -z "$LAST_TAG" ]; then
-            echo "📦 First release - starting with v0.1.0"
-            VERSION="0.0.0"
-          else
-            VERSION=${LAST_TAG#v}  # Supprimer le 'v'
-            echo "📦 Current version: $LAST_TAG"
-          fi
-          
-          IFS='.' read -r MAJOR MINOR PATCH <<< "$VERSION"
-          
-          # Analyser les commits depuis la dernière version
-          if [ -z "$LAST_TAG" ]; then
-            COMMITS=$(git log --format=%s)
-          else
-            COMMITS=$(git log $LAST_TAG..HEAD --format=%s 2>/dev/null || git log --format=%s)
-          fi
-          
-          # Déterminer le type de bump
-          BUMP_TYPE="${{ github.event.inputs.version_bump }}"
-          
-          if [ "$BUMP_TYPE" = "auto" ] || [ -z "$BUMP_TYPE" ]; then
-            if echo "$COMMITS" | grep -qE '^(feat|fix|perf|refactor).*!:|^BREAKING CHANGE:'; then
-              BUMP_TYPE="major"
-            elif echo "$COMMITS" | grep -qE '^feat(\(.+\))?:'; then
-              BUMP_TYPE="minor"
-            elif echo "$COMMITS" | grep -qE '^fix(\(.+\))?:'; then
-              BUMP_TYPE="patch"
-            else
-              BUMP_TYPE="patch"
-            fi
-          fi
-          
-          # Incrémenter la version
-          case "$BUMP_TYPE" in
-            major)
-              MAJOR=$((MAJOR + 1))
-              MINOR=0
-              PATCH=0
-              ;;
-            minor)
-              MINOR=$((MINOR + 1))
-              PATCH=0
-              ;;
-            patch)
-              PATCH=$((PATCH + 1))
-              ;;
-          esac
-          
-          NEW_VERSION="$MAJOR.$MINOR.$PATCH"
-          echo "version=$NEW_VERSION" >> $GITHUB_OUTPUT
-          echo "✨ Next version will be: v$NEW_VERSION (bump: $BUMP_TYPE)"
-
-      - name: Generate changelog
-        id: changelog
-        if: steps.check.outputs.should_release == 'true'
-        run: |
-          LAST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
-          
-          if [ -z "$LAST_TAG" ]; then
-            # Premier release - utiliser tous les commits
-            RANGE="HEAD"
-            echo "📝 Generating changelog for first release (all commits)"
-          else
-            RANGE="$LAST_TAG..HEAD"
-            echo "📝 Generating changelog from $LAST_TAG to HEAD"
-          fi
-          
-          # Générer le changelog
-          cat > changelog.md << 'EOF'
-## 🚀 Features
-
-EOF
-          
-          git log $RANGE --format="* %s (%h)" --grep="^feat" >> changelog.md 2>/dev/null || echo "_No new features_" >> changelog.md
-          
-          cat >> changelog.md << 'EOF'
-
-## 🐛 Bug Fixes
-
-EOF
-          
-          git log $RANGE --format="* %s (%h)" --grep="^fix" >> changelog.md 2>/dev/null || echo "_No bug fixes_" >> changelog.md
-          
-          cat >> changelog.md << 'EOF'
-
-## 🔧 Other Changes
-
-EOF
-          
-          git log $RANGE --format="* %s (%h)" --grep="^(chore|docs|style|refactor|perf|test|build|ci)" >> changelog.md 2>/dev/null || echo "_No other changes_" >> changelog.md
-          
-          # Stocker le changelog
-          CHANGELOG=$(cat changelog.md)
-          echo "changelog<<EOF" >> $GITHUB_OUTPUT
-          echo "$CHANGELOG" >> $GITHUB_OUTPUT
-          echo "EOF" >> $GITHUB_OUTPUT
 
   # ===========================================================================
-  # Job 2 - Créer la release et les tags
+  # Job 4 - Vérifier les fichiers modifiés
   # ===========================================================================
-  release:
-    name: Create Release
+  check-files:
+    name: Check Modified Files
     runs-on: ubuntu-latest
-    needs: analyze
-    if: needs.analyze.outputs.should_release == 'true'
+    if: github.event_name == 'pull_request'
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Create and push tag
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v41
+
+      - name: Check for sensitive files
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          SENSITIVE_FILES=(
+            ".env"
+            "*.key"
+            "*.pem"
+            "*.crt"
+            "*secret*"
+            "*password*"
+            "*.p12"
+            "*.pfx"
+          )
           
-          TAG="v${{ needs.analyze.outputs.version }}"
-          git tag -a "$TAG" -m "Release $TAG"
-          git push origin "$TAG"
-
-      - name: Create GitHub Release
-        uses: softprops/action-gh-release@v1
-        with:
-          tag_name: v${{ needs.analyze.outputs.version }}
-          name: Release v${{ needs.analyze.outputs.version }}
-          body: ${{ needs.analyze.outputs.changelog }}
-          draft: false
-          prerelease: false
-          generate_release_notes: true
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Update CHANGELOG.md
-        run: |
-          VERSION="v${{ needs.analyze.outputs.version }}"
-          DATE=$(date +%Y-%m-%d)
+          echo "🔍 Checking for sensitive files..."
+          echo ""
           
-          # Créer ou mettre à jour CHANGELOG.md
-          if [ ! -f CHANGELOG.md ]; then
-            echo "# Changelog" > CHANGELOG.md
-            echo "" >> CHANGELOG.md
-            echo "All notable changes to this project will be documented in this file." >> CHANGELOG.md
-            echo "" >> CHANGELOG.md
-          fi
+          FOUND_SENSITIVE=false
           
-          # Créer un fichier temporaire avec la nouvelle version
-          cat > changelog.tmp << EOF
-## [$VERSION] - $DATE
-
-${{ needs.analyze.outputs.changelog }}
-
-EOF
+          for FILE in ${{ steps.changed-files.outputs.all_changed_files }}; do
+            for PATTERN in "${SENSITIVE_FILES[@]}"; do
+              if [[ "$FILE" == $PATTERN ]]; then
+                echo "⚠️  WARNING: Potentially sensitive file detected: $FILE"
+                FOUND_SENSITIVE=true
+              fi
+            done
+          done
           
-          # Insérer après l'en-tête du CHANGELOG
-          if grep -q "^## \[" CHANGELOG.md 2>/dev/null; then
-            # Il y a déjà des versions - insérer avant la première
-            awk '/^## \[/{print ""; system("cat changelog.tmp"); print; next} 1' CHANGELOG.md > CHANGELOG.md.new
-            mv CHANGELOG.md.new CHANGELOG.md
+          echo ""
+          
+          if [ "$FOUND_SENSITIVE" = true ]; then
+            echo "⚠️  Please verify that no secrets are committed"
+            echo ""
+            echo "If these files are intentional, you can:"
+            echo "  1. Add them to .gitignore"
+            echo "  2. Use git-secrets or similar tools"
+            echo "  3. Store secrets in GitHub Secrets"
           else
-            # Première version - ajouter à la fin
-            cat changelog.tmp >> CHANGELOG.md
+            echo "✅ No sensitive files detected"
           fi
-          
-          rm -f changelog.tmp
-          
-          echo "✅ CHANGELOG.md updated with version $VERSION"
-
-      - name: Commit CHANGELOG
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          
-          git add CHANGELOG.md
-          git commit -m "chore: update CHANGELOG for v${{ needs.analyze.outputs.version }}" || echo "No changes to commit"
-          git push origin main || echo "Nothing to push"
-
-  # ===========================================================================
-  # Job 3 - Déclencher le build des images Docker avec le nouveau tag
-  # ===========================================================================
-  trigger-build:
-    name: Trigger Docker Build
-    runs-on: ubuntu-latest
-    needs: [analyze, release]
-    steps:
-      - name: Trigger docker-build workflow
-        uses: actions/github-script@v7
-        with:
-          script: |
-            await github.rest.actions.createWorkflowDispatch({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              workflow_id: 'docker-build.yml',
-              ref: 'main'
-            });
-            
-            console.log('Docker build workflow triggered for v${{ needs.analyze.outputs.version }}');
