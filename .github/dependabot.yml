@@ -1,0 +1,132 @@
+# =============================================================================
+# Configuration Dependabot
+# =============================================================================
+# Automatise les mises à jour des dépendances pour Go, Node.js, Docker et GitHub Actions
+#
+# Dependabot va :
+#   1. Vérifier les nouvelles versions de dépendances
+#   2. Créer automatiquement des PRs pour les mises à jour
+#   3. Respecter les règles de versioning (semver)
+#
+# Documentation : https://docs.github.com/en/code-security/dependabot
+# =============================================================================
+
+version: 2
+updates:
+  # ─────────────────────────────────────────────────────────────────────────
+  # Go modules (Operator)
+  # ─────────────────────────────────────────────────────────────────────────
+  - package-ecosystem: "gomod"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "Europe/Paris"
+    open-pull-requests-limit: 5
+    labels:
+      - "dependencies"
+      - "go"
+      - "operator"
+    reviewers:
+      - "SolucTeam"
+    assignees:
+      - "SolucTeam"
+    commit-message:
+      prefix: "build(go)"
+      include: "scope"
+    # Regrouper les mises à jour mineures et patch
+    groups:
+      kubernetes:
+        patterns:
+          - "k8s.io/*"
+          - "sigs.k8s.io/*"
+      prometheus:
+        patterns:
+          - "github.com/prometheus/*"
+
+  # ─────────────────────────────────────────────────────────────────────────
+  # npm (Scanner Node.js)
+  # ─────────────────────────────────────────────────────────────────────────
+  - package-ecosystem: "npm"
+    directory: "/scanner"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "10:00"
+      timezone: "Europe/Paris"
+    open-pull-requests-limit: 5
+    labels:
+      - "dependencies"
+      - "javascript"
+      - "scanner"
+    reviewers:
+      - "SolucTeam"
+    assignees:
+      - "SolucTeam"
+    commit-message:
+      prefix: "build(npm)"
+      include: "scope"
+    # Ignorer les mises à jour de certains packages si nécessaire
+    # Décommentez et adaptez selon vos besoins :
+    # ignore:
+    #   - dependency-name: "package-name"
+    #     update-types: ["version-update:semver-major"]
+
+  # ─────────────────────────────────────────────────────────────────────────
+  # Docker images
+  # ─────────────────────────────────────────────────────────────────────────
+  - package-ecosystem: "docker"
+    directory: "/build"
+    schedule:
+      interval: "weekly"
+      day: "tuesday"
+      time: "09:00"
+      timezone: "Europe/Paris"
+    open-pull-requests-limit: 3
+    labels:
+      - "dependencies"
+      - "docker"
+      - "operator"
+    reviewers:
+      - "SolucTeam"
+    commit-message:
+      prefix: "build(docker)"
+
+  - package-ecosystem: "docker"
+    directory: "/scanner"
+    schedule:
+      interval: "weekly"
+      day: "tuesday"
+      time: "10:00"
+      timezone: "Europe/Paris"
+    open-pull-requests-limit: 3
+    labels:
+      - "dependencies"
+      - "docker"
+      - "scanner"
+    reviewers:
+      - "SolucTeam"
+    commit-message:
+      prefix: "build(docker)"
+
+  # ─────────────────────────────────────────────────────────────────────────
+  # GitHub Actions workflows
+  # ─────────────────────────────────────────────────────────────────────────
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "wednesday"
+      time: "09:00"
+      timezone: "Europe/Paris"
+    open-pull-requests-limit: 5
+    labels:
+      - "dependencies"
+      - "github-actions"
+      - "ci"
+    reviewers:
+      - "SolucTeam"
+    commit-message:
+      prefix: "ci"
+      include: "scope"
