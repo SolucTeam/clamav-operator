@@ -84,7 +84,11 @@ jobs:
             MESSAGE=$(git log -1 --format=%s $COMMIT)
             COMMIT_SHORT=$(git rev-parse --short $COMMIT)
             
-            if echo "$MESSAGE" | grep -qE "$PATTERN"; then
+            # Accepter les commits de merge automatiques de GitHub
+            if echo "$MESSAGE" | grep -qE '^Merge (branch|pull request) '; then
+              echo "✅ $COMMIT_SHORT: $MESSAGE (merge commit)"
+              VALID_COUNT=$((VALID_COUNT + 1))
+            elif echo "$MESSAGE" | grep -qE "$PATTERN"; then
               echo "✅ $COMMIT_SHORT: $MESSAGE"
               VALID_COUNT=$((VALID_COUNT + 1))
             else
@@ -121,6 +125,8 @@ jobs:
             echo "     docs: update README with examples"
             echo "     feat!: breaking change in configuration"
             echo "     build(deps): bump package version"
+            echo ""
+            echo "   Note: Merge commits from GitHub are automatically accepted"
             echo ""
             echo "   Learn more: https://www.conventionalcommits.org"
             echo ""
