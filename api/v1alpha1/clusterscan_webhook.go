@@ -17,11 +17,12 @@ limitations under the License.
 package v1alpha1
 
 import (
+	"context"
+
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/util/validation/field"
 	ctrl "sigs.k8s.io/controller-runtime"
 	logf "sigs.k8s.io/controller-runtime/pkg/log"
-	"sigs.k8s.io/controller-runtime/pkg/webhook"
 	"sigs.k8s.io/controller-runtime/pkg/webhook/admission"
 )
 
@@ -31,16 +32,17 @@ var clusterscanlog = logf.Log.WithName("clusterscan-resource")
 // SetupWebhookWithManager sets up the webhook with the Manager
 func (r *ClusterScan) SetupWebhookWithManager(mgr ctrl.Manager) error {
 	return ctrl.NewWebhookManagedBy(mgr).
-		For(r).
+		For(&ClusterScan{}).
+		WithValidator(r).
 		Complete()
 }
 
 // +kubebuilder:webhook:path=/validate-clamav-io-v1alpha1-clusterscan,mutating=false,failurePolicy=fail,sideEffects=None,groups=clamav.io,resources=clusterscans,verbs=create;update,versions=v1alpha1,name=vclusterscan.kb.io,admissionReviewVersions=v1
 
-var _ webhook.Validator = &ClusterScan{}
+var _ admission.CustomValidator = &ClusterScan{}
 
 // ValidateCreate implements webhook.Validator so a webhook will be registered for the type
-func (r *ClusterScan) ValidateCreate() (admission.Warnings, error) {
+func (r *ClusterScan) ValidateCreate(ctx context.Context, obj runtime.Object) (admission.Warnings, error) {
 	clusterscanlog.Info("validate create", "name", r.Name)
 
 	allErrs := r.validateClusterScan()
@@ -53,7 +55,7 @@ func (r *ClusterScan) ValidateCreate() (admission.Warnings, error) {
 }
 
 // ValidateUpdate implements webhook.Validator so a webhook will be registered for the type
-func (r *ClusterScan) ValidateUpdate(old runtime.Object) (admission.Warnings, error) {
+func (r *ClusterScan) ValidateUpdate(ctx context.Context, oldObj, newObj runtime.Object) (admission.Warnings, error) {
 	clusterscanlog.Info("validate update", "name", r.Name)
 
 	allErrs := r.validateClusterScan()
@@ -66,7 +68,7 @@ func (r *ClusterScan) ValidateUpdate(old runtime.Object) (admission.Warnings, er
 }
 
 // ValidateDelete implements webhook.Validator so a webhook will be registered for the type
-func (r *ClusterScan) ValidateDelete() (admission.Warnings, error) {
+func (r *ClusterScan) ValidateDelete(ctx context.Context, obj runtime.Object) (admission.Warnings, error) {
 	clusterscanlog.Info("validate delete", "name", r.Name)
 
 	// No validation needed for delete
