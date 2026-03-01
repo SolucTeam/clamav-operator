@@ -1,0 +1,13 @@
+# ClusterRole granting read-only access to NodeScan objects.
+# Bind this role to monitoring tools and read-only auditors.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: nodescan-viewer-role
+  labels:
+    app.kubernetes.io/name: clamav-operator
+    app.kubernetes.io/component: rbac
+rules:
+- apiGroups: ["clamav.io"]
+  resources: ["nodescans", "nodescans/status"]
+  verbs: ["get", "list", "watch"]

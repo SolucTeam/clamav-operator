@@ -1,0 +1,19 @@
+# Example: default scan policy — Linux system paths, max 512 MB files.
+apiVersion: clamav.io/v1alpha1
+kind: ScanPolicy
+metadata:
+  name: default-scan-policy
+  namespace: clamav-operator-system
+spec:
+  scanPaths:
+    - /etc
+    - /usr
+    - /var
+  excludePaths:
+    - /proc
+    - /sys
+    - /dev
+  maxFileSize: 524288000  # 500 MB
+  maxConcurrent: 3
+  resources:
+    profile: default

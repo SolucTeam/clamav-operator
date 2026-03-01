@@ -1,0 +1,39 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: {{ include "clamav-operator.fullname" . }}-test-health
+  namespace: {{ .Release.Namespace }}
+  labels:
+    {{- include "clamav-operator.labels" . | nindent 4 }}
+    app.kubernetes.io/component: test
+  annotations:
+    "helm.sh/hook": test
+    "helm.sh/hook-delete-policy": before-hook-creation,hook-succeeded
+spec:
+  restartPolicy: Never
+  containers:
+    - name: health-check
+      image: curlimages/curl:8.7.1
+      command:
+        - sh
+        - -c
+        - |
+          set -e
+          echo "→ Testing operator healthz endpoint..."
+          curl -sf http://{{ include "clamav-operator.fullname" . }}.{{ .Release.Namespace }}.svc.cluster.local:{{ .Values.operator.service.healthPort }}/healthz
+          echo ""
+          echo "→ Testing operator readyz endpoint..."
+          curl -sf http://{{ include "clamav-operator.fullname" . }}.{{ .Release.Namespace }}.svc.cluster.local:{{ .Values.operator.service.healthPort }}/readyz
+          echo ""
+          echo "→ Testing metrics endpoint..."
+          curl -sf http://{{ include "clamav-operator.fullname" . }}.{{ .Release.Namespace }}.svc.cluster.local:{{ .Values.operator.service.metricsPort }}/metrics | grep -q "clamav_"
+          echo ""
+          echo "✅ All health checks passed!"
+      securityContext:
+        allowPrivilegeEscalation: false
+        capabilities:
+          drop:
+            - ALL
+        runAsNonRoot: true
+        runAsUser: 65534
+        readOnlyRootFilesystem: true

@@ -1,0 +1,11 @@
+# Example: scan a specific node on demand.
+apiVersion: clamav.io/v1alpha1
+kind: NodeScan
+metadata:
+  name: nodescan-sample
+  namespace: clamav-operator-system
+spec:
+  nodeName: worker-node-1
+  scanPolicyRef:
+    name: default-scan-policy
+    namespace: clamav-operator-system

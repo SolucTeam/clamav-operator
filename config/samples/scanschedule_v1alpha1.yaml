@@ -1,0 +1,17 @@
+# Example: run a cluster scan every day at 02:00 UTC.
+apiVersion: clamav.io/v1alpha1
+kind: ScanSchedule
+metadata:
+  name: daily-scan
+  namespace: clamav-operator-system
+spec:
+  schedule: "0 2 * * *"
+  scanPolicyRef:
+    name: default-scan-policy
+    namespace: clamav-operator-system
+  nodeSelector:
+    matchLabels:
+      kubernetes.io/os: linux
+  historyLimit:
+    succeeded: 3
+    failed: 5

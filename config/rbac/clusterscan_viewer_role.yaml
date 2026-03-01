@@ -1,0 +1,11 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: clusterscan-viewer-role
+  labels:
+    app.kubernetes.io/name: clamav-operator
+    app.kubernetes.io/component: rbac
+rules:
+- apiGroups: ["clamav.io"]
+  resources: ["clusterscans", "clusterscans/status"]
+  verbs: ["get", "list", "watch"]
