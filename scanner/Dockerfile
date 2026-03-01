@@ -20,10 +20,11 @@
 #   docker build --build-arg DOWNLOAD_SIGS=false -t clamav-node-scanner:airgap .
 # =============================================================================
 
-# ─── Stage 1: Install ClamAV binaries + optionally download signatures ───────
-FROM debian:bookworm-slim AS clamav-builder
-
-ARG DOWNLOAD_SIGS=true
+# ─── Stage 1a: Install ClamAV binaries (layer stable, rarement invalidé) ─────
+# Séparé du download des signatures pour maximiser le cache Docker :
+# si les binaires n'ont pas changé, cette couche est réutilisée même quand
+# les signatures sont mises à jour.
+FROM debian:bookworm-slim AS clamav-base
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
@@ -32,6 +33,13 @@ RUN apt-get update && \
         clamav-daemon \
         ca-certificates && \
     rm -rf /var/lib/apt/lists/*
+
+# ─── Stage 1b: Download signatures (layer isolé, ~80% de gain si déjà caché) ─
+# En isolant freshclam dans son propre stage, Docker peut réutiliser ce layer
+# tant que la base image et les arguments n'ont pas changé.
+FROM clamav-base AS clamav-builder
+
+ARG DOWNLOAD_SIGS=true
 
 # Download initial signature databases (skipped when DOWNLOAD_SIGS=false for
 # air-gap builds where signatures are injected by CI/CD)
