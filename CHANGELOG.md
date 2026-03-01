@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
+
+## [v0.1.0] - 2026-03-01
+
+## 🚀 Features
+
+* feat: initial reorganize and harden operator for prod (cd0a400)
+* feat: initial reorganize and harden operator for prod (d3271a5)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.2.1] - 2026-02-28
 
 ## 🚀 Features
