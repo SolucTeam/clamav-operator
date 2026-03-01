@@ -1,0 +1,68 @@
+# golangci-lint configuration for clamav-operator
+# Run: golangci-lint run ./...
+# Docs: https://golangci-lint.run/usage/configuration/
+
+run:
+  timeout: 5m
+  go: "1.24"
+
+linters:
+  disable:
+    - exportloopref
+  enable:
+    - errcheck # check that errors are handled
+    - gosimple # simplification suggestions
+    - govet # go vet checks
+    - ineffassign # detects ineffectual assignments
+    - staticcheck # staticcheck suite
+    - unused # check for unused code
+    - gofmt # enforce gofmt formatting
+    - misspell # correct commonly misspelled words
+    - gosec # security issues
+    - noctx # http.Request should use context
+    - bodyclose # ensure http response Body is closed
+    - unparam # find unused function parameters
+    - dogsled # check for too many blank identifiers in assignments
+    - copyloopvar # capture of loop variable in closure
+
+linters-settings:
+  errcheck:
+    # Report about not checking of errors in type assertions: `a := b.(T)`.
+    check-type-assertions: true
+    # Report about assignment of errors to blank identifier: `num, _ := strconv.Atoi(...)`.
+    check-blank: false # disabled: too noisy for intentional ignores like client.Quit()
+
+  govet:
+    enable-all: true
+    disable:
+      - shadow # too many false positives in controller-runtime patterns
+      - fieldalignment # struct field reordering is a code-readability trade-off
+
+  gosec:
+    excludes:
+      - G402 # TLS MinVersion — already set to tls.VersionTLS12 in notifier
+      - G107 # URL from variable — necessary for user-configured webhooks
+      - G112 # Potential slowloris — not applicable to operator
+
+  misspell:
+    locale: US
+
+  staticcheck:
+    checks: ["all", "-SA1019"] # ignore deprecation warnings from upstream APIs
+
+issues:
+  exclude-rules:
+    # Test files — relax some rules
+    - path: _test\.go
+      linters:
+        - errcheck
+        - gosec
+
+    # Generated files — skip entirely
+    - path: zz_generated\.deepcopy\.go
+      linters:
+        - all
+
+  # Maximum issues reported per linter
+  max-issues-per-linter: 50
+  max-same-issues: 5

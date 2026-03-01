@@ -1,0 +1,19 @@
+# config/default — Full deployment: CRDs + RBAC + Manager + Webhooks.
+# Apply with:  kustomize build config/default | kubectl apply -f -
+# Or generate: make dist/install.yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - ../crd
+  - ../rbac
+  - ../manager
+  - ../webhook
+
+namespace: clamav-operator-system
+
+namePrefix: ""
+
+commonLabels:
+  app.kubernetes.io/name: clamav-operator
+  app.kubernetes.io/managed-by: kustomize

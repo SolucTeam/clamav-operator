@@ -1,0 +1,73 @@
+🛡️  ClamAV Operator {{ .Chart.AppVersion }} deployed successfully!
+
+NAMESPACE: {{ .Release.Namespace }}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  QUICK START
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Check the operator is running:
+   kubectl -n {{ .Release.Namespace }} get deploy {{ include "clamav-operator.fullname" . }}-controller-manager
+
+2. Trigger a full cluster scan:
+   kubectl apply -f - <<EOF
+   apiVersion: clamav.io/v1alpha1
+   kind: ClusterScan
+   metadata:
+     name: quick-scan
+     namespace: {{ .Release.Namespace }}
+   spec:
+     concurrent: 3
+   EOF
+
+3. Watch the scan progress:
+   kubectl -n {{ .Release.Namespace }} get nodescans -w
+
+4. Check results:
+   kubectl -n {{ .Release.Namespace }} get clusterscan quick-scan -o jsonpath='{.status.phase}'
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  SCAN MODE: {{ .Values.scanner.mode | upper }}
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+{{- if eq .Values.scanner.mode "standalone" }}
+  Scanner: embedded clamscan binary (no external dependency)
+  Image:   {{ include "clamav-operator.scannerImage" . }}
+{{- if .Values.scanner.freshclam.enabled }}
+  Freshclam: enabled (schedule: {{ .Values.scanner.freshclam.schedule }})
+{{- else }}
+  Freshclam: DISABLED — signatures must be pre-loaded in the image
+{{- end }}
+{{- else }}
+  Scanner: remote clamd ({{ .Values.scanner.clamav.host }}:{{ .Values.scanner.clamav.port }})
+{{- end }}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  INCREMENTAL SCANNING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+{{- if .Values.scanner.incremental.enabled }}
+  Enabled  : true
+  Strategy : {{ .Values.scanner.incremental.strategy }}
+{{- if eq .Values.scanner.incremental.strategy "smart" }}
+  Full scan every {{ .Values.scanner.incremental.fullScanInterval }} runs
+{{- end }}
+{{- else }}
+  Enabled  : false (every scan is a full scan)
+{{- end }}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  MONITORING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+{{- if .Values.monitoring.serviceMonitor.enabled }}
+  ServiceMonitor: enabled — Prometheus will scrape metrics automatically
+{{- else }}
+  ServiceMonitor: disabled
+  To enable: helm upgrade {{ .Release.Name }} ... --set monitoring.serviceMonitor.enabled=true
+{{- end }}
+  Metrics endpoint (port-forward):
+  kubectl -n {{ .Release.Namespace }} port-forward svc/{{ include "clamav-operator.fullname" . }} 8080:8080
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  DOCUMENTATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  GitHub : https://github.com/SolucTeam/clamav-operator
+  Docs   : https://github.com/SolucTeam/clamav-operator/blob/main/DEPLOYMENT.md

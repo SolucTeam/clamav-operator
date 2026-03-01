@@ -1,0 +1,28 @@
+{{- if .Values.monitoring.serviceMonitor.enabled }}
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: {{ include "clamav-operator.fullname" . }}-controller-manager-metrics-monitor
+  namespace: {{ .Release.Namespace }}
+  labels:
+    {{- include "clamav-operator.labels" . | nindent 4 }}
+    {{- with .Values.monitoring.serviceMonitor.selector }}
+    {{- toYaml . | nindent 4 }}
+    {{- end }}
+    {{- with .Values.monitoring.serviceMonitor.labels }}
+    {{- toYaml . | nindent 4 }}
+    {{- end }}
+spec:
+  endpoints:
+  - path: /metrics
+    port: metrics
+    interval: {{ .Values.monitoring.serviceMonitor.interval }}
+    scrapeTimeout: {{ .Values.monitoring.serviceMonitor.scrapeTimeout }}
+    {{- if .Values.monitoring.serviceMonitor.honorLabels }}
+    honorLabels: true
+    {{- end }}
+  selector:
+    matchLabels:
+      {{- include "clamav-operator.selectorLabels" . | nindent 6 }}
+      control-plane: controller-manager
+{{- end }}

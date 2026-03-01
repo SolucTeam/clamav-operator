@@ -1,0 +1,186 @@
+# =============================================================================
+# ClamAV Operator — Unit & Integration Tests
+# =============================================================================
+# Runs on every push and pull request to ensure code quality.
+# Separated from docker-build.yml so tests can be required status checks
+# without blocking image builds when only docs/config changes are made.
+#
+# Jobs:
+#   1. go-test      — Go unit tests + go vet + golangci-lint
+#   2. node-test    — Node.js scanner unit tests
+# =============================================================================
+
+name: Tests
+
+on:
+  push:
+    branches:
+      - main
+      - "release/**"
+    paths:
+      - "**.go"
+      - "go.mod"
+      - "go.sum"
+      - "scanner/**"
+      - "helm/**"
+      - ".github/workflows/test.yml"
+      - ".golangci.yml"
+
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "**.go"
+      - "go.mod"
+      - "go.sum"
+      - "scanner/**"
+      - "helm/**"
+      - ".github/workflows/test.yml"
+      - ".golangci.yml"
+
+  # Allow running tests manually
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: test-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # ===========================================================================
+  # Job 1 — Go tests: unit tests + vet + lint
+  # ===========================================================================
+  go-test:
+    name: "Go — Vet & Test"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+          cache: true
+
+      - name: go vet
+        run: go vet ./...
+
+      - name: go test
+        run: go test ./... -count=1 -timeout=120s -coverprofile=coverage.out
+
+      - name: Upload coverage report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: go-coverage
+          path: coverage.out
+          retention-days: 7
+
+  # ===========================================================================
+  # Job 2 — golangci-lint
+  # ===========================================================================
+  go-lint:
+    name: "Go — Lint"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+          cache: true
+
+      - name: golangci-lint
+        uses: golangci/golangci-lint-action@v7
+        with:
+          version: latest
+          args: --timeout=5m
+
+  # ===========================================================================
+  # Job 3 — Helm chart lint
+  # ===========================================================================
+  helm-lint:
+    name: "Helm — Lint"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Helm
+        uses: azure/setup-helm@v4
+        with:
+          version: v3.15.3
+
+      - name: Debug tree
+        run: |
+          pwd
+          ls -R
+
+      - name: Debug - list chart contents
+        run: |
+          echo "=== Chart structure ==="
+          find helm/clamav-operator -type f | sort
+          echo ""
+          echo "=== Directories ==="
+          find helm/clamav-operator -type d | sort
+          echo ""
+          echo "=== Chart.yaml content ==="
+          cat helm/clamav-operator/Chart.yaml
+
+      - name: Helm lint (default values)
+        working-directory: helm/clamav-operator
+        run: helm lint .
+
+      - name: Helm lint (monitoring enabled)
+        working-directory: helm/clamav-operator
+        run: |
+          helm lint . \
+            --set monitoring.serviceMonitor.enabled=true \
+            --set monitoring.prometheusRule.enabled=true
+
+      - name: Helm lint (remote mode)
+        working-directory: helm/clamav-operator
+        run: |
+          helm lint . \
+            --set scanner.mode=remote
+
+      - name: Helm template (dry-run render)
+        working-directory: helm/clamav-operator
+        run: helm template . > /dev/null
+
+  # ===========================================================================
+  # Job 4 — Node.js scanner tests
+  # ===========================================================================
+  node-test:
+    name: "Node.js — Scanner Tests"
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: scanner
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: scanner/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci --ignore-scripts 2>/dev/null || npm install --ignore-scripts
+
+      - name: Run tests
+        run: node --test src/__tests__/*.test.js
+
+      - name: Test summary
+        if: always()
+        run: |
+          echo "## Node.js Test Results" >> $GITHUB_STEP_SUMMARY
+          node --test src/__tests__/*.test.js 2>&1 | tail -20 >> $GITHUB_STEP_SUMMARY || true
