@@ -78,6 +78,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
+        with:
+          # ref explicite : évite que checkout tente de résoudre la branche par
+          # défaut (fetch de refs/heads/main) quand le trigger est un tag push
+          ref: ${{ github.sha }}
 
       # ── Go tests (operator) ──────────────────────────────────────────────
       - name: Setup Go
@@ -121,6 +125,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
+        with:
+          ref: ${{ github.sha }}
 
       # ── Docker meta (tags & labels) ──────────────────────────────────────
       - name: Docker meta
@@ -197,6 +203,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
+        with:
+          ref: ${{ github.sha }}
 
       # ── Docker meta ─────────────────────────────────────────────────────
       - name: Docker meta
@@ -267,6 +275,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
+        with:
+          ref: ${{ github.sha }}
 
       - name: Docker meta
         id: meta
