@@ -43,6 +43,7 @@ permissions:
   packages: write
   actions: write
   security-events: write
+  id-token: write # Requis par docker-build.yml appelé via workflow_call (cosign signing)
 
 jobs:
   # ===========================================================================
