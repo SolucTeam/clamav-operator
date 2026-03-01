@@ -72,7 +72,7 @@ jobs:
         run: go test ./... -count=1 -timeout=120s -coverprofile=coverage.out
 
       - name: Upload coverage report
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         if: always()
         with:
           name: go-coverage
