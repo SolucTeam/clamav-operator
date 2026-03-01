@@ -6,22 +6,26 @@
 #   2. clamav-node-scanner    — Node.js standalone scanner (scanner/Dockerfile)
 #
 # Triggers:
-#   • push to main / release branches  → build + push
+#   • push to main / release branches  → build + push (latest tag)
 #   • pull request to main             → build only (no push)
 #   • manual dispatch                  → build + optional push
-#   • tags v*                          → build + push with semver tags
+#   • workflow_call depuis release.yml → build + push avec semver tags
+#
+# NOTE: Le trigger "push: tags: v*" a été supprimé intentionnellement.
+# Problème : actions/checkout essaie toujours de résoudre la branche par
+# défaut (fetch refs/heads/main), même avec un ref explicite. Quand le
+# runner est déclenché par un tag push, il n'a pas accès à refs/heads/main
+# → fatal: couldn't find remote ref refs/heads/main.
+# Fix : release.yml appelle ce workflow via workflow_call (contexte main).
 # =============================================================================
 
 name: Docker Build & Push
 
 on:
-  # Tag pushes (releases) always trigger the build — no paths filter
   push:
     branches:
       - main
       - "release/**"
-    tags:
-      - "v*"
 
   # PRs: only build when relevant code changes
   pull_request:
@@ -49,6 +53,20 @@ on:
         required: false
         default: true
         type: boolean
+
+  # Appelé par release.yml après création du tag — évite le checkout sur tag
+  workflow_call:
+    inputs:
+      release_tag:
+        description: "Tag de la release (ex: v1.2.3) — utilisé pour les image tags semver"
+        type: string
+        required: false
+        default: ""
+      scanner_download_sigs:
+        description: "Download ClamAV signatures during scanner build"
+        type: boolean
+        required: false
+        default: true
 
 # ─── Permissions ──────────────────────────────────────────────────────────────
 permissions:
@@ -78,10 +96,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
-        with:
-          # ref explicite : évite que checkout tente de résoudre la branche par
-          # défaut (fetch de refs/heads/main) quand le trigger est un tag push
-          ref: ${{ github.sha }}
 
       # ── Go tests (operator) ──────────────────────────────────────────────
       - name: Setup Go
@@ -125,8 +139,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
-        with:
-          ref: ${{ github.sha }}
 
       # ── Docker meta (tags & labels) ──────────────────────────────────────
       - name: Docker meta
@@ -135,18 +147,18 @@ jobs:
         with:
           images: ${{ env.OPERATOR_IMAGE }}
           tags: |
-            # branch name
+            # branch name (push to main/release/**)
             type=ref,event=branch
             # PR number
             type=ref,event=pr
-            # semver from tag
-            type=semver,pattern={{version}}
-            type=semver,pattern={{major}}.{{minor}}
-            type=semver,pattern={{major}}
+            # semver depuis workflow_call (release.yml passe le tag)
+            type=semver,pattern={{version}},value=${{ inputs.release_tag }},enable=${{ inputs.release_tag != '' }}
+            type=semver,pattern={{major}}.{{minor}},value=${{ inputs.release_tag }},enable=${{ inputs.release_tag != '' }}
+            type=semver,pattern={{major}},value=${{ inputs.release_tag }},enable=${{ inputs.release_tag != '' }}
             # short SHA
             type=sha,prefix=sha-
-            # latest for default branch
-            type=raw,value=latest,enable=${{ github.ref == 'refs/heads/main' }}
+            # latest : pour main ou une release via workflow_call
+            type=raw,value=latest,enable=${{ github.ref == 'refs/heads/main' || inputs.release_tag != '' }}
 
       # ── Buildx setup ────────────────────────────────────────────────────
       - name: Set up QEMU
@@ -203,8 +215,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
-        with:
-          ref: ${{ github.sha }}
 
       # ── Docker meta ─────────────────────────────────────────────────────
       - name: Docker meta
@@ -215,11 +225,11 @@ jobs:
           tags: |
             type=ref,event=branch
             type=ref,event=pr
-            type=semver,pattern={{version}}
-            type=semver,pattern={{major}}.{{minor}}
-            type=semver,pattern={{major}}
+            type=semver,pattern={{version}},value=${{ inputs.release_tag }},enable=${{ inputs.release_tag != '' }}
+            type=semver,pattern={{major}}.{{minor}},value=${{ inputs.release_tag }},enable=${{ inputs.release_tag != '' }}
+            type=semver,pattern={{major}},value=${{ inputs.release_tag }},enable=${{ inputs.release_tag != '' }}
             type=sha,prefix=sha-
-            type=raw,value=latest,enable=${{ github.ref == 'refs/heads/main' }}
+            type=raw,value=latest,enable=${{ github.ref == 'refs/heads/main' || inputs.release_tag != '' }}
 
       # ── Buildx setup ────────────────────────────────────────────────────
       - name: Set up QEMU
@@ -251,7 +261,7 @@ jobs:
           cache-from: type=gha,scope=scanner
           cache-to: type=gha,mode=max,scope=scanner
           build-args: |
-            DOWNLOAD_SIGS=${{ github.event.inputs.scanner_download_sigs || 'true' }}
+            DOWNLOAD_SIGS=${{ inputs.scanner_download_sigs }}
 
       # ── Summary ─────────────────────────────────────────────────────────
       - name: Image summary
@@ -270,13 +280,11 @@ jobs:
     name: "Build: clamav-node-scanner (airgap)"
     runs-on: ubuntu-latest
     needs: test
-    # Only build airgap variant on tags or main branch
-    if: github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/tags/v')
+    # Build airgap variant sur main ou quand appelé par release.yml (workflow_call)
+    if: github.ref == 'refs/heads/main' || inputs.release_tag != ''
     steps:
       - name: Checkout
         uses: actions/checkout@v6
-        with:
-          ref: ${{ github.sha }}
 
       - name: Docker meta
         id: meta
@@ -287,10 +295,10 @@ jobs:
           flavor: |
             suffix=-airgap,onlatest=true
           tags: |
-            type=semver,pattern={{version}}
-            type=semver,pattern={{major}}.{{minor}}
+            type=semver,pattern={{version}},value=${{ inputs.release_tag }},enable=${{ inputs.release_tag != '' }}
+            type=semver,pattern={{major}}.{{minor}},value=${{ inputs.release_tag }},enable=${{ inputs.release_tag != '' }}
             type=sha,prefix=sha-
-            type=raw,value=latest,enable=${{ github.ref == 'refs/heads/main' }}
+            type=raw,value=latest,enable=${{ github.ref == 'refs/heads/main' || inputs.release_tag != '' }}
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
