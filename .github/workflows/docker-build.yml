@@ -8,8 +8,9 @@
 # Triggers:
 #   • push to main / release branches  → build + push (latest tag)
 #   • pull request to main             → build only (no push)
-#   • manual dispatch                  → build + optional push
-#   • workflow_call depuis release.yml → build + push avec semver tags
+#   • manual dispatch (workflow_dispatch) → build visible dans l'onglet Actions,
+#     avec input release_tag optionnel pour générer les tags semver manuellement
+#   • workflow_call depuis release.yml → build + push avec semver tags (releases auto)
 #
 # NOTE: Le trigger "push: tags: v*" a été supprimé intentionnellement.
 # Problème : actions/checkout essaie toujours de résoudre la branche par
@@ -43,6 +44,11 @@ on:
 
   workflow_dispatch:
     inputs:
+      release_tag:
+        description: "Tag de release à utiliser pour les image tags semver (ex: v1.2.3). Laisser vide pour un build sans semver."
+        required: false
+        default: ""
+        type: string
       push_images:
         description: "Push images to registry"
         required: false
@@ -96,6 +102,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
 
       # ── Go tests (operator) ──────────────────────────────────────────────
       - name: Setup Go
@@ -139,6 +147,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
 
       # ── Docker meta (tags & labels) ──────────────────────────────────────
       - name: Docker meta
@@ -215,6 +225,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
 
       # ── Docker meta ─────────────────────────────────────────────────────
       - name: Docker meta
@@ -285,6 +297,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
 
       - name: Docker meta
         id: meta
