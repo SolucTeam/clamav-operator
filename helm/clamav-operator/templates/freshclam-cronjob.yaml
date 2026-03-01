@@ -1,0 +1,67 @@
+{{- if and (eq .Values.scanner.mode "standalone") .Values.scanner.freshclam.enabled }}
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: {{ include "clamav-operator.fullname" . }}-freshclam
+  namespace: {{ .Release.Namespace }}
+  labels:
+    {{- include "clamav-operator.labels" . | nindent 4 }}
+    app.kubernetes.io/component: freshclam
+spec:
+  schedule: {{ .Values.scanner.freshclam.schedule | quote }}
+  concurrencyPolicy: Forbid
+  successfulJobsHistoryLimit: 3
+  failedJobsHistoryLimit: 3
+  jobTemplate:
+    spec:
+      backoffLimit: 3
+      template:
+        metadata:
+          labels:
+            {{- include "clamav-operator.selectorLabels" . | nindent 12 }}
+            app.kubernetes.io/component: freshclam
+        spec:
+          {{- with .Values.scanner.imagePullSecrets }}
+          imagePullSecrets:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          serviceAccountName: {{ include "clamav-operator.scannerServiceAccountName" . }}
+          restartPolicy: OnFailure
+          securityContext:
+            runAsNonRoot: false
+          containers:
+          - name: freshclam
+            image: {{ .Values.scanner.freshclam.image.repository }}:{{ .Values.scanner.freshclam.image.tag }}
+            imagePullPolicy: {{ .Values.scanner.freshclam.image.pullPolicy }}
+            command:
+            - /bin/sh
+            - -c
+            - |
+              echo "Starting ClamAV signature update..."
+              freshclam --datadir=/var/lib/clamav --stdout
+              RESULT=$?
+              if [ $RESULT -eq 0 ]; then
+                echo "Signature update completed successfully."
+              elif [ $RESULT -eq 1 ]; then
+                echo "Signatures already up to date."
+              else
+                echo "Signature update failed with exit code $RESULT"
+                exit 1
+              fi
+              # Show database info
+              ls -la /var/lib/clamav/
+              echo "Update finished at $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+            resources:
+              {{- toYaml .Values.scanner.freshclam.resources | nindent 14 }}
+            volumeMounts:
+            - name: clamav-signatures
+              mountPath: /var/lib/clamav
+          volumes:
+          - name: clamav-signatures
+            {{- if .Values.scanner.signatures.persistent }}
+            persistentVolumeClaim:
+              claimName: {{ .Values.scanner.signatures.pvcName }}
+            {{- else }}
+            emptyDir: {}
+            {{- end }}
+{{- end }}

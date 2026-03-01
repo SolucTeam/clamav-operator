@@ -1,0 +1,78 @@
+apiVersion: v2
+name: clamav-operator
+description: >-
+  Kubernetes Operator for ClamAV antivirus scanning on cluster nodes.
+  Supports standalone (embedded binary) and remote (clamd) scan modes,
+  incremental/smart scanning strategies, multi-CRD lifecycle management,
+  Prometheus metrics, and Slack/Email/Webhook notifications.
+type: application
+version: 1.1.0
+appVersion: "0.1.0"
+keywords:
+  - clamav
+  - antivirus
+  - security
+  - operator
+  - scanning
+  - malware
+  - kubernetes
+home: https://github.com/SolucTeam/clamav-operator
+sources:
+  - https://github.com/SolucTeam/clamav-operator
+maintainers:
+  - name: ClamAV Operator Contributors
+    email: clamav-operator@users.noreply.github.com
+icon: https://raw.githubusercontent.com/SolucTeam/clamav-operator/main/docs/assets/logo.svg
+kubeVersion: ">=1.24.0-0"
+annotations:
+  # ArtifactHub metadata
+  artifacthub.io/category: security
+  artifacthub.io/license: Apache-2.0
+  artifacthub.io/operator: "true"
+  artifacthub.io/operatorCapabilities: Basic Install
+  artifacthub.io/crdsExamples: |
+    - apiVersion: clamav.io/v1alpha1
+      kind: ClusterScan
+      metadata:
+        name: full-cluster-scan
+      spec:
+        concurrent: 3
+    - apiVersion: clamav.io/v1alpha1
+      kind: ScanSchedule
+      metadata:
+        name: nightly-scan
+      spec:
+        schedule: "0 2 * * *"
+        clusterScan:
+          concurrent: 2
+  artifacthub.io/crds: |
+    - kind: NodeScan
+      version: v1alpha1
+      name: nodescans.clamav.io
+      displayName: NodeScan
+      description: Represents an antivirus scan job on a single cluster node
+    - kind: ClusterScan
+      version: v1alpha1
+      name: clusterscans.clamav.io
+      displayName: ClusterScan
+      description: Orchestrates NodeScan jobs across all (or selected) cluster nodes
+    - kind: ScanPolicy
+      version: v1alpha1
+      name: scanpolicies.clamav.io
+      displayName: ScanPolicy
+      description: Defines scan parameters (paths, resources, notifications)
+    - kind: ScanSchedule
+      version: v1alpha1
+      name: scanschedules.clamav.io
+      displayName: ScanSchedule
+      description: Schedules recurring ClusterScans using a cron expression
+    - kind: ScanCacheResource
+      version: v1alpha1
+      name: scancacheresources.clamav.io
+      displayName: ScanCacheResource
+      description: Stores incremental scan cache for a node
+  artifacthub.io/links: |
+    - name: Documentation
+      url: https://github.com/SolucTeam/clamav-operator/blob/main/DEPLOYMENT.md
+    - name: Source Code
+      url: https://github.com/SolucTeam/clamav-operator

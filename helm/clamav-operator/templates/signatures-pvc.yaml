@@ -1,0 +1,19 @@
+{{- if and (eq .Values.scanner.mode "standalone") .Values.scanner.signatures.persistent }}
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: {{ .Values.scanner.signatures.pvcName }}
+  namespace: {{ .Release.Namespace }}
+  labels:
+    {{- include "clamav-operator.labels" . | nindent 4 }}
+    app.kubernetes.io/component: signatures
+spec:
+  accessModes:
+    - {{ .Values.scanner.signatures.accessMode }}
+  {{- if .Values.scanner.signatures.storageClass }}
+  storageClassName: {{ .Values.scanner.signatures.storageClass | quote }}
+  {{- end }}
+  resources:
+    requests:
+      storage: {{ .Values.scanner.signatures.size }}
+{{- end }}
