@@ -1,0 +1,86 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: manager-role
+rules:
+- apiGroups:
+  - ""
+  resources:
+  - events
+  verbs:
+  - create
+  - patch
+- apiGroups:
+  - ""
+  resources:
+  - nodes
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - ""
+  resources:
+  - pods
+  verbs:
+  - get
+  - list
+- apiGroups:
+  - ""
+  resources:
+  - pods/log
+  verbs:
+  - get
+- apiGroups:
+  - batch
+  resources:
+  - jobs
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - clamav.io
+  resources:
+  - clusterscans
+  - nodescans
+  - scanschedules
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - clamav.io
+  resources:
+  - clusterscans/finalizers
+  - nodescans/finalizers
+  - scanschedules/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - clamav.io
+  resources:
+  - clusterscans/status
+  - nodescans/status
+  - scanschedules/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - clamav.io
+  resources:
+  - scanpolicies
+  verbs:
+  - get
+  - list
+  - watch

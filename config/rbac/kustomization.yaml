@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - role.yaml
+  - nodescan_editor_role.yaml
+  - nodescan_viewer_role.yaml
+  - clusterscan_editor_role.yaml
+  - clusterscan_viewer_role.yaml
+  - scanpolicy_editor_role.yaml
+  - scanpolicy_viewer_role.yaml
+  - scanschedule_editor_role.yaml
+  - scanschedule_viewer_role.yaml

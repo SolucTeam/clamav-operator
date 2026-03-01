@@ -1,0 +1,518 @@
+# Default values for clamav-operator.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+#
+# Environment-specific configurations:
+# - Development: Use lower resources, disable HA features
+# - Production: Use higher resources, enable HA and monitoring
+#
+# To customize for your environment, override these values with:
+#   helm install clamav-operator ./helm/clamav-operator -f custom-values.yaml
+
+# =============================================================================
+# OPERATOR CONFIGURATION
+# =============================================================================
+operator:
+  # Number of operator replicas
+  # Development: 1, Production: 2 (for HA)
+  replicaCount: 1
+
+  image:
+    # Image repository - update for your private registry
+    repository: ghcr.io/solucteam/clamav-operator
+    pullPolicy: IfNotPresent
+    # Overrides the image tag whose default is the chart appVersion.
+    # Development: "latest", Production: specific version like "v1.0.0"
+    tag: ""
+
+  # Image pull secrets for private registries
+  imagePullSecrets: []
+  # - name: regcred
+
+  nameOverride: ""
+  fullnameOverride: ""
+
+  serviceAccount:
+    # Specifies whether a service account should be created
+    create: true
+    # Automatically mount a ServiceAccount's API credentials?
+    automount: true
+    # Annotations to add to the service account
+    annotations: {}
+    # The name of the service account to use.
+    # If not set and create is true, a name is generated using the fullname template
+    name: ""
+
+  podAnnotations: {}
+  podLabels: {}
+
+  podSecurityContext:
+    runAsNonRoot: true
+    runAsUser: 65532
+    runAsGroup: 65532
+    fsGroup: 65532
+
+  securityContext:
+    allowPrivilegeEscalation: false
+    capabilities:
+      drop:
+      - ALL
+    readOnlyRootFilesystem: true
+    runAsNonRoot: true
+    runAsUser: 65532
+
+  # Service for metrics and health
+  service:
+    type: ClusterIP
+    port: 8080
+    metricsPort: 8080
+    healthPort: 8081
+
+  # Resource limits and requests
+  # Development:
+  #   limits: { cpu: 500m, memory: 256Mi }
+  #   requests: { cpu: 100m, memory: 128Mi }
+  # Production:
+  #   limits: { cpu: 1000m, memory: 512Mi }
+  #   requests: { cpu: 200m, memory: 256Mi }
+  resources:
+    limits:
+      cpu: 500m
+      memory: 256Mi
+    requests:
+      cpu: 100m
+      memory: 128Mi
+
+  # Leader election settings
+  leaderElection:
+    # Disable in development for simpler debugging
+    enabled: true
+    leaseDuration: 15s
+    renewDeadline: 10s
+    retryPeriod: 2s
+
+  # Node selector for operator pod
+  nodeSelector: {}
+
+  tolerations: []
+
+  # Pod anti-affinity for HA (recommended for production)
+  # Production example:
+  #   podAntiAffinity:
+  #     preferredDuringSchedulingIgnoredDuringExecution:
+  #     - weight: 100
+  #       podAffinityTerm:
+  #         labelSelector:
+  #           matchExpressions:
+  #           - key: app.kubernetes.io/name
+  #             operator: In
+  #             values:
+  #             - clamav-operator
+  #         topologyKey: kubernetes.io/hostname
+  affinity: {}
+
+  # Priority class name for production: system-cluster-critical
+  priorityClassName: ""
+
+# =============================================================================
+# SCANNER CONFIGURATION
+# =============================================================================
+scanner:
+  image:
+    repository: ghcr.io/solucteam/clamav-node-scanner
+    # Defaults to Chart.AppVersion when empty — keeps operator and scanner in sync.
+    # Override for a specific scanner version: tag: "v0.2.0"
+    tag: ""
+    pullPolicy: IfNotPresent
+
+  # Scan mode: "standalone" or "remote"
+  # - standalone: clamscan binary + signatures embedded in the scanner image.
+  #   Zero network dependency, each node scans locally.
+  # - remote: connects to a central clamd service (legacy behaviour).
+  mode: standalone
+
+  # ClamAV remote service configuration (used only when mode=remote)
+  clamav:
+    host: clamav.clamav.svc.cluster.local
+    port: 3310
+
+  # Standalone-mode binary paths (override if your image differs)
+  standalone:
+    clamscanPath: /usr/bin/clamscan
+    clamavDbPath: /var/lib/clamav
+
+  # ---------------------------------------------------------------------------
+  # Freshclam – ClamAV signature updates
+  # ---------------------------------------------------------------------------
+  freshclam:
+    # Enable automatic signature updates via freshclam CronJob.
+    # Set to false for air-gapped environments where signatures are
+    # pre-loaded into the scanner image at build time.
+    enabled: true
+    # Cron schedule – default every 6 hours
+    schedule: "0 */6 * * *"
+    image:
+      repository: clamav/clamav
+      tag: "1.3"
+      pullPolicy: IfNotPresent
+    resources:
+      requests:
+        cpu: 100m
+        memory: 128Mi
+      limits:
+        cpu: 500m
+        memory: 256Mi
+
+  # ---------------------------------------------------------------------------
+  # Signature persistence
+  # ---------------------------------------------------------------------------
+  signatures:
+    # Use a PersistentVolumeClaim to store signatures across restarts.
+    # When false an emptyDir is used (signatures re-downloaded on every
+    # freshclam run or must be baked into the image for airgap).
+    persistent: false
+    pvcName: clamav-signatures
+    storageClass: ""
+    accessMode: ReadWriteOnce
+    size: 1Gi
+
+  # ---------------------------------------------------------------------------
+  # Incremental scan settings
+  # ---------------------------------------------------------------------------
+  incremental:
+    enabled: true
+    # Strategy: "full" | "incremental" | "smart"
+    # - full: scan every file every time
+    # - incremental: only scan new/modified files since last run
+    # - smart: full scan periodically, incremental in between
+    strategy: smart
+    # For smart strategy: run a full scan every N incremental scans
+    fullScanInterval: 10
+    # Maximum file age in hours to consider for incremental scans
+    maxFileAgeHours: 24
+    # Skip files whose mtime+size haven't changed since last scan
+    skipUnchangedFiles: true
+
+  # ServiceAccount for scanner jobs
+  serviceAccount:
+    create: true
+    name: clamav-scanner
+    annotations: {}
+
+  # Default resources for scanner jobs
+  # Development:
+  #   requests: { cpu: 200m, memory: 256Mi }
+  #   limits: { cpu: 1000m, memory: 512Mi }
+  # Production:
+  #   requests: { cpu: 1000m, memory: 1Gi }
+  #   limits: { cpu: 4000m, memory: 2Gi }
+  resources:
+    requests:
+      cpu: 500m
+      memory: 512Mi
+    limits:
+      cpu: 2000m
+      memory: 1Gi
+
+  # Image pull secrets for scanner jobs
+  imagePullSecrets: []
+  # - name: regcred
+
+# =============================================================================
+# CUSTOM RESOURCE DEFINITIONS
+# =============================================================================
+# CRDs are placed in the Helm-native crds/ directory (chart root) and are
+# always installed/upgraded by Helm before chart resources.
+# The "helm.sh/resource-policy: keep" annotation is baked into each CRD,
+# so they are retained on `helm uninstall` to protect existing scan data.
+# (These values are kept for backward compatibility but have no effect.)
+crds:
+  install: true
+  keep: true
+
+# =============================================================================
+# RBAC CONFIGURATION
+# =============================================================================
+rbac:
+  # Create RBAC resources
+  create: true
+
+  # ClusterRole rules for the operator
+  clusterRoleRules:
+    - apiGroups:
+        - ""
+      resources:
+        - nodes
+      verbs:
+        - get
+        - list
+        - watch
+    - apiGroups:
+        - ""
+      resources:
+        - events
+      verbs:
+        - create
+        - patch
+    - apiGroups:
+        - ""
+      resources:
+        - pods
+        - pods/log
+      verbs:
+        - get
+        - list
+    - apiGroups:
+        - ""
+      resources:
+        - services
+        - endpoints
+      verbs:
+        - get
+        - list
+    - apiGroups:
+        - batch
+      resources:
+        - jobs
+      verbs:
+        - create
+        - get
+        - list
+        - watch
+        - update
+        - patch
+        - delete
+    - apiGroups:
+        - clamav.io
+      resources:
+        - nodescans
+        - clusterscans
+        - scanpolicies
+        - scanschedules
+        - scancacheresources
+      verbs:
+        - create
+        - delete
+        - get
+        - list
+        - patch
+        - update
+        - watch
+    - apiGroups:
+        - clamav.io
+      resources:
+        - nodescans/finalizers
+        - clusterscans/finalizers
+        - scanpolicies/finalizers
+        - scanschedules/finalizers
+        - scancacheresources/finalizers
+      verbs:
+        - update
+    - apiGroups:
+        - clamav.io
+      resources:
+        - nodescans/status
+        - clusterscans/status
+        - scanpolicies/status
+        - scanschedules/status
+        - scancacheresources/status
+      verbs:
+        - get
+        - patch
+        - update
+
+# =============================================================================
+# WEBHOOK CONFIGURATION
+# =============================================================================
+webhook:
+  enabled: true
+  port: 9443
+
+  # Certificate management
+  certManager:
+    enabled: false
+
+  # If certManager is disabled, use these certificates
+  certificates:
+    # Auto-generate self-signed certificates
+    autoGenerate: true
+    # Or provide your own
+    caBundle: ""
+    tlsCert: ""
+    tlsKey: ""
+
+# =============================================================================
+# MONITORING CONFIGURATION
+# =============================================================================
+monitoring:
+  # Enable ServiceMonitor for Prometheus Operator
+  serviceMonitor:
+    # Development: false, Production: true
+    enabled: false
+    # Prometheus instance selector
+    selector:
+      prometheus: kube-prometheus
+    # Scrape interval (Production: 60s)
+    interval: 30s
+    # Scrape timeout
+    scrapeTimeout: 30s
+    # Additional labels
+    labels: {}
+    # Honor labels
+    honorLabels: false
+
+  # Enable PrometheusRule for alerts
+  prometheusRule:
+    # Development: false, Production: true
+    enabled: false
+    # Additional labels
+    labels: {}
+    # Alert rules
+    rules:
+      - alert: ClamAVMalwareDetected
+        expr: increase(clamav_files_infected_total[5m]) > 0
+        for: 1m
+        labels:
+          severity: critical
+          team: security
+        annotations:
+          summary: "Malware detected on node {{ $labels.node }}"
+          description: "{{ $value }} infected files detected"
+
+      - alert: ClamAVScanFailed
+        expr: clamav_nodescan_failed > 0
+        for: 5m
+        labels:
+          severity: warning
+          team: platform
+        annotations:
+          summary: "ClamAV scan failed"
+          description: "{{ $value }} scans have failed"
+
+      - alert: ClamAVNoRecentScans
+        expr: time() - clamav_nodescan_last_completion_timestamp > 86400
+        for: 1h
+        labels:
+          severity: warning
+          team: platform
+        annotations:
+          summary: "No recent ClamAV scans"
+          description: "No scans completed in the last 24 hours"
+
+# =============================================================================
+# DEFAULT SCAN POLICY
+# =============================================================================
+defaultScanPolicy:
+  # Create a default ScanPolicy resource
+  enabled: true
+  name: default-policy
+  spec:
+    # Paths to scan
+    paths:
+      - /var/lib
+      - /opt
+      - /usr/local
+
+    # Exclude patterns
+    excludePatterns:
+      - "*.tmp"
+      - "*.log"
+      - "/var/lib/docker/overlay2/*"
+      - "/var/lib/containerd/*"
+
+    # Maximum concurrent file scans per node.
+    # Reduced to 3 (from 5) to limit CPU pressure on busy nodes.
+    # Tune upward only on dedicated scanning nodes.
+    maxConcurrent: 3
+
+    # File timeout in milliseconds
+    fileTimeout: 300000
+
+    # Maximum file size to scan in bytes (500MB)
+    # Development: 104857600 (100MB), Production: 1073741824 (1GB)
+    maxFileSize: 524288000
+
+    # Resources for scan jobs
+    resources:
+      requests:
+        cpu: 500m
+        memory: 512Mi
+      limits:
+        cpu: 2000m
+        memory: 1Gi
+
+    # Notifications (configure for production)
+    # notifications:
+    #   slack:
+    #     enabled: true
+    #     webhookSecretRef:
+    #       name: slack-webhook-secret
+    #       key: url
+    #     channel: "#security-alerts"
+    #     onlyOnInfection: true
+    #   email:
+    #     enabled: true
+    #     smtpServer: smtp.example.com:587
+    #     smtpAuthSecretRef:
+    #       name: smtp-credentials
+    #     from: clamav@example.com
+    #     recipients:
+    #       - security@example.com
+    #     onlyOnInfection: true
+
+# =============================================================================
+# NETWORK POLICIES
+# =============================================================================
+networkPolicy:
+  # Enable network policies (recommended for production)
+  enabled: false
+  policyTypes:
+    - Ingress
+    - Egress
+  ingress:
+    - from:
+      - namespaceSelector:
+          matchLabels:
+            name: monitoring
+      ports:
+      - protocol: TCP
+        port: 8080
+  egress:
+    # Kubernetes API
+    - to:
+      - namespaceSelector: {}
+      ports:
+      - protocol: TCP
+        port: 6443
+    # ClamAV service
+    - to:
+      - namespaceSelector:
+          matchLabels:
+            kubernetes.io/metadata.name: clamav
+      ports:
+      - protocol: TCP
+        port: 3310
+    # DNS
+    - to:
+      - namespaceSelector:
+          matchLabels:
+            kubernetes.io/metadata.name: kube-system
+      ports:
+      - protocol: UDP
+        port: 53
+
+# =============================================================================
+# ADDITIONAL CONFIGURATION
+# =============================================================================
+
+# Additional environment variables for the operator
+env: []
+# Development example:
+# - name: LOG_LEVEL
+#   value: "debug"
+
+# Additional volumes
+volumes: []
+
+# Additional volume mounts
+volumeMounts: []

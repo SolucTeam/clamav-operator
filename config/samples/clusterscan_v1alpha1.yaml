@@ -1,0 +1,13 @@
+# Example: scan all nodes matching a label selector.
+apiVersion: clamav.io/v1alpha1
+kind: ClusterScan
+metadata:
+  name: clusterscan-sample
+  namespace: clamav-operator-system
+spec:
+  nodeSelector:
+    matchLabels:
+      kubernetes.io/os: linux
+  scanPolicyRef:
+    name: default-scan-policy
+    namespace: clamav-operator-system
