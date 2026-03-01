@@ -8,8 +8,9 @@
 # Triggers:
 #   • push to main / release branches  → build + push (latest tag)
 #   • pull request to main             → build only (no push)
-#   • manual dispatch                  → build + optional push
-#   • workflow_call depuis release.yml → build + push avec semver tags
+#   • manual dispatch (workflow_dispatch) → build visible dans l'onglet Actions,
+#     avec input release_tag optionnel pour générer les tags semver manuellement
+#   • workflow_call depuis release.yml → build + push avec semver tags (releases auto)
 #
 # NOTE: Le trigger "push: tags: v*" a été supprimé intentionnellement.
 # Problème : actions/checkout essaie toujours de résoudre la branche par
@@ -43,6 +44,11 @@ on:
 
   workflow_dispatch:
     inputs:
+      release_tag:
+        description: "Tag de release à utiliser pour les image tags semver (ex: v1.2.3). Laisser vide pour un build sans semver."
+        required: false
+        default: ""
+        type: string
       push_images:
         description: "Push images to registry"
         required: false
@@ -71,11 +77,11 @@ on:
 # ─── Permissions ──────────────────────────────────────────────────────────────
 permissions:
   contents: read
-  packages: write       # Push to GHCR
-  id-token: write       # For cosign signing (optional)
-  security-events: write 
+  packages: write # Push to GHCR
+  id-token: write # For cosign signing (optional)
+  security-events: write
 
-# ─── Concurrency ─────────────────────────────────────────────────────────────
+# ─── Concurrency ──────────────────────────────────────────────────────────────
 concurrency:
   group: docker-${{ github.ref }}
   cancel-in-progress: true
@@ -96,6 +102,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
 
       # ── Go tests (operator) ──────────────────────────────────────────────
       - name: Setup Go
@@ -139,6 +147,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
 
       # ── Docker meta (tags & labels) ──────────────────────────────────────
       - name: Docker meta
@@ -147,27 +157,22 @@ jobs:
         with:
           images: ${{ env.OPERATOR_IMAGE }}
           tags: |
-            # branch name (push to main/release/**)
             type=ref,event=branch
-            # PR number
             type=ref,event=pr
-            # semver depuis workflow_call (release.yml passe le tag)
             type=semver,pattern={{version}},value=${{ inputs.release_tag }},enable=${{ inputs.release_tag != '' }}
             type=semver,pattern={{major}}.{{minor}},value=${{ inputs.release_tag }},enable=${{ inputs.release_tag != '' }}
             type=semver,pattern={{major}},value=${{ inputs.release_tag }},enable=${{ inputs.release_tag != '' }}
-            # short SHA
             type=sha,prefix=sha-
-            # latest : pour main ou une release via workflow_call
             type=raw,value=latest,enable=${{ github.ref == 'refs/heads/main' || inputs.release_tag != '' }}
 
-      # ── Buildx setup ────────────────────────────────────────────────────
+      # ── Buildx setup ─────────────────────────────────────────────────────
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
-      # ── Registry login ──────────────────────────────────────────────────
+      # ── Registry login ───────────────────────────────────────────────────
       - name: Login to GHCR
         if: github.event_name != 'pull_request'
         uses: docker/login-action@v3
@@ -176,7 +181,7 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      # ── Build & push ────────────────────────────────────────────────────
+      # ── Build & push ─────────────────────────────────────────────────────
       - name: Build and push operator image
         id: build-push
         uses: docker/build-push-action@v6
@@ -192,7 +197,7 @@ jobs:
           build-args: |
             TARGETOS=linux
 
-      # ── Summary ─────────────────────────────────────────────────────────
+      # ── Summary ──────────────────────────────────────────────────────────
       - name: Image summary
         run: |
           echo "## Operator Image" >> $GITHUB_STEP_SUMMARY
@@ -215,8 +220,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
 
-      # ── Docker meta ─────────────────────────────────────────────────────
+      # ── Docker meta ───────────────────────────────────────────────────────
       - name: Docker meta
         id: meta
         uses: docker/metadata-action@v5
@@ -231,14 +238,14 @@ jobs:
             type=sha,prefix=sha-
             type=raw,value=latest,enable=${{ github.ref == 'refs/heads/main' || inputs.release_tag != '' }}
 
-      # ── Buildx setup ────────────────────────────────────────────────────
+      # ── Buildx setup ─────────────────────────────────────────────────────
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
-      # ── Registry login ──────────────────────────────────────────────────
+      # ── Registry login ───────────────────────────────────────────────────
       - name: Login to GHCR
         if: github.event_name != 'pull_request'
         uses: docker/login-action@v3
@@ -247,7 +254,7 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      # ── Build & push ────────────────────────────────────────────────────
+      # ── Build & push ─────────────────────────────────────────────────────
       - name: Build and push scanner image
         id: build-push
         uses: docker/build-push-action@v6
@@ -263,7 +270,7 @@ jobs:
           build-args: |
             DOWNLOAD_SIGS=${{ inputs.scanner_download_sigs }}
 
-      # ── Summary ─────────────────────────────────────────────────────────
+      # ── Summary ──────────────────────────────────────────────────────────
       - name: Image summary
         run: |
           echo "## Scanner Image" >> $GITHUB_STEP_SUMMARY
@@ -280,18 +287,18 @@ jobs:
     name: "Build: clamav-node-scanner (airgap)"
     runs-on: ubuntu-latest
     needs: test
-    # Build airgap variant sur main ou quand appelé par release.yml (workflow_call)
     if: github.ref == 'refs/heads/main' || inputs.release_tag != ''
     steps:
       - name: Checkout
         uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
 
       - name: Docker meta
         id: meta
         uses: docker/metadata-action@v5
         with:
           images: ${{ env.SCANNER_IMAGE }}
-          # Suffix all tags with -airgap
           flavor: |
             suffix=-airgap,onlatest=true
           tags: |
@@ -330,6 +337,12 @@ jobs:
   # ===========================================================================
   # Job 5 — Security scan with Trivy
   # ===========================================================================
+  # ROOT CAUSE du bug récurrent :
+  #   trivy-action télécharge Trivy via un script qui appelle api.github.com
+  #   sans auth. Sur les runners partagés le rate-limit (60 req/h) est souvent
+  #   épuisé → exit code 1 silencieux.
+  # FIX : github-pat authentifie les appels → 5000 req/h au lieu de 60.
+  # ===========================================================================
   security-scan:
     name: "Security Scan"
     runs-on: ubuntu-latest
@@ -366,14 +379,28 @@ jobs:
           TAG=$(echo "${{ matrix.image_ref }}" | head -n 1)
           echo "tag=$TAG" >> "$GITHUB_OUTPUT"
 
+      # Installer Trivy via apt (repo officiel Aqua Security) pour éviter
+      # les appels à l'API GitHub Releases qui échouent avec exit code 1
+      # à cause du rate-limit sur les IPs des runners partagés (60 req/h anonymes).
+      - name: Install Trivy via apt
+        run: |
+          sudo apt-get install -y wget apt-transport-https gnupg
+          wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key \
+            | gpg --dearmor \
+            | sudo tee /usr/share/keyrings/trivy.gpg > /dev/null
+          echo "deb [signed-by=/usr/share/keyrings/trivy.gpg] https://aquasecurity.github.io/trivy-repo/deb generic main" \
+            | sudo tee /etc/apt/sources.list.d/trivy.list
+          sudo apt-get update && sudo apt-get install -y trivy
+
       - name: Trivy vulnerability scan
-        uses: aquasecurity/trivy-action@0.28.0
+        uses: aquasecurity/trivy-action@0.34.1
         with:
           image-ref: ${{ steps.resolve.outputs.tag }}
           format: "sarif"
           output: "trivy-${{ matrix.image_name }}.sarif"
           severity: "CRITICAL,HIGH"
           ignore-unfixed: true
+          skip-setup-trivy: true  # binaire déjà installé via apt ci-dessus
 
       - name: Upload Trivy SARIF
         uses: github/codeql-action/upload-sarif@v4
