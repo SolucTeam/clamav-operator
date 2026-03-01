@@ -4,6 +4,26 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.1.2] - 2026-03-01
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* fix: add id-token: write permission to release.yml for workflow_call (a6dae1a)
+* fix: workflow error and bug (276360c)
+* fix: workflow error and bug (6d9f4bb)
+* fix: workflow error and bug (8af681b)
+* fix: workflow error and bug (5a34742)
+* fix: workflow error bug fetch branch main (4176689)
+* fix: workflow error bug fetch main (11ef638)
+* fix: workflow docker build bug (e3aec32)
+* fix: workflow docker build bug (28ffebd)
+
+## 🔧 Other Changes
+
 ## [v0.1.1] - 2026-03-01
 
 ## 🚀 Features
@@ -11,6 +31,26 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
+
+## 🔧 Other Changes
+
+
+## [v0.1.2] - 2026-03-01
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* fix: add id-token: write permission to release.yml for workflow_call (a6dae1a)
+* fix: workflow error and bug (276360c)
+* fix: workflow error and bug (6d9f4bb)
+* fix: workflow error and bug (8af681b)
+* fix: workflow error and bug (5a34742)
+* fix: workflow error bug fetch branch main (4176689)
+* fix: workflow error bug fetch main (11ef638)
+* fix: workflow docker build bug (e3aec32)
+* fix: workflow docker build bug (28ffebd)
 
 ## 🔧 Other Changes
 
@@ -27,6 +67,26 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.1.2] - 2026-03-01
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* fix: add id-token: write permission to release.yml for workflow_call (a6dae1a)
+* fix: workflow error and bug (276360c)
+* fix: workflow error and bug (6d9f4bb)
+* fix: workflow error and bug (8af681b)
+* fix: workflow error and bug (5a34742)
+* fix: workflow error bug fetch branch main (4176689)
+* fix: workflow error bug fetch main (11ef638)
+* fix: workflow docker build bug (e3aec32)
+* fix: workflow docker build bug (28ffebd)
+
+## 🔧 Other Changes
+
 ## [v0.1.1] - 2026-03-01
 
 ## 🚀 Features
@@ -34,6 +94,26 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
+
+## 🔧 Other Changes
+
+
+## [v0.1.2] - 2026-03-01
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* fix: add id-token: write permission to release.yml for workflow_call (a6dae1a)
+* fix: workflow error and bug (276360c)
+* fix: workflow error and bug (6d9f4bb)
+* fix: workflow error and bug (8af681b)
+* fix: workflow error and bug (5a34742)
+* fix: workflow error bug fetch branch main (4176689)
+* fix: workflow error bug fetch main (11ef638)
+* fix: workflow docker build bug (e3aec32)
+* fix: workflow docker build bug (28ffebd)
 
 ## 🔧 Other Changes
 
