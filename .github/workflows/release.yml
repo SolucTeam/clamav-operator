@@ -234,7 +234,7 @@ jobs:
           echo "✅ dist/install.yaml generated ($(wc -l < dist/install.yaml) lines)"
 
       - name: Create GitHub Release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
           tag_name: v${{ needs.analyze.outputs.version }}
           name: Release v${{ needs.analyze.outputs.version }}
