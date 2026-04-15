@@ -1,12 +1,12 @@
 # =============================================================================
 # Auto-merge Dependabot PRs
 # =============================================================================
-# Fusionne automatiquement les PRs de Dependabot si :
-#   1. Les tests passent avec succès
-#   2. C'est une mise à jour mineure ou patch (pas majeure)
-#   3. Les checks de sécurité passent
+# Automatically merges Dependabot PRs when:
+#   1. All tests pass successfully
+#   2. The update is minor or patch (not major)
+#   3. Security checks pass
 #
-# Les mises à jour majeures nécessitent toujours une revue manuelle
+# Major updates always require a manual review
 # =============================================================================
 
 name: Dependabot Auto-merge
@@ -21,7 +21,7 @@ permissions:
 
 jobs:
   # ===========================================================================
-  # Job 1 - Vérifier si c'est une PR Dependabot éligible
+  # Job 1 - Check whether this is an eligible Dependabot PR
   # ===========================================================================
   check-dependabot:
     name: Check Dependabot PR
@@ -44,7 +44,7 @@ jobs:
           
           echo "Update type: $UPDATE_TYPE"
           
-          # Auto-merge seulement pour patch et minor
+          # Auto-merge only for patch and minor updates
           if [[ "$UPDATE_TYPE" == "version-update:semver-patch" ]] || \
              [[ "$UPDATE_TYPE" == "version-update:semver-minor" ]]; then
             echo "✅ Eligible for auto-merge (update type: $UPDATE_TYPE)"
@@ -56,7 +56,7 @@ jobs:
           fi
 
   # ===========================================================================
-  # Job 2 - Attendre que tous les checks passent
+  # Job 2 - Wait for all checks to pass
   # ===========================================================================
   wait-for-checks:
     name: Wait for Checks
@@ -83,14 +83,14 @@ jobs:
               
               console.log(`Attempt ${attempt}/${maxAttempts}: Checking status...`);
               
-              // Récupérer les check runs pour ce commit
+              // Fetch check runs for this commit
               const { data: checkRuns } = await github.rest.checks.listForRef({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 ref: '${{ github.event.pull_request.head.sha }}'
               });
               
-              // Vérifier le statut des checks requis
+              // Check the status of required checks
               const checkStatuses = {};
               for (const check of checkRuns.check_runs) {
                 if (requiredChecks.includes(check.name)) {
@@ -101,10 +101,10 @@ jobs:
                 }
               }
               
-              // Afficher l'état actuel
+              // Display current state
               console.log('Check statuses:', JSON.stringify(checkStatuses, null, 2));
               
-              // Vérifier si tous les checks requis sont terminés
+              // Check whether all required checks have completed
               const allCompleted = requiredChecks.every(name => 
                 checkStatuses[name] && checkStatuses[name].status === 'completed'
               );
@@ -115,7 +115,7 @@ jobs:
                 continue;
               }
               
-              // Vérifier si tous les checks ont réussi
+              // Check whether all required checks succeeded
               const allSuccess = requiredChecks.every(name =>
                 checkStatuses[name] && checkStatuses[name].conclusion === 'success'
               );
@@ -125,7 +125,7 @@ jobs:
                 return;
               }
               
-              // Si des checks ont échoué
+              // Some checks failed
               const failedChecks = requiredChecks.filter(name =>
                 checkStatuses[name] && checkStatuses[name].conclusion !== 'success'
               );
@@ -161,15 +161,15 @@ jobs:
               repo: context.repo.repo,
               issue_number: context.issue.number,
               body: '🤖 **Auto-merge enabled**\n\n' +
-                    'Cette PR sera automatiquement fusionnée dès que tous les checks seront au vert.\n\n' +
-                    '**Type de mise à jour :** `${{ needs.check-dependabot.outputs.update_type }}`\n' +
-                    '**Stratégie :** Squash merge avec suppression de la branche\n\n' +
-                    '⚠️ _Note: GitHub Actions ne peut pas approuver automatiquement les PRs._\n' +
-                    '_Si une approbation manuelle est requise par les branch protections, veuillez approuver manuellement._'
+                    'This PR will be automatically merged once all checks are green.\n\n' +
+                    '**Update type:** `${{ needs.check-dependabot.outputs.update_type }}`\n' +
+                    '**Strategy:** Squash merge with branch deletion\n\n' +
+                    '⚠️ _Note: GitHub Actions cannot automatically approve PRs._\n' +
+                    '_If a manual approval is required by branch protections, please approve manually._'
             });
 
   # ===========================================================================
-  # Job 4 - Notifier si la PR n'est pas éligible
+  # Job 4 - Notify when the PR is not eligible for auto-merge
   # ===========================================================================
   notify-manual-review:
     name: Notify Manual Review Required
@@ -187,14 +187,14 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: context.issue.number,
-              body: '⚠️ **Revue manuelle requise**\n\n' +
-                    'Cette PR contient une mise à jour majeure et nécessite une revue manuelle.\n\n' +
-                    '**Type de mise à jour :** `${{ needs.check-dependabot.outputs.update_type }}`\n\n' +
-                    '**Actions à effectuer :**\n' +
-                    '1. ✅ Vérifier les breaking changes dans le changelog\n' +
-                    '2. ✅ Tester localement si nécessaire\n' +
-                    '3. ✅ Vérifier que tous les tests passent\n' +
-                    '4. ✅ Approuver et merger manuellement'
+              body: '⚠️ **Manual review required**\n\n' +
+                    'This PR contains a major update and requires a manual review.\n\n' +
+                    '**Update type:** `${{ needs.check-dependabot.outputs.update_type }}`\n\n' +
+                    '**Required actions:**\n' +
+                    '1. ✅ Check for breaking changes in the changelog\n' +
+                    '2. ✅ Test locally if necessary\n' +
+                    '3. ✅ Verify that all tests pass\n' +
+                    '4. ✅ Approve and merge manually'
             });
 
       - name: Add label

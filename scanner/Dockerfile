@@ -20,10 +20,10 @@
 #   docker build --build-arg DOWNLOAD_SIGS=false -t clamav-node-scanner:airgap .
 # =============================================================================
 
-# ─── Stage 1a: Install ClamAV binaries (layer stable, rarement invalidé) ─────
-# Séparé du download des signatures pour maximiser le cache Docker :
-# si les binaires n'ont pas changé, cette couche est réutilisée même quand
-# les signatures sont mises à jour.
+# ─── Stage 1a: Install ClamAV binaries (stable layer, rarely invalidated) ─────
+# Kept separate from the signature download stage to maximise Docker cache reuse:
+# if the binaries have not changed, this layer is reused even when signatures
+# are updated.
 FROM debian:bookworm-slim AS clamav-base
 
 RUN apt-get update && \
@@ -34,9 +34,9 @@ RUN apt-get update && \
         ca-certificates && \
     rm -rf /var/lib/apt/lists/*
 
-# ─── Stage 1b: Download signatures (layer isolé, ~80% de gain si déjà caché) ─
-# En isolant freshclam dans son propre stage, Docker peut réutiliser ce layer
-# tant que la base image et les arguments n'ont pas changé.
+# ─── Stage 1b: Download signatures (isolated layer, ~80% cache hit rate) ───────
+# By isolating freshclam in its own stage, Docker can reuse this layer as long
+# as the base image and build arguments have not changed.
 FROM clamav-base AS clamav-builder
 
 ARG DOWNLOAD_SIGS=true
@@ -57,8 +57,8 @@ RUN ls -la /var/lib/clamav/ && \
 FROM node:20-bookworm-slim AS app-builder
 
 WORKDIR /app
-COPY package.json package-lock.json* ./
-RUN npm ci --omit=dev --ignore-scripts 2>/dev/null || npm install --omit=dev --ignore-scripts
+COPY package.json package-lock.json ./
+RUN npm ci --omit=dev --ignore-scripts
 COPY src/ src/
 
 # ─── Stage 3: Final runtime image ────────────────────────────────────────────
@@ -88,6 +88,12 @@ WORKDIR /app
 COPY --from=app-builder /app/node_modules ./node_modules
 COPY --from=app-builder /app/package.json ./
 COPY --from=app-builder /app/src ./src
+
+# ─── Drop privileges — never run as root ─────────────────────────────────────
+# node:20-bookworm-slim ships a "node" user (uid 1000). Give it ownership of
+# the directories it needs to write to at runtime.
+RUN chown -R node:node /app /results /var/lib/clamav
+USER node
 
 # ─── Default environment ─────────────────────────────────────────────────────
 ENV NODE_NAME="unknown" \

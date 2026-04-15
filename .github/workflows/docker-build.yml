@@ -8,16 +8,16 @@
 # Triggers:
 #   • push to main / release branches  → build + push (latest tag)
 #   • pull request to main             → build only (no push)
-#   • manual dispatch (workflow_dispatch) → build visible dans l'onglet Actions,
-#     avec input release_tag optionnel pour générer les tags semver manuellement
-#   • workflow_call depuis release.yml → build + push avec semver tags (releases auto)
+#   • manual dispatch (workflow_dispatch) → build visible in the Actions tab,
+#     with optional release_tag input to generate semver tags manually
+#   • workflow_call from release.yml → build + push with semver tags (auto releases)
 #
-# NOTE: Le trigger "push: tags: v*" a été supprimé intentionnellement.
-# Problème : actions/checkout essaie toujours de résoudre la branche par
-# défaut (fetch refs/heads/main), même avec un ref explicite. Quand le
-# runner est déclenché par un tag push, il n'a pas accès à refs/heads/main
+# NOTE: The "push: tags: v*" trigger has been intentionally removed.
+# Problem: actions/checkout always tries to resolve the default branch
+# (fetch refs/heads/main), even with an explicit ref. When the runner is
+# triggered by a tag push, it has no access to refs/heads/main
 # → fatal: couldn't find remote ref refs/heads/main.
-# Fix : release.yml appelle ce workflow via workflow_call (contexte main).
+# Fix: release.yml calls this workflow via workflow_call (context: main).
 # =============================================================================
 
 name: Docker Build & Push
@@ -45,7 +45,7 @@ on:
   workflow_dispatch:
     inputs:
       release_tag:
-        description: "Tag de release à utiliser pour les image tags semver (ex: v1.2.3). Laisser vide pour un build sans semver."
+        description: "Release tag to use for semver image tags (e.g. v1.2.3). Leave empty for a build without semver tags."
         required: false
         default: ""
         type: string
@@ -60,11 +60,11 @@ on:
         default: true
         type: boolean
 
-  # Appelé par release.yml après création du tag — évite le checkout sur tag
+  # Called by release.yml after tag creation — avoids checkout on a tag ref
   workflow_call:
     inputs:
       release_tag:
-        description: "Tag de la release (ex: v1.2.3) — utilisé pour les image tags semver"
+        description: "Release tag (e.g. v1.2.3) — used for semver image tags"
         type: string
         required: false
         default: ""
@@ -337,11 +337,11 @@ jobs:
   # ===========================================================================
   # Job 5 — Security scan with Trivy
   # ===========================================================================
-  # ROOT CAUSE du bug récurrent :
-  #   trivy-action télécharge Trivy via un script qui appelle api.github.com
-  #   sans auth. Sur les runners partagés le rate-limit (60 req/h) est souvent
-  #   épuisé → exit code 1 silencieux.
-  # FIX : github-pat authentifie les appels → 5000 req/h au lieu de 60.
+  # ROOT CAUSE of the recurring bug:
+  #   trivy-action downloads Trivy via a script that calls api.github.com
+  #   without auth. On shared runners the rate-limit (60 req/h) is often
+  #   exhausted → silent exit code 1.
+  # FIX: Install Trivy via apt so no GitHub API calls are made at all.
   # ===========================================================================
   security-scan:
     name: "Security Scan"
@@ -356,10 +356,10 @@ jobs:
           - image_name: scanner
             image_ref: ${{ needs.build-scanner.outputs.image_tags }}
     steps:
-      # Checkout explicite requis par github/codeql-action/upload-sarif@v4 :
-      # cette action tente un checkout implicite si le repo n'est pas déjà cloné,
-      # ce qui déclenche le bug "couldn't find remote ref refs/heads/main".
-      # fetch-depth: 0 évite le clone blobless qui en est la cause.
+      # Explicit checkout required by github/codeql-action/upload-sarif@v4:
+      # that action attempts an implicit checkout if the repo is not already cloned,
+      # which triggers the "couldn't find remote ref refs/heads/main" bug.
+      # fetch-depth: 0 prevents the blobless clone that causes it.
       - name: Checkout
         uses: actions/checkout@v6
         with:
@@ -379,9 +379,9 @@ jobs:
           TAG=$(echo "${{ matrix.image_ref }}" | head -n 1)
           echo "tag=$TAG" >> "$GITHUB_OUTPUT"
 
-      # Installer Trivy via apt (repo officiel Aqua Security) pour éviter
-      # les appels à l'API GitHub Releases qui échouent avec exit code 1
-      # à cause du rate-limit sur les IPs des runners partagés (60 req/h anonymes).
+      # Install Trivy via apt (official Aqua Security repo) to avoid calls to
+      # the GitHub Releases API that fail with exit code 1 due to rate-limiting
+      # on shared runner IPs (60 anonymous req/h).
       - name: Install Trivy via apt
         run: |
           sudo apt-get install -y wget apt-transport-https gnupg
@@ -400,7 +400,7 @@ jobs:
           output: "trivy-${{ matrix.image_name }}.sarif"
           severity: "CRITICAL,HIGH"
           ignore-unfixed: true
-          skip-setup-trivy: true  # binaire déjà installé via apt ci-dessus
+          skip-setup-trivy: true  # binary already installed via apt above
 
       - name: Upload Trivy SARIF
         uses: github/codeql-action/upload-sarif@v4

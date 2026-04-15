@@ -28,7 +28,12 @@ class Logger {
       message,
       ...data,
     };
-    console.log(JSON.stringify(entry));
+    const line = JSON.stringify(entry);
+    if (level === 'ERROR' || level === 'WARN') {
+      console.error(line);
+    } else {
+      console.log(line);
+    }
   }
 
   info(message, data) {

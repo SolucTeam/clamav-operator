@@ -84,7 +84,7 @@ async function generateReport(results, stats, incrementalStats, effectiveStrateg
   ];
   await fs.writeFile(summaryPath, summaryLines.join('\n'));
 
-  logger.info('Rapport généré', { reportPath, summaryPath });
+  logger.info('Report generated', { reportPath, summaryPath });
   return report;
 }
 

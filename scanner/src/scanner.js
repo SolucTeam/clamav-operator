@@ -80,7 +80,7 @@ async function scanFile(clamscan, filePath, effectiveStrategy) {
 
   if (fileStats.size > CONFIG.maxFileSize) {
     stats.filesSkipped++;
-    logger.debug('Fichier trop volumineux — ignoré', {
+    logger.debug('File too large — skipping', {
       file: filePath,
       size: fileStats.size,
       maxFileSize: CONFIG.maxFileSize,
@@ -107,7 +107,7 @@ async function scanFile(clamscan, filePath, effectiveStrategy) {
 
     if (isInfected) {
       stats.filesInfected++;
-      logger.warn('Fichier infecté détecté', {
+      logger.warn('Infected file detected', {
         alert: 'INFECTED_FILE',
         file_path: file,
         virus_names: viruses,
@@ -119,7 +119,7 @@ async function scanFile(clamscan, filePath, effectiveStrategy) {
     return { infected: false, file };
   } catch (err) {
     stats.errors++;
-    logger.error('Erreur lors du scan', { file: filePath, error: err.message });
+    logger.error('Error scanning file', { file: filePath, error: err.message });
     return { error: true, file: filePath, message: err.message };
   }
 }
@@ -139,7 +139,7 @@ async function scanDirectory(clamscan, dirPath, results, effectiveStrategy) {
   try {
     entries = await fs.readdir(dirPath, { withFileTypes: true });
   } catch (err) {
-    logger.error('Erreur répertoire', { directory: dirPath, error: err.message });
+    logger.error('Directory read error', { directory: dirPath, error: err.message });
     return;
   }
 
@@ -172,7 +172,7 @@ async function scanDirectory(clamscan, dirPath, results, effectiveStrategy) {
     const incremental = getIncrementalStats();
     const total = stats.filesScanned + incremental.filesSkipped;
     if (total > 0 && total % 500 === 0) {
-      logger.info('Progression', {
+      logger.info('Progress', {
         scanned: stats.filesScanned,
         skipped_incremental: incremental.filesSkipped,
         skipped_other: stats.filesSkipped,

@@ -1,117 +1,281 @@
 <div align="center">
-  <img src="docs/assets/logo.svg" alt="clamav-operator" width="480"/>
+  <img src="docs/assets/logo.svg" alt="clamav-operator" width="520"/>
   <br/><br/>
-  <a href="https://github.com/SolucTeam/clamav-operator/actions/workflows/docker-build.yml">
-    <img src="https://github.com/SolucTeam/clamav-operator/actions/workflows/docker-build.yml/badge.svg" alt="Build"/>
-  </a>
-  <a href="https://github.com/SolucTeam/clamav-operator/releases">
-    <img src="https://img.shields.io/github/v/release/SolucTeam/clamav-operator?color=blue" alt="Release"/>
-  </a>
-  <a href="https://github.com/SolucTeam/clamav-operator/blob/main/LICENSE">
-    <img src="https://img.shields.io/badge/license-Apache%202.0-green" alt="License"/>
-  </a>
-  <img src="https://img.shields.io/badge/Go-1.24-00ADD8?logo=go" alt="Go"/>
-  <img src="https://img.shields.io/badge/Kubernetes-1.24+-326CE5?logo=kubernetes" alt="Kubernetes"/>
-  <img src="https://img.shields.io/badge/arch-amd64%20%7C%20arm64-lightgrey" alt="Arch"/>
+
+  [![Build](https://github.com/SolucTeam/clamav-operator/actions/workflows/docker-build.yml/badge.svg)](https://github.com/SolucTeam/clamav-operator/actions/workflows/docker-build.yml)
+  [![Release](https://img.shields.io/github/v/release/SolucTeam/clamav-operator?color=blue&logo=github)](https://github.com/SolucTeam/clamav-operator/releases)
+  [![License](https://img.shields.io/badge/license-Apache%202.0-green?logo=apache)](https://github.com/SolucTeam/clamav-operator/blob/main/LICENSE)
+  [![Go](https://img.shields.io/badge/Go-1.25-00ADD8?logo=go&logoColor=white)](https://go.dev)
+  [![Kubernetes](https://img.shields.io/badge/Kubernetes-1.24+-326CE5?logo=kubernetes&logoColor=white)](https://kubernetes.io)
+  [![Helm](https://img.shields.io/badge/Helm-OCI-0F1689?logo=helm&logoColor=white)](https://helm.sh)
+  [![Arch](https://img.shields.io/badge/arch-amd64%20%7C%20arm64-lightgrey?logo=linux)](https://github.com/SolucTeam/clamav-operator/releases)
+  [![SBOM](https://img.shields.io/badge/SBOM-SPDX-blueviolet?logo=dependabot)](https://github.com/SolucTeam/clamav-operator/releases)
+
+  <br/>
+
+  > **Kubernetes-native antivirus operator** — automated ClamAV scanning across every node in your cluster, with zero external dependencies.
+
+  <br/>
+
+  [Features](#-features) · [Architecture](#-architecture) · [Quick Start](#-quick-start) · [CRDs](#-custom-resources) · [Scanner Modes](#-scanner-modes) · [Monitoring](#-monitoring) · [Development](#-development)
 </div>
 
-<br/>
+---
 
-> **Kubernetes-native antivirus operator** — automated ClamAV scanning across every node in your cluster, with zero external dependencies.
+## ✨ Features
+
+<table>
+<tr>
+  <td>🛡️ <b>Standalone mode</b></td>
+  <td><code>clamscan</code> + signatures embedded in the scanner image — no central ClamAV service, no single point of failure</td>
+</tr>
+<tr>
+  <td>🔄 <b>Incremental scanning</b></td>
+  <td>Smart strategy: scan only new/modified files, alternate with periodic full scans — up to 10× faster</td>
+</tr>
+<tr>
+  <td>✈️ <b>Air-gap support</b></td>
+  <td>Signatures baked into the image at build time — no outbound internet at runtime</td>
+</tr>
+<tr>
+  <td>📅 <b>Cron scheduling</b></td>
+  <td>Drift-free cluster-wide scans via <code>ScanSchedule</code> — anchored to the cron grid, not to <code>time.Now()</code></td>
+</tr>
+<tr>
+  <td>📊 <b>Prometheus metrics</b></td>
+  <td><code>clamav_files_infected_total</code>, <code>clamav_scan_duration_seconds</code>, running scan gauge, and more</td>
+</tr>
+<tr>
+  <td>🔔 <b>Notifications</b></td>
+  <td>Slack, Email (SMTP/TLS), generic Webhook — fire-and-forget, never block a scan</td>
+</tr>
+<tr>
+  <td>🏗️ <b>Multi-arch images</b></td>
+  <td><code>linux/amd64</code> and <code>linux/arm64</code> — built, scanned (Trivy) and cosign-signed on every release</td>
+</tr>
+<tr>
+  <td>🔒 <b>Supply-chain security</b></td>
+  <td>SBOM (SPDX), cosign image signing, Trivy CVE scanning in CI</td>
+</tr>
+<tr>
+  <td>📦 <b>GitOps-ready</b></td>
+  <td><code>observedGeneration</code> in Status — ArgoCD and Flux know exactly when reconciliation is done</td>
+</tr>
+<tr>
+  <td>🪝 <b>Admission webhooks</b></td>
+  <td>Invalid CRs (bad cron, negative limits, empty nodeName) are rejected at create/update time</td>
+</tr>
+</table>
 
 ---
 
-## Features
+## 🏛️ Architecture
 
-| | |
-|---|---|
-| 🛡️ **Standalone mode** | `clamscan` + signatures embedded in the scanner image — no central ClamAV service needed |
-| 🔄 **Incremental scanning** | Smart strategy: only scan new/modified files, alternating with periodic full scans |
-| ✈️ **Air-gap support** | Signatures baked into the image at build time — no internet at runtime |
-| 📅 **Cron scheduling** | Automatic cluster-wide scans via `ScanSchedule` |
-| 📊 **Prometheus metrics** | `clamav_files_infected_total`, `clamav_scan_duration_seconds`, and more |
-| 🔔 **Notifications** | Slack, Email (SMTP/TLS), generic Webhook — fire-and-forget, non-blocking |
-| 🏗️ **Multi-arch images** | `linux/amd64` and `linux/arm64` — built and signed on every release |
-| 🔒 **Supply-chain security** | SBOM (SPDX), cosign image signing, Trivy vulnerability scanning |
-| 📦 **GitOps-ready** | `observedGeneration` in Status — ArgoCD and Flux know when reconciliation is done |
+### Operator Overview
 
----
+```mermaid
+flowchart TB
+    subgraph Operator["🤖 clamav-operator (Pod)"]
+        direction TB
+        MGR["Controller Manager"]
+        NS_CTL["NodeScan\nReconciler"]
+        CS_CTL["ClusterScan\nReconciler"]
+        SS_CTL["ScanSchedule\nReconciler"]
+        NOTIF["🔔 Notifier\n(goroutine)"]
+        METRICS["📊 Prometheus\n:8080"]
+        WEBHOOK_ADM["🪝 Admission\nWebhook :9443"]
+        WEBHOOK_CONV["🔄 Conversion\nWebhook /convert"]
 
-## Architecture
+        MGR --> NS_CTL & CS_CTL & SS_CTL
+        NS_CTL -->|infection found| NOTIF
+        NS_CTL --> METRICS
+    end
 
+    subgraph K8S["☸️ Kubernetes API"]
+        CRD_NS["NodeScan"]
+        CRD_CS["ClusterScan"]
+        CRD_SS["ScanSchedule"]
+        CRD_SP["ScanPolicy"]
+        JOBS["Batch Jobs"]
+        NODES["Nodes"]
+    end
+
+    subgraph Workers["🖥️ Cluster Nodes"]
+        J1["Scanner Job\nnode-1\nclamscan"]
+        J2["Scanner Job\nnode-2\nclamscan"]
+        JN["Scanner Job\nnode-N\nclamscan"]
+    end
+
+    subgraph Alerts["📣 Alert Channels"]
+        SLACK["Slack"]
+        EMAIL["Email / SMTP"]
+        WBHK["Webhook"]
+    end
+
+    SS_CTL -->|creates| CRD_CS
+    CS_CTL -->|creates| CRD_NS
+    NS_CTL -->|creates| JOBS
+    JOBS -->|runs on| J1 & J2 & JN
+    NS_CTL -.->|reads logs| JOBS
+    NS_CTL -.->|watches| NODES
+    WEBHOOK_ADM -.->|validates| CRD_NS & CRD_CS & CRD_SS
+    NOTIF --> SLACK & EMAIL & WBHK
+
+    style Operator fill:#1a1a2e,color:#e0e0ff,stroke:#4444aa
+    style K8S fill:#0d2137,color:#e0f0ff,stroke:#326CE5
+    style Workers fill:#1a2e1a,color:#e0ffe0,stroke:#44aa44
+    style Alerts fill:#2e1a1a,color:#ffe0e0,stroke:#aa4444
 ```
-┌────────────────────────────────────────────────────────────────────┐
-│                        clamav-operator                             │
-│                                                                    │
-│  cmd/manager/main.go                                               │
-│       │                                                            │
-│       ├── internal/controller/                                     │
-│       │       ├── nodescan_controller.go    ← Reconcile routing    │
-│       │       ├── clusterscan_controller.go                        │
-│       │       ├── scanschedule_controller.go                       │
-│       │       ├── incremental_scan_controller.go                   │
-│       │       ├── defaults.go   metrics.go   common.go             │
-│       │       └── startup_checks.go                                │
-│       │                                                            │
-│       ├── internal/notification/                                   │
-│       │       └── notifier.go  ← Slack · Email · Webhook           │
-│       │                          (fire-and-forget goroutine)        │
-│       │                                                            │
-│       └── api/v1alpha1/                                            │
-│               ├── nodescan_types.go                                │
-│               ├── clusterscan_types.go                             │
-│               ├── scanpolicy_types.go                              │
-│               ├── scanschedule_types.go                            │
-│               └── incremental_scan_types.go                        │
-└────────────────────────────┬───────────────────────────────────────┘
-                             │  creates/watches
-                             ▼
-               ┌─────────────────────────┐
-               │    Kubernetes API       │
-               │  CRDs · Jobs · Nodes    │
-               └────────────┬────────────┘
-                            │  Job per node (maxConcurrent: 3)
-           ┌────────────────┼────────────────┐
-           ▼                ▼                ▼
-    ┌─────────────┐  ┌─────────────┐  ┌─────────────┐
-    │ Scanner Job │  │ Scanner Job │  │ Scanner Job │
-    │   Node 1    │  │   Node 2    │  │   Node N    │
-    │  clamscan   │  │  clamscan   │  │  clamscan   │
-    │  (local)    │  │  (local)    │  │  (local)    │
-    └─────────────┘  └─────────────┘  └─────────────┘
-         Standalone: scan runs locally, zero network dependency
+
+### Scan Lifecycle (Sequence)
+
+```mermaid
+sequenceDiagram
+    actor User
+    participant SS as ScanSchedule
+    participant CS as ClusterScan
+    participant NS as NodeScan ×N
+    participant JOB as Batch Job
+    participant STATUS as Status / Events
+
+    User->>SS: kubectl apply ScanSchedule
+    Note over SS: Cron fires (e.g. 02:00 UTC)
+    SS->>CS: Create ClusterScan (owned)
+    CS->>NS: Create NodeScan per node (maxConcurrent: 3)
+
+    loop For each NodeScan
+        NS->>JOB: Create Job (ttl=24h)
+        JOB-->>NS: Running
+        JOB-->>NS: Completed (JSON report)
+        NS->>STATUS: Update FilesScanned / FilesInfected
+        alt Infection found
+            NS-->>STATUS: Event "InfectionFound"
+            NS-)User: 🔔 Slack / Email / Webhook
+        end
+    end
+
+    NS-->>CS: Phase = Completed
+    CS-->>SS: Status.Active cleared
+    SS-->>STATUS: LastScheduleTime anchored to cron slot
 ```
 
-### Custom Resources
+### NodeScan State Machine
 
-| CRD | Purpose |
-|-----|---------|
-| `NodeScan` | Trigger a scan on a specific node |
-| `ClusterScan` | Trigger scans on all matching nodes simultaneously |
-| `ScanPolicy` | Reusable scan configuration (paths, resources, notifications) |
-| `ScanSchedule` | Cron-based recurring cluster scans |
-| `ScanCacheResource` | Incremental scan cache stored in chunked ConfigMaps (≤ 900 KB/chunk) |
+```mermaid
+stateDiagram-v2
+    direction LR
+
+    [*] --> Pending : CR created
+
+    Pending --> Running : Job scheduled
+
+    Running --> Completed : scan_complete\n(0 infections)
+    Running --> Completed : scan_complete\n⚠️ infections found
+    Running --> Failed : Job failed\nor timeout (2h)
+
+    Completed --> [*] : TTL expired\n(1h after success)
+    Failed --> [*] : TTL expired\n(24h — post-mortem window)
+
+    note right of Completed
+        FilesScanned, FilesInfected,
+        InfectedFiles[] stored in Status.
+        FailureReason + ExitCode captured
+        before pod GC.
+    end note
+```
+
+### CRD Relationships
+
+```mermaid
+erDiagram
+    ScanSchedule ||--o{ ClusterScan : "creates (owned)"
+    ClusterScan  ||--o{ NodeScan    : "creates (owned)"
+    NodeScan     ||--|| ScanPolicy  : "references"
+    NodeScan     ||--o| BatchJob    : "creates"
+    ScanPolicy   ||--o| Secret      : "webhookSecretRef / smtpAuthSecretRef"
+
+    ScanSchedule {
+        string  schedule       "cron expression"
+        bool    suspend
+        string  concurrencyPolicy "Allow | Forbid | Replace"
+        int32   successfulScansHistoryLimit
+        int32   failedScansHistoryLimit
+    }
+
+    ClusterScan {
+        LabelSelector nodeSelector
+        int32   concurrent
+        string  priority
+    }
+
+    NodeScan {
+        string  nodeName
+        string  strategy       "full | incremental | smart"
+        int64   filesScanned
+        int64   filesInfected
+        string  phase          "Pending | Running | Completed | Failed"
+    }
+
+    ScanPolicy {
+        string[]  paths
+        string[]  excludePatterns
+        int32     maxConcurrent
+        int64     maxFileSize
+        object    notifications
+    }
+```
+
+### API Conversion (v1alpha1 ↔ v1beta1)
+
+```mermaid
+flowchart LR
+    subgraph spoke["Spoke — v1alpha1 (served)"]
+        A1["NodeScan v1α1"]
+        A2["ClusterScan v1α1"]
+        A3["ScanSchedule v1α1"]
+    end
+
+    subgraph hub["Hub — v1beta1 (storage ✓)"]
+        B1["NodeScan v1β1"]
+        B2["ClusterScan v1β1"]
+        B3["ScanSchedule v1β1"]
+    end
+
+    A1 -->|ConvertTo| B1
+    B1 -->|ConvertFrom| A1
+    A2 -->|ConvertTo| B2
+    B2 -->|ConvertFrom| A2
+    A3 -->|ConvertTo| B3
+    B3 -->|ConvertFrom| A3
+
+    APISERVER["API Server"] -->|/convert webhook| hub
+
+    style hub fill:#0d2e0d,color:#e0ffe0,stroke:#44aa44
+    style spoke fill:#0d1a2e,color:#e0f0ff,stroke:#326CE5
+```
 
 ---
 
-## Quick Start
+## 🚀 Quick Start
 
-### Install with Helm
+### Install with Helm (OCI)
 
 ```bash
-helm install clamav-operator ./helm/clamav-operator \
+helm install clamav-operator \
+  oci://ghcr.io/solucteam/charts/clamav-operator \
   -n clamav-operator-system --create-namespace
 ```
 
-### Install with kubectl (single file)
+### Install with kubectl (single manifest)
 
 ```bash
 kubectl apply -f https://github.com/SolucTeam/clamav-operator/releases/latest/download/install.yaml
 ```
 
-### Scan a Node
+### Scan a single node
 
 ```yaml
+# nodescan.yaml
 apiVersion: clamav.io/v1alpha1
 kind: NodeScan
 metadata:
@@ -119,75 +283,164 @@ metadata:
   namespace: clamav-operator-system
 spec:
   nodeName: worker-01
-  scanPolicyRef:
-    name: default-scan-policy
-    namespace: clamav-operator-system
+  priority: medium
+  strategy: full
 ```
 
 ```bash
 kubectl apply -f nodescan.yaml
 kubectl get nodescan scan-worker-01 -w
 # NAME            NODE        PHASE       INFECTED   SCANNED   AGE
+# scan-worker-01  worker-01   Running     -          -         0s
 # scan-worker-01  worker-01   Completed   0          142847    4m12s
 ```
 
-### Schedule Nightly Scans
+### Schedule nightly cluster-wide scans
 
 ```yaml
+# nightly-schedule.yaml
 apiVersion: clamav.io/v1alpha1
 kind: ScanSchedule
 metadata:
   name: nightly
   namespace: clamav-operator-system
 spec:
-  schedule: "0 2 * * *"      # Every day at 02:00 UTC
-  scanPolicyRef:
-    name: default-scan-policy
-    namespace: clamav-operator-system
-  nodeSelector:
-    matchLabels:
-      kubernetes.io/os: linux
+  schedule: "0 2 * * *"          # Every night at 02:00 UTC
+  concurrencyPolicy: Forbid
+  successfulScansHistoryLimit: 5
+  clusterScan:
+    concurrent: 5
+    priority: low
+    nodeSelector:
+      matchLabels:
+        kubernetes.io/os: linux
+```
+
+> **Drift-free scheduling** — if the operator was down and missed several cron slots, it catches up to the most recent missed slot and anchors `LastScheduleTime` to that cron slot (not `time.Now()`). Schedule drift never accumulates.
+
+---
+
+## 📋 Custom Resources
+
+| CRD | Scope | Purpose |
+|-----|-------|---------|
+| `NodeScan` | Namespaced | Scan a specific node, once |
+| `ClusterScan` | Namespaced | Fan-out scans across all matching nodes |
+| `ScanPolicy` | Namespaced | Reusable config: paths, resources, notifications |
+| `ScanSchedule` | Namespaced | Cron-triggered recurring `ClusterScan` |
+| `ScanCacheResource` | Namespaced | Per-node incremental scan cache (chunked ConfigMaps) |
+
+### ScanPolicy — full example
+
+```yaml
+apiVersion: clamav.io/v1alpha1
+kind: ScanPolicy
+metadata:
+  name: production-policy
+  namespace: clamav-operator-system
+spec:
+  paths:
+    - /var/lib
+    - /opt/app
+  excludePatterns:
+    - ".*\\.log$"
+    - ".*/tmp/.*"
+  maxConcurrent: 5
+  fileTimeout: 30000            # 30 s per file
+  maxFileSize: 104857600        # 100 MB
+  resources:
+    requests: { cpu: 200m, memory: 256Mi }
+    limits:   { cpu: 1000m, memory: 2Gi }
+
+  notifications:
+    slack:
+      enabled: true
+      channel: "#security-alerts"
+      webhookSecretRef: { name: slack-webhook, key: url }
+      onlyOnInfection: true
+    email:
+      enabled: true
+      smtpServer: "smtp.example.com:465"
+      from: "clamav@example.com"
+      recipients: ["security@example.com"]
+      smtpAuthSecretRef: { name: smtp-creds }
+    webhook:
+      url: "https://hooks.example.com/clamav"
+      headers: { Authorization: "Bearer my-token" }
+      onlyOnInfection: false
 ```
 
 ---
 
-## Scanner Modes
+## 🔬 Scanner Modes
+
+### Mode comparison
+
+```mermaid
+flowchart LR
+    subgraph standalone["🟢 Standalone (default)"]
+        direction TB
+        IMG1["Scanner Image\n(clamscan + signatures\nbaked in)"]
+        JOB1["Job on Node"]
+        IMG1 --> JOB1
+        JOB1 -->|"scan /var/lib\n(no network)"| RESULT1["Results JSON"]
+    end
+
+    subgraph airgap["✈️ Air-gap"]
+        direction TB
+        IMG2["Scanner Image\n(signatures frozen\nat build time)"]
+        JOB2["Job on Node"]
+        IMG2 --> JOB2
+        JOB2 -->|"no internet\nat runtime"| RESULT2["Results JSON"]
+    end
+
+    subgraph remote["🔵 Remote / Legacy"]
+        direction TB
+        JOB3["Job on Node"]
+        CLAMD["clamd\nsidecar/service"]
+        JOB3 <-->|"TCP :3310"| CLAMD
+        JOB3 --> RESULT3["Results JSON"]
+    end
+
+    style standalone fill:#0d2e0d,color:#e0ffe0,stroke:#44aa44
+    style airgap fill:#1a1a2e,color:#e0e0ff,stroke:#8888cc
+    style remote fill:#0d1a2e,color:#e0f0ff,stroke:#326CE5
+```
 
 ### Standalone (Default)
 
-Each scanner Job carries its own `clamscan` binary and virus signatures. Scans run locally on each node with **zero network dependency**. This eliminates the central ClamAV service as a single point of failure.
+Each scanner Job carries its own `clamscan` binary and virus signature database. Scans run **locally on each node** with zero network dependency. No central ClamAV service = no single point of failure.
 
 ```yaml
-# helm/values.yaml (default)
+# values.yaml
 scanner:
   mode: standalone
   freshclam:
     enabled: true
-    schedule: "0 */6 * * *"   # Update signatures every 6 hours
+    schedule: "0 */6 * * *"     # Refresh signatures every 6 h
 ```
 
-### Air-Gap (No Internet)
+### Air-Gap
 
-Signatures are baked into the scanner image at build time. Nothing is downloaded at runtime.
+Signatures are frozen into the image at build time. Nothing is downloaded at runtime.
 
 ```bash
-# Build the air-gap image (DOWNLOAD_SIGS=false)
-make docker-build-scanner-airgap
+make docker-build-scanner-airgap   # DOWNLOAD_SIGS=false
 ```
 
 ```yaml
 scanner:
   mode: standalone
   freshclam:
-    enabled: false             # Signatures pre-loaded — no internet needed
+    enabled: false               # Signatures pre-baked — no internet needed
   image:
     repository: my-registry.internal/clamav-node-scanner
-    tag: "latest-airgap"
+    tag: latest-airgap
 ```
 
 ### Remote / Legacy
 
-Connects to a central `clamd` service. Use this if you already manage a ClamAV deployment separately.
+Connect to an existing `clamd` deployment you already manage.
 
 ```yaml
 scanner:
@@ -195,156 +448,188 @@ scanner:
   clamav:
     host: clamav.clamav.svc.cluster.local
     port: 3310
+  signatures:
+    persistent: true             # Mount a PVC for the signature DB
 ```
 
 ---
 
-## Incremental Scanning
+## ⚡ Incremental Scanning
 
-| Strategy | Behavior |
-|----------|----------|
-| `full` | Scan every file on every run |
-| `incremental` | Only scan new or modified files since the last run |
-| `smart` | Alternate: N incremental runs, then one forced full scan |
+```mermaid
+flowchart TD
+    START([New Scan Triggered]) --> CACHE{Cache exists?}
 
-File metadata is stored in chunked ConfigMaps (never in the CRD itself — etcd's 1.5 MB limit is respected).
+    CACHE -->|No — first run| FULL[Full Scan\nAll files]
+    CACHE -->|Yes| STRATEGY{Strategy?}
+
+    STRATEGY -->|full| FULL
+    STRATEGY -->|incremental| INC[Incremental\nNew + modified files only]
+    STRATEGY -->|smart| COUNTER{Run counter\n≥ fullScanInterval?}
+
+    COUNTER -->|Yes| FULL
+    COUNTER -->|No| INC
+
+    FULL --> UPDATE[Update cache\n+ reset counter]
+    INC  --> UPDATE
+
+    UPDATE --> REPORT[JSON Report\n→ NodeScan.Status]
+
+    style FULL fill:#2e1a1a,color:#ffe0e0,stroke:#aa4444
+    style INC  fill:#0d2e0d,color:#e0ffe0,stroke:#44aa44
+    style REPORT fill:#1a1a2e,color:#e0e0ff,stroke:#8888cc
+```
+
+| Strategy | When to use |
+|----------|-------------|
+| `full` | Always scan everything — maximum coverage |
+| `incremental` | Only new/modified files — fastest, best for large nodes |
+| `smart` | Auto-alternate: N incremental → 1 forced full — best balance |
 
 ```yaml
-scanner:
-  incremental:
-    enabled: true
-    strategy: smart
-    fullScanInterval: 10       # Full scan every 10 incremental runs
+# ScanPolicy excerpt
+spec:
+  strategy: smart
+  incrementalConfig:
+    fullScanInterval: 10       # Full scan every 10 runs
     maxFileAgeHours: 24
     skipUnchangedFiles: true
 ```
 
+File metadata (mtime, size, hash) is stored in **chunked ConfigMaps** — never in the CRD itself (etcd's 1.5 MB limit is respected at all times).
+
 ---
 
-## Notifications
+## 📊 Monitoring
 
-Configured in `ScanPolicy.spec.notifications`. Each channel runs in a **fire-and-forget goroutine** — notification failures never block or fail a scan.
+```bash
+# Live metrics
+kubectl port-forward -n clamav-operator-system deployment/clamav-operator 8080:8080
+curl -s http://localhost:8080/metrics | grep clamav_
+```
+
+### Key Metrics
+
+| Metric | Type | Description |
+|--------|------|-------------|
+| `clamav_nodescan_running` | Gauge | Active scans in progress |
+| `clamav_nodescans_total{status}` | Counter | Total scans by status (Completed / Failed) |
+| `clamav_files_scanned_total` | Counter | Cumulative files scanned |
+| `clamav_files_infected_total` | Counter | Cumulative infected files found |
+| `clamav_scan_duration_seconds` | Histogram | Scan duration distribution |
+| `clamav_schedule_executions_total{status}` | Counter | Schedule executions (success / failed) |
+
+### Grafana Dashboard (example queries)
+
+```promql
+# Infection rate over 24 h
+rate(clamav_files_infected_total[24h])
+
+# Scan failure ratio
+rate(clamav_nodescans_total{status="Failed"}[1h])
+  / rate(clamav_nodescans_total[1h])
+
+# Average scan duration (p99)
+histogram_quantile(0.99, rate(clamav_scan_duration_seconds_bucket[10m]))
+```
+
+The Helm chart ships a `PrometheusRule` that fires critical alerts:
 
 ```yaml
-spec:
-  notifications:
-    slack:
-      enabled: true
-      channel: "#security-alerts"
-      webhookSecretRef:
-        name: slack-webhook
-        key: url
-      onlyOnInfection: true    # Only alert when malware is found
-
-    email:
-      enabled: true
-      smtpServer: "smtp.example.com:465"
-      from: "clamav@example.com"
-      recipients: ["security@example.com"]
-      smtpAuthSecretRef:
-        name: smtp-credentials
-
-    webhook:
-      url: "https://hooks.example.com/clamav"
-      headers:
-        Authorization: "Bearer my-token"
-      onlyOnInfection: false
+# Enabled by prometheusRule.enabled: true in values.yaml
+- alert: ClamAVScanFailed
+  expr: increase(clamav_nodescans_total{status="Failed"}[5m]) > 0
+  severity: critical
+- alert: ClamAVInfectionDetected
+  expr: increase(clamav_files_infected_total[5m]) > 0
+  severity: critical
 ```
 
 ---
 
-## Job Lifecycle & Reliability
+## 🔒 Security & API Versioning
 
-- **`ActiveDeadlineSeconds: 7200`** — Jobs are automatically killed after 2 hours. No zombie pods.
-- **Differentiated TTL** — Succeeded jobs are cleaned up after **1 hour** (results already persisted in Status). Failed jobs are kept **24 hours** for post-mortem.
-- **`FailureReason` + `ExitCode` in Status** — `containerStatus.state.terminated` is captured before the pod is GC'd. Failure context survives pod deletion.
-- **`observedGeneration` in Status** — GitOps tools (ArgoCD, Flux) know exactly when reconciliation is complete.
-- **Patch instead of Update** — All finalizer and annotation mutations use `client.MergeFrom` patch to avoid 409 Conflict races.
+### Webhook Architecture
 
----
+```mermaid
+flowchart LR
+    US["kubectl apply\nor API client"] --> APISERVER["Kubernetes\nAPI Server"]
 
-## Project Structure
+    APISERVER -->|"POST /validate-clamav-io-v1alpha1-nodescan\n/clusterscan · /scanschedule"| ADM["🪝 Admission\nWebhook\n:9443"]
+    ADM -->|"✅ Allowed\nor ❌ Rejected + reason"| APISERVER
 
+    APISERVER -->|"POST /convert\n(v1alpha1 ↔ v1beta1)"| CONV["🔄 Conversion\nWebhook\n/convert"]
+    CONV --> APISERVER
+
+    APISERVER -->|"Store as v1beta1"| ETCD["etcd"]
+
+    style ADM  fill:#2e1a1a,color:#ffe0e0,stroke:#aa4444
+    style CONV fill:#1a2e1a,color:#e0ffe0,stroke:#44aa44
+    style ETCD fill:#1a1a2e,color:#e0e0ff,stroke:#8888cc
 ```
-clamav-operator/
-├── api/v1alpha1/                    # CRD type definitions + webhooks
-│   ├── nodescan_types.go
-│   ├── clusterscan_types.go
-│   ├── scanpolicy_types.go
-│   ├── scanschedule_types.go
-│   ├── incremental_scan_types.go   # snake_case (Go convention)
-│   └── zz_generated.deepcopy.go
-│
-├── internal/                        # Private packages (not importable externally)
-│   ├── controller/                  # Reconciliation loops
-│   │   ├── nodescan_controller.go
-│   │   ├── clusterscan_controller.go
-│   │   ├── scanschedule_controller.go
-│   │   ├── incremental_scan_controller.go
-│   │   ├── common.go               # requeueWithJitter, shared helpers
-│   │   ├── defaults.go             # Resource profiles, constants
-│   │   ├── metrics.go
-│   │   └── startup_checks.go
-│   └── notification/               # Decoupled alerting (testable without cluster)
-│       └── notifier.go             # Slack · Email · Webhook
-│
-├── cmd/manager/main.go              # Operator entry point
-│
-├── config/
-│   ├── crd/bases/                   # Generated CRD manifests
-│   ├── rbac/                        # manager-role + editor/viewer roles per CRD
-│   ├── manager/                     # Deployment, ServiceAccount, Service
-│   ├── default/                     # Kustomize root (CRDs + RBAC + manager + webhooks)
-│   ├── samples/                     # Example CRs (one per CRD)
-│   └── webhook/
-│
-├── dist/
-│   └── install.yaml                 # Generated by CI: kustomize build config/default
-│
-├── scanner/                         # Standalone scanner (Node.js + ClamAV)
-│   ├── Dockerfile
-│   └── src/
-│       ├── index.js                 # Entry point
-│       ├── scanner.js               # Recursive directory scan
-│       ├── incremental.js           # Smart incremental cache
-│       ├── report.js                # JSON + text report
-│       └── __tests__/
-│
-├── helm/clamav-operator/            # Helm chart
-├── build/Dockerfile                 # Operator image (Go)
-├── .github/workflows/
-│   ├── docker-build.yml             # Multi-arch build + Trivy scan
-│   └── release.yml                  # Semantic versioning + SBOM + cosign + install.yaml
-├── .golangci.yml                    # Linting configuration
-└── Makefile
+
+**Admission webhook** — rejects invalid CRs at create/update:
+- Bad cron expression → immediate error message with the parse failure
+- Negative history limits, empty `nodeName`, invalid priority enum
+- Applied to `NodeScan`, `ClusterScan`, and `ScanSchedule`
+
+**Conversion webhook** — a single `/convert` handler backed by controller-runtime's scheme dispatch. `v1beta1` is the hub (storage version); `v1alpha1` is the spoke. All three resource types go through it automatically.
+
+```yaml
+# values.yaml — TLS for webhooks
+webhook:
+  certificates:
+    autoGenerate: true     # Self-signed, dev/testing
+    # Production: use cert-manager
+    # autoGenerate: false
+    # certManagerIssuerRef:
+    #   name: cluster-issuer
+    #   kind: ClusterIssuer
+```
+
+### Job Reliability
+
+```mermaid
+timeline
+    title Scanner Job Lifecycle
+    section Created
+        t=0s : Job created, Pod scheduled
+    section Running
+        t=0→7200s : Scan in progress
+        t=7200s : ActiveDeadlineSeconds — Job killed if still running
+    section Completed (success)
+        t+0 : Results in NodeScan.Status (FilesScanned, InfectedFiles[])
+        t+1h : Job TTL expires — Pod GC'd (results already in Status)
+    section Failed
+        t+0 : FailureReason + ExitCode captured before pod GC
+        t+24h : Job TTL expires — 24 h post-mortem window
 ```
 
 ---
 
-## Configuration
+## ⚙️ Configuration Reference
 
 ### Operator Flags
 
 | Flag | Default | Description |
 |------|---------|-------------|
-| `--scanner-image` | `ghcr.io/solucteam/clamav-node-scanner:...` | Scanner container image |
-| `--clamav-host` | `clamav.clamav.svc.cluster.local` | ClamAV host (remote mode) |
-| `--clamav-port` | `3310` | ClamAV port (remote mode) |
-| `--skip-startup-checks` | `false` | Disable startup validation |
-| `--leader-elect` | `false` | Enable leader election (HA) |
+| `--scanner-image` | `ghcr.io/solucteam/clamav-node-scanner:latest` | Scanner container image |
+| `--clamav-host` | `clamav.clamav.svc.cluster.local` | clamd host (remote mode only) |
+| `--clamav-port` | `3310` | clamd port (remote mode only) |
+| `--skip-startup-checks` | `false` | Disable startup RBAC/ServiceAccount validation |
+| `--leader-elect` | `false` | Enable leader election (multi-replica HA) |
 | `--metrics-bind-address` | `:8080` | Prometheus metrics endpoint |
+| `--health-probe-bind-address` | `:8081` | Liveness/readiness probe endpoint |
 
-### Priority-Based Resources
+### Priority-Based Resource Profiles
 
-| Priority | CPU Req | Mem Req | Ephemeral Storage | CPU Lim | Mem Lim |
-|----------|---------|---------|-------------------|---------|---------|
-| `high`   | 500m    | 512Mi   | 512Mi             | 2000m   | 4Gi     |
-| `default`| 100m    | 256Mi   | 256Mi             | 1000m   | 2Gi     |
-| `low`    | 50m     | 128Mi   | 128Mi             | 500m    | 1Gi     |
+| Priority | CPU Request | Mem Request | CPU Limit | Mem Limit |
+|----------|-------------|-------------|-----------|-----------|
+| `high`   | 500m        | 512Mi       | 2000m     | 4Gi       |
+| `medium` _(default)_ | 100m | 256Mi  | 1000m     | 2Gi       |
+| `low`    | 50m         | 128Mi       | 500m      | 1Gi       |
 
 ### RBAC Roles
-
-Beyond the `manager-role` (operator), the following `ClusterRole` objects are provided for end users:
 
 | Role | Verbs | Use case |
 |------|-------|----------|
@@ -359,26 +644,73 @@ Beyond the `manager-role` (operator), the following `ClusterRole` objects are pr
 
 ---
 
-## Monitoring
+## 🗂️ Project Structure
 
-```bash
-# Live metrics
-kubectl port-forward -n clamav-operator-system deployment/clamav-operator 8080:8080
-curl -s http://localhost:8080/metrics | grep clamav_
 ```
-
-Key metrics:
-
-```promql
-clamav_nodescan_running          # Active scans
-clamav_files_infected_total      # Total infected files found (counter)
-clamav_files_scanned_total       # Total files scanned (counter)
-clamav_scan_duration_seconds     # Scan duration histogram
+clamav-operator/
+├── api/
+│   ├── v1alpha1/                  # CRD types + admission webhooks
+│   │   ├── nodescan_types.go
+│   │   ├── nodescan_webhook.go
+│   │   ├── clusterscan_types.go
+│   │   ├── clusterscan_webhook.go
+│   │   ├── scanschedule_types.go
+│   │   ├── scanschedule_webhook.go  ← cron validated at admission
+│   │   ├── scanpolicy_types.go
+│   │   ├── incremental_scan_types.go
+│   │   ├── conversion.go          ← v1alpha1 ↔ v1beta1 hub/spoke
+│   │   └── zz_generated.deepcopy.go
+│   └── v1beta1/                   # Storage version (hub)
+│       ├── nodescan_types.go
+│       ├── clusterscan_types.go
+│       ├── scanschedule_types.go
+│       └── zz_generated.deepcopy.go
+│
+├── internal/
+│   ├── controller/
+│   │   ├── nodescan_controller.go
+│   │   ├── clusterscan_controller.go
+│   │   ├── scanschedule_controller.go
+│   │   ├── incremental_scan_controller.go
+│   │   ├── common.go              # requeueWithJitter, shared helpers
+│   │   ├── defaults.go            # Resource profiles, constants
+│   │   ├── metrics.go
+│   │   └── startup_checks.go
+│   └── notification/
+│       └── notifier.go            # Slack · Email · Webhook
+│
+├── cmd/manager/main.go            # Operator entry point
+│
+├── config/
+│   ├── crd/bases/                 # Generated CRD manifests
+│   ├── rbac/                      # manager-role + editor/viewer per CRD
+│   ├── manager/                   # Deployment, ServiceAccount, Service
+│   ├── default/                   # Kustomize root
+│   ├── samples/                   # Example CRs
+│   └── webhook/
+│
+├── scanner/                       # Node.js standalone scanner
+│   ├── Dockerfile
+│   └── src/
+│       ├── index.js               # Entry point — writes scan_complete signal
+│       ├── scanner.js             # Recursive directory scan
+│       ├── incremental.js         # Smart cache logic
+│       ├── report.js              # JSON + text report
+│       └── __tests__/
+│
+├── helm/clamav-operator/          # Helm chart (published to GHCR OCI)
+├── dist/install.yaml              # Generated by CI: kustomize build
+├── build/Dockerfile               # Operator image (Go multi-stage)
+└── .github/workflows/
+    ├── docker-build.yml           # Multi-arch build + Trivy scan
+    ├── release.yml                # Semver + SBOM + cosign + install.yaml
+    ├── helm-release.yml           # Publish Helm chart to GHCR OCI
+    └── commit-validation.yml      # Conventional Commits check
 ```
 
 ---
 
-## Development
+## 🛠️ Development
 
 ```bash
 # Clone & setup
@@ -389,40 +721,51 @@ go mod download
 # Generate CRD manifests + DeepCopy
 make manifests generate
 
-# Lint
-make lint                        # uses .golangci.yml
+# Lint (golangci-lint)
+make lint
 
-# Unit tests (no cluster needed)
+# Unit tests — no cluster needed
 make test
 
 # Scanner tests (Node.js)
 cd scanner && node --test src/__tests__/
 
-# e2e tests (requires Kind)
+# e2e tests — requires Kind or an existing cluster
 make test-e2e
+# or against a live cluster:
+USE_EXISTING_CLUSTER=true go test ./test/e2e/... -tags=e2e -v -timeout 10m
 
 # Build all images locally
 make docker-build-all
 
-# Build air-gap scanner
+# Build air-gap scanner (no internet at runtime)
 make docker-build-scanner-airgap
 
 # Generate dist/install.yaml locally
 make build-installer
 ```
 
-### CI Workflows
+### CI / CD Overview
 
-| Workflow | Trigger | What it does |
-|----------|---------|--------------|
-| `docker-build.yml` | Push to `main`, PRs, version tags | go vet + test, multi-arch build (amd64/arm64), Trivy CVE scan |
-| `release.yml` | Push to `main` with `feat:`/`fix:` commits | Semantic versioning, generate `dist/install.yaml`, SBOM, cosign sign, GitHub Release |
-| `commit-validation.yml` | Every PR | Conventional Commits format check |
-| `dependabot-automerge.yml` | Dependabot PRs | Auto-merge patch/minor dependency updates |
+```mermaid
+flowchart LR
+    PR["Pull Request"] --> VALIDATE["commit-validation\nConventional Commits"]
+    PR --> BUILD["docker-build\ngo vet + test\nmulti-arch build\nTrivy CVE scan"]
+
+    PUSH_MAIN["Push to main\n(feat:/fix: commit)"] --> RELEASE["release.yml\n① bump version\n② build + push images\n③ SBOM (SPDX)\n④ cosign sign\n⑤ dist/install.yaml\n⑥ GitHub Release"]
+
+    PUSH_TAG["Push tag v*"] --> HELM["helm-release.yml\n① stamp Chart.yaml\n② helm package\n③ helm push OCI\nghcr.io/.../charts"]
+    PUSH_TAG --> RELEASE
+
+    DEPENDABOT["Dependabot PR"] --> AUTOMERGE["dependabot-automerge\npatch + minor → auto-merge"]
+
+    style RELEASE fill:#0d2e0d,color:#e0ffe0,stroke:#44aa44
+    style HELM fill:#1a1a2e,color:#e0e0ff,stroke:#8888cc
+```
 
 ---
 
-## Troubleshooting
+## 🔍 Troubleshooting
 
 **Scan job not starting:**
 ```bash
@@ -430,22 +773,24 @@ kubectl logs -n clamav-operator-system deployment/clamav-operator -f
 kubectl get events -n clamav-operator-system --sort-by='.lastTimestamp'
 ```
 
-**Check failure reason without a running pod:**
+**Failure reason without a running pod:**
 ```bash
-# Failure context is stored in NodeScan Status — survives pod GC
-kubectl get nodescan scan-worker-01 -o jsonpath='{.status.failureReason}'
-kubectl get nodescan scan-worker-01 -o jsonpath='{.status.exitCode}'
+# Captured in Status before pod GC — always available
+kubectl get nodescan scan-worker-01 \
+  -o jsonpath='Reason: {.status.failureReason}{"\n"}ExitCode: {.status.exitCode}{"\n"}'
 ```
 
-**No ClamAV signatures found (standalone):**
+**No ClamAV signatures (standalone):**
 ```bash
-# Ensure the scanner image was built with DOWNLOAD_SIGS=true
 kubectl logs -n clamav-operator-system -l clamav.io/nodescan=<scan-name>
+# Look for: "clamscan: command not found" or "No database files found"
+# Fix: ensure the scanner image was built with DOWNLOAD_SIGS=true
 ```
 
 **Remote mode — clamd unreachable:**
 ```bash
-kubectl run test --rm -it --image=busybox -- nc -zv clamav.clamav.svc.cluster.local 3310
+kubectl run test --rm -it --image=busybox -- \
+  nc -zv clamav.clamav.svc.cluster.local 3310
 ```
 
 **Permission denied:**
@@ -455,20 +800,28 @@ kubectl auth can-i create jobs \
   -n clamav-operator-system
 ```
 
+**Invalid ScanSchedule rejected at admission:**
+```bash
+# The webhook now validates the cron expression at create/update time
+kubectl apply -f bad-schedule.yaml
+# Error: admission webhook "vscanschedule.kb.io" denied the request:
+#   spec.schedule: Invalid value: "every day": invalid cron expression: ...
+```
+
 ---
 
-## License
+## 📄 License
 
 Copyright 2025 The ClamAV Operator Authors.
 Licensed under the [Apache License, Version 2.0](LICENSE).
 
 ---
 
-## Contributing
+## 🤝 Contributing
 
 1. Fork the repository
 2. Create your feature branch: `git checkout -b feat/my-feature`
-3. Commit using [Conventional Commits](https://www.conventionalcommits.org): `feat: add X`, `fix: resolve Y`
+3. Commit using [Conventional Commits](https://www.conventionalcommits.org): `feat: add X` · `fix: resolve Y`
 4. Push and open a Pull Request
 
-Issues and discussions: [github.com/SolucTeam/clamav-operator](https://github.com/SolucTeam/clamav-operator/issues)
+Issues and discussions → [github.com/SolucTeam/clamav-operator](https://github.com/SolucTeam/clamav-operator/issues)
