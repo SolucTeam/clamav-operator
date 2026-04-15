@@ -1,16 +1,17 @@
 # =============================================================================
-# Auto Release avec Semantic Versioning
+# Auto Release with Semantic Versioning
 # =============================================================================
-# Crée automatiquement des releases GitHub basées sur les Conventional Commits
-# 
-# Format des commits :
-#   feat: nouvelle fonctionnalité  → version MINOR (1.0.0 → 1.1.0)
-#   fix: correction de bug          → version PATCH (1.0.0 → 1.0.1)
-#   BREAKING CHANGE:                → version MAJOR (1.0.0 → 2.0.0)
+# Automatically creates GitHub releases based on Conventional Commits
 #
-# Déclencheurs :
-#   - Push sur main avec des commits feat/fix
-#   - Manuel via workflow_dispatch
+# Commit format:
+#   feat: new feature      → MINOR bump (1.0.0 → 1.1.0)
+#   fix: bug fix           → PATCH bump (1.0.0 → 1.0.1)
+#   BREAKING CHANGE:       → MAJOR bump (1.0.0 → 2.0.0)
+#
+# Triggers:
+#   - Push to main with feat/fix commits        → auto-calculates next semver
+#   - Push a tag v* or V* (e.g. git push v1.2.3) → uses the tag version directly
+#   - Manual via workflow_dispatch
 # =============================================================================
 
 name: Auto Release
@@ -19,11 +20,12 @@ on:
   push:
     branches:
       - main
-    paths-ignore:
-      - '**.md'
-      - 'docs/**'
-      - '.github/**'
-      - '!.github/workflows/release.yml'
+    # Tags v*/V* trigger a release using the tag version directly.
+    # paths-ignore is intentionally absent here: tag pushes must always fire,
+    # and branch pushes are already gated by the should_release commit check.
+    tags:
+      - 'v[0-9]*'
+      - 'V[0-9]*'
   workflow_dispatch:
     inputs:
       version_bump:
@@ -43,11 +45,11 @@ permissions:
   packages: write
   actions: write
   security-events: write
-  id-token: write # Requis par docker-build.yml appelé via workflow_call (cosign signing)
+  id-token: write # Required by docker-build.yml called via workflow_call (cosign signing)
 
 jobs:
   # ===========================================================================
-  # Job 1 - Analyser les commits et déterminer la version
+  # Job 1 - Analyse commits and determine the version
   # ===========================================================================
   analyze:
     name: Analyze Commits
@@ -65,16 +67,24 @@ jobs:
       - name: Check if should release
         id: check
         run: |
+          # ── Tag push: always release, version comes from the tag ──────────
+          if [[ "$GITHUB_REF" == refs/tags/* ]]; then
+            echo "should_release=true" >> $GITHUB_OUTPUT
+            echo "🏷️  Triggered by tag push: ${{ github.ref_name }}"
+            exit 0
+          fi
+
+          # ── Branch push: check for releasable commits ─────────────────────
           LAST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
-          
+
           if [ -z "$LAST_TAG" ]; then
             echo "should_release=true" >> $GITHUB_OUTPUT
             echo "📦 First release - will create v0.1.0"
             exit 0
           fi
-          
+
           COMMITS=$(git log $LAST_TAG..HEAD --oneline 2>/dev/null || git log --oneline)
-          
+
           if echo "$COMMITS" | grep -qE '^[a-f0-9]+ (feat|fix|perf|refactor)(\(.+\))?!?:'; then
             echo "should_release=true" >> $GITHUB_OUTPUT
             echo "✅ Found releasable commits since $LAST_TAG"
@@ -87,8 +97,19 @@ jobs:
         id: semver
         if: steps.check.outputs.should_release == 'true'
         run: |
+          # ── Tag push: extract version directly from the tag ───────────────
+          if [[ "$GITHUB_REF" == refs/tags/* ]]; then
+            TAG="${{ github.ref_name }}"
+            VERSION="${TAG#v}"   # strip leading 'v'
+            VERSION="${VERSION#V}" # strip leading 'V'
+            echo "version=$VERSION" >> $GITHUB_OUTPUT
+            echo "🏷️  Using version from tag: v$VERSION"
+            exit 0
+          fi
+
+          # ── Branch push / manual: calculate from conventional commits ─────
           LAST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
-          
+
           if [ -z "$LAST_TAG" ]; then
             echo "📦 First release - starting with v0.1.0"
             VERSION="0.0.0"
@@ -96,17 +117,17 @@ jobs:
             VERSION=${LAST_TAG#v}
             echo "📦 Current version: $LAST_TAG"
           fi
-          
+
           IFS='.' read -r MAJOR MINOR PATCH <<< "$VERSION"
-          
+
           if [ -z "$LAST_TAG" ]; then
             COMMITS=$(git log --format=%s)
           else
             COMMITS=$(git log $LAST_TAG..HEAD --format=%s 2>/dev/null || git log --format=%s)
           fi
-          
+
           BUMP_TYPE="${{ github.event.inputs.version_bump }}"
-          
+
           if [ "$BUMP_TYPE" = "auto" ] || [ -z "$BUMP_TYPE" ]; then
             if echo "$COMMITS" | grep -qE '^(feat|fix|perf|refactor).*!:|^BREAKING CHANGE:'; then
               BUMP_TYPE="major"
@@ -118,7 +139,7 @@ jobs:
               BUMP_TYPE="patch"
             fi
           fi
-          
+
           case "$BUMP_TYPE" in
             major)
               MAJOR=$((MAJOR + 1))
@@ -133,7 +154,7 @@ jobs:
               PATCH=$((PATCH + 1))
               ;;
           esac
-          
+
           NEW_VERSION="$MAJOR.$MINOR.$PATCH"
           echo "version=$NEW_VERSION" >> $GITHUB_OUTPUT
           echo "✨ Next version will be: v$NEW_VERSION (bump: $BUMP_TYPE)"
@@ -181,7 +202,7 @@ jobs:
           echo "EOF" >> $GITHUB_OUTPUT
 
   # ===========================================================================
-  # Job 2 - Créer la release et les tags
+  # Job 2 - Create the release and tags
   # ===========================================================================
   release:
     name: Create Release
@@ -196,6 +217,8 @@ jobs:
           token: ${{ secrets.PAT_TOKEN }}
 
       - name: Create and push tag
+        # Skip when the workflow was triggered BY a tag push — the tag already exists.
+        if: github.ref_type != 'tag'
         env:
           # PAT required — GITHUB_TOKEN-triggered pushes don't fire other workflows
           GH_TOKEN: ${{ secrets.PAT_TOKEN }}
@@ -280,19 +303,21 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/${{ github.repository }}
 
           git add CHANGELOG.md
           git commit -m "chore: update CHANGELOG for v${{ needs.analyze.outputs.version }}" || echo "No changes to commit"
-          git push origin main || echo "Nothing to push"
+          # Always push to main (even if triggered by a tag, HEAD is detached on the tag commit)
+          git push origin HEAD:main || echo "Nothing to push"
 
   # ===========================================================================
-  # Job 3 — Build & Push Docker images (appelé via workflow_call)
+  # Job 3 — Build & Push Docker images (called via workflow_call)
   # ===========================================================================
-  # On n'utilise PAS le trigger "push: tags: v*" dans docker-build.yml car
-  # actions/checkout tente toujours de fetch refs/heads/main pour initialiser
-  # le clone, et échoue quand le runner n'a que la ref du tag.
-  # On appelle directement le workflow depuis ici (contexte : refs/heads/main)
-  # → checkout peut accéder à main sans problème.
+  # We do NOT use the "push: tags: v*" trigger in docker-build.yml because
+  # actions/checkout always tries to fetch refs/heads/main to initialise the
+  # clone, and fails when the runner only has the tag ref.
+  # We call the workflow directly from here (context: refs/heads/main)
+  # → checkout can access main without issues.
   docker-build:
     name: Build & Push Docker Images
     needs: [analyze, release]

@@ -28,7 +28,10 @@ spec:
           serviceAccountName: {{ include "clamav-operator.scannerServiceAccountName" . }}
           restartPolicy: OnFailure
           securityContext:
-            runAsNonRoot: false
+            runAsNonRoot: true
+            runAsUser: 101   # clamav user in the official clamav/clamav image
+            runAsGroup: 101
+            fsGroup: 101
           containers:
           - name: freshclam
             image: {{ .Values.scanner.freshclam.image.repository }}:{{ .Values.scanner.freshclam.image.tag }}

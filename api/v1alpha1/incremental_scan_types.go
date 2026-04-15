@@ -1,7 +1,7 @@
 /*
 Copyright 2025 The ClamAV Operator Authors.
 
-Scan Incrémental - Types et Définitions
+Incremental Scan — Types and Definitions
 */
 
 package v1alpha1
@@ -15,22 +15,22 @@ import (
 type ScanStrategy string
 
 const (
-	// ScanStrategyFull scanne tous les fichiers à chaque fois
+	// ScanStrategyFull scans every file on every run
 	ScanStrategyFull ScanStrategy = "full"
 
-	// ScanStrategyIncremental scanne uniquement les fichiers modifiés depuis le dernier scan réussi
+	// ScanStrategyIncremental scans only files modified since the last successful scan
 	ScanStrategyIncremental ScanStrategy = "incremental"
 
-	// ScanStrategyModifiedOnly scanne uniquement les fichiers modifiés dans les dernières 24h
+	// ScanStrategyModifiedOnly scans only files modified within the last 24 h
 	ScanStrategyModifiedOnly ScanStrategy = "modified-only"
 
-	// ScanStrategySmart combine incremental + priorité aux fichiers récents
+	// ScanStrategySmart alternates between incremental and full scans automatically
 	ScanStrategySmart ScanStrategy = "smart"
 )
 
-// IncrementalScanConfig configure le comportement du scan incrémental
+// IncrementalScanConfig configures incremental scan behavior
 type IncrementalScanConfig struct {
-	// Enabled active le scan incrémental
+	// Enabled activates incremental scanning
 	// +kubebuilder:default=false
 	// +optional
 	Enabled bool `json:"enabled,omitempty"`
@@ -40,7 +40,7 @@ type IncrementalScanConfig struct {
 	// +optional
 	Strategy ScanStrategy `json:"strategy,omitempty"`
 
-	// BaselineInterval force un scan complet tous les X scans
+	// BaselineInterval triggers a full scan every X incremental scans.
 	// For example, if set to 7, a full scan is triggered every 7 incremental scans
 	// +kubebuilder:default=7
 	// +kubebuilder:validation:Minimum=1
@@ -48,90 +48,90 @@ type IncrementalScanConfig struct {
 	// +optional
 	BaselineInterval int32 `json:"baselineInterval,omitempty"`
 
-	// MaxAge définit l'âge maximum (en heures) des fichiers à scanner
-	// Utilisé avec modified-only et smart
+	// MaxAge defines the maximum age (in hours) of files to consider for incremental scans.
+	// Used with the modified-only and smart strategies
 	// +kubebuilder:default=24
 	// +optional
 	MaxAge int32 `json:"maxAge,omitempty"`
 
-	// MinTimeBetweenScans définit le délai minimum entre deux scans (en heures)
-	// Empêche de rescanner trop fréquemment le même node
+	// MinTimeBetweenScans defines the minimum delay (in hours) between two scans.
+	// Prevents rescanning the same node too frequently
 	// +kubebuilder:default=6
 	// +optional
 	MinTimeBetweenScans int32 `json:"minTimeBetweenScans,omitempty"`
 
-	// CacheExpiration définit la durée de validité du cache (en heures)
-	// Après ce délai, un full scan est forcé
+	// CacheExpiration defines the cache validity duration (in hours).
+	// After this period a full scan is forced
 	// +kubebuilder:default=168
 	// +optional
 	CacheExpiration int32 `json:"cacheExpiration,omitempty"`
 
-	// SkipUnchangedFiles saute les fichiers dont le mtime n'a pas changé
+	// SkipUnchangedFiles skips files whose mtime+size have not changed since the last scan
 	// +kubebuilder:default=true
 	// +optional
 	SkipUnchangedFiles bool `json:"skipUnchangedFiles,omitempty"`
 }
 
-// FileMetadata contient les métadonnées d'un fichier scanné
+// FileMetadata holds the metadata of a scanned file
 type FileMetadata struct {
-	// Path du fichier
+	// Path is the absolute path to the file
 	Path string `json:"path"`
 
-	// ModTime timestamp de modification
+	// ModTime is the Unix modification timestamp
 	ModTime int64 `json:"modTime"`
 
-	// Size en bytes
+	// Size is the file size in bytes
 	Size int64 `json:"size"`
 
-	// Hash SHA256 du fichier (optionnel)
+	// Hash is the SHA256 hash of the file (optional)
 	// +optional
 	Hash string `json:"hash,omitempty"`
 
-	// LastScanned timestamp du dernier scan
+	// LastScanned is the Unix timestamp of the last scan
 	LastScanned int64 `json:"lastScanned"`
 
-	// ScanResult résultat du dernier scan (clean/infected)
+	// ScanResult is the outcome of the last scan: "clean" or "infected"
 	ScanResult string `json:"scanResult"`
 }
 
-// ScanCache contient le cache des fichiers scannés
+// ScanCache holds the scan cache for a node
 type ScanCache struct {
-	// NodeName du node scanné
+	// NodeName is the name of the scanned node
 	NodeName string `json:"nodeName"`
 
-	// LastFullScan timestamp du dernier scan complet
+	// LastFullScan is the Unix timestamp of the last full scan
 	LastFullScan int64 `json:"lastFullScan"`
 
-	// LastIncrementalScan timestamp du dernier scan incrémental
+	// LastIncrementalScan is the Unix timestamp of the last incremental scan
 	// +optional
 	LastIncrementalScan int64 `json:"lastIncrementalScan,omitempty"`
 
-	// ScanCount nombre de scans effectués depuis le dernier full scan
+	// ScanCount is the number of scans performed since the last full scan
 	ScanCount int32 `json:"scanCount"`
 
-	// Files métadonnées des fichiers scannés
-	// Limité à 10000 entrées pour éviter une CR trop grosse
+	// Files contains the metadata of scanned files.
+	// Capped at 10 000 entries to keep the CustomResource size manageable
 	// +optional
 	Files []FileMetadata `json:"files,omitempty"`
 
-	// TotalFiles nombre total de fichiers trackés
+	// TotalFiles is the total number of tracked files
 	TotalFiles int64 `json:"totalFiles"`
 
-	// CacheVersion version du format de cache (pour migrations futures)
+	// CacheVersion specifies the cache format version (for future migrations)
 	CacheVersion string `json:"cacheVersion"`
 }
 
-// ScanCacheStatus définit le status du cache
+// ScanCacheStatus defines the observed state of the scan cache
 type ScanCacheStatus struct {
-	// LastUpdated timestamp de dernière mise à jour
+	// LastUpdated is the timestamp of the last cache update
 	// +optional
 	LastUpdated metav1.Time `json:"lastUpdated,omitempty"`
 
-	// Size taille du cache en bytes
+	// Size is the cache size in bytes
 	// +optional
 	Size int64 `json:"size,omitempty"`
 
-	// Compressed indique si le cache est compressé
+	// Compressed indicates whether the cache data is compressed
 	// +optional
 	Compressed bool `json:"compressed,omitempty"`
 }
@@ -140,7 +140,7 @@ type ScanCacheStatus struct {
 // +kubebuilder:subresource:status
 // +kubebuilder:resource:scope=Namespaced,shortName=sc;scancache
 
-// ScanCacheResource stocke le cache des fichiers scannés par node
+// ScanCacheResource stores the per-node scan cache
 type ScanCacheResource struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`

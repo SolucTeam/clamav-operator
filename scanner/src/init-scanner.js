@@ -26,7 +26,7 @@ const execFileAsync = promisify(execFile);
 // =============================================================================
 
 async function initScanner() {
-  logger.info('Initialisation du scanner', {
+  logger.info('Initializing scanner', {
     mode: CONFIG.scanMode,
     clamscan_path: CONFIG.clamscanPath,
     clamav_db: CONFIG.clamavDbPath,
@@ -45,7 +45,7 @@ async function initScanner() {
 // =============================================================================
 
 async function initStandaloneScanner() {
-  logger.info('Mode standalone — utilisation de clamscan local');
+  logger.info('Standalone mode — using local clamscan binary');
 
   // 1. Verify binary
   try {
@@ -80,7 +80,7 @@ async function initStandaloneScanner() {
   });
 
   const version = await clamscan.getVersion();
-  logger.info('Scanner standalone initialisé', { version });
+  logger.info('Standalone scanner initialized', { version });
   return clamscan;
 }
 
@@ -93,7 +93,7 @@ async function initRemoteScanner() {
     throw new Error('CLAMAV_HOST is required for remote mode');
   }
 
-  logger.info('Mode remote — connexion à clamd distant', {
+  logger.info('Remote mode — connecting to remote clamd', {
     host: CONFIG.clamavHost,
     port: CONFIG.clamavPort,
   });
@@ -115,7 +115,7 @@ async function initRemoteScanner() {
 
   await clamscan.ping();
   const version = await clamscan.getVersion();
-  logger.info('Connexion clamd établie', { version });
+  logger.info('clamd connection established', { version });
   return clamscan;
 }
 
@@ -128,7 +128,7 @@ async function initRemoteScanner() {
  * Called only when UPDATE_SIGNATURES=true (i.e. NOT in air-gap mode).
  */
 async function updateSignatures() {
-  logger.info('Mise à jour des signatures via freshclam…');
+  logger.info('Updating signatures via freshclam...');
   try {
     const { stdout, stderr } = await execFileAsync('freshclam', [
       '--datadir', CONFIG.clamavDbPath,
@@ -137,13 +137,13 @@ async function updateSignatures() {
 
     if (stdout) logger.debug('freshclam stdout', { output: stdout.slice(0, 500) });
     if (stderr) logger.warn('freshclam stderr', { output: stderr.slice(0, 500) });
-    logger.info('Signatures mises à jour avec succès');
+    logger.info('Signatures updated successfully');
   } catch (err) {
     // Exit code 1 = "already up-to-date"
     if (err.code === 1) {
-      logger.info('Signatures déjà à jour');
+      logger.info('Signatures already up-to-date');
     } else {
-      logger.error('Échec freshclam — les signatures existantes seront utilisées', {
+      logger.error('freshclam failed — existing signatures will be used', {
         error: err.message,
       });
       // Non-fatal: continue with whatever signatures are already present
