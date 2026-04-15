@@ -6,12 +6,34 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.2.0] - 2026-04-15
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.2.0] - 2026-04-15
 
 ## 🚀 Features
 
 * Merge pull request #19 from SolucTeam/feat/tag-release-helm-oci (6cb637a)
 * feat(ci): trigger release on v* tag push and publish Helm chart to GHCR OCI (4ebb0da)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
+
+## [v0.2.0] - 2026-04-15
+
+## 🚀 Features
+
 
 ## 🐛 Bug Fixes
 
@@ -38,12 +60,34 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.2.0] - 2026-04-15
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.2.0] - 2026-04-15
 
 ## 🚀 Features
 
 * Merge pull request #19 from SolucTeam/feat/tag-release-helm-oci (6cb637a)
 * feat(ci): trigger release on v* tag push and publish Helm chart to GHCR OCI (4ebb0da)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
+
+## [v0.2.0] - 2026-04-15
+
+## 🚀 Features
+
 
 ## 🐛 Bug Fixes
 
@@ -62,12 +106,34 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.2.0] - 2026-04-15
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.2.0] - 2026-04-15
 
 ## 🚀 Features
 
 * Merge pull request #19 from SolucTeam/feat/tag-release-helm-oci (6cb637a)
 * feat(ci): trigger release on v* tag push and publish Helm chart to GHCR OCI (4ebb0da)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
+
+## [v0.2.0] - 2026-04-15
+
+## 🚀 Features
+
 
 ## 🐛 Bug Fixes
 
@@ -94,12 +160,34 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.2.0] - 2026-04-15
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.2.0] - 2026-04-15
 
 ## 🚀 Features
 
 * Merge pull request #19 from SolucTeam/feat/tag-release-helm-oci (6cb637a)
 * feat(ci): trigger release on v* tag push and publish Helm chart to GHCR OCI (4ebb0da)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
+
+## [v0.2.0] - 2026-04-15
+
+## 🚀 Features
+
 
 ## 🐛 Bug Fixes
 
@@ -121,12 +209,34 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.2.0] - 2026-04-15
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.2.0] - 2026-04-15
 
 ## 🚀 Features
 
 * Merge pull request #19 from SolucTeam/feat/tag-release-helm-oci (6cb637a)
 * feat(ci): trigger release on v* tag push and publish Helm chart to GHCR OCI (4ebb0da)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
+
+## [v0.2.0] - 2026-04-15
+
+## 🚀 Features
+
 
 ## 🐛 Bug Fixes
 
@@ -153,12 +263,34 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.2.0] - 2026-04-15
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.2.0] - 2026-04-15
 
 ## 🚀 Features
 
 * Merge pull request #19 from SolucTeam/feat/tag-release-helm-oci (6cb637a)
 * feat(ci): trigger release on v* tag push and publish Helm chart to GHCR OCI (4ebb0da)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
+
+## [v0.2.0] - 2026-04-15
+
+## 🚀 Features
+
 
 ## 🐛 Bug Fixes
 
@@ -177,12 +309,34 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.2.0] - 2026-04-15
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.2.0] - 2026-04-15
 
 ## 🚀 Features
 
 * Merge pull request #19 from SolucTeam/feat/tag-release-helm-oci (6cb637a)
 * feat(ci): trigger release on v* tag push and publish Helm chart to GHCR OCI (4ebb0da)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
+
+## [v0.2.0] - 2026-04-15
+
+## 🚀 Features
+
 
 ## 🐛 Bug Fixes
 
@@ -209,12 +363,34 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.2.0] - 2026-04-15
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.2.0] - 2026-04-15
 
 ## 🚀 Features
 
 * Merge pull request #19 from SolucTeam/feat/tag-release-helm-oci (6cb637a)
 * feat(ci): trigger release on v* tag push and publish Helm chart to GHCR OCI (4ebb0da)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
+
+## [v0.2.0] - 2026-04-15
+
+## 🚀 Features
+
 
 ## 🐛 Bug Fixes
 
