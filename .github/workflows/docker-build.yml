@@ -393,7 +393,7 @@ jobs:
           sudo apt-get update && sudo apt-get install -y trivy
 
       - name: Trivy vulnerability scan
-        uses: aquasecurity/trivy-action@0.35.0
+        uses: aquasecurity/trivy-action@v0.35.0
         with:
           image-ref: ${{ steps.resolve.outputs.tag }}
           format: "sarif"

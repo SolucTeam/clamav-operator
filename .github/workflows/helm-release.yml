@@ -75,18 +75,21 @@ jobs:
           ls -lh clamav-operator-*.tgz
 
       # ── Push to GHCR (OCI) ────────────────────────────────────────────────
+      # OCI registry paths must be lowercase — use ${OWNER,,} bash expansion.
       - name: Push to GHCR
         run: |
           VERSION="${{ steps.version.outputs.version }}"
+          OWNER="${{ github.repository_owner }}"
           helm push "clamav-operator-${VERSION}.tgz" \
-            "oci://ghcr.io/${{ github.repository_owner }}/charts"
-          echo "✅ Pushed → oci://ghcr.io/${{ github.repository_owner }}/charts/clamav-operator:${VERSION}"
+            "oci://ghcr.io/${OWNER,,}/charts"
+          echo "✅ Pushed → oci://ghcr.io/${OWNER,,}/charts/clamav-operator:${VERSION}"
 
       # ── Summary ───────────────────────────────────────────────────────────
       - name: Job summary
         run: |
           VERSION="${{ steps.version.outputs.version }}"
           OWNER="${{ github.repository_owner }}"
+          OWNER_LC="${OWNER,,}"
           cat >> $GITHUB_STEP_SUMMARY << EOF
           ## 📦 Helm Chart Published
 
@@ -94,18 +97,18 @@ jobs:
           |---------|-------|
           | Chart   | \`clamav-operator\` |
           | Version | \`${VERSION}\` |
-          | Registry | \`oci://ghcr.io/${OWNER}/charts\` |
+          | Registry | \`oci://ghcr.io/${OWNER_LC}/charts\` |
 
           ### Install
           \`\`\`bash
           helm install clamav-operator \\
-            oci://ghcr.io/${OWNER}/charts/clamav-operator \\
+            oci://ghcr.io/${OWNER_LC}/charts/clamav-operator \\
             --version ${VERSION}
           \`\`\`
 
           ### Pull only
           \`\`\`bash
-          helm pull oci://ghcr.io/${OWNER}/charts/clamav-operator --version ${VERSION}
+          helm pull oci://ghcr.io/${OWNER_LC}/charts/clamav-operator --version ${VERSION}
           \`\`\`
 
           > **First-time setup:** go to GitHub → Packages → \`charts/clamav-operator\`
