@@ -153,6 +153,17 @@ var (
 		},
 		[]string{"namespace", "node"},
 	)
+
+	// nodeScanLastCompletionTimestamp is the Unix timestamp of the last successful
+	// NodeScan completion per node.  Used by the ClamAVNoRecentScans alert:
+	//   time() - clamav_nodescan_last_completion_timestamp > 86400
+	nodeScanLastCompletionTimestamp = prometheus.NewGaugeVec(
+		prometheus.GaugeOpts{
+			Name: "clamav_nodescan_last_completion_timestamp",
+			Help: "Unix timestamp of the last successful NodeScan completion per node",
+		},
+		[]string{"namespace", "node"},
+	)
 )
 
 func init() {
@@ -176,6 +187,8 @@ func init() {
 		timeSavedSeconds,
 		scanCacheSizeBytes,
 		scanCacheFiles,
+		// Staleness alert support
+		nodeScanLastCompletionTimestamp,
 	)
 }
 
@@ -198,7 +211,10 @@ func recordNodeScanMetrics(nodeScan *clamavv1alpha1.NodeScan, phase clamavv1alph
 			scanDuration.WithLabelValues(namespace, node).Observe(float64(nodeScan.Status.Duration))
 		}
 
-		// ✅ NOUVEAU : Enregistrer les métriques incrémentales si présentes
+		// Staleness tracking — drives the ClamAVNoRecentScans alert.
+		nodeScanLastCompletionTimestamp.WithLabelValues(namespace, node).SetToCurrentTime()
+
+		// Record incremental metrics if the scan used an incremental strategy.
 		if nodeScan.Status.StrategyUsed != "" && nodeScan.Status.StrategyUsed != clamavv1alpha1.ScanStrategyFull {
 			strategy := string(nodeScan.Status.StrategyUsed)
 			incrementalScansTotal.WithLabelValues(namespace, node, strategy).Inc()
@@ -215,9 +231,23 @@ func recordNodeScanMetrics(nodeScan *clamavv1alpha1.NodeScan, phase clamavv1alph
 	}
 }
 
-// updateNodeScanRunningMetrics updates the gauge for running NodeScans
+// updateNodeScanRunningMetrics sets the absolute count of running NodeScans in a
+// namespace. Prefer incNodeScanRunning / decNodeScanRunning at phase-transition
+// sites so that we don't need an extra List call on every reconcile.
 func updateNodeScanRunningMetrics(namespace string, count int) {
 	nodeScansRunning.WithLabelValues(namespace).Set(float64(count))
+}
+
+// incNodeScanRunning increments the running gauge when a NodeScan enters the
+// Running phase.  Call this exactly once per NodeScan at the Running transition.
+func incNodeScanRunning(namespace string) {
+	nodeScansRunning.WithLabelValues(namespace).Inc()
+}
+
+// decNodeScanRunning decrements the running gauge when a NodeScan leaves the
+// Running phase (Completed or Failed).
+func decNodeScanRunning(namespace string) {
+	nodeScansRunning.WithLabelValues(namespace).Dec()
 }
 
 // recordClusterScanMetrics records metrics for a ClusterScan
@@ -245,26 +275,8 @@ func recordScanScheduleExecution(namespace, scheduleName, status string) {
 	scanScheduleExecutionsTotal.WithLabelValues(namespace, scheduleName, status).Inc()
 }
 
-// ✅ NOUVEAU : recordScanCacheMetrics enregistre les métriques du cache
+// recordScanCacheMetrics records cache size and file count metrics for a node.
 func recordScanCacheMetrics(namespace, nodeName string, sizeBytes int64, filesCount int64) {
 	scanCacheSizeBytes.WithLabelValues(namespace, nodeName).Set(float64(sizeBytes))
 	scanCacheFiles.WithLabelValues(namespace, nodeName).Set(float64(filesCount))
-}
-
-// ✅ NOUVEAU : recordIncrementalMetrics enregistre les métriques du scan incrémental
-// (Cette fonction est appelée depuis nodescan_controller.go)
-func recordIncrementalMetrics(nodeScan *clamavv1alpha1.NodeScan) {
-	namespace := nodeScan.Namespace
-	node := nodeScan.Spec.NodeName
-	strategy := string(nodeScan.Status.StrategyUsed)
-
-	if strategy != "" && strategy != string(clamavv1alpha1.ScanStrategyFull) {
-		incrementalScansTotal.WithLabelValues(namespace, node, strategy).Inc()
-
-		if nodeScan.Status.FilesSkippedIncremental > 0 {
-			filesSkippedIncremental.WithLabelValues(namespace, node).Add(float64(nodeScan.Status.FilesSkippedIncremental))
-			cacheHitRate.WithLabelValues(namespace, node).Set(float64(nodeScan.Status.CacheHitRate))
-			timeSavedSeconds.WithLabelValues(namespace, node).Add(float64(nodeScan.Status.TimeSaved))
-		}
-	}
 }

@@ -1,22 +1,22 @@
 # =============================================================================
-# Validation des Commits (Conventional Commits)
+# Commit Validation (Conventional Commits)
 # =============================================================================
-# Vérifie que tous les commits suivent le format Conventional Commits
+# Verifies that all commits follow the Conventional Commits format
 #
-# Format attendu :
+# Expected format:
 #   type(scope?): description
 #
-# Types valides :
-#   - feat:     nouvelle fonctionnalité
-#   - fix:      correction de bug
+# Valid types:
+#   - feat:     new feature
+#   - fix:      bug fix
 #   - docs:     documentation
-#   - style:    formatage, espaces, etc
-#   - refactor: refactoring du code
-#   - perf:     amélioration des performances
-#   - test:     ajout/modification de tests
-#   - build:    système de build, dépendances
+#   - style:    formatting, whitespace, etc.
+#   - refactor: code refactoring
+#   - perf:     performance improvement
+#   - test:     add/update tests
+#   - build:    build system, dependencies
 #   - ci:       CI/CD, workflows
-#   - chore:    tâches diverses
+#   - chore:    miscellaneous tasks
 #
 # Exemples valides :
 #   feat: add auto-release workflow
@@ -48,7 +48,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
         with:
-          fetch-depth: 0  # Nécessaire pour voir tous les commits
+          fetch-depth: 0  # Required to access the full commit history
 
       - name: Validate commit messages
         run: |
@@ -58,22 +58,22 @@ jobs:
           echo "🔍 Validating commit messages..."
           echo ""
           
-          # Pattern pour Conventional Commits
+          # Conventional Commits pattern
           PATTERN='^(feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert)(\(.+\))?(!)?: .{1,100}'
           
-          # Obtenir la liste des commits à vérifier
+          # Get the list of commits to validate
           if [ "${{ github.event_name }}" = "pull_request" ]; then
             BASE_SHA="${{ github.event.pull_request.base.sha }}"
             HEAD_SHA="${{ github.event.pull_request.head.sha }}"
             COMMITS=$(git rev-list $BASE_SHA..$HEAD_SHA)
             
-            # Vérifier si c'est une PR de Dependabot
+            # Skip validation for Dependabot PRs
             if [ "${{ github.actor }}" = "dependabot[bot]" ]; then
               echo "✅ Dependabot PR - commits are automatically validated"
               exit 0
             fi
           else
-            # Pour un push, vérifier seulement le dernier commit
+            # For a push event, validate only the latest commit
             COMMITS="${{ github.sha }}"
           fi
           
@@ -84,7 +84,7 @@ jobs:
             MESSAGE=$(git log -1 --format=%s $COMMIT)
             COMMIT_SHORT=$(git rev-parse --short $COMMIT)
             
-            # Accepter les commits de merge automatiques de GitHub
+            # Accept GitHub automatic merge commits
             if echo "$MESSAGE" | grep -qE '^Merge (branch|pull request) '; then
               echo "✅ $COMMIT_SHORT: $MESSAGE (merge commit)"
               VALID_COUNT=$((VALID_COUNT + 1))
@@ -159,14 +159,14 @@ jobs:
             chore
             revert
           requireScope: false
-          # Supprimer la règle de majuscule pour supporter Dependabot
+          # Uppercase subject rule disabled to support Dependabot commit messages
           # subjectPattern: ^[A-Z].+$
           # subjectPatternError: |
-          #   Le sujet doit commencer par une majuscule.
+          #   Subject must start with an uppercase letter.
           wip: false
 
   # ===========================================================================
-  # Job 3 - Vérifier que la branche suit les conventions de nommage
+  # Job 3 - Validate branch naming conventions
   # ===========================================================================
   validate-branch:
     name: Validate Branch Name
@@ -180,7 +180,7 @@ jobs:
           echo "🔍 Validating branch name: $BRANCH"
           echo ""
           
-          # Accepter les branches des bots de dépendances
+          # Accept branches from dependency bots
           if echo "$BRANCH" | grep -qE '^(dependabot|renovate)/'; then
             echo "✅ Dependency bot branch: $BRANCH"
             exit 0
@@ -216,7 +216,7 @@ jobs:
           fi
 
   # ===========================================================================
-  # Job 4 - Vérifier les fichiers modifiés
+  # Job 4 - Check modified files
   # ===========================================================================
   check-files:
     name: Check Modified Files

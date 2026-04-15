@@ -48,22 +48,31 @@ spec:
         - --health-probe-bind-address=:{{ .Values.operator.service.healthPort }}
         - --metrics-bind-address=:{{ .Values.operator.service.metricsPort }}
         - --scanner-image={{ include "clamav-operator.scannerImage" . }}
-        - --scan-mode={{ .Values.scanner.mode }}
         {{- if eq .Values.scanner.mode "remote" }}
         - --clamav-host={{ .Values.scanner.clamav.host }}
         - --clamav-port={{ .Values.scanner.clamav.port }}
-        {{- else }}
-        - --clamscan-path={{ .Values.scanner.standalone.clamscanPath }}
-        - --clamav-db-path={{ .Values.scanner.standalone.clamavDbPath }}
-        - --freshclam-enabled={{ .Values.scanner.freshclam.enabled }}
-        {{- end }}
-        {{- if .Values.scanner.incremental.enabled }}
-        - --incremental-enabled=true
-        - --scan-strategy={{ .Values.scanner.incremental.strategy }}
-        - --max-file-age-hours={{ .Values.scanner.incremental.maxFileAgeHours }}
-        - --skip-unchanged-files={{ .Values.scanner.incremental.skipUnchangedFiles }}
         {{- end }}
         env:
+        # Scanner configuration — forwarded as env vars to scanner Job pods by the controller.
+        # These are NOT operator flags; they are read by the controller via os.Getenv.
+        - name: SCANNER_MODE
+          value: {{ .Values.scanner.mode | quote }}
+        - name: SCANNER_CLAMSCAN_PATH
+          value: {{ .Values.scanner.standalone.clamscanPath | quote }}
+        - name: SCANNER_CLAMAV_DB_PATH
+          value: {{ .Values.scanner.standalone.clamavDbPath | quote }}
+        - name: SCANNER_UPDATE_SIGNATURES
+          value: {{ .Values.scanner.freshclam.enabled | quote }}
+        - name: SCANNER_INCREMENTAL_ENABLED
+          value: {{ .Values.scanner.incremental.enabled | quote }}
+        - name: SCANNER_SCAN_STRATEGY
+          value: {{ .Values.scanner.incremental.strategy | quote }}
+        - name: SCANNER_FULL_SCAN_INTERVAL
+          value: {{ .Values.scanner.incremental.fullScanInterval | quote }}
+        - name: SCANNER_MAX_FILE_AGE_HOURS
+          value: {{ .Values.scanner.incremental.maxFileAgeHours | quote }}
+        - name: SCANNER_SKIP_UNCHANGED_FILES
+          value: {{ .Values.scanner.incremental.skipUnchangedFiles | quote }}
         {{- with .Values.env }}
         {{- toYaml . | nindent 8 }}
         {{- end }}

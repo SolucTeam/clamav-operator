@@ -19,6 +19,7 @@ package controller
 import (
 	"context"
 	"testing"
+	"time"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -125,8 +126,10 @@ func TestScanScheduleReconciler_Suspended(t *testing.T) {
 	assert.Empty(t, clusterScans.Items, "suspended schedule should not create ClusterScan")
 }
 
-// TestScanScheduleReconciler_FirstRun verifies that the first reconciliation
-// (no LastScheduleTime) triggers a ClusterScan creation.
+// TestScanScheduleReconciler_FirstRun verifies that the very first reconciliation
+// (LastScheduleTime == nil) does NOT trigger a ClusterScan.
+// This mirrors the Kubernetes CronJob contract: a schedule that has never run
+// before waits for the next natural occurrence rather than firing immediately.
 func TestScanScheduleReconciler_FirstRun(t *testing.T) {
 	schedule := &clamavv1alpha1.ScanSchedule{
 		ObjectMeta: metav1.ObjectMeta{
@@ -134,14 +137,14 @@ func TestScanScheduleReconciler_FirstRun(t *testing.T) {
 			Namespace: "default",
 		},
 		Spec: clamavv1alpha1.ScanScheduleSpec{
-			// Run at a past time so it's always due — use a wildcard schedule
 			Schedule: "* * * * *", // every minute
 		},
+		// Status.LastScheduleTime intentionally left nil → first reconcile
 	}
 
 	r := newTestScanScheduleReconciler(schedule)
 
-	_, err := r.Reconcile(context.Background(), ctrl.Request{
+	result, err := r.Reconcile(context.Background(), ctrl.Request{
 		NamespacedName: types.NamespacedName{
 			Name:      "first-run-schedule",
 			Namespace: "default",
@@ -149,12 +152,48 @@ func TestScanScheduleReconciler_FirstRun(t *testing.T) {
 	})
 
 	require.NoError(t, err)
+	assert.Greater(t, result.RequeueAfter.Seconds(), 0.0, "should requeue for next scheduled time")
 
-	// Verify a ClusterScan was created
+	// No ClusterScan must be created on the very first reconcile
 	var clusterScans clamavv1alpha1.ClusterScanList
 	err = r.List(context.Background(), &clusterScans, client.InNamespace("default"))
 	require.NoError(t, err)
-	assert.Len(t, clusterScans.Items, 1, "should create exactly one ClusterScan on first run")
+	assert.Empty(t, clusterScans.Items, "first reconcile should not create a ClusterScan")
+}
+
+// TestScanScheduleReconciler_DueRun verifies that when a schedule has already
+// run before (LastScheduleTime is set) and a new slot has passed, the
+// reconciler creates exactly one ClusterScan.
+func TestScanScheduleReconciler_DueRun(t *testing.T) {
+	pastTime := metav1.Time{Time: time.Now().Add(-2 * time.Minute)}
+	schedule := &clamavv1alpha1.ScanSchedule{
+		ObjectMeta: metav1.ObjectMeta{
+			Name:      "due-run-schedule",
+			Namespace: "default",
+		},
+		Spec: clamavv1alpha1.ScanScheduleSpec{
+			Schedule: "* * * * *", // every minute — guaranteed to be due
+		},
+		Status: clamavv1alpha1.ScanScheduleStatus{
+			LastScheduleTime: &pastTime, // set 2 minutes ago → one slot has passed
+		},
+	}
+
+	r := newTestScanScheduleReconciler(schedule)
+
+	_, err := r.Reconcile(context.Background(), ctrl.Request{
+		NamespacedName: types.NamespacedName{
+			Name:      "due-run-schedule",
+			Namespace: "default",
+		},
+	})
+
+	require.NoError(t, err)
+
+	var clusterScans clamavv1alpha1.ClusterScanList
+	err = r.List(context.Background(), &clusterScans, client.InNamespace("default"))
+	require.NoError(t, err)
+	assert.Len(t, clusterScans.Items, 1, "should create exactly one ClusterScan when schedule is due")
 }
 
 // TestScanScheduleReconciler_ConcurrencyForbid verifies that when

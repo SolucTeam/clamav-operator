@@ -165,11 +165,15 @@ scanner:
 
   # ---------------------------------------------------------------------------
   # Signature persistence
+  # NOTE: this setting is only meaningful when mode=remote AND freshclam.enabled=true.
+  # In standalone mode, signatures are baked into the scanner image at build time;
+  # this PVC would be mounted but never written to by the scanner container.
   # ---------------------------------------------------------------------------
   signatures:
-    # Use a PersistentVolumeClaim to store signatures across restarts.
-    # When false an emptyDir is used (signatures re-downloaded on every
-    # freshclam run or must be baked into the image for airgap).
+    # Use a PersistentVolumeClaim to share signatures between the freshclam CronJob
+    # and the remote-mode clamd daemon across restarts.
+    # When false an emptyDir is used — signatures are re-downloaded on every
+    # freshclam run or must be baked into the image for air-gap environments.
     persistent: false
     pvcName: clamav-signatures
     storageClass: ""
@@ -329,12 +333,18 @@ webhook:
   port: 9443
 
   # Certificate management
+  # STRONGLY RECOMMENDED for production: set certManager.enabled=true.
+  # cert-manager handles automatic rotation and survives pod restarts.
   certManager:
     enabled: false
 
-  # If certManager is disabled, use these certificates
+  # If certManager is disabled, use these certificates.
+  # WARNING: autoGenerate=true produces self-signed certs stored in a Secret.
+  # These certs are NOT rotated automatically and do NOT survive Secret deletion
+  # or namespace recreation. For production, use certManager.enabled=true or
+  # supply your own long-lived certs via caBundle/tlsCert/tlsKey.
   certificates:
-    # Auto-generate self-signed certificates
+    # Auto-generate self-signed certificates (development only)
     autoGenerate: true
     # Or provide your own
     caBundle: ""
@@ -380,14 +390,14 @@ monitoring:
           description: "{{ $value }} infected files detected"
 
       - alert: ClamAVScanFailed
-        expr: clamav_nodescan_failed > 0
+        expr: increase(clamav_nodescans_total{status="Failed"}[5m]) > 0
         for: 5m
         labels:
           severity: warning
           team: platform
         annotations:
           summary: "ClamAV scan failed"
-          description: "{{ $value }} scans have failed"
+          description: "{{ $value }} scans have failed in the last 5 minutes"
 
       - alert: ClamAVNoRecentScans
         expr: time() - clamav_nodescan_last_completion_timestamp > 86400
@@ -464,8 +474,8 @@ defaultScanPolicy:
 # NETWORK POLICIES
 # =============================================================================
 networkPolicy:
-  # Enable network policies (recommended for production)
-  enabled: false
+  # Enable network policies (recommended for production — enabled by default)
+  enabled: true
   policyTypes:
     - Ingress
     - Egress

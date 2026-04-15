@@ -44,7 +44,7 @@ const {
 // =============================================================================
 
 async function main() {
-  logger.info('Démarrage du scan ClamAV', {
+  logger.info('Starting ClamAV scan', {
     node: CONFIG.nodeName,
     mode: CONFIG.scanMode,
     paths: CONFIG.pathsToScan,
@@ -64,7 +64,7 @@ async function main() {
 
     // ── Determine effective strategy for this run ─────────────────────────
     const effectiveStrategy = await resolveEffectiveStrategy();
-    logger.info('Stratégie effective', { strategy: effectiveStrategy });
+    logger.info('Effective strategy', { strategy: effectiveStrategy });
 
     // ── Init ClamAV scanner (standalone or remote) ────────────────────────
     const clamscan = await initScanner();
@@ -73,10 +73,10 @@ async function main() {
     for (const scanPath of CONFIG.pathsToScan) {
       try {
         await fs.access(scanPath);
-        logger.info('Scan du chemin', { path: scanPath });
+        logger.info('Scanning path', { path: scanPath });
         await scanDirectory(clamscan, scanPath, results, effectiveStrategy);
       } catch {
-        logger.warn('Chemin non trouvé — ignoré', { path: scanPath });
+        logger.warn('Path not found — skipping', { path: scanPath });
       }
     }
 
@@ -89,30 +89,41 @@ async function main() {
     await generateReport(results, stats, incrementalStats, effectiveStrategy);
 
     // ── Final log line — parsed by the Go operator ────────────────────────
-    logger.info('Scan terminé avec succès', {
+    // IMPORTANT: the `type` field is the machine-readable signal consumed by
+    // the operator's parseJobResults function. Do NOT rename or remove it.
+    logger.info('Scan completed successfully', {
+      type: 'scan_complete',
       duration: Math.round((Date.now() - stats.startTime) / 1000),
       files_scanned: stats.filesScanned,
       files_infected: stats.filesInfected,
       files_skipped: stats.filesSkipped,
       errors_count: stats.errors,
       status: results.infected.length > 0 ? 'INFECTED' : 'CLEAN',
+      // Incremental stats — consumed by parseJobResults to populate
+      // NodeScan.Status.StrategyUsed / FilesSkippedIncremental / CacheHitRate
+      strategy: effectiveStrategy,
+      files_skipped_incremental: incrementalStats.filesSkipped,
+      cache_hits: incrementalStats.cacheHits,
+      cache_misses: incrementalStats.cacheMisses,
     });
 
-    process.exit(results.infected.length > 0 ? 0 : 0); // always 0 — the report carries the status
+    process.exit(0); // always 0 — scan outcome is carried in the report/logs, not the exit code
   } catch (error) {
-    logger.error('Erreur fatale', { error: error.message, stack: error.stack });
+    logger.error('Fatal error', { error: error.message, stack: error.stack });
     process.exit(1);
   }
 }
 
 // ── Graceful shutdown ─────────────────────────────────────────────────────────
-process.on('SIGTERM', () => {
-  logger.info('SIGTERM reçu — arrêt propre');
+async function shutdown(signal) {
+  logger.info(`${signal} received — graceful shutdown`);
+  // Best-effort: persist whatever incremental cache we have so the next run
+  // can skip already-scanned files even if this run was interrupted.
+  await saveCache().catch(() => {});
   process.exit(0);
-});
-process.on('SIGINT', () => {
-  logger.info('SIGINT reçu — arrêt propre');
-  process.exit(0);
-});
+}
+
+process.on('SIGTERM', () => shutdown('SIGTERM'));
+process.on('SIGINT',  () => shutdown('SIGINT'));
 
 main();

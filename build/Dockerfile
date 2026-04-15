@@ -1,6 +1,6 @@
 # Build the manager binary
-# --platform=$BUILDPLATFORM : le build tourne nativement sur l'hôte (pas de QEMU)
-# La cross-compilation se fait via GOARCH=$TARGETARCH, nativement par le toolchain Go
+# --platform=$BUILDPLATFORM : the build runs natively on the host (no QEMU overhead)
+# Cross-compilation is handled via GOARCH=$TARGETARCH, natively by the Go toolchain
 FROM --platform=$BUILDPLATFORM golang:1.26 as builder
 ARG TARGETOS
 ARG TARGETARCH
@@ -25,10 +25,10 @@ COPY internal/ internal/
 # the docker BUILDPLATFORM arg will be linux/arm64 when for Apple x86 it will be linux/amd64. Therefore,
 # by leaving it empty we can ensure that the container and binary shipped on it will have the same platform.
 #
-# Optimisations :
-#   - Suppression de `-a` : évite la recompilation forcée de tous les packages
-#   - cache /root/.cache/go-build : réutilise le build cache Go entre les builds
-#   - cache /go/pkg/mod : réutilise les modules téléchargés
+# Build optimisations:
+#   - No `-a` flag: avoids forced recompilation of all packages
+#   - cache /root/.cache/go-build: reuses the Go build cache across builds
+#   - cache /go/pkg/mod: reuses downloaded modules
 RUN --mount=type=cache,target=/root/.cache/go-build \
     --mount=type=cache,target=/go/pkg/mod \
     CGO_ENABLED=0 GOOS=${TARGETOS:-linux} GOARCH=${TARGETARCH} go build -o manager cmd/manager/main.go

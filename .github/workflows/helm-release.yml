@@ -1,0 +1,113 @@
+# =============================================================================
+# Helm Chart Release — publish to GHCR (OCI)
+# =============================================================================
+# Triggered on every v*/V* tag push (same tags that fire release.yml).
+# Packages the chart, stamps it with the release version, and pushes it to
+# the GHCR OCI registry at:
+#   oci://ghcr.io/<owner>/charts/clamav-operator:<version>
+#
+# Users install the chart with:
+#   helm install clamav-operator \
+#     oci://ghcr.io/<owner>/charts/clamav-operator \
+#     --version <version>
+#
+# To make the package publicly visible after the first push:
+#   GitHub → Packages → charts/clamav-operator → Package settings
+#   → Change visibility → Public
+# =============================================================================
+
+name: Helm Release
+
+on:
+  push:
+    tags:
+      - 'v[0-9]*'
+      - 'V[0-9]*'
+
+permissions:
+  contents: read
+  packages: write # Push to GHCR
+
+jobs:
+  helm-publish:
+    name: Package & Publish Helm Chart
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Install Helm
+        uses: azure/setup-helm@v4
+        with:
+          version: v3.14.0
+
+      # ── Extract version from tag (strip leading v/V) ─────────────────────
+      - name: Extract version
+        id: version
+        run: |
+          TAG="${{ github.ref_name }}"
+          VERSION="${TAG#v}"
+          VERSION="${VERSION#V}"
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "📦 Chart version: $VERSION"
+
+      # ── Stamp Chart.yaml with the release version ─────────────────────────
+      - name: Update Chart.yaml
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+          sed -i "s/^version:.*/version: ${VERSION}/" helm/clamav-operator/Chart.yaml
+          sed -i "s/^appVersion:.*/appVersion: \"${VERSION}\"/" helm/clamav-operator/Chart.yaml
+          echo "✅ Chart.yaml updated → version: $VERSION / appVersion: $VERSION"
+
+      # ── Login to GHCR ─────────────────────────────────────────────────────
+      - name: Login to GHCR
+        run: |
+          echo "${{ secrets.GITHUB_TOKEN }}" | helm registry login ghcr.io \
+            --username "${{ github.actor }}" \
+            --password-stdin
+
+      # ── Package ───────────────────────────────────────────────────────────
+      - name: Package chart
+        run: |
+          helm package helm/clamav-operator \
+            --version "${{ steps.version.outputs.version }}" \
+            --app-version "${{ steps.version.outputs.version }}"
+          ls -lh clamav-operator-*.tgz
+
+      # ── Push to GHCR (OCI) ────────────────────────────────────────────────
+      - name: Push to GHCR
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+          helm push "clamav-operator-${VERSION}.tgz" \
+            "oci://ghcr.io/${{ github.repository_owner }}/charts"
+          echo "✅ Pushed → oci://ghcr.io/${{ github.repository_owner }}/charts/clamav-operator:${VERSION}"
+
+      # ── Summary ───────────────────────────────────────────────────────────
+      - name: Job summary
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+          OWNER="${{ github.repository_owner }}"
+          cat >> $GITHUB_STEP_SUMMARY << EOF
+          ## 📦 Helm Chart Published
+
+          | Field   | Value |
+          |---------|-------|
+          | Chart   | \`clamav-operator\` |
+          | Version | \`${VERSION}\` |
+          | Registry | \`oci://ghcr.io/${OWNER}/charts\` |
+
+          ### Install
+          \`\`\`bash
+          helm install clamav-operator \\
+            oci://ghcr.io/${OWNER}/charts/clamav-operator \\
+            --version ${VERSION}
+          \`\`\`
+
+          ### Pull only
+          \`\`\`bash
+          helm pull oci://ghcr.io/${OWNER}/charts/clamav-operator --version ${VERSION}
+          \`\`\`
+
+          > **First-time setup:** go to GitHub → Packages → \`charts/clamav-operator\`
+          > → Package settings → Change visibility → **Public**
+          EOF

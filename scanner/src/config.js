@@ -23,7 +23,7 @@ const CONFIG = {
     .split(',')
     .map((p) => p.trim())
     .filter(Boolean),
-  maxConcurrent: parseInt(process.env.MAX_CONCURRENT || '5', 10),
+  maxConcurrent: Math.max(1, parseInt(process.env.MAX_CONCURRENT || '5', 10)),
   fileTimeout: parseInt(process.env.FILE_TIMEOUT || '300000', 10),
   maxFileSize: parseInt(process.env.MAX_FILE_SIZE || '104857600', 10),
 

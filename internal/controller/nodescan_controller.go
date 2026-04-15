@@ -21,6 +21,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"os"
 	"strings"
 	"time"
 
@@ -197,6 +198,7 @@ func (r *NodeScanReconciler) Reconcile(ctx context.Context, req ctrl.Request) (c
 
 		// Record metrics
 		recordNodeScanMetrics(&nodeScan, clamavv1alpha1.NodeScanPhaseRunning)
+		incNodeScanRunning(nodeScan.Namespace)
 
 		return ctrl.Result{RequeueAfter: 30 * time.Second}, nil
 	} else if err != nil {
@@ -267,14 +269,20 @@ func (r *NodeScanReconciler) Reconcile(ctx context.Context, req ctrl.Request) (c
 
 			// Record metrics
 			recordNodeScanMetrics(&nodeScan, clamavv1alpha1.NodeScanPhaseCompleted)
+			decNodeScanRunning(nodeScan.Namespace)
 
 			// Send notifications if infected files found.
 			// Fire-and-forget via goroutine: HTTP/SMTP calls must never block the reconcile worker.
 			if nodeScan.Status.FilesInfected > 0 && scanPolicy != nil {
 				nodeScanSnap := nodeScan.DeepCopy()
 				scanPolicySnap := scanPolicy.DeepCopy()
+				// context.WithoutCancel propagates trace/log values from the
+				// reconcile context without inheriting its cancellation.
+				// This lets the notification outlive the reconcile loop while
+				// still carrying the request's observability metadata.
+				baseCtx := context.WithoutCancel(ctx)
 				go func() {
-					notifCtx, cancel := context.WithTimeout(context.Background(), 2*time.Minute)
+					notifCtx, cancel := context.WithTimeout(baseCtx, 2*time.Minute)
 					defer cancel()
 					r.Notifier.Send(notifCtx, nodeScanSnap, scanPolicySnap)
 				}()
@@ -317,6 +325,7 @@ func (r *NodeScanReconciler) Reconcile(ctx context.Context, req ctrl.Request) (c
 
 			// Record metrics
 			recordNodeScanMetrics(&nodeScan, clamavv1alpha1.NodeScanPhaseFailed)
+			decNodeScanRunning(nodeScan.Namespace)
 		}
 		return ctrl.Result{}, nil
 	}
@@ -367,6 +376,21 @@ func (r *NodeScanReconciler) constructJobForNodeScan(nodeScan *clamavv1alpha1.No
 	}
 
 	// Environment variables
+	//
+	// Scanner-mode settings are forwarded from the operator pod's own env vars
+	// (set by Helm via deployment.yaml). This avoids duplicating config values
+	// between Helm values and CRD fields, and keeps the operator binary flag
+	// surface minimal.
+	scanMode := getEnvOrDefault("SCANNER_MODE", "standalone")
+	clamscanPath := getEnvOrDefault("SCANNER_CLAMSCAN_PATH", "/usr/bin/clamscan")
+	clamavDBPath := getEnvOrDefault("SCANNER_CLAMAV_DB_PATH", "/var/lib/clamav")
+	updateSigs := getEnvOrDefault("SCANNER_UPDATE_SIGNATURES", "false")
+	incrEnabled := getEnvOrDefault("SCANNER_INCREMENTAL_ENABLED", "false")
+	scanStrategy := getEnvOrDefault("SCANNER_SCAN_STRATEGY", "full")
+	fullScanInterv := getEnvOrDefault("SCANNER_FULL_SCAN_INTERVAL", "10")
+	maxFileAgeHours := getEnvOrDefault("SCANNER_MAX_FILE_AGE_HOURS", "24")
+	skipUnchanged := getEnvOrDefault("SCANNER_SKIP_UNCHANGED_FILES", "true")
+
 	envVars := []corev1.EnvVar{
 		{Name: "NODE_NAME", Value: nodeScan.Spec.NodeName},
 		{Name: "HOST_ROOT", Value: "/host"},
@@ -378,6 +402,17 @@ func (r *NodeScanReconciler) constructJobForNodeScan(nodeScan *clamavv1alpha1.No
 		{Name: "FILE_TIMEOUT", Value: fmt.Sprintf("%d", fileTimeout)},
 		{Name: "CONNECT_TIMEOUT", Value: fmt.Sprintf("%d", connectTimeout)},
 		{Name: "MAX_FILE_SIZE", Value: fmt.Sprintf("%d", maxFileSize)},
+		// Scanner mode & standalone paths
+		{Name: "SCAN_MODE", Value: scanMode},
+		{Name: "CLAMSCAN_PATH", Value: clamscanPath},
+		{Name: "CLAMAV_DB_PATH", Value: clamavDBPath},
+		{Name: "UPDATE_SIGNATURES", Value: updateSigs},
+		// Incremental scan settings
+		{Name: "INCREMENTAL_ENABLED", Value: incrEnabled},
+		{Name: "SCAN_STRATEGY", Value: scanStrategy},
+		{Name: "FULL_SCAN_INTERVAL", Value: fullScanInterv},
+		{Name: "MAX_FILE_AGE_HOURS", Value: maxFileAgeHours},
+		{Name: "SKIP_UNCHANGED_FILES", Value: skipUnchanged},
 	}
 
 	// Resources - apply in priority order:
@@ -554,10 +589,13 @@ func (r *NodeScanReconciler) parseJobResults(ctx context.Context, nodeScan *clam
 	for scanner.Scan() {
 		line := scanner.Text()
 
-		// JSON log structure
+		// JSON log structure emitted by the scanner container.
+		// The `type` field is the canonical machine-readable signal (added in v0.2+).
+		// The `message` field check provides backward compatibility with older scanner images.
 		type LogEntry struct {
 			Level         string   `json:"level"`
-			Message       string   `json:"message"`
+			Type          string   `json:"type"`    // machine-readable event type (e.g. "scan_complete")
+			Message       string   `json:"message"` // human-readable; kept for backward compat only
 			FilesScanned  int64    `json:"files_scanned"`
 			FilesInfected int64    `json:"files_infected"`
 			FilesSkipped  int64    `json:"files_skipped"`
@@ -566,6 +604,11 @@ func (r *NodeScanReconciler) parseJobResults(ctx context.Context, nodeScan *clam
 			VirusNames    []string `json:"virus_names"`
 			FileSize      int64    `json:"file_size"`
 			Alert         string   `json:"alert"`
+			// Incremental scanning fields (emitted since scanner v0.3)
+			Strategy                string `json:"strategy"`
+			FilesSkippedIncremental int64  `json:"files_skipped_incremental"`
+			CacheHits               int64  `json:"cache_hits"`
+			CacheMisses             int64  `json:"cache_misses"`
 		}
 
 		var entry LogEntry
@@ -573,12 +616,31 @@ func (r *NodeScanReconciler) parseJobResults(ctx context.Context, nodeScan *clam
 			continue // Skip non-JSON lines
 		}
 
-		// Scan completion log
-		if entry.Message == "Scan terminé avec succès" {
+		// Scan completion log: prefer structured `type` field; fall back to message
+		// text to stay compatible with scanner images older than v0.2.
+		isScanComplete := entry.Type == "scan_complete" ||
+			entry.Message == "Scan completed successfully"
+		if isScanComplete {
 			filesScanned = entry.FilesScanned
 			filesInfected = entry.FilesInfected
 			filesSkipped = entry.FilesSkipped
 			errorCount = entry.ErrorsCount
+
+			// Populate incremental stats emitted since scanner v0.3.
+			// These are zero-value for full scans or older scanner images,
+			// which is the correct behavior (no incremental metrics emitted).
+			if entry.Strategy != "" {
+				nodeScan.Status.StrategyUsed = clamavv1alpha1.ScanStrategy(entry.Strategy)
+			}
+			nodeScan.Status.FilesSkippedIncremental = entry.FilesSkippedIncremental
+			if total := entry.CacheHits + entry.CacheMisses; total > 0 {
+				// Result is always in [0, 100]; clamp before narrowing to silence G115.
+				rate := entry.CacheHits * 100 / total
+				if rate > 100 {
+					rate = 100
+				}
+				nodeScan.Status.CacheHitRate = int32(rate) //nolint:gosec // rate is clamped to [0,100]
+			}
 		}
 
 		// Individual infected file log
@@ -727,4 +789,14 @@ func (r *NodeScanReconciler) SetupWithManager(mgr ctrl.Manager) error {
 			builder.WithPredicates(predicate.GenerationChangedPredicate{})).
 		Owns(&batchv1.Job{}).
 		Complete(r)
+}
+
+// getEnvOrDefault returns the value of the environment variable named by key,
+// or fallback if the variable is unset or empty.
+// Used to forward operator-pod env vars (set by Helm) into scanner Job pods.
+func getEnvOrDefault(key, fallback string) string {
+	if v := os.Getenv(key); v != "" {
+		return v
+	}
+	return fallback
 }

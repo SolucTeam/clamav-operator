@@ -54,14 +54,14 @@ async function loadCache() {
     const data = JSON.parse(raw);
     if (data && typeof data === 'object' && data.files) {
       SCAN_CACHE = data.files;
-      logger.info('Cache incrémental chargé', {
+      logger.info('Incremental cache loaded', {
         entries: Object.keys(SCAN_CACHE).length,
         cacheVersion: data.version || 'unknown',
         lastScanDate: data.lastScanDate || 'unknown',
       });
     }
   } catch {
-    logger.info('Pas de cache précédent trouvé — scan complet');
+    logger.info('No previous cache found — full scan');
     SCAN_CACHE = {};
   }
 }
@@ -77,11 +77,15 @@ async function saveCache() {
     files: SCAN_CACHE,
   };
 
+  const tmpFile = `${CACHE_FILE}.tmp`;
   try {
-    await fs.writeFile(CACHE_FILE, JSON.stringify(payload));
-    logger.info('Cache incrémental sauvegardé', { entries: payload.totalFiles });
+    await fs.writeFile(tmpFile, JSON.stringify(payload));
+    await fs.rename(tmpFile, CACHE_FILE);
+    logger.info('Incremental cache saved', { entries: payload.totalFiles });
   } catch (err) {
-    logger.warn('Impossible de sauvegarder le cache', { error: err.message });
+    logger.warn('Failed to save cache', { error: err.message });
+    // Best-effort cleanup of tmp file
+    await fs.unlink(tmpFile).catch(() => {});
   }
 }
 
