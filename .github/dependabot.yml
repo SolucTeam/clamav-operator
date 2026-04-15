@@ -1,14 +1,14 @@
 # =============================================================================
-# Configuration Dependabot
+# Dependabot Configuration
 # =============================================================================
-# Automatise les mises à jour des dépendances pour Go, Node.js, Docker et GitHub Actions
+# Automates dependency updates for Go, Node.js, Docker and GitHub Actions
 #
-# Dependabot va :
-#   1. Vérifier les nouvelles versions de dépendances
-#   2. Créer automatiquement des PRs pour les mises à jour
-#   3. Respecter les règles de versioning (semver)
+# Dependabot will:
+#   1. Check for new dependency versions
+#   2. Automatically create PRs for updates
+#   3. Follow semver versioning rules
 #
-# Documentation : https://docs.github.com/en/code-security/dependabot
+# Documentation: https://docs.github.com/en/code-security/dependabot
 # =============================================================================
 
 version: 2
@@ -35,7 +35,7 @@ updates:
     commit-message:
       prefix: "build(go)"
       include: "scope"
-    # Regrouper les mises à jour mineures et patch
+    # Group minor and patch updates together
     groups:
       kubernetes:
         patterns:
@@ -67,8 +67,8 @@ updates:
     commit-message:
       prefix: "build(npm)"
       include: "scope"
-    # Ignorer les mises à jour de certains packages si nécessaire
-    # Décommentez et adaptez selon vos besoins :
+    # Ignore updates for specific packages if needed
+    # Uncomment and adapt as required:
     # ignore:
     #   - dependency-name: "package-name"
     #     update-types: ["version-update:semver-major"]

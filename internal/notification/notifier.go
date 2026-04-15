@@ -245,11 +245,18 @@ func (n *Notifier) sendEmail(ctx context.Context, nodeScan *clamavv1alpha1.NodeS
 	host := strings.Split(config.SMTPServer, ":")[0]
 	auth := smtp.PlainAuth("", username, password, host)
 
-	tlsDialer := &tls.Dialer{Config: &tls.Config{ServerName: host}} //nolint:gosec
+	// TLS is mandatory — no plaintext fallback. If the server does not support
+	// TLS, the operator will log a warning and the user must either configure a
+	// TLS-capable SMTP server or disable email notifications.
+	tlsDialer := &tls.Dialer{Config: &tls.Config{
+		ServerName: host,
+		MinVersion: tls.VersionTLS12,
+	}} //nolint:gosec
 	conn, err := tlsDialer.DialContext(ctx, "tcp", config.SMTPServer)
 	if err != nil {
-		// Fallback: plaintext SMTP
-		return smtp.SendMail(config.SMTPServer, auth, config.From, config.Recipients, msg)
+		return fmt.Errorf("failed to establish TLS connection to SMTP server %s: %w "+
+			"(plaintext SMTP is not supported for security reasons; "+
+			"ensure your SMTP server supports TLS on this port)", config.SMTPServer, err)
 	}
 	defer conn.Close()
 

@@ -241,9 +241,11 @@ func TestRecordScanCacheMetrics(t *testing.T) {
 	})
 }
 
-// ── recordIncrementalMetrics ──────────────────────────────────────────────
+// ── incremental metrics via recordNodeScanMetrics ────────────────────────
+// recordIncrementalMetrics was removed; incremental recording is handled
+// directly by recordNodeScanMetrics at the Completed phase transition.
 
-func TestRecordIncrementalMetrics_WithSkippedFiles(t *testing.T) {
+func TestRecordNodeScanMetrics_IncrementalStrategy_RecordsSkippedFiles(t *testing.T) {
 	nodeScan := &clamavv1alpha1.NodeScan{
 		ObjectMeta: metav1.ObjectMeta{
 			Name:      "incr-test",
@@ -253,20 +255,22 @@ func TestRecordIncrementalMetrics_WithSkippedFiles(t *testing.T) {
 			NodeName: "worker-5",
 		},
 		Status: clamavv1alpha1.NodeScanStatus{
+			FilesScanned:            100,
 			FilesSkippedIncremental: 300,
 			CacheHitRate:            75,
 			TimeSaved:               90,
+			Duration:                60,
 			StrategyUsed:            clamavv1alpha1.ScanStrategyIncremental,
 		},
 	}
 
 	assert.NotPanics(t, func() {
-		recordIncrementalMetrics(nodeScan)
+		recordNodeScanMetrics(nodeScan, clamavv1alpha1.NodeScanPhaseCompleted)
 	})
 }
 
-func TestRecordIncrementalMetrics_FullStrategy_NoOp(t *testing.T) {
-	// When StrategyUsed is "full", no incremental metrics should be emitted
+func TestRecordNodeScanMetrics_FullStrategy_NoIncrementalMetrics(t *testing.T) {
+	// Full strategy: incremental counters must not be incremented.
 	nodeScan := &clamavv1alpha1.NodeScan{
 		ObjectMeta: metav1.ObjectMeta{
 			Name:      "full-test",
@@ -276,30 +280,36 @@ func TestRecordIncrementalMetrics_FullStrategy_NoOp(t *testing.T) {
 			NodeName: "worker-6",
 		},
 		Status: clamavv1alpha1.NodeScanStatus{
+			FilesScanned: 50,
+			Duration:     30,
 			StrategyUsed: clamavv1alpha1.ScanStrategyFull,
 		},
 	}
 
 	assert.NotPanics(t, func() {
-		recordIncrementalMetrics(nodeScan)
+		recordNodeScanMetrics(nodeScan, clamavv1alpha1.NodeScanPhaseCompleted)
 	})
 }
 
-func TestRecordIncrementalMetrics_NoStrategy(t *testing.T) {
-	// Empty StrategyUsed should be treated as non-incremental
+func TestRecordNodeScanMetrics_Completed_SetsLastCompletionTimestamp(t *testing.T) {
+	// Completed scans must update the staleness gauge used by the
+	// ClamAVNoRecentScans PrometheusRule alert.
 	nodeScan := &clamavv1alpha1.NodeScan{
 		ObjectMeta: metav1.ObjectMeta{
-			Name:      "no-strategy-test",
+			Name:      "ts-test",
 			Namespace: "default",
 		},
 		Spec: clamavv1alpha1.NodeScanSpec{
 			NodeName: "worker-7",
 		},
-		Status: clamavv1alpha1.NodeScanStatus{}, // empty StrategyUsed
+		Status: clamavv1alpha1.NodeScanStatus{
+			FilesScanned: 10,
+			Duration:     5,
+		},
 	}
 
 	assert.NotPanics(t, func() {
-		recordIncrementalMetrics(nodeScan)
+		recordNodeScanMetrics(nodeScan, clamavv1alpha1.NodeScanPhaseCompleted)
 	})
 }
 

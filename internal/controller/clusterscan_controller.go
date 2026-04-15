@@ -241,7 +241,7 @@ func (r *ClusterScanReconciler) createNodeScanForNode(ctx context.Context, clust
 
 	// Apply template if provided
 	if clusterScan.Spec.NodeScanTemplate != nil {
-		// Copier les champs du template
+		// Copy fields from the NodeScan template
 		if clusterScan.Spec.NodeScanTemplate.Paths != nil {
 			nodeScan.Spec.Paths = clusterScan.Spec.NodeScanTemplate.Paths
 		}
@@ -252,7 +252,7 @@ func (r *ClusterScanReconciler) createNodeScanForNode(ctx context.Context, clust
 			nodeScan.Spec.Resources = clusterScan.Spec.NodeScanTemplate.Resources
 		}
 
-		// ✅ NOUVEAU : Copier la configuration incrémentale
+		// Copy incremental scan configuration from the template
 		if clusterScan.Spec.NodeScanTemplate.Strategy != "" {
 			nodeScan.Spec.Strategy = clusterScan.Spec.NodeScanTemplate.Strategy
 		}

@@ -34,8 +34,10 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/log/zap"
 	metricsserver "sigs.k8s.io/controller-runtime/pkg/metrics/server"
 	"sigs.k8s.io/controller-runtime/pkg/webhook"
+	webhookconversion "sigs.k8s.io/controller-runtime/pkg/webhook/conversion"
 
 	clamavv1alpha1 "github.com/SolucTeam/clamav-operator/api/v1alpha1"
+	clamavv1beta1 "github.com/SolucTeam/clamav-operator/api/v1beta1"
 	"github.com/SolucTeam/clamav-operator/internal/controller"
 	//+kubebuilder:scaffold:imports
 )
@@ -54,6 +56,9 @@ var (
 func init() {
 	utilruntime.Must(clientgoscheme.AddToScheme(scheme))
 
+	// Register v1beta1 first: it is the hub (storage version).
+	// The API server routes conversion webhook calls between v1alpha1 and v1beta1.
+	utilruntime.Must(clamavv1beta1.AddToScheme(scheme))
 	utilruntime.Must(clamavv1alpha1.AddToScheme(scheme))
 	//+kubebuilder:scaffold:scheme
 }
@@ -121,13 +126,18 @@ func main() {
 		os.Exit(1)
 	}
 
+	// Obtain the signal-handling context once and reuse it for both startup
+	// checks and the manager lifecycle. Calling ctrl.SetupSignalHandler()
+	// multiple times is safe in recent controller-runtime versions but is
+	// semantically incorrect (we want a single shared context).
+	ctx := ctrl.SetupSignalHandler()
+
 	// Run startup validation checks
 	if !skipStartupChecks {
 		namespace := controller.GetNamespace()
 		setupLog.Info("Running startup validation checks", "namespace", namespace)
 
 		checker := controller.NewStartupChecker(clientset, namespace, scannerServiceAccount)
-		ctx := ctrl.SetupSignalHandler()
 
 		if err := checker.RunAllChecks(ctx); err != nil {
 			setupLog.Error(err, "Startup validation failed",
@@ -158,7 +168,7 @@ func main() {
 		Client:       mgr.GetClient(),
 		Scheme:       mgr.GetScheme(),
 		Recorder:     mgr.GetEventRecorderFor("nodescan-controller"),
-		Clientset:    clientset, // ✅ AJOUTÉ : Passer le clientset
+		Clientset:    clientset,
 		ScannerImage: scannerImage,
 		ClamavHost:   clamavHost,
 		ClamavPort:   clamavPort,
@@ -185,7 +195,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	// Setup webhooks
+	// Setup admission webhooks (validation for v1alpha1 types)
 	if err = (&clamavv1alpha1.NodeScan{}).SetupWebhookWithManager(mgr); err != nil {
 		setupLog.Error(err, "unable to create webhook", "webhook", "NodeScan")
 		os.Exit(1)
@@ -194,6 +204,20 @@ func main() {
 		setupLog.Error(err, "unable to create webhook", "webhook", "ClusterScan")
 		os.Exit(1)
 	}
+	if err = (&clamavv1alpha1.ScanSchedule{}).SetupWebhookWithManager(mgr); err != nil {
+		setupLog.Error(err, "unable to create webhook", "webhook", "ScanSchedule")
+		os.Exit(1)
+	}
+
+	// Register the conversion webhook.
+	// A single handler at /convert covers all types registered in the scheme
+	// that implement the Hub/Spoke conversion pattern (NodeScan, ClusterScan,
+	// ScanSchedule). controller-runtime dispatches each request to the correct
+	// ConvertTo / ConvertFrom method via scheme lookup.
+	// Without this registration the Hub() methods and conversion.go are dead code:
+	// objects are never migrated from v1alpha1 storage to v1beta1.
+	mgr.GetWebhookServer().Register("/convert", webhookconversion.NewWebhookHandler(mgr.GetScheme(), webhookconversion.NewRegistry()))
+
 	//+kubebuilder:scaffold:builder
 
 	if err := mgr.AddHealthzCheck("healthz", healthz.Ping); err != nil {
@@ -206,7 +230,7 @@ func main() {
 	}
 
 	setupLog.Info("starting manager")
-	if err := mgr.Start(ctrl.SetupSignalHandler()); err != nil {
+	if err := mgr.Start(ctx); err != nil {
 		setupLog.Error(err, "problem running manager")
 		os.Exit(1)
 	}

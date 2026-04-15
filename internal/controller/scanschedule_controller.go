@@ -7,10 +7,11 @@ package controller
 import (
 	"context"
 	"fmt"
+	"sort"
 	"time"
 
 	"github.com/robfig/cron/v3"
-	corev1 "k8s.io/api/core/v1" // ✅ AJOUTÉ : Import manquant
+	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/api/errors"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
@@ -18,11 +19,14 @@ import (
 	ctrl "sigs.k8s.io/controller-runtime"
 	"sigs.k8s.io/controller-runtime/pkg/builder"
 	"sigs.k8s.io/controller-runtime/pkg/client"
+	"sigs.k8s.io/controller-runtime/pkg/controller/controllerutil"
 	"sigs.k8s.io/controller-runtime/pkg/log"
 	"sigs.k8s.io/controller-runtime/pkg/predicate"
 
 	clamavv1alpha1 "github.com/SolucTeam/clamav-operator/api/v1alpha1"
 )
+
+const scanScheduleFinalizer = "clamav.io/scanschedule-finalizer"
 
 // ScanScheduleReconciler reconciles a ScanSchedule object
 type ScanScheduleReconciler struct {
@@ -47,6 +51,30 @@ func (r *ScanScheduleReconciler) Reconcile(ctx context.Context, req ctrl.Request
 		return ctrl.Result{}, err
 	}
 
+	// ── Deletion handling ──────────────────────────────────────────────────────
+	if !scanSchedule.DeletionTimestamp.IsZero() {
+		if controllerutil.ContainsFinalizer(&scanSchedule, scanScheduleFinalizer) {
+			if err := r.deleteOwnedClusterScans(ctx, &scanSchedule); err != nil {
+				return ctrl.Result{}, err
+			}
+			original := scanSchedule.DeepCopy()
+			controllerutil.RemoveFinalizer(&scanSchedule, scanScheduleFinalizer)
+			if err := r.Patch(ctx, &scanSchedule, client.MergeFrom(original)); err != nil {
+				return ctrl.Result{}, err
+			}
+		}
+		return ctrl.Result{}, nil
+	}
+
+	// ── Ensure finalizer ───────────────────────────────────────────────────────
+	if !controllerutil.ContainsFinalizer(&scanSchedule, scanScheduleFinalizer) {
+		original := scanSchedule.DeepCopy()
+		controllerutil.AddFinalizer(&scanSchedule, scanScheduleFinalizer)
+		if err := r.Patch(ctx, &scanSchedule, client.MergeFrom(original)); err != nil {
+			return ctrl.Result{}, err
+		}
+	}
+
 	// Parse cron schedule
 	schedule, err := cron.ParseStandard(scanSchedule.Spec.Schedule)
 	if err != nil {
@@ -69,17 +97,32 @@ func (r *ScanScheduleReconciler) Reconcile(ctx context.Context, req ctrl.Request
 		return ctrl.Result{RequeueAfter: time.Until(nextRun)}, nil
 	}
 
-	// Check if it's time to run
+	// Check if it's time to run.
+	//
+	// On first reconcile (LastScheduleTime == nil) we intentionally do NOT run
+	// immediately: we wait for the first occurrence of the cron expression.
+	// This mirrors the behavior of Kubernetes CronJobs and prevents a
+	// surprise scan burst every time a ScanSchedule is (re)created.
+	//
+	// When the operator was down for multiple intervals we advance through ALL
+	// missed runs but only trigger ONE scan (the most recent scheduled time).
+	// We record the last *scheduled* time (not time.Now()) so that subsequent
+	// runs are anchored to the cron grid and the schedule never drifts.
 	var needsRun bool
-	if scanSchedule.Status.LastScheduleTime == nil {
-		needsRun = true
-	} else {
+	var scheduledTime time.Time
+
+	if scanSchedule.Status.LastScheduleTime != nil {
 		lastRun := scanSchedule.Status.LastScheduleTime.Time
-		missedRun := schedule.Next(lastRun)
-		if missedRun.Before(now) || missedRun.Equal(now) {
-			needsRun = true
+		// Walk forward from lastRun through every occurrence that has already
+		// passed.  The final value of scheduledTime is the most-recent missed
+		// slot; intermediate slots are intentionally skipped (no burst catch-up).
+		for t := schedule.Next(lastRun); !t.After(now); t = schedule.Next(t) {
+			scheduledTime = t
 		}
+		needsRun = !scheduledTime.IsZero()
 	}
+	// needsRun remains false when LastScheduleTime is nil (first reconcile).
+	// The controller will requeue at nextRun and trigger at the correct time.
 
 	if needsRun {
 		// Check concurrency policy
@@ -101,7 +144,10 @@ func (r *ScanScheduleReconciler) Reconcile(ctx context.Context, req ctrl.Request
 	}
 
 	if needsRun {
-		// Create new ClusterScan
+		// Create new ClusterScan owned by this ScanSchedule so that:
+		//   1. The GC cascade deletes it when the ScanSchedule is deleted.
+		//   2. The .Owns() watch in SetupWithManager triggers reconciliation
+		//      whenever a child ClusterScan changes phase.
 		clusterScan := &clamavv1alpha1.ClusterScan{
 			ObjectMeta: metav1.ObjectMeta{
 				Name:      fmt.Sprintf("%s-%d", scanSchedule.Name, now.Unix()),
@@ -113,15 +159,22 @@ func (r *ScanScheduleReconciler) Reconcile(ctx context.Context, req ctrl.Request
 			Spec: scanSchedule.Spec.ClusterScan,
 		}
 
+		// Set the ScanSchedule as the controller owner so that Kubernetes GC
+		// and the .Owns() watch both work correctly.
+		if err := controllerutil.SetControllerReference(&scanSchedule, clusterScan, r.Scheme); err != nil {
+			return ctrl.Result{}, err
+		}
+
 		if err := r.Create(ctx, clusterScan); err != nil {
 			log.Error(err, "failed to create cluster scan")
-			// Enregistrer métrique d'échec
 			recordScanScheduleExecution(scanSchedule.Namespace, scanSchedule.Name, "failed")
 			return ctrl.Result{}, err
 		}
 
-		// Update status
-		scanSchedule.Status.LastScheduleTime = &metav1.Time{Time: now}
+		// Anchor LastScheduleTime to the scheduled slot, not to time.Now().
+		// This keeps subsequent runs on the cron grid and prevents drift when
+		// the operator was temporarily unavailable.
+		scanSchedule.Status.LastScheduleTime = &metav1.Time{Time: scheduledTime}
 		scanSchedule.Status.LastClusterScan = clusterScan.Name
 		scanSchedule.Status.Active = append(scanSchedule.Status.Active, corev1.ObjectReference{
 			Name:      clusterScan.Name,
@@ -131,7 +184,6 @@ func (r *ScanScheduleReconciler) Reconcile(ctx context.Context, req ctrl.Request
 		r.Recorder.Event(&scanSchedule, corev1.EventTypeNormal, "ScanCreated",
 			fmt.Sprintf("Created ClusterScan %s", clusterScan.Name))
 
-		// Enregistrer métrique de succès
 		recordScanScheduleExecution(scanSchedule.Namespace, scanSchedule.Name, "success")
 	}
 
@@ -145,6 +197,28 @@ func (r *ScanScheduleReconciler) Reconcile(ctx context.Context, req ctrl.Request
 	}
 
 	return ctrl.Result{RequeueAfter: time.Until(nextRun)}, nil
+}
+
+// deleteOwnedClusterScans deletes all ClusterScans owned by the given ScanSchedule.
+// Called during finalizer processing to ensure synchronous cleanup before the
+// ScanSchedule object itself is removed from the API server.
+func (r *ScanScheduleReconciler) deleteOwnedClusterScans(ctx context.Context, scanSchedule *clamavv1alpha1.ScanSchedule) error {
+	log := log.FromContext(ctx)
+	clusterScans := &clamavv1alpha1.ClusterScanList{}
+	if err := r.List(ctx, clusterScans,
+		client.InNamespace(scanSchedule.Namespace),
+		client.MatchingLabels{"clamav.io/schedule": scanSchedule.Name},
+	); err != nil {
+		return err
+	}
+	for i := range clusterScans.Items {
+		cs := &clusterScans.Items[i]
+		if err := r.Delete(ctx, cs); err != nil && !errors.IsNotFound(err) {
+			log.Error(err, "failed to delete ClusterScan during ScanSchedule cleanup", "clusterScan", cs.Name)
+			return err
+		}
+	}
+	return nil
 }
 
 func (r *ScanScheduleReconciler) cleanupHistory(ctx context.Context, scanSchedule *clamavv1alpha1.ScanSchedule) error {
@@ -173,6 +247,17 @@ func (r *ScanScheduleReconciler) cleanupHistory(ctx context.Context, scanSchedul
 		}
 	}
 
+	// Sort by CreationTimestamp ascending (oldest first) so that pruning always
+	// removes the oldest entries.  The Kubernetes API does not guarantee any
+	// ordering for List results, so an explicit sort is required.
+	sortByAge := func(items []clamavv1alpha1.ClusterScan) {
+		sort.Slice(items, func(i, j int) bool {
+			return items[i].CreationTimestamp.Before(&items[j].CreationTimestamp)
+		})
+	}
+	sortByAge(successful)
+	sortByAge(failed)
+
 	// Update active list
 	scanSchedule.Status.Active = active
 
@@ -182,7 +267,6 @@ func (r *ScanScheduleReconciler) cleanupHistory(ctx context.Context, scanSchedul
 		successLimit = *scanSchedule.Spec.SuccessfulScansHistoryLimit
 	}
 	if len(successful) > int(successLimit) {
-		// Sort by creation timestamp
 		for i := 0; i < len(successful)-int(successLimit); i++ {
 			// Proactively delete child NodeScans before the ClusterScan to avoid
 			// accumulation while waiting for the GC / finalizer cascade.

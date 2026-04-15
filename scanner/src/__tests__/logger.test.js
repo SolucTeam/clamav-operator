@@ -16,17 +16,22 @@ const assert = require('node:assert/strict');
 describe('logger', () => {
   let capturedLines;
   let originalConsoleLog;
+  let originalConsoleError;
 
-  // Capture console.log output before each test
+  // Capture both console.log (INFO/DEBUG) and console.error (WARN/ERROR) before each test.
+  // logger.js routes WARN and ERROR to stderr (console.error) so tests must intercept both.
   beforeEach(() => {
     capturedLines = [];
     originalConsoleLog = console.log;
+    originalConsoleError = console.error;
     console.log = (...args) => capturedLines.push(args.join(' '));
+    console.error = (...args) => capturedLines.push(args.join(' '));
   });
 
   after(() => {
-    // Restore console.log after all tests
+    // Restore both streams after all tests
     if (originalConsoleLog) console.log = originalConsoleLog;
+    if (originalConsoleError) console.error = originalConsoleError;
   });
 
   function parseLastLog() {
@@ -47,6 +52,7 @@ describe('logger', () => {
     assert.ok(entry.service, 'should have service');
     assert.ok(entry.message, 'should have message');
     console.log = originalConsoleLog;
+    console.error = originalConsoleError;
   });
 
   it('info() sets level to INFO', () => {
@@ -60,6 +66,7 @@ describe('logger', () => {
     assert.equal(entry.level, 'INFO');
     assert.equal(entry.message, 'info message');
     console.log = originalConsoleLog;
+    console.error = originalConsoleError;
   });
 
   it('warn() sets level to WARN', () => {
@@ -73,6 +80,7 @@ describe('logger', () => {
     assert.equal(entry.level, 'WARN');
     assert.equal(entry.message, 'warn message');
     console.log = originalConsoleLog;
+    console.error = originalConsoleError;
   });
 
   it('error() sets level to ERROR', () => {
@@ -86,6 +94,7 @@ describe('logger', () => {
     assert.equal(entry.level, 'ERROR');
     assert.equal(entry.message, 'error message');
     console.log = originalConsoleLog;
+    console.error = originalConsoleError;
   });
 
   it('debug() sets level to DEBUG', () => {
@@ -99,6 +108,7 @@ describe('logger', () => {
     assert.equal(entry.level, 'DEBUG');
     assert.equal(entry.message, 'debug message');
     console.log = originalConsoleLog;
+    console.error = originalConsoleError;
   });
 
   it('service field is always "clamav-scanner"', () => {
@@ -111,6 +121,7 @@ describe('logger', () => {
     const entry = parseLastLog();
     assert.equal(entry.service, 'clamav-scanner');
     console.log = originalConsoleLog;
+    console.error = originalConsoleError;
   });
 
   it('spreads extra data fields into the log entry', () => {
@@ -130,6 +141,7 @@ describe('logger', () => {
     assert.equal(entry.file_path, '/etc/passwd');
     assert.deepEqual(entry.virus_names, ['Eicar-Test-Signature']);
     console.log = originalConsoleLog;
+    console.error = originalConsoleError;
   });
 
   it('timestamp is a valid ISO-8601 string', () => {
@@ -143,6 +155,7 @@ describe('logger', () => {
     const d = new Date(entry.timestamp);
     assert.ok(!isNaN(d.getTime()), 'timestamp should be a valid date');
     console.log = originalConsoleLog;
+    console.error = originalConsoleError;
   });
 
   it('NODE_NAME env var is reflected in node_name field', () => {
@@ -158,5 +171,6 @@ describe('logger', () => {
 
     delete process.env.NODE_NAME;
     console.log = originalConsoleLog;
+    console.error = originalConsoleError;
   });
 });
