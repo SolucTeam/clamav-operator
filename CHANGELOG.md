@@ -5,6 +5,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.2.0] - 2026-04-15
+
+## 🚀 Features
+
+* Merge pull request #19 from SolucTeam/feat/tag-release-helm-oci (6cb637a)
+* feat(ci): trigger release on v* tag push and publish Helm chart to GHCR OCI (4ebb0da)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.1.2] - 2026-03-01
 
 ## 🚀 Features
@@ -21,6 +34,19 @@ All notable changes to this project will be documented in this file.
 * fix: workflow error bug fetch main (11ef638)
 * fix: workflow docker build bug (e3aec32)
 * fix: workflow docker build bug (28ffebd)
+
+## 🔧 Other Changes
+
+
+## [v0.2.0] - 2026-04-15
+
+## 🚀 Features
+
+* Merge pull request #19 from SolucTeam/feat/tag-release-helm-oci (6cb637a)
+* feat(ci): trigger release on v* tag push and publish Helm chart to GHCR OCI (4ebb0da)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -35,6 +61,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.2.0] - 2026-04-15
+
+## 🚀 Features
+
+* Merge pull request #19 from SolucTeam/feat/tag-release-helm-oci (6cb637a)
+* feat(ci): trigger release on v* tag push and publish Helm chart to GHCR OCI (4ebb0da)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.1.2] - 2026-03-01
 
 ## 🚀 Features
@@ -51,6 +90,19 @@ All notable changes to this project will be documented in this file.
 * fix: workflow error bug fetch main (11ef638)
 * fix: workflow docker build bug (e3aec32)
 * fix: workflow docker build bug (28ffebd)
+
+## 🔧 Other Changes
+
+
+## [v0.2.0] - 2026-04-15
+
+## 🚀 Features
+
+* Merge pull request #19 from SolucTeam/feat/tag-release-helm-oci (6cb637a)
+* feat(ci): trigger release on v* tag push and publish Helm chart to GHCR OCI (4ebb0da)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -68,6 +120,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.2.0] - 2026-04-15
+
+## 🚀 Features
+
+* Merge pull request #19 from SolucTeam/feat/tag-release-helm-oci (6cb637a)
+* feat(ci): trigger release on v* tag push and publish Helm chart to GHCR OCI (4ebb0da)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.1.2] - 2026-03-01
 
 ## 🚀 Features
@@ -84,6 +149,19 @@ All notable changes to this project will be documented in this file.
 * fix: workflow error bug fetch main (11ef638)
 * fix: workflow docker build bug (e3aec32)
 * fix: workflow docker build bug (28ffebd)
+
+## 🔧 Other Changes
+
+
+## [v0.2.0] - 2026-04-15
+
+## 🚀 Features
+
+* Merge pull request #19 from SolucTeam/feat/tag-release-helm-oci (6cb637a)
+* feat(ci): trigger release on v* tag push and publish Helm chart to GHCR OCI (4ebb0da)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -98,6 +176,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.2.0] - 2026-04-15
+
+## 🚀 Features
+
+* Merge pull request #19 from SolucTeam/feat/tag-release-helm-oci (6cb637a)
+* feat(ci): trigger release on v* tag push and publish Helm chart to GHCR OCI (4ebb0da)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.1.2] - 2026-03-01
 
 ## 🚀 Features
@@ -114,6 +205,19 @@ All notable changes to this project will be documented in this file.
 * fix: workflow error bug fetch main (11ef638)
 * fix: workflow docker build bug (e3aec32)
 * fix: workflow docker build bug (28ffebd)
+
+## 🔧 Other Changes
+
+
+## [v0.2.0] - 2026-04-15
+
+## 🚀 Features
+
+* Merge pull request #19 from SolucTeam/feat/tag-release-helm-oci (6cb637a)
+* feat(ci): trigger release on v* tag push and publish Helm chart to GHCR OCI (4ebb0da)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
