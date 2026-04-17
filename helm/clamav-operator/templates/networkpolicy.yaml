@@ -13,10 +13,20 @@ spec:
       control-plane: controller-manager
   policyTypes:
     {{- toYaml .Values.networkPolicy.policyTypes | nindent 4 }}
-  {{- with .Values.networkPolicy.ingress }}
   ingress:
+    {{- with .Values.networkPolicy.ingress }}
     {{- toYaml . | nindent 4 }}
-  {{- end }}
+    {{- end }}
+    {{- if .Values.webhook.enabled }}
+    # The Kubernetes API server is not a pod and cannot be matched by a
+    # namespaceSelector. To allow admission and conversion webhook calls
+    # (ValidatingWebhookConfiguration, CRD conversion) we must permit ingress
+    # from all sources on the webhook port.
+    # See: https://kubernetes.io/docs/concepts/services-networking/network-policies/#default-deny-all-ingress-traffic
+    - ports:
+      - protocol: TCP
+        port: {{ .Values.webhook.port }}
+    {{- end }}
   {{- with .Values.networkPolicy.egress }}
   egress:
     {{- toYaml . | nindent 4 }}
