@@ -36,7 +36,6 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/log/zap"
 	metricsserver "sigs.k8s.io/controller-runtime/pkg/metrics/server"
 	"sigs.k8s.io/controller-runtime/pkg/webhook"
-	webhookconversion "sigs.k8s.io/controller-runtime/pkg/webhook/conversion"
 
 	clamavv1alpha1 "github.com/SolucTeam/clamav-operator/api/v1alpha1"
 	clamavv1beta1 "github.com/SolucTeam/clamav-operator/api/v1beta1"
@@ -229,14 +228,11 @@ func main() {
 		os.Exit(1)
 	}
 
-	// Register the conversion webhook.
-	// A single handler at /convert covers all types registered in the scheme
-	// that implement the Hub/Spoke conversion pattern (NodeScan, ClusterScan,
-	// ScanSchedule). controller-runtime dispatches each request to the correct
-	// ConvertTo / ConvertFrom method via scheme lookup.
-	// Without this registration the Hub() methods and conversion.go are dead code:
-	// objects are never migrated from v1alpha1 storage to v1beta1.
-	mgr.GetWebhookServer().Register("/convert", webhookconversion.NewWebhookHandler(mgr.GetScheme(), webhookconversion.NewRegistry()))
+	// NOTE: /convert is registered automatically by controller-runtime when
+	// SetupWebhookWithManager is called for any type that implements
+	// conversion.Convertible (ConvertTo / ConvertFrom). Registering it again
+	// here would cause "panic: can't register duplicate path: /convert".
+	// Do NOT add an explicit mgr.GetWebhookServer().Register("/convert", ...) call.
 
 	//+kubebuilder:scaffold:builder
 

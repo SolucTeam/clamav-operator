@@ -57,7 +57,7 @@ webhooks:
           - UPDATE
         resources:
           - clusterscans
-        scope: Cluster
+        scope: Namespaced
     sideEffects: None
     timeoutSeconds: 10
 
