@@ -63,6 +63,10 @@ type NodeScanReconciler struct {
 	ScannerImage string
 	ClamavHost   string
 	ClamavPort   int
+	// ScannerImagePullSecrets is forwarded from the operator's Helm values
+	// (scanner.imagePullSecrets) and injected into every scanner Job pod spec.
+	// Required when the scanner image lives in a private registry.
+	ScannerImagePullSecrets []corev1.LocalObjectReference
 }
 
 // +kubebuilder:rbac:groups=clamav.io,resources=nodescans,verbs=get;list;watch;create;update;patch;delete
@@ -227,12 +231,34 @@ func (r *NodeScanReconciler) Reconcile(ctx context.Context, req ctrl.Request) (c
 				retryCount++
 
 				if retryCount >= maxParseRetries {
-					// Max retries exceeded - mark as completed with partial results
+					// Max retries exceeded — mark the scan as completed but flag it as
+					// partial so consumers know the data cannot be trusted as complete.
 					log.Error(err, "max parse retries exceeded, completing with partial results",
 						"retries", retryCount)
 					r.Recorder.Event(&nodeScan, corev1.EventTypeWarning, "ParseResultsMaxRetries",
-						fmt.Sprintf("Failed to parse scan results after %d attempts: %v", retryCount, err))
-					// Continue with completion - don't block on parse failures
+						fmt.Sprintf("Failed to parse scan results after %d attempts: %v. "+
+							"Status.ResultsPartial=true — do NOT treat this as a clean scan.", retryCount, err))
+					nodeScan.Status.ResultsPartial = true
+					// Add a typed condition so GitOps tools and alert rules can detect this.
+					partialCond := metav1.Condition{
+						Type:               "PartialResults",
+						Status:             metav1.ConditionTrue,
+						Reason:             "ParseMaxRetriesExceeded",
+						Message:            fmt.Sprintf("Scan output could not be parsed after %d attempts. Results are incomplete.", retryCount),
+						LastTransitionTime: metav1.Now(),
+					}
+					found := false
+					for i, c := range nodeScan.Status.Conditions {
+						if c.Type == "PartialResults" {
+							nodeScan.Status.Conditions[i] = partialCond
+							found = true
+							break
+						}
+					}
+					if !found {
+						nodeScan.Status.Conditions = append(nodeScan.Status.Conditions, partialCond)
+					}
+					// Continue with completion — don't block the reconcile loop indefinitely.
 				} else {
 					// Update retry count annotation using Patch to avoid 409 on concurrent updates
 					annotationBase := nodeScan.DeepCopy()
@@ -384,7 +410,16 @@ func (r *NodeScanReconciler) constructJobForNodeScan(nodeScan *clamavv1alpha1.No
 	scanMode := getEnvOrDefault("SCANNER_MODE", "standalone")
 	clamscanPath := getEnvOrDefault("SCANNER_CLAMSCAN_PATH", "/usr/bin/clamscan")
 	clamavDBPath := getEnvOrDefault("SCANNER_CLAMAV_DB_PATH", "/var/lib/clamav")
-	updateSigs := getEnvOrDefault("SCANNER_UPDATE_SIGNATURES", "false")
+	// In standalone mode a freshclam CronJob manages signature updates on a
+	// schedule. The scanner itself must NOT attempt to update signatures during
+	// a scan run — that would create write conflicts and slow every scan.
+	// In remote mode the ClamAV daemon handles updates independently, so the
+	// same logic applies: always "false" here, rely on the daemon's own schedule.
+	updateSigs := "false"
+	if scanMode != "standalone" {
+		// Preserve any explicit override from the operator env in remote mode.
+		updateSigs = getEnvOrDefault("SCANNER_UPDATE_SIGNATURES", "false")
+	}
 	incrEnabled := getEnvOrDefault("SCANNER_INCREMENTAL_ENABLED", "false")
 	scanStrategy := getEnvOrDefault("SCANNER_SCAN_STRATEGY", "full")
 	fullScanInterv := getEnvOrDefault("SCANNER_FULL_SCAN_INTERVAL", "10")
@@ -483,8 +518,9 @@ func (r *NodeScanReconciler) constructJobForNodeScan(nodeScan *clamavv1alpha1.No
 					Tolerations: []corev1.Toleration{
 						{Operator: corev1.TolerationOpExists},
 					},
-					// ImagePullSecrets can be configured via Helm values or ScanPolicy
-					ImagePullSecrets: []corev1.LocalObjectReference{},
+					// ScannerImagePullSecrets is forwarded from Helm values (scanner.imagePullSecrets).
+					// Required for scanner images stored in private registries.
+					ImagePullSecrets: r.ScannerImagePullSecrets,
 					Containers: []corev1.Container{
 						{
 							Name:            "scanner",
@@ -589,13 +625,45 @@ func (r *NodeScanReconciler) parseJobResults(ctx context.Context, nodeScan *clam
 	for scanner.Scan() {
 		line := scanner.Text()
 
-		// JSON log structure emitted by the scanner container.
-		// The `type` field is the canonical machine-readable signal (added in v0.2+).
-		// The `message` field check provides backward compatibility with older scanner images.
+		// Scanner JSON log contract
+		//
+		// Each line of the scanner container's stdout must be valid JSON.
+		// Non-JSON lines are silently skipped for forward compatibility.
+		//
+		// Two event types are relevant to the controller:
+		//
+		//   type == "scan_complete"  (added in scanner v0.2)
+		//     Emitted once at the end of the scan run. Carries aggregate counters.
+		//     The controller falls back to matching message=="Scan completed successfully"
+		//     for scanner images older than v0.2.
+		//
+		//   alert == "INFECTED_FILE"
+		//     Emitted once per infected file. Must include file_path.
+		//
+		// Full schema (all fields optional unless noted):
+		//
+		//   level            string   — log level (info/warn/error)
+		//   type             string   — event type; "scan_complete" is the only machine-read value  [REQUIRED for aggregate]
+		//   message          string   — human-readable description (backward compat with pre-v0.2)
+		//   files_scanned    int64    — total files examined
+		//   files_infected   int64    — total files with a positive match
+		//   files_skipped    int64    — total files skipped (size, pattern, etc.)
+		//   errors_count     int64    — total errors during scan
+		//   file_path        string   — absolute path on the host  [REQUIRED for INFECTED_FILE]
+		//   virus_names      []string — list of virus signatures matched
+		//   file_size        int64    — size of the infected file in bytes
+		//   alert            string   — "INFECTED_FILE" triggers infected-file recording
+		//   strategy         string   — scan strategy used (full/incremental/smart) [since v0.3]
+		//   files_skipped_incremental int64 — files skipped by incremental logic   [since v0.3]
+		//   cache_hits       int64    — incremental cache hits                      [since v0.3]
+		//   cache_misses     int64    — incremental cache misses                    [since v0.3]
+		//
+		// Any field not present defaults to its zero value (0 / "" / nil).
+		// New fields may be added by the scanner without breaking this controller.
 		type LogEntry struct {
 			Level         string   `json:"level"`
-			Type          string   `json:"type"`    // machine-readable event type (e.g. "scan_complete")
-			Message       string   `json:"message"` // human-readable; kept for backward compat only
+			Type          string   `json:"type"`
+			Message       string   `json:"message"`
 			FilesScanned  int64    `json:"files_scanned"`
 			FilesInfected int64    `json:"files_infected"`
 			FilesSkipped  int64    `json:"files_skipped"`
@@ -666,11 +734,21 @@ func (r *NodeScanReconciler) parseJobResults(ctx context.Context, nodeScan *clam
 	nodeScan.Status.FilesSkipped = filesSkipped
 	nodeScan.Status.ErrorCount = errorCount
 
-	// Limit to 100 infected files for performance
-	if len(infectedFiles) > 100 {
-		nodeScan.Status.InfectedFiles = infectedFiles[:100]
+	// Cap stored infected files at 100 to keep the CRD status object manageable.
+	// The full count is preserved in FilesInfected. When truncation occurs, we
+	// set InfectedFilesTruncated=true and emit a Warning event so no consumer
+	// silently treats a partial list as exhaustive.
+	const maxStoredInfected = 100
+	if len(infectedFiles) > maxStoredInfected {
+		nodeScan.Status.InfectedFiles = infectedFiles[:maxStoredInfected]
+		nodeScan.Status.InfectedFilesTruncated = true
+		r.Recorder.Event(nodeScan, corev1.EventTypeWarning, "InfectedFilesTruncated",
+			fmt.Sprintf("%d infected files detected but only %d are stored in status. "+
+				"Check FilesInfected for the full count.",
+				len(infectedFiles), maxStoredInfected))
 	} else {
 		nodeScan.Status.InfectedFiles = infectedFiles
+		nodeScan.Status.InfectedFilesTruncated = false
 	}
 
 	return nil

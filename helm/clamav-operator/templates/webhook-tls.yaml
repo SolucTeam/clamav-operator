@@ -1,0 +1,100 @@
+{{- /*
+webhook-tls.yaml — Certificate management for the admission webhook TLS.
+
+Active uniquement si webhook.enabled=true ET webhook.certManager.enabled=true.
+
+Chaîne de confiance créée :
+  SelfSigned Issuer
+    → CA Certificate (isCA: true)
+      → CA Issuer
+        → Webhook Certificate  →  Secret "...-webhook-server-cert"  →  pod volume mount
+                                                                         ↓
+                                   cert-manager cainjector injecte le caBundle
+                                   dans la ValidatingWebhookConfiguration
+                                   via l'annotation cert-manager.io/inject-ca-from
+*/}}
+{{- if and .Values.webhook.enabled .Values.webhook.certManager.enabled }}
+---
+# Step 1 — Issuer bootstrap : auto-signé, sert uniquement à émettre le CA.
+apiVersion: cert-manager.io/v1
+kind: Issuer
+metadata:
+  name: {{ include "clamav-operator.fullname" . }}-selfsigned-issuer
+  namespace: {{ .Release.Namespace }}
+  labels:
+    {{- include "clamav-operator.labels" . | nindent 4 }}
+    app.kubernetes.io/component: webhook
+spec:
+  selfSigned: {}
+---
+# Step 2 — CA Certificate (isCA: true) émis par le SelfSigned Issuer.
+# Le secret résultant contient tls.crt / tls.key / ca.crt que le CA Issuer consommera.
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: {{ include "clamav-operator.fullname" . }}-ca
+  namespace: {{ .Release.Namespace }}
+  labels:
+    {{- include "clamav-operator.labels" . | nindent 4 }}
+    app.kubernetes.io/component: webhook
+spec:
+  isCA: true
+  commonName: {{ include "clamav-operator.fullname" . }}-ca
+  secretName: {{ include "clamav-operator.fullname" . }}-ca
+  duration: 87600h  # 10 ans — c'est un CA interne, renouvellement long acceptable
+  renewBefore: 720h # 30 jours avant expiration
+  privateKey:
+    algorithm: ECDSA
+    size: 256
+  issuerRef:
+    name: {{ include "clamav-operator.fullname" . }}-selfsigned-issuer
+    kind: Issuer
+    group: cert-manager.io
+---
+# Step 3 — CA Issuer : utilise le secret du CA Certificate pour signer les leaf certs.
+apiVersion: cert-manager.io/v1
+kind: Issuer
+metadata:
+  name: {{ include "clamav-operator.fullname" . }}-ca-issuer
+  namespace: {{ .Release.Namespace }}
+  labels:
+    {{- include "clamav-operator.labels" . | nindent 4 }}
+    app.kubernetes.io/component: webhook
+spec:
+  ca:
+    secretName: {{ include "clamav-operator.fullname" . }}-ca
+---
+# Step 4 — Webhook Certificate (leaf).
+# secretName doit correspondre exactement au volume monté dans le pod :
+#   {{ include "clamav-operator.fullname" . }}-webhook-server-cert
+# Les SANs couvrent toutes les formes d'adresse que l'API server utilisera.
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: {{ include "clamav-operator.fullname" . }}-webhook-cert
+  namespace: {{ .Release.Namespace }}
+  labels:
+    {{- include "clamav-operator.labels" . | nindent 4 }}
+    app.kubernetes.io/component: webhook
+spec:
+  secretName: {{ include "clamav-operator.fullname" . }}-webhook-server-cert
+  duration: 8760h   # 1 an
+  renewBefore: 360h # 15 jours avant expiration
+  subject:
+    organizations:
+      - {{ include "clamav-operator.fullname" . }}
+  commonName: {{ include "clamav-operator.fullname" . }}-webhook-service
+  dnsNames:
+    - {{ include "clamav-operator.fullname" . }}-webhook-service
+    - {{ include "clamav-operator.fullname" . }}-webhook-service.{{ .Release.Namespace }}
+    - {{ include "clamav-operator.fullname" . }}-webhook-service.{{ .Release.Namespace }}.svc
+    - {{ include "clamav-operator.fullname" . }}-webhook-service.{{ .Release.Namespace }}.svc.cluster.local
+  privateKey:
+    algorithm: ECDSA
+    size: 256
+    rotationPolicy: Always  # regénère la clé privée à chaque renouvellement
+  issuerRef:
+    name: {{ include "clamav-operator.fullname" . }}-ca-issuer
+    kind: Issuer
+    group: cert-manager.io
+{{- end }}

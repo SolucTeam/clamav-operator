@@ -1,0 +1,106 @@
+# =============================================================================
+# ClamAV Operator — Production Values
+# =============================================================================
+# Overlay these values on top of the default values.yaml for production clusters.
+#
+# Usage:
+#   helm install clamav-operator oci://ghcr.io/solucteam/charts/clamav-operator \
+#     --version <version> \
+#     -f values-production.yaml
+#
+# Or with custom overrides on top:
+#   helm install clamav-operator oci://ghcr.io/solucteam/charts/clamav-operator \
+#     --version <version> \
+#     -f values-production.yaml \
+#     -f my-overrides.yaml
+# =============================================================================
+
+# =============================================================================
+# OPERATOR
+# =============================================================================
+operator:
+  # Run 2 replicas for HA — leader election ensures only one is active at a time
+  replicaCount: 2
+
+  image:
+    pullPolicy: IfNotPresent
+
+  leaderElection:
+    enabled: true
+
+  # Production resource sizing for the operator controller
+  # Based on observed usage managing 20-50 nodes:
+  #   - memory: operator caches CRD objects in-memory; 512Mi avoids OOM on large clusters
+  #   - cpu: reconcile loops are bursty; 1000m handles spikes without throttling
+  resources:
+    requests:
+      cpu: 200m
+      memory: 256Mi
+    limits:
+      cpu: 1000m
+      memory: 512Mi
+
+  # Schedule operator pods on separate nodes for genuine HA
+  affinity:
+    podAntiAffinity:
+      preferredDuringSchedulingIgnoredDuringExecution:
+        - weight: 100
+          podAffinityTerm:
+            labelSelector:
+              matchExpressions:
+                - key: app.kubernetes.io/name
+                  operator: In
+                  values:
+                    - clamav-operator
+            topologyKey: kubernetes.io/hostname
+
+  # Prevent operator eviction during node pressure
+  priorityClassName: system-cluster-critical
+
+# =============================================================================
+# SCANNER JOBS
+# =============================================================================
+scanner:
+  # Production resource sizing for scanner jobs.
+  # clamscan is memory-hungry when loading signatures (~300-400 MiB RSS).
+  # Nodes with many files may spike to 1.5 GiB — 2 GiB limit provides headroom.
+  resources:
+    requests:
+      cpu: 1000m
+      memory: 1Gi
+    limits:
+      cpu: 4000m
+      memory: 2Gi
+
+  freshclam:
+    # Refresh signatures every 4 hours in production (ClamAV updates ~several/day)
+    schedule: "0 */4 * * *"
+    resources:
+      requests:
+        cpu: 100m
+        memory: 128Mi
+      limits:
+        cpu: 500m
+        memory: 256Mi
+
+  incremental:
+    enabled: true
+    # smart: incremental most of the time, full scan every fullScanInterval runs
+    strategy: smart
+    fullScanInterval: 7
+    skipUnchangedFiles: true
+
+  # Persist signatures across freshclam runs (avoids re-downloading on every pod restart)
+  signatures:
+    persistent: true
+    size: 2Gi
+
+# =============================================================================
+# MONITORING
+# =============================================================================
+monitoring:
+  serviceMonitor:
+    enabled: true
+
+  prometheusRule:
+    enabled: true

@@ -65,6 +65,14 @@
   <td>🪝 <b>Admission webhooks</b></td>
   <td>Invalid CRs (bad cron, negative limits, empty nodeName) are rejected at create/update time</td>
 </tr>
+<tr>
+  <td>🔐 <b>cert-manager TLS</b></td>
+  <td>Webhook certificates fully managed by the Helm chart — self-signed CA chain + leaf cert via cert-manager, or auto-generated for dev</td>
+</tr>
+<tr>
+  <td>🐳 <b>Private registry support</b></td>
+  <td><code>scanner.imagePullSecrets</code> is now forwarded into every scanner Job pod — works with any private registry</td>
+</tr>
 </table>
 
 ---
@@ -179,6 +187,10 @@ stateDiagram-v2
     note right of Completed
         FilesScanned, FilesInfected,
         InfectedFiles[] stored in Status.
+        InfectedFilesTruncated=true when
+        more than 100 infected files found.
+        ResultsPartial=true when log parsing
+        failed after all retries — rescan required.
         FailureReason + ExitCode captured
         before pod GC.
     end note
@@ -575,17 +587,32 @@ flowchart LR
 
 **Conversion webhook** — a single `/convert` handler backed by controller-runtime's scheme dispatch. `v1beta1` is the hub (storage version); `v1alpha1` is the spoke. All three resource types go through it automatically.
 
+**TLS certificate management** — two modes, both fully handled by the Helm chart:
+
 ```yaml
-# values.yaml — TLS for webhooks
+# Dev / CI — controller-runtime auto-generates ephemeral self-signed certs
 webhook:
-  certificates:
-    autoGenerate: true     # Self-signed, dev/testing
-    # Production: use cert-manager
-    # autoGenerate: false
-    # certManagerIssuerRef:
-    #   name: cluster-issuer
-    #   kind: ClusterIssuer
+  enabled: true
+  certManager:
+    enabled: false          # auto-generate a self-signed cert (not rotated)
+
+# Production — cert-manager manages the full CA chain
+webhook:
+  enabled: true
+  certManager:
+    enabled: true           # creates SelfSigned Issuer → CA Cert → CA Issuer → leaf Cert
+                            # cert-manager cainjector injects caBundle automatically
 ```
+
+When `certManager.enabled: true` the chart creates:
+- A `SelfSigned` Issuer (bootstrap only)
+- A CA `Certificate` (`isCA: true`, ECDSA P-256, 10-year lifetime)
+- A CA `Issuer` backed by the CA cert
+- A leaf `Certificate` (1-year, auto-rotated, `rotationPolicy: Always`) whose secret name matches the volume mounted by the operator pod
+
+The `ValidatingWebhookConfiguration` carries a `cert-manager.io/inject-ca-from` annotation so the cainjector populates `caBundle` automatically — no manual patching required.
+
+**CRD conversion webhook** — installed automatically via a Helm post-install/post-upgrade hook Job that patches `nodescans.clamav.io`, `clusterscans.clamav.io`, and `scanschedules.clamav.io` with the correct `conversion.strategy: Webhook` and service reference. Requires `webhook.enabled: true`.
 
 ### Job Reliability
 
@@ -614,12 +641,15 @@ timeline
 | Flag | Default | Description |
 |------|---------|-------------|
 | `--scanner-image` | `ghcr.io/solucteam/clamav-node-scanner:latest` | Scanner container image |
+| `--webhook-port` | `9443` | Webhook server port — **must match `webhook.port` in values.yaml** |
 | `--clamav-host` | `clamav.clamav.svc.cluster.local` | clamd host (remote mode only) |
 | `--clamav-port` | `3310` | clamd port (remote mode only) |
 | `--skip-startup-checks` | `false` | Disable startup RBAC/ServiceAccount validation |
 | `--leader-elect` | `false` | Enable leader election (multi-replica HA) |
 | `--metrics-bind-address` | `:8080` | Prometheus metrics endpoint |
 | `--health-probe-bind-address` | `:8081` | Liveness/readiness probe endpoint |
+
+> `--webhook-port` is set automatically by the Helm chart from `webhook.port`. If you override `webhook.port` in values, the Deployment args, the Service, and the process all stay in sync.
 
 ### Priority-Based Resource Profiles
 
@@ -780,6 +810,19 @@ kubectl get nodescan scan-worker-01 \
   -o jsonpath='Reason: {.status.failureReason}{"\n"}ExitCode: {.status.exitCode}{"\n"}'
 ```
 
+**Scan completed but results may be incomplete:**
+```bash
+# Check for partial results (log parsing failed after all retries)
+kubectl get nodescan scan-worker-01 -o jsonpath='{.status.resultsPartial}'
+# If "true" → rescan required. Do NOT treat this node as clean.
+
+# Check if infected file list was truncated (>100 infections found)
+kubectl get nodescan scan-worker-01 \
+  -o jsonpath='Truncated: {.status.infectedFilesTruncated}{"\n"}Total: {.status.filesInfected}{"\n"}'
+# infectedFilesTruncated=true means only the first 100 are in .status.infectedFiles
+# The full count is always in .status.filesInfected
+```
+
 **No ClamAV signatures (standalone):**
 ```bash
 kubectl logs -n clamav-operator-system -l clamav.io/nodescan=<scan-name>
@@ -802,10 +845,43 @@ kubectl auth can-i create jobs \
 
 **Invalid ScanSchedule rejected at admission:**
 ```bash
-# The webhook now validates the cron expression at create/update time
+# The webhook validates the cron expression at create/update time
 kubectl apply -f bad-schedule.yaml
 # Error: admission webhook "vscanschedule.kb.io" denied the request:
 #   spec.schedule: Invalid value: "every day": invalid cron expression: ...
+```
+
+**Webhook TLS issues:**
+```bash
+# Check the cert-manager Certificate is Ready
+kubectl get certificate -n clamav-operator-system
+# NAME                                    READY   SECRET                                         AGE
+# clamav-operator-webhook-cert            True    clamav-operator-webhook-server-cert            5m
+
+# Verify caBundle is populated (cert-manager cainjector does this automatically)
+kubectl get validatingwebhookconfiguration \
+  clamav-operator-validating-webhook-configuration \
+  -o jsonpath='{.webhooks[0].clientConfig.caBundle}' | wc -c
+# Should be > 0. If 0, check that the cainjector is running:
+kubectl get pods -n cert-manager -l app=cainjector
+
+# CRD conversion hook — verify it ran successfully
+kubectl get job -n clamav-operator-system | grep crd-patcher
+# If failed, re-run manually:
+helm upgrade --install clamav-operator ./helm/clamav-operator --reuse-values
+```
+
+**Scanner image in private registry:**
+```bash
+# Create the pull secret first
+kubectl create secret docker-registry regcred \
+  --docker-server=my-registry.internal \
+  --docker-username=... --docker-password=... \
+  -n clamav-operator-system
+
+# Then install/upgrade with the secret name
+helm upgrade --install clamav-operator ./helm/clamav-operator \
+  --set "scanner.imagePullSecrets[0].name=regcred"
 ```
 
 ---

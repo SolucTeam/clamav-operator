@@ -169,9 +169,24 @@ type NodeScanStatus struct {
 	ErrorCount int64 `json:"errorCount,omitempty"`
 
 	// InfectedFiles contains details of infected files
-	// Limited to first 100 for performance
+	// Limited to the first 100 entries. When more infected files exist,
+	// InfectedFilesTruncated is set to true and a warning event is emitted.
 	// +optional
 	InfectedFiles []InfectedFile `json:"infectedFiles,omitempty"`
+
+	// InfectedFilesTruncated is true when the scan detected more than 100 infected
+	// files. Only the first 100 are stored in InfectedFiles; the full count is
+	// still reflected in FilesInfected. Always check this flag before drawing
+	// security conclusions from InfectedFiles.
+	// +optional
+	InfectedFilesTruncated bool `json:"infectedFilesTruncated,omitempty"`
+
+	// ResultsPartial is true when scan result parsing failed after all retries
+	// and the status reflects incomplete data. The scan itself succeeded (the
+	// scanner Job exited 0) but the controller could not fully parse the output.
+	// Do NOT treat this scan as a clean bill of health — re-run the scan.
+	// +optional
+	ResultsPartial bool `json:"resultsPartial,omitempty"`
 
 	// JobRef is a reference to the created Job
 	// +optional

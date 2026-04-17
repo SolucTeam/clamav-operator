@@ -11,24 +11,121 @@ metadata:
     "helm.sh/hook-delete-policy": before-hook-creation,hook-succeeded
 spec:
   restartPolicy: Never
+  serviceAccountName: {{ include "clamav-operator.serviceAccountName" . }}
   containers:
-    - name: health-check
-      image: curlimages/curl:8.7.1
+    - name: test
+      image: bitnami/kubectl:latest
       command:
         - sh
         - -c
         - |
           set -e
-          echo "→ Testing operator healthz endpoint..."
-          curl -sf http://{{ include "clamav-operator.fullname" . }}.{{ .Release.Namespace }}.svc.cluster.local:{{ .Values.operator.service.healthPort }}/healthz
+          NAMESPACE="{{ .Release.Namespace }}"
+          FULLNAME="{{ include "clamav-operator.fullname" . }}"
+          HEALTH_PORT="{{ .Values.operator.service.healthPort }}"
+          METRICS_PORT="{{ .Values.operator.service.metricsPort }}"
+          SVC="${FULLNAME}.${NAMESPACE}.svc.cluster.local"
+          PASS=0
+          FAIL=0
+
+          ok()   { echo "  ✅ $1"; PASS=$((PASS+1)); }
+          fail() { echo "  ❌ $1"; FAIL=$((FAIL+1)); }
+
+          # ── 1. Operator deployment is available ───────────────────────────
           echo ""
-          echo "→ Testing operator readyz endpoint..."
-          curl -sf http://{{ include "clamav-operator.fullname" . }}.{{ .Release.Namespace }}.svc.cluster.local:{{ .Values.operator.service.healthPort }}/readyz
+          echo "── Operator deployment ──────────────────────────────────────"
+          READY=$(kubectl get deploy "${FULLNAME}-controller-manager" \
+            -n "$NAMESPACE" \
+            -o jsonpath='{.status.readyReplicas}' 2>/dev/null || echo "0")
+          if [ "${READY:-0}" -ge 1 ]; then
+            ok "controller-manager has ${READY} ready replica(s)"
+          else
+            fail "controller-manager has no ready replicas"
+          fi
+
+          # ── 2. Health endpoints ────────────────────────────────────────────
           echo ""
-          echo "→ Testing metrics endpoint..."
-          curl -sf http://{{ include "clamav-operator.fullname" . }}.{{ .Release.Namespace }}.svc.cluster.local:{{ .Values.operator.service.metricsPort }}/metrics | grep -q "clamav_"
+          echo "── Health endpoints ─────────────────────────────────────────"
+          if wget -qO- "http://${SVC}:${HEALTH_PORT}/healthz" >/dev/null 2>&1; then
+            ok "/healthz returned 200"
+          else
+            fail "/healthz did not return 200"
+          fi
+          if wget -qO- "http://${SVC}:${HEALTH_PORT}/readyz" >/dev/null 2>&1; then
+            ok "/readyz returned 200"
+          else
+            fail "/readyz did not return 200"
+          fi
+
+          # ── 3. Metrics endpoint exposes clamav_ metrics ───────────────────
           echo ""
-          echo "✅ All health checks passed!"
+          echo "── Metrics ──────────────────────────────────────────────────"
+          METRICS=$(wget -qO- "http://${SVC}:${METRICS_PORT}/metrics" 2>/dev/null || echo "")
+          for metric in \
+            clamav_nodescans_total \
+            clamav_nodescans_running \
+            clamav_files_scanned_total \
+            clamav_files_infected_total \
+            clamav_scan_duration_seconds \
+            clamav_nodescan_last_completion_timestamp \
+            clamav_incremental_scans_total; do
+            if echo "$METRICS" | grep -q "^# HELP ${metric}"; then
+              ok "metric ${metric} registered"
+            else
+              fail "metric ${metric} NOT found"
+            fi
+          done
+
+          # ── 4. CRDs are installed ─────────────────────────────────────────
+          echo ""
+          echo "── CRDs ─────────────────────────────────────────────────────"
+          for crd in \
+            nodescans.clamav.io \
+            clusterscans.clamav.io \
+            scanpolicies.clamav.io \
+            scanschedules.clamav.io \
+            scancacheresources.clamav.io; do
+            if kubectl get crd "$crd" >/dev/null 2>&1; then
+              ok "CRD $crd present"
+            else
+              fail "CRD $crd MISSING"
+            fi
+          done
+
+          # ── 5. ServiceAccount exists and has RBAC ─────────────────────────
+          echo ""
+          echo "── RBAC ─────────────────────────────────────────────────────"
+          SA="{{ include "clamav-operator.serviceAccountName" . }}"
+          if kubectl get sa "$SA" -n "$NAMESPACE" >/dev/null 2>&1; then
+            ok "ServiceAccount $SA exists"
+          else
+            fail "ServiceAccount $SA MISSING"
+          fi
+          # Verify the operator SA can list NodeScans (core permission)
+          if kubectl auth can-i list nodescans.clamav.io \
+               --as="system:serviceaccount:${NAMESPACE}:${SA}" \
+               -n "$NAMESPACE" 2>/dev/null | grep -q "yes"; then
+            ok "SA can list nodescans"
+          else
+            fail "SA cannot list nodescans — check ClusterRole binding"
+          fi
+          # Verify the operator SA can create Jobs (required to launch scanner pods)
+          if kubectl auth can-i create jobs \
+               --as="system:serviceaccount:${NAMESPACE}:${SA}" \
+               -n "$NAMESPACE" 2>/dev/null | grep -q "yes"; then
+            ok "SA can create Jobs"
+          else
+            fail "SA cannot create Jobs — scanner pods will not launch"
+          fi
+
+          # ── Summary ───────────────────────────────────────────────────────
+          echo ""
+          echo "═════════════════════════════════════════════════════════════"
+          echo "  Results: ${PASS} passed / ${FAIL} failed"
+          echo "═════════════════════════════════════════════════════════════"
+          if [ "$FAIL" -gt 0 ]; then
+            exit 1
+          fi
       securityContext:
         allowPrivilegeEscalation: false
         capabilities:
