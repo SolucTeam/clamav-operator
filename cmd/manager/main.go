@@ -21,6 +21,8 @@ import (
 	"os"
 	"strings"
 
+	corev1 "k8s.io/api/core/v1"
+
 	// Import all Kubernetes client auth plugins (e.g. Azure, GCP, OIDC, etc.)
 	// to ensure that exec-entrypoint and run can make use of them.
 	_ "k8s.io/client-go/plugin/pkg/client/auth"
@@ -67,6 +69,7 @@ func main() {
 	var metricsAddr string
 	var enableLeaderElection bool
 	var probeAddr string
+	var webhookPort int
 	var scannerImage string
 	var clamavHost string
 	var clamavPort int
@@ -78,6 +81,9 @@ func main() {
 	flag.BoolVar(&enableLeaderElection, "leader-elect", false,
 		"Enable leader election for controller manager. "+
 			"Enabling this will ensure there is only one active controller manager.")
+	flag.IntVar(&webhookPort, "webhook-port", 9443,
+		"Port the webhook server listens on. Must match the containerPort in the Helm Deployment "+
+			"(webhook.port value) and the Service targetPort.")
 	flag.StringVar(&scannerImage, "scanner-image", "ghcr.io/solucteam/clamav-node-scanner:latest",
 		"Container image for the ClamAV scanner (overridden by Helm via --scanner-image flag)")
 	flag.StringVar(&clamavHost, "clamav-host", "clamav.clamav.svc.cluster.local",
@@ -108,7 +114,7 @@ func main() {
 			BindAddress: metricsAddr,
 		},
 		WebhookServer: webhook.NewServer(webhook.Options{
-			Port: 9443,
+			Port: webhookPort,
 		}),
 		HealthProbeBindAddress: probeAddr,
 		LeaderElection:         enableLeaderElection,
@@ -163,15 +169,29 @@ func main() {
 		setupLog.Info("Skipping startup validation checks (--skip-startup-checks=true)")
 	}
 
+	// Parse SCANNER_IMAGE_PULL_SECRETS env var (set by Helm from scanner.imagePullSecrets).
+	// Format: comma-separated secret names, e.g. "regcred,other-secret".
+	// Empty string → no pull secrets (public registry).
+	var scannerPullSecrets []corev1.LocalObjectReference
+	if raw := os.Getenv("SCANNER_IMAGE_PULL_SECRETS"); raw != "" {
+		for _, name := range strings.Split(raw, ",") {
+			name = strings.TrimSpace(name)
+			if name != "" {
+				scannerPullSecrets = append(scannerPullSecrets, corev1.LocalObjectReference{Name: name})
+			}
+		}
+	}
+
 	// Setup controllers
 	if err = (&controller.NodeScanReconciler{
-		Client:       mgr.GetClient(),
-		Scheme:       mgr.GetScheme(),
-		Recorder:     mgr.GetEventRecorderFor("nodescan-controller"),
-		Clientset:    clientset,
-		ScannerImage: scannerImage,
-		ClamavHost:   clamavHost,
-		ClamavPort:   clamavPort,
+		Client:                  mgr.GetClient(),
+		Scheme:                  mgr.GetScheme(),
+		Recorder:                mgr.GetEventRecorderFor("nodescan-controller"),
+		Clientset:               clientset,
+		ScannerImage:            scannerImage,
+		ClamavHost:              clamavHost,
+		ClamavPort:              clamavPort,
+		ScannerImagePullSecrets: scannerPullSecrets,
 	}).SetupWithManager(mgr); err != nil {
 		setupLog.Error(err, "unable to create controller", "controller", "NodeScan")
 		os.Exit(1)
