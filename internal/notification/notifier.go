@@ -80,7 +80,7 @@ func (n *Notifier) Send(ctx context.Context, nodeScan *clamavv1alpha1.NodeScan, 
 		}
 	}
 
-	if wh := scanPolicy.Spec.Notifications.Webhook; wh != nil {
+	if wh := scanPolicy.Spec.Notifications.Webhook; wh != nil && wh.Enabled {
 		if err := n.sendWebhook(ctx, nodeScan, scanPolicy); err != nil {
 			log.Error(err, "failed to send Webhook notification")
 			n.Recorder.Event(nodeScan, corev1.EventTypeWarning, "NotificationFailed",
@@ -209,7 +209,11 @@ func (n *Notifier) sendEmail(ctx context.Context, nodeScan *clamavv1alpha1.NodeS
 	fmt.Fprintf(&buf, "Node:              %s\n", nodeScan.Spec.NodeName)
 	fmt.Fprintf(&buf, "Scan Name:         %s\n", nodeScan.Name)
 	fmt.Fprintf(&buf, "Status:            %s\n", nodeScan.Status.Phase)
-	fmt.Fprintf(&buf, "Scan Date:         %s\n", nodeScan.Status.StartTime.Format(time.RFC3339))
+	scanDate := "unknown"
+	if nodeScan.Status.StartTime != nil {
+		scanDate = nodeScan.Status.StartTime.Format(time.RFC3339)
+	}
+	fmt.Fprintf(&buf, "Scan Date:         %s\n", scanDate)
 	fmt.Fprintf(&buf, "Duration:          %d seconds\n\n", nodeScan.Status.Duration)
 	buf.WriteString("STATISTICS:\n")
 	buf.WriteString("--------------------------------------------------------------------------------\n")

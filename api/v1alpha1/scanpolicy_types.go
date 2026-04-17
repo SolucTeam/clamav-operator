@@ -133,6 +133,9 @@ type EmailConfig struct {
 
 // WebhookConfig defines webhook notification settings
 type WebhookConfig struct {
+	// Enabled indicates if webhook notifications are enabled
+	Enabled bool `json:"enabled"`
+
 	// URL to send webhook notifications to
 	URL string `json:"url"`
 
