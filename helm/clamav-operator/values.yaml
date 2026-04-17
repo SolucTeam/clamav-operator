@@ -251,6 +251,24 @@ rbac:
         - get
         - list
         - watch
+    # Required by startup_checks.go: checkAPIServerConnectivity calls Namespaces().List()
+    - apiGroups:
+        - ""
+      resources:
+        - namespaces
+      verbs:
+        - get
+        - list
+        - watch
+    # Required by startup_checks.go: checkScannerServiceAccount calls ServiceAccounts(ns).Get()
+    - apiGroups:
+        - ""
+      resources:
+        - serviceaccounts
+      verbs:
+        - get
+        - list
+        - watch
     - apiGroups:
         - ""
       resources:
