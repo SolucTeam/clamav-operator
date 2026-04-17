@@ -1,0 +1,169 @@
+{{- /*
+crd-conversion-hook.yaml
+
+Adds the conversion webhook configuration to the three CRDs that have both
+a v1alpha1 and a v1beta1 version (NodeScan, ClusterScan, ScanSchedule).
+
+WHY THIS EXISTS
+  CRD files live in helm/crds/ and are installed verbatim by Helm — Go
+  template functions are unavailable there. The conversion.spec.webhook
+  section requires the Service name and namespace, which depend on the Helm
+  release name and are therefore only known at install time.
+
+  A post-install/post-upgrade Job is the standard way to patch CRDs when
+  the chart owns both the CRDs and the conversion webhook.
+
+HOW IT WORKS
+  A short-lived Job runs `kubectl patch crd` on each of the three CRDs to
+  inject the conversion webhook spec. The Job uses a dedicated ServiceAccount
+  with the minimum RBAC required (patch on CRDs).
+
+DEPENDENCIES
+  - cert-manager must have provisioned the webhook certificate before
+    the API server routes conversion requests. The Job itself has no
+    dependency on cert-manager; it only patches the CRD spec.
+
+TOGGLE
+  Set webhook.enabled=false to skip the hook entirely (no conversion webhook
+  needed when the operator is running in single-version mode).
+*/}}
+{{- if .Values.webhook.enabled }}
+---
+# ServiceAccount for the CRD-patch Job
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: {{ include "clamav-operator.fullname" . }}-crd-patcher
+  namespace: {{ .Release.Namespace }}
+  labels:
+    {{- include "clamav-operator.labels" . | nindent 4 }}
+    app.kubernetes.io/component: crd-patcher
+  annotations:
+    "helm.sh/hook": post-install,post-upgrade
+    "helm.sh/hook-weight": "-5"
+    "helm.sh/hook-delete-policy": before-hook-creation,hook-succeeded
+---
+# ClusterRole: patch permission on the three conversion CRDs
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: {{ include "clamav-operator.fullname" . }}-crd-patcher
+  labels:
+    {{- include "clamav-operator.labels" . | nindent 4 }}
+    app.kubernetes.io/component: crd-patcher
+  annotations:
+    "helm.sh/hook": post-install,post-upgrade
+    "helm.sh/hook-weight": "-5"
+    "helm.sh/hook-delete-policy": before-hook-creation,hook-succeeded
+rules:
+  - apiGroups: ["apiextensions.k8s.io"]
+    resources: ["customresourcedefinitions"]
+    resourceNames:
+      - nodescans.clamav.io
+      - clusterscans.clamav.io
+      - scanschedules.clamav.io
+    verbs: ["get", "patch"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: {{ include "clamav-operator.fullname" . }}-crd-patcher
+  labels:
+    {{- include "clamav-operator.labels" . | nindent 4 }}
+    app.kubernetes.io/component: crd-patcher
+  annotations:
+    "helm.sh/hook": post-install,post-upgrade
+    "helm.sh/hook-weight": "-5"
+    "helm.sh/hook-delete-policy": before-hook-creation,hook-succeeded
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: {{ include "clamav-operator.fullname" . }}-crd-patcher
+subjects:
+  - kind: ServiceAccount
+    name: {{ include "clamav-operator.fullname" . }}-crd-patcher
+    namespace: {{ .Release.Namespace }}
+---
+# Job: patch the three CRDs with the conversion webhook spec
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: {{ include "clamav-operator.fullname" . }}-crd-patcher
+  namespace: {{ .Release.Namespace }}
+  labels:
+    {{- include "clamav-operator.labels" . | nindent 4 }}
+    app.kubernetes.io/component: crd-patcher
+  annotations:
+    "helm.sh/hook": post-install,post-upgrade
+    "helm.sh/hook-weight": "0"
+    "helm.sh/hook-delete-policy": before-hook-creation,hook-succeeded
+spec:
+  backoffLimit: 3
+  ttlSecondsAfterFinished: 300
+  template:
+    metadata:
+      labels:
+        {{- include "clamav-operator.selectorLabels" . | nindent 8 }}
+        app.kubernetes.io/component: crd-patcher
+    spec:
+      restartPolicy: OnFailure
+      serviceAccountName: {{ include "clamav-operator.fullname" . }}-crd-patcher
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 65532
+        seccompProfile:
+          type: RuntimeDefault
+      containers:
+        - name: patcher
+          # bitnami/kubectl mirrors the server-side kubectl version.
+          # Pin to a minor version matching your cluster to avoid API skew.
+          image: bitnami/kubectl:1.29
+          imagePullPolicy: IfNotPresent
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop: ["ALL"]
+            readOnlyRootFilesystem: true
+          command:
+            - /bin/sh
+            - -c
+            - |
+              set -eu
+
+              SERVICE_NAME="{{ include "clamav-operator.fullname" . }}-webhook-service"
+              NAMESPACE="{{ .Release.Namespace }}"
+              CONVERT_PATH="/convert"
+
+              # JSON patch applied to each CRD's conversion section.
+              # strategy=Webhook tells the API server to call our /convert handler
+              # for every request that mixes v1alpha1 and v1beta1 objects.
+              PATCH=$(cat <<EOF
+              {
+                "spec": {
+                  "conversion": {
+                    "strategy": "Webhook",
+                    "webhook": {
+                      "conversionReviewVersions": ["v1"],
+                      "clientConfig": {
+                        "service": {
+                          "name": "${SERVICE_NAME}",
+                          "namespace": "${NAMESPACE}",
+                          "path": "${CONVERT_PATH}",
+                          "port": 443
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+              EOF
+              )
+
+              for CRD in nodescans.clamav.io clusterscans.clamav.io scanschedules.clamav.io; do
+                echo "Patching CRD ${CRD}..."
+                kubectl patch crd "${CRD}" --type=merge -p "${PATCH}"
+                echo "  Done."
+              done
+
+              echo "All CRDs patched successfully."
+{{- end }}

@@ -48,6 +48,9 @@ spec:
         - --health-probe-bind-address=:{{ .Values.operator.service.healthPort }}
         - --metrics-bind-address=:{{ .Values.operator.service.metricsPort }}
         - --scanner-image={{ include "clamav-operator.scannerImage" . }}
+        {{- if .Values.webhook.enabled }}
+        - --webhook-port={{ .Values.webhook.port }}
+        {{- end }}
         {{- if eq .Values.scanner.mode "remote" }}
         - --clamav-host={{ .Values.scanner.clamav.host }}
         - --clamav-port={{ .Values.scanner.clamav.port }}
@@ -61,8 +64,12 @@ spec:
           value: {{ .Values.scanner.standalone.clamscanPath | quote }}
         - name: SCANNER_CLAMAV_DB_PATH
           value: {{ .Values.scanner.standalone.clamavDbPath | quote }}
+        # In standalone mode a freshclam CronJob manages signature updates on a schedule.
+        # The scanner must NOT update signatures during a scan (write conflict risk).
+        # In remote mode the ClamAV daemon owns its own update cycle; same rule applies.
+        # → always "false"; the value from freshclam.enabled is intentionally ignored here.
         - name: SCANNER_UPDATE_SIGNATURES
-          value: {{ .Values.scanner.freshclam.enabled | quote }}
+          value: "false"
         - name: SCANNER_INCREMENTAL_ENABLED
           value: {{ .Values.scanner.incremental.enabled | quote }}
         - name: SCANNER_SCAN_STRATEGY
@@ -73,6 +80,12 @@ spec:
           value: {{ .Values.scanner.incremental.maxFileAgeHours | quote }}
         - name: SCANNER_SKIP_UNCHANGED_FILES
           value: {{ .Values.scanner.incremental.skipUnchangedFiles | quote }}
+        {{- if .Values.scanner.imagePullSecrets }}
+        # Comma-separated secret names forwarded to scanner Job pods.
+        # Parsed by main.go into []corev1.LocalObjectReference.
+        - name: SCANNER_IMAGE_PULL_SECRETS
+          value: {{ range $i, $s := .Values.scanner.imagePullSecrets }}{{ if $i }},{{ end }}{{ $s.name }}{{ end }}
+        {{- end }}
         {{- with .Values.env }}
         {{- toYaml . | nindent 8 }}
         {{- end }}
