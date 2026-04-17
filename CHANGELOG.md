@@ -7,10 +7,36 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.3.0] - 2026-04-17
+
+## 🚀 Features
+
+* Merge pull request #27 from SolucTeam/feat/webhook-tls-and-operator-fixes (90faea9)
+* feat: add cert-manager webhook TLS, fix race conditions and operator bugs (c5a5b92)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.2.0] - 2026-04-15
 
 ## 🚀 Features
 
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
+
+## [v0.3.0] - 2026-04-17
+
+## 🚀 Features
+
+* Merge pull request #27 from SolucTeam/feat/webhook-tls-and-operator-fixes (90faea9)
+* feat: add cert-manager webhook TLS, fix race conditions and operator bugs (c5a5b92)
 
 ## 🐛 Bug Fixes
 
@@ -30,10 +56,36 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.3.0] - 2026-04-17
+
+## 🚀 Features
+
+* Merge pull request #27 from SolucTeam/feat/webhook-tls-and-operator-fixes (90faea9)
+* feat: add cert-manager webhook TLS, fix race conditions and operator bugs (c5a5b92)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.2.0] - 2026-04-15
 
 ## 🚀 Features
 
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
+
+## [v0.3.0] - 2026-04-17
+
+## 🚀 Features
+
+* Merge pull request #27 from SolucTeam/feat/webhook-tls-and-operator-fixes (90faea9)
+* feat: add cert-manager webhook TLS, fix race conditions and operator bugs (c5a5b92)
 
 ## 🐛 Bug Fixes
 
@@ -61,10 +113,36 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.3.0] - 2026-04-17
+
+## 🚀 Features
+
+* Merge pull request #27 from SolucTeam/feat/webhook-tls-and-operator-fixes (90faea9)
+* feat: add cert-manager webhook TLS, fix race conditions and operator bugs (c5a5b92)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.2.0] - 2026-04-15
 
 ## 🚀 Features
 
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
+
+## [v0.3.0] - 2026-04-17
+
+## 🚀 Features
+
+* Merge pull request #27 from SolucTeam/feat/webhook-tls-and-operator-fixes (90faea9)
+* feat: add cert-manager webhook TLS, fix race conditions and operator bugs (c5a5b92)
 
 ## 🐛 Bug Fixes
 
@@ -84,10 +162,36 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.3.0] - 2026-04-17
+
+## 🚀 Features
+
+* Merge pull request #27 from SolucTeam/feat/webhook-tls-and-operator-fixes (90faea9)
+* feat: add cert-manager webhook TLS, fix race conditions and operator bugs (c5a5b92)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.2.0] - 2026-04-15
 
 ## 🚀 Features
 
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
+
+## [v0.3.0] - 2026-04-17
+
+## 🚀 Features
+
+* Merge pull request #27 from SolucTeam/feat/webhook-tls-and-operator-fixes (90faea9)
+* feat: add cert-manager webhook TLS, fix race conditions and operator bugs (c5a5b92)
 
 ## 🐛 Bug Fixes
 
@@ -107,10 +211,36 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.3.0] - 2026-04-17
+
+## 🚀 Features
+
+* Merge pull request #27 from SolucTeam/feat/webhook-tls-and-operator-fixes (90faea9)
+* feat: add cert-manager webhook TLS, fix race conditions and operator bugs (c5a5b92)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.2.0] - 2026-04-15
 
 ## 🚀 Features
 
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
+
+## [v0.3.0] - 2026-04-17
+
+## 🚀 Features
+
+* Merge pull request #27 from SolucTeam/feat/webhook-tls-and-operator-fixes (90faea9)
+* feat: add cert-manager webhook TLS, fix race conditions and operator bugs (c5a5b92)
 
 ## 🐛 Bug Fixes
 
@@ -130,10 +260,36 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.3.0] - 2026-04-17
+
+## 🚀 Features
+
+* Merge pull request #27 from SolucTeam/feat/webhook-tls-and-operator-fixes (90faea9)
+* feat: add cert-manager webhook TLS, fix race conditions and operator bugs (c5a5b92)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.2.0] - 2026-04-15
 
 ## 🚀 Features
 
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
+
+## [v0.3.0] - 2026-04-17
+
+## 🚀 Features
+
+* Merge pull request #27 from SolucTeam/feat/webhook-tls-and-operator-fixes (90faea9)
+* feat: add cert-manager webhook TLS, fix race conditions and operator bugs (c5a5b92)
 
 ## 🐛 Bug Fixes
 
@@ -161,10 +317,36 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.3.0] - 2026-04-17
+
+## 🚀 Features
+
+* Merge pull request #27 from SolucTeam/feat/webhook-tls-and-operator-fixes (90faea9)
+* feat: add cert-manager webhook TLS, fix race conditions and operator bugs (c5a5b92)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.2.0] - 2026-04-15
 
 ## 🚀 Features
 
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
+
+## [v0.3.0] - 2026-04-17
+
+## 🚀 Features
+
+* Merge pull request #27 from SolucTeam/feat/webhook-tls-and-operator-fixes (90faea9)
+* feat: add cert-manager webhook TLS, fix race conditions and operator bugs (c5a5b92)
 
 ## 🐛 Bug Fixes
 
@@ -184,10 +366,36 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.3.0] - 2026-04-17
+
+## 🚀 Features
+
+* Merge pull request #27 from SolucTeam/feat/webhook-tls-and-operator-fixes (90faea9)
+* feat: add cert-manager webhook TLS, fix race conditions and operator bugs (c5a5b92)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.2.0] - 2026-04-15
 
 ## 🚀 Features
 
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
+
+## [v0.3.0] - 2026-04-17
+
+## 🚀 Features
+
+* Merge pull request #27 from SolucTeam/feat/webhook-tls-and-operator-fixes (90faea9)
+* feat: add cert-manager webhook TLS, fix race conditions and operator bugs (c5a5b92)
 
 ## 🐛 Bug Fixes
 
@@ -210,10 +418,36 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.3.0] - 2026-04-17
+
+## 🚀 Features
+
+* Merge pull request #27 from SolucTeam/feat/webhook-tls-and-operator-fixes (90faea9)
+* feat: add cert-manager webhook TLS, fix race conditions and operator bugs (c5a5b92)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.2.0] - 2026-04-15
 
 ## 🚀 Features
 
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
+
+## [v0.3.0] - 2026-04-17
+
+## 🚀 Features
+
+* Merge pull request #27 from SolucTeam/feat/webhook-tls-and-operator-fixes (90faea9)
+* feat: add cert-manager webhook TLS, fix race conditions and operator bugs (c5a5b92)
 
 ## 🐛 Bug Fixes
 
@@ -233,10 +467,36 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.3.0] - 2026-04-17
+
+## 🚀 Features
+
+* Merge pull request #27 from SolucTeam/feat/webhook-tls-and-operator-fixes (90faea9)
+* feat: add cert-manager webhook TLS, fix race conditions and operator bugs (c5a5b92)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.2.0] - 2026-04-15
 
 ## 🚀 Features
 
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
+
+## [v0.3.0] - 2026-04-17
+
+## 🚀 Features
+
+* Merge pull request #27 from SolucTeam/feat/webhook-tls-and-operator-fixes (90faea9)
+* feat: add cert-manager webhook TLS, fix race conditions and operator bugs (c5a5b92)
 
 ## 🐛 Bug Fixes
 
@@ -264,10 +524,36 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.3.0] - 2026-04-17
+
+## 🚀 Features
+
+* Merge pull request #27 from SolucTeam/feat/webhook-tls-and-operator-fixes (90faea9)
+* feat: add cert-manager webhook TLS, fix race conditions and operator bugs (c5a5b92)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.2.0] - 2026-04-15
 
 ## 🚀 Features
 
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
+
+## [v0.3.0] - 2026-04-17
+
+## 🚀 Features
+
+* Merge pull request #27 from SolucTeam/feat/webhook-tls-and-operator-fixes (90faea9)
+* feat: add cert-manager webhook TLS, fix race conditions and operator bugs (c5a5b92)
 
 ## 🐛 Bug Fixes
 
@@ -287,10 +573,36 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.3.0] - 2026-04-17
+
+## 🚀 Features
+
+* Merge pull request #27 from SolucTeam/feat/webhook-tls-and-operator-fixes (90faea9)
+* feat: add cert-manager webhook TLS, fix race conditions and operator bugs (c5a5b92)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.2.0] - 2026-04-15
 
 ## 🚀 Features
 
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
+
+## [v0.3.0] - 2026-04-17
+
+## 🚀 Features
+
+* Merge pull request #27 from SolucTeam/feat/webhook-tls-and-operator-fixes (90faea9)
+* feat: add cert-manager webhook TLS, fix race conditions and operator bugs (c5a5b92)
 
 ## 🐛 Bug Fixes
 
@@ -310,10 +622,36 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.3.0] - 2026-04-17
+
+## 🚀 Features
+
+* Merge pull request #27 from SolucTeam/feat/webhook-tls-and-operator-fixes (90faea9)
+* feat: add cert-manager webhook TLS, fix race conditions and operator bugs (c5a5b92)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.2.0] - 2026-04-15
 
 ## 🚀 Features
 
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
+
+## [v0.3.0] - 2026-04-17
+
+## 🚀 Features
+
+* Merge pull request #27 from SolucTeam/feat/webhook-tls-and-operator-fixes (90faea9)
+* feat: add cert-manager webhook TLS, fix race conditions and operator bugs (c5a5b92)
 
 ## 🐛 Bug Fixes
 
@@ -333,10 +671,36 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.3.0] - 2026-04-17
+
+## 🚀 Features
+
+* Merge pull request #27 from SolucTeam/feat/webhook-tls-and-operator-fixes (90faea9)
+* feat: add cert-manager webhook TLS, fix race conditions and operator bugs (c5a5b92)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.2.0] - 2026-04-15
 
 ## 🚀 Features
 
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
+
+## [v0.3.0] - 2026-04-17
+
+## 🚀 Features
+
+* Merge pull request #27 from SolucTeam/feat/webhook-tls-and-operator-fixes (90faea9)
+* feat: add cert-manager webhook TLS, fix race conditions and operator bugs (c5a5b92)
 
 ## 🐛 Bug Fixes
 
@@ -364,10 +728,36 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.3.0] - 2026-04-17
+
+## 🚀 Features
+
+* Merge pull request #27 from SolucTeam/feat/webhook-tls-and-operator-fixes (90faea9)
+* feat: add cert-manager webhook TLS, fix race conditions and operator bugs (c5a5b92)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.2.0] - 2026-04-15
 
 ## 🚀 Features
 
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
+
+## [v0.3.0] - 2026-04-17
+
+## 🚀 Features
+
+* Merge pull request #27 from SolucTeam/feat/webhook-tls-and-operator-fixes (90faea9)
+* feat: add cert-manager webhook TLS, fix race conditions and operator bugs (c5a5b92)
 
 ## 🐛 Bug Fixes
 
@@ -387,10 +777,36 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.3.0] - 2026-04-17
+
+## 🚀 Features
+
+* Merge pull request #27 from SolucTeam/feat/webhook-tls-and-operator-fixes (90faea9)
+* feat: add cert-manager webhook TLS, fix race conditions and operator bugs (c5a5b92)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.2.0] - 2026-04-15
 
 ## 🚀 Features
 
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
+
+## [v0.3.0] - 2026-04-17
+
+## 🚀 Features
+
+* Merge pull request #27 from SolucTeam/feat/webhook-tls-and-operator-fixes (90faea9)
+* feat: add cert-manager webhook TLS, fix race conditions and operator bugs (c5a5b92)
 
 ## 🐛 Bug Fixes
 
