@@ -21,6 +21,7 @@ Helm chart for deploying the **ClamAV Operator** — a Kubernetes operator for c
 - Kubernetes 1.24+
 - Helm 3.0+
 - **No external ClamAV service required** (standalone mode is the default)
+- **cert-manager** (optional, but strongly recommended for production webhook TLS — see [Webhook TLS](#webhook-tls))
 
 ## Installation
 
@@ -115,6 +116,35 @@ helm install clamav-operator ./helm/clamav-operator \
 | `scanner.incremental.maxFileAgeHours` | Max file age for incremental scans | `24` |
 | `scanner.incremental.skipUnchangedFiles` | Skip files with same mtime+size | `true` |
 
+### Webhook & TLS Parameters
+
+| Parameter | Description | Default |
+|-----------|-------------|---------|
+| `webhook.enabled` | Enable admission + conversion webhooks | `true` |
+| `webhook.port` | Webhook server port (synced to `--webhook-port` flag and Service) | `9443` |
+| `webhook.certManager.enabled` | Use cert-manager to manage webhook TLS | `false` |
+| `webhook.certificates.autoGenerate` | Auto-generate self-signed certs (dev only, not rotated) | `true` |
+| `webhook.certificates.caBundle` | Base64-encoded CA bundle for manual TLS | `""` |
+
+When `webhook.certManager.enabled: true` the chart creates a full self-signed CA chain (SelfSigned Issuer → CA Certificate → CA Issuer → leaf Certificate). The `ValidatingWebhookConfiguration` is annotated with `cert-manager.io/inject-ca-from` so cert-manager's cainjector populates `caBundle` automatically.
+
+A Helm post-install/post-upgrade hook Job patches the three CRDs (`nodescans`, `clusterscans`, `scanschedules`) with `conversion.strategy: Webhook` so the `/convert` endpoint is correctly wired.
+
+### Scanner Image Pull Secrets
+
+| Parameter | Description | Default |
+|-----------|-------------|---------|
+| `scanner.imagePullSecrets` | Pull secrets injected into every scanner Job pod | `[]` |
+
+```yaml
+# Private registry example
+scanner:
+  imagePullSecrets:
+    - name: regcred
+```
+
+These secrets are forwarded from the operator pod environment (`SCANNER_IMAGE_PULL_SECRETS`) into the `imagePullSecrets` field of each Job's pod spec.
+
 ### Other Parameters
 
 | Parameter | Description | Default |
@@ -173,6 +203,16 @@ scanner:
   clamav:
     host: clamav.clamav.svc.cluster.local
     port: 3310
+```
+
+### Production with cert-manager TLS
+
+```yaml
+# cert-manager-values.yaml
+webhook:
+  enabled: true
+  certManager:
+    enabled: true    # Requires cert-manager installed in the cluster
 ```
 
 ### Production HA
@@ -383,7 +423,22 @@ kubectl logs -n clamav-system -l app.kubernetes.io/component=freshclam --tail=50
 ### Webhooks Not Working
 
 ```bash
-kubectl get secret -n clamav-system clamav-operator-webhook-server-cert
+# Check cert-manager Certificate status
+kubectl get certificate -n clamav-system
+# READY=True → secret provisioned, cainjector will populate caBundle shortly
+
+# Verify caBundle is non-empty in the ValidatingWebhookConfiguration
+kubectl get validatingwebhookconfiguration \
+  clamav-operator-validating-webhook-configuration \
+  -o jsonpath='{.webhooks[0].clientConfig.caBundle}' | wc -c
+# Must be > 0. If 0, ensure cert-manager cainjector is running:
+kubectl get pods -n cert-manager -l app=cainjector
+
+# Check that the CRD conversion hook Job completed
+kubectl get job -n clamav-system | grep crd-patcher
+kubectl logs -n clamav-system job/clamav-operator-crd-patcher
+
+# Emergency: disable webhooks entirely
 helm upgrade clamav-operator ./helm/clamav-operator \
   --namespace clamav-system \
   --reuse-values \

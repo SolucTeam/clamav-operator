@@ -1,15 +1,20 @@
 🛡️  ClamAV Operator {{ .Chart.AppVersion }} deployed successfully!
 
-NAMESPACE: {{ .Release.Namespace }}
+NAMESPACE : {{ .Release.Namespace }}
+RELEASE   : {{ .Release.Name }}
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   QUICK START
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-1. Check the operator is running:
-   kubectl -n {{ .Release.Namespace }} get deploy {{ include "clamav-operator.fullname" . }}-controller-manager
+1. Verify the operator is running:
+   kubectl -n {{ .Release.Namespace }} rollout status deploy \
+     {{ include "clamav-operator.fullname" . }}-controller-manager
 
-2. Trigger a full cluster scan:
+2. Run the Helm test suite:
+   helm test {{ .Release.Name }} -n {{ .Release.Namespace }}
+
+3. Trigger a full cluster scan:
    kubectl apply -f - <<EOF
    apiVersion: clamav.io/v1alpha1
    kind: ClusterScan
@@ -20,25 +25,28 @@ NAMESPACE: {{ .Release.Namespace }}
      concurrent: 3
    EOF
 
-3. Watch the scan progress:
+4. Watch progress:
    kubectl -n {{ .Release.Namespace }} get nodescans -w
 
-4. Check results:
-   kubectl -n {{ .Release.Namespace }} get clusterscan quick-scan -o jsonpath='{.status.phase}'
+5. Check results:
+   kubectl -n {{ .Release.Namespace }} get clusterscan quick-scan \
+     -o jsonpath='{.status.phase}'
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   SCAN MODE: {{ .Values.scanner.mode | upper }}
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 {{- if eq .Values.scanner.mode "standalone" }}
-  Scanner: embedded clamscan binary (no external dependency)
-  Image:   {{ include "clamav-operator.scannerImage" . }}
+  Scanner : embedded clamscan binary (no external dependency)
+  Image   : {{ include "clamav-operator.scannerImage" . }}
 {{- if .Values.scanner.freshclam.enabled }}
-  Freshclam: enabled (schedule: {{ .Values.scanner.freshclam.schedule }})
+  Freshclam: enabled — signatures refreshed on schedule: {{ .Values.scanner.freshclam.schedule }}
 {{- else }}
-  Freshclam: DISABLED — signatures must be pre-loaded in the image
+⚠️  Freshclam is DISABLED.
+  Signatures must be pre-loaded in the scanner image (air-gap mode).
+  See: https://github.com/SolucTeam/clamav-operator/blob/main/docs/airgap-signatures.md
 {{- end }}
 {{- else }}
-  Scanner: remote clamd ({{ .Values.scanner.clamav.host }}:{{ .Values.scanner.clamav.port }})
+  Scanner: remote clamd at {{ .Values.scanner.clamav.host }}:{{ .Values.scanner.clamav.port }}
 {{- end }}
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -58,16 +66,33 @@ NAMESPACE: {{ .Release.Namespace }}
   MONITORING
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 {{- if .Values.monitoring.serviceMonitor.enabled }}
-  ServiceMonitor: enabled — Prometheus will scrape metrics automatically
+  ServiceMonitor : enabled — Prometheus will scrape automatically
 {{- else }}
-  ServiceMonitor: disabled
+  ServiceMonitor : disabled
   To enable: helm upgrade {{ .Release.Name }} ... --set monitoring.serviceMonitor.enabled=true
 {{- end }}
-  Metrics endpoint (port-forward):
-  kubectl -n {{ .Release.Namespace }} port-forward svc/{{ include "clamav-operator.fullname" . }} 8080:8080
+
+  Metrics (port-forward):
+  kubectl -n {{ .Release.Namespace }} port-forward \
+    svc/{{ include "clamav-operator.fullname" . }} 8080:8080
+  curl -s http://localhost:8080/metrics | grep clamav_
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  PRODUCTION CHECKLIST
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+{{- if lt (int .Values.operator.replicaCount) 2 }}
+⚠️  operator.replicaCount={{ .Values.operator.replicaCount }} — set to 2 for HA
+{{- end }}
+{{- if not .Values.operator.leaderElection.enabled }}
+⚠️  Leader election is disabled — do not run more than 1 replica
+{{- end }}
+  Use the production values preset for recommended resource limits:
+  helm upgrade {{ .Release.Name }} oci://ghcr.io/solucteam/charts/clamav-operator \
+    -f https://raw.githubusercontent.com/SolucTeam/clamav-operator/main/helm/clamav-operator/values-production.yaml
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   DOCUMENTATION
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  GitHub : https://github.com/SolucTeam/clamav-operator
-  Docs   : https://github.com/SolucTeam/clamav-operator/blob/main/DEPLOYMENT.md
+  GitHub  : https://github.com/SolucTeam/clamav-operator
+  Runbook : https://github.com/SolucTeam/clamav-operator/blob/main/docs/runbook.md
+  Air-gap : https://github.com/SolucTeam/clamav-operator/blob/main/docs/airgap-signatures.md

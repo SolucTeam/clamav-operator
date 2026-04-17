@@ -1,0 +1,125 @@
+{{- /*
+validating-webhook-configuration.yaml
+
+Crée la ValidatingWebhookConfiguration pour les trois types admis par le chart :
+  - ClusterScan   → /validate-clamav-io-v1alpha1-clusterscan
+  - NodeScan      → /validate-clamav-io-v1alpha1-nodescan
+  - ScanSchedule  → /validate-clamav-io-v1alpha1-scanschedule
+
+Deux modes de gestion du caBundle :
+  1. webhook.certManager.enabled=true  → annotation cert-manager.io/inject-ca-from
+     Le cainjector de cert-manager injecte automatiquement le CA dans caBundle.
+     caBundle doit rester vide dans ce cas (le champ est géré par le controller).
+
+  2. webhook.certManager.enabled=false → caBundle issu de webhook.certificates.caBundle
+     (base64-encodé). Si vide, le pod démarrera mais les appels webhook seront rejetés
+     par l'API server tant que le caBundle n'est pas renseigné.
+*/}}
+{{- if .Values.webhook.enabled }}
+apiVersion: admissionregistration.k8s.io/v1
+kind: ValidatingWebhookConfiguration
+metadata:
+  name: {{ include "clamav-operator.fullname" . }}-validating-webhook-configuration
+  labels:
+    {{- include "clamav-operator.labels" . | nindent 4 }}
+    app.kubernetes.io/component: webhook
+  {{- if .Values.webhook.certManager.enabled }}
+  annotations:
+    # Le cainjector de cert-manager surveille ce Certificate et injecte
+    # automatiquement le ca.crt dans le champ caBundle de chaque webhook ci-dessous.
+    cert-manager.io/inject-ca-from: {{ .Release.Namespace }}/{{ include "clamav-operator.fullname" . }}-webhook-cert
+  {{- end }}
+webhooks:
+  # --------------------------------------------------------------------------
+  # ClusterScan — validation à la création et la mise à jour
+  # --------------------------------------------------------------------------
+  - name: vclusterscan.kb.io
+    admissionReviewVersions:
+      - v1
+    clientConfig:
+      service:
+        name: {{ include "clamav-operator.fullname" . }}-webhook-service
+        namespace: {{ .Release.Namespace }}
+        path: /validate-clamav-io-v1alpha1-clusterscan
+        port: 443
+      {{- if and (not .Values.webhook.certManager.enabled) .Values.webhook.certificates.caBundle }}
+      caBundle: {{ .Values.webhook.certificates.caBundle }}
+      {{- end }}
+    failurePolicy: Fail
+    matchPolicy: Equivalent
+    rules:
+      - apiGroups:
+          - clamav.io
+        apiVersions:
+          - v1alpha1
+        operations:
+          - CREATE
+          - UPDATE
+        resources:
+          - clusterscans
+        scope: Cluster
+    sideEffects: None
+    timeoutSeconds: 10
+
+  # --------------------------------------------------------------------------
+  # NodeScan — validation à la création et la mise à jour
+  # --------------------------------------------------------------------------
+  - name: vnodescan.kb.io
+    admissionReviewVersions:
+      - v1
+    clientConfig:
+      service:
+        name: {{ include "clamav-operator.fullname" . }}-webhook-service
+        namespace: {{ .Release.Namespace }}
+        path: /validate-clamav-io-v1alpha1-nodescan
+        port: 443
+      {{- if and (not .Values.webhook.certManager.enabled) .Values.webhook.certificates.caBundle }}
+      caBundle: {{ .Values.webhook.certificates.caBundle }}
+      {{- end }}
+    failurePolicy: Fail
+    matchPolicy: Equivalent
+    rules:
+      - apiGroups:
+          - clamav.io
+        apiVersions:
+          - v1alpha1
+        operations:
+          - CREATE
+          - UPDATE
+        resources:
+          - nodescans
+        scope: Namespaced
+    sideEffects: None
+    timeoutSeconds: 10
+
+  # --------------------------------------------------------------------------
+  # ScanSchedule — validation de l'expression cron et des champs liés
+  # --------------------------------------------------------------------------
+  - name: vscanschedule.kb.io
+    admissionReviewVersions:
+      - v1
+    clientConfig:
+      service:
+        name: {{ include "clamav-operator.fullname" . }}-webhook-service
+        namespace: {{ .Release.Namespace }}
+        path: /validate-clamav-io-v1alpha1-scanschedule
+        port: 443
+      {{- if and (not .Values.webhook.certManager.enabled) .Values.webhook.certificates.caBundle }}
+      caBundle: {{ .Values.webhook.certificates.caBundle }}
+      {{- end }}
+    failurePolicy: Fail
+    matchPolicy: Equivalent
+    rules:
+      - apiGroups:
+          - clamav.io
+        apiVersions:
+          - v1alpha1
+        operations:
+          - CREATE
+          - UPDATE
+        resources:
+          - scanschedules
+        scope: Namespaced
+    sideEffects: None
+    timeoutSeconds: 10
+{{- end }}

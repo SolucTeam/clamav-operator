@@ -130,16 +130,20 @@ func (r *ScanScheduleReconciler) Reconcile(ctx context.Context, req ctrl.Request
 			log.Info("skipping run due to concurrency policy", "policy", "Forbid")
 			needsRun = false
 		} else if scanSchedule.Spec.ConcurrencyPolicy == "Replace" && len(scanSchedule.Status.Active) > 0 {
-			// Delete active scans
+			// Request deletion of all active ClusterScans.
+			// We do NOT clear Status.Active here — cleanupHistory (called below)
+			// will re-build it from the live API state, naturally excluding
+			// ClusterScans that have a DeletionTimestamp (i.e. are being removed).
+			// Clearing prematurely would cause a second reconcile to recreate
+			// them before the GC has had a chance to remove them.
 			for _, ref := range scanSchedule.Status.Active {
 				cs := &clamavv1alpha1.ClusterScan{}
 				if err := r.Get(ctx, client.ObjectKey{Name: ref.Name, Namespace: ref.Namespace}, cs); err == nil {
-					if deleteErr := r.Delete(ctx, cs); deleteErr != nil {
+					if deleteErr := r.Delete(ctx, cs); deleteErr != nil && !errors.IsNotFound(deleteErr) {
 						log.Error(deleteErr, "failed to delete active ClusterScan during Replace policy")
 					}
 				}
 			}
-			scanSchedule.Status.Active = []corev1.ObjectReference{}
 		}
 	}
 
@@ -234,6 +238,13 @@ func (r *ScanScheduleReconciler) cleanupHistory(ctx context.Context, scanSchedul
 	var active []corev1.ObjectReference
 
 	for _, cs := range clusterScans.Items {
+		// ClusterScans with a DeletionTimestamp are being removed (e.g. by a
+		// Replace concurrency policy). Exclude them from the active list so
+		// they don't block a new scan from being created on the next reconcile.
+		if !cs.DeletionTimestamp.IsZero() {
+			continue
+		}
+
 		switch cs.Status.Phase {
 		case clamavv1alpha1.ClusterScanPhaseCompleted:
 			successful = append(successful, cs)

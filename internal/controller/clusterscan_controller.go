@@ -103,8 +103,12 @@ func (r *ClusterScanReconciler) Reconcile(ctx context.Context, req ctrl.Request)
 		return ctrl.Result{}, err
 	}
 
-	// Update counters
-	var completed, running, failed, infected int32
+	// Update counters.
+	// "inFlight" counts NodeScans that are actively consuming concurrency slots:
+	// both Pending (created, Job not yet running) and Running.
+	// This prevents the creation loop below from overshooting the concurrency
+	// limit between two consecutive reconciliations.
+	var completed, inFlight, failed, infected int32
 	var totalScanned, totalInfected int64
 	nodeRefs := []clamavv1alpha1.NodeScanReference{}
 
@@ -117,8 +121,9 @@ func (r *ClusterScanReconciler) Reconcile(ctx context.Context, req ctrl.Request)
 			if ns.Status.FilesInfected > 0 {
 				infected++
 			}
-		case clamavv1alpha1.NodeScanPhaseRunning:
-			running++
+		case clamavv1alpha1.NodeScanPhaseRunning, clamavv1alpha1.NodeScanPhasePending:
+			// Both Pending and Running hold a concurrency slot.
+			inFlight++
 		case clamavv1alpha1.NodeScanPhaseFailed:
 			failed++
 		}
@@ -134,36 +139,36 @@ func (r *ClusterScanReconciler) Reconcile(ctx context.Context, req ctrl.Request)
 		})
 	}
 
-	// Create NodeScans for nodes that don't have one yet
+	// Create NodeScans for nodes that don't have one yet, up to the concurrency limit.
+	// Use DefaultConcurrentClusterScans from defaults.go — single source of truth.
 	concurrent := clusterScan.Spec.Concurrent
 	if concurrent == 0 {
-		concurrent = 3
+		concurrent = DefaultConcurrentClusterScans
 	}
 
-	if running < concurrent {
-		for _, node := range nodes {
-			// Check if NodeScan already exists for this node
-			exists := false
-			for _, ns := range existingNodeScans.Items {
-				if ns.Spec.NodeName == node.Name {
-					exists = true
-					break
-				}
-			}
+	// Build a set of nodes that already have a NodeScan for O(1) lookup.
+	coveredNodes := make(map[string]struct{}, len(existingNodeScans.Items))
+	for _, ns := range existingNodeScans.Items {
+		coveredNodes[ns.Spec.NodeName] = struct{}{}
+	}
 
-			if !exists && running < concurrent {
-				if err := r.createNodeScanForNode(ctx, &clusterScan, node.Name); err != nil {
-					log.Error(err, "failed to create NodeScan", "node", node.Name)
-					continue
-				}
-				running++
-			}
+	for _, node := range nodes {
+		if inFlight >= concurrent {
+			break
 		}
+		if _, covered := coveredNodes[node.Name]; covered {
+			continue
+		}
+		if err := r.createNodeScanForNode(ctx, &clusterScan, node.Name); err != nil {
+			log.Error(err, "failed to create NodeScan", "node", node.Name)
+			continue
+		}
+		inFlight++
 	}
 
-	// Update status
+	// Update status — expose inFlight as RunningNodes (includes Pending+Running).
 	clusterScan.Status.CompletedNodes = completed
-	clusterScan.Status.RunningNodes = running
+	clusterScan.Status.RunningNodes = inFlight
 	clusterScan.Status.FailedNodes = failed
 	clusterScan.Status.InfectedNodes = infected
 	clusterScan.Status.TotalFilesScanned = totalScanned
