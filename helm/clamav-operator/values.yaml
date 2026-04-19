@@ -344,6 +344,28 @@ rbac:
         - update
 
 # =============================================================================
+# CRD PATCHER HOOK
+# =============================================================================
+# Post-install/post-upgrade Job that patches the three CRDs (NodeScan,
+# ClusterScan, ScanSchedule) with conversion.strategy: Webhook.
+# Only runs when webhook.enabled=true.
+crdPatcher:
+  image:
+    # registry.k8s.io/kubectl is the official, Google-maintained kubectl image.
+    # Pin the tag to the minor version of your cluster (e.g. "1.29", "1.30").
+    # Any image that provides a kubectl binary at /usr/bin/kubectl works.
+    repository: registry.k8s.io/kubectl
+    tag: "1.29"
+    pullPolicy: IfNotPresent
+
+  # Pull secrets for the patcher Job pods (air-gap / private registry).
+  # Format: list of {name: <secret>} — same structure as pod.spec.imagePullSecrets.
+  imagePullSecrets: []
+  # Example:
+  #   imagePullSecrets:
+  #     - name: regcred
+
+# =============================================================================
 # WEBHOOK CONFIGURATION
 # =============================================================================
 webhook:
@@ -497,6 +519,30 @@ networkPolicy:
   policyTypes:
     - Ingress
     - Egress
+
+  # CIDR of the Kubernetes API server / control-plane nodes.
+  # The API server is a process on control-plane nodes — not a pod.
+  # namespaceSelector has no effect on this traffic; ipBlock is required.
+  # "0.0.0.0/0" allows all sources. For tighter security set this to your
+  # actual control-plane CIDR (e.g. "10.0.0.10/32" or "10.0.0.0/24").
+  # This CIDR is used for:
+  #   - egress to the Kubernetes API server (startup checks, CRD operations)
+  #   - ingress from the API server to the webhook port (admission / conversion)
+  controlPlaneCIDR: "0.0.0.0/0"
+
+  # Port the Kubernetes API server listens on.
+  # Standard: 6443. Some managed clusters (AKS, GKE) expose it on 443.
+  apiServerPort: 6443
+
+  # CIDR of cluster worker nodes.
+  # Kubelet liveness/readiness/startup probes are sent from the node IP,
+  # not from a namespace-matched pod. namespaceSelector cannot capture them.
+  # "0.0.0.0/0" allows all. Tighten to your node subnet in production.
+  nodesCIDR: "0.0.0.0/0"
+
+  # Additional ingress rules (e.g. Prometheus scrape).
+  # The kubelet probe and webhook ingress rules are generated automatically
+  # from nodesCIDR / controlPlaneCIDR above — do not duplicate them here.
   ingress:
     - from:
       - namespaceSelector:
@@ -505,13 +551,11 @@ networkPolicy:
       ports:
       - protocol: TCP
         port: 8080
+
+  # Additional egress rules (ClamAV, DNS, …).
+  # The API server egress rule is generated automatically from controlPlaneCIDR
+  # above — do not duplicate it here.
   egress:
-    # Kubernetes API
-    - to:
-      - namespaceSelector: {}
-      ports:
-      - protocol: TCP
-        port: 6443
     # ClamAV service
     - to:
       - namespaceSelector:
@@ -520,13 +564,16 @@ networkPolicy:
       ports:
       - protocol: TCP
         port: 3310
-    # DNS
+    # DNS — UDP for standard queries, TCP for large responses (> 512 B),
+    # DNSSEC, and zone transfers. Both protocols must be allowed.
     - to:
       - namespaceSelector:
           matchLabels:
             kubernetes.io/metadata.name: kube-system
       ports:
       - protocol: UDP
+        port: 53
+      - protocol: TCP
         port: 53
 
 # =============================================================================
