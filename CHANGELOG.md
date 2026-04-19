@@ -9,6 +9,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -18,6 +31,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -34,6 +60,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -43,6 +82,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -58,6 +110,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -67,6 +132,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -83,6 +161,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -92,6 +183,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -110,6 +214,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -119,6 +236,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -135,6 +265,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -144,6 +287,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -159,6 +315,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -168,6 +337,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -184,6 +366,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -193,6 +388,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -219,6 +427,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -228,6 +449,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -244,6 +478,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -253,6 +500,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -268,6 +528,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -277,6 +550,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -293,6 +579,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -302,6 +601,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -320,6 +632,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -329,6 +654,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -345,6 +683,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -354,6 +705,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -369,6 +733,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -378,6 +755,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -394,6 +784,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -403,6 +806,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -421,6 +837,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -430,6 +859,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -446,6 +888,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -455,6 +910,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -470,6 +938,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -479,6 +960,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -495,6 +989,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -504,6 +1011,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -522,6 +1042,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -531,6 +1064,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -547,6 +1093,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -556,6 +1115,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -571,6 +1143,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -580,6 +1165,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -596,6 +1194,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -605,6 +1216,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -631,6 +1255,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -640,6 +1277,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -656,6 +1306,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -665,6 +1328,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -680,6 +1356,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -689,6 +1378,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -705,6 +1407,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -714,6 +1429,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -732,6 +1460,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -741,6 +1482,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -757,6 +1511,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -766,6 +1533,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -781,6 +1561,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -790,6 +1583,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -806,6 +1612,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -815,6 +1634,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -836,6 +1668,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -845,6 +1690,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -861,6 +1719,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -870,6 +1741,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -885,6 +1769,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -894,6 +1791,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -910,6 +1820,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -919,6 +1842,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -937,6 +1873,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -946,6 +1895,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -962,6 +1924,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -971,6 +1946,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -986,6 +1974,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -995,6 +1996,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1011,6 +2025,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -1020,6 +2047,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1046,6 +2086,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -1055,6 +2108,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1071,6 +2137,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -1080,6 +2159,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1095,6 +2187,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -1104,6 +2209,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1120,6 +2238,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -1129,6 +2260,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1147,6 +2291,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -1156,6 +2313,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1172,6 +2342,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -1181,6 +2364,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1196,6 +2392,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -1205,6 +2414,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1221,6 +2443,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -1230,6 +2465,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1248,6 +2496,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -1257,6 +2518,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1273,6 +2547,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -1282,6 +2569,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1297,6 +2597,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -1306,6 +2619,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1322,6 +2648,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -1331,6 +2670,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1349,6 +2701,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -1358,6 +2723,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1374,6 +2752,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -1383,6 +2774,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1398,6 +2802,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -1407,6 +2824,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1423,6 +2853,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -1432,6 +2875,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1458,6 +2914,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -1467,6 +2936,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1483,6 +2965,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -1492,6 +2987,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1507,6 +3015,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -1516,6 +3037,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1532,6 +3066,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -1541,6 +3088,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1559,6 +3119,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -1568,6 +3141,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1584,6 +3170,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -1593,6 +3192,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1608,6 +3220,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -1617,6 +3242,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1633,6 +3271,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.3.1] - 2026-04-17
 
 ## 🚀 Features
@@ -1642,6 +3293,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
 * fix: webhook scope Namespaced, WebhookConfig.Enabled, StartTime nil dereference (0abef35)
+
+## 🔧 Other Changes
+
+
+## [v0.4.0] - 2026-04-19
+
+## 🚀 Features
+
+* Merge pull request #29 from SolucTeam/feat/clamav-update (f5a53a3)
+* feat: rendre l'image du crd-patcher configurable (repository, tag, imagePullSecrets) (fcd7338)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
