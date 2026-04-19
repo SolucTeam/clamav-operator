@@ -184,6 +184,10 @@ spec:
                   webhook:
                     description: Webhook notification settings
                     properties:
+                      enabled:
+                        description: Enabled indicates if webhook notifications are
+                          enabled
+                        type: boolean
                       headers:
                         additionalProperties:
                           type: string
@@ -212,6 +216,7 @@ spec:
                         description: URL to send webhook notifications to
                         type: string
                     required:
+                    - enabled
                     - url
                     type: object
                 type: object

@@ -130,6 +130,25 @@ When `webhook.certManager.enabled: true` the chart creates a full self-signed CA
 
 A Helm post-install/post-upgrade hook Job patches the three CRDs (`nodescans`, `clusterscans`, `scanschedules`) with `conversion.strategy: Webhook` so the `/convert` endpoint is correctly wired.
 
+### CRD Patcher Hook Parameters
+
+| Parameter | Description | Default |
+|-----------|-------------|---------|
+| `crdPatcher.image.repository` | kubectl image used by the post-install hook Job | `registry.k8s.io/kubectl` |
+| `crdPatcher.image.tag` | Image tag — pin to your cluster minor version | `"1.29"` |
+| `crdPatcher.image.pullPolicy` | Image pull policy | `IfNotPresent` |
+| `crdPatcher.imagePullSecrets` | Pull secrets for the hook Job (air-gap / private registry) | `[]` |
+
+```yaml
+# Air-gap example
+crdPatcher:
+  image:
+    repository: my-registry.internal/kubectl
+    tag: "1.30"
+  imagePullSecrets:
+    - name: regcred
+```
+
 ### Scanner Image Pull Secrets
 
 | Parameter | Description | Default |
@@ -145,6 +164,29 @@ scanner:
 
 These secrets are forwarded from the operator pod environment (`SCANNER_IMAGE_PULL_SECRETS`) into the `imagePullSecrets` field of each Job's pod spec.
 
+### Network Policy Parameters
+
+| Parameter | Description | Default |
+|-----------|-------------|---------|
+| `networkPolicy.enabled` | Enable NetworkPolicy resources | `true` |
+| `networkPolicy.controlPlaneCIDR` | CIDR of the Kubernetes API server / control-plane nodes. Used for egress to the API server and ingress from the API server to the webhook port. Set to your actual control-plane CIDR in production. | `"0.0.0.0/0"` |
+| `networkPolicy.apiServerPort` | API server port. Standard clusters use `6443`; some managed clusters (AKS, GKE) expose it on `443`. | `6443` |
+| `networkPolicy.nodesCIDR` | CIDR of cluster nodes. Kubelet liveness/readiness probes originate from node IPs — a `namespaceSelector` cannot match them. Set to your node subnet in production. | `"0.0.0.0/0"` |
+| `networkPolicy.ingress` | Additional ingress rules (e.g. Prometheus scrape). Kubelet probe and webhook rules are generated automatically. | see values |
+| `networkPolicy.egress` | Additional egress rules (ClamAV, DNS). API server egress is generated automatically from `controlPlaneCIDR`. | see values |
+
+> **Why `ipBlock` and not `namespaceSelector`?**
+> The Kubernetes API server and the kubelet both run as host processes on nodes, not as pods. `namespaceSelector` only matches pod-to-pod traffic; it has no effect on traffic that originates outside the pod network. Without `ipBlock` rules, the operator pod cannot reach the API server (startup checks fail with `i/o timeout`) and kubelet probes are silently dropped (liveness/readiness never pass).
+
+```yaml
+# Production example — restrict to actual CIDRs
+networkPolicy:
+  enabled: true
+  controlPlaneCIDR: "10.0.0.10/32"   # exact API server IP
+  apiServerPort: 6443
+  nodesCIDR: "10.0.1.0/24"           # worker node subnet
+```
+
 ### Other Parameters
 
 | Parameter | Description | Default |
@@ -155,7 +197,6 @@ These secrets are forwarded from the operator pod environment (`SCANNER_IMAGE_PU
 | `monitoring.serviceMonitor.enabled` | Enable Prometheus ServiceMonitor | `false` |
 | `monitoring.prometheusRule.enabled` | Enable PrometheusRule | `false` |
 | `defaultScanPolicy.enabled` | Create default ScanPolicy | `true` |
-| `networkPolicy.enabled` | Enable network policies | `false` |
 
 ## Example Values Files
 
@@ -255,6 +296,9 @@ monitoring:
 
 networkPolicy:
   enabled: true
+  controlPlaneCIDR: "10.0.0.10/32"   # restrict to your actual API server IP/CIDR
+  apiServerPort: 6443
+  nodesCIDR: "10.0.1.0/24"           # restrict to your node subnet
 
 defaultScanPolicy:
   enabled: true
