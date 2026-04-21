@@ -79,6 +79,10 @@ type NotificationConfig struct {
 	// Webhook notification settings
 	// +optional
 	Webhook *WebhookConfig `json:"webhook,omitempty"`
+
+	// Teams notification settings (Microsoft Teams Incoming Webhook)
+	// +optional
+	Teams *TeamsConfig `json:"teams,omitempty"`
 }
 
 // SlackConfig defines Slack notification settings
@@ -148,6 +152,31 @@ type WebhookConfig struct {
 	SecretRef *corev1.SecretReference `json:"secretRef,omitempty"`
 
 	// OnlyOnInfection sends webhooks only when malware is detected
+	// +kubebuilder:default=true
+	// +optional
+	OnlyOnInfection bool `json:"onlyOnInfection,omitempty"`
+}
+
+// TeamsConfig defines Microsoft Teams notification settings via Incoming Webhook.
+//
+// Supports both the legacy Office 365 Connector format and the new Workflows
+// webhook format (https://prod-*.logic.azure.com/...).
+// The payload uses Adaptive Cards (schema v1.2) for rich formatting.
+type TeamsConfig struct {
+	// Enabled indicates if Teams notifications are enabled
+	Enabled bool `json:"enabled"`
+
+	// WebhookURL is the Teams Incoming Webhook URL.
+	// Store in a Secret and use WebhookSecretRef instead for production.
+	// +optional
+	WebhookURL string `json:"webhookURL,omitempty"`
+
+	// WebhookSecretRef references a Secret containing the webhook URL.
+	// The Secret must have a key matching the Key field below.
+	// +optional
+	WebhookSecretRef *corev1.SecretKeySelector `json:"webhookSecretRef,omitempty"`
+
+	// OnlyOnInfection sends notifications only when malware is detected.
 	// +kubebuilder:default=true
 	// +optional
 	OnlyOnInfection bool `json:"onlyOnInfection,omitempty"`

@@ -12,7 +12,7 @@ You may obtain a copy of the License at
 
 const fs = require('fs').promises;
 const path = require('path');
-const { INCREMENTAL_CONFIG } = require('./config');
+const { CONFIG, INCREMENTAL_CONFIG } = require('./config');
 const logger = require('./logger');
 
 // =============================================================================
@@ -21,6 +21,18 @@ const logger = require('./logger');
 // The cache maps absolute file paths → { modTime, size, lastScanned, scanResult }.
 // It is populated during the current run and can be loaded/saved from a
 // JSON file so the next Job (on the same node) can skip unchanged files.
+//
+// SIGNATURE FINGERPRINTING
+// ────────────────────────
+// When ClamAV signatures are updated (daily.cvd, main.cvd, etc.) the cached
+// "clean" results for previously-scanned files are no longer trustworthy — a
+// new signature might detect malware in a file that was previously clean.
+//
+// To handle this, the cache stores a "signature fingerprint": the combined
+// mtime+size of each signature file in CONFIG.clamavDbPath. On load, if the
+// current fingerprint differs from the stored one, the cache is discarded and
+// the scan runs as a full scan, guaranteeing every file is re-evaluated against
+// the latest signatures.
 // =============================================================================
 
 let SCAN_CACHE = {};
@@ -29,6 +41,43 @@ const CACHE_FILE = path.join(
   process.env.RESULTS_DIR || '/results',
   `${process.env.NODE_NAME || 'unknown'}_scan_cache.json`
 );
+
+// ── Signature fingerprint ────────────────────────────────────────────────────
+
+/**
+ * Computes a lightweight fingerprint of the ClamAV signature files in dbPath.
+ * Uses mtime (seconds) + size of each recognised signature file.
+ * Returns a stable string, or null if the directory cannot be read.
+ *
+ * @param {string} dbPath  Path to the ClamAV database directory.
+ * @returns {Promise<string|null>}
+ */
+async function computeSignatureFingerprint(dbPath) {
+  const sigExtensions = ['.cvd', '.cld'];
+  try {
+    const entries = await fs.readdir(dbPath);
+    const sigFiles = entries
+      .filter((f) => sigExtensions.includes(path.extname(f)))
+      .sort(); // deterministic order
+
+    if (sigFiles.length === 0) return null;
+
+    const parts = await Promise.all(
+      sigFiles.map(async (f) => {
+        try {
+          const stat = await fs.stat(path.join(dbPath, f));
+          return `${f}:${Math.floor(stat.mtimeMs / 1000)}:${stat.size}`;
+        } catch {
+          return `${f}:missing`;
+        }
+      })
+    );
+    return parts.join('|');
+  } catch (err) {
+    logger.warn('Could not compute signature fingerprint', { dbPath, error: err.message });
+    return null;
+  }
+}
 
 // ── Stats ────────────────────────────────────────────────────────────────────
 
@@ -49,15 +98,40 @@ function getIncrementalStats() {
 async function loadCache() {
   if (!INCREMENTAL_CONFIG.enabled) return;
 
+  // Compute the current signature fingerprint before loading the cache.
+  // If it differs from what the cache recorded, we must discard the cache so
+  // every file is re-scanned against the updated signatures.
+  const currentFingerprint = await computeSignatureFingerprint(CONFIG.clamavDbPath);
+
   try {
     const raw = await fs.readFile(CACHE_FILE, 'utf-8');
     const data = JSON.parse(raw);
     if (data && typeof data === 'object' && data.files) {
+
+      // ── Signature-change invalidation ────────────────────────────────────
+      if (
+        currentFingerprint !== null &&
+        data.signatureFingerprint &&
+        data.signatureFingerprint !== currentFingerprint
+      ) {
+        logger.warn(
+          'ClamAV signatures have been updated since the last scan — ' +
+          'discarding incremental cache to ensure all files are re-scanned',
+          {
+            storedFingerprint: data.signatureFingerprint,
+            currentFingerprint,
+          }
+        );
+        SCAN_CACHE = {};
+        return; // force full scan
+      }
+
       SCAN_CACHE = data.files;
       logger.info('Incremental cache loaded', {
         entries: Object.keys(SCAN_CACHE).length,
         cacheVersion: data.version || 'unknown',
         lastScanDate: data.lastScanDate || 'unknown',
+        signatureFingerprint: data.signatureFingerprint || 'none',
       });
     }
   } catch {
@@ -69,11 +143,16 @@ async function loadCache() {
 async function saveCache() {
   if (!INCREMENTAL_CONFIG.enabled) return;
 
+  // Persist the current signature fingerprint alongside the cache so the next
+  // run can detect if signatures were updated between scans.
+  const signatureFingerprint = await computeSignatureFingerprint(CONFIG.clamavDbPath);
+
   const payload = {
-    version: 2,
+    version: 3,
     lastScanDate: new Date().toISOString(),
     node: process.env.NODE_NAME || 'unknown',
     totalFiles: Object.keys(SCAN_CACHE).length,
+    signatureFingerprint: signatureFingerprint || '',
     files: SCAN_CACHE,
   };
 
@@ -81,7 +160,10 @@ async function saveCache() {
   try {
     await fs.writeFile(tmpFile, JSON.stringify(payload));
     await fs.rename(tmpFile, CACHE_FILE);
-    logger.info('Incremental cache saved', { entries: payload.totalFiles });
+    logger.info('Incremental cache saved', {
+      entries: payload.totalFiles,
+      signatureFingerprint: payload.signatureFingerprint || 'unavailable',
+    });
   } catch (err) {
     logger.warn('Failed to save cache', { error: err.message });
     // Best-effort cleanup of tmp file
@@ -194,4 +276,5 @@ module.exports = {
   shouldScanFile,
   updateCache,
   getIncrementalStats,
+  computeSignatureFingerprint, // exported for testing
 };

@@ -154,7 +154,47 @@ jobs:
         run: helm template . > /dev/null
 
   # ===========================================================================
-  # Job 4 — Node.js scanner tests
+  # Job 4 — E2E tests (envtest — no real cluster required)
+  # Uses controller-runtime's envtest which spins up an in-process
+  # etcd + kube-apiserver. Tests exercise the full reconcile loop including
+  # Job lifecycle simulation, finalizer cleanup, and CRD conversion.
+  # ===========================================================================
+  e2e-test:
+    name: "Go — E2E Tests (envtest)"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+          cache: true
+
+      - name: Install kubebuilder envtest binaries
+        run: |
+          go install sigs.k8s.io/controller-runtime/tools/setup-envtest@latest
+          ENVTEST_ASSETS=$(setup-envtest use 1.29 --bin-dir "$HOME/kubebuilder/bin" -p path)
+          echo "KUBEBUILDER_ASSETS=$ENVTEST_ASSETS" >> $GITHUB_ENV
+
+      - name: Run E2E tests
+        run: |
+          go test -tags e2e ./test/e2e/... \
+            -v \
+            -timeout 10m \
+            -count=1 2>&1 | tee e2e-output.txt
+
+      - name: Upload E2E test output
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: e2e-test-output
+          path: e2e-output.txt
+          retention-days: 7
+
+  # ===========================================================================
+  # Job 5 — Node.js scanner tests
   # ===========================================================================
   node-test:
     name: "Node.js — Scanner Tests"

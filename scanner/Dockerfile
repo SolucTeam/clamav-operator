@@ -11,9 +11,14 @@
 #   SCAN_MODE=remote      →  connects to external clamd (legacy)
 #
 # Air-gap usage:
-#   Build with --build-arg DOWNLOAD_SIGS=true (default) to bake signatures
-#   into the image.  Set UPDATE_SIGNATURES=false at runtime so the container
-#   never tries to reach the internet.
+#   The default build (DOWNLOAD_SIGS=true) runs freshclam during docker build
+#   and bakes signatures into the image — requires internet at build time only.
+#   At runtime set UPDATE_SIGNATURES=false so the container never reaches out.
+#
+#   For fully air-gapped builds (no internet even at build time):
+#     1. On an internet-connected machine: mkdir sigs && freshclam --datadir=sigs
+#     2. Copy the sigs/ directory into scanner/sigs/ (next to this Dockerfile)
+#     3. docker build --build-arg DOWNLOAD_SIGS=false -t clamav-node-scanner:airgap .
 #
 # Build:
 #   docker build -t clamav-node-scanner:latest .
@@ -37,21 +42,59 @@ RUN apt-get update && \
 # ─── Stage 1b: Download signatures (isolated layer, ~80% cache hit rate) ───────
 # By isolating freshclam in its own stage, Docker can reuse this layer as long
 # as the base image and build arguments have not changed.
+#
+# Two build modes:
+#
+#   DOWNLOAD_SIGS=true  (default)
+#     freshclam runs during docker build — requires internet access at build time.
+#     Use this for standard CI/CD pipelines that have outbound HTTPS access.
+#
+#   DOWNLOAD_SIGS=false  (air-gap)
+#     freshclam is skipped. Pre-downloaded *.cvd / *.cld signature files must be
+#     placed in the scanner/sigs/ directory (next to this Dockerfile) before
+#     running docker build. See the air-gap workflow in the header above.
+#
+#     The build will FAIL if no signature files are found in /var/lib/clamav —
+#     preventing a silently broken image from being pushed to the registry.
 FROM clamav-base AS clamav-builder
 
 ARG DOWNLOAD_SIGS=true
 
-# Download initial signature databases (skipped when DOWNLOAD_SIGS=false for
-# air-gap builds where signatures are injected by CI/CD)
-RUN mkdir -p /var/lib/clamav && \
-    if [ "$DOWNLOAD_SIGS" = "true" ]; then \
+RUN mkdir -p /var/lib/clamav
+
+# For air-gap builds (DOWNLOAD_SIGS=false), place pre-downloaded signature files
+# in the scanner/sigs/ directory before running docker build. The directory is
+# always COPY'd; it contains only a .gitkeep placeholder by default so this
+# instruction never fails on a standard (connected) build.
+COPY sigs/ /tmp/local-sigs/
+
+RUN if [ "$DOWNLOAD_SIGS" = "true" ]; then \
+        echo "Downloading ClamAV signatures via freshclam..." && \
         freshclam --datadir=/var/lib/clamav --stdout || true; \
+    else \
+        echo "DOWNLOAD_SIGS=false — copying pre-downloaded signatures from sigs/" && \
+        find /tmp/local-sigs -maxdepth 1 \( -name '*.cvd' -o -name '*.cld' \) \
+            -exec cp {} /var/lib/clamav/ \; ; \
     fi
 
-# Verify we have at least one signature file
+# Fail the build if no usable signature database is present.
+# This prevents a silently broken image from being pushed to the registry —
+# a missing database only surfaces as a runtime error otherwise.
 RUN ls -la /var/lib/clamav/ && \
-    (test -f /var/lib/clamav/main.cvd || test -f /var/lib/clamav/main.cld || \
-     echo "WARNING: no main signature database found")
+    (test -f /var/lib/clamav/main.cvd || test -f /var/lib/clamav/main.cld) || \
+    { echo ""; \
+      echo "ERROR: No ClamAV main signature database found in /var/lib/clamav."; \
+      echo ""; \
+      echo "Fix options:"; \
+      echo "  1. Build with DOWNLOAD_SIGS=true (requires internet at build time):"; \
+      echo "       docker build -t clamav-node-scanner:latest ."; \
+      echo "  2. Supply pre-downloaded signatures for air-gap builds:"; \
+      echo "       mkdir scanner/sigs && freshclam --datadir=scanner/sigs"; \
+      echo "       docker build --build-arg DOWNLOAD_SIGS=false \\"; \
+      echo "                    -t clamav-node-scanner:airgap ."; \
+      echo ""; \
+      exit 1; \
+    }
 
 # ─── Stage 2: Node.js application ────────────────────────────────────────────
 FROM node:20-bookworm-slim AS app-builder
