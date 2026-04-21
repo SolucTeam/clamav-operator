@@ -268,7 +268,7 @@ jobs:
           cache-from: type=gha,scope=scanner
           cache-to: type=gha,mode=max,scope=scanner
           build-args: |
-            DOWNLOAD_SIGS=${{ inputs.scanner_download_sigs }}
+            DOWNLOAD_SIGS=${{ inputs.scanner_download_sigs || 'true' }}
 
       # ── Summary ──────────────────────────────────────────────────────────
       - name: Image summary

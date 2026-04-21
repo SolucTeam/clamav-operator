@@ -26,13 +26,19 @@ const execFileAsync = promisify(execFile);
 // =============================================================================
 
 async function initScanner() {
-  logger.info('Initializing scanner', {
+  const baseInfo = {
     mode: CONFIG.scanMode,
     clamscan_path: CONFIG.clamscanPath,
     clamav_db: CONFIG.clamavDbPath,
-    remote_host: CONFIG.clamavHost,
     update_signatures: CONFIG.updateSignatures,
-  });
+  };
+  // remote_host is only meaningful in remote mode — omit it in standalone to
+  // avoid misleading logs that suggest the scanner is trying to reach clamd.
+  if (CONFIG.scanMode === 'remote') {
+    baseInfo.remote_host = CONFIG.clamavHost;
+    baseInfo.remote_port = CONFIG.clamavPort;
+  }
+  logger.info('Initializing scanner', baseInfo);
 
   if (CONFIG.scanMode === 'standalone') {
     return initStandaloneScanner();

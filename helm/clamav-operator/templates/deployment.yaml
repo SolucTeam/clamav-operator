@@ -86,6 +86,13 @@ spec:
         - name: SCANNER_IMAGE_PULL_SECRETS
           value: {{ range $i, $s := .Values.scanner.imagePullSecrets }}{{ if $i }},{{ end }}{{ $s.name }}{{ end }}
         {{- end }}
+        {{- if and .Values.scanner.signatures.persistent .Values.scanner.freshclam.enabled }}
+        # When signatures are on a PVC and freshclam is enabled, scanner jobs mount
+        # the same PVC at CLAMAV_DB_PATH so freshclam-written databases are immediately
+        # visible without rebuilding the scanner image.
+        - name: SCANNER_SIGNATURES_PVC_NAME
+          value: {{ .Values.scanner.signatures.pvcName | quote }}
+        {{- end }}
         {{- with .Values.env }}
         {{- toYaml . | nindent 8 }}
         {{- end }}

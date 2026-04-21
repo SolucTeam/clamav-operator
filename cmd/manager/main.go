@@ -181,6 +181,12 @@ func main() {
 		}
 	}
 
+	// SCANNER_SIGNATURES_PVC_NAME is set by Helm when scanner.signatures.persistent=true.
+	// When non-empty, scanner job pods mount this PVC at CLAMAV_DB_PATH so that
+	// freshclam-updated signatures are visible to scanner jobs without an image rebuild.
+	// Empty string means signatures are expected to be baked into the scanner image.
+	signaturesPVCName := os.Getenv("SCANNER_SIGNATURES_PVC_NAME")
+
 	// Setup controllers
 	if err = (&controller.NodeScanReconciler{
 		Client:                  mgr.GetClient(),
@@ -191,6 +197,7 @@ func main() {
 		ClamavHost:              clamavHost,
 		ClamavPort:              clamavPort,
 		ScannerImagePullSecrets: scannerPullSecrets,
+		SignaturesPVCName:       signaturesPVCName,
 	}).SetupWithManager(mgr); err != nil {
 		setupLog.Error(err, "unable to create controller", "controller", "NodeScan")
 		os.Exit(1)
