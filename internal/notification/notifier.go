@@ -14,9 +14,9 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-// Package notification implements fire-and-forget alerting (Slack, Email, Webhook)
-// for ClamAV scan results. It is intentionally decoupled from the reconciler so
-// that it can be unit-tested without a live cluster.
+// Package notification implements alerting (Slack, Email, Webhook) for ClamAV
+// scan results with exponential-backoff retry. It is intentionally decoupled
+// from the reconciler so that it can be unit-tested without a live cluster.
 package notification
 
 import (
@@ -39,6 +39,21 @@ import (
 	clamavv1alpha1 "github.com/SolucTeam/clamav-operator/api/v1alpha1"
 )
 
+const (
+	// maxRetries is the number of delivery attempts per channel before giving up.
+	maxRetries = 3
+	// retryBaseDelay is the initial backoff delay; doubled on each subsequent attempt.
+	retryBaseDelay = 5 * time.Second
+)
+
+// NotifyResult carries the per-channel outcome of a SendWithRetry call.
+// It lets the caller (controller) decide what to record in the NodeScan status
+// without coupling the notifier to the API types.
+type NotifyResult struct {
+	Channel string
+	Err     error
+}
+
 // Notifier dispatches scan-result alerts to configured channels.
 // It holds its own client and recorder so it can be used independently
 // of any specific reconciler struct.
@@ -52,41 +67,80 @@ func New(c client.Client, recorder record.EventRecorder) *Notifier {
 	return &Notifier{Client: c, Recorder: recorder}
 }
 
-// Send dispatches all configured notifications for the given NodeScan.
-// Each channel (Slack, Email, Webhook) is attempted independently so a
-// failure in one does not block the others.
-// Errors are logged and emitted as Kubernetes Warning events; they are
-// never returned to avoid blocking the reconcile loop.
-func (n *Notifier) Send(ctx context.Context, nodeScan *clamavv1alpha1.NodeScan, scanPolicy *clamavv1alpha1.ScanPolicy) {
-	log := log.FromContext(ctx)
+// SendWithRetry dispatches all configured notifications for the given NodeScan.
+// Each channel (Slack, Email, Webhook) is retried up to maxRetries times with
+// exponential backoff before being declared failed.
+//
+// Results (one per enabled channel) are returned so the caller can record
+// delivery failures in the NodeScan status or emit Prometheus metrics.
+// The context should carry a generous deadline (e.g. 5 min) to allow retries.
+func (n *Notifier) SendWithRetry(ctx context.Context, nodeScan *clamavv1alpha1.NodeScan, scanPolicy *clamavv1alpha1.ScanPolicy) []NotifyResult {
+	logger := log.FromContext(ctx)
 
 	if scanPolicy.Spec.Notifications == nil {
-		return
+		return nil
 	}
 
+	var results []NotifyResult
+
+	type channelFn struct {
+		name string
+		fn   func(context.Context, *clamavv1alpha1.NodeScan, *clamavv1alpha1.ScanPolicy) error
+	}
+
+	var channels []channelFn
 	if slack := scanPolicy.Spec.Notifications.Slack; slack != nil && slack.Enabled {
-		if err := n.sendSlack(ctx, nodeScan, scanPolicy); err != nil {
-			log.Error(err, "failed to send Slack notification")
-			n.Recorder.Event(nodeScan, corev1.EventTypeWarning, "NotificationFailed",
-				fmt.Sprintf("Failed to send Slack notification: %v", err))
-		}
+		channels = append(channels, channelFn{"slack", n.sendSlack})
 	}
-
 	if email := scanPolicy.Spec.Notifications.Email; email != nil && email.Enabled {
-		if err := n.sendEmail(ctx, nodeScan, scanPolicy); err != nil {
-			log.Error(err, "failed to send Email notification")
-			n.Recorder.Event(nodeScan, corev1.EventTypeWarning, "NotificationFailed",
-				fmt.Sprintf("Failed to send Email notification: %v", err))
-		}
+		channels = append(channels, channelFn{"email", n.sendEmail})
+	}
+	if wh := scanPolicy.Spec.Notifications.Webhook; wh != nil && wh.Enabled {
+		channels = append(channels, channelFn{"webhook", n.sendWebhook})
+	}
+	if teams := scanPolicy.Spec.Notifications.Teams; teams != nil && teams.Enabled {
+		channels = append(channels, channelFn{"teams", n.sendTeams})
 	}
 
-	if wh := scanPolicy.Spec.Notifications.Webhook; wh != nil && wh.Enabled {
-		if err := n.sendWebhook(ctx, nodeScan, scanPolicy); err != nil {
-			log.Error(err, "failed to send Webhook notification")
-			n.Recorder.Event(nodeScan, corev1.EventTypeWarning, "NotificationFailed",
-				fmt.Sprintf("Failed to send Webhook notification: %v", err))
+	for _, ch := range channels {
+		var lastErr error
+		delay := retryBaseDelay
+
+		for attempt := 1; attempt <= maxRetries; attempt++ {
+			if err := ch.fn(ctx, nodeScan, scanPolicy); err == nil {
+				lastErr = nil
+				logger.V(1).Info("Notification delivered",
+					"channel", ch.name, "attempt", attempt)
+				break
+			} else {
+				lastErr = err
+				logger.Error(err, "Notification attempt failed — will retry",
+					"channel", ch.name, "attempt", attempt, "maxRetries", maxRetries)
+
+				if attempt < maxRetries {
+					select {
+					case <-ctx.Done():
+						lastErr = fmt.Errorf("context canceled during retry: %w", ctx.Err())
+						goto done
+					case <-time.After(delay):
+					}
+					delay *= 2
+				}
+			}
 		}
+	done:
+		result := NotifyResult{Channel: ch.name, Err: lastErr}
+		if lastErr != nil {
+			logger.Error(lastErr, "Notification delivery failed after all retries",
+				"channel", ch.name, "attempts", maxRetries)
+			n.Recorder.Event(nodeScan, corev1.EventTypeWarning, "NotificationFailed",
+				fmt.Sprintf("Failed to send %s notification after %d attempts: %v",
+					ch.name, maxRetries, lastErr))
+		}
+		results = append(results, result)
 	}
+
+	return results
 }
 
 // ─── Slack ────────────────────────────────────────────────────────────────────
@@ -376,6 +430,159 @@ func (n *Notifier) sendWebhook(ctx context.Context, nodeScan *clamavv1alpha1.Nod
 
 	if resp.StatusCode < 200 || resp.StatusCode >= 300 {
 		return fmt.Errorf("webhook returned status %d", resp.StatusCode)
+	}
+	return nil
+}
+
+// ─── Microsoft Teams ──────────────────────────────────────────────────────────
+
+// sendTeams delivers a notification to a Microsoft Teams channel via Incoming
+// Webhook.  The payload uses the Adaptive Card format (schema v1.2) which is
+// supported by both the legacy Office 365 Connector webhooks and the new
+// Microsoft Workflows webhooks (prod-*.logic.azure.com).
+func (n *Notifier) sendTeams(ctx context.Context, nodeScan *clamavv1alpha1.NodeScan, scanPolicy *clamavv1alpha1.ScanPolicy) error {
+	config := scanPolicy.Spec.Notifications.Teams
+
+	if config.OnlyOnInfection && nodeScan.Status.FilesInfected == 0 {
+		return nil
+	}
+
+	// ── Resolve webhook URL ────────────────────────────────────────────────
+	webhookURL := config.WebhookURL
+	if config.WebhookSecretRef != nil {
+		secret := &corev1.Secret{}
+		if err := n.Client.Get(ctx, types.NamespacedName{
+			Name:      config.WebhookSecretRef.Name,
+			Namespace: scanPolicy.Namespace,
+		}, secret); err != nil {
+			return fmt.Errorf("failed to get Teams webhook secret: %w", err)
+		}
+		webhookURL = string(secret.Data[config.WebhookSecretRef.Key])
+	}
+	if webhookURL == "" {
+		return fmt.Errorf("teams webhook URL not configured")
+	}
+
+	// ── Build Adaptive Card body ───────────────────────────────────────────
+	// Status line
+	status := "✅ No malware detected"
+	themeColor := "00B050" // green
+	if nodeScan.Status.FilesInfected > 0 {
+		status = fmt.Sprintf("🚨 %d infected file(s) found", nodeScan.Status.FilesInfected)
+		themeColor = "FF0000" // red
+	}
+
+	// Fact set: always-present fields
+	facts := []map[string]string{
+		{"title": "Node", "value": nodeScan.Spec.NodeName},
+		{"title": "Status", "value": string(nodeScan.Status.Phase)},
+		{"title": "Files scanned", "value": fmt.Sprintf("%d", nodeScan.Status.FilesScanned)},
+		{"title": "Files infected", "value": fmt.Sprintf("%d", nodeScan.Status.FilesInfected)},
+		{"title": "Duration", "value": fmt.Sprintf("%ds", nodeScan.Status.Duration)},
+	}
+	if nodeScan.Status.ResultsPartial {
+		facts = append(facts, map[string]string{
+			"title": "⚠️ Warning",
+			"value": "Results are partial — re-scan required",
+		})
+	}
+
+	// Convert facts to Adaptive Card FactSet items
+	factItems := make([]map[string]interface{}, len(facts))
+	for i, f := range facts {
+		factItems[i] = map[string]interface{}{"title": f["title"], "value": f["value"]}
+	}
+
+	// Body blocks
+	bodyBlocks := []map[string]interface{}{
+		{
+			"type":   "TextBlock",
+			"size":   "Large",
+			"weight": "Bolder",
+			"color": func() string {
+				if nodeScan.Status.FilesInfected > 0 {
+					return "Attention"
+				}
+				return "Good"
+			}(),
+			"text": fmt.Sprintf("ClamAV Scan — %s", status),
+		},
+		{
+			"type":  "FactSet",
+			"facts": factItems,
+		},
+	}
+
+	// Append infected file list (max 10)
+	if nodeScan.Status.FilesInfected > 0 {
+		var lines []string
+		for i, f := range nodeScan.Status.InfectedFiles {
+			if i >= 10 {
+				lines = append(lines, fmt.Sprintf("... and %d more", len(nodeScan.Status.InfectedFiles)-10))
+				break
+			}
+			lines = append(lines, fmt.Sprintf("- **%s** → %s", f.Path, strings.Join(f.Viruses, ", ")))
+		}
+		bodyBlocks = append(bodyBlocks, map[string]interface{}{
+			"type":   "TextBlock",
+			"weight": "Bolder",
+			"text":   "Infected files:",
+		}, map[string]interface{}{
+			"type": "TextBlock",
+			"text": strings.Join(lines, "\n"),
+			"wrap": true,
+		})
+	}
+
+	// Adaptive Card payload — compatible with both legacy connectors and Workflows
+	payload := map[string]interface{}{
+		"type": "message",
+		"attachments": []map[string]interface{}{
+			{
+				"contentType": "application/vnd.microsoft.card.adaptive",
+				"content": map[string]interface{}{
+					"$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+					"type":    "AdaptiveCard",
+					"version": "1.2",
+					"body":    bodyBlocks,
+					"msteams": map[string]interface{}{
+						"width": "Full",
+					},
+				},
+			},
+		},
+		// Legacy MessageCard fields kept for backward compat with old connectors
+		"@type":      "MessageCard",
+		"@context":   "http://schema.org/extensions",
+		"themeColor": themeColor,
+		"summary":    fmt.Sprintf("ClamAV Scan — %s", status),
+	}
+
+	body, err := json.Marshal(payload)
+	if err != nil {
+		return fmt.Errorf("failed to marshal Teams payload: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, http.MethodPost, webhookURL, bytes.NewBuffer(body))
+	if err != nil {
+		return fmt.Errorf("failed to create Teams request: %w", err)
+	}
+	req.Header.Set("Content-Type", "application/json")
+	req.Header.Set("User-Agent", "ClamAV-Operator/1.0")
+
+	httpClient := &http.Client{
+		Timeout:   30 * time.Second,
+		Transport: &http.Transport{TLSClientConfig: &tls.Config{MinVersion: tls.VersionTLS12}},
+	}
+	resp, err := httpClient.Do(req) //nolint:gosec
+	if err != nil {
+		return fmt.Errorf("teams request failed: %w", err)
+	}
+	defer resp.Body.Close()
+
+	// Teams webhooks return 200 with body "1" on success, or 400/429 on errors.
+	if resp.StatusCode < 200 || resp.StatusCode >= 300 {
+		return fmt.Errorf("teams webhook returned status %d", resp.StatusCode)
 	}
 	return nil
 }

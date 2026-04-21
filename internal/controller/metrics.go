@@ -164,6 +164,33 @@ var (
 		},
 		[]string{"namespace", "node"},
 	)
+
+	// Notification metrics — used by the ClamAVNotificationFailed alert.
+	notificationsTotal = prometheus.NewCounterVec(
+		prometheus.CounterOpts{
+			Name: "clamav_notifications_sent_total",
+			Help: "Total number of notification attempts (all channels combined)",
+		},
+		[]string{"namespace", "channel"}, // channel: slack | email | webhook
+	)
+
+	notificationsFailed = prometheus.NewCounterVec(
+		prometheus.CounterOpts{
+			Name: "clamav_notifications_failed_total",
+			Help: "Total number of notification delivery failures after all retries",
+		},
+		[]string{"namespace", "channel"},
+	)
+
+	// nodeScanPartialResults tracks scans where result parsing was incomplete.
+	// Used by the ClamAVPartialScanResults alert.
+	nodeScanPartialResults = prometheus.NewGaugeVec(
+		prometheus.GaugeOpts{
+			Name: "clamav_nodescan_partial_results",
+			Help: "1 if the NodeScan has partial/unreliable results, 0 otherwise",
+		},
+		[]string{"namespace", "node"},
+	)
 )
 
 func init() {
@@ -189,7 +216,31 @@ func init() {
 		scanCacheFiles,
 		// Staleness alert support
 		nodeScanLastCompletionTimestamp,
+		// Notification delivery
+		notificationsTotal,
+		notificationsFailed,
+		// Partial results
+		nodeScanPartialResults,
 	)
+}
+
+// recordNotificationAttempt increments the sent counter for a given channel.
+func recordNotificationAttempt(namespace, channel string) {
+	notificationsTotal.WithLabelValues(namespace, channel).Inc()
+}
+
+// recordNotificationFailed increments the failure counter for a given channel.
+func recordNotificationFailed(namespace, channel string) {
+	notificationsFailed.WithLabelValues(namespace, channel).Inc()
+}
+
+// recordPartialResults sets the partial results gauge for a node.
+func recordPartialResults(namespace, node string, partial bool) {
+	val := 0.0
+	if partial {
+		val = 1.0
+	}
+	nodeScanPartialResults.WithLabelValues(namespace, node).Set(val)
 }
 
 // recordNodeScanMetrics records metrics for a NodeScan

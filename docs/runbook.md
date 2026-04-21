@@ -17,7 +17,13 @@
    - [Incremental cache corrupted](#5-incremental-cache-corrupted)
    - [OOMKilled scanner pod](#6-oomkilled-scanner-pod)
    - [NodeScan permanently Failed](#7-nodescan-permanently-failed)
+   - [Notifications not delivered (ClamAVNotificationFailed)](#8-notifications-not-delivered)
+   - [Partial scan results (resultsPartial: true)](#9-partial-scan-results)
+   - [EMERGENCY — Webhook certificate expired](#10-emergency--webhook-certificate-expired)
 4. [Maintenance](#maintenance)
+   - [Upgrade the operator](#upgrade-the-operator)
+   - [CRD upgrade procedure](#crd-upgrade-procedure)
+   - [Rollback procedure](#rollback-procedure)
 5. [Escalation](#escalation)
 
 ---
@@ -61,9 +67,12 @@ helm test $RELEASE -n $NS --logs
 | Alert | Meaning | Runbook section |
 |-------|---------|----------------|
 | `ClamAVNoRecentScans` | No node completed a scan in the last 24 h | [#1](#1-operator-not-reconciling), [#2](#2-scanner-job-stuck--never-completes) |
-| `ClamAVInfectedFilesDetected` | `clamav_files_infected_total > 0` | [#3](#3-infected-file-detected) |
-| `ClamAVScanJobFailed` | A scanner Job exited non-zero | [#2](#2-scanner-job-stuck--never-completes) |
+| `ClamAVMalwareDetected` | `clamav_files_infected_total > 0` | [#3](#3-infected-file-detected) |
+| `ClamAVScanFailed` | A scanner Job exited non-zero | [#2](#2-scanner-job-stuck--never-completes) |
 | `ClamAVOperatorDown` | Operator deployment has 0 ready replicas | [#1](#1-operator-not-reconciling) |
+| `ClamAVNotificationFailed` | Notification not delivered after 3 retries | [#8](#8-notifications-not-delivered) |
+| `ClamAVPartialScanResults` | NodeScan has `resultsPartial: true` — data unreliable | [#9](#9-partial-scan-results) |
+| `ClamAVWebhookCertExpiringSoon` | Webhook TLS cert expires in < 7 days | [#10](#10-emergency--webhook-certificate-expired) |
 
 ---
 
@@ -262,19 +271,199 @@ If driven by a ClusterScan, the ClusterScan controller will reschedule it automa
 
 ---
 
+### 8. Notifications not delivered
+
+**Symptoms:** `ClamAVNotificationFailed` alert fires. Malware was detected but team received no Slack/email/webhook alert.
+
+**Diagnosis:**
+```bash
+# Check for notification events on the affected NodeScan
+kubectl -n $NS describe nodescan <name> | grep -A5 "NotificationFailed"
+
+# Check metric
+kubectl -n $NS port-forward svc/clamav-operator 8080:8080 &
+curl -s localhost:8080/metrics | grep notifications_failed
+```
+
+**Common causes:**
+
+| Cause | Fix |
+|-------|-----|
+| Slack webhook URL expired/rotated | Update the Secret referenced by `notifications.slack.webhookSecretRef` |
+| SMTP server unreachable | Verify port 465/587 is accessible from operator pod. Check `networkPolicy.egress` |
+| Webhook endpoint returns non-2xx | Check endpoint health; review `notifications.webhook.url` |
+| Network policy blocking egress | Add egress rule for the notification endpoint IP/port |
+
+**Test Slack connectivity from the operator pod:**
+```bash
+kubectl -n $NS exec deploy/clamav-operator -- \
+  wget -qO- https://hooks.slack.com/ --spider
+```
+
+---
+
+### 9. Partial scan results
+
+**Symptoms:** NodeScan has `status.resultsPartial: true`. The `ClamAVPartialScanResults` alert fires.
+
+> ⚠️ **Do NOT treat a scan with `resultsPartial: true` as clean.** Result parsing failed — the data is incomplete and unreliable.
+
+**Diagnosis:**
+```bash
+kubectl -n $NS describe nodescan <name> | grep -i "partial\|error\|condition"
+kubectl -n $NS logs job/<associated-job-name> | tail -30
+```
+
+**Fix — force a new scan:**
+```bash
+# Delete the NodeScan — if driven by ClusterScan/ScanSchedule it will be recreated
+kubectl -n $NS delete nodescan <name>
+
+# Or manually trigger a new ClusterScan
+kubectl -n $NS create -f - <<EOF
+apiVersion: clamav.io/v1alpha1
+kind: ClusterScan
+metadata:
+  name: rescan-$(date +%s)
+spec:
+  priority: high
+  concurrent: 3
+EOF
+```
+
+---
+
+### 10. EMERGENCY — Webhook certificate expired
+
+**Symptoms:** All ClamAV CRD operations fail with:
+```
+Error: failed calling webhook "vnodescan.kb.io": x509: certificate has expired
+```
+
+#### With cert-manager (default from v0.5.0)
+
+cert-manager handles rotation automatically. If it missed a renewal:
+
+```bash
+# Force cert-manager to renew immediately
+kubectl -n $NS delete secret clamav-operator-webhook-server-cert
+
+# Watch cert-manager recreate it (~30 seconds)
+kubectl -n $NS get certificate -w
+
+# Restart operator to load the new cert
+kubectl -n $NS rollout restart deploy/clamav-operator
+```
+
+#### Without cert-manager (legacy / self-signed)
+
+```bash
+NS=clamav-system
+RELEASE=clamav-operator
+
+# 1. Generate new self-signed cert
+openssl req -x509 -newkey rsa:4096 -keyout /tmp/tls.key -out /tmp/tls.crt \
+  -days 365 -nodes \
+  -subj "/CN=${RELEASE}-webhook-service" \
+  -addext "subjectAltName=DNS:${RELEASE}-webhook-service,DNS:${RELEASE}-webhook-service.${NS}.svc,DNS:${RELEASE}-webhook-service.${NS}.svc.cluster.local"
+
+# 2. Replace the webhook TLS secret
+kubectl -n $NS create secret tls ${RELEASE}-webhook-server-cert \
+  --cert=/tmp/tls.crt --key=/tmp/tls.key \
+  --dry-run=client -o yaml | kubectl apply -f -
+
+# 3. Update caBundle in the ValidatingWebhookConfiguration
+CA_BUNDLE=$(base64 -w0 /tmp/tls.crt)
+kubectl patch validatingwebhookconfiguration ${RELEASE}-validating-webhook-configuration \
+  --type='json' \
+  -p="[{\"op\":\"replace\",\"path\":\"/webhooks/0/clientConfig/caBundle\",\"value\":\"${CA_BUNDLE}\"}]"
+
+# 4. Also update conversion webhook if CRD conversion is configured
+kubectl patch crd nodescans.clamav.io \
+  --type='json' \
+  -p="[{\"op\":\"replace\",\"path\":\"/spec/conversion/webhook/clientConfig/caBundle\",\"value\":\"${CA_BUNDLE}\"}]"
+
+# 5. Restart operator to load new cert
+kubectl -n $NS rollout restart deploy/${RELEASE}
+
+# 6. Verify
+kubectl -n $NS get nodescans  # should work without TLS error
+
+# 7. Cleanup
+rm /tmp/tls.key /tmp/tls.crt
+```
+
+---
+
 ## Maintenance
 
 ### Upgrade the operator
 
 ```bash
+# 1. ALWAYS update CRDs FIRST (helm upgrade does not update CRDs)
+kubectl apply -f https://raw.githubusercontent.com/SolucTeam/clamav-operator/refs/heads/main/helm/clamav-operator/crds/clamav.io_nodescans.yaml
+kubectl apply -f https://raw.githubusercontent.com/SolucTeam/clamav-operator/refs/heads/main/helm/clamav-operator/crds/clamav.io_clusterscans.yaml
+kubectl apply -f https://raw.githubusercontent.com/SolucTeam/clamav-operator/refs/heads/main/helm/clamav-operator/crds/clamav.io_scanpolicies.yaml
+kubectl apply -f https://raw.githubusercontent.com/SolucTeam/clamav-operator/refs/heads/main/helm/clamav-operator/crds/clamav.io_scanschedules.yaml
+
+# Or from a local clone:
+kubectl apply -f helm/clamav-operator/crds/
+
+# 2. Upgrade the Helm release
 helm upgrade clamav-operator oci://ghcr.io/solucteam/charts/clamav-operator \
   --version <new-version> \
   -n $NS \
-  --reuse-values
+  --reuse-values \
+  --wait
 
-# Verify
+# 3. Verify
+kubectl rollout status deploy/clamav-operator -n $NS
 helm test clamav-operator -n $NS
 ```
+
+### CRD upgrade procedure
+
+> ⚠️ `helm upgrade` does **not** update CRDs. This is a Helm design decision.  
+> Always apply CRDs manually before upgrading the Helm release.
+
+```bash
+# Check currently installed CRD versions
+kubectl get crd -o custom-columns='NAME:.metadata.name,VERSIONS:.spec.versions[*].name' | grep clamav
+
+# Apply CRDs from local chart (or from git tag)
+kubectl apply -f helm/clamav-operator/crds/
+
+# Verify all CRDs are Established
+kubectl get crd | grep clamav.io
+# All should show: ESTABLISHED = True
+
+# Verify existing resources still parse correctly
+kubectl get nodescans,clusterscans,scanpolicies,scanschedules -n $NS
+```
+
+### Rollback procedure
+
+```bash
+# View Helm release history
+helm history clamav-operator -n $NS
+
+# Rollback to previous release
+helm rollback clamav-operator -n $NS
+
+# Rollback to a specific revision
+helm rollback clamav-operator <revision> -n $NS
+
+# Verify
+kubectl rollout status deploy/clamav-operator -n $NS
+```
+
+> ⚠️ If rollback requires **downgrading CRDs** (rare):
+> ```bash
+> # Get CRDs from the old git tag
+> git checkout v<old-version> -- helm/clamav-operator/crds/
+> kubectl apply -f helm/clamav-operator/crds/
+> git checkout HEAD -- helm/clamav-operator/crds/  # restore
+> ```
 
 ### Rotate ClamAV signatures (air-gap)
 

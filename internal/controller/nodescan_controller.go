@@ -67,6 +67,36 @@ type NodeScanReconciler struct {
 	// (scanner.imagePullSecrets) and injected into every scanner Job pod spec.
 	// Required when the scanner image lives in a private registry.
 	ScannerImagePullSecrets []corev1.LocalObjectReference
+	// SignaturesPVCName is the name of the PVC that holds ClamAV signature
+	// databases (set by Helm when scanner.signatures.persistent=true).
+	// When non-empty, scanner job pods mount this PVC at CLAMAV_DB_PATH so
+	// that signatures written by the freshclam CronJob are immediately visible
+	// to scanner jobs — without baking signatures into the image.
+	// The PVC must exist in the same namespace as the NodeScan object.
+	// Leave empty to use signatures baked into the scanner image (air-gap /
+	// image-embedded workflow).
+	SignaturesPVCName string
+
+	// ParseMaxRetries overrides maxParseRetries when non-zero.
+	// Set to a small value (e.g. 1) in tests to avoid multi-minute backoff.
+	ParseMaxRetries int
+	// ParseRetryBaseSeconds overrides the per-attempt backoff multiplier (seconds)
+	// when non-zero. Set to 1 in tests for near-instant completion.
+	ParseRetryBaseSeconds int
+}
+
+// parseRetrySettings returns the effective retry ceiling and backoff multiplier,
+// falling back to the package-level constants when the reconciler fields are unset.
+func (r *NodeScanReconciler) parseRetrySettings() (maxRetries int, baseSeconds int) {
+	maxRetries = maxParseRetries
+	if r.ParseMaxRetries > 0 {
+		maxRetries = r.ParseMaxRetries
+	}
+	baseSeconds = 10
+	if r.ParseRetryBaseSeconds > 0 {
+		baseSeconds = r.ParseRetryBaseSeconds
+	}
+	return
 }
 
 // +kubebuilder:rbac:groups=clamav.io,resources=nodescans,verbs=get;list;watch;create;update;patch;delete
@@ -220,6 +250,7 @@ func (r *NodeScanReconciler) Reconcile(ctx context.Context, req ctrl.Request) (c
 			}
 
 			// Parse results from Job with retry on transient errors
+			effectiveMaxRetries, effectiveBaseSeconds := r.parseRetrySettings()
 			if err := r.parseJobResults(ctx, &nodeScan, &existingJob); err != nil {
 				// Track retry count in annotations
 				retryCount := 0
@@ -230,7 +261,7 @@ func (r *NodeScanReconciler) Reconcile(ctx context.Context, req ctrl.Request) (c
 				}
 				retryCount++
 
-				if retryCount >= maxParseRetries {
+				if retryCount >= effectiveMaxRetries {
 					// Max retries exceeded — mark the scan as completed but flag it as
 					// partial so consumers know the data cannot be trusted as complete.
 					log.Error(err, "max parse retries exceeded, completing with partial results",
@@ -244,7 +275,7 @@ func (r *NodeScanReconciler) Reconcile(ctx context.Context, req ctrl.Request) (c
 						Type:               "PartialResults",
 						Status:             metav1.ConditionTrue,
 						Reason:             "ParseMaxRetriesExceeded",
-						Message:            fmt.Sprintf("Scan output could not be parsed after %d attempts. Results are incomplete.", retryCount),
+						Message:            fmt.Sprintf("Scan output could not be parsed after %d attempts. Results are incomplete.", effectiveMaxRetries),
 						LastTransitionTime: metav1.Now(),
 					}
 					found := false
@@ -275,7 +306,7 @@ func (r *NodeScanReconciler) Reconcile(ctx context.Context, req ctrl.Request) (c
 					r.Recorder.Event(&nodeScan, corev1.EventTypeWarning, "ParseResultsFailed",
 						fmt.Sprintf("Failed to parse scan results (attempt %d/%d): %v", retryCount, maxParseRetries, err))
 					// Requeue with exponential backoff
-					backoff := time.Duration(retryCount*10) * time.Second
+					backoff := time.Duration(retryCount*effectiveBaseSeconds) * time.Second
 					return ctrl.Result{RequeueAfter: backoff}, nil
 				}
 			}
@@ -297,20 +328,30 @@ func (r *NodeScanReconciler) Reconcile(ctx context.Context, req ctrl.Request) (c
 			recordNodeScanMetrics(&nodeScan, clamavv1alpha1.NodeScanPhaseCompleted)
 			decNodeScanRunning(nodeScan.Namespace)
 
+			// Record partial-results metric regardless of infection status.
+			recordPartialResults(nodeScan.Namespace, nodeScan.Spec.NodeName, nodeScan.Status.ResultsPartial)
+
 			// Send notifications if infected files found.
-			// Fire-and-forget via goroutine: HTTP/SMTP calls must never block the reconcile worker.
+			// Runs in a goroutine so HTTP/SMTP retries never block the reconcile worker.
+			// SendWithRetry attempts each channel up to 3 times with exponential backoff.
+			// The 5-minute deadline gives 3 channels × ~35 s of retries comfortable headroom.
 			if nodeScan.Status.FilesInfected > 0 && scanPolicy != nil {
 				nodeScanSnap := nodeScan.DeepCopy()
 				scanPolicySnap := scanPolicy.DeepCopy()
-				// context.WithoutCancel propagates trace/log values from the
-				// reconcile context without inheriting its cancellation.
-				// This lets the notification outlive the reconcile loop while
-				// still carrying the request's observability metadata.
+				namespace := nodeScan.Namespace
+				// context.WithoutCancel keeps tracing/log values without inheriting
+				// the reconcile-loop cancellation.
 				baseCtx := context.WithoutCancel(ctx)
 				go func() {
-					notifCtx, cancel := context.WithTimeout(baseCtx, 2*time.Minute)
+					notifCtx, cancel := context.WithTimeout(baseCtx, 5*time.Minute)
 					defer cancel()
-					r.Notifier.Send(notifCtx, nodeScanSnap, scanPolicySnap)
+					results := r.Notifier.SendWithRetry(notifCtx, nodeScanSnap, scanPolicySnap)
+					for _, res := range results {
+						recordNotificationAttempt(namespace, res.Channel)
+						if res.Err != nil {
+							recordNotificationFailed(namespace, res.Channel)
+						}
+					}
 				}()
 			}
 
@@ -527,18 +568,8 @@ func (r *NodeScanReconciler) constructJobForNodeScan(nodeScan *clamavv1alpha1.No
 							Image:           r.ScannerImage,
 							ImagePullPolicy: corev1.PullIfNotPresent,
 							Env:             envVars,
-							VolumeMounts: []corev1.VolumeMount{
-								{
-									Name:      "host-root",
-									MountPath: "/host",
-									ReadOnly:  true,
-								},
-								{
-									Name:      "scan-results",
-									MountPath: "/results",
-								},
-							},
-							Resources: resources,
+							VolumeMounts:    r.buildScannerVolumeMounts(clamavDBPath),
+							Resources:       resources,
 							SecurityContext: &corev1.SecurityContext{
 								Privileged:             ptr.To(true),
 								ReadOnlyRootFilesystem: ptr.To(false),
@@ -551,26 +582,7 @@ func (r *NodeScanReconciler) constructJobForNodeScan(nodeScan *clamavv1alpha1.No
 							},
 						},
 					},
-					Volumes: []corev1.Volume{
-						{
-							Name: "host-root",
-							VolumeSource: corev1.VolumeSource{
-								HostPath: &corev1.HostPathVolumeSource{
-									Path: "/",
-									Type: ptr.To(corev1.HostPathDirectory),
-								},
-							},
-						},
-						{
-							Name: "scan-results",
-							VolumeSource: corev1.VolumeSource{
-								HostPath: &corev1.HostPathVolumeSource{
-									Path: "/var/log/clamav-scans",
-									Type: ptr.To(corev1.HostPathDirectoryOrCreate),
-								},
-							},
-						},
-					},
+					Volumes: r.buildScannerVolumes(),
 				},
 			},
 		},
@@ -582,6 +594,62 @@ func (r *NodeScanReconciler) constructJobForNodeScan(nodeScan *clamavv1alpha1.No
 	}
 
 	return job, nil
+}
+
+// buildScannerVolumeMounts returns the VolumeMount list for a scanner Job container.
+// When SignaturesPVCName is set the signatures PVC is mounted at dbPath so that
+// freshclam-written databases are immediately visible to the scanner.
+func (r *NodeScanReconciler) buildScannerVolumeMounts(dbPath string) []corev1.VolumeMount {
+	mounts := []corev1.VolumeMount{
+		{Name: "host-root", MountPath: "/host", ReadOnly: true},
+		{Name: "scan-results", MountPath: "/results"},
+	}
+	if r.SignaturesPVCName != "" {
+		mounts = append(mounts, corev1.VolumeMount{
+			Name:      "clamav-signatures",
+			MountPath: dbPath,
+			ReadOnly:  true,
+		})
+	}
+	return mounts
+}
+
+// buildScannerVolumes returns the Volume list for a scanner Job pod.
+// When SignaturesPVCName is set the signatures PVC is included so freshclam
+// updates are shared with scanner job pods without rebuilding the image.
+func (r *NodeScanReconciler) buildScannerVolumes() []corev1.Volume {
+	volumes := []corev1.Volume{
+		{
+			Name: "host-root",
+			VolumeSource: corev1.VolumeSource{
+				HostPath: &corev1.HostPathVolumeSource{
+					Path: "/",
+					Type: ptr.To(corev1.HostPathDirectory),
+				},
+			},
+		},
+		{
+			Name: "scan-results",
+			VolumeSource: corev1.VolumeSource{
+				HostPath: &corev1.HostPathVolumeSource{
+					Path: "/var/log/clamav-scans",
+					Type: ptr.To(corev1.HostPathDirectoryOrCreate),
+				},
+			},
+		},
+	}
+	if r.SignaturesPVCName != "" {
+		volumes = append(volumes, corev1.Volume{
+			Name: "clamav-signatures",
+			VolumeSource: corev1.VolumeSource{
+				PersistentVolumeClaim: &corev1.PersistentVolumeClaimVolumeSource{
+					ClaimName: r.SignaturesPVCName,
+					ReadOnly:  true,
+				},
+			},
+		})
+	}
+	return volumes
 }
 
 // parseJobResults parses the scan results from the completed Job

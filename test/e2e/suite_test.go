@@ -45,6 +45,7 @@ import (
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	utilruntime "k8s.io/apimachinery/pkg/util/runtime"
+	"k8s.io/client-go/kubernetes"
 	clientgoscheme "k8s.io/client-go/kubernetes/scheme"
 	"k8s.io/client-go/rest"
 	ctrl "sigs.k8s.io/controller-runtime"
@@ -102,9 +103,9 @@ var _ = BeforeSuite(func() {
 	useExistingCluster := os.Getenv("USE_EXISTING_CLUSTER") == "true"
 
 	testEnv = &envtest.Environment{
-		// Point at the CRD manifests so envtest installs them automatically.
+		// Point at the Helm CRD manifests so envtest installs them automatically.
 		CRDDirectoryPaths: []string{
-			filepath.Join("..", "..", "config", "crd", "bases"),
+			filepath.Join("..", "..", "helm", "clamav-operator", "crds"),
 		},
 		ErrorIfCRDPathMissing: true,
 		UseExistingCluster:    &useExistingCluster,
@@ -129,6 +130,31 @@ var _ = BeforeSuite(func() {
 	mgr, err := ctrl.NewManager(cfg, ctrl.Options{
 		Scheme: testScheme,
 	})
+	Expect(err).NotTo(HaveOccurred())
+
+	// Create a Kubernetes clientset so NodeScanReconciler can attempt pod-log reads.
+	// In envtest there are no real pods, so log parsing will return errors, but the
+	// reconciler handles that gracefully (ResultsPartial=true).
+	clientset, err := kubernetes.NewForConfig(cfg)
+	Expect(err).NotTo(HaveOccurred())
+
+	// NodeScanReconciler — drives NodeScan → Job lifecycle tests.
+	// ScannerImage is set to a lightweight placeholder; envtest never actually
+	// schedules the Job pod, so the image value is irrelevant.
+	err = (&controller.NodeScanReconciler{
+		Client:       mgr.GetClient(),
+		Scheme:       mgr.GetScheme(),
+		Recorder:     mgr.GetEventRecorderFor("nodescan-controller"),
+		Clientset:    clientset,
+		ScannerImage: "ghcr.io/solucteam/clamav-node-scanner:e2e-stub",
+		ClamavHost:   "clamav.clamav.svc.cluster.local",
+		ClamavPort:   3310,
+		// In envtest there are no real pods, so parseJobResults always fails with
+		// "no pods found for job". Use minimal retry settings so the reconciler
+		// reaches ResultsPartial+Completed quickly instead of waiting ~100s.
+		ParseMaxRetries:       1,
+		ParseRetryBaseSeconds: 1,
+	}).SetupWithManager(mgr)
 	Expect(err).NotTo(HaveOccurred())
 
 	// ScanScheduleReconciler — drives the core scheduling logic under test.

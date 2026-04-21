@@ -146,8 +146,24 @@ scanner:
   # ---------------------------------------------------------------------------
   freshclam:
     # Enable automatic signature updates via freshclam CronJob.
-    # Set to false for air-gapped environments where signatures are
-    # pre-loaded into the scanner image at build time.
+    #
+    # IMPORTANT – standalone mode limitation:
+    #   In standalone mode the scanner runs clamscan from inside the scanner
+    #   container image. Signatures are read from CLAMAV_DB_PATH (/var/lib/clamav)
+    #   in the container image filesystem. The freshclam CronJob writes to its
+    #   own isolated volume (emptyDir or PVC below) that scanner job pods never
+    #   mount — so enabling freshclam does NOT update the signatures that scanner
+    #   jobs use in standalone mode.
+    #
+    #   To have up-to-date signatures in standalone mode, bake them into the
+    #   scanner image at build time (run freshclam during docker build or COPY
+    #   a pre-downloaded /var/lib/clamav directory into the image).
+    #
+    #   In remote mode, freshclam writes to the shared PVC that the clamd daemon
+    #   also reads from — this is the only configuration where freshclam is
+    #   effective at runtime.
+    #
+    #   Set enabled=false for air-gapped environments (no internet access).
     enabled: true
     # Cron schedule – default every 6 hours
     schedule: "0 */6 * * *"
@@ -165,18 +181,44 @@ scanner:
 
   # ---------------------------------------------------------------------------
   # Signature persistence
-  # NOTE: this setting is only meaningful when mode=remote AND freshclam.enabled=true.
-  # In standalone mode, signatures are baked into the scanner image at build time;
-  # this PVC would be mounted but never written to by the scanner container.
+  #
+  # When persistent=true AND freshclam.enabled=true:
+  #   - A PVC (pvcName below) is created and mounted by the freshclam CronJob.
+  #   - The operator also mounts the same PVC (read-only) in every scanner Job
+  #     pod at CLAMAV_DB_PATH. This means freshclam-updated signatures are
+  #     immediately visible to scanner jobs without rebuilding the image.
+  #   - This is the recommended setup for connected (non-air-gap) standalone
+  #     deployments.
+  #
+  # When persistent=false (default) OR freshclam.enabled=false:
+  #   - The freshclam CronJob uses an emptyDir (discarded on pod exit) or is
+  #     disabled entirely.
+  #   - Scanner jobs do NOT mount any signatures volume — they rely on
+  #     signatures baked into the scanner image at build time.
+  #   - Use this for air-gap environments (build your image with freshclam
+  #     run during docker build) or remote-mode deployments.
   # ---------------------------------------------------------------------------
   signatures:
     # Use a PersistentVolumeClaim to share signatures between the freshclam CronJob
-    # and the remote-mode clamd daemon across restarts.
-    # When false an emptyDir is used — signatures are re-downloaded on every
-    # freshclam run or must be baked into the image for air-gap environments.
+    # and scanner Job pods. Set to true for connected standalone mode so that
+    # signature updates take effect without an image rebuild.
+    # When false, signatures must be baked into the scanner image.
     persistent: false
     pvcName: clamav-signatures
     storageClass: ""
+    # Access mode for the signatures PVC.
+    #
+    # ReadWriteOnce (default): works only if all scanner jobs happen to land on
+    # the same node as the freshclam pod — which is NOT guaranteed in multi-node
+    # clusters. Scanner jobs on other nodes will fail with "Multi-Attach error".
+    #
+    # ReadWriteMany (recommended when persistent=true): allows freshclam to write
+    # and scanner jobs on ANY node to read simultaneously. Requires a storage
+    # backend that supports RWX: NFS, CephFS, Azure Files, AWS EFS, GCP Filestore.
+    # Standard block storage (EBS, GCP Persistent Disk) does NOT support RWX.
+    #
+    # If your cluster has no RWX storage class, leave persistent: false and bake
+    # signatures into the scanner image instead (see air-gap example).
     accessMode: ReadWriteOnce
     size: 1Gi
 
@@ -376,7 +418,7 @@ webhook:
   # STRONGLY RECOMMENDED for production: set certManager.enabled=true.
   # cert-manager handles automatic rotation and survives pod restarts.
   certManager:
-    enabled: false
+    enabled: true
 
   # If certManager is disabled, use these certificates.
   # WARNING: autoGenerate=true produces self-signed certs stored in a Secret.
@@ -449,6 +491,36 @@ monitoring:
           summary: "No recent ClamAV scans"
           description: "No scans completed in the last 24 hours"
 
+      - alert: ClamAVNotificationFailed
+        expr: increase(clamav_notifications_failed_total[15m]) > 0
+        for: 5m
+        labels:
+          severity: warning
+          team: platform
+        annotations:
+          summary: "ClamAV notification delivery failed"
+          description: "{{ $value }} notifications failed to deliver in the last 15 minutes (channel={{ $labels.channel }})"
+
+      - alert: ClamAVPartialScanResults
+        expr: clamav_nodescan_partial_results > 0
+        for: 10m
+        labels:
+          severity: warning
+          team: security
+        annotations:
+          summary: "ClamAV scan returned partial results — do not trust as clean"
+          description: "NodeScan on node {{ $labels.node }} has partial results. Re-run required."
+
+      - alert: ClamAVWebhookCertExpiringSoon
+        expr: certmanager_certificate_expiration_timestamp_seconds{name=~".*clamav.*webhook.*"} - time() < 604800
+        for: 1h
+        labels:
+          severity: warning
+          team: platform
+        annotations:
+          summary: "ClamAV webhook certificate expiring within 7 days"
+          description: "Certificate {{ $labels.name }} expires in {{ $value | humanizeDuration }}. Check cert-manager."
+
 # =============================================================================
 # DEFAULT SCAN POLICY
 # =============================================================================
@@ -511,6 +583,54 @@ defaultScanPolicy:
     #     onlyOnInfection: true
 
 # =============================================================================
+# DEFAULT SCAN SCHEDULE
+# =============================================================================
+defaultScanSchedule:
+  # Create a default ScanSchedule resource.
+  # Set enabled=true to activate automatic cluster-wide scans.
+  # All fields below have sensible defaults — override only what you need.
+  enabled: false
+  name: default-schedule
+
+  # Cron expression for scan frequency.
+  # Examples: "0 2 * * 0" (weekly), "0 2 1 * *" (monthly)
+  schedule: "0 2 * * *"
+
+  # Set to true to pause scheduled runs without deleting the resource.
+  suspend: false
+
+  # Forbid = skip new run if previous is still running (recommended).
+  # Allow = run both in parallel. Replace = cancel running and start new.
+  concurrencyPolicy: Forbid
+
+  # ScanPolicy to use for each scheduled ClusterScan.
+  # Must exist in the same namespace as the operator.
+  scanPolicy: default-policy
+
+  # Maximum number of nodes scanned in parallel per run.
+  concurrent: 3
+
+  # Priority applied to all NodeScans: high | medium | low
+  priority: low
+
+  # Restrict to specific nodes. Leave empty to scan all nodes.
+  # Example:
+  #   nodeSelector:
+  #     matchLabels:
+  #       node-role.kubernetes.io/worker: ""
+  nodeSelector: {}
+
+  # Number of successful ClusterScan objects to retain in history.
+  successfulScansHistoryLimit: 3
+
+  # Number of failed ClusterScan objects to retain in history.
+  failedScansHistoryLimit: 1
+
+  # Maximum delay (seconds) before skipping a missed scheduled run.
+  # Useful after a cluster outage. Unset by default.
+  # startingDeadlineSeconds: 3600
+
+# =============================================================================
 # NETWORK POLICIES
 # =============================================================================
 networkPolicy:
@@ -540,32 +660,34 @@ networkPolicy:
   # "0.0.0.0/0" allows all. Tighten to your node subnet in production.
   nodesCIDR: "0.0.0.0/0"
 
-  # Additional ingress rules (e.g. Prometheus scrape).
+  # Additional ingress rules appended to the auto-generated kubelet-probe and
+  # webhook rules. Empty by default — add your own rules as needed.
   # The kubelet probe and webhook ingress rules are generated automatically
   # from nodesCIDR / controlPlaneCIDR above — do not duplicate them here.
-  ingress:
-    - from:
-      - namespaceSelector:
-          matchLabels:
-            name: monitoring
-      ports:
-      - protocol: TCP
-        port: 8080
+  #
+  # Example — allow Prometheus scrape from a monitoring namespace:
+  # ingress:
+  #   - from:
+  #     - namespaceSelector:
+  #         matchLabels:
+  #           kubernetes.io/metadata.name: monitoring
+  #     ports:
+  #     - protocol: TCP
+  #       port: 8080
+  ingress: []
 
-  # Additional egress rules (ClamAV, DNS, …).
-  # The API server egress rule is generated automatically from controlPlaneCIDR
-  # above — do not duplicate it here.
-  egress:
-    # ClamAV service
-    - to:
-      - namespaceSelector:
-          matchLabels:
-            kubernetes.io/metadata.name: clamav
-      ports:
+  # Egress rules for the freshclam CronJob NetworkPolicy.
+  # Only rendered when scanner.mode=standalone AND scanner.freshclam.enabled=true.
+  # Default: allow HTTPS to ClamAV mirrors and DNS via CoreDNS.
+  # Override to restrict to your internal mirror or proxy.
+  freshclamEgress:
+    # HTTPS to ClamAV update mirrors (database.clamav.net)
+    - ports:
       - protocol: TCP
-        port: 3310
-    # DNS — UDP for standard queries, TCP for large responses (> 512 B),
-    # DNSSEC, and zone transfers. Both protocols must be allowed.
+        port: 443
+      - protocol: TCP
+        port: 80
+    # DNS — UDP for standard queries, TCP for large responses / DNSSEC
     - to:
       - namespaceSelector:
           matchLabels:
@@ -575,6 +697,32 @@ networkPolicy:
         port: 53
       - protocol: TCP
         port: 53
+
+  # Additional egress rules for the operator pod, appended to the
+  # auto-generated API-server rule.
+  # Default: DNS only — required for the operator to resolve service names.
+  # The API server egress rule is generated automatically from controlPlaneCIDR
+  # above — do not duplicate it here.
+  # Add rules for remote-mode ClamAV, notifications (SMTP, Slack webhook), etc.
+  egress:
+    # DNS — required for service name resolution inside the cluster
+    - to:
+      - namespaceSelector:
+          matchLabels:
+            kubernetes.io/metadata.name: kube-system
+      ports:
+      - protocol: UDP
+        port: 53
+      - protocol: TCP
+        port: 53
+  # Example — remote-mode ClamAV daemon (uncomment and add to egress list above):
+  # - to:
+  #   - namespaceSelector:
+  #       matchLabels:
+  #         kubernetes.io/metadata.name: clamav
+  #   ports:
+  #   - protocol: TCP
+  #     port: 3310
 
 # =============================================================================
 # ADDITIONAL CONFIGURATION

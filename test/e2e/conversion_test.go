@@ -19,6 +19,8 @@ limitations under the License.
 package e2e
 
 import (
+	"os"
+
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
 
@@ -32,7 +34,18 @@ import (
 // conversionTests exercises the v1alpha1 ↔ v1beta1 conversion logic.
 // These tests create an object via one version and read it back via the other,
 // verifying that all fields round-trip correctly.
+//
+// NOTE: Conversion tests require a running conversion webhook (cert-manager +
+// the operator's webhook server). They are automatically skipped when running
+// against envtest (USE_EXISTING_CLUSTER != "true"). Run them against a real
+// cluster: USE_EXISTING_CLUSTER=true go test -tags e2e ./test/e2e/...
 var _ = Describe("API Conversion v1alpha1 ↔ v1beta1", func() {
+	BeforeEach(func() {
+		if os.Getenv("USE_EXISTING_CLUSTER") != "true" {
+			Skip("conversion tests require a running conversion webhook — skipped in envtest mode")
+		}
+	})
+
 	Describe("NodeScan", func() {
 		It("should round-trip from v1alpha1 to v1beta1 without data loss", func() {
 			alpha := &clamavv1alpha1.NodeScan{

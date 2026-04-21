@@ -1,0 +1,45 @@
+{{- if .Values.defaultScanSchedule.enabled }}
+apiVersion: clamav.io/v1alpha1
+kind: ScanSchedule
+metadata:
+  name: {{ .Values.defaultScanSchedule.name }}
+  namespace: {{ .Release.Namespace }}
+  labels:
+    {{- include "clamav-operator.labels" . | nindent 4 }}
+    app.kubernetes.io/component: scan-schedule
+spec:
+  {{- if .Values.defaultScanSchedule.schedule }}
+  schedule: {{ .Values.defaultScanSchedule.schedule | quote }}
+  {{- else }}
+  {{- fail "defaultScanSchedule.schedule is required when defaultScanSchedule.enabled=true" }}
+  {{- end }}
+  {{- if kindIs "bool" .Values.defaultScanSchedule.suspend }}
+  suspend: {{ .Values.defaultScanSchedule.suspend }}
+  {{- end }}
+  {{- if .Values.defaultScanSchedule.concurrencyPolicy }}
+  concurrencyPolicy: {{ .Values.defaultScanSchedule.concurrencyPolicy }}
+  {{- end }}
+  {{- if .Values.defaultScanSchedule.successfulScansHistoryLimit }}
+  successfulScansHistoryLimit: {{ .Values.defaultScanSchedule.successfulScansHistoryLimit }}
+  {{- end }}
+  {{- if .Values.defaultScanSchedule.failedScansHistoryLimit }}
+  failedScansHistoryLimit: {{ .Values.defaultScanSchedule.failedScansHistoryLimit }}
+  {{- end }}
+  {{- if .Values.defaultScanSchedule.startingDeadlineSeconds }}
+  startingDeadlineSeconds: {{ .Values.defaultScanSchedule.startingDeadlineSeconds }}
+  {{- end }}
+  clusterScan:
+    {{- if .Values.defaultScanSchedule.scanPolicy }}
+    scanPolicy: {{ .Values.defaultScanSchedule.scanPolicy }}
+    {{- end }}
+    {{- if .Values.defaultScanSchedule.concurrent }}
+    concurrent: {{ .Values.defaultScanSchedule.concurrent }}
+    {{- end }}
+    {{- if .Values.defaultScanSchedule.priority }}
+    priority: {{ .Values.defaultScanSchedule.priority }}
+    {{- end }}
+    {{- with .Values.defaultScanSchedule.nodeSelector }}
+    nodeSelector:
+      {{- toYaml . | nindent 6 }}
+    {{- end }}
+{{- end }}

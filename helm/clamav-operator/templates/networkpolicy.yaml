@@ -67,25 +67,11 @@ spec:
     matchLabels:
       {{- include "clamav-operator.selectorLabels" . | nindent 6 }}
       app.kubernetes.io/component: freshclam
+  {{- if .Values.networkPolicy.freshclamEgress }}
   policyTypes:
     - Egress
   egress:
-    # HTTPS to ClamAV update mirrors (database.clamav.net)
-    - ports:
-      - protocol: TCP
-        port: 443
-      - protocol: TCP
-        port: 80
-    # DNS — UDP for standard queries, TCP for large responses (> 512 B),
-    # DNSSEC, and zone transfers. Both protocols must be allowed.
-    - to:
-      - namespaceSelector:
-          matchLabels:
-            kubernetes.io/metadata.name: kube-system
-      ports:
-      - protocol: UDP
-        port: 53
-      - protocol: TCP
-        port: 53
+    {{- toYaml .Values.networkPolicy.freshclamEgress | nindent 4 }}
+  {{- end }}
 {{- end }}
 {{- end }}
