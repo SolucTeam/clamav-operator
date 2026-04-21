@@ -171,7 +171,7 @@ describe('incremental', () => {
     const cacheFile = path.join(tmpDir, 'test-node_scan_cache.json');
     const raw = await fs.readFile(cacheFile, 'utf-8');
     const parsed = JSON.parse(raw);
-    assert.equal(parsed.version, 2, 'cache version should be 2');
+    assert.equal(parsed.version, 3, 'cache version should be 3');
     assert.ok(parsed.files['/tmp/persist-test.txt'], 'cached file should be present');
     assert.equal(parsed.files['/tmp/persist-test.txt'].scanResult, 'infected');
 
