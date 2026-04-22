@@ -47,7 +47,7 @@
 </tr>
 <tr>
   <td>🔔 <b>Notifications</b></td>
-  <td>Slack, Email (SMTP/TLS), generic Webhook — fire-and-forget, never block a scan</td>
+  <td>Slack, Email (SMTP/TLS), generic Webhook, Microsoft Teams — fire-and-forget, never block a scan</td>
 </tr>
 <tr>
   <td>🏗️ <b>Multi-arch images</b></td>
@@ -118,6 +118,7 @@ flowchart TB
         SLACK["Slack"]
         EMAIL["Email / SMTP"]
         WBHK["Webhook"]
+        TEAMS["MS Teams"]
     end
 
     SS_CTL -->|creates| CRD_CS
@@ -127,7 +128,7 @@ flowchart TB
     NS_CTL -.->|reads logs| JOBS
     NS_CTL -.->|watches| NODES
     WEBHOOK_ADM -.->|validates| CRD_NS & CRD_CS & CRD_SS
-    NOTIF --> SLACK & EMAIL & WBHK
+    NOTIF --> SLACK & EMAIL & WBHK & TEAMS
 
     style Operator fill:#1a1a2e,color:#e0e0ff,stroke:#4444aa
     style K8S fill:#0d2137,color:#e0f0ff,stroke:#326CE5
@@ -158,7 +159,7 @@ sequenceDiagram
         NS->>STATUS: Update FilesScanned / FilesInfected
         alt Infection found
             NS-->>STATUS: Event "InfectionFound"
-            NS-)User: 🔔 Slack / Email / Webhook
+            NS-)User: 🔔 Slack / Email / Webhook / Teams
         end
     end
 
@@ -380,6 +381,10 @@ spec:
       url: "https://hooks.example.com/clamav"
       headers: { Authorization: "Bearer my-token" }
       onlyOnInfection: false
+    teams:
+      enabled: true
+      webhookSecretRef: { name: teams-webhook-secret, key: url }
+      onlyOnInfection: true
 ```
 
 ---
@@ -707,7 +712,7 @@ clamav-operator/
 │   │   ├── metrics.go
 │   │   └── startup_checks.go
 │   └── notification/
-│       └── notifier.go            # Slack · Email · Webhook
+│       └── notifier.go            # Slack · Email · Webhook · Teams
 │
 ├── cmd/manager/main.go            # Operator entry point
 │
