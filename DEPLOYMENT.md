@@ -313,6 +313,13 @@ spec:
       secretRef:
         name: webhook-auth        # Secret keys become request headers
       onlyOnInfection: false      # Always notify (scanned + infected)
+
+    teams:
+      enabled: true
+      webhookSecretRef:
+        name: teams-webhook-secret
+        key: url
+      onlyOnInfection: true
 ```
 
 ### Notification Secrets
@@ -327,6 +334,11 @@ kubectl create secret generic slack-webhook \
 kubectl create secret generic smtp-credentials \
   --from-literal=username='clamav@example.com' \
   --from-literal=password='my-smtp-password' \
+  -n clamav-operator-system
+
+# Microsoft Teams Incoming Webhook URL
+kubectl create secret generic teams-webhook-secret \
+  --from-literal=url='https://prod-xx.westeurope.logic.azure.com/...' \
   -n clamav-operator-system
 ```
 

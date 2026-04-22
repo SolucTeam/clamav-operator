@@ -273,7 +273,7 @@ If driven by a ClusterScan, the ClusterScan controller will reschedule it automa
 
 ### 8. Notifications not delivered
 
-**Symptoms:** `ClamAVNotificationFailed` alert fires. Malware was detected but team received no Slack/email/webhook alert.
+**Symptoms:** `ClamAVNotificationFailed` alert fires. Malware was detected but team received no Slack/email/webhook/Teams alert.
 
 **Diagnosis:**
 ```bash
@@ -292,6 +292,7 @@ curl -s localhost:8080/metrics | grep notifications_failed
 | Slack webhook URL expired/rotated | Update the Secret referenced by `notifications.slack.webhookSecretRef` |
 | SMTP server unreachable | Verify port 465/587 is accessible from operator pod. Check `networkPolicy.egress` |
 | Webhook endpoint returns non-2xx | Check endpoint health; review `notifications.webhook.url` |
+| Teams webhook URL expired/rotated | Update the Secret referenced by `notifications.teams.webhookSecretRef` |
 | Network policy blocking egress | Add egress rule for the notification endpoint IP/port |
 
 **Test Slack connectivity from the operator pod:**
