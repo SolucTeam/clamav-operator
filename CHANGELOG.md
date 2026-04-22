@@ -11,6 +11,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -20,6 +33,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -36,6 +62,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -45,6 +84,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -62,6 +114,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -71,6 +136,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -87,6 +165,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -96,6 +187,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -114,6 +218,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -123,6 +240,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -139,6 +269,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -148,6 +291,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -165,6 +321,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -174,6 +343,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -190,6 +372,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -199,6 +394,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -216,6 +424,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -225,6 +446,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -241,6 +475,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -250,6 +497,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -267,6 +527,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -276,6 +549,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -292,6 +578,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -301,6 +600,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -319,6 +631,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -328,6 +653,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -344,6 +682,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -353,6 +704,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -370,6 +734,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -379,6 +756,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -395,6 +785,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -404,6 +807,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -424,6 +840,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -433,6 +862,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -449,6 +891,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -458,6 +913,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -475,6 +943,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -484,6 +965,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -500,6 +994,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -509,6 +1016,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -527,6 +1047,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -536,6 +1069,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -552,6 +1098,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -561,6 +1120,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -578,6 +1150,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -587,6 +1172,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -603,6 +1201,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -612,6 +1223,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -629,6 +1253,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -638,6 +1275,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -654,6 +1304,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -663,6 +1326,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -680,6 +1356,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -689,6 +1378,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -705,6 +1407,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -714,6 +1429,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -732,6 +1460,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -741,6 +1482,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -757,6 +1511,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -766,6 +1533,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -783,6 +1563,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -792,6 +1585,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -808,6 +1614,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -817,6 +1636,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -845,6 +1677,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -854,6 +1699,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -870,6 +1728,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -879,6 +1750,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -896,6 +1780,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -905,6 +1802,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -921,6 +1831,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -930,6 +1853,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -948,6 +1884,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -957,6 +1906,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -973,6 +1935,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -982,6 +1957,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -999,6 +1987,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -1008,6 +2009,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -1024,6 +2038,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -1033,6 +2060,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -1050,6 +2090,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -1059,6 +2112,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -1075,6 +2141,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -1084,6 +2163,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -1101,6 +2193,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -1110,6 +2215,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -1126,6 +2244,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -1135,6 +2266,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -1153,6 +2297,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -1162,6 +2319,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -1178,6 +2348,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -1187,6 +2370,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -1204,6 +2400,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -1213,6 +2422,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -1229,6 +2451,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -1238,6 +2473,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -1258,6 +2506,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -1267,6 +2528,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -1283,6 +2557,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -1292,6 +2579,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -1309,6 +2609,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -1318,6 +2631,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -1334,6 +2660,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -1343,6 +2682,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -1361,6 +2713,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -1370,6 +2735,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -1386,6 +2764,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -1395,6 +2786,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -1412,6 +2816,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -1421,6 +2838,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -1437,6 +2867,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -1446,6 +2889,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -1463,6 +2919,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -1472,6 +2941,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -1488,6 +2970,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -1497,6 +2992,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -1514,6 +3022,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -1523,6 +3044,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -1539,6 +3073,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -1548,6 +3095,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -1566,6 +3126,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -1575,6 +3148,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -1591,6 +3177,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -1600,6 +3199,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -1617,6 +3229,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -1626,6 +3251,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -1642,6 +3280,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -1651,6 +3302,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -1671,6 +3335,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -1680,6 +3357,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -1696,6 +3386,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -1705,6 +3408,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -1722,6 +3438,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -1731,6 +3460,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -1747,6 +3489,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -1756,6 +3511,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -1774,6 +3542,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -1783,6 +3564,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -1799,6 +3593,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -1808,6 +3615,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -1825,6 +3645,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -1834,6 +3667,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -1850,6 +3696,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -1859,6 +3718,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -1876,6 +3748,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -1885,6 +3770,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -1901,6 +3799,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -1910,6 +3821,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -1927,6 +3851,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -1936,6 +3873,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -1952,6 +3902,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -1961,6 +3924,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -1979,6 +3955,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -1988,6 +3977,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -2004,6 +4006,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -2013,6 +4028,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -2030,6 +4058,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -2039,6 +4080,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -2055,6 +4109,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -2064,6 +4131,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -2084,6 +4164,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -2093,6 +4186,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -2109,6 +4215,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -2118,6 +4237,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -2135,6 +4267,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -2144,6 +4289,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -2160,6 +4318,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -2169,6 +4340,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -2187,6 +4371,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -2196,6 +4393,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -2212,6 +4422,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -2221,6 +4444,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -2238,6 +4474,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -2247,6 +4496,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -2263,6 +4525,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -2272,6 +4547,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -2289,6 +4577,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -2298,6 +4599,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -2314,6 +4628,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -2323,6 +4650,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -2340,6 +4680,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -2349,6 +4702,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -2365,6 +4731,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -2374,6 +4753,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -2392,6 +4784,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -2401,6 +4806,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -2417,6 +4835,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -2426,6 +4857,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -2443,6 +4887,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -2452,6 +4909,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -2468,6 +4938,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -2477,6 +4960,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -2505,6 +5001,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -2514,6 +5023,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -2530,6 +5052,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -2539,6 +5074,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -2556,6 +5104,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -2565,6 +5126,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -2581,6 +5155,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -2590,6 +5177,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -2608,6 +5208,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -2617,6 +5230,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -2633,6 +5259,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -2642,6 +5281,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -2659,6 +5311,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -2668,6 +5333,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -2684,6 +5362,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -2693,6 +5384,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -2710,6 +5414,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -2719,6 +5436,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -2735,6 +5465,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -2744,6 +5487,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -2761,6 +5517,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -2770,6 +5539,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -2786,6 +5568,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -2795,6 +5590,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -2813,6 +5621,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -2822,6 +5643,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -2838,6 +5672,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -2847,6 +5694,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -2864,6 +5724,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -2873,6 +5746,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -2889,6 +5775,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -2898,6 +5797,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -2918,6 +5830,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -2927,6 +5852,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -2943,6 +5881,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -2952,6 +5903,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -2969,6 +5933,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -2978,6 +5955,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -2994,6 +5984,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -3003,6 +6006,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -3021,6 +6037,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -3030,6 +6059,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -3046,6 +6088,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -3055,6 +6110,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -3072,6 +6140,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -3081,6 +6162,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -3097,6 +6191,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -3106,6 +6213,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -3123,6 +6243,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -3132,6 +6265,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -3148,6 +6294,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -3157,6 +6316,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -3174,6 +6346,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -3183,6 +6368,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -3199,6 +6397,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -3208,6 +6419,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -3226,6 +6450,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -3235,6 +6472,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -3251,6 +6501,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -3260,6 +6523,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -3277,6 +6553,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -3286,6 +6575,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -3302,6 +6604,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -3311,6 +6626,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -3334,6 +6662,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -3343,6 +6684,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -3359,6 +6713,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -3368,6 +6735,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -3385,6 +6765,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -3394,6 +6787,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -3410,6 +6816,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -3419,6 +6838,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -3437,6 +6869,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -3446,6 +6891,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -3462,6 +6920,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -3471,6 +6942,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -3488,6 +6972,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -3497,6 +6994,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -3513,6 +7023,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -3522,6 +7045,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -3539,6 +7075,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -3548,6 +7097,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -3564,6 +7126,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -3573,6 +7148,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -3590,6 +7178,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -3599,6 +7200,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -3615,6 +7229,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -3624,6 +7251,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -3642,6 +7282,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -3651,6 +7304,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -3667,6 +7333,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -3676,6 +7355,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -3693,6 +7385,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -3702,6 +7407,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -3718,6 +7436,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -3727,6 +7458,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -3747,6 +7491,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -3756,6 +7513,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -3772,6 +7542,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -3781,6 +7564,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -3798,6 +7594,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -3807,6 +7616,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -3823,6 +7645,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -3832,6 +7667,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -3850,6 +7698,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -3859,6 +7720,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -3875,6 +7749,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -3884,6 +7771,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -3901,6 +7801,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -3910,6 +7823,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -3926,6 +7852,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -3935,6 +7874,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -3952,6 +7904,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -3961,6 +7926,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -3977,6 +7955,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -3986,6 +7977,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -4003,6 +8007,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -4012,6 +8029,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -4028,6 +8058,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -4037,6 +8080,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -4055,6 +8111,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -4064,6 +8133,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -4080,6 +8162,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -4089,6 +8184,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -4106,6 +8214,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -4115,6 +8236,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -4131,6 +8265,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -4140,6 +8287,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -4168,6 +8328,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -4177,6 +8350,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -4193,6 +8379,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -4202,6 +8401,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -4219,6 +8431,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -4228,6 +8453,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -4244,6 +8482,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -4253,6 +8504,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -4271,6 +8535,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -4280,6 +8557,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -4296,6 +8586,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -4305,6 +8608,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -4322,6 +8638,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -4331,6 +8660,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -4347,6 +8689,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -4356,6 +8711,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -4373,6 +8741,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -4382,6 +8763,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -4398,6 +8792,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -4407,6 +8814,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -4424,6 +8844,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -4433,6 +8866,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -4449,6 +8895,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -4458,6 +8917,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -4476,6 +8948,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -4485,6 +8970,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -4501,6 +8999,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -4510,6 +9021,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -4527,6 +9051,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -4536,6 +9073,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -4552,6 +9102,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -4561,6 +9124,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -4581,6 +9157,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -4590,6 +9179,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -4606,6 +9208,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -4615,6 +9230,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -4632,6 +9260,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -4641,6 +9282,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -4657,6 +9311,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -4666,6 +9333,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -4684,6 +9364,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -4693,6 +9386,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -4709,6 +9415,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -4718,6 +9437,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -4735,6 +9467,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -4744,6 +9489,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -4760,6 +9518,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -4769,6 +9540,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -4786,6 +9570,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -4795,6 +9592,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -4811,6 +9621,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -4820,6 +9643,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -4837,6 +9673,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -4846,6 +9695,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -4862,6 +9724,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -4871,6 +9746,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -4889,6 +9777,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -4898,6 +9799,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -4914,6 +9828,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -4923,6 +9850,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -4940,6 +9880,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -4949,6 +9902,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -4965,6 +9931,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -4974,6 +9953,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -4994,6 +9986,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -5003,6 +10008,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -5019,6 +10037,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -5028,6 +10059,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -5045,6 +10089,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -5054,6 +10111,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -5070,6 +10140,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -5079,6 +10162,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -5097,6 +10193,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -5106,6 +10215,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -5122,6 +10244,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -5131,6 +10266,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -5148,6 +10296,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -5157,6 +10318,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -5173,6 +10347,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -5182,6 +10369,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -5199,6 +10399,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -5208,6 +10421,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -5224,6 +10450,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -5233,6 +10472,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -5250,6 +10502,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -5259,6 +10524,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -5275,6 +10553,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -5284,6 +10575,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -5302,6 +10606,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -5311,6 +10628,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -5327,6 +10657,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -5336,6 +10679,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -5353,6 +10709,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -5362,6 +10731,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -5378,6 +10760,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -5387,6 +10782,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -5407,6 +10815,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -5416,6 +10837,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -5432,6 +10866,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -5441,6 +10888,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -5458,6 +10918,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -5467,6 +10940,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -5483,6 +10969,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -5492,6 +10991,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -5510,6 +11022,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -5519,6 +11044,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -5535,6 +11073,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -5544,6 +11095,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -5561,6 +11125,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -5570,6 +11147,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -5586,6 +11176,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -5595,6 +11198,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -5612,6 +11228,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -5621,6 +11250,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -5637,6 +11279,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -5646,6 +11301,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -5663,6 +11331,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -5672,6 +11353,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -5688,6 +11382,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -5697,6 +11404,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -5715,6 +11435,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -5724,6 +11457,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -5740,6 +11486,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -5749,6 +11508,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -5766,6 +11538,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -5775,6 +11560,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -5791,6 +11589,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -5800,6 +11611,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -5828,6 +11652,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -5837,6 +11674,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -5853,6 +11703,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -5862,6 +11725,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -5879,6 +11755,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -5888,6 +11777,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -5904,6 +11806,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -5913,6 +11828,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -5931,6 +11859,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -5940,6 +11881,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -5956,6 +11910,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -5965,6 +11932,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -5982,6 +11962,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -5991,6 +11984,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -6007,6 +12013,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -6016,6 +12035,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -6033,6 +12065,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -6042,6 +12087,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -6058,6 +12116,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -6067,6 +12138,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -6084,6 +12168,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -6093,6 +12190,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -6109,6 +12219,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -6118,6 +12241,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -6136,6 +12272,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -6145,6 +12294,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -6161,6 +12323,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -6170,6 +12345,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -6187,6 +12375,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -6196,6 +12397,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -6212,6 +12426,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -6221,6 +12448,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -6241,6 +12481,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -6250,6 +12503,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -6266,6 +12532,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -6275,6 +12554,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -6292,6 +12584,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -6301,6 +12606,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -6317,6 +12635,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -6326,6 +12657,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -6344,6 +12688,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -6353,6 +12710,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -6369,6 +12739,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -6378,6 +12761,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -6395,6 +12791,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -6404,6 +12813,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -6420,6 +12842,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -6429,6 +12864,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -6446,6 +12894,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -6455,6 +12916,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -6471,6 +12945,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -6480,6 +12967,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -6497,6 +12997,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -6506,6 +13019,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -6522,6 +13048,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -6531,6 +13070,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -6549,6 +13101,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -6558,6 +13123,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -6574,6 +13152,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -6583,6 +13174,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -6600,6 +13204,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -6609,6 +13226,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
@@ -6625,6 +13255,19 @@ All notable changes to this project will be documented in this file.
 ## 🔧 Other Changes
 
 
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
+
+## 🔧 Other Changes
+
 ## [v0.4.1] - 2026-04-21
 
 ## 🚀 Features
@@ -6634,6 +13277,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
 * fix: networkpolicy freshclam egress policyTypes always rendered (5de0b50)
+
+## 🔧 Other Changes
+
+
+## [v0.4.2] - 2026-04-22
+
+## 🚀 Features
+
+
+## 🐛 Bug Fixes
+
+* Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
+* fix: fix freshclam --datadir libfreshclam init failure in airgap job v2 (25076fe)
 
 ## 🔧 Other Changes
 
