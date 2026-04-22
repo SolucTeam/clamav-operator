@@ -324,8 +324,15 @@ jobs:
           sudo apt-get install -y --no-install-recommends clamav clamav-freshclam
           # Stop the system freshclam daemon so it doesn't lock the database dir
           sudo systemctl stop clamav-freshclam 2>/dev/null || true
+          # Run freshclam with its default config (writes to /var/lib/clamav).
+          # Using --datadir with the apt package is unreliable: libfreshclam
+          # initialises from freshclam.conf before CLI flags are applied, so the
+          # custom directory is rejected as "does not exist".
+          sudo freshclam --stdout
+          # Copy signatures into the cached directory
           mkdir -p scanner/sigs
-          sudo freshclam --datadir="$(pwd)/scanner/sigs" --stdout
+          sudo cp /var/lib/clamav/*.cvd /var/lib/clamav/*.cld scanner/sigs/ 2>/dev/null || true
+          sudo chown -R "$USER:$USER" scanner/sigs
           # Verify at least main.cvd was downloaded before caching
           test -f scanner/sigs/main.cvd || test -f scanner/sigs/main.cld
 
