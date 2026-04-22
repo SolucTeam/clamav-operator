@@ -281,7 +281,17 @@ jobs:
           echo '```' >> $GITHUB_STEP_SUMMARY
 
   # ===========================================================================
-  # Job 4 — Build scanner air-gap variant (no signature download)
+  # Job 4 — Build scanner air-gap variant (no signature download inside Docker)
+  # ===========================================================================
+  # The airgap image demonstrates the DOWNLOAD_SIGS=false Dockerfile path:
+  # signatures are supplied from outside Docker (scanner/sigs/) rather than
+  # downloaded by freshclam at image-build time.
+  #
+  # CI cannot commit .cvd files (~200 MB) to git, so signatures are fetched
+  # in a dedicated CI step and cached weekly with actions/cache.
+  # Cache hit rate: ~98 %  (6 pushes/day × 7 days = 42 builds, 1 download/week)
+  # On cache miss (Monday morning or first build ever) freshclam runs once and
+  # the result is stored in the GHA cache for the rest of the week.
   # ===========================================================================
   build-scanner-airgap:
     name: "Build: clamav-node-scanner (airgap)"
@@ -294,6 +304,32 @@ jobs:
         with:
           fetch-depth: 0
 
+      # ── Signature cache (weekly key) ─────────────────────────────────────────
+      - name: Get week identifier for cache key
+        id: week
+        run: echo "key=clamav-sigs-$(date +%Y-%U)" >> "$GITHUB_OUTPUT"
+
+      - name: Restore ClamAV signatures from cache
+        id: cache-sigs
+        uses: actions/cache@v4
+        with:
+          path: scanner/sigs
+          key: ${{ steps.week.outputs.key }}
+          restore-keys: clamav-sigs-   # fall back to previous week on first run
+
+      - name: Download ClamAV signatures (cache miss only)
+        if: steps.cache-sigs.outputs.cache-hit != 'true'
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends clamav clamav-freshclam
+          # Stop the system freshclam daemon so it doesn't lock the database dir
+          sudo systemctl stop clamav-freshclam 2>/dev/null || true
+          mkdir -p scanner/sigs
+          sudo freshclam --datadir="$(pwd)/scanner/sigs" --stdout
+          # Verify at least main.cvd was downloaded before caching
+          test -f scanner/sigs/main.cvd || test -f scanner/sigs/main.cld
+
+      # ── Docker meta ───────────────────────────────────────────────────────────
       - name: Docker meta
         id: meta
         uses: docker/metadata-action@v5
@@ -320,6 +356,9 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
+      # Signatures are now in scanner/sigs/ (restored from cache or freshly downloaded).
+      # DOWNLOAD_SIGS=false tells the Dockerfile to copy from sigs/ instead of running
+      # freshclam inside the build — this is exactly the customer airgap workflow.
       - name: Build and push scanner airgap image
         uses: docker/build-push-action@v6
         with:
