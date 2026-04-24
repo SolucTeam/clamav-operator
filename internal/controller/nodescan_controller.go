@@ -106,7 +106,7 @@ func (r *NodeScanReconciler) parseRetrySettings() (maxRetries int, baseSeconds i
 // +kubebuilder:rbac:groups=batch,resources=jobs,verbs=get;list;watch;create;update;patch;delete
 // +kubebuilder:rbac:groups="",resources=nodes,verbs=get;list;watch
 // +kubebuilder:rbac:groups="",resources=events,verbs=create;patch
-// +kubebuilder:rbac:groups="",resources=pods,verbs=get;list
+// +kubebuilder:rbac:groups="",resources=pods,verbs=get;list;watch
 // +kubebuilder:rbac:groups="",resources=pods/log,verbs=get
 
 // Reconcile is part of the main kubernetes reconciliation loop
@@ -179,10 +179,7 @@ func (r *NodeScanReconciler) Reconcile(ctx context.Context, req ctrl.Request) (c
 	}
 
 	// Check if Job already exists
-	jobName := fmt.Sprintf("nodescan-%s", nodeScan.Name)
-	if len(jobName) > 63 {
-		jobName = jobName[:63]
-	}
+	jobName := sanitizeLabelValue(fmt.Sprintf("nodescan-%s", nodeScan.Name))
 
 	var existingJob batchv1.Job
 	err := r.Get(ctx, types.NamespacedName{Name: jobName, Namespace: nodeScan.Namespace}, &existingJob)
@@ -505,11 +502,9 @@ func (r *NodeScanReconciler) constructJobForNodeScan(nodeScan *clamavv1alpha1.No
 		resources = GetResourcesForPriority(nodeScan.Spec.Priority)
 	}
 
-	// Job name
-	jobName := fmt.Sprintf("nodescan-%s", nodeScan.Name)
-	if len(jobName) > 63 {
-		jobName = jobName[:63]
-	}
+	// Job name — sanitized to ≤ 63 chars using a hash suffix when the NodeScan
+	// name (which includes the node name) exceeds the Kubernetes label limit.
+	jobName := sanitizeLabelValue(fmt.Sprintf("nodescan-%s", nodeScan.Name))
 
 	// Initial TTL: use the value from spec, or the default failed TTL.
 	// Will be patched to TTLSecondsAfterSucceeded once the Job succeeds.
@@ -525,8 +520,8 @@ func (r *NodeScanReconciler) constructJobForNodeScan(nodeScan *clamavv1alpha1.No
 			Labels: map[string]string{
 				"app.kubernetes.io/name":      "clamav",
 				"app.kubernetes.io/component": "scanner",
-				"clamav.io/nodescan":          nodeScan.Name,
-				"clamav.io/node":              nodeScan.Spec.NodeName,
+				"clamav.io/nodescan":          sanitizeLabelValue(nodeScan.Name),
+				"clamav.io/node":              sanitizeLabelValue(nodeScan.Spec.NodeName),
 				"clamav.io/scan-priority":     nodeScan.Spec.Priority,
 			},
 		},
@@ -539,7 +534,7 @@ func (r *NodeScanReconciler) constructJobForNodeScan(nodeScan *clamavv1alpha1.No
 				ObjectMeta: metav1.ObjectMeta{
 					Labels: map[string]string{
 						"app":         "clamav-node-scanner",
-						"target-node": nodeScan.Spec.NodeName,
+						"target-node": sanitizeLabelValue(nodeScan.Spec.NodeName),
 						"security":    "clamav",
 						"clamav":      "scanner",
 					},
