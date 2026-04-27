@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -10,6 +23,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -24,6 +50,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -32,6 +71,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -46,6 +98,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -54,6 +119,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -68,6 +146,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -76,6 +167,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -90,6 +194,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -98,6 +215,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -112,6 +242,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -120,6 +263,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -134,6 +290,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -142,6 +311,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -156,6 +338,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -164,6 +359,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -178,6 +386,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -186,6 +407,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -200,6 +434,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -208,6 +455,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -222,6 +482,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -230,6 +503,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -244,6 +530,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -252,6 +551,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -266,6 +578,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -274,6 +599,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -288,6 +626,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -296,6 +647,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -310,6 +674,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -318,6 +695,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -332,6 +722,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -340,6 +743,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -354,6 +770,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -362,6 +791,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -376,6 +818,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -384,6 +839,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -398,6 +866,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -406,6 +887,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -420,6 +914,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -428,6 +935,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -442,6 +962,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -450,6 +983,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -464,6 +1010,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -472,6 +1031,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -486,6 +1058,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -494,6 +1079,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -508,6 +1106,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -516,6 +1127,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -530,6 +1154,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -538,6 +1175,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -552,6 +1202,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -560,6 +1223,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -574,6 +1250,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -582,6 +1271,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -596,6 +1298,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -604,6 +1319,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -618,6 +1346,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -626,6 +1367,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -640,6 +1394,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -648,6 +1415,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -662,6 +1442,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -670,6 +1463,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -684,6 +1490,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -692,6 +1511,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -703,6 +1535,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -711,6 +1556,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -725,6 +1583,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -733,6 +1604,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -747,6 +1631,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -755,6 +1652,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -769,6 +1679,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -777,6 +1700,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -791,6 +1727,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -799,6 +1748,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -813,6 +1775,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -821,6 +1796,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -835,6 +1823,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -843,6 +1844,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -857,6 +1871,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -865,6 +1892,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -879,6 +1919,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -887,6 +1940,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -901,6 +1967,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -909,6 +1988,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -923,6 +2015,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -931,6 +2036,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -945,6 +2063,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -953,6 +2084,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -967,6 +2111,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -975,6 +2132,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -989,6 +2159,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -997,6 +2180,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1011,6 +2207,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -1019,6 +2228,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1033,6 +2255,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -1041,6 +2276,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1055,6 +2303,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -1063,6 +2324,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1077,6 +2351,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -1085,6 +2372,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1099,6 +2399,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -1107,6 +2420,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1121,6 +2447,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -1129,6 +2468,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1143,6 +2495,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -1151,6 +2516,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1165,6 +2543,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -1173,6 +2564,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1187,6 +2591,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -1195,6 +2612,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1209,6 +2639,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -1217,6 +2660,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1231,6 +2687,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -1239,6 +2708,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1253,6 +2735,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -1261,6 +2756,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1275,6 +2783,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -1283,6 +2804,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1297,6 +2831,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -1305,6 +2852,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1319,6 +2879,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -1327,6 +2900,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1341,6 +2927,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -1349,6 +2948,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1363,6 +2975,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -1371,6 +2996,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1385,6 +3023,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -1393,6 +3044,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1407,6 +3071,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -1415,6 +3092,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1429,6 +3119,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -1437,6 +3140,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1451,6 +3167,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -1459,6 +3188,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1473,6 +3215,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -1481,6 +3236,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1495,6 +3263,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -1503,6 +3284,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1517,6 +3311,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -1525,6 +3332,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1539,6 +3359,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -1547,6 +3380,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1561,6 +3407,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -1569,6 +3428,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1583,6 +3455,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -1591,6 +3476,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1605,6 +3503,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -1613,6 +3524,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1627,6 +3551,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -1635,6 +3572,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1649,6 +3599,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -1657,6 +3620,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1671,6 +3647,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -1679,6 +3668,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1693,6 +3695,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -1701,6 +3716,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1715,6 +3743,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -1723,6 +3764,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1737,6 +3791,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -1745,6 +3812,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1759,6 +3839,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -1767,6 +3860,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1781,6 +3887,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -1789,6 +3908,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1803,6 +3935,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -1811,6 +3956,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1825,6 +3983,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -1833,6 +4004,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1847,6 +4031,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -1855,6 +4052,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1869,6 +4079,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -1877,6 +4100,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1891,6 +4127,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -1899,6 +4148,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1913,6 +4175,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -1921,6 +4196,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1935,6 +4223,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -1943,6 +4244,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1957,6 +4271,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -1965,6 +4292,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -1979,6 +4319,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -1987,6 +4340,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -2001,6 +4367,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -2009,6 +4388,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -2023,6 +4415,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -2031,6 +4436,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -2045,6 +4463,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -2053,6 +4484,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -2067,6 +4511,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -2075,6 +4532,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -2089,6 +4559,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -2097,6 +4580,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -2108,6 +4604,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -2116,6 +4625,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -2130,6 +4652,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -2138,6 +4673,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -2152,6 +4700,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -2160,6 +4721,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -2174,6 +4748,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -2182,6 +4769,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -2196,6 +4796,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -2204,6 +4817,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -2218,6 +4844,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -2226,6 +4865,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -2240,6 +4892,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -2248,6 +4913,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -2262,6 +4940,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -2270,6 +4961,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -2284,6 +4988,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -2292,6 +5009,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -2306,6 +5036,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -2314,6 +5057,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -2328,6 +5084,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -2336,6 +5105,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -2350,6 +5132,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -2358,6 +5153,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -2372,6 +5180,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -2380,6 +5201,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -2394,6 +5228,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -2402,6 +5249,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -2416,6 +5276,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -2424,6 +5297,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -2438,6 +5324,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -2446,6 +5345,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -2460,6 +5372,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -2468,6 +5393,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -2482,6 +5420,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -2490,6 +5441,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -2504,6 +5468,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -2512,6 +5489,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -2526,6 +5516,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -2534,6 +5537,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -2548,6 +5564,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -2556,6 +5585,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -2570,6 +5612,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -2578,6 +5633,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -2592,6 +5660,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -2600,6 +5681,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -2614,6 +5708,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -2622,6 +5729,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -2636,6 +5756,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -2644,6 +5777,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -2658,6 +5804,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -2666,6 +5825,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -2680,6 +5852,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -2688,6 +5873,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -2702,6 +5900,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -2710,6 +5921,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -2724,6 +5948,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -2732,6 +5969,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -2746,6 +5996,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -2754,6 +6017,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -2768,6 +6044,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -2776,6 +6065,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -2790,6 +6092,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -2798,6 +6113,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -2819,6 +6147,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -2827,6 +6168,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -2841,6 +6195,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -2849,6 +6216,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -2863,6 +6243,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -2871,6 +6264,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -2885,6 +6291,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -2893,6 +6312,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -2907,6 +6339,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -2915,6 +6360,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -2929,6 +6387,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -2937,6 +6408,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -2951,6 +6435,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -2959,6 +6456,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -2973,6 +6483,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -2981,6 +6504,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -2995,6 +6531,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -3003,6 +6552,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -3017,6 +6579,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -3025,6 +6600,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -3039,6 +6627,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -3047,6 +6648,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -3061,6 +6675,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -3069,6 +6696,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -3083,6 +6723,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -3091,6 +6744,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -3105,6 +6771,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -3113,6 +6792,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -3127,6 +6819,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -3135,6 +6840,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -3149,6 +6867,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -3157,6 +6888,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -3171,6 +6915,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -3179,6 +6936,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -3193,6 +6963,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -3201,6 +6984,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -3215,6 +7011,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -3223,6 +7032,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -3237,6 +7059,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -3245,6 +7080,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -3259,6 +7107,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -3267,6 +7128,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -3281,6 +7155,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -3289,6 +7176,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -3303,6 +7203,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -3311,6 +7224,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -3325,6 +7251,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -3333,6 +7272,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -3347,6 +7299,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -3355,6 +7320,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -3369,6 +7347,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -3377,6 +7368,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -3391,6 +7395,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -3399,6 +7416,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -3413,6 +7443,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -3421,6 +7464,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -3435,6 +7491,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -3443,6 +7512,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -3457,6 +7539,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -3465,6 +7560,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -3479,6 +7587,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -3487,6 +7608,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -3501,6 +7635,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -3509,6 +7656,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -3520,6 +7680,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -3528,6 +7701,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -3542,6 +7728,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -3550,6 +7749,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -3564,6 +7776,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -3572,6 +7797,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -3586,6 +7824,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -3594,6 +7845,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -3608,6 +7872,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -3616,6 +7893,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -3630,6 +7920,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -3638,6 +7941,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -3652,6 +7968,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -3660,6 +7989,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -3674,6 +8016,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -3682,6 +8037,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -3696,6 +8064,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -3704,6 +8085,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -3718,6 +8112,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -3726,6 +8133,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -3740,6 +8160,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -3748,6 +8181,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -3762,6 +8208,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -3770,6 +8229,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -3784,6 +8256,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -3792,6 +8277,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -3806,6 +8304,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -3814,6 +8325,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -3828,6 +8352,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -3836,6 +8373,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -3850,6 +8400,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -3858,6 +8421,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -3872,6 +8448,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -3880,6 +8469,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -3894,6 +8496,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -3902,6 +8517,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -3916,6 +8544,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -3924,6 +8565,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -3938,6 +8592,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -3946,6 +8613,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -3960,6 +8640,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -3968,6 +8661,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -3982,6 +8688,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -3990,6 +8709,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -4004,6 +8736,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -4012,6 +8757,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -4026,6 +8784,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -4034,6 +8805,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -4048,6 +8832,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -4056,6 +8853,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -4070,6 +8880,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -4078,6 +8901,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -4092,6 +8928,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -4100,6 +8949,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -4114,6 +8976,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -4122,6 +8997,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -4136,6 +9024,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -4144,6 +9045,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -4158,6 +9072,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -4166,6 +9093,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -4180,6 +9120,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -4188,6 +9141,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -4202,6 +9168,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -4210,6 +9189,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -4224,6 +9216,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -4232,6 +9237,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -4246,6 +9264,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -4254,6 +9285,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -4268,6 +9312,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -4276,6 +9333,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -4290,6 +9360,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -4298,6 +9381,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -4312,6 +9408,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -4320,6 +9429,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -4334,6 +9456,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -4342,6 +9477,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -4356,6 +9504,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -4364,6 +9525,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -4378,6 +9552,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -4386,6 +9573,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -4400,6 +9600,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -4408,6 +9621,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -4422,6 +9648,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -4430,6 +9669,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -4444,6 +9696,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -4452,6 +9717,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -4466,6 +9744,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -4474,6 +9765,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -4488,6 +9792,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -4496,6 +9813,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -4510,6 +9840,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -4518,6 +9861,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -4532,6 +9888,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -4540,6 +9909,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -4554,6 +9936,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -4562,6 +9957,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -4576,6 +9984,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -4584,6 +10005,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -4598,6 +10032,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -4606,6 +10053,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -4620,6 +10080,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -4628,6 +10101,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -4642,6 +10128,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -4650,6 +10149,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -4664,6 +10176,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -4672,6 +10197,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -4686,6 +10224,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -4694,6 +10245,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -4708,6 +10272,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -4716,6 +10293,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -4730,6 +10320,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -4738,6 +10341,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -4752,6 +10368,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -4760,6 +10389,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -4774,6 +10416,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -4782,6 +10437,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -4796,6 +10464,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -4804,6 +10485,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -4818,6 +10512,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -4826,6 +10533,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -4840,6 +10560,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -4848,6 +10581,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -4862,6 +10608,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -4870,6 +10629,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -4884,6 +10656,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -4892,6 +10677,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -4906,6 +10704,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -4914,6 +10725,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -4925,6 +10749,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -4933,6 +10770,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -4947,6 +10797,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -4955,6 +10818,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -4969,6 +10845,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -4977,6 +10866,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -4991,6 +10893,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -4999,6 +10914,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -5013,6 +10941,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -5021,6 +10962,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -5035,6 +10989,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -5043,6 +11010,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -5057,6 +11037,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -5065,6 +11058,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -5079,6 +11085,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -5087,6 +11106,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -5101,6 +11133,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -5109,6 +11154,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -5123,6 +11181,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -5131,6 +11202,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -5145,6 +11229,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -5153,6 +11250,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -5167,6 +11277,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -5175,6 +11298,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -5189,6 +11325,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -5197,6 +11346,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -5211,6 +11373,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -5219,6 +11394,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -5233,6 +11421,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -5241,6 +11442,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -5255,6 +11469,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -5263,6 +11490,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -5277,6 +11517,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -5285,6 +11538,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -5299,6 +11565,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -5307,6 +11586,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -5321,6 +11613,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -5329,6 +11634,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -5343,6 +11661,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -5351,6 +11682,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -5365,6 +11709,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -5373,6 +11730,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -5387,6 +11757,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -5395,6 +11778,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -5409,6 +11805,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -5417,6 +11826,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -5431,6 +11853,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -5439,6 +11874,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -5453,6 +11901,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -5461,6 +11922,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -5475,6 +11949,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -5483,6 +11970,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -5497,6 +11997,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -5505,6 +12018,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -5519,6 +12045,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -5527,6 +12066,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -5541,6 +12093,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -5549,6 +12114,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -5563,6 +12141,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -5571,6 +12162,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -5585,6 +12189,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -5593,6 +12210,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -5607,6 +12237,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -5615,6 +12258,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -5626,6 +12282,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -5634,6 +12303,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -5648,6 +12330,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -5656,6 +12351,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -5670,6 +12378,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -5678,6 +12399,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -5692,6 +12426,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -5700,6 +12447,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -5714,6 +12474,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -5722,6 +12495,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -5736,6 +12522,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -5744,6 +12543,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -5758,6 +12570,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -5766,6 +12591,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -5780,6 +12618,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -5788,6 +12639,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -5802,6 +12666,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -5810,6 +12687,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -5824,6 +12714,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -5832,6 +12735,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -5846,6 +12762,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -5854,6 +12783,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -5868,6 +12810,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -5876,6 +12831,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -5890,6 +12858,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -5898,6 +12879,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -5912,6 +12906,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -5920,6 +12927,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -5934,6 +12954,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -5942,6 +12975,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -5956,6 +13002,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -5964,6 +13023,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -5978,6 +13050,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -5986,6 +13071,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -6000,6 +13098,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -6008,6 +13119,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -6022,6 +13146,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -6030,6 +13167,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -6044,6 +13194,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -6052,6 +13215,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -6066,6 +13242,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -6074,6 +13263,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -6088,6 +13290,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -6096,6 +13311,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -6110,6 +13338,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -6118,6 +13359,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -6132,6 +13386,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -6140,6 +13407,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -6154,6 +13434,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -6162,6 +13455,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -6176,6 +13482,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -6184,6 +13503,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -6198,6 +13530,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -6206,6 +13551,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -6220,6 +13578,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -6228,6 +13599,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -6242,6 +13626,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -6250,6 +13647,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -6264,6 +13674,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -6272,6 +13695,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -6286,6 +13722,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -6294,6 +13743,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -6308,6 +13770,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -6316,6 +13791,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -6327,6 +13815,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -6335,6 +13836,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -6349,6 +13863,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -6357,6 +13884,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -6371,6 +13911,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -6379,6 +13932,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -6393,6 +13959,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -6401,6 +13980,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -6415,6 +14007,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -6423,6 +14028,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -6437,6 +14055,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -6445,6 +14076,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -6459,6 +14103,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -6467,6 +14124,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -6481,6 +14151,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -6489,6 +14172,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -6503,6 +14199,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -6511,6 +14220,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -6525,6 +14247,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -6533,6 +14268,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -6547,6 +14295,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -6555,6 +14316,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -6569,6 +14343,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -6577,6 +14364,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -6591,6 +14391,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -6599,6 +14412,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -6613,6 +14439,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -6621,6 +14460,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -6635,6 +14487,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -6643,6 +14508,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -6657,6 +14535,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -6665,6 +14556,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -6679,6 +14583,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -6687,6 +14604,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -6701,6 +14631,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -6709,6 +14652,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -6723,6 +14679,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -6731,6 +14700,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -6745,6 +14727,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -6753,6 +14748,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -6767,6 +14775,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -6775,6 +14796,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -6789,6 +14823,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -6797,6 +14844,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -6811,6 +14871,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -6819,6 +14892,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -6833,6 +14919,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -6841,6 +14940,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -6855,6 +14967,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -6863,6 +14988,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -6877,6 +15015,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -6885,6 +15036,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -6899,6 +15063,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -6907,6 +15084,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -6921,6 +15111,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -6929,6 +15132,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -6943,6 +15159,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -6951,6 +15180,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -6965,6 +15207,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -6973,6 +15228,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -6987,6 +15255,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -6995,6 +15276,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -7009,6 +15303,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -7017,6 +15324,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -7031,6 +15351,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -7039,6 +15372,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -7053,6 +15399,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -7061,6 +15420,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -7075,6 +15447,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -7083,6 +15468,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -7097,6 +15495,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -7105,6 +15516,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -7119,6 +15543,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -7127,6 +15564,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -7141,6 +15591,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -7149,6 +15612,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -7163,6 +15639,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -7171,6 +15660,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -7185,6 +15687,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -7193,6 +15708,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -7207,6 +15735,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -7215,6 +15756,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -7229,6 +15783,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -7237,6 +15804,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -7251,6 +15831,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -7259,6 +15852,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -7273,6 +15879,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -7281,6 +15900,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -7295,6 +15927,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -7303,6 +15948,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -7317,6 +15975,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -7325,6 +15996,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -7339,6 +16023,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -7347,6 +16044,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -7361,6 +16071,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -7369,6 +16092,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -7383,6 +16119,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -7391,6 +16140,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -7405,6 +16167,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -7413,6 +16188,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -7427,6 +16215,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -7435,6 +16236,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -7449,6 +16263,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -7457,6 +16284,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -7471,6 +16311,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -7479,6 +16332,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -7493,6 +16359,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -7501,6 +16380,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -7515,6 +16407,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -7523,6 +16428,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -7537,6 +16455,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -7545,6 +16476,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -7559,6 +16503,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -7567,6 +16524,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -7581,6 +16551,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -7589,6 +16572,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -7603,6 +16599,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -7611,6 +16620,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -7625,6 +16647,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -7633,6 +16668,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -7647,6 +16695,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -7655,6 +16716,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -7669,6 +16743,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -7677,6 +16764,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -7691,6 +16791,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -7699,6 +16812,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -7713,6 +16839,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -7721,6 +16860,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -7732,6 +16884,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -7740,6 +16905,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -7754,6 +16932,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -7762,6 +16953,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -7776,6 +16980,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -7784,6 +17001,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -7798,6 +17028,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -7806,6 +17049,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -7820,6 +17076,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -7828,6 +17097,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -7842,6 +17124,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -7850,6 +17145,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -7864,6 +17172,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -7872,6 +17193,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -7886,6 +17220,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -7894,6 +17241,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -7908,6 +17268,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -7916,6 +17289,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -7930,6 +17316,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -7938,6 +17337,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -7952,6 +17364,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -7960,6 +17385,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -7974,6 +17412,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -7982,6 +17433,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -7996,6 +17460,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -8004,6 +17481,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -8018,6 +17508,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -8026,6 +17529,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -8040,6 +17556,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -8048,6 +17577,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -8062,6 +17604,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -8070,6 +17625,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -8084,6 +17652,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -8092,6 +17673,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -8106,6 +17700,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -8114,6 +17721,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -8128,6 +17748,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -8136,6 +17769,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -8150,6 +17796,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -8158,6 +17817,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -8172,6 +17844,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -8180,6 +17865,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -8194,6 +17892,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -8202,6 +17913,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -8216,6 +17940,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -8224,6 +17961,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -8238,6 +17988,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -8246,6 +18009,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -8260,6 +18036,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -8268,6 +18057,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -8282,6 +18084,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -8290,6 +18105,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -8304,6 +18132,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -8312,6 +18153,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -8326,6 +18180,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -8334,6 +18201,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -8348,6 +18228,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -8356,6 +18249,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -8370,6 +18276,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -8378,6 +18297,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -8392,6 +18324,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -8400,6 +18345,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -8414,6 +18372,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -8422,6 +18393,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -8443,6 +18427,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -8451,6 +18448,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -8465,6 +18475,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -8473,6 +18496,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -8487,6 +18523,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -8495,6 +18544,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -8509,6 +18571,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -8517,6 +18592,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -8531,6 +18619,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -8539,6 +18640,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -8553,6 +18667,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -8561,6 +18688,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -8575,6 +18715,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -8583,6 +18736,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -8597,6 +18763,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -8605,6 +18784,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -8619,6 +18811,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -8627,6 +18832,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -8641,6 +18859,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -8649,6 +18880,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -8663,6 +18907,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -8671,6 +18928,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -8685,6 +18955,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -8693,6 +18976,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -8707,6 +19003,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -8715,6 +19024,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -8729,6 +19051,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -8737,6 +19072,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -8751,6 +19099,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -8759,6 +19120,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -8773,6 +19147,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -8781,6 +19168,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -8795,6 +19195,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -8803,6 +19216,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -8817,6 +19243,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -8825,6 +19264,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -8839,6 +19291,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -8847,6 +19312,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -8861,6 +19339,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -8869,6 +19360,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -8883,6 +19387,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -8891,6 +19408,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -8905,6 +19435,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -8913,6 +19456,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -8927,6 +19483,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -8935,6 +19504,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -8949,6 +19531,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -8957,6 +19552,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -8971,6 +19579,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -8979,6 +19600,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -8993,6 +19627,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -9001,6 +19648,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -9015,6 +19675,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -9023,6 +19696,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -9037,6 +19723,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -9045,6 +19744,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -9059,6 +19771,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -9067,6 +19792,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -9081,6 +19819,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -9089,6 +19840,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -9103,6 +19867,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -9111,6 +19888,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -9125,6 +19915,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -9133,6 +19936,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -9144,6 +19960,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -9152,6 +19981,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -9166,6 +20008,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -9174,6 +20029,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -9188,6 +20056,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -9196,6 +20077,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -9210,6 +20104,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -9218,6 +20125,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -9232,6 +20152,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -9240,6 +20173,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -9254,6 +20200,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -9262,6 +20221,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -9276,6 +20248,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -9284,6 +20269,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -9298,6 +20296,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -9306,6 +20317,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -9320,6 +20344,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -9328,6 +20365,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -9342,6 +20392,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -9350,6 +20413,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -9364,6 +20440,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -9372,6 +20461,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -9386,6 +20488,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -9394,6 +20509,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -9408,6 +20536,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -9416,6 +20557,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -9430,6 +20584,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -9438,6 +20605,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -9452,6 +20632,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -9460,6 +20653,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -9474,6 +20680,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -9482,6 +20701,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -9496,6 +20728,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -9504,6 +20749,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -9518,6 +20776,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -9526,6 +20797,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -9540,6 +20824,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -9548,6 +20845,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -9562,6 +20872,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -9570,6 +20893,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -9584,6 +20920,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -9592,6 +20941,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -9606,6 +20968,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -9614,6 +20989,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -9628,6 +21016,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -9636,6 +21037,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -9650,6 +21064,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -9658,6 +21085,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -9672,6 +21112,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -9680,6 +21133,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -9694,6 +21160,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -9702,6 +21181,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -9716,6 +21208,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -9724,6 +21229,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -9738,6 +21256,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -9746,6 +21277,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -9760,6 +21304,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -9768,6 +21325,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -9782,6 +21352,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -9790,6 +21373,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -9804,6 +21400,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -9812,6 +21421,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -9826,6 +21448,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -9834,6 +21469,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -9848,6 +21496,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -9856,6 +21517,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -9870,6 +21544,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -9878,6 +21565,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -9892,6 +21592,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -9900,6 +21613,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -9914,6 +21640,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -9922,6 +21661,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -9936,6 +21688,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -9944,6 +21709,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -9958,6 +21736,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -9966,6 +21757,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -9980,6 +21784,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -9988,6 +21805,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -10002,6 +21832,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -10010,6 +21853,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -10024,6 +21880,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -10032,6 +21901,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -10046,6 +21928,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -10054,6 +21949,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -10068,6 +21976,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -10076,6 +21997,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -10090,6 +22024,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -10098,6 +22045,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -10112,6 +22072,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -10120,6 +22093,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -10134,6 +22120,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -10142,6 +22141,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -10156,6 +22168,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -10164,6 +22189,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -10178,6 +22216,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -10186,6 +22237,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -10200,6 +22264,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -10208,6 +22285,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -10222,6 +22312,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -10230,6 +22333,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -10244,6 +22360,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -10252,6 +22381,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -10266,6 +22408,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -10274,6 +22429,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -10288,6 +22456,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -10296,6 +22477,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -10310,6 +22504,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -10318,6 +22525,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -10332,6 +22552,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -10340,6 +22573,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -10354,6 +22600,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -10362,6 +22621,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -10376,6 +22648,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -10384,6 +22669,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -10398,6 +22696,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -10406,6 +22717,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -10420,6 +22744,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -10428,6 +22765,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -10442,6 +22792,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -10450,6 +22813,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -10464,6 +22840,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -10472,6 +22861,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -10486,6 +22888,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -10494,6 +22909,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -10508,6 +22936,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -10516,6 +22957,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -10530,6 +22984,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -10538,6 +23005,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -10549,6 +23029,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -10557,6 +23050,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -10571,6 +23077,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -10579,6 +23098,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -10593,6 +23125,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -10601,6 +23146,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -10615,6 +23173,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -10623,6 +23194,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -10637,6 +23221,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -10645,6 +23242,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -10659,6 +23269,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -10667,6 +23290,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -10681,6 +23317,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -10689,6 +23338,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -10703,6 +23365,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -10711,6 +23386,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -10725,6 +23413,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -10733,6 +23434,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -10747,6 +23461,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -10755,6 +23482,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -10769,6 +23509,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -10777,6 +23530,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -10791,6 +23557,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -10799,6 +23578,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -10813,6 +23605,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -10821,6 +23626,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -10835,6 +23653,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -10843,6 +23674,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -10857,6 +23701,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -10865,6 +23722,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -10879,6 +23749,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -10887,6 +23770,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -10901,6 +23797,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -10909,6 +23818,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -10923,6 +23845,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -10931,6 +23866,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -10945,6 +23893,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -10953,6 +23914,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -10967,6 +23941,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -10975,6 +23962,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -10989,6 +23989,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -10997,6 +24010,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -11011,6 +24037,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -11019,6 +24058,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -11033,6 +24085,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -11041,6 +24106,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -11055,6 +24133,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -11063,6 +24154,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -11077,6 +24181,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -11085,6 +24202,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -11099,6 +24229,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -11107,6 +24250,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -11121,6 +24277,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -11129,6 +24298,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -11143,6 +24325,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -11151,6 +24346,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -11165,6 +24373,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -11173,6 +24394,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -11187,6 +24421,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -11195,6 +24442,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -11209,6 +24469,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -11217,6 +24490,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -11231,6 +24517,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -11239,6 +24538,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -11253,6 +24565,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -11261,6 +24586,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -11275,6 +24613,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -11283,6 +24634,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -11297,6 +24661,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -11305,6 +24682,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -11319,6 +24709,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -11327,6 +24730,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -11341,6 +24757,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -11349,6 +24778,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -11363,6 +24805,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -11371,6 +24826,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -11385,6 +24853,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -11393,6 +24874,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -11407,6 +24901,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -11415,6 +24922,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -11429,6 +24949,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -11437,6 +24970,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -11451,6 +24997,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -11459,6 +25018,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -11473,6 +25045,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -11481,6 +25066,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -11495,6 +25093,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -11503,6 +25114,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -11517,6 +25141,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -11525,6 +25162,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -11539,6 +25189,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -11547,6 +25210,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -11561,6 +25237,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -11569,6 +25258,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -11583,6 +25285,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -11591,6 +25306,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -11605,6 +25333,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -11613,6 +25354,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -11627,6 +25381,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -11635,6 +25402,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -11649,6 +25429,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -11657,6 +25450,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -11671,6 +25477,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -11679,6 +25498,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -11693,6 +25525,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -11701,6 +25546,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -11715,6 +25573,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -11723,6 +25594,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -11737,6 +25621,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -11745,6 +25642,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -11759,6 +25669,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -11767,6 +25690,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -11781,6 +25717,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -11789,6 +25738,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -11803,6 +25765,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -11811,6 +25786,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -11825,6 +25813,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -11833,6 +25834,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -11847,6 +25861,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -11855,6 +25882,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -11869,6 +25909,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -11877,6 +25930,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -11891,6 +25957,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -11899,6 +25978,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -11913,6 +26005,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -11921,6 +26026,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -11935,6 +26053,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -11943,6 +26074,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -11954,6 +26098,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -11962,6 +26119,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -11976,6 +26146,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -11984,6 +26167,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -11998,6 +26194,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -12006,6 +26215,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -12020,6 +26242,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -12028,6 +26263,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -12042,6 +26290,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -12050,6 +26311,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -12064,6 +26338,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -12072,6 +26359,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -12086,6 +26386,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -12094,6 +26407,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -12108,6 +26434,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -12116,6 +26455,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -12130,6 +26482,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -12138,6 +26503,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -12152,6 +26530,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -12160,6 +26551,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -12174,6 +26578,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -12182,6 +26599,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -12196,6 +26626,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -12204,6 +26647,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -12218,6 +26674,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -12226,6 +26695,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -12240,6 +26722,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -12248,6 +26743,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -12262,6 +26770,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -12270,6 +26791,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -12284,6 +26818,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -12292,6 +26839,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -12306,6 +26866,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -12314,6 +26887,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -12328,6 +26914,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -12336,6 +26935,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -12350,6 +26962,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -12358,6 +26983,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -12372,6 +27010,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -12380,6 +27031,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -12394,6 +27058,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -12402,6 +27079,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -12416,6 +27106,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -12424,6 +27127,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -12438,6 +27154,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -12446,6 +27175,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -12460,6 +27202,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -12468,6 +27223,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -12482,6 +27250,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -12490,6 +27271,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -12504,6 +27298,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -12512,6 +27319,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -12526,6 +27346,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -12534,6 +27367,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -12548,6 +27394,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -12556,6 +27415,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -12570,6 +27442,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -12578,6 +27463,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -12592,6 +27490,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -12600,6 +27511,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -12614,6 +27538,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -12622,6 +27559,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -12636,6 +27586,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -12644,6 +27607,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -12658,6 +27634,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -12666,6 +27655,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -12680,6 +27682,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -12688,6 +27703,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -12702,6 +27730,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -12710,6 +27751,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -12724,6 +27778,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -12732,6 +27799,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -12746,6 +27826,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -12754,6 +27847,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -12768,6 +27874,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -12776,6 +27895,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -12790,6 +27922,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -12798,6 +27943,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -12812,6 +27970,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -12820,6 +27991,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -12834,6 +28018,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -12842,6 +28039,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -12856,6 +28066,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -12864,6 +28087,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -12878,6 +28114,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -12886,6 +28135,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -12900,6 +28162,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -12908,6 +28183,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -12922,6 +28210,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -12930,6 +28231,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -12944,6 +28258,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -12952,6 +28279,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -12966,6 +28306,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -12974,6 +28327,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -12988,6 +28354,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -12996,6 +28375,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -13010,6 +28402,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -13018,6 +28423,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -13032,6 +28450,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -13040,6 +28471,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -13054,6 +28498,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -13062,6 +28519,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -13076,6 +28546,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -13084,6 +28567,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -13098,6 +28594,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -13106,6 +28615,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -13120,6 +28642,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -13128,6 +28663,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -13142,6 +28690,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -13150,6 +28711,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -13164,6 +28738,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -13172,6 +28759,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -13186,6 +28786,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -13194,6 +28807,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -13208,6 +28834,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -13216,6 +28855,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -13230,6 +28882,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -13238,6 +28903,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -13252,6 +28930,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -13260,6 +28951,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -13274,6 +28978,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -13282,6 +28999,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -13296,6 +29026,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -13304,6 +29047,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -13318,6 +29074,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -13326,6 +29095,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -13340,6 +29122,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -13348,6 +29143,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -13359,6 +29167,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -13367,6 +29188,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -13381,6 +29215,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -13389,6 +29236,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -13403,6 +29263,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -13411,6 +29284,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -13425,6 +29311,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -13433,6 +29332,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -13447,6 +29359,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -13455,6 +29380,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -13469,6 +29407,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -13477,6 +29428,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -13491,6 +29455,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -13499,6 +29476,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -13513,6 +29503,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -13521,6 +29524,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -13535,6 +29551,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -13543,6 +29572,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -13557,6 +29599,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -13565,6 +29620,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -13579,6 +29647,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -13587,6 +29668,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -13601,6 +29695,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -13609,6 +29716,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -13623,6 +29743,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -13631,6 +29764,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -13645,6 +29791,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -13653,6 +29812,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -13667,6 +29839,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -13675,6 +29860,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -13689,6 +29887,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -13697,6 +29908,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -13711,6 +29935,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -13719,6 +29956,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -13733,6 +29983,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -13741,6 +30004,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -13755,6 +30031,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -13763,6 +30052,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -13777,6 +30079,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -13785,6 +30100,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -13799,6 +30127,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -13807,6 +30148,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -13821,6 +30175,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -13829,6 +30196,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -13843,6 +30223,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -13851,6 +30244,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -13865,6 +30271,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -13873,6 +30292,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -13887,6 +30319,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -13895,6 +30340,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -13909,6 +30367,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -13917,6 +30388,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -13931,6 +30415,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -13939,6 +30436,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -13953,6 +30463,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -13961,6 +30484,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -13975,6 +30511,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -13983,6 +30532,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -13997,6 +30559,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -14005,6 +30580,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -14019,6 +30607,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -14027,6 +30628,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -14041,6 +30655,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -14049,6 +30676,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -14070,6 +30710,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -14078,6 +30731,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -14092,6 +30758,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -14100,6 +30779,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -14114,6 +30806,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -14122,6 +30827,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -14136,6 +30854,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -14144,6 +30875,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -14158,6 +30902,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -14166,6 +30923,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -14180,6 +30950,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -14188,6 +30971,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -14202,6 +30998,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -14210,6 +31019,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -14224,6 +31046,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -14232,6 +31067,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -14246,6 +31094,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -14254,6 +31115,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -14268,6 +31142,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -14276,6 +31163,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -14290,6 +31190,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -14298,6 +31211,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -14312,6 +31238,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -14320,6 +31259,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -14334,6 +31286,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -14342,6 +31307,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -14356,6 +31334,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -14364,6 +31355,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -14378,6 +31382,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -14386,6 +31403,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -14400,6 +31430,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -14408,6 +31451,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -14422,6 +31478,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -14430,6 +31499,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -14444,6 +31526,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -14452,6 +31547,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -14466,6 +31574,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -14474,6 +31595,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -14488,6 +31622,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -14496,6 +31643,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -14510,6 +31670,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -14518,6 +31691,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -14532,6 +31718,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -14540,6 +31739,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -14554,6 +31766,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -14562,6 +31787,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -14576,6 +31814,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -14584,6 +31835,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -14598,6 +31862,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -14606,6 +31883,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -14620,6 +31910,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -14628,6 +31931,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -14642,6 +31958,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -14650,6 +31979,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -14664,6 +32006,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -14672,6 +32027,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -14686,6 +32054,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -14694,6 +32075,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -14708,6 +32102,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -14716,6 +32123,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -14730,6 +32150,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -14738,6 +32171,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -14752,6 +32198,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -14760,6 +32219,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -14771,6 +32243,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -14779,6 +32264,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -14793,6 +32291,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -14801,6 +32312,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -14815,6 +32339,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -14823,6 +32360,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -14837,6 +32387,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -14845,6 +32408,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -14859,6 +32435,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -14867,6 +32456,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -14881,6 +32483,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -14889,6 +32504,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -14903,6 +32531,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -14911,6 +32552,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -14925,6 +32579,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -14933,6 +32600,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -14947,6 +32627,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -14955,6 +32648,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -14969,6 +32675,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -14977,6 +32696,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -14991,6 +32723,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -14999,6 +32744,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -15013,6 +32771,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -15021,6 +32792,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -15035,6 +32819,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -15043,6 +32840,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -15057,6 +32867,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -15065,6 +32888,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -15079,6 +32915,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -15087,6 +32936,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -15101,6 +32963,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -15109,6 +32984,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -15123,6 +33011,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -15131,6 +33032,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -15145,6 +33059,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -15153,6 +33080,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -15167,6 +33107,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -15175,6 +33128,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -15189,6 +33155,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -15197,6 +33176,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -15211,6 +33203,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -15219,6 +33224,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -15233,6 +33251,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -15241,6 +33272,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -15255,6 +33299,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -15263,6 +33320,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -15277,6 +33347,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -15285,6 +33368,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -15299,6 +33395,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -15307,6 +33416,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -15321,6 +33443,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -15329,6 +33464,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -15343,6 +33491,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -15351,6 +33512,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -15365,6 +33539,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -15373,6 +33560,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -15387,6 +33587,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -15395,6 +33608,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -15409,6 +33635,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -15417,6 +33656,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -15431,6 +33683,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -15439,6 +33704,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -15453,6 +33731,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -15461,6 +33752,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -15475,6 +33779,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -15483,6 +33800,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -15497,6 +33827,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -15505,6 +33848,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -15519,6 +33875,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -15527,6 +33896,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -15541,6 +33923,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -15549,6 +33944,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -15563,6 +33971,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -15571,6 +33992,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -15585,6 +34019,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -15593,6 +34040,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -15607,6 +34067,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -15615,6 +34088,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -15629,6 +34115,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -15637,6 +34136,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -15651,6 +34163,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -15659,6 +34184,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -15673,6 +34211,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -15681,6 +34232,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -15695,6 +34259,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -15703,6 +34280,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -15717,6 +34307,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -15725,6 +34328,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -15739,6 +34355,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -15747,6 +34376,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -15761,6 +34403,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -15769,6 +34424,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -15783,6 +34451,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -15791,6 +34472,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -15805,6 +34499,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -15813,6 +34520,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -15827,6 +34547,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -15835,6 +34568,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -15849,6 +34595,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -15857,6 +34616,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -15871,6 +34643,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -15879,6 +34664,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -15893,6 +34691,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -15901,6 +34712,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -15915,6 +34739,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -15923,6 +34760,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -15937,6 +34787,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -15945,6 +34808,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -15959,6 +34835,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -15967,6 +34856,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -15981,6 +34883,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -15989,6 +34904,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -16003,6 +34931,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -16011,6 +34952,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -16025,6 +34979,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -16033,6 +35000,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -16047,6 +35027,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -16055,6 +35048,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -16069,6 +35075,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -16077,6 +35096,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -16091,6 +35123,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -16099,6 +35144,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -16113,6 +35171,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -16121,6 +35192,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -16135,6 +35219,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -16143,6 +35240,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -16157,6 +35267,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -16165,6 +35288,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -16176,6 +35312,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -16184,6 +35333,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -16198,6 +35360,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -16206,6 +35381,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -16220,6 +35408,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -16228,6 +35429,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -16242,6 +35456,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -16250,6 +35477,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -16264,6 +35504,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -16272,6 +35525,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -16286,6 +35552,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -16294,6 +35573,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -16308,6 +35600,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -16316,6 +35621,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -16330,6 +35648,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -16338,6 +35669,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -16352,6 +35696,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -16360,6 +35717,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -16374,6 +35744,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -16382,6 +35765,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -16396,6 +35792,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -16404,6 +35813,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -16418,6 +35840,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -16426,6 +35861,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -16440,6 +35888,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -16448,6 +35909,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -16462,6 +35936,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -16470,6 +35957,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -16484,6 +35984,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -16492,6 +36005,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -16506,6 +36032,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -16514,6 +36053,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -16528,6 +36080,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -16536,6 +36101,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -16550,6 +36128,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -16558,6 +36149,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -16572,6 +36176,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -16580,6 +36197,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -16594,6 +36224,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -16602,6 +36245,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -16616,6 +36272,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -16624,6 +36293,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -16638,6 +36320,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -16646,6 +36341,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -16660,6 +36368,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -16668,6 +36389,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -16682,6 +36416,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -16690,6 +36437,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -16704,6 +36464,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -16712,6 +36485,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -16726,6 +36512,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -16734,6 +36533,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -16748,6 +36560,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -16756,6 +36581,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -16770,6 +36608,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -16778,6 +36629,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -16792,6 +36656,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -16800,6 +36677,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -16814,6 +36704,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -16822,6 +36725,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -16836,6 +36752,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -16844,6 +36773,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -16858,6 +36800,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -16866,6 +36821,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -16877,6 +36845,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -16885,6 +36866,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -16899,6 +36893,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -16907,6 +36914,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -16921,6 +36941,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -16929,6 +36962,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -16943,6 +36989,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -16951,6 +37010,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -16965,6 +37037,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -16973,6 +37058,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -16987,6 +37085,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -16995,6 +37106,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -17009,6 +37133,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -17017,6 +37154,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -17031,6 +37181,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -17039,6 +37202,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -17053,6 +37229,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -17061,6 +37250,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -17075,6 +37277,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -17083,6 +37298,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -17097,6 +37325,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -17105,6 +37346,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -17119,6 +37373,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -17127,6 +37394,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -17141,6 +37421,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -17149,6 +37442,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -17163,6 +37469,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -17171,6 +37490,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -17185,6 +37517,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -17193,6 +37538,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -17207,6 +37565,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -17215,6 +37586,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -17229,6 +37613,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -17237,6 +37634,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -17251,6 +37661,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -17259,6 +37682,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -17273,6 +37709,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -17281,6 +37730,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -17295,6 +37757,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -17303,6 +37778,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -17317,6 +37805,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -17325,6 +37826,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -17339,6 +37853,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -17347,6 +37874,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -17361,6 +37901,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -17369,6 +37922,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -17383,6 +37949,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -17391,6 +37970,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -17405,6 +37997,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -17413,6 +38018,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -17427,6 +38045,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -17435,6 +38066,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -17449,6 +38093,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -17457,6 +38114,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -17471,6 +38141,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -17479,6 +38162,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -17493,6 +38189,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -17501,6 +38210,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -17515,6 +38237,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -17523,6 +38258,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -17537,6 +38285,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -17545,6 +38306,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -17559,6 +38333,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -17567,6 +38354,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -17578,6 +38378,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -17586,6 +38399,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -17600,6 +38426,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -17608,6 +38447,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -17622,6 +38474,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -17630,6 +38495,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -17644,6 +38522,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -17652,6 +38543,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -17666,6 +38570,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -17674,6 +38591,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -17688,6 +38618,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -17696,6 +38639,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -17710,6 +38666,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -17718,6 +38687,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -17732,6 +38714,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -17740,6 +38735,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -17754,6 +38762,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -17762,6 +38783,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -17776,6 +38810,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -17784,6 +38831,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -17798,6 +38858,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -17806,6 +38879,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -17820,6 +38906,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -17828,6 +38927,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -17842,6 +38954,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -17850,6 +38975,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -17864,6 +39002,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -17872,6 +39023,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -17886,6 +39050,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -17894,6 +39071,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -17908,6 +39098,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -17916,6 +39119,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -17930,6 +39146,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -17938,6 +39167,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -17952,6 +39194,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -17960,6 +39215,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -17974,6 +39242,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -17982,6 +39263,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -17996,6 +39290,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -18004,6 +39311,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -18018,6 +39338,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -18026,6 +39359,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -18040,6 +39386,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -18048,6 +39407,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -18062,6 +39434,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -18070,6 +39455,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -18084,6 +39482,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -18092,6 +39503,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -18106,6 +39530,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -18114,6 +39551,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -18128,6 +39578,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -18136,6 +39599,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -18150,6 +39626,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -18158,6 +39647,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -18172,6 +39674,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -18180,6 +39695,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -18194,6 +39722,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -18202,6 +39743,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -18216,6 +39770,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -18224,6 +39791,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -18238,6 +39818,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -18246,6 +39839,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -18260,6 +39866,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -18268,6 +39887,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -18282,6 +39914,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -18290,6 +39935,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -18304,6 +39962,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -18312,6 +39983,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -18326,6 +40010,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -18334,6 +40031,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -18348,6 +40058,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -18356,6 +40079,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -18370,6 +40106,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -18378,6 +40127,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -18392,6 +40154,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -18400,6 +40175,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -18414,6 +40202,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -18422,6 +40223,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -18436,6 +40250,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -18444,6 +40271,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -18458,6 +40298,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -18466,6 +40319,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -18480,6 +40346,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -18488,6 +40367,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -18502,6 +40394,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -18510,6 +40415,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -18524,6 +40442,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -18532,6 +40463,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -18546,6 +40490,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -18554,6 +40511,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -18568,6 +40538,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -18576,6 +40559,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -18590,6 +40586,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -18598,6 +40607,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -18612,6 +40634,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -18620,6 +40655,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -18634,6 +40682,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -18642,6 +40703,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -18656,6 +40730,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -18664,6 +40751,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -18678,6 +40778,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -18686,6 +40799,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -18700,6 +40826,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -18708,6 +40847,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -18722,6 +40874,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -18730,6 +40895,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -18744,6 +40922,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -18752,6 +40943,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -18766,6 +40970,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -18774,6 +40991,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -18788,6 +41018,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -18796,6 +41039,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -18810,6 +41066,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -18818,6 +41087,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -18832,6 +41114,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -18840,6 +41135,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -18854,6 +41162,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -18862,6 +41183,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -18876,6 +41210,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -18884,6 +41231,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -18898,6 +41258,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -18906,6 +41279,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -18920,6 +41306,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -18928,6 +41327,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -18942,6 +41354,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -18950,6 +41375,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -18964,6 +41402,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -18972,6 +41423,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -18983,6 +41447,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -18991,6 +41468,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -19005,6 +41495,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -19013,6 +41516,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -19027,6 +41543,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -19035,6 +41564,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -19049,6 +41591,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -19057,6 +41612,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -19071,6 +41639,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -19079,6 +41660,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -19093,6 +41687,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -19101,6 +41708,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -19115,6 +41735,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -19123,6 +41756,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -19137,6 +41783,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -19145,6 +41804,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -19159,6 +41831,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -19167,6 +41852,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -19181,6 +41879,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -19189,6 +41900,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -19203,6 +41927,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -19211,6 +41948,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -19225,6 +41975,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -19233,6 +41996,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -19247,6 +42023,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -19255,6 +42044,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -19269,6 +42071,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -19277,6 +42092,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -19291,6 +42119,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -19299,6 +42140,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -19313,6 +42167,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -19321,6 +42188,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -19335,6 +42215,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -19343,6 +42236,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -19357,6 +42263,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -19365,6 +42284,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -19379,6 +42311,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -19387,6 +42332,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -19401,6 +42359,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -19409,6 +42380,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -19423,6 +42407,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -19431,6 +42428,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -19445,6 +42455,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -19453,6 +42476,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -19467,6 +42503,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -19475,6 +42524,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -19489,6 +42551,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -19497,6 +42572,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -19511,6 +42599,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -19519,6 +42620,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -19533,6 +42647,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -19541,6 +42668,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -19555,6 +42695,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -19563,6 +42716,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -19577,6 +42743,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -19585,6 +42764,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -19599,6 +42791,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -19607,6 +42812,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -19621,6 +42839,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -19629,6 +42860,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -19643,6 +42887,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -19651,6 +42908,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -19665,6 +42935,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -19673,6 +42956,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -19694,6 +42990,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -19702,6 +43011,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -19716,6 +43038,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -19724,6 +43059,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -19738,6 +43086,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -19746,6 +43107,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -19760,6 +43134,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -19768,6 +43155,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -19782,6 +43182,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -19790,6 +43203,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -19804,6 +43230,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -19812,6 +43251,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -19826,6 +43278,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -19834,6 +43299,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -19848,6 +43326,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -19856,6 +43347,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -19870,6 +43374,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -19878,6 +43395,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -19892,6 +43422,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -19900,6 +43443,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -19914,6 +43470,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -19922,6 +43491,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -19936,6 +43518,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -19944,6 +43539,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -19958,6 +43566,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -19966,6 +43587,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -19980,6 +43614,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -19988,6 +43635,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -20002,6 +43662,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -20010,6 +43683,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -20024,6 +43710,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -20032,6 +43731,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -20046,6 +43758,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -20054,6 +43779,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -20068,6 +43806,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -20076,6 +43827,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -20090,6 +43854,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -20098,6 +43875,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -20112,6 +43902,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -20120,6 +43923,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -20134,6 +43950,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -20142,6 +43971,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -20156,6 +43998,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -20164,6 +44019,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -20178,6 +44046,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -20186,6 +44067,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -20200,6 +44094,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -20208,6 +44115,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -20222,6 +44142,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -20230,6 +44163,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -20244,6 +44190,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -20252,6 +44211,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -20266,6 +44238,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -20274,6 +44259,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -20288,6 +44286,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -20296,6 +44307,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -20310,6 +44334,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -20318,6 +44355,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -20332,6 +44382,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -20340,6 +44403,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -20354,6 +44430,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -20362,6 +44451,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -20376,6 +44478,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -20384,6 +44499,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -20395,6 +44523,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -20403,6 +44544,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -20417,6 +44571,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -20425,6 +44592,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -20439,6 +44619,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -20447,6 +44640,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -20461,6 +44667,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -20469,6 +44688,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -20483,6 +44715,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -20491,6 +44736,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -20505,6 +44763,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -20513,6 +44784,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -20527,6 +44811,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -20535,6 +44832,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -20549,6 +44859,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -20557,6 +44880,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -20571,6 +44907,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -20579,6 +44928,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -20593,6 +44955,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -20601,6 +44976,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -20615,6 +45003,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -20623,6 +45024,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -20637,6 +45051,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -20645,6 +45072,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -20659,6 +45099,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -20667,6 +45120,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -20681,6 +45147,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -20689,6 +45168,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -20703,6 +45195,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -20711,6 +45216,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -20725,6 +45243,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -20733,6 +45264,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -20747,6 +45291,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -20755,6 +45312,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -20769,6 +45339,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -20777,6 +45360,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -20791,6 +45387,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -20799,6 +45408,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -20813,6 +45435,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -20821,6 +45456,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -20835,6 +45483,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -20843,6 +45504,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -20857,6 +45531,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -20865,6 +45552,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -20879,6 +45579,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -20887,6 +45600,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -20901,6 +45627,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -20909,6 +45648,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -20923,6 +45675,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -20931,6 +45696,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -20945,6 +45723,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -20953,6 +45744,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -20967,6 +45771,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -20975,6 +45792,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -20989,6 +45819,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -20997,6 +45840,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -21011,6 +45867,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -21019,6 +45888,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -21033,6 +45915,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -21041,6 +45936,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -21055,6 +45963,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -21063,6 +45984,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -21077,6 +46011,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -21085,6 +46032,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -21099,6 +46059,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -21107,6 +46080,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -21121,6 +46107,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -21129,6 +46128,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -21143,6 +46155,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -21151,6 +46176,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -21165,6 +46203,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -21173,6 +46224,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -21187,6 +46251,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -21195,6 +46272,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -21209,6 +46299,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -21217,6 +46320,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -21231,6 +46347,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -21239,6 +46368,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -21253,6 +46395,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -21261,6 +46416,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -21275,6 +46443,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -21283,6 +46464,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -21297,6 +46491,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -21305,6 +46512,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -21319,6 +46539,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -21327,6 +46560,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -21341,6 +46587,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -21349,6 +46608,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -21363,6 +46635,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -21371,6 +46656,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -21385,6 +46683,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -21393,6 +46704,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -21407,6 +46731,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -21415,6 +46752,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -21429,6 +46779,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -21437,6 +46800,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -21451,6 +46827,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -21459,6 +46848,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -21473,6 +46875,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -21481,6 +46896,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -21495,6 +46923,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -21503,6 +46944,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -21517,6 +46971,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -21525,6 +46992,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -21539,6 +47019,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -21547,6 +47040,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -21561,6 +47067,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -21569,6 +47088,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -21583,6 +47115,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -21591,6 +47136,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -21605,6 +47163,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -21613,6 +47184,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -21627,6 +47211,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -21635,6 +47232,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -21649,6 +47259,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -21657,6 +47280,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -21671,6 +47307,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -21679,6 +47328,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -21693,6 +47355,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -21701,6 +47376,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -21715,6 +47403,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -21723,6 +47424,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -21737,6 +47451,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -21745,6 +47472,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -21759,6 +47499,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -21767,6 +47520,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -21781,6 +47547,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -21789,6 +47568,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -21800,6 +47592,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -21808,6 +47613,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -21822,6 +47640,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -21830,6 +47661,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -21844,6 +47688,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -21852,6 +47709,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -21866,6 +47736,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -21874,6 +47757,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -21888,6 +47784,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -21896,6 +47805,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -21910,6 +47832,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -21918,6 +47853,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -21932,6 +47880,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -21940,6 +47901,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -21954,6 +47928,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -21962,6 +47949,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -21976,6 +47976,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -21984,6 +47997,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -21998,6 +48024,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -22006,6 +48045,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -22020,6 +48072,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -22028,6 +48093,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -22042,6 +48120,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -22050,6 +48141,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -22064,6 +48168,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -22072,6 +48189,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -22086,6 +48216,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -22094,6 +48237,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -22108,6 +48264,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -22116,6 +48285,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -22130,6 +48312,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -22138,6 +48333,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -22152,6 +48360,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -22160,6 +48381,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -22174,6 +48408,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -22182,6 +48429,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -22196,6 +48456,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -22204,6 +48477,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -22218,6 +48504,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -22226,6 +48525,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -22240,6 +48552,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -22248,6 +48573,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -22262,6 +48600,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -22270,6 +48621,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -22284,6 +48648,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -22292,6 +48669,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -22306,6 +48696,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -22314,6 +48717,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -22328,6 +48744,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -22336,6 +48765,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -22350,6 +48792,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -22358,6 +48813,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -22372,6 +48840,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -22380,6 +48861,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -22394,6 +48888,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -22402,6 +48909,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -22416,6 +48936,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -22424,6 +48957,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -22438,6 +48984,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -22446,6 +49005,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -22460,6 +49032,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -22468,6 +49053,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
@@ -22482,6 +49080,19 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
+
+## 🔧 Other Changes
+
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
@@ -22490,6 +49101,19 @@ All notable changes to this project will be documented in this file.
 
 * Merge pull request #35 from SolucTeam/feat/fix-label (55194e3)
 * fix: label truncation for long node names + RBAC watch pods (99198c1)
+
+## 🔧 Other Changes
+
+
+## [v0.5.0] - 2026-04-27
+
+## 🚀 Features
+
+* Merge pull request #39 from SolucTeam/feat/v1beta1-conversion-webhook (59952f1)
+* feat(crds): activate v1beta1 storage version and fix CRD schemas (98e6bfd)
+
+## 🐛 Bug Fixes
+
 
 ## 🔧 Other Changes
 
