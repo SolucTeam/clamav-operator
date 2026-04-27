@@ -2,21 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
-
-
-
-
-
-
-
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -29,7 +17,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -37,11 +24,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -54,7 +39,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -62,12 +46,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -80,7 +61,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -88,11 +68,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -110,16 +88,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -132,7 +105,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -140,11 +112,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -157,7 +127,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -165,12 +134,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -183,7 +149,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -191,11 +156,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -208,7 +171,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -216,14 +178,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -236,7 +193,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -244,11 +200,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -261,7 +215,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -269,12 +222,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -287,7 +237,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -295,11 +244,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -317,16 +264,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -339,7 +281,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -347,11 +288,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -364,7 +303,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -372,12 +310,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -390,7 +325,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -398,11 +332,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -420,18 +352,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -444,7 +369,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -452,11 +376,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -469,7 +391,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -477,12 +398,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -495,7 +413,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -503,11 +420,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -525,16 +440,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -547,7 +457,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -555,11 +464,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -572,7 +479,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -580,12 +486,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -598,7 +501,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -606,11 +508,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -623,7 +523,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -631,14 +530,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -651,7 +545,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -659,11 +552,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -676,7 +567,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -684,12 +574,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -702,7 +589,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -710,11 +596,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -732,16 +616,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -754,7 +633,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -762,11 +640,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -779,7 +655,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -787,12 +662,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -805,7 +677,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -813,11 +684,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -830,22 +699,13 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -858,7 +718,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -866,11 +725,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -883,7 +740,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -891,12 +747,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -909,7 +762,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -917,11 +769,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -939,16 +789,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -961,7 +806,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -969,11 +813,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -986,7 +828,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -994,12 +835,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -1012,7 +850,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -1020,11 +857,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -1037,7 +872,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -1045,14 +879,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -1065,7 +894,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -1073,11 +901,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -1090,7 +916,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -1098,12 +923,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -1116,7 +938,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -1124,11 +945,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -1146,16 +965,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -1168,7 +982,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -1176,11 +989,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -1193,7 +1004,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -1201,12 +1011,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -1219,7 +1026,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -1227,11 +1033,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -1249,18 +1053,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -1273,7 +1070,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -1281,11 +1077,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -1298,7 +1092,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -1306,12 +1099,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -1324,7 +1114,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -1332,11 +1121,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -1354,16 +1141,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -1376,7 +1158,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -1384,11 +1165,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -1401,7 +1180,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -1409,12 +1187,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -1427,7 +1202,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -1435,11 +1209,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -1452,7 +1224,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -1460,14 +1231,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -1480,7 +1246,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -1488,11 +1253,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -1505,7 +1268,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -1513,12 +1275,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -1531,7 +1290,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -1539,11 +1297,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -1561,16 +1317,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -1583,7 +1334,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -1591,11 +1341,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -1608,7 +1356,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -1616,12 +1363,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -1634,7 +1378,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -1642,11 +1385,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -1664,20 +1405,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
-
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -1690,7 +1422,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -1698,11 +1429,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -1715,7 +1444,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -1723,12 +1451,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -1741,7 +1466,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -1749,11 +1473,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -1771,16 +1493,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -1793,7 +1510,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -1801,11 +1517,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -1818,7 +1532,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -1826,12 +1539,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -1844,7 +1554,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -1852,11 +1561,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -1869,7 +1576,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -1877,14 +1583,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -1897,7 +1598,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -1905,11 +1605,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -1922,7 +1620,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -1930,12 +1627,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -1948,7 +1642,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -1956,11 +1649,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -1978,16 +1669,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -2000,7 +1686,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -2008,11 +1693,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -2025,7 +1708,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -2033,12 +1715,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -2051,7 +1730,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -2059,11 +1737,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -2081,18 +1757,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -2105,7 +1774,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -2113,11 +1781,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -2130,7 +1796,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -2138,12 +1803,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -2156,7 +1818,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -2164,11 +1825,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -2186,16 +1845,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -2208,7 +1862,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -2216,11 +1869,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -2233,7 +1884,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -2241,12 +1891,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -2259,7 +1906,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -2267,11 +1913,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -2284,7 +1928,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -2292,14 +1935,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -2312,7 +1950,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -2320,11 +1957,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -2337,7 +1972,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -2345,12 +1979,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -2363,7 +1994,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -2371,11 +2001,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -2393,16 +2021,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -2415,7 +2038,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -2423,11 +2045,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -2440,7 +2060,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -2448,12 +2067,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -2466,7 +2082,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -2474,11 +2089,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -2491,22 +2104,13 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -2519,7 +2123,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -2527,11 +2130,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -2544,7 +2145,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -2552,12 +2152,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -2570,7 +2167,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -2578,11 +2174,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -2600,16 +2194,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -2622,7 +2211,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -2630,11 +2218,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -2647,7 +2233,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -2655,12 +2240,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -2673,7 +2255,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -2681,11 +2262,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -2698,7 +2277,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -2706,14 +2284,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -2726,7 +2299,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -2734,11 +2306,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -2751,7 +2321,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -2759,12 +2328,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -2777,7 +2343,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -2785,11 +2350,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -2807,16 +2370,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -2829,7 +2387,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -2837,11 +2394,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -2854,7 +2409,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -2862,12 +2416,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -2880,7 +2431,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -2888,11 +2438,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -2910,18 +2458,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -2934,7 +2475,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -2942,11 +2482,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -2959,7 +2497,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -2967,12 +2504,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -2985,7 +2519,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -2993,11 +2526,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -3015,16 +2546,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -3037,7 +2563,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -3045,11 +2570,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -3062,7 +2585,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -3070,12 +2592,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -3088,7 +2607,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -3096,11 +2614,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -3113,7 +2629,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -3121,14 +2636,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -3141,7 +2651,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -3149,11 +2658,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -3166,7 +2673,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -3174,12 +2680,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -3192,7 +2695,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -3200,11 +2702,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -3222,16 +2722,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -3244,7 +2739,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -3252,11 +2746,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -3269,7 +2761,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -3277,12 +2768,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -3295,7 +2783,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -3303,11 +2790,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -3319,7 +2804,6 @@ All notable changes to this project will be documented in this file.
 ## [v0.1.2] - 2026-03-01
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -3335,18 +2819,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -3359,7 +2834,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -3367,11 +2841,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -3384,7 +2856,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -3392,12 +2863,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -3410,7 +2878,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -3418,11 +2885,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -3440,16 +2905,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -3462,7 +2922,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -3470,11 +2929,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -3487,7 +2944,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -3495,12 +2951,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -3513,7 +2966,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -3521,11 +2973,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -3538,7 +2988,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -3546,14 +2995,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -3566,7 +3010,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -3574,11 +3017,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -3591,7 +3032,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -3599,12 +3039,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -3617,7 +3054,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -3625,11 +3061,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -3647,16 +3081,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -3669,7 +3098,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -3677,11 +3105,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -3694,7 +3120,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -3702,12 +3127,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -3720,7 +3142,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -3728,11 +3149,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -3750,18 +3169,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -3774,7 +3186,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -3782,11 +3193,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -3799,7 +3208,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -3807,12 +3215,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -3825,7 +3230,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -3833,11 +3237,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -3855,16 +3257,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -3877,7 +3274,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -3885,11 +3281,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -3902,7 +3296,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -3910,12 +3303,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -3928,7 +3318,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -3936,11 +3325,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -3953,7 +3340,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -3961,14 +3347,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -3981,7 +3362,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -3989,11 +3369,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -4006,7 +3384,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -4014,12 +3391,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -4032,7 +3406,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -4040,11 +3413,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -4062,16 +3433,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -4084,7 +3450,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -4092,11 +3457,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -4109,7 +3472,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -4117,12 +3479,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -4135,7 +3494,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -4143,11 +3501,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -4160,22 +3516,13 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -4188,7 +3535,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -4196,11 +3542,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -4213,7 +3557,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -4221,12 +3564,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -4239,7 +3579,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -4247,11 +3586,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -4269,16 +3606,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -4291,7 +3623,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -4299,11 +3630,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -4316,7 +3645,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -4324,12 +3652,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -4342,7 +3667,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -4350,11 +3674,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -4367,7 +3689,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -4375,14 +3696,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -4395,7 +3711,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -4403,11 +3718,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -4420,7 +3733,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -4428,12 +3740,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -4446,7 +3755,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -4454,11 +3762,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -4476,16 +3782,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -4498,7 +3799,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -4506,11 +3806,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -4523,7 +3821,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -4531,12 +3828,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -4549,7 +3843,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -4557,11 +3850,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -4579,18 +3870,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -4603,7 +3887,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -4611,11 +3894,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -4628,7 +3909,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -4636,12 +3916,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -4654,7 +3931,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -4662,11 +3938,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -4684,16 +3958,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -4706,7 +3975,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -4714,11 +3982,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -4731,7 +3997,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -4739,12 +4004,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -4757,7 +4019,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -4765,11 +4026,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -4782,7 +4041,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -4790,14 +4048,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -4810,7 +4063,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -4818,11 +4070,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -4835,7 +4085,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -4843,12 +4092,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -4861,7 +4107,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -4869,11 +4114,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -4891,16 +4134,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -4913,7 +4151,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -4921,11 +4158,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -4938,7 +4173,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -4946,12 +4180,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -4964,7 +4195,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -4972,11 +4202,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -4994,20 +4222,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
-
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -5020,7 +4239,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -5028,11 +4246,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -5045,7 +4261,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -5053,12 +4268,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -5071,7 +4283,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -5079,11 +4290,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -5101,16 +4310,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -5123,7 +4327,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -5131,11 +4334,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -5148,7 +4349,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -5156,12 +4356,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -5174,7 +4371,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -5182,11 +4378,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -5199,7 +4393,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -5207,14 +4400,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -5227,7 +4415,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -5235,11 +4422,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -5252,7 +4437,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -5260,12 +4444,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -5278,7 +4459,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -5286,11 +4466,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -5308,16 +4486,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -5330,7 +4503,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -5338,11 +4510,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -5355,7 +4525,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -5363,12 +4532,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -5381,7 +4547,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -5389,11 +4554,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -5411,18 +4574,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -5435,7 +4591,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -5443,11 +4598,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -5460,7 +4613,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -5468,12 +4620,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -5486,7 +4635,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -5494,11 +4642,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -5516,16 +4662,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -5538,7 +4679,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -5546,11 +4686,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -5563,7 +4701,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -5571,12 +4708,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -5589,7 +4723,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -5597,11 +4730,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -5614,7 +4745,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -5622,14 +4752,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -5642,7 +4767,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -5650,11 +4774,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -5667,7 +4789,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -5675,12 +4796,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -5693,7 +4811,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -5701,11 +4818,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -5723,16 +4838,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -5745,7 +4855,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -5753,11 +4862,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -5770,7 +4877,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -5778,12 +4884,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -5796,7 +4899,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -5804,11 +4906,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -5821,22 +4921,13 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -5849,7 +4940,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -5857,11 +4947,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -5874,7 +4962,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -5882,12 +4969,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -5900,7 +4984,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -5908,11 +4991,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -5930,16 +5011,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -5952,7 +5028,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -5960,11 +5035,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -5977,7 +5050,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -5985,12 +5057,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -6003,7 +5072,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -6011,11 +5079,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -6028,7 +5094,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -6036,14 +5101,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -6056,7 +5116,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -6064,11 +5123,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -6081,7 +5138,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -6089,12 +5145,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -6107,7 +5160,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -6115,11 +5167,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -6137,16 +5187,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -6159,7 +5204,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -6167,11 +5211,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -6184,7 +5226,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -6192,12 +5233,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -6210,7 +5248,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -6218,11 +5255,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -6240,18 +5275,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -6264,7 +5292,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -6272,11 +5299,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -6289,7 +5314,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -6297,12 +5321,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -6315,7 +5336,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -6323,11 +5343,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -6345,16 +5363,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -6367,7 +5380,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -6375,11 +5387,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -6392,7 +5402,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -6400,12 +5409,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -6418,7 +5424,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -6426,11 +5431,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -6443,7 +5446,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -6451,14 +5453,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -6471,7 +5468,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -6479,11 +5475,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -6496,7 +5490,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -6504,12 +5497,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -6522,7 +5512,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -6530,11 +5519,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -6552,16 +5539,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -6574,7 +5556,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -6582,11 +5563,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -6599,7 +5578,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -6607,12 +5585,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -6625,7 +5600,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -6633,11 +5607,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -6650,25 +5622,13 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
-
-
-
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -6681,7 +5641,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -6689,11 +5648,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -6706,7 +5663,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -6714,12 +5670,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -6732,7 +5685,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -6740,11 +5692,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -6762,16 +5712,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -6784,7 +5729,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -6792,11 +5736,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -6809,7 +5751,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -6817,12 +5758,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -6835,7 +5773,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -6843,11 +5780,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -6860,7 +5795,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -6868,14 +5802,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -6888,7 +5817,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -6896,11 +5824,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -6913,7 +5839,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -6921,12 +5846,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -6939,7 +5861,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -6947,11 +5868,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -6969,16 +5888,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -6991,7 +5905,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -6999,11 +5912,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -7016,7 +5927,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -7024,12 +5934,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -7042,7 +5949,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -7050,11 +5956,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -7072,18 +5976,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -7096,7 +5993,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -7104,11 +6000,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -7121,7 +6015,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -7129,12 +6022,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -7147,7 +6037,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -7155,11 +6044,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -7177,16 +6064,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -7199,7 +6081,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -7207,11 +6088,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -7224,7 +6103,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -7232,12 +6110,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -7250,7 +6125,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -7258,11 +6132,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -7275,7 +6147,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -7283,14 +6154,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -7303,7 +6169,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -7311,11 +6176,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -7328,7 +6191,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -7336,12 +6198,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -7354,7 +6213,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -7362,11 +6220,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -7384,16 +6240,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -7406,7 +6257,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -7414,11 +6264,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -7431,7 +6279,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -7439,12 +6286,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -7457,7 +6301,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -7465,11 +6308,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -7482,22 +6323,13 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -7510,7 +6342,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -7518,11 +6349,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -7535,7 +6364,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -7543,12 +6371,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -7561,7 +6386,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -7569,11 +6393,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -7591,16 +6413,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -7613,7 +6430,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -7621,11 +6437,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -7638,7 +6452,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -7646,12 +6459,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -7664,7 +6474,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -7672,11 +6481,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -7689,7 +6496,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -7697,14 +6503,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -7717,7 +6518,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -7725,11 +6525,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -7742,7 +6540,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -7750,12 +6547,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -7768,7 +6562,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -7776,11 +6569,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -7798,16 +6589,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -7820,7 +6606,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -7828,11 +6613,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -7845,7 +6628,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -7853,12 +6635,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -7871,7 +6650,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -7879,11 +6657,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -7901,18 +6677,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -7925,7 +6694,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -7933,11 +6701,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -7950,7 +6716,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -7958,12 +6723,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -7976,7 +6738,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -7984,11 +6745,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -8006,16 +6765,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -8028,7 +6782,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -8036,11 +6789,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -8053,7 +6804,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -8061,12 +6811,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -8079,7 +6826,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -8087,11 +6833,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -8104,7 +6848,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -8112,14 +6855,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -8132,7 +6870,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -8140,11 +6877,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -8157,7 +6892,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -8165,12 +6899,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -8183,7 +6914,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -8191,11 +6921,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -8213,16 +6941,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -8235,7 +6958,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -8243,11 +6965,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -8260,7 +6980,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -8268,12 +6987,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -8286,7 +7002,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -8294,11 +7009,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -8316,20 +7029,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
-
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -8342,7 +7046,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -8350,11 +7053,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -8367,7 +7068,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -8375,12 +7075,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -8393,7 +7090,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -8401,11 +7097,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -8423,16 +7117,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -8445,7 +7134,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -8453,11 +7141,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -8470,7 +7156,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -8478,12 +7163,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -8496,7 +7178,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -8504,11 +7185,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -8521,7 +7200,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -8529,14 +7207,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -8549,7 +7222,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -8557,11 +7229,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -8574,7 +7244,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -8582,12 +7251,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -8600,7 +7266,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -8608,11 +7273,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -8630,16 +7293,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -8652,7 +7310,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -8660,11 +7317,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -8677,7 +7332,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -8685,12 +7339,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -8703,7 +7354,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -8711,11 +7361,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -8733,18 +7381,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -8757,7 +7398,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -8765,11 +7405,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -8782,7 +7420,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -8790,12 +7427,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -8808,7 +7442,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -8816,11 +7449,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -8838,16 +7469,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -8860,7 +7486,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -8868,11 +7493,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -8885,7 +7508,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -8893,12 +7515,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -8911,7 +7530,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -8919,11 +7537,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -8936,7 +7552,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -8944,14 +7559,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -8964,7 +7574,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -8972,11 +7581,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -8989,7 +7596,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -8997,12 +7603,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -9015,7 +7618,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -9023,11 +7625,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -9045,16 +7645,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -9067,7 +7662,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -9075,11 +7669,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -9092,7 +7684,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -9100,12 +7691,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -9118,7 +7706,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -9126,11 +7713,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -9143,22 +7728,13 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -9171,7 +7747,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -9179,11 +7754,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -9196,7 +7769,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -9204,12 +7776,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -9222,7 +7791,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -9230,11 +7798,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -9252,16 +7818,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -9274,7 +7835,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -9282,11 +7842,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -9299,7 +7857,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -9307,12 +7864,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -9325,7 +7879,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -9333,11 +7886,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -9350,7 +7901,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -9358,14 +7908,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -9378,7 +7923,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -9386,11 +7930,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -9403,7 +7945,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -9411,12 +7952,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -9429,7 +7967,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -9437,11 +7974,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -9459,16 +7994,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -9481,7 +8011,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -9489,11 +8018,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -9506,7 +8033,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -9514,12 +8040,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -9532,7 +8055,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -9540,11 +8062,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -9562,18 +8082,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -9586,7 +8099,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -9594,11 +8106,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -9611,7 +8121,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -9619,12 +8128,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -9637,7 +8143,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -9645,11 +8150,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -9667,16 +8170,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -9689,7 +8187,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -9697,11 +8194,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -9714,7 +8209,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -9722,12 +8216,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -9740,7 +8231,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -9748,11 +8238,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -9765,7 +8253,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -9773,14 +8260,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -9793,7 +8275,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -9801,11 +8282,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -9818,7 +8297,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -9826,12 +8304,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -9844,7 +8319,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -9852,11 +8326,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -9874,16 +8346,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -9896,7 +8363,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -9904,11 +8370,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -9921,7 +8385,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -9929,12 +8392,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -9947,7 +8407,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -9955,11 +8414,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -9971,7 +8428,6 @@ All notable changes to this project will be documented in this file.
 ## [v0.1.2] - 2026-03-01
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -9987,18 +8443,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -10011,7 +8458,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -10019,11 +8465,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -10036,7 +8480,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -10044,12 +8487,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -10062,7 +8502,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -10070,11 +8509,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -10092,16 +8529,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -10114,7 +8546,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -10122,11 +8553,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -10139,7 +8568,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -10147,12 +8575,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -10165,7 +8590,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -10173,11 +8597,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -10190,7 +8612,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -10198,14 +8619,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -10218,7 +8634,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -10226,11 +8641,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -10243,7 +8656,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -10251,12 +8663,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -10269,7 +8678,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -10277,11 +8685,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -10299,16 +8705,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -10321,7 +8722,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -10329,11 +8729,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -10346,7 +8744,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -10354,12 +8751,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -10372,7 +8766,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -10380,11 +8773,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -10402,18 +8793,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -10426,7 +8810,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -10434,11 +8817,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -10451,7 +8832,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -10459,12 +8839,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -10477,7 +8854,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -10485,11 +8861,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -10507,16 +8881,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -10529,7 +8898,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -10537,11 +8905,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -10554,7 +8920,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -10562,12 +8927,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -10580,7 +8942,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -10588,11 +8949,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -10605,7 +8964,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -10613,14 +8971,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -10633,7 +8986,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -10641,11 +8993,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -10658,7 +9008,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -10666,12 +9015,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -10684,7 +9030,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -10692,11 +9037,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -10714,16 +9057,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -10736,7 +9074,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -10744,11 +9081,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -10761,7 +9096,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -10769,12 +9103,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -10787,7 +9118,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -10795,11 +9125,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -10812,22 +9140,13 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -10840,7 +9159,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -10848,11 +9166,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -10865,7 +9181,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -10873,12 +9188,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -10891,7 +9203,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -10899,11 +9210,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -10921,16 +9230,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -10943,7 +9247,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -10951,11 +9254,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -10968,7 +9269,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -10976,12 +9276,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -10994,7 +9291,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -11002,11 +9298,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -11019,7 +9313,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -11027,14 +9320,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -11047,7 +9335,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -11055,11 +9342,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -11072,7 +9357,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -11080,12 +9364,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -11098,7 +9379,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -11106,11 +9386,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -11128,16 +9406,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -11150,7 +9423,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -11158,11 +9430,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -11175,7 +9445,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -11183,12 +9452,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -11201,7 +9467,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -11209,11 +9474,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -11231,18 +9494,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -11255,7 +9511,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -11263,11 +9518,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -11280,7 +9533,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -11288,12 +9540,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -11306,7 +9555,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -11314,11 +9562,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -11336,16 +9582,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -11358,7 +9599,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -11366,11 +9606,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -11383,7 +9621,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -11391,12 +9628,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -11409,7 +9643,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -11417,11 +9650,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -11434,7 +9665,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -11442,14 +9672,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -11462,7 +9687,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -11470,11 +9694,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -11487,7 +9709,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -11495,12 +9716,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -11513,7 +9731,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -11521,11 +9738,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -11543,16 +9758,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -11565,7 +9775,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -11573,11 +9782,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -11590,7 +9797,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -11598,12 +9804,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -11616,7 +9819,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -11624,11 +9826,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -11646,20 +9846,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
-
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -11672,7 +9863,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -11680,11 +9870,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -11697,7 +9885,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -11705,12 +9892,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -11723,7 +9907,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -11731,11 +9914,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -11753,16 +9934,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -11775,7 +9951,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -11783,11 +9958,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -11800,7 +9973,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -11808,12 +9980,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -11826,7 +9995,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -11834,11 +10002,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -11851,7 +10017,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -11859,14 +10024,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -11879,7 +10039,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -11887,11 +10046,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -11904,7 +10061,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -11912,12 +10068,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -11930,7 +10083,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -11938,11 +10090,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -11960,16 +10110,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -11982,7 +10127,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -11990,11 +10134,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -12007,7 +10149,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -12015,12 +10156,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -12033,7 +10171,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -12041,11 +10178,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -12063,18 +10198,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -12087,7 +10215,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -12095,11 +10222,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -12112,7 +10237,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -12120,12 +10244,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -12138,7 +10259,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -12146,11 +10266,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -12168,16 +10286,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -12190,7 +10303,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -12198,11 +10310,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -12215,7 +10325,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -12223,12 +10332,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -12241,7 +10347,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -12249,11 +10354,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -12266,7 +10369,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -12274,14 +10376,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -12294,7 +10391,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -12302,11 +10398,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -12319,7 +10413,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -12327,12 +10420,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -12345,7 +10435,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -12353,11 +10442,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -12375,16 +10462,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -12397,7 +10479,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -12405,11 +10486,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -12422,7 +10501,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -12430,12 +10508,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -12448,7 +10523,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -12456,11 +10530,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -12473,22 +10545,13 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -12501,7 +10564,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -12509,11 +10571,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -12526,7 +10586,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -12534,12 +10593,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -12552,7 +10608,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -12560,11 +10615,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -12582,16 +10635,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -12604,7 +10652,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -12612,11 +10659,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -12629,7 +10674,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -12637,12 +10681,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -12655,7 +10696,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -12663,11 +10703,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -12680,7 +10718,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -12688,14 +10725,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -12708,7 +10740,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -12716,11 +10747,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -12733,7 +10762,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -12741,12 +10769,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -12759,7 +10784,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -12767,11 +10791,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -12789,16 +10811,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -12811,7 +10828,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -12819,11 +10835,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -12836,7 +10850,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -12844,12 +10857,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -12862,7 +10872,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -12870,11 +10879,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -12892,18 +10899,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -12916,7 +10916,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -12924,11 +10923,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -12941,7 +10938,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -12949,12 +10945,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -12967,7 +10960,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -12975,11 +10967,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -12997,16 +10987,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -13019,7 +11004,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -13027,11 +11011,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -13044,7 +11026,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -13052,12 +11033,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -13070,7 +11048,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -13078,11 +11055,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -13095,7 +11070,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -13103,14 +11077,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -13123,7 +11092,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -13131,11 +11099,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -13148,7 +11114,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -13156,12 +11121,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -13174,7 +11136,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -13182,11 +11143,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -13204,16 +11163,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -13226,7 +11180,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -13234,11 +11187,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -13251,7 +11202,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -13259,12 +11209,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -13277,7 +11224,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -13285,11 +11231,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -13307,23 +11251,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
-
-
-
-
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -13336,7 +11268,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -13344,11 +11275,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -13361,7 +11290,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -13369,12 +11297,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -13387,7 +11312,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -13395,11 +11319,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -13417,16 +11339,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -13439,7 +11356,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -13447,11 +11363,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -13464,7 +11378,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -13472,12 +11385,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -13490,7 +11400,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -13498,11 +11407,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -13515,7 +11422,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -13523,14 +11429,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -13543,7 +11444,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -13551,11 +11451,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -13568,7 +11466,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -13576,12 +11473,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -13594,7 +11488,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -13602,11 +11495,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -13624,16 +11515,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -13646,7 +11532,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -13654,11 +11539,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -13671,7 +11554,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -13679,12 +11561,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -13697,7 +11576,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -13705,11 +11583,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -13727,18 +11603,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -13751,7 +11620,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -13759,11 +11627,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -13776,7 +11642,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -13784,12 +11649,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -13802,7 +11664,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -13810,11 +11671,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -13832,16 +11691,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -13854,7 +11708,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -13862,11 +11715,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -13879,7 +11730,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -13887,12 +11737,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -13905,7 +11752,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -13913,11 +11759,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -13930,7 +11774,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -13938,14 +11781,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -13958,7 +11796,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -13966,11 +11803,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -13983,7 +11818,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -13991,12 +11825,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -14009,7 +11840,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -14017,11 +11847,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -14039,16 +11867,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -14061,7 +11884,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -14069,11 +11891,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -14086,7 +11906,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -14094,12 +11913,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -14112,7 +11928,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -14120,11 +11935,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -14137,22 +11950,13 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -14165,7 +11969,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -14173,11 +11976,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -14190,7 +11991,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -14198,12 +11998,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -14216,7 +12013,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -14224,11 +12020,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -14246,16 +12040,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -14268,7 +12057,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -14276,11 +12064,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -14293,7 +12079,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -14301,12 +12086,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -14319,7 +12101,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -14327,11 +12108,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -14344,7 +12123,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -14352,14 +12130,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -14372,7 +12145,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -14380,11 +12152,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -14397,7 +12167,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -14405,12 +12174,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -14423,7 +12189,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -14431,11 +12196,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -14453,16 +12216,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -14475,7 +12233,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -14483,11 +12240,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -14500,7 +12255,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -14508,12 +12262,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -14526,7 +12277,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -14534,11 +12284,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -14556,18 +12304,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -14580,7 +12321,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -14588,11 +12328,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -14605,7 +12343,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -14613,12 +12350,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -14631,7 +12365,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -14639,11 +12372,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -14661,16 +12392,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -14683,7 +12409,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -14691,11 +12416,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -14708,7 +12431,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -14716,12 +12438,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -14734,7 +12453,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -14742,11 +12460,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -14759,7 +12475,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -14767,14 +12482,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -14787,7 +12497,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -14795,11 +12504,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -14812,7 +12519,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -14820,12 +12526,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -14838,7 +12541,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -14846,11 +12548,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -14868,16 +12568,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -14890,7 +12585,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -14898,11 +12592,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -14915,7 +12607,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -14923,12 +12614,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -14941,7 +12629,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -14949,11 +12636,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -14971,20 +12656,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
-
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -14997,7 +12673,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -15005,11 +12680,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -15022,7 +12695,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -15030,12 +12702,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -15048,7 +12717,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -15056,11 +12724,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -15078,16 +12744,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -15100,7 +12761,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -15108,11 +12768,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -15125,7 +12783,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -15133,12 +12790,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -15151,7 +12805,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -15159,11 +12812,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -15176,7 +12827,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -15184,14 +12834,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -15204,7 +12849,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -15212,11 +12856,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -15229,7 +12871,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -15237,12 +12878,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -15255,7 +12893,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -15263,11 +12900,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -15285,16 +12920,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -15307,7 +12937,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -15315,11 +12944,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -15332,7 +12959,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -15340,12 +12966,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -15358,7 +12981,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -15366,11 +12988,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -15388,18 +13008,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -15412,7 +13025,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -15420,11 +13032,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -15437,7 +13047,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -15445,12 +13054,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -15463,7 +13069,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -15471,11 +13076,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -15493,16 +13096,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -15515,7 +13113,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -15523,11 +13120,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -15540,7 +13135,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -15548,12 +13142,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -15566,7 +13157,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -15574,11 +13164,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -15591,7 +13179,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -15599,14 +13186,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -15619,7 +13201,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -15627,11 +13208,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -15644,7 +13223,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -15652,12 +13230,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -15670,7 +13245,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -15678,11 +13252,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -15700,16 +13272,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -15722,7 +13289,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -15730,11 +13296,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -15747,7 +13311,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -15755,12 +13318,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -15773,7 +13333,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -15781,11 +13340,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -15798,22 +13355,13 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -15826,7 +13374,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -15834,11 +13381,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -15851,7 +13396,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -15859,12 +13403,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -15877,7 +13418,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -15885,11 +13425,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -15907,16 +13445,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -15929,7 +13462,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -15937,11 +13469,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -15954,7 +13484,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -15962,12 +13491,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -15980,7 +13506,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -15988,11 +13513,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -16005,7 +13528,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -16013,14 +13535,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -16033,7 +13550,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -16041,11 +13557,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -16058,7 +13572,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -16066,12 +13579,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -16084,7 +13594,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -16092,11 +13601,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -16114,16 +13621,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -16136,7 +13638,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -16144,11 +13645,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -16161,7 +13660,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -16169,12 +13667,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -16187,7 +13682,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -16195,11 +13689,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -16217,18 +13709,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -16241,7 +13726,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -16249,11 +13733,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -16266,7 +13748,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -16274,12 +13755,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -16292,7 +13770,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -16300,11 +13777,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -16322,16 +13797,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -16344,7 +13814,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -16352,11 +13821,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -16369,7 +13836,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -16377,12 +13843,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -16395,7 +13858,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -16403,11 +13865,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -16420,7 +13880,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -16428,14 +13887,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -16448,7 +13902,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -16456,11 +13909,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -16473,7 +13924,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -16481,12 +13931,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -16499,7 +13946,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -16507,11 +13953,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -16529,16 +13973,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -16551,7 +13990,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -16559,11 +13997,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -16576,7 +14012,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -16584,12 +14019,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -16602,7 +14034,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -16610,11 +14041,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -16626,7 +14055,6 @@ All notable changes to this project will be documented in this file.
 ## [v0.1.2] - 2026-03-01
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -16642,18 +14070,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -16666,7 +14085,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -16674,11 +14092,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -16691,7 +14107,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -16699,12 +14114,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -16717,7 +14129,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -16725,11 +14136,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -16747,16 +14156,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -16769,7 +14173,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -16777,11 +14180,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -16794,7 +14195,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -16802,12 +14202,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -16820,7 +14217,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -16828,11 +14224,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -16845,7 +14239,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -16853,14 +14246,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -16873,7 +14261,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -16881,11 +14268,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -16898,7 +14283,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -16906,12 +14290,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -16924,7 +14305,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -16932,11 +14312,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -16954,16 +14332,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -16976,7 +14349,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -16984,11 +14356,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -17001,7 +14371,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -17009,12 +14378,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -17027,7 +14393,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -17035,11 +14400,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -17057,18 +14420,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -17081,7 +14437,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -17089,11 +14444,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -17106,7 +14459,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -17114,12 +14466,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -17132,7 +14481,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -17140,11 +14488,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -17162,16 +14508,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -17184,7 +14525,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -17192,11 +14532,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -17209,7 +14547,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -17217,12 +14554,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -17235,7 +14569,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -17243,11 +14576,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -17260,7 +14591,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -17268,14 +14598,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -17288,7 +14613,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -17296,11 +14620,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -17313,7 +14635,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -17321,12 +14642,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -17339,7 +14657,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -17347,11 +14664,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -17369,16 +14684,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -17391,7 +14701,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -17399,11 +14708,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -17416,7 +14723,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -17424,12 +14730,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -17442,7 +14745,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -17450,11 +14752,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -17467,22 +14767,13 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -17495,7 +14786,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -17503,11 +14793,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -17520,7 +14808,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -17528,12 +14815,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -17546,7 +14830,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -17554,11 +14837,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -17576,16 +14857,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -17598,7 +14874,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -17606,11 +14881,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -17623,7 +14896,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -17631,12 +14903,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -17649,7 +14918,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -17657,11 +14925,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -17674,7 +14940,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -17682,14 +14947,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -17702,7 +14962,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -17710,11 +14969,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -17727,7 +14984,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -17735,12 +14991,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -17753,7 +15006,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -17761,11 +15013,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -17783,16 +15033,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -17805,7 +15050,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -17813,11 +15057,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -17830,7 +15072,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -17838,12 +15079,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -17856,7 +15094,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -17864,11 +15101,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -17886,18 +15121,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -17910,7 +15138,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -17918,11 +15145,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -17935,7 +15160,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -17943,12 +15167,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -17961,7 +15182,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -17969,11 +15189,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -17991,16 +15209,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -18013,7 +15226,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -18021,11 +15233,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -18038,7 +15248,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -18046,12 +15255,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -18064,7 +15270,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -18072,11 +15277,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -18089,7 +15292,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -18097,14 +15299,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -18117,7 +15314,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -18125,11 +15321,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -18142,7 +15336,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -18150,12 +15343,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -18168,7 +15358,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -18176,11 +15365,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -18198,16 +15385,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -18220,7 +15402,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -18228,11 +15409,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -18245,7 +15424,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -18253,12 +15431,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -18271,7 +15446,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -18279,11 +15453,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -18301,20 +15473,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
-
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -18327,7 +15490,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -18335,11 +15497,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -18352,7 +15512,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -18360,12 +15519,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -18378,7 +15534,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -18386,11 +15541,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -18408,16 +15561,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -18430,7 +15578,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -18438,11 +15585,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -18455,7 +15600,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -18463,12 +15607,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -18481,7 +15622,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -18489,11 +15629,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -18506,7 +15644,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -18514,14 +15651,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -18534,7 +15666,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -18542,11 +15673,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -18559,7 +15688,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -18567,12 +15695,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -18585,7 +15710,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -18593,11 +15717,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -18615,16 +15737,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -18637,7 +15754,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -18645,11 +15761,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -18662,7 +15776,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -18670,12 +15783,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -18688,7 +15798,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -18696,11 +15805,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -18718,18 +15825,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -18742,7 +15842,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -18750,11 +15849,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -18767,7 +15864,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -18775,12 +15871,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -18793,7 +15886,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -18801,11 +15893,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -18823,16 +15913,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -18845,7 +15930,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -18853,11 +15937,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -18870,7 +15952,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -18878,12 +15959,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -18896,7 +15974,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -18904,11 +15981,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -18921,7 +15996,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -18929,14 +16003,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -18949,7 +16018,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -18957,11 +16025,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -18974,7 +16040,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -18982,12 +16047,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -19000,7 +16062,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -19008,11 +16069,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -19030,16 +16089,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -19052,7 +16106,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -19060,11 +16113,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -19077,7 +16128,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -19085,12 +16135,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -19103,7 +16150,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -19111,11 +16157,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -19128,22 +16172,13 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -19156,7 +16191,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -19164,11 +16198,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -19181,7 +16213,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -19189,12 +16220,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -19207,7 +16235,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -19215,11 +16242,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -19237,16 +16262,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -19259,7 +16279,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -19267,11 +16286,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -19284,7 +16301,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -19292,12 +16308,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -19310,7 +16323,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -19318,11 +16330,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -19335,7 +16345,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -19343,14 +16352,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -19363,7 +16367,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -19371,11 +16374,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -19388,7 +16389,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -19396,12 +16396,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -19414,7 +16411,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -19422,11 +16418,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -19444,16 +16438,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -19466,7 +16455,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -19474,11 +16462,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -19491,7 +16477,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -19499,12 +16484,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -19517,7 +16499,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -19525,11 +16506,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -19547,18 +16526,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -19571,7 +16543,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -19579,11 +16550,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -19596,7 +16565,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -19604,12 +16572,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -19622,7 +16587,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -19630,11 +16594,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -19652,16 +16614,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -19674,7 +16631,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -19682,11 +16638,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -19699,7 +16653,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -19707,12 +16660,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -19725,7 +16675,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -19733,11 +16682,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -19750,7 +16697,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -19758,14 +16704,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -19778,7 +16719,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -19786,11 +16726,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -19803,7 +16741,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -19811,12 +16748,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -19829,7 +16763,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -19837,11 +16770,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -19859,16 +16790,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -19881,7 +16807,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -19889,11 +16814,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -19906,7 +16829,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -19914,12 +16836,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -19932,7 +16851,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -19940,11 +16858,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -19957,25 +16873,13 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
-
-
-
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -19988,7 +16892,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -19996,11 +16899,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -20013,7 +16914,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -20021,12 +16921,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -20039,7 +16936,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -20047,11 +16943,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -20069,16 +16963,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -20091,7 +16980,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -20099,11 +16987,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -20116,7 +17002,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -20124,12 +17009,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -20142,7 +17024,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -20150,11 +17031,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -20167,7 +17046,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -20175,14 +17053,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -20195,7 +17068,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -20203,11 +17075,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -20220,7 +17090,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -20228,12 +17097,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -20246,7 +17112,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -20254,11 +17119,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -20276,16 +17139,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -20298,7 +17156,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -20306,11 +17163,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -20323,7 +17178,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -20331,12 +17185,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -20349,7 +17200,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -20357,11 +17207,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -20379,18 +17227,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -20403,7 +17244,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -20411,11 +17251,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -20428,7 +17266,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -20436,12 +17273,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -20454,7 +17288,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -20462,11 +17295,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -20484,16 +17315,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -20506,7 +17332,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -20514,11 +17339,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -20531,7 +17354,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -20539,12 +17361,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -20557,7 +17376,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -20565,11 +17383,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -20582,7 +17398,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -20590,14 +17405,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -20610,7 +17420,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -20618,11 +17427,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -20635,7 +17442,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -20643,12 +17449,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -20661,7 +17464,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -20669,11 +17471,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -20691,16 +17491,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -20713,7 +17508,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -20721,11 +17515,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -20738,7 +17530,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -20746,12 +17537,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -20764,7 +17552,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -20772,11 +17559,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -20789,22 +17574,13 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -20817,7 +17593,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -20825,11 +17600,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -20842,7 +17615,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -20850,12 +17622,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -20868,7 +17637,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -20876,11 +17644,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -20898,16 +17664,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -20920,7 +17681,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -20928,11 +17688,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -20945,7 +17703,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -20953,12 +17710,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -20971,7 +17725,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -20979,11 +17732,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -20996,7 +17747,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -21004,14 +17754,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -21024,7 +17769,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -21032,11 +17776,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -21049,7 +17791,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -21057,12 +17798,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -21075,7 +17813,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -21083,11 +17820,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -21105,16 +17840,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -21127,7 +17857,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -21135,11 +17864,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -21152,7 +17879,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -21160,12 +17886,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -21178,7 +17901,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -21186,11 +17908,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -21208,18 +17928,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -21232,7 +17945,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -21240,11 +17952,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -21257,7 +17967,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -21265,12 +17974,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -21283,7 +17989,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -21291,11 +17996,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -21313,16 +18016,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -21335,7 +18033,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -21343,11 +18040,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -21360,7 +18055,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -21368,12 +18062,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -21386,7 +18077,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -21394,11 +18084,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -21411,7 +18099,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -21419,14 +18106,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -21439,7 +18121,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -21447,11 +18128,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -21464,7 +18143,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -21472,12 +18150,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -21490,7 +18165,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -21498,11 +18172,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -21520,16 +18192,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -21542,7 +18209,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -21550,11 +18216,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -21567,7 +18231,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -21575,12 +18238,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -21593,7 +18253,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -21601,11 +18260,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -21623,20 +18280,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
-
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -21649,7 +18297,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -21657,11 +18304,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -21674,7 +18319,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -21682,12 +18326,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -21700,7 +18341,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -21708,11 +18348,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -21730,16 +18368,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -21752,7 +18385,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -21760,11 +18392,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -21777,7 +18407,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -21785,12 +18414,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -21803,7 +18429,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -21811,11 +18436,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -21828,7 +18451,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -21836,14 +18458,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -21856,7 +18473,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -21864,11 +18480,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -21881,7 +18495,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -21889,12 +18502,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -21907,7 +18517,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -21915,11 +18524,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -21937,16 +18544,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -21959,7 +18561,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -21967,11 +18568,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -21984,7 +18583,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -21992,12 +18590,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -22010,7 +18605,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -22018,11 +18612,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -22040,18 +18632,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -22064,7 +18649,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -22072,11 +18656,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -22089,7 +18671,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -22097,12 +18678,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -22115,7 +18693,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -22123,11 +18700,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -22145,16 +18720,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -22167,7 +18737,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -22175,11 +18744,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -22192,7 +18759,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -22200,12 +18766,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -22218,7 +18781,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -22226,11 +18788,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -22243,7 +18803,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -22251,14 +18810,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -22271,7 +18825,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -22279,11 +18832,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -22296,7 +18847,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -22304,12 +18854,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -22322,7 +18869,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -22330,11 +18876,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -22352,16 +18896,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -22374,7 +18913,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -22382,11 +18920,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -22399,7 +18935,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -22407,12 +18942,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -22425,7 +18957,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -22433,11 +18964,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -22450,22 +18979,13 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -22478,7 +18998,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -22486,11 +19005,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -22503,7 +19020,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -22511,12 +19027,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -22529,7 +19042,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -22537,11 +19049,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -22559,16 +19069,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -22581,7 +19086,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -22589,11 +19093,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -22606,7 +19108,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -22614,12 +19115,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -22632,7 +19130,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -22640,11 +19137,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -22657,7 +19152,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -22665,14 +19159,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -22685,7 +19174,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -22693,11 +19181,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -22710,7 +19196,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -22718,12 +19203,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -22736,7 +19218,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -22744,11 +19225,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -22766,16 +19245,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -22788,7 +19262,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -22796,11 +19269,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -22813,7 +19284,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -22821,12 +19291,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -22839,7 +19306,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -22847,11 +19313,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -22869,18 +19333,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -22893,7 +19350,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -22901,11 +19357,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -22918,7 +19372,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -22926,12 +19379,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -22944,7 +19394,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -22952,11 +19401,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -22974,16 +19421,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -22996,7 +19438,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -23004,11 +19445,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -23021,7 +19460,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -23029,12 +19467,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -23047,7 +19482,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -23055,11 +19489,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -23072,7 +19504,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -23080,14 +19511,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -23100,7 +19526,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -23108,11 +19533,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -23125,7 +19548,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -23133,12 +19555,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -23151,7 +19570,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -23159,11 +19577,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -23181,16 +19597,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -23203,7 +19614,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -23211,11 +19621,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -23228,7 +19636,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -23236,12 +19643,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -23254,7 +19658,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -23262,11 +19665,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -23278,7 +19679,6 @@ All notable changes to this project will be documented in this file.
 ## [v0.1.2] - 2026-03-01
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -23294,18 +19694,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -23318,7 +19709,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -23326,11 +19716,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -23343,7 +19731,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -23351,12 +19738,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -23369,7 +19753,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -23377,11 +19760,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -23399,16 +19780,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -23421,7 +19797,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -23429,11 +19804,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -23446,7 +19819,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -23454,12 +19826,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -23472,7 +19841,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -23480,11 +19848,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -23497,7 +19863,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -23505,14 +19870,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -23525,7 +19885,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -23533,11 +19892,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -23550,7 +19907,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -23558,12 +19914,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -23576,7 +19929,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -23584,11 +19936,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -23606,16 +19956,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -23628,7 +19973,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -23636,11 +19980,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -23653,7 +19995,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -23661,12 +20002,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -23679,7 +20017,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -23687,11 +20024,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -23709,18 +20044,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -23733,7 +20061,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -23741,11 +20068,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -23758,7 +20083,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -23766,12 +20090,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -23784,7 +20105,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -23792,11 +20112,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -23814,16 +20132,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -23836,7 +20149,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -23844,11 +20156,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -23861,7 +20171,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -23869,12 +20178,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -23887,7 +20193,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -23895,11 +20200,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -23912,7 +20215,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -23920,14 +20222,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -23940,7 +20237,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -23948,11 +20244,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -23965,7 +20259,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -23973,12 +20266,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -23991,7 +20281,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -23999,11 +20288,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -24021,16 +20308,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -24043,7 +20325,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -24051,11 +20332,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -24068,7 +20347,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -24076,12 +20354,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -24094,7 +20369,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -24102,11 +20376,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -24119,22 +20391,13 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -24147,7 +20410,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -24155,11 +20417,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -24172,7 +20432,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -24180,12 +20439,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -24198,7 +20454,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -24206,11 +20461,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -24228,16 +20481,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -24250,7 +20498,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -24258,11 +20505,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -24275,7 +20520,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -24283,12 +20527,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -24301,7 +20542,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -24309,11 +20549,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -24326,7 +20564,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -24334,14 +20571,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -24354,7 +20586,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -24362,11 +20593,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -24379,7 +20608,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -24387,12 +20615,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -24405,7 +20630,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -24413,11 +20637,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -24435,16 +20657,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -24457,7 +20674,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -24465,11 +20681,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -24482,7 +20696,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -24490,12 +20703,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -24508,7 +20718,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -24516,11 +20725,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -24538,18 +20745,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -24562,7 +20762,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -24570,11 +20769,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -24587,7 +20784,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -24595,12 +20791,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -24613,7 +20806,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -24621,11 +20813,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -24643,16 +20833,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -24665,7 +20850,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -24673,11 +20857,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -24690,7 +20872,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -24698,12 +20879,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -24716,7 +20894,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -24724,11 +20901,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -24741,7 +20916,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -24749,14 +20923,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -24769,7 +20938,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -24777,11 +20945,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -24794,7 +20960,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -24802,12 +20967,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -24820,7 +20982,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -24828,11 +20989,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -24850,16 +21009,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -24872,7 +21026,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -24880,11 +21033,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -24897,7 +21048,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -24905,12 +21055,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -24923,7 +21070,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -24931,11 +21077,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -24953,20 +21097,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
-
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -24979,7 +21114,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -24987,11 +21121,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -25004,7 +21136,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -25012,12 +21143,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -25030,7 +21158,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -25038,11 +21165,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -25060,16 +21185,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -25082,7 +21202,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -25090,11 +21209,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -25107,7 +21224,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -25115,12 +21231,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -25133,7 +21246,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -25141,11 +21253,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -25158,7 +21268,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -25166,14 +21275,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -25186,7 +21290,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -25194,11 +21297,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -25211,7 +21312,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -25219,12 +21319,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -25237,7 +21334,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -25245,11 +21341,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -25267,16 +21361,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -25289,7 +21378,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -25297,11 +21385,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -25314,7 +21400,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -25322,12 +21407,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -25340,7 +21422,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -25348,11 +21429,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -25370,18 +21449,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -25394,7 +21466,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -25402,11 +21473,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -25419,7 +21488,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -25427,12 +21495,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -25445,7 +21510,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -25453,11 +21517,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -25475,16 +21537,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -25497,7 +21554,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -25505,11 +21561,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -25522,7 +21576,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -25530,12 +21583,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -25548,7 +21598,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -25556,11 +21605,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -25573,7 +21620,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -25581,14 +21627,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -25601,7 +21642,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -25609,11 +21649,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -25626,7 +21664,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -25634,12 +21671,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -25652,7 +21686,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -25660,11 +21693,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -25682,16 +21713,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -25704,7 +21730,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -25712,11 +21737,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -25729,7 +21752,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -25737,12 +21759,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -25755,7 +21774,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -25763,11 +21781,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -25780,22 +21796,13 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -25808,7 +21815,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -25816,11 +21822,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -25833,7 +21837,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -25841,12 +21844,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -25859,7 +21859,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -25867,11 +21866,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -25889,16 +21886,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -25911,7 +21903,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -25919,11 +21910,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -25936,7 +21925,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -25944,12 +21932,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -25962,7 +21947,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -25970,11 +21954,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -25987,7 +21969,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -25995,14 +21976,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -26015,7 +21991,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -26023,11 +21998,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -26040,7 +22013,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -26048,12 +22020,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -26066,7 +22035,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -26074,11 +22042,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -26096,16 +22062,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -26118,7 +22079,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -26126,11 +22086,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -26143,7 +22101,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -26151,12 +22108,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -26169,7 +22123,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -26177,11 +22130,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -26199,18 +22150,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -26223,7 +22167,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -26231,11 +22174,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -26248,7 +22189,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -26256,12 +22196,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -26274,7 +22211,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -26282,11 +22218,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -26304,16 +22238,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -26326,7 +22255,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -26334,11 +22262,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -26351,7 +22277,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -26359,12 +22284,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -26377,7 +22299,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -26385,11 +22306,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -26402,7 +22321,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #28 from SolucTeam/fix/clamav (ceaa70a)
@@ -26410,14 +22328,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -26430,7 +22343,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -26438,11 +22350,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -26455,7 +22365,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -26463,12 +22372,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -26481,7 +22387,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -26489,11 +22394,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -26511,16 +22414,11 @@ All notable changes to this project will be documented in this file.
 
 ## 🐛 Bug Fixes
 
-
 ## 🔧 Other Changes
-
-
-
 
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -26533,7 +22431,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -26541,11 +22438,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -26558,7 +22453,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #32 from SolucTeam/fix/config-error (081e1ee)
@@ -26566,12 +22460,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 
@@ -26584,7 +22475,6 @@ All notable changes to this project will be documented in this file.
 
 ## 🚀 Features
 
-
 ## 🐛 Bug Fixes
 
 * Merge pull request #34 from SolucTeam/fix/config-ci (9e80f2a)
@@ -26592,11 +22482,9 @@ All notable changes to this project will be documented in this file.
 
 ## 🔧 Other Changes
 
-
 ## [v0.4.3] - 2026-04-27
 
 ## 🚀 Features
-
 
 ## 🐛 Bug Fixes
 

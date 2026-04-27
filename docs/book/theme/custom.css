@@ -1,0 +1,37 @@
+/* ClamAV Operator — mdBook custom theme */
+
+:root {
+  --sidebar-width: 280px;
+}
+
+.menu-title {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+/* Note / Warning admonitions (matches CAPI operator style) */
+aside.note {
+  border-left: 4px solid var(--links);
+  background: rgba(0, 100, 200, 0.07);
+  padding: 0.6em 1em;
+  margin: 1.2em 0;
+  border-radius: 0 4px 4px 0;
+}
+
+aside.note.warning {
+  border-left-color: #e08000;
+  background: rgba(224, 128, 0, 0.07);
+}
+
+aside.note h1 {
+  font-size: 0.85em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 0.4em 0;
+  color: var(--links);
+}
+
+aside.note.warning h1 {
+  color: #e08000;
+}
