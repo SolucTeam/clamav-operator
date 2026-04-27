@@ -54,6 +54,9 @@ jobs:
   analyze:
     name: Analyze Commits
     runs-on: ubuntu-latest
+    # Skip when this workflow re-triggers itself via the tag push it created.
+    # (PAT_TOKEN pushes re-trigger workflows; github-actions[bot] + tag = self-push)
+    if: "!(github.ref_type == 'tag' && github.actor == 'github-actions[bot]')"
     outputs:
       should_release: ${{ steps.check.outputs.should_release }}
       version: ${{ steps.semver.outputs.version }}
@@ -163,7 +166,14 @@ jobs:
         id: changelog
         if: steps.check.outputs.should_release == 'true'
         run: |
-          LAST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
+          # When triggered by a tag push (manual), HEAD IS the tagged commit,
+          # so git describe returns the current tag → range would be empty.
+          # Walk back to HEAD^ to find the *previous* tag instead.
+          if [[ "$GITHUB_REF" == refs/tags/* ]]; then
+            LAST_TAG=$(git describe --tags --abbrev=0 HEAD^ 2>/dev/null || echo "")
+          else
+            LAST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
+          fi
 
           if [ -z "$LAST_TAG" ]; then
             RANGE="HEAD"
