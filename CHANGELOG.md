@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 
 
+## [v0.5.2] - 2026-04-27
+
+## 🚀 Features
+
+_No new features_
+
+## 🐛 Bug Fixes
+
+* Merge pull request #41 from SolucTeam/fix/scanschedule-never-fires (b7303ec)
+* fix(controller): seed cron loop from CreationTimestamp, remove GenerationChangedPredicate (f32e384)
+
+## 🔧 Other Changes
+
+* chore: update CHANGELOG for v0.5.1 (f0e5d19)
+
+
 ## [v0.5.1] - 2026-04-27
 
 ## 🚀 Features
