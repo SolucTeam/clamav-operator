@@ -17,6 +17,8 @@ limitations under the License.
 package controller
 
 import (
+	"crypto/sha256"
+	"fmt"
 	"math/rand"
 	"time"
 
@@ -30,4 +32,17 @@ import (
 func requeueWithJitter(base time.Duration) ctrl.Result {
 	jitter := time.Duration(rand.Int63n(int64(base / 5))) //nolint:gosec // not security-sensitive
 	return ctrl.Result{RequeueAfter: base + jitter}
+}
+
+// sanitizeLabelValue ensures s is a valid Kubernetes label value (≤ 63 chars).
+// If s already fits it is returned unchanged. Otherwise the first 52 characters
+// are kept and a 10-character hex suffix derived from the SHA-256 of the full
+// string is appended (separated by "-"), guaranteeing both uniqueness and the
+// 63-character limit.
+func sanitizeLabelValue(s string) string {
+	if len(s) <= 63 {
+		return s
+	}
+	sum := sha256.Sum256([]byte(s))
+	return fmt.Sprintf("%s-%x", s[:52], sum[:5]) // 52 + 1 + 10 = 63
 }
