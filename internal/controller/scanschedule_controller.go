@@ -17,11 +17,9 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/client-go/tools/record"
 	ctrl "sigs.k8s.io/controller-runtime"
-	"sigs.k8s.io/controller-runtime/pkg/builder"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 	"sigs.k8s.io/controller-runtime/pkg/controller/controllerutil"
 	"sigs.k8s.io/controller-runtime/pkg/log"
-	"sigs.k8s.io/controller-runtime/pkg/predicate"
 
 	clamavv1alpha1 "github.com/SolucTeam/clamav-operator/api/v1alpha1"
 )
@@ -88,6 +86,20 @@ func (r *ScanScheduleReconciler) Reconcile(ctx context.Context, req ctrl.Request
 	// Update next schedule time
 	scanSchedule.Status.NextScheduleTime = &metav1.Time{Time: nextRun}
 
+	// ── Rebuild Active list from live API state FIRST ─────────────────────────
+	// This must happen before the concurrency check and before the suspend early
+	// return so that every code path works with a consistent, up-to-date Active
+	// list.  Without this, a stale Active=[C1] (where C1 already Completed)
+	// would cause Forbid to silently block every subsequent run, and unsuspending
+	// a schedule would be blocked by ghost entries left over from before the
+	// suspend.
+	if err := r.cleanupHistory(ctx, &scanSchedule); err != nil {
+		// Do NOT overwrite Status.Active with the partial/nil result — abort and
+		// retry so we never persist a falsely-empty Active list.
+		log.Error(err, "failed to rebuild active list; retrying")
+		return ctrl.Result{}, err
+	}
+
 	// Check if suspended
 	if scanSchedule.Spec.Suspend {
 		log.Info("scan schedule is suspended")
@@ -111,29 +123,53 @@ func (r *ScanScheduleReconciler) Reconcile(ctx context.Context, req ctrl.Request
 	var needsRun bool
 	var scheduledTime time.Time
 
-	if scanSchedule.Status.LastScheduleTime != nil {
-		lastRun := scanSchedule.Status.LastScheduleTime.Time
+	// Determine the reference point for "last known run":
+	//   - If the schedule has run before, use LastScheduleTime.
+	//   - On the very first reconcile (LastScheduleTime == nil) seed with the
+	//     object's CreationTimestamp so that naturally-occurring cron slots after
+	//     creation are discovered correctly.
+	//
+	// Without this seed the loop is never entered: needsRun stays false forever,
+	// LastScheduleTime is never written, and the schedule never fires.
+	{
+		var lastRun time.Time
+		if scanSchedule.Status.LastScheduleTime != nil {
+			lastRun = scanSchedule.Status.LastScheduleTime.Time
+		} else if !scanSchedule.CreationTimestamp.IsZero() {
+			// First reconcile: anchor to creation time so slots that have elapsed
+			// since the object was created are discovered on the next cron tick.
+			lastRun = scanSchedule.CreationTimestamp.Time
+		} else {
+			// CreationTimestamp is zero (e.g. fake client in unit tests).
+			// Anchor to now so no past slots are detected — the first real
+			// cron tick will trigger normally via RequeueAfter.
+			lastRun = now
+		}
 		// Walk forward from lastRun through every occurrence that has already
 		// passed.  The final value of scheduledTime is the most-recent missed
 		// slot; intermediate slots are intentionally skipped (no burst catch-up).
-		for t := schedule.Next(lastRun); !t.After(now); t = schedule.Next(t) {
+		//
+		// Guard: robfig/cron returns time.Time{} when no slot is found within
+		// the next 5 years (yearLimit = t.Year()+5).  Without the IsZero check,
+		// a zero lastRun (year 1) causes the library to return time.Time{} after
+		// year 6, which is still before now, creating an infinite loop.
+		for t := schedule.Next(lastRun); !t.IsZero() && !t.After(now); t = schedule.Next(t) {
 			scheduledTime = t
 		}
 		needsRun = !scheduledTime.IsZero()
 	}
-	// needsRun remains false when LastScheduleTime is nil (first reconcile).
-	// The controller will requeue at nextRun and trigger at the correct time.
 
 	if needsRun {
-		// Check concurrency policy
+		// Concurrency check uses the freshly-rebuilt Active list from
+		// cleanupHistory above — not the potentially-stale value from the Get.
 		if scanSchedule.Spec.ConcurrencyPolicy == "Forbid" && len(scanSchedule.Status.Active) > 0 {
 			log.Info("skipping run due to concurrency policy", "policy", "Forbid")
 			needsRun = false
 		} else if scanSchedule.Spec.ConcurrencyPolicy == "Replace" && len(scanSchedule.Status.Active) > 0 {
 			// Request deletion of all active ClusterScans.
-			// We do NOT clear Status.Active here — cleanupHistory (called below)
-			// will re-build it from the live API state, naturally excluding
-			// ClusterScans that have a DeletionTimestamp (i.e. are being removed).
+			// We do NOT clear Status.Active here — it will be rebuilt on the next
+			// reconcile (triggered by the ClusterScan deletion event via .Owns()),
+			// naturally excluding ClusterScans that have a DeletionTimestamp.
 			// Clearing prematurely would cause a second reconcile to recreate
 			// them before the GC has had a chance to remove them.
 			for _, ref := range scanSchedule.Status.Active {
@@ -191,11 +227,6 @@ func (r *ScanScheduleReconciler) Reconcile(ctx context.Context, req ctrl.Request
 		recordScanScheduleExecution(scanSchedule.Namespace, scanSchedule.Name, "success")
 	}
 
-	// Clean up completed scans
-	if err := r.cleanupHistory(ctx, &scanSchedule); err != nil {
-		log.Error(err, "failed to cleanup history")
-	}
-
 	if err := r.Status().Update(ctx, &scanSchedule); err != nil {
 		return ctrl.Result{}, err
 	}
@@ -226,7 +257,10 @@ func (r *ScanScheduleReconciler) deleteOwnedClusterScans(ctx context.Context, sc
 }
 
 func (r *ScanScheduleReconciler) cleanupHistory(ctx context.Context, scanSchedule *clamavv1alpha1.ScanSchedule) error {
-	// Get all ClusterScans for this schedule
+	// Get all ClusterScans for this schedule.
+	// Return early on error WITHOUT touching Status.Active — overwriting it with
+	// a nil/empty slice when the List fails would silently drop the active list
+	// and allow duplicate scans to be created on the next reconcile.
 	clusterScans := &clamavv1alpha1.ClusterScanList{}
 	if err := r.List(ctx, clusterScans, client.InNamespace(scanSchedule.Namespace),
 		client.MatchingLabels{"clamav.io/schedule": scanSchedule.Name}); err != nil {
@@ -335,8 +369,12 @@ func (r *ScanScheduleReconciler) cleanupNodeScansForClusterScan(ctx context.Cont
 
 func (r *ScanScheduleReconciler) SetupWithManager(mgr ctrl.Manager) error {
 	return ctrl.NewControllerManagedBy(mgr).
-		For(&clamavv1alpha1.ScanSchedule{},
-			builder.WithPredicates(predicate.GenerationChangedPredicate{})).
+		// No GenerationChangedPredicate here: ScanSchedule reconciliation is
+		// driven primarily by RequeueAfter (cron clock), not by spec changes.
+		// The predicate would cause requeues set up before a pod restart to be
+		// lost — on restart the initial-sync Create event passes the predicate,
+		// but subsequent timer-driven reconciles must be allowed through too.
+		For(&clamavv1alpha1.ScanSchedule{}).
 		Owns(&clamavv1alpha1.ClusterScan{}).
 		Complete(r)
 }

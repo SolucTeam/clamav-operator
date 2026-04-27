@@ -625,7 +625,8 @@ defaultScanSchedule:
   successfulScansHistoryLimit: 3
 
   # Number of failed ClusterScan objects to retain in history.
-  failedScansHistoryLimit: 1
+  # Aligned with the CRD default (+kubebuilder:default=3).
+  failedScansHistoryLimit: 3
 
   # Maximum delay (seconds) before skipping a missed scheduled run.
   # Useful after a cluster outage. Unset by default.

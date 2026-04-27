@@ -7,7 +7,7 @@ description: >-
   Prometheus metrics, and Slack/Email/Webhook notifications.
 type: application
 version: 1.1.0
-appVersion: "0.1.0"
+appVersion: "0.5.0"
 keywords:
   - clamav
   - antivirus

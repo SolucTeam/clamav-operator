@@ -7,6 +7,11 @@ metadata:
   labels:
     {{- include "clamav-operator.labels" . | nindent 4 }}
     app.kubernetes.io/component: signatures
+  annotations:
+    # Retain the signatures PVC on helm uninstall so that freshclam-downloaded
+    # databases are not wiped accidentally. Re-create the PVC manually if you
+    # truly want to start fresh.
+    "helm.sh/resource-policy": keep
 spec:
   accessModes:
     - {{ .Values.scanner.signatures.accessMode }}

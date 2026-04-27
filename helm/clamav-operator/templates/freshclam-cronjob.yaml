@@ -25,7 +25,10 @@ spec:
           imagePullSecrets:
             {{- toYaml . | nindent 12 }}
           {{- end }}
-          serviceAccountName: {{ include "clamav-operator.scannerServiceAccountName" . }}
+          # freshclam never calls the Kubernetes API — do not mount a SA token.
+          # Reusing the scanner SA would expose Kubernetes RBAC credentials in a pod
+          # that has outbound internet access (ClamAV signature mirror downloads).
+          automountServiceAccountToken: false
           restartPolicy: OnFailure
           securityContext:
             runAsNonRoot: true
