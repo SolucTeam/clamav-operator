@@ -19,12 +19,17 @@ spec:
   {{- if .Values.defaultScanSchedule.concurrencyPolicy }}
   concurrencyPolicy: {{ .Values.defaultScanSchedule.concurrencyPolicy }}
   {{- end }}
-  {{- if .Values.defaultScanSchedule.successfulScansHistoryLimit }}
+  {{- /* Always render integer limits — {{- if 0 }} is falsy and would silently
+       ignore a user-supplied value of 0, falling back to the CRD default
+       instead. Using a sentinel of -1 in values.yaml means "omit the field". */}}
+  {{- if (ge (int .Values.defaultScanSchedule.successfulScansHistoryLimit) 0) }}
   successfulScansHistoryLimit: {{ .Values.defaultScanSchedule.successfulScansHistoryLimit }}
   {{- end }}
-  {{- if .Values.defaultScanSchedule.failedScansHistoryLimit }}
+  {{- if (ge (int .Values.defaultScanSchedule.failedScansHistoryLimit) 0) }}
   failedScansHistoryLimit: {{ .Values.defaultScanSchedule.failedScansHistoryLimit }}
   {{- end }}
+  {{- /* startingDeadlineSeconds is defined in the CRD type but NOT yet
+       implemented in the controller — setting it has no effect today. */}}
   {{- if .Values.defaultScanSchedule.startingDeadlineSeconds }}
   startingDeadlineSeconds: {{ .Values.defaultScanSchedule.startingDeadlineSeconds }}
   {{- end }}
