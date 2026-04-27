@@ -38,10 +38,320 @@ spec:
     - jsonPath: .metadata.creationTimestamp
       name: Age
       type: date
+    name: v1beta1
+    schema:
+      openAPIV3Schema:
+        description: NodeScan is the Schema for the nodescans API (v1beta1 — stable, preferred version)
+        properties:
+          apiVersion:
+            type: string
+          kind:
+            type: string
+          metadata:
+            type: object
+          spec:
+            description: NodeScanSpec defines the desired state of NodeScan
+            properties:
+              nodeName:
+                description: NodeName is the name of the node to scan
+                minLength: 1
+                type: string
+              scanPolicy:
+                description: ScanPolicy references a ScanPolicy to use for this scan
+                type: string
+              priority:
+                default: medium
+                description: Priority of the scan (high, medium, low)
+                enum:
+                - high
+                - medium
+                - low
+                type: string
+              paths:
+                description: Paths to scan on the node
+                items:
+                  type: string
+                type: array
+              excludePatterns:
+                description: ExcludePatterns are regex patterns for paths to exclude
+                items:
+                  type: string
+                type: array
+              maxConcurrent:
+                default: 5
+                description: MaxConcurrent files to scan in parallel
+                format: int32
+                maximum: 20
+                minimum: 1
+                type: integer
+              fileTimeout:
+                default: 300000
+                description: FileTimeout in milliseconds for scanning each file
+                format: int64
+                type: integer
+              maxFileSize:
+                default: 104857600
+                description: MaxFileSize in bytes — files larger than this will be skipped
+                format: int64
+                type: integer
+              resources:
+                description: Resources for the scan job
+                properties:
+                  limits:
+                    additionalProperties:
+                      anyOf:
+                      - type: integer
+                      - type: string
+                      pattern: ^(\+|-)?(([0-9]+(\.[0-9]*)?)|(\.[0-9]+))(([KMGTPE]i)|[numkMGTPE]|([eE](\+|-)?(([0-9]+(\.[0-9]*)?)|(\.[0-9]+))))?$
+                      x-kubernetes-int-or-string: true
+                    type: object
+                  requests:
+                    additionalProperties:
+                      anyOf:
+                      - type: integer
+                      - type: string
+                      pattern: ^(\+|-)?(([0-9]+(\.[0-9]*)?)|(\.[0-9]+))(([KMGTPE]i)|[numkMGTPE]|([eE](\+|-)?(([0-9]+(\.[0-9]*)?)|(\.[0-9]+))))?$
+                      x-kubernetes-int-or-string: true
+                    type: object
+                type: object
+              ttlSecondsAfterFinished:
+                default: 86400
+                description: TTLSecondsAfterFinished limits the lifetime of a finished Job
+                format: int32
+                type: integer
+              strategy:
+                default: full
+                description: |-
+                  Strategy defines the scan strategy to use.
+                  full: scan every file. incremental: files modified since last scan.
+                  modified-only: files modified in last 24 h. smart: alternate automatically.
+                enum:
+                - full
+                - incremental
+                - modified-only
+                - smart
+                type: string
+              incrementalConfig:
+                description: IncrementalConfig configures incremental scan behavior
+                properties:
+                  fullScanInterval:
+                    default: 10
+                    description: FullScanInterval defines how often a full scan runs when strategy is "smart"
+                    format: int32
+                    type: integer
+                  maxFileAgeHours:
+                    default: 24
+                    description: MaxFileAgeHours is the maximum age (in hours) of files to consider
+                    format: int32
+                    type: integer
+                  skipUnchangedFiles:
+                    default: true
+                    description: SkipUnchangedFiles skips files whose mtime+size haven't changed since last scan
+                    type: boolean
+                type: object
+              forceFullScan:
+                description: ForceFullScan forces a full scan even if incremental is enabled
+                type: boolean
+            required:
+            - nodeName
+            type: object
+          status:
+            description: NodeScanStatus defines the observed state of NodeScan (v1beta1)
+            properties:
+              observedGeneration:
+                description: ObservedGeneration is the most recent generation observed by the controller
+                format: int64
+                type: integer
+              phase:
+                description: Phase of the scan
+                enum:
+                - Pending
+                - Running
+                - Completed
+                - Failed
+                type: string
+              startTime:
+                description: StartTime of the scan
+                format: date-time
+                type: string
+              completionTime:
+                description: CompletionTime of the scan
+                format: date-time
+                type: string
+              duration:
+                description: Duration of the scan in seconds
+                format: int64
+                type: integer
+              filesScanned:
+                description: FilesScanned is the total number of files scanned
+                format: int64
+                type: integer
+              filesInfected:
+                description: FilesInfected is the number of infected files found
+                format: int64
+                type: integer
+              filesSkipped:
+                description: FilesSkipped is the number of files skipped
+                format: int64
+                type: integer
+              errorCount:
+                description: ErrorCount is the number of errors encountered during scan
+                format: int64
+                type: integer
+              infectedFiles:
+                description: InfectedFiles contains details of infected files (limited to first 100)
+                items:
+                  properties:
+                    path:
+                      type: string
+                    viruses:
+                      items:
+                        type: string
+                      type: array
+                    size:
+                      format: int64
+                      type: integer
+                    detectedAt:
+                      format: date-time
+                      type: string
+                  required:
+                  - path
+                  - viruses
+                  type: object
+                type: array
+              infectedFilesTruncated:
+                description: |-
+                  InfectedFilesTruncated is true when more than 100 infected files were
+                  detected. Only the first 100 are stored in infectedFiles; the full
+                  count is still reflected in filesInfected.
+                type: boolean
+              resultsPartial:
+                description: |-
+                  ResultsPartial is true when scan result parsing failed after all retries
+                  and the status reflects incomplete data. Do NOT treat this scan as a
+                  clean bill of health — re-run the scan.
+                type: boolean
+              jobRef:
+                description: JobRef is a reference to the created Job
+                properties:
+                  apiVersion:
+                    type: string
+                  kind:
+                    type: string
+                  name:
+                    type: string
+                  namespace:
+                    type: string
+                  resourceVersion:
+                    type: string
+                  uid:
+                    type: string
+                  fieldPath:
+                    type: string
+                type: object
+                x-kubernetes-map-type: atomic
+              conditions:
+                description: Conditions represent the latest available observations
+                items:
+                  properties:
+                    lastTransitionTime:
+                      format: date-time
+                      type: string
+                    message:
+                      maxLength: 32768
+                      type: string
+                    observedGeneration:
+                      format: int64
+                      minimum: 0
+                      type: integer
+                    reason:
+                      maxLength: 1024
+                      minLength: 1
+                      pattern: ^[A-Za-z]([A-Za-z0-9_,:]*[A-Za-z0-9_])?$
+                      type: string
+                    status:
+                      enum:
+                      - "True"
+                      - "False"
+                      - Unknown
+                      type: string
+                    type:
+                      maxLength: 316
+                      pattern: ^([a-z0-9]([-a-z0-9]*[a-z0-9])?(\.[a-z0-9]([-a-z0-9]*[a-z0-9])?)*/)?(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])$
+                      type: string
+                  required:
+                  - lastTransitionTime
+                  - message
+                  - reason
+                  - status
+                  - type
+                  type: object
+                type: array
+              reportPath:
+                description: ReportPath is the path to the detailed scan report on the node
+                type: string
+              lastTransitionTime:
+                description: LastTransitionTime is the last time the phase transitioned
+                format: date-time
+                type: string
+              strategyUsed:
+                description: StrategyUsed is the actual strategy that was used for this scan
+                enum:
+                - full
+                - incremental
+                - modified-only
+                - smart
+                type: string
+              filesSkippedIncremental:
+                description: FilesSkippedIncremental is the number of files skipped due to incremental scan
+                format: int64
+                type: integer
+              cacheHitRate:
+                description: CacheHitRate is the percentage of files skipped by incremental scanning (0-100)
+                format: int32
+                maximum: 100
+                minimum: 0
+                type: integer
+              timeSaved:
+                description: TimeSaved is the estimated time saved by incremental scanning (in seconds)
+                format: int64
+                type: integer
+              failureReason:
+                description: FailureReason contains the human-readable reason why the scan job failed
+                type: string
+              exitCode:
+                description: ExitCode is the exit code returned by the scanner container on failure
+                format: int32
+                type: integer
+            type: object
+        type: object
+    served: true
+    storage: true
+    subresources:
+      status: {}
+  - additionalPrinterColumns:
+    - jsonPath: .spec.nodeName
+      name: Node
+      type: string
+    - jsonPath: .status.phase
+      name: Phase
+      type: string
+    - jsonPath: .status.filesScanned
+      name: Scanned
+      type: integer
+    - jsonPath: .status.filesInfected
+      name: Infected
+      type: integer
+    - jsonPath: .status.duration
+      name: Duration
+      type: integer
+    - jsonPath: .metadata.creationTimestamp
+      name: Age
+      type: date
     name: v1alpha1
     schema:
       openAPIV3Schema:
-        description: NodeScan is the Schema for the nodescans API
+        description: NodeScan is the Schema for the nodescans API (v1alpha1 — served for backwards compatibility, not storage)
         properties:
           apiVersion:
             description: |-
@@ -174,6 +484,68 @@ spec:
                   automatically deleted.
                 format: int32
                 type: integer
+              strategy:
+                default: full
+                description: |-
+                  Strategy defines the scan strategy to use.
+                  full: scan every file on every run (default).
+                  incremental: scan only files modified since the last scan.
+                  modified-only: scan only files modified in the last 24 h.
+                  smart: alternate automatically between incremental and full scans.
+                enum:
+                - full
+                - incremental
+                - modified-only
+                - smart
+                type: string
+              incrementalConfig:
+                description: IncrementalConfig configures incremental scan behavior
+                properties:
+                  enabled:
+                    default: false
+                    description: Enabled activates incremental scanning
+                    type: boolean
+                  strategy:
+                    default: incremental
+                    description: Strategy defines the scan strategy within this config
+                    enum:
+                    - full
+                    - incremental
+                    - modified-only
+                    - smart
+                    type: string
+                  baselineInterval:
+                    default: 7
+                    description: |-
+                      BaselineInterval triggers a full scan every N incremental scans.
+                      For example, setting 7 forces a full scan every 7 incremental scans.
+                    format: int32
+                    maximum: 30
+                    minimum: 1
+                    type: integer
+                  maxAge:
+                    default: 24
+                    description: MaxAge is the maximum file age (in hours) to consider for incremental scans
+                    format: int32
+                    type: integer
+                  minTimeBetweenScans:
+                    default: 6
+                    description: MinTimeBetweenScans is the minimum delay (in hours) between two scans
+                    format: int32
+                    type: integer
+                  cacheExpiration:
+                    default: 168
+                    description: CacheExpiration is the cache validity duration (in hours); after this a full scan is forced
+                    format: int32
+                    type: integer
+                  skipUnchangedFiles:
+                    default: true
+                    description: SkipUnchangedFiles skips files whose mtime+size have not changed since the last scan
+                    type: boolean
+                type: object
+              forceFullScan:
+                description: ForceFullScan forces a full scan even if an incremental strategy is configured
+                type: boolean
             required:
             - nodeName
             type: object
@@ -339,6 +711,13 @@ spec:
                 description: LastTransitionTime is the last time the phase transitioned
                 format: date-time
                 type: string
+              observedGeneration:
+                description: |-
+                  ObservedGeneration is the most recent generation observed by the controller.
+                  Used by ArgoCD, Flux and other GitOps tools to detect whether the controller
+                  has processed the latest version of the spec.
+                format: int64
+                type: integer
               phase:
                 description: Phase of the scan
                 enum:
@@ -351,13 +730,54 @@ spec:
                 description: ReportPath is the path to the detailed scan report on
                   the node
                 type: string
+              resultsPartial:
+                description: |-
+                  ResultsPartial is true when scan result parsing failed after all retries
+                  and the status reflects incomplete data. Do NOT treat this as a clean
+                  bill of health — re-run the scan.
+                type: boolean
+              infectedFilesTruncated:
+                description: |-
+                  InfectedFilesTruncated is true when more than 100 infected files were
+                  detected. Only the first 100 are stored in infectedFiles; the full
+                  count is still reflected in filesInfected.
+                type: boolean
               startTime:
                 description: StartTime of the scan
                 format: date-time
                 type: string
+              strategyUsed:
+                description: StrategyUsed is the actual scan strategy that was used
+                enum:
+                - full
+                - incremental
+                - modified-only
+                - smart
+                type: string
+              filesSkippedIncremental:
+                description: FilesSkippedIncremental is the number of files skipped due to incremental scan
+                format: int64
+                type: integer
+              cacheHitRate:
+                description: CacheHitRate is the percentage of files skipped by incremental scanning (0-100)
+                format: int32
+                maximum: 100
+                minimum: 0
+                type: integer
+              timeSaved:
+                description: TimeSaved is the estimated time saved by incremental scanning (in seconds)
+                format: int64
+                type: integer
+              failureReason:
+                description: FailureReason contains the human-readable reason why the scan job failed
+                type: string
+              exitCode:
+                description: ExitCode is the exit code returned by the scanner container on failure
+                format: int32
+                type: integer
             type: object
         type: object
     served: true
-    storage: true
+    storage: false
     subresources:
       status: {}
