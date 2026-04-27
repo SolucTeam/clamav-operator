@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 
 
+## [v0.5.4] - 2026-04-27
+
+## 🚀 Features
+
+_No new features_
+
+## 🐛 Bug Fixes
+
+* Merge pull request #43 from SolucTeam/fix/job-name-rfc1123-fqdn (7bd3f4b)
+* fix(controller): trim trailing separators from job names, add observedGeneration to CRD schemas (6e29334)
+
+## 🔧 Other Changes
+
+* chore: update CHANGELOG for v0.5.3 (38bc5e0)
+
+
 ## [v0.5.3] - 2026-04-27
 
 ## 🚀 Features
