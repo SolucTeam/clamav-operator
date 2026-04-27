@@ -62,7 +62,9 @@ rules:
       - nodescans.clamav.io
       - clusterscans.clamav.io
       - scanschedules.clamav.io
-    verbs: ["get", "patch"]
+    # "update" is required to write the cert-manager.io/inject-ca-from annotation
+    # (kubectl annotate uses a strategic-merge patch which needs update, not just patch).
+    verbs: ["get", "patch", "update"]
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
@@ -135,6 +137,14 @@ spec:
               SERVICE_NAME="{{ include "clamav-operator.fullname" . }}-webhook-service"
               NAMESPACE="{{ .Release.Namespace }}"
               CONVERT_PATH="/convert"
+              {{- if .Values.webhook.certManager.enabled }}
+              # cert-manager cainjector watches for this annotation on CRDs and
+              # automatically injects the CA bundle into spec.conversion.webhook
+              # .clientConfig.caBundle.  Without this annotation the caBundle
+              # stays empty and the API server rejects the webhook TLS connection
+              # with "x509: certificate signed by unknown authority".
+              CERT_INJECT_ANNOTATION="cert-manager.io/inject-ca-from={{ .Release.Namespace }}/{{ include "clamav-operator.fullname" . }}-webhook-cert"
+              {{- end }}
 
               # JSON patch applied to each CRD's conversion section.
               # strategy=Webhook tells the API server to call our /convert handler
@@ -147,6 +157,9 @@ spec:
                     "webhook": {
                       "conversionReviewVersions": ["v1"],
                       "clientConfig": {
+                        {{- if and (not .Values.webhook.certManager.enabled) .Values.webhook.certificates.caBundle }}
+                        "caBundle": "{{ .Values.webhook.certificates.caBundle }}",
+                        {{- end }}
                         "service": {
                           "name": "${SERVICE_NAME}",
                           "namespace": "${NAMESPACE}",
@@ -164,6 +177,10 @@ spec:
               for CRD in nodescans.clamav.io clusterscans.clamav.io scanschedules.clamav.io; do
                 echo "Patching CRD ${CRD}..."
                 kubectl patch crd "${CRD}" --type=merge -p "${PATCH}"
+                {{- if .Values.webhook.certManager.enabled }}
+                # Tell cert-manager cainjector to inject the webhook CA into this CRD.
+                kubectl annotate crd "${CRD}" "${CERT_INJECT_ANNOTATION}" --overwrite
+                {{- end }}
                 echo "  Done."
               done
 
