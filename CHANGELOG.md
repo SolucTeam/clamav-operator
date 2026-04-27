@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 
 
+## [v0.5.1] - 2026-04-27
+
+## 🚀 Features
+
+_No new features_
+
+## 🐛 Bug Fixes
+
+* Merge pull request #40 from SolucTeam/fix/workflow-log (0416c5e)
+* fix(release): fix changelog truncation, awk duplication, and rebuild CHANGELOG.md (7fd2824)
+
+## 🔧 Other Changes
+
+* chore: update CHANGELOG for v0.5.0 (e32e60f)
+
+
 ## [v0.5.0] - 2026-04-27
 
 ## 🚀 Features
