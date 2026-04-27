@@ -97,6 +97,8 @@ func (r *NodeScan) ConvertTo(dstRaw conversion.Hub) error {
 			DetectedAt: f.DetectedAt,
 		})
 	}
+	dst.Status.InfectedFilesTruncated = r.Status.InfectedFilesTruncated
+	dst.Status.ResultsPartial = r.Status.ResultsPartial
 
 	return nil
 }
@@ -163,6 +165,8 @@ func (r *NodeScan) ConvertFrom(srcRaw conversion.Hub) error {
 			DetectedAt: f.DetectedAt,
 		})
 	}
+	r.Status.InfectedFilesTruncated = src.Status.InfectedFilesTruncated
+	r.Status.ResultsPartial = src.Status.ResultsPartial
 
 	return nil
 }

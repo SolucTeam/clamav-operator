@@ -219,6 +219,47 @@ spec:
                     - enabled
                     - url
                     type: object
+                  teams:
+                    description: |-
+                      Teams notification settings (Microsoft Teams Incoming Webhook).
+                      Supports both legacy Office 365 Connector and new Workflows webhook formats.
+                      Payloads use Adaptive Cards (schema v1.2) for rich formatting.
+                    properties:
+                      enabled:
+                        description: Enabled indicates if Teams notifications are enabled
+                        type: boolean
+                      webhookURL:
+                        description: |-
+                          WebhookURL is the Teams Incoming Webhook URL.
+                          Store in a Secret and use webhookSecretRef instead for production.
+                        type: string
+                      webhookSecretRef:
+                        description: |-
+                          WebhookSecretRef references a Secret containing the webhook URL.
+                          The Secret must have a key matching the key field below.
+                        properties:
+                          key:
+                            description: The key of the secret to select from. Must be a valid secret key.
+                            type: string
+                          name:
+                            description: |-
+                              Name of the referent.
+                              More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
+                            type: string
+                          optional:
+                            description: Specify whether the Secret or its key must be defined
+                            type: boolean
+                        required:
+                        - key
+                        type: object
+                        x-kubernetes-map-type: atomic
+                      onlyOnInfection:
+                        default: true
+                        description: OnlyOnInfection sends notifications only when malware is detected
+                        type: boolean
+                    required:
+                    - enabled
+                    type: object
                 type: object
               paths:
                 description: Paths to scan on each node
