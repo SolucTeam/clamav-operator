@@ -1,0 +1,72 @@
+# =============================================================================
+# ClamAV Operator — Documentation (mdBook → GitHub Pages)
+# =============================================================================
+# Builds the mdBook documentation and deploys it to GitHub Pages.
+#
+# Triggers:
+#   • push to main when docs/book/** changes
+#   • manual dispatch (workflow_dispatch)
+#   • called by release.yml so docs are updated on every release
+# =============================================================================
+
+name: Docs
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "docs/book/**"
+      - ".github/workflows/docs.yml"
+
+  workflow_dispatch: {}
+
+  workflow_call: {}
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build mdBook
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install mdBook
+        run: |
+          MDBOOK_VERSION="0.4.40"
+          curl -sSL \
+            "https://github.com/rust-lang/mdBook/releases/download/v${MDBOOK_VERSION}/mdbook-v${MDBOOK_VERSION}-x86_64-unknown-linux-gnu.tar.gz" \
+            | tar -xz -C /usr/local/bin
+          mdbook --version
+
+      - name: Build
+        working-directory: docs/book
+        run: mdbook build
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs/book/book
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
