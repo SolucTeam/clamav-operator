@@ -366,6 +366,13 @@ spec:
                   - phase
                   type: object
                 type: array
+              observedGeneration:
+                description: ObservedGeneration is the most recent generation observed
+                  by the controller. Used by ArgoCD, Flux and other GitOps tools to
+                  detect whether the controller has processed the latest version of
+                  the spec.
+                format: int64
+                type: integer
               phase:
                 description: Phase of the cluster scan
                 enum:
