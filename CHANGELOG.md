@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 
 
+## [v0.5.3] - 2026-04-27
+
+## 🚀 Features
+
+_No new features_
+
+## 🐛 Bug Fixes
+
+* Merge pull request #42 from SolucTeam/fix/scanschedule-never (d5f1085)
+* fix(release): skip self-triggered tag re-run and fix changelog range (634fe82)
+
+## 🔧 Other Changes
+
+* chore: update CHANGELOG for v0.5.2 (abb7236)
+
+
 ## [v0.5.2] - 2026-04-27
 
 ## 🚀 Features
