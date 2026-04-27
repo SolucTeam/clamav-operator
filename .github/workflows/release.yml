@@ -164,7 +164,7 @@ jobs:
         if: steps.check.outputs.should_release == 'true'
         run: |
           LAST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
-          
+
           if [ -z "$LAST_TAG" ]; then
             RANGE="HEAD"
             echo "📝 Generating changelog for first release (all commits)"
@@ -172,34 +172,41 @@ jobs:
             RANGE="$LAST_TAG..HEAD"
             echo "📝 Generating changelog from $LAST_TAG to HEAD"
           fi
-          
-          cat > changelog.md << 'EOF'
-          ## 🚀 Features
-          
-          EOF
-          
-          git log $RANGE --format="* %s (%h)" --grep="^feat" >> changelog.md 2>/dev/null || echo "_No new features_" >> changelog.md
-          
-          cat >> changelog.md << 'EOF'
-          
-          ## 🐛 Bug Fixes
-          
-          EOF
-          
-          git log $RANGE --format="* %s (%h)" --grep="^fix" >> changelog.md 2>/dev/null || echo "_No bug fixes_" >> changelog.md
-          
-          cat >> changelog.md << 'EOF'
-          
-          ## 🔧 Other Changes
-          
-          EOF
-          
-          git log $RANGE --format="* %s (%h)" --grep="^(chore|docs|style|refactor|perf|test|build|ci)" >> changelog.md 2>/dev/null || echo "_No other changes_" >> changelog.md
-          
-          CHANGELOG=$(cat changelog.md)
-          echo "changelog<<EOF" >> $GITHUB_OUTPUT
-          echo "$CHANGELOG" >> $GITHUB_OUTPUT
-          echo "EOF" >> $GITHUB_OUTPUT
+
+          {
+            echo "## 🚀 Features"
+            echo ""
+            # -E enables extended regex so | works as alternation
+            FEATS=$(git log "$RANGE" -E --format="* %s (%h)" --grep="^feat" 2>/dev/null)
+            if [ -n "$FEATS" ]; then echo "$FEATS"; else echo "_No new features_"; fi
+
+            echo ""
+            echo "## 🐛 Bug Fixes"
+            echo ""
+            FIXES=$(git log "$RANGE" -E --format="* %s (%h)" --grep="^fix" 2>/dev/null)
+            if [ -n "$FIXES" ]; then echo "$FIXES"; else echo "_No bug fixes_"; fi
+
+            echo ""
+            echo "## 🔧 Other Changes"
+            echo ""
+            OTHERS=$(git log "$RANGE" -E --format="* %s (%h)" --grep="^(chore|docs|style|refactor|perf|test|build|ci)" 2>/dev/null)
+            if [ -n "$OTHERS" ]; then echo "$OTHERS"; else echo "_No other changes_"; fi
+          } > changelog.md
+
+          echo "📋 Generated changelog:"
+          cat changelog.md
+
+          # Store path for downstream jobs — body_path is used instead of body
+          # to avoid YAML multiline truncation issues.
+          echo "changelog_path=changelog.md" >> "$GITHUB_OUTPUT"
+
+      - name: Upload changelog artifact
+        if: steps.check.outputs.should_release == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: changelog
+          path: changelog.md
+          retention-days: 1
 
   # ===========================================================================
   # Job 2 - Create the release and tags
@@ -257,15 +264,19 @@ jobs:
           kustomize build config/default > dist/install.yaml
           echo "✅ dist/install.yaml generated ($(wc -l < dist/install.yaml) lines)"
 
+      - name: Download changelog
+        uses: actions/download-artifact@v4
+        with:
+          name: changelog
+
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
         with:
           tag_name: v${{ needs.analyze.outputs.version }}
           name: Release v${{ needs.analyze.outputs.version }}
-          body: ${{ needs.analyze.outputs.changelog }}
+          body_path: changelog.md
           draft: false
           prerelease: false
-          generate_release_notes: true
           files: dist/install.yaml
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -274,28 +285,28 @@ jobs:
         run: |
           VERSION="v${{ needs.analyze.outputs.version }}"
           DATE=$(date +%Y-%m-%d)
-          
+
           if [ ! -f CHANGELOG.md ]; then
-            echo "# Changelog" > CHANGELOG.md
-            echo "" >> CHANGELOG.md
-            echo "All notable changes to this project will be documented in this file." >> CHANGELOG.md
-            echo "" >> CHANGELOG.md
+            printf '# Changelog\n\nAll notable changes to this project will be documented in this file.\n\n' > CHANGELOG.md
           fi
-          
-          cat > changelog.tmp << EOF
-          ## [$VERSION] - $DATE
-          
-          ${{ needs.analyze.outputs.changelog }}
-          
-          EOF
-          
+
+          # Build new entry from the downloaded changelog.md artifact
+          {
+            echo "## [$VERSION] - $DATE"
+            echo ""
+            cat changelog.md
+            echo ""
+          } > changelog.tmp
+
           if grep -q "^## \[" CHANGELOG.md 2>/dev/null; then
-            awk '/^## \[/{print ""; system("cat changelog.tmp"); print; next} 1' CHANGELOG.md > CHANGELOG.md.new
+            # Insert before the FIRST existing version entry only (not every one)
+            awk 'BEGIN{done=0} /^## \[/ && !done {system("cat changelog.tmp"); printf "\n"; done=1} {print}' \
+              CHANGELOG.md > CHANGELOG.md.new
             mv CHANGELOG.md.new CHANGELOG.md
           else
             cat changelog.tmp >> CHANGELOG.md
           fi
-          
+
           rm -f changelog.tmp
           echo "✅ CHANGELOG.md updated with version $VERSION"
 
