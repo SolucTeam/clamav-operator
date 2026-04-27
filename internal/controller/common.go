@@ -20,6 +20,7 @@ import (
 	"crypto/sha256"
 	"fmt"
 	"math/rand"
+	"strings"
 	"time"
 
 	ctrl "sigs.k8s.io/controller-runtime"
@@ -34,15 +35,22 @@ func requeueWithJitter(base time.Duration) ctrl.Result {
 	return ctrl.Result{RequeueAfter: base + jitter}
 }
 
-// sanitizeLabelValue ensures s is a valid Kubernetes label value (≤ 63 chars).
+// sanitizeLabelValue ensures s is a valid Kubernetes label value AND DNS
+// subdomain name (≤ 63 chars, RFC 1123).
+//
 // If s already fits it is returned unchanged. Otherwise the first 52 characters
-// are kept and a 10-character hex suffix derived from the SHA-256 of the full
-// string is appended (separated by "-"), guaranteeing both uniqueness and the
-// 63-character limit.
+// are kept, any trailing '-' or '.' are stripped (they would produce an invalid
+// label like "foo.-abc123"), and a 10-character hex suffix derived from the
+// SHA-256 of the full string is appended (separated by "-").
+//
+//	e.g. "nodescan-...-ip-10-3-78-130." → "nodescan-...-ip-10-3-78-130-<hash>"
 func sanitizeLabelValue(s string) string {
 	if len(s) <= 63 {
 		return s
 	}
 	sum := sha256.Sum256([]byte(s))
-	return fmt.Sprintf("%s-%x", s[:52], sum[:5]) // 52 + 1 + 10 = 63
+	// Trim trailing separators so the hash suffix is never preceded by '.-'
+	// or '--', which would violate RFC 1123 subdomain rules.
+	prefix := strings.TrimRight(s[:52], "-.")
+	return fmt.Sprintf("%s-%x", prefix, sum[:5])
 }

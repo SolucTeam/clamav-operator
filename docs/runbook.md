@@ -17,6 +17,7 @@
    - [Incremental cache corrupted](#5-incremental-cache-corrupted)
    - [OOMKilled scanner pod](#6-oomkilled-scanner-pod)
    - [NodeScan permanently Failed](#7-nodescan-permanently-failed)
+   - [NodeScan stuck in Pending — Job name invalid (long FQDN nodes)](#11-nodescan-stuck-in-pending--job-name-invalid-long-fqdn-nodes)
    - [Notifications not delivered (ClamAVNotificationFailed)](#8-notifications-not-delivered)
    - [Partial scan results (resultsPartial: true)](#9-partial-scan-results)
    - [EMERGENCY — Webhook certificate expired](#10-emergency--webhook-certificate-expired)
@@ -393,6 +394,48 @@ kubectl -n $NS get nodescans  # should work without TLS error
 # 7. Cleanup
 rm /tmp/tls.key /tmp/tls.crt
 ```
+
+### 11. NodeScan stuck in Pending — Job name invalid (long FQDN nodes)
+
+**Symptoms:** NodeScans for specific nodes stay permanently in `Pending`. No Job is ever created.
+Operator logs show:
+
+```
+Job.batch "nodescan-...-ip-10-3-78-130.-1ca3be324f" is invalid:
+metadata.name: Invalid value: "...-ip-10-3-78-130.-1ca3be324f":
+a lowercase RFC 1123 subdomain must consist of lower case alphanumeric
+characters, '-' or '.', and must start and end with an alphanumeric character
+```
+
+**Root cause:** The node has a long FQDN hostname. The operator truncates the
+NodeScan name to 63 characters before appending a hash suffix. If the truncation
+point lands on a `.` or `-`, the resulting Job name contains a sequence like
+`130.-1ca3be324f` (dot followed by a hyphen-prefixed label), which violates RFC 1123.
+
+Fixed in **v0.5.3** — upgrade resolves this permanently.
+
+**Diagnosis:**
+```bash
+# Identify affected nodes (long hostnames, typically > 45 chars after "nodescan-")
+kubectl get nodes -o custom-columns=NAME:.metadata.name | awk 'length() > 45'
+
+# Confirm the error in operator logs
+kubectl -n  logs -l control-plane=controller-manager --tail=200 | grep "RFC 1123\|Invalid value"
+
+# Check stuck NodeScans
+kubectl -n  get nodescan -o wide | grep Pending
+```
+
+**Workaround (pre-v0.5.3):** Force a fresh reconcile by deleting and recreating the stuck NodeScans
+after upgrading to a fixed version. The NodeScans are recreated automatically by the ClusterScan
+or ScanSchedule controller.
+
+```bash
+# Delete all stuck Pending NodeScans (they will be recreated by the operator)
+kubectl -n  delete nodescan 
+```
+
+**Permanent fix:** Upgrade to v0.5.3+.
 
 ---
 
