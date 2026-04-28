@@ -89,7 +89,9 @@ func TestScanScheduleReconciler_InvalidCron(t *testing.T) {
 		},
 	})
 
-	assert.Error(t, err, "invalid cron expression should return an error")
+	// Invalid cron expressions are surfaced as a status condition and the
+	// reconciler returns nil (no requeue) — waiting for a spec fix via watch.
+	assert.NoError(t, err, "invalid cron expression should not return an error (condition written instead)")
 }
 
 // TestScanScheduleReconciler_Suspended verifies that a suspended schedule does

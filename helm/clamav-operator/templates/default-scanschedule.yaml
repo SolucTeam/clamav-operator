@@ -28,8 +28,6 @@ spec:
   {{- if (ge (int .Values.defaultScanSchedule.failedScansHistoryLimit) 0) }}
   failedScansHistoryLimit: {{ .Values.defaultScanSchedule.failedScansHistoryLimit }}
   {{- end }}
-  {{- /* startingDeadlineSeconds is defined in the CRD type but NOT yet
-       implemented in the controller — setting it has no effect today. */}}
   {{- if .Values.defaultScanSchedule.startingDeadlineSeconds }}
   startingDeadlineSeconds: {{ .Values.defaultScanSchedule.startingDeadlineSeconds }}
   {{- end }}

@@ -661,7 +661,20 @@ func (r *NodeScanReconciler) parseJobResults(ctx context.Context, nodeScan *clam
 		return fmt.Errorf("no pods found for job")
 	}
 
-	pod := podList.Items[0]
+	// A Job with BackoffLimit > 0 can have multiple pods (original + retries).
+	// The API does not guarantee ordering, so Items[0] may be a failed pod.
+	// Find the Succeeded pod explicitly to ensure we parse the right logs.
+	var pod *corev1.Pod
+	for i := range podList.Items {
+		if podList.Items[i].Status.Phase == corev1.PodSucceeded {
+			pod = &podList.Items[i]
+			break
+		}
+	}
+	if pod == nil {
+		// Fallback: no pod in Succeeded phase yet (still completing) — caller will retry.
+		return fmt.Errorf("no succeeded pod found for job (found %d pods)", len(podList.Items))
+	}
 
 	// Get pod logs using clientset
 	req := r.Clientset.CoreV1().Pods(pod.Namespace).GetLogs(pod.Name, &corev1.PodLogOptions{

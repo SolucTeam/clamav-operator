@@ -13,6 +13,7 @@ import (
 	"github.com/robfig/cron/v3"
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/api/errors"
+	apimeta "k8s.io/apimachinery/pkg/api/meta"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/client-go/tools/record"
@@ -76,9 +77,25 @@ func (r *ScanScheduleReconciler) Reconcile(ctx context.Context, req ctrl.Request
 	// Parse cron schedule
 	schedule, err := cron.ParseStandard(scanSchedule.Spec.Schedule)
 	if err != nil {
-		log.Error(err, "invalid cron schedule")
-		return ctrl.Result{}, err
+		log.Error(err, "invalid cron schedule", "schedule", scanSchedule.Spec.Schedule)
+		// Surface the parse error as a condition so users see it via
+		// `kubectl get scanschedule` instead of having to grep operator logs.
+		// We write the condition and stop — no point requeueing until the
+		// spec is fixed (the watch will trigger a new reconcile on update).
+		apimeta.SetStatusCondition(&scanSchedule.Status.Conditions, metav1.Condition{
+			Type:               "Ready",
+			Status:             metav1.ConditionFalse,
+			Reason:             "InvalidSchedule",
+			Message:            fmt.Sprintf("invalid cron expression %q: %v", scanSchedule.Spec.Schedule, err),
+			ObservedGeneration: scanSchedule.Generation,
+		})
+		// Best-effort status update; ignore errors (the spec fix will trigger
+		// a new reconcile which will re-evaluate and update the condition).
+		_ = r.Status().Update(ctx, &scanSchedule)
+		return ctrl.Result{}, nil // do not requeue — wait for spec change
 	}
+	// Clear any previous InvalidSchedule condition now that the expression is valid.
+	apimeta.RemoveStatusCondition(&scanSchedule.Status.Conditions, "Ready")
 
 	now := time.Now()
 	nextRun := schedule.Next(now)
@@ -157,6 +174,24 @@ func (r *ScanScheduleReconciler) Reconcile(ctx context.Context, req ctrl.Request
 			scheduledTime = t
 		}
 		needsRun = !scheduledTime.IsZero()
+
+		// startingDeadlineSeconds: if the missed slot is older than the deadline,
+		// skip it rather than running a very stale scan.
+		// Example: operator was down 3 days, deadline=3600 → skip all missed slots
+		// that are more than 1 hour old; wait for the next on-time slot instead.
+		if needsRun && scanSchedule.Spec.StartingDeadlineSeconds != nil {
+			deadline := time.Duration(*scanSchedule.Spec.StartingDeadlineSeconds) * time.Second
+			if now.Sub(scheduledTime) > deadline {
+				log.Info("skipping missed slot: older than startingDeadlineSeconds",
+					"scheduledTime", scheduledTime,
+					"age", now.Sub(scheduledTime).Round(time.Second),
+					"deadline", deadline)
+				// Advance LastScheduleTime so the controller does not retry this
+				// expired slot on subsequent reconciles.
+				scanSchedule.Status.LastScheduleTime = &metav1.Time{Time: scheduledTime}
+				needsRun = false
+			}
+		}
 	}
 
 	if needsRun {
@@ -164,6 +199,13 @@ func (r *ScanScheduleReconciler) Reconcile(ctx context.Context, req ctrl.Request
 		// cleanupHistory above — not the potentially-stale value from the Get.
 		if scanSchedule.Spec.ConcurrencyPolicy == "Forbid" && len(scanSchedule.Status.Active) > 0 {
 			log.Info("skipping run due to concurrency policy", "policy", "Forbid")
+			// Advance LastScheduleTime to the blocked slot so that when the active
+			// scan finishes and cleanupHistory clears Active, the controller does
+			// NOT immediately create a delayed scan for this same slot.
+			// This matches Kubernetes CronJob Forbid semantics: a blocked run is
+			// skipped, not deferred. Without this, a brief informer-cache miss in
+			// cleanupHistory could allow a duplicate scan to be created.
+			scanSchedule.Status.LastScheduleTime = &metav1.Time{Time: scheduledTime}
 			needsRun = false
 		} else if scanSchedule.Spec.ConcurrencyPolicy == "Replace" && len(scanSchedule.Status.Active) > 0 {
 			// Request deletion of all active ClusterScans.
@@ -353,9 +395,12 @@ func (r *ScanScheduleReconciler) cleanupHistory(ctx context.Context, scanSchedul
 func (r *ScanScheduleReconciler) cleanupNodeScansForClusterScan(ctx context.Context, clusterScanName, namespace string) {
 	log := log.FromContext(ctx)
 	nodeScans := &clamavv1alpha1.NodeScanList{}
+	// The label value is always written via sanitizeLabelValue in clusterscan_controller.go,
+	// so we must query with the same sanitized value to find NodeScans belonging to
+	// ClusterScans whose names exceed 63 characters.
 	if err := r.List(ctx, nodeScans,
 		client.InNamespace(namespace),
-		client.MatchingLabels{"clamav.io/clusterscan": clusterScanName}); err != nil {
+		client.MatchingLabels{"clamav.io/clusterscan": sanitizeLabelValue(clusterScanName)}); err != nil {
 		log.Error(err, "failed to list NodeScans for cleanup", "clusterScan", clusterScanName)
 		return
 	}
