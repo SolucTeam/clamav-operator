@@ -128,10 +128,19 @@ func (r *ClusterScanReconciler) Reconcile(ctx context.Context, req ctrl.Request)
 			failed++
 		}
 
+		// Default empty phase to Pending: a NodeScan that was just created may
+		// not yet have had its status initialized in the informer cache.
+		// Writing Phase="" to the ClusterScan status fails CRD validation with
+		// "Unsupported value: """ and causes the reconciler to loop in error
+		// until the NodeScan status is populated.
+		refPhase := ns.Status.Phase
+		if refPhase == "" {
+			refPhase = clamavv1alpha1.NodeScanPhasePending
+		}
 		nodeRefs = append(nodeRefs, clamavv1alpha1.NodeScanReference{
 			Name:           ns.Name,
 			NodeName:       ns.Spec.NodeName,
-			Phase:          ns.Status.Phase,
+			Phase:          refPhase,
 			FilesInfected:  ns.Status.FilesInfected,
 			FilesScanned:   ns.Status.FilesScanned,
 			StartTime:      ns.Status.StartTime,
@@ -175,8 +184,15 @@ func (r *ClusterScanReconciler) Reconcile(ctx context.Context, req ctrl.Request)
 	clusterScan.Status.TotalFilesInfected = totalInfected
 	clusterScan.Status.NodeScans = nodeRefs
 
-	// Update phase
-	if completed+failed == clusterScan.Status.TotalNodes {
+	// Update phase.
+	// isTerminal guards against re-entering a terminal phase on subsequent
+	// reconciles (e.g. after a controller restart, or when a new node joins the
+	// cluster and TotalNodes temporarily drifts above completed+failed).
+	isTerminal := clusterScan.Status.Phase == clamavv1alpha1.ClusterScanPhaseCompleted ||
+		clusterScan.Status.Phase == clamavv1alpha1.ClusterScanPhasePartiallyComplete ||
+		clusterScan.Status.Phase == clamavv1alpha1.ClusterScanPhaseFailed
+
+	if completed+failed == clusterScan.Status.TotalNodes && clusterScan.Status.TotalNodes > 0 {
 		if failed == 0 {
 			clusterScan.Status.Phase = clamavv1alpha1.ClusterScanPhaseCompleted
 		} else if completed > 0 {
@@ -184,12 +200,15 @@ func (r *ClusterScanReconciler) Reconcile(ctx context.Context, req ctrl.Request)
 		} else {
 			clusterScan.Status.Phase = clamavv1alpha1.ClusterScanPhaseFailed
 		}
-		now := metav1.Now()
-		clusterScan.Status.CompletionTime = &now
-
-		// Record metrics
-		recordClusterScanMetrics(&clusterScan, clusterScan.Status.Phase)
-	} else {
+		// Set CompletionTime and record metrics only the first time we reach a
+		// terminal state — subsequent reconciles must not overwrite the timestamp
+		// or double-count metrics.
+		if clusterScan.Status.CompletionTime == nil {
+			now := metav1.Now()
+			clusterScan.Status.CompletionTime = &now
+			recordClusterScanMetrics(&clusterScan, clusterScan.Status.Phase)
+		}
+	} else if !isTerminal {
 		clusterScan.Status.Phase = clamavv1alpha1.ClusterScanPhaseRunning
 	}
 
