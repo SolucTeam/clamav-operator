@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 
 
+## [v0.5.5] - 2026-04-28
+
+## 🚀 Features
+
+_No new features_
+
+## 🐛 Bug Fixes
+
+* Merge pull request #44 from SolucTeam/fix/controller-stability (ee41f43)
+* fix: stabilize controllers and reduce CPU pressure (98d7fb6)
+
+## 🔧 Other Changes
+
+* chore: update CHANGELOG for v0.5.4 (edc7f44)
+
+
 ## [v0.5.4] - 2026-04-27
 
 ## 🚀 Features
