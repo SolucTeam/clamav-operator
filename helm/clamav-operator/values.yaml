@@ -245,19 +245,21 @@ scanner:
     name: clamav-scanner
     annotations: {}
 
-  # Default resources for scanner jobs
+  # Default resources for scanner jobs.
+  # cpu limit of 1000m (1 core) with concurrent=2 keeps cluster-wide CPU impact
+  # manageable. Raise limits only on dedicated scanning nodes or low-traffic windows.
   # Development:
   #   requests: { cpu: 200m, memory: 256Mi }
-  #   limits: { cpu: 1000m, memory: 512Mi }
+  #   limits: { cpu: 500m, memory: 512Mi }
   # Production:
   #   requests: { cpu: 1000m, memory: 1Gi }
-  #   limits: { cpu: 4000m, memory: 2Gi }
+  #   limits: { cpu: 2000m, memory: 2Gi }
   resources:
     requests:
       cpu: 500m
       memory: 512Mi
     limits:
-      cpu: 2000m
+      cpu: 1000m
       memory: 1Gi
 
   # Image pull secrets for scanner jobs
@@ -544,9 +546,9 @@ defaultScanPolicy:
       - "/var/lib/containerd/*"
 
     # Maximum concurrent file scans per node.
-    # Reduced to 3 (from 5) to limit CPU pressure on busy nodes.
+    # Reduced to 2 (from 3) to limit CPU pressure on busy nodes.
     # Tune upward only on dedicated scanning nodes.
-    maxConcurrent: 3
+    maxConcurrent: 2
 
     # File timeout in milliseconds
     fileTimeout: 300000
