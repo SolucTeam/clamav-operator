@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 
 
+## [v0.5.6] - 2026-04-29
+
+## 🚀 Features
+
+_No new features_
+
+## 🐛 Bug Fixes
+
+* Merge pull request #45 from SolucTeam/fix/crd-spec-to-scanner-wiring (6f49e2b)
+* fix(operator): wire CRD spec fields to scanner Job and use Status Patch (1ef54c4)
+
+## 🔧 Other Changes
+
+* chore: update CHANGELOG for v0.5.5 (dfa7559)
+
+
 ## [v0.5.5] - 2026-04-28
 
 ## 🚀 Features
