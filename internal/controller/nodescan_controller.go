@@ -185,12 +185,16 @@ func (r *NodeScanReconciler) Reconcile(ctx context.Context, req ctrl.Request) (c
 	err := r.Get(ctx, types.NamespacedName{Name: jobName, Namespace: nodeScan.Namespace}, &existingJob)
 
 	if errors.IsNotFound(err) {
-		// Initialize status if needed
+		// Initialize status if needed.
+		// Use Patch instead of Update so we only send the diff and avoid
+		// overwriting concurrent status changes (e.g. from a webhook or
+		// another controller replica) with a stale full-object write.
 		if nodeScan.Status.Phase == "" {
+			statusBase := nodeScan.DeepCopy()
 			nodeScan.Status.Phase = clamavv1alpha1.NodeScanPhasePending
 			now := metav1.Now()
 			nodeScan.Status.StartTime = &now
-			if err := r.Status().Update(ctx, &nodeScan); err != nil {
+			if err := r.Status().Patch(ctx, &nodeScan, client.MergeFrom(statusBase)); err != nil {
 				return ctrl.Result{}, err
 			}
 		}
@@ -409,6 +413,20 @@ func (r *NodeScanReconciler) constructJobForNodeScan(nodeScan *clamavv1alpha1.No
 		paths = []string{"/host/var/lib", "/host/opt"}
 	}
 
+	// Exclude patterns: NodeScan.Spec → ScanPolicy → empty list.
+	// The scanner always applies its own hardcoded system exclusions (/proc, /sys,
+	// etc.) on top; EXCLUDE_PATTERNS carries only the user-defined additions.
+	excludePatterns := nodeScan.Spec.ExcludePatterns
+	if len(excludePatterns) == 0 && scanPolicy != nil {
+		excludePatterns = scanPolicy.Spec.ExcludePatterns
+	}
+	excludePatternsJSON := "[]"
+	if len(excludePatterns) > 0 {
+		if b, err := json.Marshal(excludePatterns); err == nil {
+			excludePatternsJSON = string(b)
+		}
+	}
+
 	// Determine other parameters
 	maxConcurrent := nodeScan.Spec.MaxConcurrent
 	if maxConcurrent == 0 && scanPolicy != nil {
@@ -458,11 +476,61 @@ func (r *NodeScanReconciler) constructJobForNodeScan(nodeScan *clamavv1alpha1.No
 		// Preserve any explicit override from the operator env in remote mode.
 		updateSigs = getEnvOrDefault("SCANNER_UPDATE_SIGNATURES", "false")
 	}
-	incrEnabled := getEnvOrDefault("SCANNER_INCREMENTAL_ENABLED", "false")
+	// Incremental scan settings follow the same CRD-over-global priority pattern
+	// used for maxConcurrent, fileTimeout, etc.:
+	//   1. NodeScan.Spec value  (per-scan override, set by the user in the CR)
+	//   2. Operator env var     (global Helm default, applied when spec is absent)
+	//
+	// Previously these values were read exclusively from env vars, causing any
+	// IncrementalConfig or Strategy set on a NodeScan CR to be silently ignored.
 	scanStrategy := getEnvOrDefault("SCANNER_SCAN_STRATEGY", "full")
+	if nodeScan.Spec.Strategy != "" {
+		scanStrategy = string(nodeScan.Spec.Strategy)
+	}
+
+	incrEnabled := getEnvOrDefault("SCANNER_INCREMENTAL_ENABLED", "false")
+	// Derive INCREMENTAL_ENABLED from Strategy rather than from
+	// IncrementalConfig.Enabled. The v1alpha1 Enabled field is dropped during
+	// the v1alpha1→v1beta1 conversion (it has no v1beta1 counterpart) and is
+	// always zero-valued when the object is read back from storage.  Strategy,
+	// by contrast, is a top-level NodeScanSpec field that survives the round-
+	// trip, making it the authoritative signal for whether incremental mode
+	// should be active for this scan.
+	if nodeScan.Spec.Strategy != "" {
+		if nodeScan.Spec.Strategy == clamavv1alpha1.ScanStrategyFull {
+			incrEnabled = "false"
+		} else {
+			incrEnabled = "true"
+		}
+	}
+
 	fullScanInterv := getEnvOrDefault("SCANNER_FULL_SCAN_INTERVAL", "10")
 	maxFileAgeHours := getEnvOrDefault("SCANNER_MAX_FILE_AGE_HOURS", "24")
 	skipUnchanged := getEnvOrDefault("SCANNER_SKIP_UNCHANGED_FILES", "true")
+	if nodeScan.Spec.IncrementalConfig != nil {
+		cfg := nodeScan.Spec.IncrementalConfig
+		if cfg.BaselineInterval > 0 {
+			fullScanInterv = fmt.Sprintf("%d", cfg.BaselineInterval)
+		}
+		if cfg.MaxAge > 0 {
+			maxFileAgeHours = fmt.Sprintf("%d", cfg.MaxAge)
+		}
+		// SkipUnchangedFiles survives the v1beta1 round-trip; always override.
+		if cfg.SkipUnchangedFiles {
+			skipUnchanged = "true"
+		} else {
+			skipUnchanged = "false"
+		}
+	}
+
+	// ForceFullScan overrides any incremental strategy for this specific run.
+	// Must be wired explicitly: a ClusterScan that sets forceFullScan on the
+	// template copies it to each NodeScan, but the scanner only learns about it
+	// via the FORCE_FULL_SCAN env var.
+	forceFullScan := "false"
+	if nodeScan.Spec.ForceFullScan {
+		forceFullScan = "true"
+	}
 
 	envVars := []corev1.EnvVar{
 		{Name: "NODE_NAME", Value: nodeScan.Spec.NodeName},
@@ -486,6 +554,10 @@ func (r *NodeScanReconciler) constructJobForNodeScan(nodeScan *clamavv1alpha1.No
 		{Name: "FULL_SCAN_INTERVAL", Value: fullScanInterv},
 		{Name: "MAX_FILE_AGE_HOURS", Value: maxFileAgeHours},
 		{Name: "SKIP_UNCHANGED_FILES", Value: skipUnchanged},
+		{Name: "FORCE_FULL_SCAN", Value: forceFullScan},
+		// User-defined exclude patterns (JSON array of regex strings).
+		// The scanner merges these with its built-in system exclusions.
+		{Name: "EXCLUDE_PATTERNS", Value: excludePatternsJSON},
 	}
 
 	// Resources - apply in priority order:
@@ -804,6 +876,22 @@ func (r *NodeScanReconciler) parseJobResults(ctx context.Context, nodeScan *clam
 		return fmt.Errorf("error reading logs: %w", err)
 	}
 
+	const maxStoredInfected = 100
+
+	// Detect partial output: the scanner summary line reported N infected files
+	// but we only parsed M individual INFECTED_FILE entries (M < N), and M is
+	// not simply due to the maxStoredInfected cap. This happens when the scanner
+	// Job is killed while streaming its log output, leaving per-file records
+	// incomplete. Mark the result as partial so that consumers and the retry
+	// mechanism know the InfectedFiles list is not exhaustive.
+	if filesInfected > 0 &&
+		int64(len(infectedFiles)) < filesInfected &&
+		int64(len(infectedFiles)) < maxStoredInfected {
+		log.Info("partial infected file list detected — scanner output may be truncated",
+			"reported_infected", filesInfected, "parsed_entries", len(infectedFiles))
+		nodeScan.Status.ResultsPartial = true
+	}
+
 	// Update status
 	nodeScan.Status.FilesScanned = filesScanned
 	nodeScan.Status.FilesInfected = filesInfected
@@ -814,7 +902,6 @@ func (r *NodeScanReconciler) parseJobResults(ctx context.Context, nodeScan *clam
 	// The full count is preserved in FilesInfected. When truncation occurs, we
 	// set InfectedFilesTruncated=true and emit a Warning event so no consumer
 	// silently treats a partial list as exhaustive.
-	const maxStoredInfected = 100
 	if len(infectedFiles) > maxStoredInfected {
 		nodeScan.Status.InfectedFiles = infectedFiles[:maxStoredInfected]
 		nodeScan.Status.InfectedFilesTruncated = true
@@ -830,9 +917,15 @@ func (r *NodeScanReconciler) parseJobResults(ctx context.Context, nodeScan *clam
 	return nil
 }
 
-// updateStatus updates the NodeScan status with a condition
+// updateStatus updates the NodeScan status with a condition.
+// It uses Status().Patch (MergeFrom) instead of Status().Update so that only
+// the fields changed here are sent to the API server, avoiding overwriting
+// concurrent modifications and reducing 409 Conflict risk.
 func (r *NodeScanReconciler) updateStatus(ctx context.Context, nodeScan *clamavv1alpha1.NodeScan,
 	phase clamavv1alpha1.NodeScanPhase, conditionType string, status metav1.ConditionStatus, message string) error {
+
+	// Capture current state before any modification so Patch can compute the diff.
+	original := nodeScan.DeepCopy()
 
 	nodeScan.Status.Phase = phase
 	// Inform GitOps tools (ArgoCD, Flux…) that this generation has been fully processed.
@@ -863,7 +956,7 @@ func (r *NodeScanReconciler) updateStatus(ctx context.Context, nodeScan *clamavv
 		nodeScan.Status.Conditions = append(nodeScan.Status.Conditions, condition)
 	}
 
-	return r.Status().Update(ctx, nodeScan)
+	return r.Status().Patch(ctx, nodeScan, client.MergeFrom(original))
 }
 
 // updatePolicyStats updates the usage statistics of a ScanPolicy

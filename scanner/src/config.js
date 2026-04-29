@@ -47,14 +47,55 @@ const CONFIG = {
   updateSignatures: process.env.UPDATE_SIGNATURES === 'true',
 
   // ── File exclusion patterns ─────────────────────────────────────────────
-  excludePatterns: [
-    /\/proc\//,
-    /\/sys\//,
-    /\/dev\//,
-    /\/run\//,
-    /\.sock$/,
-    /\.pid$/,
-  ],
+  // System paths are always excluded regardless of user config.
+  // EXCLUDE_PATTERNS carries additional user-defined regex strings (JSON array)
+  // set by the operator from NodeScan.Spec.ExcludePatterns / ScanPolicy.
+  excludePatterns: (() => {
+    const system = [
+      /\/proc\//,
+      /\/sys\//,
+      /\/dev\//,
+      /\/run\//,
+      /\.sock$/,
+      /\.pid$/,
+    ];
+    try {
+      const raw = process.env.EXCLUDE_PATTERNS;
+      if (raw && raw !== '[]') {
+        const parsed = JSON.parse(raw);
+        const custom = [];
+        for (const p of parsed) {
+          try {
+            custom.push(new RegExp(p));
+          } catch (regexErr) {
+            // The Go webhook validates patterns with RE2 (regexp.Compile); JS uses
+            // a different engine, so a pattern valid in Go may be invalid here.
+            // Log to stderr so the operator can surface the issue, then skip the
+            // offending pattern rather than dropping all custom exclusions.
+            process.stderr.write(
+              JSON.stringify({
+                level: 'error',
+                message: 'Invalid exclude pattern in EXCLUDE_PATTERNS — skipping',
+                pattern: p,
+                error: regexErr.message,
+              }) + '\n'
+            );
+          }
+        }
+        return [...system, ...custom];
+      }
+    } catch (parseErr) {
+      // Malformed JSON: fall back to system defaults to avoid scanning nothing.
+      process.stderr.write(
+        JSON.stringify({
+          level: 'error',
+          message: 'EXCLUDE_PATTERNS is not valid JSON — using system defaults only',
+          error: parseErr.message,
+        }) + '\n'
+      );
+    }
+    return system;
+  })(),
 };
 
 // =============================================================================
