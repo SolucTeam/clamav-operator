@@ -74,6 +74,12 @@ func (r *ScanScheduleReconciler) Reconcile(ctx context.Context, req ctrl.Request
 		}
 	}
 
+	// Capture state for all status patches in this reconcile.
+	// Must be after finalizer operations so that statusBase carries the current
+	// ResourceVersion; using Patch (MergeFrom) instead of Update avoids
+	// overwriting concurrent status changes with a stale full-object write.
+	statusBase := scanSchedule.DeepCopy()
+
 	// Parse cron schedule
 	schedule, err := cron.ParseStandard(scanSchedule.Spec.Schedule)
 	if err != nil {
@@ -89,9 +95,9 @@ func (r *ScanScheduleReconciler) Reconcile(ctx context.Context, req ctrl.Request
 			Message:            fmt.Sprintf("invalid cron expression %q: %v", scanSchedule.Spec.Schedule, err),
 			ObservedGeneration: scanSchedule.Generation,
 		})
-		// Best-effort status update; ignore errors (the spec fix will trigger
+		// Best-effort status patch; ignore errors (the spec fix will trigger
 		// a new reconcile which will re-evaluate and update the condition).
-		_ = r.Status().Update(ctx, &scanSchedule)
+		_ = r.Status().Patch(ctx, &scanSchedule, client.MergeFrom(statusBase))
 		return ctrl.Result{}, nil // do not requeue — wait for spec change
 	}
 	// Clear any previous InvalidSchedule condition now that the expression is valid.
@@ -120,7 +126,7 @@ func (r *ScanScheduleReconciler) Reconcile(ctx context.Context, req ctrl.Request
 	// Check if suspended
 	if scanSchedule.Spec.Suspend {
 		log.Info("scan schedule is suspended")
-		if err := r.Status().Update(ctx, &scanSchedule); err != nil {
+		if err := r.Status().Patch(ctx, &scanSchedule, client.MergeFrom(statusBase)); err != nil {
 			return ctrl.Result{}, err
 		}
 		return ctrl.Result{RequeueAfter: time.Until(nextRun)}, nil
@@ -269,7 +275,7 @@ func (r *ScanScheduleReconciler) Reconcile(ctx context.Context, req ctrl.Request
 		recordScanScheduleExecution(scanSchedule.Namespace, scanSchedule.Name, "success")
 	}
 
-	if err := r.Status().Update(ctx, &scanSchedule); err != nil {
+	if err := r.Status().Patch(ctx, &scanSchedule, client.MergeFrom(statusBase)); err != nil {
 		return ctrl.Result{}, err
 	}
 

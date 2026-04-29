@@ -179,6 +179,9 @@ async function saveCache() {
  * the last full scan.
  */
 async function resolveEffectiveStrategy() {
+  // ForceFullScan: per-scan override that bypasses any incremental strategy.
+  // Set by the operator when NodeScan.Spec.ForceFullScan is true.
+  if (process.env.FORCE_FULL_SCAN === 'true') return 'full';
   if (!INCREMENTAL_CONFIG.enabled) return 'full';
   if (INCREMENTAL_CONFIG.strategy !== 'smart') return INCREMENTAL_CONFIG.strategy;
 
