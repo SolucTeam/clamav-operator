@@ -78,15 +78,24 @@ func (r *ClusterScanReconciler) Reconcile(ctx context.Context, req ctrl.Request)
 		}
 	}
 
-	// Initialize status
+	// Initialize status.
+	// Use Patch (MergeFrom) so only the diff is sent, avoiding overwrites of
+	// concurrent status changes and reducing 409 Conflict risk.
 	if clusterScan.Status.Phase == "" {
+		initBase := clusterScan.DeepCopy()
 		clusterScan.Status.Phase = clamavv1alpha1.ClusterScanPhasePending
 		now := metav1.Now()
 		clusterScan.Status.StartTime = &now
-		if err := r.Status().Update(ctx, &clusterScan); err != nil {
+		if err := r.Status().Patch(ctx, &clusterScan, client.MergeFrom(initBase)); err != nil {
 			return ctrl.Result{}, err
 		}
 	}
+
+	// Capture state for the main status patch at the end of reconcile.
+	// After the initialization branch (and any previous Patch operations),
+	// clusterScan reflects the current server-side state including its latest
+	// ResourceVersion, so this base is always fresh.
+	statusBase := clusterScan.DeepCopy()
 
 	// Get nodes to scan
 	nodes, err := r.getNodesForScan(ctx, &clusterScan)
@@ -192,7 +201,7 @@ func (r *ClusterScanReconciler) Reconcile(ctx context.Context, req ctrl.Request)
 		clusterScan.Status.Phase == clamavv1alpha1.ClusterScanPhasePartiallyComplete ||
 		clusterScan.Status.Phase == clamavv1alpha1.ClusterScanPhaseFailed
 
-	if completed+failed == clusterScan.Status.TotalNodes && clusterScan.Status.TotalNodes > 0 {
+	if completed+failed == clusterScan.Status.TotalNodes {
 		if failed == 0 {
 			clusterScan.Status.Phase = clamavv1alpha1.ClusterScanPhaseCompleted
 		} else if completed > 0 {
@@ -214,7 +223,7 @@ func (r *ClusterScanReconciler) Reconcile(ctx context.Context, req ctrl.Request)
 
 	// Inform GitOps tools (ArgoCD, Flux…) that this generation has been fully processed.
 	clusterScan.Status.ObservedGeneration = clusterScan.Generation
-	if err := r.Status().Update(ctx, &clusterScan); err != nil {
+	if err := r.Status().Patch(ctx, &clusterScan, client.MergeFrom(statusBase)); err != nil {
 		return ctrl.Result{}, err
 	}
 
@@ -265,26 +274,40 @@ func (r *ClusterScanReconciler) createNodeScanForNode(ctx context.Context, clust
 
 	// Apply template if provided
 	if clusterScan.Spec.NodeScanTemplate != nil {
+		t := clusterScan.Spec.NodeScanTemplate
+
 		// Copy fields from the NodeScan template
-		if clusterScan.Spec.NodeScanTemplate.Paths != nil {
-			nodeScan.Spec.Paths = clusterScan.Spec.NodeScanTemplate.Paths
+		if t.Paths != nil {
+			nodeScan.Spec.Paths = t.Paths
 		}
-		if clusterScan.Spec.NodeScanTemplate.MaxConcurrent != 0 {
-			nodeScan.Spec.MaxConcurrent = clusterScan.Spec.NodeScanTemplate.MaxConcurrent
+		if t.ExcludePatterns != nil {
+			nodeScan.Spec.ExcludePatterns = t.ExcludePatterns
 		}
-		if clusterScan.Spec.NodeScanTemplate.Resources != nil {
-			nodeScan.Spec.Resources = clusterScan.Spec.NodeScanTemplate.Resources
+		if t.MaxConcurrent != 0 {
+			nodeScan.Spec.MaxConcurrent = t.MaxConcurrent
+		}
+		if t.FileTimeout != 0 {
+			nodeScan.Spec.FileTimeout = t.FileTimeout
+		}
+		if t.MaxFileSize != 0 {
+			nodeScan.Spec.MaxFileSize = t.MaxFileSize
+		}
+		if t.Resources != nil {
+			nodeScan.Spec.Resources = t.Resources
+		}
+		if t.TTLSecondsAfterFinished != nil {
+			nodeScan.Spec.TTLSecondsAfterFinished = t.TTLSecondsAfterFinished
 		}
 
 		// Copy incremental scan configuration from the template
-		if clusterScan.Spec.NodeScanTemplate.Strategy != "" {
-			nodeScan.Spec.Strategy = clusterScan.Spec.NodeScanTemplate.Strategy
+		if t.Strategy != "" {
+			nodeScan.Spec.Strategy = t.Strategy
 		}
-		if clusterScan.Spec.NodeScanTemplate.IncrementalConfig != nil {
-			nodeScan.Spec.IncrementalConfig = clusterScan.Spec.NodeScanTemplate.IncrementalConfig
+		if t.IncrementalConfig != nil {
+			nodeScan.Spec.IncrementalConfig = t.IncrementalConfig
 		}
-		if clusterScan.Spec.NodeScanTemplate.ForceFullScan {
-			nodeScan.Spec.ForceFullScan = clusterScan.Spec.NodeScanTemplate.ForceFullScan
+		if t.ForceFullScan {
+			nodeScan.Spec.ForceFullScan = t.ForceFullScan
 		}
 	}
 
