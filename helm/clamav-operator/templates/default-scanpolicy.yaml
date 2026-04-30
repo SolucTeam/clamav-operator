@@ -1,3 +1,24 @@
+{{- /*
+default-scanpolicy.yaml
+
+Creates the default ScanPolicy after the operator is confirmed Ready.
+
+WHY THIS IS A HOOK (not a regular template)
+  The ValidatingWebhookConfiguration routes ScanPolicy admission through the
+  operator with failurePolicy: Fail. If this resource were a regular template
+  it would be applied concurrently with the operator Deployment — before the
+  admission webhook is available — and the creation would fail.
+
+  By making this a post-install / post-upgrade hook at weight 10, Helm ensures
+  the operator-wait Job (weight 5) has already exited 0 before this resource
+  is applied. At that point the webhook is guaranteed to be reachable.
+
+UPGRADE BEHAVIOUR
+  No "before-hook-creation" delete policy is set intentionally. On helm upgrade
+  Helm applies (patches) the existing ScanPolicy in place rather than deleting
+  and recreating it. This preserves any live edits the user has made to the
+  resource between upgrades.
+*/}}
 {{- if .Values.defaultScanPolicy.enabled }}
 apiVersion: clamav.io/v1alpha1
 kind: ScanPolicy
@@ -7,6 +28,9 @@ metadata:
   labels:
     {{- include "clamav-operator.labels" . | nindent 4 }}
     app.kubernetes.io/component: scan-policy
+  annotations:
+    "helm.sh/hook": post-install,post-upgrade
+    "helm.sh/hook-weight": "10"
 spec:
   {{- toYaml .Values.defaultScanPolicy.spec | nindent 2 }}
 {{- end }}
