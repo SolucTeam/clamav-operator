@@ -1,3 +1,22 @@
+{{- /*
+default-scanschedule.yaml
+
+Creates the default ScanSchedule after the operator is confirmed Ready and
+after the default ScanPolicy (weight 10) has been applied.
+
+WHY THIS IS A HOOK (not a regular template)
+  Same reason as default-scanpolicy.yaml: the ValidatingWebhookConfiguration
+  routes ScanSchedule admission through the operator with failurePolicy: Fail.
+  Applying this resource before the operator pod is Ready causes a webhook
+  connection error and the resource creation fails.
+
+  Hook weight 15 > ScanPolicy weight 10, so the ScanPolicy always exists
+  before the ScanSchedule is created (ScanSchedule references scanPolicy).
+
+UPGRADE BEHAVIOUR
+  No "before-hook-creation" delete policy: Helm patches the existing resource
+  in place on every helm upgrade, preserving live edits.
+*/}}
 {{- if .Values.defaultScanSchedule.enabled }}
 apiVersion: clamav.io/v1alpha1
 kind: ScanSchedule
@@ -7,6 +26,9 @@ metadata:
   labels:
     {{- include "clamav-operator.labels" . | nindent 4 }}
     app.kubernetes.io/component: scan-schedule
+  annotations:
+    "helm.sh/hook": post-install,post-upgrade
+    "helm.sh/hook-weight": "15"
 spec:
   {{- if .Values.defaultScanSchedule.schedule }}
   schedule: {{ .Values.defaultScanSchedule.schedule | quote }}

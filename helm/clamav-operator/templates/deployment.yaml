@@ -147,7 +147,11 @@ spec:
       tolerations:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      terminationGracePeriodSeconds: 10
+      # 30s: gives in-flight reconcile loops time to finish (e.g. NodeScan
+      # creation for a ClusterScan) and allows the leader-election lease to
+      # expire (leaseDuration: 15s) so the standby replica can take over
+      # cleanly without waiting for the full lease timeout.
+      terminationGracePeriodSeconds: 30
       {{- if or .Values.volumes .Values.webhook.enabled }}
       volumes:
       {{- with .Values.volumes }}

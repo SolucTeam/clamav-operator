@@ -1,0 +1,143 @@
+{{- /*
+operator-wait-hook.yaml
+
+Waits for the operator Deployment to be fully Ready before any default
+CustomResources (ScanPolicy, ScanSchedule) are created.
+
+WHY THIS EXISTS
+  The ValidatingWebhookConfiguration uses failurePolicy: Fail on all three
+  admission webhooks (ClusterScan, NodeScan, ScanSchedule). This means any
+  attempt to create one of those resources while the operator pod is not yet
+  Ready will fail with a webhook connection error.
+
+  default-scanpolicy.yaml and default-scanschedule.yaml are post-install /
+  post-upgrade hooks at weights 10 and 15 respectively. This Job runs at
+  weight 5 — Helm completes it (exit 0) before advancing to weight 10.
+
+HOOK WEIGHT ORDER
+  -5  crd-conversion-hook RBAC
+   0  crd-conversion-hook Job         (patches CRD conversion strategy)
+   4  operator-wait RBAC              (this file)
+   5  operator-wait Job               (this file — waits for operator Ready)
+  10  default-scanpolicy hook
+  15  default-scanschedule hook
+
+TOGGLE
+  Controlled by the same webhook.enabled flag as the conversion hook.  When
+  the webhook is disabled there is no admission webhook in the cluster and the
+  race condition cannot occur, so the wait Job is unnecessary.
+*/}}
+{{- if .Values.webhook.enabled }}
+---
+# ServiceAccount used exclusively by the operator-wait Job.
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: {{ include "clamav-operator.fullname" . }}-operator-wait
+  namespace: {{ .Release.Namespace }}
+  labels:
+    {{- include "clamav-operator.labels" . | nindent 4 }}
+    app.kubernetes.io/component: operator-wait
+  annotations:
+    "helm.sh/hook": post-install,post-upgrade
+    "helm.sh/hook-weight": "4"
+    "helm.sh/hook-delete-policy": before-hook-creation,hook-succeeded
+---
+# Role: minimal permissions to watch the operator Deployment in this namespace.
+# kubectl rollout status calls GET + WATCH on apps/deployments.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: {{ include "clamav-operator.fullname" . }}-operator-wait
+  namespace: {{ .Release.Namespace }}
+  labels:
+    {{- include "clamav-operator.labels" . | nindent 4 }}
+    app.kubernetes.io/component: operator-wait
+  annotations:
+    "helm.sh/hook": post-install,post-upgrade
+    "helm.sh/hook-weight": "4"
+    "helm.sh/hook-delete-policy": before-hook-creation,hook-succeeded
+rules:
+  - apiGroups: ["apps"]
+    resources: ["deployments"]
+    verbs: ["get", "watch", "list"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: {{ include "clamav-operator.fullname" . }}-operator-wait
+  namespace: {{ .Release.Namespace }}
+  labels:
+    {{- include "clamav-operator.labels" . | nindent 4 }}
+    app.kubernetes.io/component: operator-wait
+  annotations:
+    "helm.sh/hook": post-install,post-upgrade
+    "helm.sh/hook-weight": "4"
+    "helm.sh/hook-delete-policy": before-hook-creation,hook-succeeded
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: {{ include "clamav-operator.fullname" . }}-operator-wait
+subjects:
+  - kind: ServiceAccount
+    name: {{ include "clamav-operator.fullname" . }}-operator-wait
+    namespace: {{ .Release.Namespace }}
+---
+# Job: block Helm from advancing to hook weights 10 / 15 until the operator
+# controller-manager Deployment has at least one Ready replica.
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: {{ include "clamav-operator.fullname" . }}-operator-wait
+  namespace: {{ .Release.Namespace }}
+  labels:
+    {{- include "clamav-operator.labels" . | nindent 4 }}
+    app.kubernetes.io/component: operator-wait
+  annotations:
+    "helm.sh/hook": post-install,post-upgrade
+    "helm.sh/hook-weight": "5"
+    "helm.sh/hook-delete-policy": before-hook-creation,hook-succeeded
+spec:
+  backoffLimit: 0
+  ttlSecondsAfterFinished: 120
+  template:
+    metadata:
+      labels:
+        {{- include "clamav-operator.selectorLabels" . | nindent 8 }}
+        app.kubernetes.io/component: operator-wait
+    spec:
+      restartPolicy: Never
+      serviceAccountName: {{ include "clamav-operator.fullname" . }}-operator-wait
+      {{- with .Values.crdPatcher.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 65532
+        seccompProfile:
+          type: RuntimeDefault
+      containers:
+        - name: wait
+          image: {{ .Values.crdPatcher.image.repository }}:{{ .Values.crdPatcher.image.tag }}
+          imagePullPolicy: {{ .Values.crdPatcher.image.pullPolicy }}
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop: ["ALL"]
+            readOnlyRootFilesystem: true
+          command:
+            - /bin/sh
+            - -c
+            - |
+              set -eu
+              DEPLOYMENT="{{ include "clamav-operator.fullname" . }}-controller-manager"
+              NAMESPACE="{{ .Release.Namespace }}"
+
+              echo "Waiting for Deployment ${DEPLOYMENT} to be Ready..."
+              kubectl rollout status deployment/"${DEPLOYMENT}" \
+                --namespace="${NAMESPACE}" \
+                --timeout=180s
+
+              echo "Operator is Ready — proceeding to create default CustomResources."
+{{- end }}

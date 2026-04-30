@@ -1,0 +1,43 @@
+{{- /*
+pdb.yaml — PodDisruptionBudget for the operator controller-manager.
+
+WHY THIS EXISTS
+  The operator runs the ValidatingWebhookConfiguration with failurePolicy: Fail.
+  If all operator pods are evicted simultaneously (e.g. during a node drain or
+  cluster upgrade), every CREATE/UPDATE on ClamAV CRDs will be rejected by the
+  API server until at least one operator pod is Ready.
+
+  With replicaCount ≥ 2, a PDB with minAvailable: 1 guarantees that voluntary
+  disruptions (drains, evictions) cannot bring the operator below 1 running pod.
+  This keeps the admission webhook available throughout rolling updates and
+  maintenance windows.
+
+  Note: PDBs only protect against *voluntary* disruptions. Involuntary failures
+  (node crash, OOMKill) are not covered — that is why replicaCount ≥ 2 is also
+  required. The PDB and the replica count are complementary, not alternatives.
+
+TOGGLE
+  Set operator.podDisruptionBudget.enabled=false to skip (e.g. when
+  replicaCount=1 in a dev environment — a PDB with minAvailable:1 and a single
+  replica would block all voluntary evictions).
+*/}}
+{{- if .Values.operator.podDisruptionBudget.enabled }}
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: {{ include "clamav-operator.fullname" . }}-controller-manager
+  namespace: {{ .Release.Namespace }}
+  labels:
+    {{- include "clamav-operator.labels" . | nindent 4 }}
+    app.kubernetes.io/component: controller-manager
+spec:
+  {{- if .Values.operator.podDisruptionBudget.minAvailable }}
+  minAvailable: {{ .Values.operator.podDisruptionBudget.minAvailable }}
+  {{- else if .Values.operator.podDisruptionBudget.maxUnavailable }}
+  maxUnavailable: {{ .Values.operator.podDisruptionBudget.maxUnavailable }}
+  {{- end }}
+  selector:
+    matchLabels:
+      {{- include "clamav-operator.selectorLabels" . | nindent 6 }}
+      control-plane: controller-manager
+{{- end }}

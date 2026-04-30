@@ -598,7 +598,20 @@ func (r *NodeScanReconciler) constructJobForNodeScan(nodeScan *clamavv1alpha1.No
 			},
 		},
 		Spec: batchv1.JobSpec{
-			BackoffLimit:            ptr.To(int32(3)),
+			// BackoffLimit=1: allow one retry for transient failures (e.g. image pull,
+			// node not-ready) without amplifying resource-exhaustion failures.
+			//
+			// The previous value of 3 caused an OOM spiral in standalone mode: when the
+			// scanner pod was OOMKilled (exit 137), the Job controller would requeue it
+			// up to 3 more times. Each attempt hit the same memory ceiling, resulting in
+			// 4 consecutive OOMKilled pods on the same node before the Job was marked
+			// Failed — significantly worsening the memory pressure it was already under.
+			//
+			// With BackoffLimit=1 an OOMKill causes exactly one retry. If that also
+			// fails, the Job is Failed immediately and the NodeScan controller surfaces
+			// the error, prompting the operator to fix the resource limits rather than
+			// looping in silence.
+			BackoffLimit:            ptr.To(int32(1)),
 			TTLSecondsAfterFinished: ttl,
 			// Hard wall-clock deadline: prevents zombie pods from blocking a node indefinitely.
 			ActiveDeadlineSeconds: ptr.To(int64(JobActiveDeadlineSeconds)),
