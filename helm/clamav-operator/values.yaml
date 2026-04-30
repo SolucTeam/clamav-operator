@@ -13,9 +13,11 @@
 # OPERATOR CONFIGURATION
 # =============================================================================
 operator:
-  # Number of operator replicas
-  # Development: 1, Production: 2 (for HA)
-  replicaCount: 1
+  # Number of operator replicas.
+  # 2 is the production minimum: keeps the admission webhook (failurePolicy: Fail)
+  # available during rolling updates, node drains, and pod restarts.
+  # Use 1 only in development / single-node clusters.
+  replicaCount: 2
 
   image:
     # Image repository - update for your private registry
@@ -51,6 +53,8 @@ operator:
     runAsUser: 65532
     runAsGroup: 65532
     fsGroup: 65532
+    seccompProfile:
+      type: RuntimeDefault
 
   securityContext:
     allowPrivilegeEscalation: false
@@ -96,20 +100,32 @@ operator:
 
   tolerations: []
 
-  # Pod anti-affinity for HA (recommended for production)
-  # Production example:
-  #   podAntiAffinity:
-  #     preferredDuringSchedulingIgnoredDuringExecution:
-  #     - weight: 100
-  #       podAffinityTerm:
-  #         labelSelector:
-  #           matchExpressions:
-  #           - key: app.kubernetes.io/name
-  #             operator: In
-  #             values:
-  #             - clamav-operator
-  #         topologyKey: kubernetes.io/hostname
-  affinity: {}
+  # Pod anti-affinity — spreads the 2 operator replicas across different nodes
+  # so a single node failure or drain never takes both pods down simultaneously.
+  #
+  # preferredDuring (soft) is used instead of requiredDuring (hard) so that
+  # scheduling still succeeds on single-node clusters or when only one node is
+  # available (e.g. after a node failure). Change to requiredDuring only if your
+  # cluster always has ≥ 2 schedulable nodes.
+  affinity:
+    podAntiAffinity:
+      preferredDuringSchedulingIgnoredDuringExecution:
+        - weight: 100
+          podAffinityTerm:
+            labelSelector:
+              matchLabels:
+                control-plane: controller-manager
+            topologyKey: kubernetes.io/hostname
+
+  # PodDisruptionBudget — prevents voluntary disruptions (node drains, evictions)
+  # from taking the operator below 1 running replica.
+  # Requires replicaCount ≥ 2; disable when replicaCount=1.
+  podDisruptionBudget:
+    enabled: true
+    # minAvailable: 1 ensures at least 1 replica stays up during disruptions.
+    minAvailable: 1
+    # Alternatively use maxUnavailable (comment out minAvailable and set this):
+    # maxUnavailable: 1
 
   # Priority class name for production: system-cluster-critical
   priorityClassName: ""
