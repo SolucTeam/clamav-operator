@@ -23,7 +23,11 @@ const CONFIG = {
     .split(',')
     .map((p) => p.trim())
     .filter(Boolean),
-  maxConcurrent: Math.max(1, parseInt(process.env.MAX_CONCURRENT || '5', 10)),
+  // Default 1: in standalone mode each concurrent slot spawns a separate
+  // /usr/bin/clamscan subprocess that loads the full ClamAV DB (~400 MB).
+  // The operator always sets MAX_CONCURRENT explicitly; this fallback only
+  // applies when running the scanner outside the operator (tests, debug).
+  maxConcurrent: Math.max(1, parseInt(process.env.MAX_CONCURRENT || '1', 10)),
   fileTimeout: parseInt(process.env.FILE_TIMEOUT || '300000', 10),
   maxFileSize: parseInt(process.env.MAX_FILE_SIZE || '104857600', 10),
 

@@ -31,7 +31,7 @@ import (
 // (~300-400 MB) into its own address space before scanning the file. With
 // MaxConcurrent=N you therefore have N simultaneous database copies in memory:
 //
-//   memory_needed ≈ N × 400 MB + 300 MB (Node.js runtime + OS buffers)
+//	memory_needed ≈ N × 400 MB + 300 MB (Node.js runtime + OS buffers)
 //
 // The previous defaults (512 Mi limit, 3 concurrent) guaranteed an OOMKill on
 // virtually every standalone scan. The corrected defaults below assume

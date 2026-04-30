@@ -10,7 +10,7 @@ describe('config', () => {
     assert.equal(CONFIG.scanMode, 'standalone');
     assert.equal(CONFIG.clamscanPath, '/usr/bin/clamscan');
     assert.equal(CONFIG.clamavDbPath, '/var/lib/clamav');
-    assert.equal(CONFIG.maxConcurrent, 5);
+    assert.equal(CONFIG.maxConcurrent, 1); // default 1: standalone spawns 1 clamscan subprocess per slot
     assert.equal(CONFIG.maxFileSize, 104857600);
     assert.ok(Array.isArray(CONFIG.pathsToScan));
     assert.ok(CONFIG.pathsToScan.length > 0);

@@ -154,7 +154,8 @@ func (r *NodeScanReconciler) Reconcile(ctx context.Context, req ctrl.Request) (c
 		if errors.IsNotFound(err) {
 			r.Recorder.Event(&nodeScan, corev1.EventTypeWarning, "NodeNotFound",
 				fmt.Sprintf("Node %s not found", nodeScan.Spec.NodeName))
-			return ctrl.Result{}, r.updateStatus(ctx, &nodeScan, clamavv1alpha1.NodeScanPhaseFailed,
+			nodeNotFoundBase := nodeScan.DeepCopy()
+			return ctrl.Result{}, r.updateStatus(ctx, &nodeScan, nodeNotFoundBase, clamavv1alpha1.NodeScanPhaseFailed,
 				"NodeNotFound", metav1.ConditionFalse, "Node does not exist")
 		}
 		return ctrl.Result{}, err
@@ -171,7 +172,8 @@ func (r *NodeScanReconciler) Reconcile(ctx context.Context, req ctrl.Request) (c
 			if errors.IsNotFound(err) {
 				r.Recorder.Event(&nodeScan, corev1.EventTypeWarning, "ScanPolicyNotFound",
 					fmt.Sprintf("ScanPolicy %s not found", nodeScan.Spec.ScanPolicy))
-				return ctrl.Result{}, r.updateStatus(ctx, &nodeScan, clamavv1alpha1.NodeScanPhaseFailed,
+				scanPolicyNotFoundBase := nodeScan.DeepCopy()
+				return ctrl.Result{}, r.updateStatus(ctx, &nodeScan, scanPolicyNotFoundBase, clamavv1alpha1.NodeScanPhaseFailed,
 					"ScanPolicyNotFound", metav1.ConditionFalse, "ScanPolicy does not exist")
 			}
 			return ctrl.Result{}, err
@@ -213,6 +215,9 @@ func (r *NodeScanReconciler) Reconcile(ctx context.Context, req ctrl.Request) (c
 			return ctrl.Result{}, err
 		}
 
+		// Capture base BEFORE mutating status so the Patch diff includes Phase.
+		runningBase := nodeScan.DeepCopy()
+
 		// Update status
 		nodeScan.Status.Phase = clamavv1alpha1.NodeScanPhaseRunning
 		nodeScan.Status.JobRef = &corev1.ObjectReference{
@@ -226,7 +231,7 @@ func (r *NodeScanReconciler) Reconcile(ctx context.Context, req ctrl.Request) (c
 		r.Recorder.Event(&nodeScan, corev1.EventTypeNormal, "JobCreated",
 			fmt.Sprintf("Scan job created for node %s", nodeScan.Spec.NodeName))
 
-		if err := r.updateStatus(ctx, &nodeScan, clamavv1alpha1.NodeScanPhaseRunning,
+		if err := r.updateStatus(ctx, &nodeScan, runningBase, clamavv1alpha1.NodeScanPhaseRunning,
 			"JobCreated", metav1.ConditionTrue, "Scan job has been created"); err != nil {
 			return ctrl.Result{}, err
 		}
@@ -243,6 +248,8 @@ func (r *NodeScanReconciler) Reconcile(ctx context.Context, req ctrl.Request) (c
 	// Job exists, check its status
 	if existingJob.Status.Succeeded > 0 {
 		if nodeScan.Status.Phase != clamavv1alpha1.NodeScanPhaseCompleted {
+			// Capture base BEFORE mutating status so the Patch diff includes Phase.
+			completedBase := nodeScan.DeepCopy()
 			now := metav1.Now()
 			nodeScan.Status.Phase = clamavv1alpha1.NodeScanPhaseCompleted
 			nodeScan.Status.CompletionTime = &now
@@ -316,7 +323,7 @@ func (r *NodeScanReconciler) Reconcile(ctx context.Context, req ctrl.Request) (c
 				fmt.Sprintf("Scan completed: %d files scanned, %d infected",
 					nodeScan.Status.FilesScanned, nodeScan.Status.FilesInfected))
 
-			if err := r.updateStatus(ctx, &nodeScan, clamavv1alpha1.NodeScanPhaseCompleted,
+			if err := r.updateStatus(ctx, &nodeScan, completedBase, clamavv1alpha1.NodeScanPhaseCompleted,
 				"ScanCompleted", metav1.ConditionTrue, "Scan completed successfully"); err != nil {
 				return ctrl.Result{}, err
 			}
@@ -365,6 +372,8 @@ func (r *NodeScanReconciler) Reconcile(ctx context.Context, req ctrl.Request) (c
 
 	} else if existingJob.Status.Failed > 0 {
 		if nodeScan.Status.Phase != clamavv1alpha1.NodeScanPhaseFailed {
+			// Capture base BEFORE mutating status so the Patch diff includes Phase.
+			failedBase := nodeScan.DeepCopy()
 			now := metav1.Now()
 			nodeScan.Status.Phase = clamavv1alpha1.NodeScanPhaseFailed
 			nodeScan.Status.CompletionTime = &now
@@ -381,7 +390,7 @@ func (r *NodeScanReconciler) Reconcile(ctx context.Context, req ctrl.Request) (c
 			r.Recorder.Event(&nodeScan, corev1.EventTypeWarning, "ScanFailed",
 				fmt.Sprintf("Scan job failed: %s (exit %d)", reason, exitCode))
 
-			if err := r.updateStatus(ctx, &nodeScan, clamavv1alpha1.NodeScanPhaseFailed,
+			if err := r.updateStatus(ctx, &nodeScan, failedBase, clamavv1alpha1.NodeScanPhaseFailed,
 				"ScanFailed", metav1.ConditionFalse,
 				fmt.Sprintf("Scan job failed: %s (exit %d)", reason, exitCode)); err != nil {
 				return ctrl.Result{}, err
@@ -934,11 +943,15 @@ func (r *NodeScanReconciler) parseJobResults(ctx context.Context, nodeScan *clam
 // It uses Status().Patch (MergeFrom) instead of Status().Update so that only
 // the fields changed here are sent to the API server, avoiding overwriting
 // concurrent modifications and reducing 409 Conflict risk.
+//
+// base must be a DeepCopy of nodeScan captured BEFORE any status mutations so
+// that MergeFrom can compute the correct diff.  If the caller mutates
+// nodeScan.Status.Phase before calling this function and passes the snapshot
+// taken afterwards, Phase will not appear in the patch and the API server will
+// keep the old value (the bug this parameter fixes).
 func (r *NodeScanReconciler) updateStatus(ctx context.Context, nodeScan *clamavv1alpha1.NodeScan,
+	base *clamavv1alpha1.NodeScan,
 	phase clamavv1alpha1.NodeScanPhase, conditionType string, status metav1.ConditionStatus, message string) error {
-
-	// Capture current state before any modification so Patch can compute the diff.
-	original := nodeScan.DeepCopy()
 
 	nodeScan.Status.Phase = phase
 	// Inform GitOps tools (ArgoCD, Flux…) that this generation has been fully processed.
@@ -969,7 +982,7 @@ func (r *NodeScanReconciler) updateStatus(ctx context.Context, nodeScan *clamavv
 		nodeScan.Status.Conditions = append(nodeScan.Status.Conditions, condition)
 	}
 
-	return r.Status().Patch(ctx, nodeScan, client.MergeFrom(original))
+	return r.Status().Patch(ctx, nodeScan, client.MergeFrom(base))
 }
 
 // updatePolicyStats updates the usage statistics of a ScanPolicy
