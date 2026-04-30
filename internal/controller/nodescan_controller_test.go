@@ -307,6 +307,10 @@ func TestConstructJobForNodeScan(t *testing.T) {
 }
 
 func TestGetResourcesForPriority(t *testing.T) {
+	// Expected values must stay in sync with defaults.go.
+	// Memory sizing rationale: standalone mode spawns one /usr/bin/clamscan
+	// subprocess per concurrent slot; each subprocess loads the full ClamAV DB
+	// (~400 Mi). Limits are set so that MaxConcurrent=1 (default) never OOMKills.
 	tests := []struct {
 		priority       string
 		expectedCPUReq string
@@ -317,30 +321,30 @@ func TestGetResourcesForPriority(t *testing.T) {
 		{
 			priority:       "high",
 			expectedCPUReq: "500m",
-			expectedMemReq: "512Mi",
+			expectedMemReq: "1500Mi",
 			expectedCPULim: "2",
-			expectedMemLim: "1Gi",
+			expectedMemLim: "3Gi",
 		},
 		{
 			priority:       "medium",
-			expectedCPUReq: "100m",
-			expectedMemReq: "256Mi",
+			expectedCPUReq: "250m",
+			expectedMemReq: "1Gi",
 			expectedCPULim: "1",
-			expectedMemLim: "512Mi",
+			expectedMemLim: "2Gi",
 		},
 		{
 			priority:       "low",
-			expectedCPUReq: "50m",
-			expectedMemReq: "128Mi",
+			expectedCPUReq: "100m",
+			expectedMemReq: "768Mi",
 			expectedCPULim: "500m",
-			expectedMemLim: "256Mi",
+			expectedMemLim: "2Gi",
 		},
 		{
 			priority:       "",
-			expectedCPUReq: "100m",
-			expectedMemReq: "256Mi",
+			expectedCPUReq: "250m",
+			expectedMemReq: "1Gi",
 			expectedCPULim: "1",
-			expectedMemLim: "512Mi",
+			expectedMemLim: "2Gi",
 		},
 	}
 
@@ -348,8 +352,17 @@ func TestGetResourcesForPriority(t *testing.T) {
 		t.Run(tt.priority, func(t *testing.T) {
 			resources := GetResourcesForPriority(tt.priority)
 
-			assert.NotNil(t, resources.Requests)
-			assert.NotNil(t, resources.Limits)
+			require.NotNil(t, resources.Requests)
+			require.NotNil(t, resources.Limits)
+
+			assert.Equal(t, tt.expectedCPUReq, resources.Requests.Cpu().String(),
+				"CPU request mismatch for priority %q", tt.priority)
+			assert.Equal(t, tt.expectedMemReq, resources.Requests.Memory().String(),
+				"memory request mismatch for priority %q", tt.priority)
+			assert.Equal(t, tt.expectedCPULim, resources.Limits.Cpu().String(),
+				"CPU limit mismatch for priority %q", tt.priority)
+			assert.Equal(t, tt.expectedMemLim, resources.Limits.Memory().String(),
+				"memory limit mismatch for priority %q", tt.priority)
 		})
 	}
 }
