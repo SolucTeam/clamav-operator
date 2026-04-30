@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 
 
+## [v0.5.7] - 2026-04-30
+
+## 🚀 Features
+
+_No new features_
+
+## 🐛 Bug Fixes
+
+* Merge pull request #46 from SolucTeam/fix/standalone-oom-ha-hooks (86272a4)
+* fix: standalone OOM, HA operator, chicken-and-egg CRD hooks (c5112aa)
+* fix: standalone OOM, HA operator, chicken-and-egg CRD hooks (35f3d77)
+
+## 🔧 Other Changes
+
+* chore: update CHANGELOG for v0.5.6 (d900426)
+
+
 ## [v0.5.6] - 2026-04-29
 
 ## 🚀 Features
