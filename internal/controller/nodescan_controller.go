@@ -575,6 +575,8 @@ func (r *NodeScanReconciler) constructJobForNodeScan(nodeScan *clamavv1alpha1.No
 		{Name: "MAX_FILE_AGE_HOURS", Value: maxFileAgeHours},
 		{Name: "SKIP_UNCHANGED_FILES", Value: skipUnchanged},
 		{Name: "FORCE_FULL_SCAN", Value: forceFullScan},
+		// Report retention: maximum number of JSON scan reports to keep per node.
+		{Name: "MAX_SCAN_REPORTS", Value: getEnvOrDefault("SCANNER_MAX_SCAN_REPORTS", "30")},
 		// User-defined exclude patterns (JSON array of regex strings).
 		// The scanner merges these with its built-in system exclusions.
 		{Name: "EXCLUDE_PATTERNS", Value: excludePatternsJSON},

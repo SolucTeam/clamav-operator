@@ -41,7 +41,7 @@ These environment variables are passed to scanner jobs (pods).
 |----------|-------------|---------|--------|
 | `NODE_NAME` | Name of the node being scanned | - | NodeScan.spec.nodeName |
 | `HOST_ROOT` | Mount point for host filesystem | `/host` | Fixed |
-| `RESULTS_DIR` | Directory for scan results | `/results` | Fixed |
+| `RESULTS_DIR` | Directory for scan results on the node hostPath | `/results` | Fixed |
 | `CLAMAV_HOST` | ClamAV service hostname | From operator config | Operator config |
 | `CLAMAV_PORT` | ClamAV service port | From operator config | Operator config |
 | `PATHS_TO_SCAN` | Comma-separated list of paths to scan | `/host/var/lib,/host/opt` | NodeScan.spec.paths or ScanPolicy.spec.paths |
@@ -49,6 +49,14 @@ These environment variables are passed to scanner jobs (pods).
 | `FILE_TIMEOUT` | Timeout for scanning a single file (ms) | `300000` | NodeScan.spec.fileTimeout or ScanPolicy |
 | `CONNECT_TIMEOUT` | Timeout for ClamAV connection (ms) | `60000` | ScanPolicy.spec.connectTimeout |
 | `MAX_FILE_SIZE` | Maximum file size to scan (bytes) | `104857600` | NodeScan.spec.maxFileSize or ScanPolicy |
+| `SCAN_MODE` | Scanner mode: `standalone` or `remote` | `standalone` | `scanner.mode` Helm value |
+| `INCREMENTAL_ENABLED` | Enable incremental scanning | `false` | Derived from `SCAN_STRATEGY` |
+| `SCAN_STRATEGY` | Scan strategy: `full`, `incremental`, or `smart` | `full` | `scanner.incremental.strategy` |
+| `FULL_SCAN_INTERVAL` | For `smart` strategy: number of incremental runs before a full scan | `10` | `scanner.incremental.fullScanInterval` |
+| `MAX_FILE_AGE_HOURS` | Maximum cache entry age in hours before forcing a re-scan | `24` | `scanner.incremental.maxFileAgeHours` |
+| `SKIP_UNCHANGED_FILES` | Skip files whose mtime+size match the cache | `true` | `scanner.incremental.skipUnchangedFiles` |
+| `FORCE_FULL_SCAN` | Override strategy and run a full scan for this run | `false` | NodeScan.spec.forceFullScan |
+| `MAX_SCAN_REPORTS` | Maximum number of JSON scan reports to retain per node on the hostPath. Oldest reports are deleted after each scan. Set to `0` to disable rotation. | `30` | `scanner.incremental.maxScanReports` |
 
 ## Default Resource Requirements
 

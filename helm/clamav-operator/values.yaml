@@ -254,6 +254,10 @@ scanner:
     maxFileAgeHours: 24
     # Skip files whose mtime+size haven't changed since last scan
     skipUnchangedFiles: true
+    # Maximum number of JSON scan reports to retain per node on the hostPath.
+    # Oldest reports are automatically deleted after each scan.
+    # Set to 0 to disable rotation (keep all reports — not recommended).
+    maxScanReports: 30
 
   # ServiceAccount for scanner jobs
   serviceAccount:

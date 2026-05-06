@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 
 
+## [Unreleased]
+
+## 🚀 Features
+
+* feat(scanner): automatic rotation of scan reports on the node hostPath — keeps the N most recent JSON reports per node (default 30) and deletes older ones after each scan, preventing unbounded disk growth. Configurable via `scanner.incremental.maxScanReports` (Helm) or `MAX_SCAN_REPORTS` env var.
+* feat(scanner): automatic pruning of stale incremental cache entries — files deleted from the node filesystem are removed from the cache at the end of each scan, keeping cache size proportional to the actual number of files on the node.
+
+## 🐛 Bug Fixes
+
+_None_
+
+## 🔧 Other Changes
+
+* docs: add `MAX_SCAN_REPORTS` and incremental env vars to ENVIRONMENT.md
+* docs: document report retention, cache pruning, and `maxFileAgeHours` pitfall in scanning-modes.md
+
+
 ## [v0.5.8] - 2026-05-06
 
 ## 🚀 Features

@@ -13,7 +13,7 @@ You may obtain a copy of the License at
 const fs = require('fs').promises;
 const path = require('path');
 
-const { CONFIG, INCREMENTAL_CONFIG } = require('./config');
+const { CONFIG, INCREMENTAL_CONFIG, REPORT_CONFIG } = require('./config');
 const logger = require('./logger');
 
 /**
@@ -85,7 +85,63 @@ async function generateReport(results, stats, incrementalStats, effectiveStrateg
   await fs.writeFile(summaryPath, summaryLines.join('\n'));
 
   logger.info('Report generated', { reportPath, summaryPath });
+
+  // ── Rotate old reports ─────────────────────────────────────────────────
+  // Keep only the N most recent scan reports per node to prevent unbounded
+  // disk growth on the hostPath. JSON reports and their matching .txt
+  // summaries are rotated together. Rotation is best-effort: failures are
+  // logged but never fatal.
+  await rotateReports();
+
   return report;
 }
 
-module.exports = { generateReport };
+/**
+ * Delete the oldest scan reports beyond the configured retention limit.
+ * Operates only on files matching this node's naming pattern so reports
+ * from other nodes sharing the same hostPath directory are untouched.
+ */
+async function rotateReports() {
+  const limit = REPORT_CONFIG.maxReports;
+  if (limit <= 0) return; // rotation disabled
+
+  try {
+    const entries = await fs.readdir(CONFIG.resultsDir);
+
+    // Collect JSON reports for this node only (pattern: {nodeName}_scan_*.json)
+    const prefix = `${CONFIG.nodeName}_scan_`;
+    const jsonReports = entries
+      .filter((f) => f.startsWith(prefix) && f.endsWith('.json'))
+      .sort(); // ISO date in filename → lexicographic = chronological
+
+    const excess = jsonReports.length - limit;
+    if (excess <= 0) return;
+
+    // Delete the oldest `excess` reports (and their matching .txt summaries)
+    const toDelete = jsonReports.slice(0, excess);
+    for (const jsonFile of toDelete) {
+      const jsonPath = path.join(CONFIG.resultsDir, jsonFile);
+      // Derive matching summary filename: {nodeName}_summary_{dateStr}.txt
+      const dateStr = jsonFile.slice(prefix.length, -'.json'.length);
+      const summaryFile = `${CONFIG.nodeName}_summary_${dateStr}.txt`;
+      const summaryPath = path.join(CONFIG.resultsDir, summaryFile);
+
+      await fs.unlink(jsonPath).catch((err) =>
+        logger.warn('Failed to delete old report', { file: jsonPath, error: err.message })
+      );
+      await fs.unlink(summaryPath).catch((err) =>
+        logger.warn('Failed to delete old summary', { file: summaryPath, error: err.message })
+      );
+    }
+
+    logger.info('Report rotation complete', {
+      deleted: toDelete.length,
+      kept: limit,
+      limit,
+    });
+  } catch (err) {
+    logger.warn('Report rotation failed', { error: err.message });
+  }
+}
+
+module.exports = { generateReport, rotateReports };
