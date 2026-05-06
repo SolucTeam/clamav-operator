@@ -133,7 +133,7 @@ kubectl -n $NS logs <pod-name> -f
 | Image pull failure | Verify `scanner.image` and `scanner.imagePullSecrets` |
 | `clamscan` not found in image | Verify `scanner.standalone.clamscanPath` matches the image |
 | Signatures missing (standalone) | Enable freshclam or rebuild image with signatures |
-| Job timeout | Adjust `spec.activeDeadlineSeconds` on the NodeScan or ClusterScan |
+| Job timeout | The scan Job deadline defaults to **7200 s (2 h)**. If your nodes take longer to scan, increase it via `scanner.jobActiveDeadlineSeconds` in `values.yaml` (e.g. `14400` for 4 h) and run `helm upgrade`. |
 
 **Force-delete a stuck NodeScan:**
 ```bash

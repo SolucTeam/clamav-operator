@@ -25,8 +25,13 @@ _No bug fixes_
 
 * feat(scanner): automatic rotation of scan reports on the node hostPath — keeps the N most recent JSON reports per node (default 30) and deletes older ones after each scan, preventing unbounded disk growth. Configurable via `scanner.incremental.maxScanReports` (Helm) or `MAX_SCAN_REPORTS` env var.
 * feat(scanner): automatic pruning of stale incremental cache entries — files deleted from the node filesystem are removed from the cache at the end of each scan, keeping cache size proportional to the actual number of files on the node.
+* feat(operator): `activeDeadlineSeconds` is now configurable via `--job-active-deadline-seconds` flag and `scanner.jobActiveDeadlineSeconds` Helm value (default 0 = keep 7200 s built-in). Allows operators with large filesystems to increase the Job timeout beyond 2 h.
 
 ## 🐛 Bug Fixes
+
+_None_
+
+## ⚠️ Known Limitations
 
 _None_
 
@@ -34,6 +39,7 @@ _None_
 
 * docs: add `MAX_SCAN_REPORTS` and incremental env vars to ENVIRONMENT.md
 * docs: document report retention, cache pruning, and `maxFileAgeHours` pitfall in scanning-modes.md
+* docs: correct `activeDeadlineSeconds` documentation in runbook — field is now configurable via `--job-active-deadline-seconds` / `scanner.jobActiveDeadlineSeconds`
 
 
 ## [v0.5.8] - 2026-05-06

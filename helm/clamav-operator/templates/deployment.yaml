@@ -55,6 +55,9 @@ spec:
         - --clamav-host={{ .Values.scanner.clamav.host }}
         - --clamav-port={{ .Values.scanner.clamav.port }}
         {{- end }}
+        {{- if gt (int .Values.scanner.jobActiveDeadlineSeconds) 0 }}
+        - --job-active-deadline-seconds={{ .Values.scanner.jobActiveDeadlineSeconds }}
+        {{- end }}
         env:
         # Scanner configuration — forwarded as env vars to scanner Job pods by the controller.
         # These are NOT operator flags; they are read by the controller via os.Getenv.

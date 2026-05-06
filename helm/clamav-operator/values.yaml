@@ -259,6 +259,12 @@ scanner:
     # Set to 0 to disable rotation (keep all reports — not recommended).
     maxScanReports: 30
 
+  # Hard timeout for scanner Jobs in seconds.
+  # 0 means use the built-in default of 7200 s (2 h).
+  # Increase on nodes with very large filesystems whose scans may take more than 2 h.
+  # Example: 14400 for a 4-hour deadline.
+  jobActiveDeadlineSeconds: 0
+
   # ServiceAccount for scanner jobs
   serviceAccount:
     create: true
