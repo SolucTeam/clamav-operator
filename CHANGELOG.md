@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 
 
+## [v0.5.8] - 2026-05-06
+
+## 🚀 Features
+
+_No new features_
+
+## 🐛 Bug Fixes
+
+* Merge pull request #51 from SolucTeam/fix/nodescan-ttl-recreation-standalone-warning (b6896a6)
+* fix: prevent job recreation for terminal NodeScans and gate ClamAV connectivity check on remote mode (0e8f32d)
+
+## 🔧 Other Changes
+
+* chore: update CHANGELOG for v0.5.7 (c3a0536)
+
+
 ## [v0.5.7] - 2026-04-30
 
 ## 🚀 Features
