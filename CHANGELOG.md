@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 
 
+## [v0.6.1] - 2026-05-06
+
+## 🚀 Features
+
+_No new features_
+
+## 🐛 Bug Fixes
+
+* Merge pull request #53 from SolucTeam/fix/configurable-job-deadline (d3af41f)
+* fix(operator): make scanner Job activeDeadlineSeconds configurable (9b83ffc)
+
+## 🔧 Other Changes
+
+* chore: update CHANGELOG for v0.6.0 (3e174b5)
+
+
 ## [v0.6.0] - 2026-05-06
 
 ## 🚀 Features
