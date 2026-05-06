@@ -37,6 +37,12 @@ const logger = require('./logger');
 
 let SCAN_CACHE = {};
 
+// Tracks every file path encountered during the current scan walk.
+// Populated by shouldScanFile() (skipped files) and updateCache() (scanned files).
+// Used by saveCache() to prune stale entries for files that no longer exist
+// on the node filesystem — prevents unbounded cache growth over time.
+const SEEN_FILES = new Set();
+
 const CACHE_FILE = path.join(
   process.env.RESULTS_DIR || '/results',
   `${process.env.NODE_NAME || 'unknown'}_scan_cache.json`
@@ -147,13 +153,32 @@ async function saveCache() {
   // run can detect if signatures were updated between scans.
   const signatureFingerprint = await computeSignatureFingerprint(CONFIG.clamavDbPath);
 
+  // Prune stale entries — keep only files that were encountered during this
+  // scan walk (either scanned or skipped-as-unchanged). Files deleted from the
+  // node filesystem since the last run will not be in SEEN_FILES and are
+  // dropped here, preventing unbounded cache growth over time.
+  // Exception: if SEEN_FILES is empty the walk was likely aborted early
+  // (e.g. graceful shutdown) — in that case skip pruning to avoid wiping a
+  // valid cache based on an incomplete run.
+  let prunedCache = SCAN_CACHE;
+  if (SEEN_FILES.size > 0) {
+    const before = Object.keys(SCAN_CACHE).length;
+    prunedCache = Object.fromEntries(
+      Object.entries(SCAN_CACHE).filter(([filePath]) => SEEN_FILES.has(filePath))
+    );
+    const pruned = before - Object.keys(prunedCache).length;
+    if (pruned > 0) {
+      logger.info('Pruned stale cache entries for deleted files', { pruned, before, after: Object.keys(prunedCache).length });
+    }
+  }
+
   const payload = {
     version: 3,
     lastScanDate: new Date().toISOString(),
     node: process.env.NODE_NAME || 'unknown',
-    totalFiles: Object.keys(SCAN_CACHE).length,
+    totalFiles: Object.keys(prunedCache).length,
     signatureFingerprint: signatureFingerprint || '',
-    files: SCAN_CACHE,
+    files: prunedCache,
   };
 
   const tmpFile = `${CACHE_FILE}.tmp`;
@@ -258,6 +283,8 @@ function shouldScanFile(filePath, fileStats, effectiveStrategy) {
   }
 
   incrementalStats.filesSkipped++;
+  // Mark as seen so saveCache() keeps this entry (file still exists on disk).
+  SEEN_FILES.add(filePath);
   return { shouldScan: false, reason: 'unchanged' };
 }
 
@@ -270,6 +297,8 @@ function updateCache(filePath, fileStats, scanResult) {
     lastScanned: Math.floor(Date.now() / 1000),
     scanResult, // 'clean' | 'infected'
   };
+  // Mark as seen so saveCache() keeps this entry.
+  SEEN_FILES.add(filePath);
 }
 
 module.exports = {

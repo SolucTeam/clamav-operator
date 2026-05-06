@@ -116,4 +116,15 @@ const INCREMENTAL_CONFIG = {
   fullScanInterval: parseInt(process.env.FULL_SCAN_INTERVAL || '10', 10),
 };
 
-module.exports = { CONFIG, INCREMENTAL_CONFIG };
+// =============================================================================
+// REPORT RETENTION CONFIGURATION
+// =============================================================================
+
+const REPORT_CONFIG = {
+  // Maximum number of JSON scan reports to keep per node on the hostPath.
+  // Oldest reports are deleted after each scan to prevent unbounded disk growth.
+  // Set to 0 to disable rotation (keep all reports).
+  maxReports: parseInt(process.env.MAX_SCAN_REPORTS || '30', 10),
+};
+
+module.exports = { CONFIG, INCREMENTAL_CONFIG, REPORT_CONFIG };

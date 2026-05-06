@@ -80,6 +80,8 @@ spec:
           value: {{ .Values.scanner.incremental.maxFileAgeHours | quote }}
         - name: SCANNER_SKIP_UNCHANGED_FILES
           value: {{ .Values.scanner.incremental.skipUnchangedFiles | quote }}
+        - name: SCANNER_MAX_SCAN_REPORTS
+          value: {{ .Values.scanner.incremental.maxScanReports | quote }}
         {{- if .Values.scanner.imagePullSecrets }}
         # Comma-separated secret names forwarded to scanner Job pods.
         # Parsed by main.go into []corev1.LocalObjectReference.
