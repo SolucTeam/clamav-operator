@@ -187,6 +187,17 @@ func (r *NodeScanReconciler) Reconcile(ctx context.Context, req ctrl.Request) (c
 	err := r.Get(ctx, types.NamespacedName{Name: jobName, Namespace: nodeScan.Namespace}, &existingJob)
 
 	if errors.IsNotFound(err) {
+		// If the NodeScan is already in a terminal state (Completed or Failed),
+		// the Job was simply cleaned up by TTL — do NOT re-create it.
+		// Without this guard, TTL cleanup triggers a new reconcile that lands
+		// here, creates a fresh Job, and can overwrite a Completed phase with
+		// Failed if the new Job encounters a transient error or if its pods are
+		// GC'd before getJobFailureInfo can read the exit code.
+		if nodeScan.Status.Phase == clamavv1alpha1.NodeScanPhaseCompleted ||
+			nodeScan.Status.Phase == clamavv1alpha1.NodeScanPhaseFailed {
+			return ctrl.Result{}, nil
+		}
+
 		// Initialize status if needed.
 		// Use Patch instead of Update so we only send the diff and avoid
 		// overwriting concurrent status changes (e.g. from a webhook or
