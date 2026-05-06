@@ -150,17 +150,27 @@ func main() {
 			os.Exit(1)
 		}
 
-		// Optional: Check ClamAV connectivity (warning only, not fatal)
-		clamavNamespace := "clamav"
-		if parts := splitHostname(clamavHost); len(parts) >= 2 {
-			clamavNamespace = parts[1]
+		// Optional: Check ClamAV daemon connectivity (remote mode only, warning not fatal).
+		// In standalone mode the scanner uses the local clamscan binary — no daemon
+		// Service is needed. Running this check in standalone mode produces a
+		// misleading "scans will fail" warning for a service that intentionally
+		// does not exist, so we skip it.
+		scannerMode := os.Getenv("SCANNER_MODE")
+		if scannerMode == "" {
+			scannerMode = "standalone"
 		}
-		clamavServiceName := "clamav"
-		if parts := splitHostname(clamavHost); len(parts) >= 1 {
-			clamavServiceName = parts[0]
-		}
-		if err := controller.ValidateClamAVConnectivity(ctx, clientset, clamavNamespace, clamavServiceName, int32(clamavPort)); err != nil { //nolint:gosec // port numbers are always in valid int32 range
-			setupLog.Info("ClamAV connectivity check warning", "error", err)
+		if scannerMode == "remote" {
+			clamavNamespace := "clamav"
+			if parts := splitHostname(clamavHost); len(parts) >= 2 {
+				clamavNamespace = parts[1]
+			}
+			clamavServiceName := "clamav"
+			if parts := splitHostname(clamavHost); len(parts) >= 1 {
+				clamavServiceName = parts[0]
+			}
+			if err := controller.ValidateClamAVConnectivity(ctx, clientset, clamavNamespace, clamavServiceName, int32(clamavPort)); err != nil { //nolint:gosec // port numbers are always in valid int32 range
+				setupLog.Info("ClamAV connectivity check warning", "error", err)
+			}
 		}
 
 		setupLog.Info("All startup validation checks passed")
