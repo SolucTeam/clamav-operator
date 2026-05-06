@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 
 
+## [v0.6.0] - 2026-05-06
+
+## 🚀 Features
+
+* Merge pull request #52 from SolucTeam/feat/scan-report-rotation (d8fe97b)
+* feat(scanner): add automatic report rotation to prevent unbounded disk growth on hostPath (af9bbd8)
+
+## 🐛 Bug Fixes
+
+_No bug fixes_
+
+## 🔧 Other Changes
+
+* chore: update CHANGELOG for v0.5.8 (06d408c)
+
+
 ## [Unreleased]
 
 ## 🚀 Features
