@@ -77,6 +77,11 @@ type NodeScanReconciler struct {
 	// image-embedded workflow).
 	SignaturesPVCName string
 
+	// JobActiveDeadlineSeconds is the hard wall-clock deadline for scanner Jobs.
+	// When zero, falls back to the package-level constant JobActiveDeadlineSeconds (7200 s).
+	// Set via --job-active-deadline-seconds flag (Helm: scanner.jobActiveDeadlineSeconds).
+	JobActiveDeadlineSecs int64
+
 	// ParseMaxRetries overrides maxParseRetries when non-zero.
 	// Set to a small value (e.g. 1) in tests to avoid multi-minute backoff.
 	ParseMaxRetries int
@@ -636,7 +641,13 @@ func (r *NodeScanReconciler) constructJobForNodeScan(nodeScan *clamavv1alpha1.No
 			BackoffLimit:            ptr.To(int32(1)),
 			TTLSecondsAfterFinished: ttl,
 			// Hard wall-clock deadline: prevents zombie pods from blocking a node indefinitely.
-			ActiveDeadlineSeconds: ptr.To(int64(JobActiveDeadlineSeconds)),
+			// Falls back to the package-level constant when not configured via Helm.
+			ActiveDeadlineSeconds: func() *int64 {
+				if r.JobActiveDeadlineSecs > 0 {
+					return ptr.To(r.JobActiveDeadlineSecs)
+				}
+				return ptr.To(int64(JobActiveDeadlineSeconds))
+			}(),
 			Template: corev1.PodTemplateSpec{
 				ObjectMeta: metav1.ObjectMeta{
 					Labels: map[string]string{

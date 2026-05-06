@@ -74,6 +74,7 @@ func main() {
 	var clamavPort int
 	var skipStartupChecks bool
 	var scannerServiceAccount string
+	var jobActiveDeadlineSeconds int
 
 	flag.StringVar(&metricsAddr, "metrics-bind-address", ":8080", "The address the metric endpoint binds to.")
 	flag.StringVar(&probeAddr, "health-probe-bind-address", ":8081", "The address the probe endpoint binds to.")
@@ -93,6 +94,9 @@ func main() {
 		"Skip startup validation checks (not recommended for production)")
 	flag.StringVar(&scannerServiceAccount, "scanner-service-account", "clamav-scanner",
 		"Name of the ServiceAccount used by scanner jobs")
+	flag.IntVar(&jobActiveDeadlineSeconds, "job-active-deadline-seconds", 0,
+		"Hard wall-clock deadline for scanner Jobs in seconds (0 = use built-in default of 7200 s). "+
+			"Increase for nodes with very large filesystems whose scans may exceed 2 h.")
 
 	// Development mode enables human-readable logs; disable in production for JSON output.
 	// Automatically controlled by zap flags (--zap-devel=true|false).
@@ -208,6 +212,7 @@ func main() {
 		ClamavPort:              clamavPort,
 		ScannerImagePullSecrets: scannerPullSecrets,
 		SignaturesPVCName:       signaturesPVCName,
+		JobActiveDeadlineSecs:   int64(jobActiveDeadlineSeconds), //nolint:gosec // value is a user-supplied duration, never negative in practice
 	}).SetupWithManager(mgr); err != nil {
 		setupLog.Error(err, "unable to create controller", "controller", "NodeScan")
 		os.Exit(1)
