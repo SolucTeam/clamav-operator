@@ -1030,7 +1030,7 @@ func (r *NodeScanReconciler) parseJobResults(ctx context.Context, nodeScan *clam
 				nodeScan.Status.ScannerMemoryRSSBytes = entry.MemoryRSSBytes
 			}
 			if entry.CPUUserSeconds > 0 {
-				nodeScan.Status.ScannerCPUUserSeconds = entry.CPUUserSeconds
+				nodeScan.Status.ScannerCPUUserMilliseconds = int64(entry.CPUUserSeconds * 1000)
 			}
 
 			// Logical cache size — feeds clamav_scan_cache_size_bytes and

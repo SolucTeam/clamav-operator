@@ -89,7 +89,7 @@ func (r *NodeScan) ConvertTo(dstRaw conversion.Hub) error {
 	dst.Status.FailureReason = r.Status.FailureReason
 	dst.Status.ExitCode = r.Status.ExitCode
 	dst.Status.ScannerMemoryRSSBytes = r.Status.ScannerMemoryRSSBytes
-	dst.Status.ScannerCPUUserSeconds = r.Status.ScannerCPUUserSeconds
+	dst.Status.ScannerCPUUserMilliseconds = r.Status.ScannerCPUUserMilliseconds
 
 	for _, f := range r.Status.InfectedFiles {
 		dst.Status.InfectedFiles = append(dst.Status.InfectedFiles, v1beta1.InfectedFile{
@@ -159,7 +159,7 @@ func (r *NodeScan) ConvertFrom(srcRaw conversion.Hub) error {
 	r.Status.FailureReason = src.Status.FailureReason
 	r.Status.ExitCode = src.Status.ExitCode
 	r.Status.ScannerMemoryRSSBytes = src.Status.ScannerMemoryRSSBytes
-	r.Status.ScannerCPUUserSeconds = src.Status.ScannerCPUUserSeconds
+	r.Status.ScannerCPUUserMilliseconds = src.Status.ScannerCPUUserMilliseconds
 
 	for _, f := range src.Status.InfectedFiles {
 		r.Status.InfectedFiles = append(r.Status.InfectedFiles, InfectedFile{
