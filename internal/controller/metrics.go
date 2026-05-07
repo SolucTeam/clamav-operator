@@ -433,8 +433,8 @@ func recordNodeScanMetrics(nodeScan *clamavv1alpha1.NodeScan, phase clamavv1alph
 		if nodeScan.Status.ScannerMemoryRSSBytes > 0 {
 			scannerMemoryRSSBytes.WithLabelValues(namespace, node).Set(float64(nodeScan.Status.ScannerMemoryRSSBytes))
 		}
-		if nodeScan.Status.ScannerCPUUserSeconds > 0 {
-			scannerCPUUserSeconds.WithLabelValues(namespace, node).Set(nodeScan.Status.ScannerCPUUserSeconds)
+		if nodeScan.Status.ScannerCPUUserMilliseconds > 0 {
+			scannerCPUUserSeconds.WithLabelValues(namespace, node).Set(float64(nodeScan.Status.ScannerCPUUserMilliseconds) / 1000.0)
 		}
 
 		// Record incremental metrics if the scan used an incremental strategy.

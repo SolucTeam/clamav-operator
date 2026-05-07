@@ -241,12 +241,14 @@ type NodeScanStatus struct {
 	// +optional
 	ScannerMemoryRSSBytes int64 `json:"scannerMemoryRSSBytes,omitempty"`
 
-	// ScannerCPUUserSeconds is the user-space CPU time (seconds) consumed by the
-	// scanner Node.js process during the scan, as reported by process.cpuUsage().
+	// ScannerCPUUserMilliseconds is the user-space CPU time (milliseconds) consumed
+	// by the scanner Node.js process during the scan, as reported by
+	// process.cpuUsage(). Stored as int64 milliseconds to avoid float serialization
+	// issues in CRD schemas.
 	// Note: child process (clamscan) CPU time is not included; use cAdvisor
 	// container_cpu_usage_seconds_total for full container CPU accounting.
 	// +optional
-	ScannerCPUUserSeconds float64 `json:"scannerCPUUserSeconds,omitempty"`
+	ScannerCPUUserMilliseconds int64 `json:"scannerCPUUserMilliseconds,omitempty"`
 }
 
 // +kubebuilder:object:root=true

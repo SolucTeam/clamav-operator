@@ -196,8 +196,12 @@ type NodeScanStatus struct {
 	ExitCode int32 `json:"exitCode,omitempty"`
 	// +optional
 	ScannerMemoryRSSBytes int64 `json:"scannerMemoryRSSBytes,omitempty"`
+	// ScannerCPUUserMilliseconds is the user-space CPU time (milliseconds) consumed
+	// by the scanner Node.js process during the scan, as reported by
+	// process.cpuUsage(). Stored as int64 milliseconds to avoid float serialization
+	// issues in CRD schemas.
 	// +optional
-	ScannerCPUUserSeconds float64 `json:"scannerCPUUserSeconds,omitempty"`
+	ScannerCPUUserMilliseconds int64 `json:"scannerCPUUserMilliseconds,omitempty"`
 }
 
 // +kubebuilder:object:root=true
