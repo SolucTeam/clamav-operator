@@ -113,7 +113,7 @@ describe('report', () => {
     const stats = { filesScanned: 42, filesInfected: 1, filesSkipped: 3, errors: 0, startTime: Date.now() - 8000 };
     const incStats = { filesSkipped: 0, cacheHits: 0, cacheMisses: 0, newFiles: 0, modifiedFiles: 0 };
 
-    const report = await generateReport(results, stats, incStats, 'full');
+    const { report } = await generateReport(results, stats, incStats, 'full');
 
     assert.equal(report.node, 'test-node');
     assert.ok(report.scanDate, 'should have scanDate');
@@ -139,7 +139,7 @@ describe('report', () => {
     const stats = { filesScanned: 0, filesInfected: 0, filesSkipped: 0, errors: 150, startTime: Date.now() };
     const incStats = { filesSkipped: 0, cacheHits: 0, cacheMisses: 0, newFiles: 0, modifiedFiles: 0 };
 
-    const report = await generateReport(results, stats, incStats, 'full');
+    const { report } = await generateReport(results, stats, incStats, 'full');
 
     assert.equal(report.errors.length, 100, 'errors should be capped at 100');
   });
@@ -155,7 +155,7 @@ describe('report', () => {
     const stats = { filesScanned: 30, filesInfected: 0, filesSkipped: 0, errors: 0, startTime: Date.now() - 1000 };
     const incStats = { filesSkipped: 70, cacheHits: 65, cacheMisses: 5, newFiles: 3, modifiedFiles: 2 };
 
-    const report = await generateReport(results, stats, incStats, 'incremental');
+    const { report } = await generateReport(results, stats, incStats, 'incremental');
 
     assert.equal(report.incremental.enabled, true);
     assert.equal(report.incremental.filesSkipped, 70);

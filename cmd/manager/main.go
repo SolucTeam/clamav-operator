@@ -75,6 +75,8 @@ func main() {
 	var skipStartupChecks bool
 	var scannerServiceAccount string
 	var jobActiveDeadlineSeconds int
+	var jobTTLAfterSucceeded int
+	var jobTTLAfterFailed int
 
 	flag.StringVar(&metricsAddr, "metrics-bind-address", ":8080", "The address the metric endpoint binds to.")
 	flag.StringVar(&probeAddr, "health-probe-bind-address", ":8081", "The address the probe endpoint binds to.")
@@ -97,6 +99,10 @@ func main() {
 	flag.IntVar(&jobActiveDeadlineSeconds, "job-active-deadline-seconds", 0,
 		"Hard wall-clock deadline for scanner Jobs in seconds (0 = use built-in default of 7200 s). "+
 			"Increase for nodes with very large filesystems whose scans may exceed 2 h.")
+	flag.IntVar(&jobTTLAfterSucceeded, "job-ttl-after-succeeded", 0,
+		"TTL in seconds before Kubernetes deletes a succeeded scanner Job (0 = use built-in default of 3600 s).")
+	flag.IntVar(&jobTTLAfterFailed, "job-ttl-after-failed", 0,
+		"TTL in seconds before Kubernetes deletes a failed scanner Job (0 = use built-in default of 86400 s).")
 
 	// Development mode enables human-readable logs; disable in production for JSON output.
 	// Automatically controlled by zap flags (--zap-devel=true|false).
@@ -213,6 +219,8 @@ func main() {
 		ScannerImagePullSecrets: scannerPullSecrets,
 		SignaturesPVCName:       signaturesPVCName,
 		JobActiveDeadlineSecs:   int64(jobActiveDeadlineSeconds), //nolint:gosec // value is a user-supplied duration, never negative in practice
+		JobTTLAfterSucceeded:    int32(jobTTLAfterSucceeded),     //nolint:gosec // TTL is always a small positive integer
+		JobTTLAfterFailed:       int32(jobTTLAfterFailed),        //nolint:gosec // TTL is always a small positive integer
 	}).SetupWithManager(mgr); err != nil {
 		setupLog.Error(err, "unable to create controller", "controller", "NodeScan")
 		os.Exit(1)

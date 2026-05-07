@@ -21,6 +21,8 @@
    - [Notifications not delivered (ClamAVNotificationFailed)](#8-notifications-not-delivered)
    - [Partial scan results (resultsPartial: true)](#9-partial-scan-results)
    - [EMERGENCY — Webhook certificate expired](#10-emergency--webhook-certificate-expired)
+   - [Low scan throughput](#13-low-scan-throughput)
+   - [Results directory too large](#12-results-directory-too-large)
 4. [Maintenance](#maintenance)
    - [Upgrade the operator](#upgrade-the-operator)
    - [CRD upgrade procedure](#crd-upgrade-procedure)
@@ -65,15 +67,22 @@ helm test $RELEASE -n $NS --logs
 
 ## Alerts
 
-| Alert | Meaning | Runbook section |
-|-------|---------|----------------|
-| `ClamAVNoRecentScans` | No node completed a scan in the last 24 h | [#1](#1-operator-not-reconciling), [#2](#2-scanner-job-stuck--never-completes) |
-| `ClamAVMalwareDetected` | `clamav_files_infected_total > 0` | [#3](#3-infected-file-detected) |
-| `ClamAVScanFailed` | A scanner Job exited non-zero | [#2](#2-scanner-job-stuck--never-completes) |
-| `ClamAVOperatorDown` | Operator deployment has 0 ready replicas | [#1](#1-operator-not-reconciling) |
-| `ClamAVNotificationFailed` | Notification not delivered after 3 retries | [#8](#8-notifications-not-delivered) |
-| `ClamAVPartialScanResults` | NodeScan has `resultsPartial: true` — data unreliable | [#9](#9-partial-scan-results) |
-| `ClamAVWebhookCertExpiringSoon` | Webhook TLS cert expires in < 7 days | [#10](#10-emergency--webhook-certificate-expired) |
+| Alert | Severity | Meaning | Runbook section |
+|-------|----------|---------|----------------|
+| `ClamAVMalwareDetected` | critical | Infected files detected on a node | [#3](#3-infected-file-detected) |
+| `ClamAVScanFailed` | warning | A scanner Job exited non-zero | [#2](#2-scanner-job-stuck--never-completes) |
+| `ClamAVNoRecentScans` | warning | No node completed a scan in the last 24 h | [#1](#1-operator-not-reconciling), [#2](#2-scanner-job-stuck--never-completes) |
+| `ClamAVNotificationFailed` | warning | Notification not delivered after retries | [#8](#8-notifications-not-delivered) |
+| `ClamAVPartialScanResults` | warning | NodeScan has `resultsPartial: true` — data unreliable | [#9](#9-partial-scan-results) |
+| `ClamAVWebhookCertExpiringSoon` | warning | Webhook TLS cert expires in < 7 days | [#10](#10-emergency--webhook-certificate-expired) |
+| `ClamAVResultsDirTooLarge` | warning | Results directory > 500 MB on a node hostPath | [#12](#12-results-directory-too-large) |
+| `ClamAVCacheFileTooLarge` | warning | Incremental cache file > 100 MB | [#12](#12-results-directory-too-large) |
+| `ClamAVOperatorReconcileErrors` | warning | Operator reconcile error rate > 0.1/s for 10 min | [#1](#1-operator-not-reconciling) |
+| `ClamAVScanStuck` | warning | Running scan with no completion > 10 h | [#2](#2-scanner-job-stuck--never-completes) |
+| `ClamAVHighScanDuration` | warning | p95 scan duration > 2 h | [#2](#2-scanner-job-stuck--never-completes) |
+| `ClamAVLowScanThroughput` | warning | Throughput < 5 files/s for 30 min | [#13](#13-low-scan-throughput) |
+| `ClamAVSignaturesStale` | warning | Signature database age > 24 h | [#4](#4-freshclam-failing--signatures-outdated) |
+| `ClamAVOOMKillsElevated` | warning | More than 2 OOMKills in 1 h | [#6](#6-oomkilled-scanner-pod) |
 
 ---
 
@@ -436,6 +445,75 @@ kubectl -n  delete nodescan
 ```
 
 **Permanent fix:** Upgrade to v0.5.3+.
+
+---
+
+---
+
+### 12. Results directory too large
+
+**Symptoms:** `ClamAVResultsDirTooLarge` (> 500 MB) or `ClamAVCacheFileTooLarge` (> 100 MB) fires.
+
+**Diagnosis:**
+```bash
+# Check metric values
+curl -s localhost:8080/metrics | grep -E "clamav_results_dir_bytes|clamav_cache_file_bytes"
+
+# On the node directly
+du -sh /var/log/clamav-scans/
+ls -lh /var/log/clamav-scans/
+```
+
+**Causes and fixes:**
+
+| Cause | Fix |
+|-------|-----|
+| Too many reports retained | Lower `scanner.incremental.maxScanReports` (default 30) |
+| Cache tracking millions of files | Normal for large nodes — check `clamav_scan_cache_files_total`. If excessive, verify pruning is working. |
+| Old reports not being rotated | Verify `MAX_SCAN_REPORTS` env var is set on the scanner Job |
+
+**Manual cleanup:**
+```bash
+# SSH onto the node and remove old reports (keep last 10)
+ls -t /var/log/clamav-scans/*.json | tail -n +11 | xargs rm -f
+
+# Delete the cache file to force a full scan rebuild
+rm /var/log/clamav-scans/<node-name>_scan_cache.json
+```
+
+---
+
+### 13. Low scan throughput
+
+**Symptoms:** `ClamAVLowScanThroughput` fires — `clamav_scan_files_per_second < 5` for 30 min.
+
+**Diagnosis:**
+```bash
+# Check current throughput per node
+curl -s localhost:8080/metrics | grep clamav_scan_files_per_second
+
+# Check OOMKill pressure (memory thrashing slows I/O)
+curl -s localhost:8080/metrics | grep clamav_job_oom_kills_total
+
+# Check scanner pod resource usage on the affected node
+kubectl -n $NS get pod -l job-name=<scanner-job> -o wide
+kubectl -n $NS top pod <scanner-pod>
+```
+
+**Common causes and fixes:**
+
+| Cause | Fix |
+|-------|-----|
+| Node I/O saturation | Check node disk utilization; consider scheduling scans during off-peak hours |
+| Memory pressure / OOMKill risk | Increase `scanner.resources.limits.memory` |
+| CPU throttling | Increase `scanner.resources.limits.cpu` or lower CFS quota |
+| Scanning very large files | Set `maxFileSize` to skip files above a threshold (e.g. `104857600` = 100 MB) |
+| Network filesystem (NFS/Ceph) | Latency expected — adjust or exclude these paths in `ScanPolicy.spec.excludePaths` |
+
+**Force a full scan to establish a new baseline:**
+```bash
+kubectl annotate nodescan <nodescan-name> clamav.io/force-full-scan=true
+```
 
 ---
 

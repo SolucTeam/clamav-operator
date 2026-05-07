@@ -233,6 +233,20 @@ type NodeScanStatus struct {
 	// 0 means the container exited normally (or did not terminate yet).
 	// +optional
 	ExitCode int32 `json:"exitCode,omitempty"`
+
+	// ScannerMemoryRSSBytes is the RSS memory of the scanner Node.js process at
+	// the end of the scan (bytes), as reported by process.memoryUsage().rss.
+	// Note: in standalone mode this captures only the Node.js orchestrator; the
+	// clamscan child process memory is tracked separately by cAdvisor.
+	// +optional
+	ScannerMemoryRSSBytes int64 `json:"scannerMemoryRSSBytes,omitempty"`
+
+	// ScannerCPUUserSeconds is the user-space CPU time (seconds) consumed by the
+	// scanner Node.js process during the scan, as reported by process.cpuUsage().
+	// Note: child process (clamscan) CPU time is not included; use cAdvisor
+	// container_cpu_usage_seconds_total for full container CPU accounting.
+	// +optional
+	ScannerCPUUserSeconds float64 `json:"scannerCPUUserSeconds,omitempty"`
 }
 
 // +kubebuilder:object:root=true

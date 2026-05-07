@@ -37,6 +37,18 @@ const logger = require('./logger');
 
 let SCAN_CACHE = {};
 
+// cacheInvalidationReason records WHY the cache was discarded on load.
+// null  = cache was loaded successfully (no invalidation)
+// 'first_scan'       = no cache file found (new node or cache deleted)
+// 'corrupted'        = JSON parse error or unexpected structure
+// 'signature_change' = signatures updated since last scan (fingerprint mismatch)
+let cacheInvalidationReason = null;
+
+// cacheMtimeSeconds is the Unix mtime of the cache file as read on disk.
+// 0 means the file did not exist or could not be stat'd.
+// Used to compute cache age: Date.now()/1000 - cacheMtimeSeconds.
+let cacheMtimeSeconds = 0;
+
 // Tracks every file path encountered during the current scan walk.
 // Populated by shouldScanFile() (skipped files) and updateCache() (scanned files).
 // Used by saveCache() to prune stale entries for files that no longer exist
@@ -99,6 +111,27 @@ function getIncrementalStats() {
   return { ...incrementalStats };
 }
 
+// getCacheStats returns the current state of SCAN_CACHE for telemetry.
+// Call after saveCache() to get post-pruning counts.
+// - trackedFiles : number of file entries in the cache
+// - trackedBytes : sum of the recorded file sizes across all cached entries
+//   (logical bytes tracked, NOT the size of the cache JSON file on disk)
+function getCacheStats() {
+  const entries = Object.values(SCAN_CACHE);
+  const trackedFiles = entries.length;
+  const trackedBytes = entries.reduce((sum, e) => sum + (e.size || 0), 0);
+  const nowSeconds = Date.now() / 1000;
+  const cacheAgeSeconds = cacheMtimeSeconds > 0 ? Math.round(nowSeconds - cacheMtimeSeconds) : -1;
+  return {
+    trackedFiles,
+    trackedBytes,
+    // -1 means no valid cache was loaded (first scan, invalidated, or corrupted)
+    cacheAgeSeconds,
+    // null means cache loaded OK; string = reason it was discarded
+    invalidationReason: cacheInvalidationReason,
+  };
+}
+
 // ── Cache persistence ────────────────────────────────────────────────────────
 
 async function loadCache() {
@@ -108,6 +141,14 @@ async function loadCache() {
   // If it differs from what the cache recorded, we must discard the cache so
   // every file is re-scanned against the updated signatures.
   const currentFingerprint = await computeSignatureFingerprint(CONFIG.clamavDbPath);
+
+  // Stat the cache file for age tracking (before reading, in case of error).
+  try {
+    const stat = await fs.stat(CACHE_FILE);
+    cacheMtimeSeconds = stat.mtimeMs / 1000;
+  } catch {
+    cacheMtimeSeconds = 0; // file does not exist yet
+  }
 
   try {
     const raw = await fs.readFile(CACHE_FILE, 'utf-8');
@@ -129,25 +170,44 @@ async function loadCache() {
           }
         );
         SCAN_CACHE = {};
+        cacheInvalidationReason = 'signature_change';
+        cacheMtimeSeconds = 0; // cache is being discarded
         return; // force full scan
       }
 
       SCAN_CACHE = data.files;
+      cacheInvalidationReason = null; // loaded successfully
       logger.info('Incremental cache loaded', {
         entries: Object.keys(SCAN_CACHE).length,
         cacheVersion: data.version || 'unknown',
         lastScanDate: data.lastScanDate || 'unknown',
         signatureFingerprint: data.signatureFingerprint || 'none',
       });
+    } else {
+      // File exists but has unexpected structure
+      SCAN_CACHE = {};
+      cacheInvalidationReason = 'corrupted';
+      cacheMtimeSeconds = 0;
     }
-  } catch {
-    logger.info('No previous cache found — full scan');
+  } catch (err) {
     SCAN_CACHE = {};
+    // ENOENT = first scan on this node; anything else = corrupted/unreadable
+    cacheInvalidationReason = (err.code === 'ENOENT') ? 'first_scan' : 'corrupted';
+    cacheMtimeSeconds = 0;
+    if (cacheInvalidationReason === 'first_scan') {
+      logger.info('No previous cache found — full scan (first scan on this node)');
+    } else {
+      logger.warn('Cache file unreadable — discarding and running full scan', { error: err.message });
+    }
   }
 }
 
+/**
+ * Persist the incremental cache to disk and prune stale entries.
+ * @returns {number} Number of stale cache entries pruned (0 if none or walk aborted).
+ */
 async function saveCache() {
-  if (!INCREMENTAL_CONFIG.enabled) return;
+  if (!INCREMENTAL_CONFIG.enabled) return 0;
 
   // Persist the current signature fingerprint alongside the cache so the next
   // run can detect if signatures were updated between scans.
@@ -161,14 +221,15 @@ async function saveCache() {
   // (e.g. graceful shutdown) — in that case skip pruning to avoid wiping a
   // valid cache based on an incomplete run.
   let prunedCache = SCAN_CACHE;
+  let prunedCount = 0;
   if (SEEN_FILES.size > 0) {
     const before = Object.keys(SCAN_CACHE).length;
     prunedCache = Object.fromEntries(
       Object.entries(SCAN_CACHE).filter(([filePath]) => SEEN_FILES.has(filePath))
     );
-    const pruned = before - Object.keys(prunedCache).length;
-    if (pruned > 0) {
-      logger.info('Pruned stale cache entries for deleted files', { pruned, before, after: Object.keys(prunedCache).length });
+    prunedCount = before - Object.keys(prunedCache).length;
+    if (prunedCount > 0) {
+      logger.info('Pruned stale cache entries for deleted files', { pruned: prunedCount, before, after: Object.keys(prunedCache).length });
     }
   }
 
@@ -194,6 +255,8 @@ async function saveCache() {
     // Best-effort cleanup of tmp file
     await fs.unlink(tmpFile).catch(() => {});
   }
+
+  return prunedCount;
 }
 
 // ── Determine effective strategy for this run ────────────────────────────────
@@ -308,5 +371,6 @@ module.exports = {
   shouldScanFile,
   updateCache,
   getIncrementalStats,
+  getCacheStats,
   computeSignatureFingerprint, // exported for testing
 };

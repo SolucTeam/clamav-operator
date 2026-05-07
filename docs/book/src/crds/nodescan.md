@@ -57,10 +57,25 @@ spec:
 | `filesScanned` | Total files scanned |
 | `filesInfected` | Files with detected threats |
 | `filesSkipped` | Files skipped (errors or exclusions) |
-| `filesSkippedIncremental` | Files skipped by incremental logic |
-| `strategyUsed` | Actual strategy used (`full` or `incremental`) |
+| `filesSkippedIncremental` | Files skipped by incremental logic (unchanged since last scan) |
+| `strategyUsed` | Effective strategy used (`full` or `incremental`) |
 | `cacheHitRate` | Percentage of cache hits (incremental only) |
+| `duration` | Scan duration in seconds |
+| `exitCode` | Exit code of the scanner Job pod |
 | `startTime` | Job start time |
 | `completionTime` | Job completion time |
 | `jobRef` | Reference to the created Job |
-| `resultsPartial` | `true` if result parsing failed partially |
+| `resultsPartial` | `true` if result parsing failed partially — do not treat as clean |
+| `scannerMemoryRSSBytes` | RSS memory of the scanner Node.js process at end of scan (bytes) |
+| `scannerCPUUserSeconds` | User-space CPU consumed by the scanner Node.js process (seconds) |
+
+## Annotations
+
+| Annotation | Description |
+|------------|-------------|
+| `clamav.io/force-full-scan` | Set to `"true"` to trigger an immediate forced full scan, bypassing the incremental cache. Automatically removed after the scan completes (success or failure). If a Job is already running, the forced scan starts on the next reconcile once the Job finishes. |
+
+**Example:**
+```bash
+kubectl annotate nodescan <name> clamav.io/force-full-scan=true
+```

@@ -58,6 +58,12 @@ spec:
         {{- if gt (int .Values.scanner.jobActiveDeadlineSeconds) 0 }}
         - --job-active-deadline-seconds={{ .Values.scanner.jobActiveDeadlineSeconds }}
         {{- end }}
+        {{- if gt (int .Values.scanner.jobTTLSecondsAfterSucceeded) 0 }}
+        - --job-ttl-after-succeeded={{ .Values.scanner.jobTTLSecondsAfterSucceeded }}
+        {{- end }}
+        {{- if gt (int .Values.scanner.jobTTLSecondsAfterFailed) 0 }}
+        - --job-ttl-after-failed={{ .Values.scanner.jobTTLSecondsAfterFailed }}
+        {{- end }}
         env:
         # Scanner configuration — forwarded as env vars to scanner Job pods by the controller.
         # These are NOT operator flags; they are read by the controller via os.Getenv.
