@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 
 
+## [v0.7.1] - 2026-05-07
+
+## 🚀 Features
+
+_No new features_
+
+## 🐛 Bug Fixes
+
+* Merge pull request #55 from SolucTeam/fix/crd-float64-cpu-field (205a8b9)
+* fix(operator): rename ScannerCPUUserSeconds float64 to ScannerCPUUserMilliseconds int64 (35152d1)
+
+## 🔧 Other Changes
+
+_No other changes_
+
+
 ## [v0.6.1] - 2026-05-06
 
 ## 🚀 Features
