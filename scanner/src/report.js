@@ -17,6 +17,42 @@ const { CONFIG, INCREMENTAL_CONFIG, REPORT_CONFIG } = require('./config');
 const logger = require('./logger');
 
 /**
+ * Returns the total size in bytes of all files directly inside dirPath.
+ * Used to expose hostPath disk usage as a Prometheus metric.
+ * @param {string} dirPath
+ * @returns {Promise<number>}
+ */
+async function getDirSizeBytes(dirPath) {
+  try {
+    const entries = await fs.readdir(dirPath);
+    let total = 0;
+    for (const entry of entries) {
+      try {
+        const stat = await fs.stat(path.join(dirPath, entry));
+        if (stat.isFile()) total += stat.size;
+      } catch { /* skip unreadable entries */ }
+    }
+    return total;
+  } catch {
+    return 0;
+  }
+}
+
+/**
+ * Returns the size in bytes of a single file, or 0 if it does not exist.
+ * @param {string} filePath
+ * @returns {Promise<number>}
+ */
+async function getFileSizeBytes(filePath) {
+  try {
+    const stat = await fs.stat(filePath);
+    return stat.size;
+  } catch {
+    return 0;
+  }
+}
+
+/**
  * Generate JSON report + short text summary and write them to RESULTS_DIR.
  *
  * The text summary is used by the operator controller to quickly determine
@@ -26,7 +62,7 @@ const logger = require('./logger');
  * @param {object} stats            – from scanner.getStats()
  * @param {object} incrementalStats – from incremental.getIncrementalStats()
  * @param {string} effectiveStrategy
- * @returns {object} The report object (for logging)
+ * @returns {{ report: object, reportsRotated: number }}
  */
 async function generateReport(results, stats, incrementalStats, effectiveStrategy) {
   const duration = Math.round((Date.now() - stats.startTime) / 1000);
@@ -91,9 +127,9 @@ async function generateReport(results, stats, incrementalStats, effectiveStrateg
   // disk growth on the hostPath. JSON reports and their matching .txt
   // summaries are rotated together. Rotation is best-effort: failures are
   // logged but never fatal.
-  await rotateReports();
+  const reportsRotated = await rotateReports();
 
-  return report;
+  return { report, reportsRotated };
 }
 
 /**
@@ -139,9 +175,11 @@ async function rotateReports() {
       kept: limit,
       limit,
     });
+    return toDelete.length;
   } catch (err) {
     logger.warn('Report rotation failed', { error: err.message });
+    return 0;
   }
 }
 
-module.exports = { generateReport, rotateReports };
+module.exports = { generateReport, rotateReports, getDirSizeBytes, getFileSizeBytes };

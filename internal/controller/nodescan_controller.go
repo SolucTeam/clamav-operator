@@ -51,6 +51,25 @@ const (
 	maxParseRetries = 5
 	// parseRetryAnnotation tracks the number of parse retry attempts
 	parseRetryAnnotation = "clamav.io/parse-retries"
+
+	// ForceFullScanAnnotation can be set to "true" on a NodeScan to trigger an
+	// immediate forced full scan — bypassing the incremental cache — without
+	// deleting and recreating the NodeScan resource.
+	//
+	// Usage:
+	//   kubectl annotate nodescan <name> clamav.io/force-full-scan=true
+	//
+	// Behavior:
+	//   • If the NodeScan is in a terminal state (Completed/Failed) and no Job
+	//     is currently running, the controller resets the phase and creates a
+	//     new Job with FORCE_FULL_SCAN=true, which causes the scanner to skip
+	//     the incremental cache for this run.
+	//   • If a Job is already running when the annotation is set, the current
+	//     scan runs to completion normally; the forced full scan starts on the
+	//     next reconcile once the Job is gone.
+	//   • The annotation is automatically removed after the forced scan
+	//     completes (success or failure).
+	ForceFullScanAnnotation = "clamav.io/force-full-scan"
 )
 
 // NodeScanReconciler reconciles a NodeScan object
@@ -81,6 +100,16 @@ type NodeScanReconciler struct {
 	// When zero, falls back to the package-level constant JobActiveDeadlineSeconds (7200 s).
 	// Set via --job-active-deadline-seconds flag (Helm: scanner.jobActiveDeadlineSeconds).
 	JobActiveDeadlineSecs int64
+
+	// JobTTLAfterSucceeded is the TTL before Kubernetes auto-deletes a succeeded Job.
+	// When zero, falls back to TTLSecondsAfterSucceeded (3600 s).
+	// Set via --job-ttl-after-succeeded flag (Helm: scanner.jobTTLSecondsAfterSucceeded).
+	JobTTLAfterSucceeded int32
+
+	// JobTTLAfterFailed is the TTL before Kubernetes auto-deletes a failed Job.
+	// When zero, falls back to TTLSecondsAfterFailed (86400 s).
+	// Set via --job-ttl-after-failed flag (Helm: scanner.jobTTLSecondsAfterFailed).
+	JobTTLAfterFailed int32
 
 	// ParseMaxRetries overrides maxParseRetries when non-zero.
 	// Set to a small value (e.g. 1) in tests to avoid multi-minute backoff.
@@ -198,8 +227,30 @@ func (r *NodeScanReconciler) Reconcile(ctx context.Context, req ctrl.Request) (c
 		// here, creates a fresh Job, and can overwrite a Completed phase with
 		// Failed if the new Job encounters a transient error or if its pods are
 		// GC'd before getJobFailureInfo can read the exit code.
+		//
+		// Exception: the force-full-scan annotation explicitly requests a new
+		// scan run on an otherwise terminal NodeScan.
 		if nodeScan.Status.Phase == clamavv1alpha1.NodeScanPhaseCompleted ||
 			nodeScan.Status.Phase == clamavv1alpha1.NodeScanPhaseFailed {
+
+			if nodeScan.Annotations[ForceFullScanAnnotation] == "true" {
+				log.Info("force-full-scan annotation detected — resetting NodeScan for a forced full scan",
+					"node", nodeScan.Spec.NodeName)
+				r.Recorder.Event(&nodeScan, corev1.EventTypeNormal, "ForceFullScanRequested",
+					"Resetting phase to trigger a forced full scan (annotation: clamav.io/force-full-scan=true)")
+
+				statusBase := nodeScan.DeepCopy()
+				nodeScan.Status.Phase = ""
+				nodeScan.Status.StartTime = nil
+				nodeScan.Status.CompletionTime = nil
+				if err := r.Status().Patch(ctx, &nodeScan, client.MergeFrom(statusBase)); err != nil {
+					return ctrl.Result{}, err
+				}
+				// Requeue immediately — next reconcile will create the Job because
+				// Phase is now "" and the annotation is still "true".
+				return ctrl.Result{Requeue: true}, nil
+			}
+
 			return ctrl.Result{}, nil
 		}
 
@@ -344,13 +395,22 @@ func (r *NodeScanReconciler) Reconcile(ctx context.Context, req ctrl.Request) (c
 				return ctrl.Result{}, err
 			}
 
-			// Reduce the Job TTL to 1 h now that results are recorded in the NodeScan Status.
+			// Reduce the Job TTL now that results are recorded in the NodeScan Status.
 			// The CRD is the source of truth; the Job pod is now disposable.
-			r.patchJobTTL(ctx, &existingJob, TTLSecondsAfterSucceeded)
+			ttlSucceeded := int32(TTLSecondsAfterSucceeded)
+			if r.JobTTLAfterSucceeded > 0 {
+				ttlSucceeded = r.JobTTLAfterSucceeded
+			}
+			r.patchJobTTL(ctx, &existingJob, ttlSucceeded)
 
 			// Record metrics
 			recordNodeScanMetrics(&nodeScan, clamavv1alpha1.NodeScanPhaseCompleted)
 			decNodeScanRunning(nodeScan.Namespace)
+
+			// Remove the force-full-scan annotation now that the forced scan has
+			// completed successfully.  This prevents the next reconcile from
+			// triggering another reset loop.
+			r.removeForceFullScanAnnotation(ctx, &nodeScan, &existingJob)
 
 			// Record partial-results metric regardless of infection status.
 			recordPartialResults(nodeScan.Namespace, nodeScan.Spec.NodeName, nodeScan.Status.ResultsPartial)
@@ -412,13 +472,28 @@ func (r *NodeScanReconciler) Reconcile(ctx context.Context, req ctrl.Request) (c
 				return ctrl.Result{}, err
 			}
 
-			// Keep the failed Job for 24 h to allow log inspection (TTL already set at creation).
+			// Keep the failed Job long enough for log inspection (TTL already set at creation).
 			// Explicit patch ensures the value is correct even if someone changed it.
-			r.patchJobTTL(ctx, &existingJob, TTLSecondsAfterFailed)
+			ttlFailed := int32(TTLSecondsAfterFailed)
+			if r.JobTTLAfterFailed > 0 {
+				ttlFailed = r.JobTTLAfterFailed
+			}
+			r.patchJobTTL(ctx, &existingJob, ttlFailed)
 
 			// Record metrics
 			recordNodeScanMetrics(&nodeScan, clamavv1alpha1.NodeScanPhaseFailed)
 			decNodeScanRunning(nodeScan.Namespace)
+
+			// OOMKill detection: exit code 137 = SIGKILL from the kernel OOM reaper.
+			// Increment a dedicated counter so operators can alert without parsing logs.
+			if nodeScan.Status.ExitCode == 137 {
+				jobOOMKillsTotal.WithLabelValues(nodeScan.Namespace, nodeScan.Spec.NodeName).Inc()
+			}
+
+			// Remove the force-full-scan annotation even on failure so that the
+			// operator does not loop indefinitely resetting and re-scanning.
+			// The user can re-add the annotation manually to retry.
+			r.removeForceFullScanAnnotation(ctx, &nodeScan, &existingJob)
 		}
 		return ctrl.Result{}, nil
 	}
@@ -549,11 +624,11 @@ func (r *NodeScanReconciler) constructJobForNodeScan(nodeScan *clamavv1alpha1.No
 	}
 
 	// ForceFullScan overrides any incremental strategy for this specific run.
-	// Must be wired explicitly: a ClusterScan that sets forceFullScan on the
-	// template copies it to each NodeScan, but the scanner only learns about it
-	// via the FORCE_FULL_SCAN env var.
+	// Triggered by either:
+	//   • nodeScan.Spec.ForceFullScan (set by ClusterScan template or directly)
+	//   • clamav.io/force-full-scan=true annotation (one-shot, user-triggered)
 	forceFullScan := "false"
-	if nodeScan.Spec.ForceFullScan {
+	if nodeScan.Spec.ForceFullScan || nodeScan.Annotations[ForceFullScanAnnotation] == "true" {
 		forceFullScan = "true"
 	}
 
@@ -609,7 +684,11 @@ func (r *NodeScanReconciler) constructJobForNodeScan(nodeScan *clamavv1alpha1.No
 	// Will be patched to TTLSecondsAfterSucceeded once the Job succeeds.
 	ttl := nodeScan.Spec.TTLSecondsAfterFinished
 	if ttl == nil {
-		ttl = ptr.To(int32(TTLSecondsAfterFailed))
+		ttlFailed := int32(TTLSecondsAfterFailed)
+		if r.JobTTLAfterFailed > 0 {
+			ttlFailed = r.JobTTLAfterFailed
+		}
+		ttl = ptr.To(ttlFailed)
 	}
 
 	job := &batchv1.Job{
@@ -871,6 +950,28 @@ func (r *NodeScanReconciler) parseJobResults(ctx context.Context, nodeScan *clam
 			FilesSkippedIncremental int64  `json:"files_skipped_incremental"`
 			CacheHits               int64  `json:"cache_hits"`
 			CacheMisses             int64  `json:"cache_misses"`
+			// Maintenance & storage fields (emitted since scanner v0.6)
+			ReportsRotated     int64 `json:"reports_rotated"`
+			CacheEntriesPruned int64 `json:"cache_entries_pruned"`
+			ResultsDirBytes    int64 `json:"results_dir_bytes"`
+			CacheFileBytes     int64 `json:"cache_file_bytes"`
+			// Performance fields (emitted since scanner v0.7)
+			// These reflect only the Node.js orchestrator process.
+			// For full container CPU/RAM use cAdvisor metrics.
+			MemoryRSSBytes int64   `json:"memory_rss_bytes"`
+			CPUUserSeconds float64 `json:"cpu_user_seconds"`
+			// Logical cache stats (emitted since scanner v0.7, post-pruning).
+			// trackedFiles = entries in SCAN_CACHE; trackedBytes = sum of file sizes.
+			CacheTrackedFiles int64 `json:"cache_tracked_files"`
+			CacheTrackedBytes int64 `json:"cache_tracked_bytes"`
+			// Cache age and invalidation reason (emitted since scanner v0.8).
+			// CacheAgeSeconds = -1 when no valid cache was loaded.
+			// CacheInvalidationReason = "" when cache loaded OK (no invalidation).
+			CacheAgeSeconds         int64  `json:"cache_age_seconds"`
+			CacheInvalidationReason string `json:"cache_invalidation_reason"`
+			// SignatureDBMtimeSeconds is the Unix mtime of the newest .cvd/.cld file.
+			// 0 = not found or could not be stat'd.
+			SignatureDBMtimeSeconds float64 `json:"signature_db_mtime_seconds"`
 		}
 
 		var entry LogEntry
@@ -902,6 +1003,70 @@ func (r *NodeScanReconciler) parseJobResults(ctx context.Context, nodeScan *clam
 					rate = 100
 				}
 				nodeScan.Status.CacheHitRate = int32(rate) //nolint:gosec // rate is clamped to [0,100]
+			}
+
+			// Maintenance & storage metrics (scanner v0.6+).
+			// Zero-value for older scanner images — no-op for counters.
+			ns := nodeScan.Namespace
+			node := nodeScan.Spec.NodeName
+			if entry.ReportsRotated > 0 {
+				reportsRotatedTotal.WithLabelValues(ns, node).Add(float64(entry.ReportsRotated))
+			}
+			if entry.CacheEntriesPruned > 0 {
+				cacheEntriesPrunedTotal.WithLabelValues(ns, node).Add(float64(entry.CacheEntriesPruned))
+			}
+			if entry.ResultsDirBytes >= 0 {
+				resultsDirBytes.WithLabelValues(ns, node).Set(float64(entry.ResultsDirBytes))
+			}
+			if entry.CacheFileBytes >= 0 {
+				cacheFileBytes.WithLabelValues(ns, node).Set(float64(entry.CacheFileBytes))
+			}
+
+			// Performance stats (scanner v0.7+).
+			// Stored in NodeScan.Status so they survive pod GC.
+			// The actual Prometheus metrics are recorded in recordNodeScanMetrics()
+			// called after updateStatus(), once Duration is set.
+			if entry.MemoryRSSBytes > 0 {
+				nodeScan.Status.ScannerMemoryRSSBytes = entry.MemoryRSSBytes
+			}
+			if entry.CPUUserSeconds > 0 {
+				nodeScan.Status.ScannerCPUUserSeconds = entry.CPUUserSeconds
+			}
+
+			// Logical cache size — feeds clamav_scan_cache_size_bytes and
+			// clamav_scan_cache_files_total (previously dead code because
+			// recordScanCacheMetrics was never called).
+			if entry.CacheTrackedFiles >= 0 {
+				recordScanCacheMetrics(ns, node, entry.CacheTrackedBytes, entry.CacheTrackedFiles)
+			}
+
+			// Cache age (scanner v0.8+).  -1 = no valid cache was loaded.
+			cacheAgeSec.WithLabelValues(ns, node).Set(float64(entry.CacheAgeSeconds))
+
+			// Cache invalidation reason — only increment when the cache was actually
+			// discarded (non-empty reason string means a fresh full scan was forced).
+			if entry.CacheInvalidationReason != "" {
+				cacheInvalidationsTotal.WithLabelValues(ns, node, entry.CacheInvalidationReason).Inc()
+			}
+
+			// Signature database freshness (scanner v0.8+).
+			// age = now − mtime. 0 mtime = signatures not found; skip to avoid noise.
+			if entry.SignatureDBMtimeSeconds > 0 {
+				ageSec := float64(time.Now().Unix()) - entry.SignatureDBMtimeSeconds
+				if ageSec < 0 {
+					ageSec = 0 // clock skew guard
+				}
+				signatureDBAgeSec.WithLabelValues(ns, node).Set(ageSec)
+			}
+
+			// Parse-retry counter — driven by the annotation value written during
+			// the current reconcile cycle.  We read it here (after updateCache writes
+			// it) so the counter reflects retries that happened in THIS scan.
+			if retryVal, ok := nodeScan.Annotations[parseRetryAnnotation]; ok && retryVal != "" {
+				var retries int
+				if _, err := fmt.Sscanf(retryVal, "%d", &retries); err == nil && retries > 0 {
+					parseRetriesTotal.WithLabelValues(ns, node).Add(float64(retries))
+				}
 			}
 		}
 
@@ -1009,13 +1174,61 @@ func (r *NodeScanReconciler) updateStatus(ctx context.Context, nodeScan *clamavv
 	return r.Status().Patch(ctx, nodeScan, client.MergeFrom(base))
 }
 
-// updatePolicyStats updates the usage statistics of a ScanPolicy
+// updatePolicyStats updates the usage statistics of a ScanPolicy and records
+// the clamav_scanpolicy_usage_total Prometheus metric.
 func (r *NodeScanReconciler) updatePolicyStats(ctx context.Context, scanPolicy *clamavv1alpha1.ScanPolicy) {
 	now := metav1.Now()
 	scanPolicy.Status.LastUsed = &now
 	scanPolicy.Status.UsageCount++
 	if err := r.Status().Update(ctx, scanPolicy); err != nil {
 		log.FromContext(ctx).Error(err, "failed to update ScanPolicy stats")
+	}
+	// Record the Prometheus metric — was previously dead code because
+	// recordScanPolicyUsage was never called anywhere in production.
+	recordScanPolicyUsage(scanPolicy.Namespace, scanPolicy.Name)
+}
+
+// removeForceFullScanAnnotation removes the clamav.io/force-full-scan annotation from a
+// NodeScan after the forced scan has completed (success or failure). Best-effort: errors
+// are logged but do not affect the reconcile result.
+//
+// The annotation is only removed when the completed Job actually ran with FORCE_FULL_SCAN=true
+// (i.e. it was present when the Job was created). This prevents accidentally consuming an
+// annotation that was set by the user while a non-forced scan was already in flight.
+func (r *NodeScanReconciler) removeForceFullScanAnnotation(ctx context.Context, nodeScan *clamavv1alpha1.NodeScan, job *batchv1.Job) {
+	log := log.FromContext(ctx)
+
+	// Check that the annotation is actually set.
+	if nodeScan.Annotations[ForceFullScanAnnotation] != "true" {
+		return
+	}
+
+	// Only remove the annotation if the completed Job had FORCE_FULL_SCAN=true in its
+	// env — meaning it was created during a force-full-scan cycle, not a regular scan
+	// that happened to complete while the user had already set the annotation.
+	wasForced := false
+	for _, c := range job.Spec.Template.Spec.Containers {
+		for _, e := range c.Env {
+			if e.Name == "FORCE_FULL_SCAN" && e.Value == "true" {
+				wasForced = true
+				break
+			}
+		}
+	}
+	if !wasForced {
+		return
+	}
+
+	base := nodeScan.DeepCopy()
+	delete(nodeScan.Annotations, ForceFullScanAnnotation)
+	if err := r.Patch(ctx, nodeScan, client.MergeFrom(base)); err != nil {
+		log.Error(err, "failed to remove force-full-scan annotation — will retry on next reconcile")
+		// Non-fatal: the annotation will be re-evaluated on the next reconcile.
+		// Since the phase is now terminal, the terminal-guard will see the annotation
+		// and trigger another re-scan. To avoid this, the Patch is retried automatically
+		// by controller-runtime on the next requeue.
+	} else {
+		log.Info("Removed force-full-scan annotation after forced scan completed", "node", nodeScan.Spec.NodeName)
 	}
 }
 

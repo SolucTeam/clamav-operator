@@ -250,8 +250,12 @@ scanner:
     strategy: smart
     # For smart strategy: run a full scan every N incremental scans
     fullScanInterval: 10
-    # Maximum file age in hours to consider for incremental scans
-    maxFileAgeHours: 24
+    # Maximum file age in hours to consider for incremental scans.
+    # ⚠️  IMPORTANT: this must be greater than your scan interval to avoid
+    # treating every file as "too old" and falling back to a full scan.
+    # Example: daily scans → set to 168 (7 days). 24 h with daily scans
+    # means every cached file expires before the next run — defeating incremental.
+    maxFileAgeHours: 168
     # Skip files whose mtime+size haven't changed since last scan
     skipUnchangedFiles: true
     # Maximum number of JSON scan reports to retain per node on the hostPath.
@@ -264,6 +268,17 @@ scanner:
   # Increase on nodes with very large filesystems whose scans may take more than 2 h.
   # Example: 14400 for a 4-hour deadline.
   jobActiveDeadlineSeconds: 0
+
+  # TTL (seconds) before Kubernetes auto-deletes a succeeded scanner Job.
+  # The CRD is the source of truth — the Job pod is disposable once results
+  # are recorded. Keep short to avoid accumulating idle pods.
+  # 0 = use built-in default of 3600 s (1 h).
+  jobTTLSecondsAfterSucceeded: 0
+
+  # TTL (seconds) before Kubernetes auto-deletes a failed scanner Job.
+  # Keep long enough for log inspection after a scan failure.
+  # 0 = use built-in default of 86400 s (24 h).
+  jobTTLSecondsAfterFailed: 0
 
   # ServiceAccount for scanner jobs
   serviceAccount:
@@ -500,25 +515,38 @@ monitoring:
           summary: "Malware detected on node {{ $labels.node }}"
           description: "{{ $value }} infected files detected"
 
+      # FIX: was `for: 5m` with `increase([5m])` — the counter window expired
+      # before the `for` fired, causing consistent false negatives.
+      # Using increase([10m]) gives Prometheus 10 min of counter history so the
+      # `for: 0m` fires immediately on the first evaluation that sees a failure.
       - alert: ClamAVScanFailed
-        expr: increase(clamav_nodescans_total{status="Failed"}[5m]) > 0
-        for: 5m
+        expr: increase(clamav_nodescans_total{status="Failed"}[10m]) > 0
+        for: 0m
         labels:
           severity: warning
           team: platform
         annotations:
-          summary: "ClamAV scan failed"
-          description: "{{ $value }} scans have failed in the last 5 minutes"
+          summary: "ClamAV scan failed on node {{ $labels.node }}"
+          description: "{{ $value }} scan(s) failed in the last 10 minutes on node {{ $labels.node }} (namespace={{ $labels.namespace }})."
 
+      # FIX: was `time() - clamav_nodescan_last_completion_timestamp > 86400`
+      # which fired permanently on nodes that have NEVER scanned (timestamp=0,
+      # so time()-0 = now ≈ 1.7B seconds >> 86400).
+      # Added `> 0` guard: only alert on nodes that have completed at least one
+      # scan and then went silent. Nodes that have never scanned are a separate
+      # concern covered by ClamAVNodeNeverScanned below.
       - alert: ClamAVNoRecentScans
-        expr: time() - clamav_nodescan_last_completion_timestamp > 86400
+        expr: |
+          (clamav_nodescan_last_completion_timestamp > 0)
+          and
+          (time() - clamav_nodescan_last_completion_timestamp > 86400)
         for: 1h
         labels:
           severity: warning
           team: platform
         annotations:
-          summary: "No recent ClamAV scans"
-          description: "No scans completed in the last 24 hours"
+          summary: "No recent ClamAV scan on node {{ $labels.node }}"
+          description: "Node {{ $labels.node }} last completed a scan {{ $value | humanizeDuration }} ago (> 24 h). Check the ScanSchedule and scanner Job logs."
 
       - alert: ClamAVNotificationFailed
         expr: increase(clamav_notifications_failed_total[15m]) > 0
@@ -527,8 +555,8 @@ monitoring:
           severity: warning
           team: platform
         annotations:
-          summary: "ClamAV notification delivery failed"
-          description: "{{ $value }} notifications failed to deliver in the last 15 minutes (channel={{ $labels.channel }})"
+          summary: "ClamAV notification delivery failed (channel={{ $labels.channel }})"
+          description: "{{ $value }} notifications failed to deliver in the last 15 minutes via channel={{ $labels.channel }}. Check webhook/SMTP config."
 
       - alert: ClamAVPartialScanResults
         expr: clamav_nodescan_partial_results > 0
@@ -537,18 +565,130 @@ monitoring:
           severity: warning
           team: security
         annotations:
-          summary: "ClamAV scan returned partial results — do not trust as clean"
-          description: "NodeScan on node {{ $labels.node }} has partial results. Re-run required."
+          summary: "ClamAV scan returned partial results on node {{ $labels.node }}"
+          description: "NodeScan on node {{ $labels.node }} has partial/unreliable results. Do NOT treat as clean — re-run required."
 
+      # FIX: cert-manager may not be installed → metric absent → alert never fires
+      # (silently broken). Wrapped with `unless absent(...)` so the alert is
+      # suppressed entirely when cert-manager is not present rather than hiding
+      # a misconfiguration. Teams using cert-manager will still get notified.
       - alert: ClamAVWebhookCertExpiringSoon
-        expr: certmanager_certificate_expiration_timestamp_seconds{name=~".*clamav.*webhook.*"} - time() < 604800
+        expr: |
+          (certmanager_certificate_expiration_timestamp_seconds{name=~".*clamav.*webhook.*"} - time() < 604800)
+          unless absent(certmanager_certificate_expiration_timestamp_seconds{name=~".*clamav.*webhook.*"})
         for: 1h
         labels:
           severity: warning
           team: platform
         annotations:
           summary: "ClamAV webhook certificate expiring within 7 days"
-          description: "Certificate {{ $labels.name }} expires in {{ $value | humanizeDuration }}. Check cert-manager."
+          description: "Certificate {{ $labels.name }} expires in {{ $value | humanizeDuration }}. Verify cert-manager CertificateRequest and renew if needed."
+
+      - alert: ClamAVResultsDirTooLarge
+        expr: clamav_results_dir_bytes > 524288000
+        for: 30m
+        labels:
+          severity: warning
+          team: platform
+        annotations:
+          summary: "ClamAV results directory too large on node {{ $labels.node }}"
+          description: "Results hostPath (/var/log/clamav-scans) is {{ $value | humanizeBytes }} on node {{ $labels.node }}. Decrease scanner.maxScanReports or check rotation."
+
+      - alert: ClamAVCacheFileTooLarge
+        expr: clamav_cache_file_bytes > 104857600
+        for: 30m
+        labels:
+          severity: warning
+          team: platform
+        annotations:
+          summary: "ClamAV incremental cache file too large on node {{ $labels.node }}"
+          description: "Cache file is {{ $value | humanizeBytes }} on node {{ $labels.node }}. Cache pruning may not be working — check scanner logs."
+
+      # ── NEW: Operator health ──────────────────────────────────────────────
+      # controller-runtime exposes controller_runtime_reconcile_errors_total
+      # automatically. A sustained error rate means the operator is unable to
+      # process NodeScan/ClusterScan events (API server unreachable, RBAC issue…).
+      - alert: ClamAVOperatorReconcileErrors
+        expr: rate(controller_runtime_reconcile_errors_total{controller=~"nodescan|clusterscan|scanschedule"}[5m]) > 0.1
+        for: 10m
+        labels:
+          severity: warning
+          team: platform
+        annotations:
+          summary: "ClamAV operator reconcile errors elevated (controller={{ $labels.controller }})"
+          description: "{{ $labels.controller }} controller has {{ $value | humanize }} errors/s over the last 5 minutes. Check operator logs and K8s API connectivity."
+
+      # ── NEW: Stuck scan detection ─────────────────────────────────────────
+      # A NodeScan staying in Running phase for > 3 h is almost certainly a
+      # zombie: the Job pod is stuck, OOMKilled in a retry loop, or the node
+      # lost connectivity. activeDeadlineSeconds should kill it, but this alert
+      # catches configuration gaps and provides earlier visibility.
+      - alert: ClamAVScanStuck
+        expr: clamav_nodescans_running > 0 and (time() - clamav_nodescan_last_completion_timestamp) > 36000
+        for: 30m
+        labels:
+          severity: warning
+          team: platform
+        annotations:
+          summary: "ClamAV scan appears stuck on node {{ $labels.node }}"
+          description: "Node {{ $labels.node }} has had a running NodeScan for > 10 h with no completion. Check Job status and scanner pod logs."
+
+      # ── NEW: High scan duration ───────────────────────────────────────────
+      # p95 > 7200 s (2 h) indicates the filesystem has grown beyond scanner
+      # capacity, the node I/O is saturated, or signatures are too large.
+      - alert: ClamAVHighScanDuration
+        expr: histogram_quantile(0.95, sum by (node, le) (rate(clamav_scan_duration_seconds_bucket[30m]))) > 7200
+        for: 1h
+        labels:
+          severity: warning
+          team: platform
+        annotations:
+          summary: "ClamAV scan duration p95 > 2 h on node {{ $labels.node }}"
+          description: "p95 scan duration on node {{ $labels.node }} is {{ $value | humanizeDuration }}. Consider enabling incremental scanning, reducing scan paths, or increasing resources."
+
+      # ── NEW: Scan throughput regression ──────────────────────────────────
+      # A sudden drop in files/s (vs the rolling average) indicates I/O
+      # degradation, OOM pressure, or a clamscan binary issue.
+      - alert: ClamAVLowScanThroughput
+        expr: |
+          (clamav_scan_files_per_second > 0)
+          and
+          (clamav_scan_files_per_second < 5)
+        for: 30m
+        labels:
+          severity: warning
+          team: platform
+        annotations:
+          summary: "ClamAV scan throughput very low on node {{ $labels.node }}"
+          description: "Scan throughput on node {{ $labels.node }} is {{ $value | humanize }} files/s (threshold: 5 files/s). Check node I/O, memory pressure, and scanner resource limits."
+
+      # ── NEW: Stale ClamAV signatures ─────────────────────────────────────
+      # Signatures older than 24 h mean the scanner may miss threats discovered
+      # after the last freshclam update.  Requires standalone mode or a clamd
+      # sidecar that updates signatures and touches the .cvd/.cld files.
+      - alert: ClamAVSignaturesStale
+        expr: clamav_signature_db_age_seconds > 86400
+        for: 1h
+        labels:
+          severity: warning
+          team: platform
+        annotations:
+          summary: "ClamAV signature database is stale on node {{ $labels.node }}"
+          description: "Signatures on node {{ $labels.node }} are {{ $value | humanizeDuration }} old (threshold: 24 h). Check freshclam / signature update configuration."
+
+      # ── NEW: OOMKilled scanner pods ───────────────────────────────────────
+      # Each OOMKill (exit 137) means the scanner ran out of memory and was
+      # killed by the kernel.  Sustained kills indicate resource limits that
+      # are too low for the workload.
+      - alert: ClamAVOOMKillsElevated
+        expr: increase(clamav_job_oom_kills_total[1h]) > 2
+        for: 0m
+        labels:
+          severity: warning
+          team: platform
+        annotations:
+          summary: "ClamAV scanner OOMKilled repeatedly on node {{ $labels.node }}"
+          description: "Node {{ $labels.node }} had {{ $value }} OOMKilled scanner pods in the last hour. Increase the scanner pod memory limits or reduce the scan paths."
 
 # =============================================================================
 # DEFAULT SCAN POLICY

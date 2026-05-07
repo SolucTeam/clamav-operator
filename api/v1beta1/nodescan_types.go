@@ -194,6 +194,10 @@ type NodeScanStatus struct {
 	FailureReason string `json:"failureReason,omitempty"`
 	// +optional
 	ExitCode int32 `json:"exitCode,omitempty"`
+	// +optional
+	ScannerMemoryRSSBytes int64 `json:"scannerMemoryRSSBytes,omitempty"`
+	// +optional
+	ScannerCPUUserSeconds float64 `json:"scannerCPUUserSeconds,omitempty"`
 }
 
 // +kubebuilder:object:root=true

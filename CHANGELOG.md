@@ -42,10 +42,29 @@ _No bug fixes_
 * feat(scanner): automatic rotation of scan reports on the node hostPath — keeps the N most recent JSON reports per node (default 30) and deletes older ones after each scan, preventing unbounded disk growth. Configurable via `scanner.incremental.maxScanReports` (Helm) or `MAX_SCAN_REPORTS` env var.
 * feat(scanner): automatic pruning of stale incremental cache entries — files deleted from the node filesystem are removed from the cache at the end of each scan, keeping cache size proportional to the actual number of files on the node.
 * feat(operator): `activeDeadlineSeconds` is now configurable via `--job-active-deadline-seconds` flag and `scanner.jobActiveDeadlineSeconds` Helm value (default 0 = keep 7200 s built-in). Allows operators with large filesystems to increase the Job timeout beyond 2 h.
+* feat(observability): add 8 new Prometheus metrics — `clamav_scan_files_per_second`, `clamav_scanner_memory_rss_bytes`, `clamav_scanner_cpu_user_seconds`, `clamav_signature_db_age_seconds`, `clamav_job_oom_kills_total`, `clamav_parse_retries_total`, `clamav_cache_invalidations_total`, `clamav_cache_age_seconds`. Total metric count: 33.
+* feat(observability): add 6 new PrometheusRule alerts — `ClamAVSignaturesStale`, `ClamAVOOMKillsElevated`, `ClamAVScanStuck`, `ClamAVHighScanDuration`, `ClamAVLowScanThroughput`, `ClamAVOperatorReconcileErrors`. Total alert count: 14.
+* feat(observability): fix 3 existing alert bugs — `ClamAVScanFailed` false negatives (window/for mismatch), `ClamAVNoRecentScans` permanent trigger on nodes that never scanned (timestamp=0 guard), `ClamAVWebhookCertExpiringSoon` silent failure when cert-manager is not installed (`absent()` guard).
+* feat(observability): raise `ClamAVScanStuck` threshold from 3 h to 10 h to avoid false positives on large filesystems.
+* feat(scanner): emit `memory_rss_bytes` and `cpu_user_seconds` in the `scan_complete` log line — Node.js process resource usage at end of scan.
+* feat(scanner): emit `signature_db_mtime_seconds` in the `scan_complete` log line — mtime of the newest `.cvd`/`.cld` file, used by the operator to compute `clamav_signature_db_age_seconds`.
+* feat(scanner): emit `cache_age_seconds`, `cache_invalidation_reason`, `cache_tracked_files`, `cache_tracked_bytes` in the `scan_complete` log line — enables cache health metrics and invalidation tracking.
+* feat(operator): surface `scannerMemoryRSSBytes` and `scannerCPUUserSeconds` in `NodeScan.Status` — persisted to the CRD and converted between v1alpha1/v1beta1.
+* feat(operator): detect OOMKilled scanner pods (exit code 137) and increment `clamav_job_oom_kills_total`.
+* feat(operator): call `removeForceFullScanAnnotation` in both the Completed and Failed handlers — annotation is now reliably cleaned up after every forced scan.
+* feat(operator): `recordScanPolicyUsage` is now called on every reconcile that applies a ScanPolicy (was dead code).
+* feat(operator): `recordScanCacheMetrics` is now called after each scan with logical cache size (was dead code — scanner never emitted the required fields).
+* feat(dashboard): Grafana dashboard updated to 56 panels across 9 rows — add Performance & Resources and Security & Freshness rows with cAdvisor CPU/RAM, Node.js process metrics, signature age, OOMKills, cache invalidations, and node coverage ratio.
+* feat(dashboard): dashboard is now multi-cluster ready — `cluster` variable with cascading `cluster → namespace → node` chain, `cluster=~"$cluster"` filter on all 62 PromQL expressions.
+* feat(dashboard): all stat panels have colour thresholds (green/yellow/red), timeseries panels use smooth lines with fill opacity, overrides apply consistent per-series colours.
 
 ## 🐛 Bug Fixes
 
-_None_
+* fix(alerts): `ClamAVScanFailed` — changed `increase([5m]) for: 5m` to `increase([10m]) for: 0m` to prevent the counter window expiring before the `for` clause fires.
+* fix(alerts): `ClamAVNoRecentScans` — added `clamav_nodescan_last_completion_timestamp > 0` guard to prevent permanent firing on nodes that have never completed a scan.
+* fix(alerts): `ClamAVWebhookCertExpiringSoon` — wrapped with `unless absent(...)` to silence the alert when cert-manager is not installed and the metric does not exist.
+* fix(dashboard): removed hardcoded `strategy="smart"` target from the strategy panel (scanner only emits `full` or `incremental`).
+* fix(dashboard): datasource template variable — added `"query": "prometheus"` so Grafana correctly lists Prometheus datasources only.
 
 ## ⚠️ Known Limitations
 
@@ -56,6 +75,9 @@ _None_
 * docs: add `MAX_SCAN_REPORTS` and incremental env vars to ENVIRONMENT.md
 * docs: document report retention, cache pruning, and `maxFileAgeHours` pitfall in scanning-modes.md
 * docs: correct `activeDeadlineSeconds` documentation in runbook — field is now configurable via `--job-active-deadline-seconds` / `scanner.jobActiveDeadlineSeconds`
+* docs(monitoring): rewrite metrics reference — 33 metrics across 7 categories, 14 alerts across 3 categories, Grafana multi-cluster setup guide.
+* docs(runbook): add alerts table with all 14 rules, add scenarios #12 (results dir too large) and #13 (low scan throughput), update OOMKill scenario with new metric.
+* docs(crds): add `scannerMemoryRSSBytes`, `scannerCPUUserSeconds`, `duration`, `exitCode` to NodeScan status fields; document `clamav.io/force-full-scan` annotation.
 
 
 ## [v0.5.8] - 2026-05-06
