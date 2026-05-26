@@ -67,4 +67,23 @@ spec:
     nodeSelector:
       {{- toYaml . | nindent 6 }}
     {{- end }}
+    {{- if .Values.defaultScanSchedule.strategy }}
+    strategy: {{ .Values.defaultScanSchedule.strategy }}
+    {{- end }}
+    {{- /* incrementalConfig is only meaningful for incremental/smart strategies.
+         Skip it entirely when strategy is "full" or not set to avoid pushing
+         no-op config fields into every NodeScan CR. */}}
+    {{- $strat := .Values.defaultScanSchedule.strategy }}
+    {{- if and $strat (ne $strat "full") }}
+    {{- with .Values.defaultScanSchedule.incrementalConfig }}
+    incrementalConfig:
+      {{- if .baselineInterval }}
+      baselineInterval: {{ .baselineInterval }}
+      {{- end }}
+      {{- if .maxAge }}
+      maxAge: {{ .maxAge }}
+      {{- end }}
+      skipUnchangedFiles: {{ .skipUnchangedFiles }}
+    {{- end }}
+    {{- end }}
 {{- end }}

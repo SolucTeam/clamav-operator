@@ -18,85 +18,6 @@ package controller
 
 import (
 	corev1 "k8s.io/api/core/v1"
-	"k8s.io/apimachinery/pkg/api/resource"
-)
-
-// Default resource limits and requests for scan jobs.
-// These values are applied when no custom resources are specified
-// in NodeScan, ClusterScan, or ScanPolicy resources.
-//
-// STANDALONE MODE MEMORY MODEL
-// In standalone mode the scanner spawns a new /usr/bin/clamscan subprocess for
-// every file it scans. Each subprocess loads the full ClamAV signature database
-// (~300-400 MB) into its own address space before scanning the file. With
-// MaxConcurrent=N you therefore have N simultaneous database copies in memory:
-//
-//	memory_needed ≈ N × 400 MB + 300 MB (Node.js runtime + OS buffers)
-//
-// The previous defaults (512 Mi limit, 3 concurrent) guaranteed an OOMKill on
-// virtually every standalone scan. The corrected defaults below assume
-// MaxConcurrent=1 (the standalone default), which keeps peak memory under 1 Gi.
-// If MaxConcurrent is raised, raise the memory limits proportionally.
-//
-// DAEMON MODE MEMORY MODEL
-// In daemon mode the clamd process loads the signature database once on startup.
-// File-scan requests are forwarded over a Unix socket — no per-file subprocess
-// is spawned. Memory consumption is much lower and is dominated by the daemon
-// pod, not the scanner Job. The scanner Job itself needs only ~256 Mi.
-var (
-	// DefaultScannerResources defines the default resource requirements for scanner jobs.
-	// Sized for standalone mode with MaxConcurrent=1. Override via ScanPolicy.spec.resources.
-	DefaultScannerResources = corev1.ResourceRequirements{
-		Requests: corev1.ResourceList{
-			corev1.ResourceCPU:              resource.MustParse("250m"),
-			corev1.ResourceMemory:           resource.MustParse("1Gi"),
-			corev1.ResourceEphemeralStorage: resource.MustParse("256Mi"),
-		},
-		Limits: corev1.ResourceList{
-			// 1 core: clamscan is CPU-intensive but capping at 1 core prevents
-			// scan jobs from starving other workloads on the same node.
-			corev1.ResourceCPU: resource.MustParse("1000m"),
-			// 2 Gi: 1× database load (~400 Mi) + Node.js runtime (~200 Mi)
-			// + headroom for archive decompression (clamscan unpacks ZIPs/TARs
-			// into memory before scanning their contents).
-			corev1.ResourceMemory: resource.MustParse("2Gi"),
-			// Cap ephemeral storage so a runaway scan can't fill the node's disk.
-			corev1.ResourceEphemeralStorage: resource.MustParse("2Gi"),
-		},
-	}
-
-	// HighPriorityScannerResources defines resources for high-priority scans.
-	// Used when NodeScan.Spec.Priority is set to "high".
-	// Allows MaxConcurrent=2 in standalone mode (2 × 400 Mi ≈ 800 Mi peak DB load).
-	HighPriorityScannerResources = corev1.ResourceRequirements{
-		Requests: corev1.ResourceList{
-			corev1.ResourceCPU:              resource.MustParse("500m"),
-			corev1.ResourceMemory:           resource.MustParse("1500Mi"),
-			corev1.ResourceEphemeralStorage: resource.MustParse("512Mi"),
-		},
-		Limits: corev1.ResourceList{
-			corev1.ResourceCPU:              resource.MustParse("2000m"),
-			corev1.ResourceMemory:           resource.MustParse("3Gi"),
-			corev1.ResourceEphemeralStorage: resource.MustParse("4Gi"),
-		},
-	}
-
-	// LowPriorityScannerResources defines resources for low-priority/background scans.
-	// Used when NodeScan.Spec.Priority is set to "low".
-	// MaxConcurrent MUST be 1 with these limits — a second clamscan subprocess
-	// loading the DB would push total memory over the 2 Gi limit.
-	LowPriorityScannerResources = corev1.ResourceRequirements{
-		Requests: corev1.ResourceList{
-			corev1.ResourceCPU:              resource.MustParse("100m"),
-			corev1.ResourceMemory:           resource.MustParse("768Mi"),
-			corev1.ResourceEphemeralStorage: resource.MustParse("128Mi"),
-		},
-		Limits: corev1.ResourceList{
-			corev1.ResourceCPU:              resource.MustParse("500m"),
-			corev1.ResourceMemory:           resource.MustParse("2Gi"),
-			corev1.ResourceEphemeralStorage: resource.MustParse("1Gi"),
-		},
-	}
 )
 
 // Default scan configuration values
@@ -148,14 +69,16 @@ var DefaultScanPaths = []string{
 	"/host/opt",
 }
 
-// GetResourcesForPriority returns the appropriate resource requirements based on scan priority.
-func GetResourcesForPriority(priority string) corev1.ResourceRequirements {
-	switch priority {
-	case "high":
-		return HighPriorityScannerResources
-	case "low":
-		return LowPriorityScannerResources
-	default:
-		return DefaultScannerResources
-	}
+// GetResourcesForPriority returns an empty ResourceRequirements so that no
+// resource constraints are imposed by the operator itself. Resources must be
+// defined explicitly by the user via one of the following (in priority order):
+//
+//  1. NodeScan.spec.resources (per-scan override)
+//  2. ScanPolicy.spec.resources (policy-level, set via Helm defaultScanPolicy.spec.resources)
+//
+// If neither is set the pod runs without resource limits, relying on the
+// cluster's LimitRange or namespace defaults. This intentional design keeps
+// the operator unopinionated about sizing — the user owns that decision.
+func GetResourcesForPriority(_ string) corev1.ResourceRequirements {
+	return corev1.ResourceRequirements{}
 }

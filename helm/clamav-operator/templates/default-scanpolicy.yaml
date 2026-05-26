@@ -32,5 +32,16 @@ metadata:
     "helm.sh/hook": post-install,post-upgrade
     "helm.sh/hook-weight": "10"
 spec:
-  {{- toYaml .Values.defaultScanPolicy.spec | nindent 2 }}
+  {{- /*
+    Render spec fields individually so that empty maps (e.g. resources: {})
+    are omitted rather than serialised as "{}" — which would cause the API
+    server to store a non-nil Resources pointer and override any cluster
+    LimitRange defaults.
+  */}}
+  {{- $spec := omit .Values.defaultScanPolicy.spec "resources" }}
+  {{- toYaml $spec | nindent 2 }}
+  {{- with .Values.defaultScanPolicy.spec.resources }}
+  resources:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
 {{- end }}

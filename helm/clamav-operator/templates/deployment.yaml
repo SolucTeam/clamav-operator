@@ -45,9 +45,13 @@ spec:
         - /manager
         args:
         - --leader-elect={{ .Values.operator.leaderElection.enabled }}
+        - --lease-duration={{ .Values.operator.leaderElection.leaseDuration }}
+        - --renew-deadline={{ .Values.operator.leaderElection.renewDeadline }}
+        - --retry-period={{ .Values.operator.leaderElection.retryPeriod }}
         - --health-probe-bind-address=:{{ .Values.operator.service.healthPort }}
         - --metrics-bind-address=:{{ .Values.operator.service.metricsPort }}
         - --scanner-image={{ include "clamav-operator.scannerImage" . }}
+        - --scanner-service-account={{ .Values.scanner.serviceAccount.name | default "clamav-scanner" }}
         {{- if .Values.webhook.enabled }}
         - --webhook-port={{ .Values.webhook.port }}
         {{- end }}
@@ -65,10 +69,17 @@ spec:
         - --job-ttl-after-failed={{ .Values.scanner.jobTTLSecondsAfterFailed }}
         {{- end }}
         env:
+        # Operator pod identity — used by startup checks to query resources in the correct namespace.
+        - name: POD_NAMESPACE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.namespace
         # Scanner configuration — forwarded as env vars to scanner Job pods by the controller.
         # These are NOT operator flags; they are read by the controller via os.Getenv.
         - name: SCANNER_MODE
           value: {{ .Values.scanner.mode | quote }}
+        - name: SCANNER_IMAGE_PULL_POLICY
+          value: {{ .Values.scanner.image.pullPolicy | quote }}
         - name: SCANNER_CLAMSCAN_PATH
           value: {{ .Values.scanner.standalone.clamscanPath | quote }}
         - name: SCANNER_CLAMAV_DB_PATH
@@ -133,8 +144,10 @@ spec:
             port: health
           initialDelaySeconds: 5
           periodSeconds: 10
+        {{- with .Values.operator.resources }}
         resources:
-          {{- toYaml .Values.operator.resources | nindent 10 }}
+          {{- toYaml . | nindent 10 }}
+        {{- end }}
         {{- if or .Values.volumeMounts .Values.webhook.enabled }}
         volumeMounts:
         {{- with .Values.volumeMounts }}
