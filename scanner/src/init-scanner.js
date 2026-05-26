@@ -53,7 +53,7 @@ async function initScanner() {
 async function initStandaloneScanner() {
   logger.info('Standalone mode — using local clamscan binary');
 
-  // 1. Verify binary
+  // 1. Verify binary exists
   try {
     await fs.access(CONFIG.clamscanPath);
   } catch {
@@ -68,26 +68,16 @@ async function initStandaloneScanner() {
   // 3. Verify at least one signature database is present
   await verifySignatures();
 
-  // 4. Build NodeClam in clamscan-only mode
-  const clamscan = await new NodeClam().init({
-    removeInfected: false,
-    quarantineInfected: false,
-    debugMode: false,
-    clamscan: {
-      path: CONFIG.clamscanPath,
-      db: CONFIG.clamavDbPath,
-      scanArchives: true,
-      active: true,
-    },
-    clamdscan: {
-      active: false,
-    },
-    preference: 'clamscan',
-  });
-
-  const version = await clamscan.getVersion();
-  logger.info('Standalone scanner initialized', { version });
-  return clamscan;
+  // 4. Return a plain config object — scanner.js spawns a single clamscan
+  //    --file-list subprocess directly via child_process. The DB is loaded
+  //    exactly once per scan job (inside that subprocess) instead of once per
+  //    file, eliminating the N × 800 Mi OOMKill risk of the old approach.
+  //    NodeClam is not used in standalone mode.
+  return {
+    mode: 'standalone',
+    clamscanPath: CONFIG.clamscanPath,
+    dbPath: CONFIG.clamavDbPath,
+  };
 }
 
 // =============================================================================

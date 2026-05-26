@@ -671,7 +671,7 @@ monitoring:
           team: platform
         annotations:
           summary: "ClamAV scanner OOMKilled repeatedly on node {{ $labels.node }}"
-          description: "Node {{ $labels.node }} had {{ $value }} OOMKilled scanner pods in the last hour. Increase the scanner pod memory limits or reduce the scan paths."
+          description: "Node {{ $labels.node }} had {{ $value }} OOMKilled scanner pods in the last hour. In standalone mode the scanner needs ~800 Mi peak / ~400 Mi steady — set resources.limits.memory >= 1 Gi in the ScanPolicy."
 
 # =============================================================================
 # DEFAULT SCAN POLICY
@@ -695,9 +695,11 @@ defaultScanPolicy:
       - "/var/lib/containerd/*"
 
     # Maximum concurrent file scans per node.
-    # Reduced to 2 (from 3) to limit CPU pressure on busy nodes.
-    # Tune upward only on dedicated scanning nodes.
-    maxConcurrent: 2
+    # Standalone mode: this value is IGNORED. The scanner spawns a single
+    #   clamscan --file-list subprocess that loads the DB once (~800 Mi peak,
+    #   ~400 Mi steady) regardless of file count. No OOMKill risk.
+    # Remote mode: controls the number of concurrent TCP connections to clamd.
+    maxConcurrent: 1
 
     # File timeout in milliseconds
     fileTimeout: 300000

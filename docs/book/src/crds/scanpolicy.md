@@ -41,7 +41,7 @@ spec:
 |-------|------|-------------|
 | `paths` | []string | Paths to scan |
 | `excludePatterns` | []string | Regex exclusion patterns |
-| `maxConcurrent` | int32 | Max concurrent file scans |
+| `maxConcurrent` | int32 | **Remote mode only** — concurrent clamd TCP connections. Ignored in standalone mode. |
 | `fileTimeout` | int64 | Per-file timeout in milliseconds |
 | `maxFileSize` | int64 | Max file size in bytes |
 | `resources` | ResourceRequirements | CPU/memory for the scanner Job |

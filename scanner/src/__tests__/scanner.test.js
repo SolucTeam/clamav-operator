@@ -20,8 +20,12 @@ const path = require('path');
 // Helpers
 // ---------------------------------------------------------------------------
 
+// Returns a fake scanner in remote mode so tests exercise the remote code
+// path without spawning a real clamscan subprocess. Standalone mode integration
+// testing requires a real clamscan binary and is covered by e2e/CI tests.
 function makeFakeClamscan({ isInfected = false, viruses = [] } = {}) {
   return {
+    mode: 'remote',
     async isInfected(filePath) {
       return { file: filePath, isInfected, viruses };
     },
