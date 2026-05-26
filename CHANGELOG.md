@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 
 
+## [v0.7.2] - 2026-05-26
+
+## 🚀 Features
+
+_No new features_
+
+## 🐛 Bug Fixes
+
+* Merge pull request #60 from SolucTeam/fix/incremental-scan-and-helm-wiring (4614040)
+* fix: incremental scan, helm wiring, and remove hardcoded resources (b5bb891)
+
+## 🔧 Other Changes
+
+* refactor(scanner): single clamscan --file-list per scan job (standalone) (57f4d46)
+* chore: update CHANGELOG for v0.7.1 (8870fea)
+
+
 ## [v0.7.1] - 2026-05-07
 
 ## 🚀 Features
