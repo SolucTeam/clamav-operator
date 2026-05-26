@@ -254,17 +254,33 @@ The next scan for that node will automatically run as a **full scan** and rebuil
 kubectl -n $NS describe pod <scanner-pod> | grep -A5 "OOMKilled\|Limits"
 ```
 
-**Fix:**
-```bash
-# Increase scanner memory limit
-helm upgrade $RELEASE oci://ghcr.io/solucteam/charts/clamav-operator \
-  -n $NS \
-  --set scanner.resources.limits.memory=3Gi \
-  --set scanner.resources.requests.memory=1Gi \
-  --reuse-values
-```
+**Root cause (standalone mode):**
+The scanner spawns a single `clamscan` subprocess that loads the full ClamAV signature database into memory. Memory profile:
 
-For production, use `values-production.yaml` which sets `limits.memory=2Gi` by default — sufficient for nodes with up to ~500k files.
+| Phase | RAM |
+|-------|-----|
+| DB decompression at startup | ~800 Mi peak |
+| Scan in progress | ~400 Mi steady |
+
+If `resources.limits.memory` is below ~800 Mi the pod is OOMKilled during DB load.
+
+**Fix — set memory limits in your ScanPolicy:**
+```yaml
+# In your values override file
+defaultScanPolicy:
+  spec:
+    resources:
+      requests:
+        memory: 800Mi
+        cpu: 250m
+      limits:
+        memory: 1500Mi
+        cpu: 1000m
+```
+```bash
+helm upgrade $RELEASE oci://ghcr.io/solucteam/charts/clamav-operator \
+  -n $NS -f your-values.yaml --reuse-values
+```
 
 ---
 

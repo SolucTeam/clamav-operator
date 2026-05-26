@@ -20,6 +20,7 @@ import (
 	"flag"
 	"os"
 	"strings"
+	"time"
 
 	corev1 "k8s.io/api/core/v1"
 
@@ -67,6 +68,9 @@ func init() {
 func main() {
 	var metricsAddr string
 	var enableLeaderElection bool
+	var leaseDuration time.Duration
+	var renewDeadline time.Duration
+	var retryPeriod time.Duration
 	var probeAddr string
 	var webhookPort int
 	var scannerImage string
@@ -83,6 +87,12 @@ func main() {
 	flag.BoolVar(&enableLeaderElection, "leader-elect", false,
 		"Enable leader election for controller manager. "+
 			"Enabling this will ensure there is only one active controller manager.")
+	flag.DurationVar(&leaseDuration, "lease-duration", 15*time.Second,
+		"Duration a leader election lease is held before another candidate can attempt to acquire it.")
+	flag.DurationVar(&renewDeadline, "renew-deadline", 10*time.Second,
+		"Duration the leader will retry refreshing its lease before giving up.")
+	flag.DurationVar(&retryPeriod, "retry-period", 2*time.Second,
+		"Duration clients should wait between attempting to acquire and renew the leader election lease.")
 	flag.IntVar(&webhookPort, "webhook-port", 9443,
 		"Port the webhook server listens on. Must match the containerPort in the Helm Deployment "+
 			"(webhook.port value) and the Service targetPort.")
@@ -128,6 +138,9 @@ func main() {
 		HealthProbeBindAddress: probeAddr,
 		LeaderElection:         enableLeaderElection,
 		LeaderElectionID:       "clamav-operator.clamav.io",
+		LeaseDuration:          &leaseDuration,
+		RenewDeadline:          &renewDeadline,
+		RetryPeriod:            &retryPeriod,
 	})
 	if err != nil {
 		setupLog.Error(err, "unable to start manager")
@@ -214,6 +227,7 @@ func main() {
 		Recorder:                mgr.GetEventRecorderFor("nodescan-controller"),
 		Clientset:               clientset,
 		ScannerImage:            scannerImage,
+		ScannerServiceAccount:   scannerServiceAccount,
 		ClamavHost:              clamavHost,
 		ClamavPort:              clamavPort,
 		ScannerImagePullSecrets: scannerPullSecrets,

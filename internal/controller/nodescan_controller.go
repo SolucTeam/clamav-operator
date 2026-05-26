@@ -111,12 +111,29 @@ type NodeScanReconciler struct {
 	// Set via --job-ttl-after-failed flag (Helm: scanner.jobTTLSecondsAfterFailed).
 	JobTTLAfterFailed int32
 
+	// ScannerServiceAccount is the name of the ServiceAccount assigned to scanner Job pods.
+	// Set via --scanner-service-account flag (Helm: scanner.serviceAccount.name).
+	// Defaults to "clamav-scanner" when not specified.
+	ScannerServiceAccount string
+
 	// ParseMaxRetries overrides maxParseRetries when non-zero.
 	// Set to a small value (e.g. 1) in tests to avoid multi-minute backoff.
 	ParseMaxRetries int
 	// ParseRetryBaseSeconds overrides the per-attempt backoff multiplier (seconds)
 	// when non-zero. Set to 1 in tests for near-instant completion.
 	ParseRetryBaseSeconds int
+}
+
+// parsePullPolicy converts an image pull policy string to a corev1.PullPolicy.
+// Accepts "Always", "IfNotPresent", "Never" (case-sensitive). Falls back to
+// IfNotPresent for any unrecognized value to match Kubernetes default behavior.
+func parsePullPolicy(s string) corev1.PullPolicy {
+	switch corev1.PullPolicy(s) {
+	case corev1.PullAlways, corev1.PullNever, corev1.PullIfNotPresent:
+		return corev1.PullPolicy(s)
+	default:
+		return corev1.PullIfNotPresent
+	}
 }
 
 // parseRetrySettings returns the effective retry ceiling and backoff multiplier,
@@ -588,24 +605,39 @@ func (r *NodeScanReconciler) constructJobForNodeScan(nodeScan *clamavv1alpha1.No
 		scanStrategy = string(nodeScan.Spec.Strategy)
 	}
 
+	// Derive INCREMENTAL_ENABLED with the following priority:
+	//
+	//  1. NodeScan.Spec.Strategy (explicit per-scan override, survives v1alpha1→v1beta1 round-trip)
+	//  2. SCANNER_SCAN_STRATEGY operator env var (Helm-level default, e.g. "smart")
+	//  3. SCANNER_INCREMENTAL_ENABLED operator env var (legacy boolean, fallback)
+	//
+	// Note: IncrementalConfig.Enabled is intentionally not used here. That field
+	// is dropped during the v1alpha1→v1beta1 conversion and is always zero-valued
+	// when the object is read back from storage.
 	incrEnabled := getEnvOrDefault("SCANNER_INCREMENTAL_ENABLED", "false")
-	// Derive INCREMENTAL_ENABLED from Strategy rather than from
-	// IncrementalConfig.Enabled. The v1alpha1 Enabled field is dropped during
-	// the v1alpha1→v1beta1 conversion (it has no v1beta1 counterpart) and is
-	// always zero-valued when the object is read back from storage.  Strategy,
-	// by contrast, is a top-level NodeScanSpec field that survives the round-
-	// trip, making it the authoritative signal for whether incremental mode
-	// should be active for this scan.
+
 	if nodeScan.Spec.Strategy != "" {
+		// Priority 1 — explicit strategy on the NodeScan CR.
 		if nodeScan.Spec.Strategy == clamavv1alpha1.ScanStrategyFull {
 			incrEnabled = "false"
 		} else {
 			incrEnabled = "true"
 		}
+	} else {
+		// Priority 2 — derive from SCANNER_SCAN_STRATEGY when no spec strategy is set.
+		// This ensures that setting strategy: smart in Helm values enables incremental
+		// even when the ScanSchedule/ClusterScan template does not carry a Strategy field.
+		envStrategy := getEnvOrDefault("SCANNER_SCAN_STRATEGY", "full")
+		if envStrategy != "" && envStrategy != string(clamavv1alpha1.ScanStrategyFull) {
+			incrEnabled = "true"
+		}
 	}
 
 	fullScanInterv := getEnvOrDefault("SCANNER_FULL_SCAN_INTERVAL", "10")
-	maxFileAgeHours := getEnvOrDefault("SCANNER_MAX_FILE_AGE_HOURS", "24")
+	// 168h (7 days) — must exceed the scan interval to avoid treating every cached
+	// file as stale on the next run. 24h (previous default) broke daily scans:
+	// all files expired before the next scan and incremental became a full scan.
+	maxFileAgeHours := getEnvOrDefault("SCANNER_MAX_FILE_AGE_HOURS", "168")
 	skipUnchanged := getEnvOrDefault("SCANNER_SKIP_UNCHANGED_FILES", "true")
 	if nodeScan.Spec.IncrementalConfig != nil {
 		cfg := nodeScan.Spec.IncrementalConfig
@@ -663,17 +695,14 @@ func (r *NodeScanReconciler) constructJobForNodeScan(nodeScan *clamavv1alpha1.No
 	}
 
 	// Resources - apply in priority order:
-	// 1. NodeScan.Spec.Resources (explicit)
-	// 2. ScanPolicy.Spec.Resources (policy-defined)
-	// 3. Priority-based defaults (high/medium/low)
+	// 1. NodeScan.Spec.Resources  (explicit per-scan override)
+	// 2. ScanPolicy.Spec.Resources (policy-level, configured via Helm defaultScanPolicy.spec.resources)
+	// 3. Empty (no constraints) — the user is responsible for setting resources via ScanPolicy or Helm
 	var resources corev1.ResourceRequirements
 	if nodeScan.Spec.Resources != nil {
 		resources = *nodeScan.Spec.Resources
 	} else if scanPolicy != nil && scanPolicy.Spec.Resources != nil {
 		resources = *scanPolicy.Spec.Resources
-	} else {
-		// Use priority-based default resources
-		resources = GetResourcesForPriority(nodeScan.Spec.Priority)
 	}
 
 	// Job name — sanitized to ≤ 63 chars using a hash suffix when the NodeScan
@@ -737,8 +766,9 @@ func (r *NodeScanReconciler) constructJobForNodeScan(nodeScan *clamavv1alpha1.No
 					},
 				},
 				Spec: corev1.PodSpec{
-					RestartPolicy:      corev1.RestartPolicyNever,
-					ServiceAccountName: "clamav-scanner",
+					RestartPolicy: corev1.RestartPolicyNever,
+					// ServiceAccountName is set via --scanner-service-account CLI flag (Helm: scanner.serviceAccount.name).
+					ServiceAccountName: getEnvOrDefault("SCANNER_SERVICE_ACCOUNT", r.ScannerServiceAccount),
 					NodeName:           nodeScan.Spec.NodeName,
 					HostPID:            true,
 					HostIPC:            true,
@@ -758,7 +788,7 @@ func (r *NodeScanReconciler) constructJobForNodeScan(nodeScan *clamavv1alpha1.No
 						{
 							Name:            "scanner",
 							Image:           r.ScannerImage,
-							ImagePullPolicy: corev1.PullIfNotPresent,
+							ImagePullPolicy: parsePullPolicy(getEnvOrDefault("SCANNER_IMAGE_PULL_POLICY", "IfNotPresent")),
 							Env:             envVars,
 							VolumeMounts:    r.buildScannerVolumeMounts(clamavDBPath),
 							Resources:       resources,

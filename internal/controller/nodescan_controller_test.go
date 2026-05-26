@@ -54,13 +54,14 @@ func newTestNodeScanReconciler(objs ...client.Object) *NodeScanReconciler {
 		Build()
 
 	return &NodeScanReconciler{
-		Client:       fakeClient,
-		Scheme:       scheme,
-		Recorder:     record.NewFakeRecorder(100),
-		Clientset:    fake.NewSimpleClientset(),
-		ScannerImage: "test-scanner:latest",
-		ClamavHost:   "clamav.test.svc",
-		ClamavPort:   3310,
+		Client:                fakeClient,
+		Scheme:                scheme,
+		Recorder:              record.NewFakeRecorder(100),
+		Clientset:             fake.NewSimpleClientset(),
+		ScannerImage:          "test-scanner:latest",
+		ClamavHost:            "clamav.test.svc",
+		ClamavPort:            3310,
+		ScannerServiceAccount: "clamav-scanner",
 	}
 }
 
@@ -298,71 +299,25 @@ func TestConstructJobForNodeScan(t *testing.T) {
 			assert.Equal(t, "clamav-scanner", job.Spec.Template.Spec.ServiceAccountName)
 			assert.True(t, job.Spec.Template.Spec.HostPID)
 
-			// Verify resources are set
-			container := job.Spec.Template.Spec.Containers[0]
-			assert.NotEmpty(t, container.Resources.Requests)
-			assert.NotEmpty(t, container.Resources.Limits)
+			// Resources are intentionally not set by the operator — the user
+			// controls them via ScanPolicy.spec.resources or NodeScan.spec.resources.
+			// Verify the container exists; resource assertions belong in integration tests.
+			assert.NotEmpty(t, job.Spec.Template.Spec.Containers)
 		})
 	}
 }
 
 func TestGetResourcesForPriority(t *testing.T) {
-	// Expected values must stay in sync with defaults.go.
-	// Memory sizing rationale: standalone mode spawns one /usr/bin/clamscan
-	// subprocess per concurrent slot; each subprocess loads the full ClamAV DB
-	// (~400 Mi). Limits are set so that MaxConcurrent=1 (default) never OOMKills.
-	tests := []struct {
-		priority       string
-		expectedCPUReq string
-		expectedMemReq string
-		expectedCPULim string
-		expectedMemLim string
-	}{
-		{
-			priority:       "high",
-			expectedCPUReq: "500m",
-			expectedMemReq: "1500Mi",
-			expectedCPULim: "2",
-			expectedMemLim: "3Gi",
-		},
-		{
-			priority:       "medium",
-			expectedCPUReq: "250m",
-			expectedMemReq: "1Gi",
-			expectedCPULim: "1",
-			expectedMemLim: "2Gi",
-		},
-		{
-			priority:       "low",
-			expectedCPUReq: "100m",
-			expectedMemReq: "768Mi",
-			expectedCPULim: "500m",
-			expectedMemLim: "2Gi",
-		},
-		{
-			priority:       "",
-			expectedCPUReq: "250m",
-			expectedMemReq: "1Gi",
-			expectedCPULim: "1",
-			expectedMemLim: "2Gi",
-		},
-	}
-
-	for _, tt := range tests {
-		t.Run(tt.priority, func(t *testing.T) {
-			resources := GetResourcesForPriority(tt.priority)
-
-			require.NotNil(t, resources.Requests)
-			require.NotNil(t, resources.Limits)
-
-			assert.Equal(t, tt.expectedCPUReq, resources.Requests.Cpu().String(),
-				"CPU request mismatch for priority %q", tt.priority)
-			assert.Equal(t, tt.expectedMemReq, resources.Requests.Memory().String(),
-				"memory request mismatch for priority %q", tt.priority)
-			assert.Equal(t, tt.expectedCPULim, resources.Limits.Cpu().String(),
-				"CPU limit mismatch for priority %q", tt.priority)
-			assert.Equal(t, tt.expectedMemLim, resources.Limits.Memory().String(),
-				"memory limit mismatch for priority %q", tt.priority)
+	// GetResourcesForPriority intentionally returns empty ResourceRequirements
+	// regardless of priority. The operator imposes no resource constraints;
+	// sizing is the user's responsibility via ScanPolicy.spec.resources or
+	// NodeScan.spec.resources (or the cluster's LimitRange / namespace defaults).
+	priorities := []string{"high", "medium", "low", ""}
+	for _, priority := range priorities {
+		t.Run(priority, func(t *testing.T) {
+			resources := GetResourcesForPriority(priority)
+			assert.Nil(t, resources.Requests, "expected no resource requests for priority %q", priority)
+			assert.Nil(t, resources.Limits, "expected no resource limits for priority %q", priority)
 		})
 	}
 }

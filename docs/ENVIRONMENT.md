@@ -45,7 +45,7 @@ These environment variables are passed to scanner jobs (pods).
 | `CLAMAV_HOST` | ClamAV service hostname | From operator config | Operator config |
 | `CLAMAV_PORT` | ClamAV service port | From operator config | Operator config |
 | `PATHS_TO_SCAN` | Comma-separated list of paths to scan | `/host/var/lib,/host/opt` | NodeScan.spec.paths or ScanPolicy.spec.paths |
-| `MAX_CONCURRENT` | Maximum concurrent file scans | `5` | NodeScan.spec.maxConcurrent or ScanPolicy |
+| `MAX_CONCURRENT` | **Remote mode only** — concurrent TCP connections to clamd. Ignored in standalone mode (single clamscan subprocess, DB loaded once). | `1` | NodeScan.spec.maxConcurrent or ScanPolicy |
 | `FILE_TIMEOUT` | Timeout for scanning a single file (ms) | `300000` | NodeScan.spec.fileTimeout or ScanPolicy |
 | `CONNECT_TIMEOUT` | Timeout for ClamAV connection (ms) | `60000` | ScanPolicy.spec.connectTimeout |
 | `MAX_FILE_SIZE` | Maximum file size to scan (bytes) | `104857600` | NodeScan.spec.maxFileSize or ScanPolicy |
@@ -58,52 +58,38 @@ These environment variables are passed to scanner jobs (pods).
 | `FORCE_FULL_SCAN` | Override strategy and run a full scan for this run | `false` | NodeScan.spec.forceFullScan |
 | `MAX_SCAN_REPORTS` | Maximum number of JSON scan reports to retain per node on the hostPath. Oldest reports are deleted after each scan. Set to `0` to disable rotation. | `30` | `scanner.incremental.maxScanReports` |
 
-## Default Resource Requirements
+## Scanner Memory Sizing (standalone mode)
 
-### Default Scanner Resources (Priority: medium)
+In standalone mode the scanner spawns a **single** `clamscan --file-list` subprocess per scan job. The ClamAV signature database is loaded exactly once, regardless of the number of files scanned.
 
-```yaml
-resources:
-  requests:
-    cpu: 100m
-    memory: 256Mi
-  limits:
-    cpu: 1000m
-    memory: 512Mi
-```
+| Phase | RAM usage |
+|-------|-----------|
+| DB decompression at startup | ~800 Mi peak (15–30 s) |
+| Scan in progress | ~400 Mi steady-state |
 
-### High Priority Scanner Resources
+Set scanner resource limits accordingly in your ScanPolicy or NodeScan:
 
 ```yaml
-resources:
-  requests:
-    cpu: 500m
-    memory: 512Mi
-  limits:
-    cpu: 2000m
-    memory: 1Gi
+# ScanPolicy (recommended — applies to all scans on this cluster)
+spec:
+  resources:
+    requests:
+      memory: 800Mi
+      cpu: 250m
+    limits:
+      memory: 1500Mi   # headroom above the 800 Mi peak
+      cpu: 1000m
 ```
 
-### Low Priority Scanner Resources
-
-```yaml
-resources:
-  requests:
-    cpu: 50m
-    memory: 128Mi
-  limits:
-    cpu: 500m
-    memory: 256Mi
-```
+The operator imposes **no default resource limits**. Resources must be defined explicitly via `ScanPolicy.spec.resources` or `NodeScan.spec.resources`. If neither is set, the pod runs without limits (subject to the cluster's LimitRange or namespace defaults).
 
 ## Configuration Priority
 
 Values are resolved in the following order (highest priority first):
 
-1. **NodeScan.spec** - Explicit configuration on the NodeScan resource
-2. **ScanPolicy.spec** - Configuration from the referenced ScanPolicy
-3. **Priority-based defaults** - Based on `priority: high|medium|low`
-4. **Global defaults** - Hardcoded defaults in the operator
+1. **NodeScan.spec** — Explicit configuration on the NodeScan resource
+2. **ScanPolicy.spec** — Configuration from the referenced ScanPolicy
+3. **Cluster LimitRange / namespace defaults** — Applied by Kubernetes when no limits are set
 
 ## Example Configurations
 
@@ -155,7 +141,7 @@ spec:
 
 | Parameter | Min | Max | Notes |
 |-----------|-----|-----|-------|
-| `maxConcurrent` (NodeScan) | 1 | 20 | Files scanned in parallel |
+| `maxConcurrent` (NodeScan) | 1 | 20 | Concurrent clamd connections (remote mode only; ignored in standalone) |
 | `concurrent` (ClusterScan) | 1 | 50 | Nodes scanned in parallel |
 | `fileTimeout` | 1000 ms | 3600000 ms | Per-file timeout |
 | `maxFileSize` | 1024 bytes | 10737418240 bytes | Skip larger files |
@@ -183,9 +169,9 @@ The operator exposes Prometheus metrics at the configured metrics address:
 
 2. **Connection to ClamAV fails**: Verify `CLAMAV_HOST` and `CLAMAV_PORT` are correct and the ClamAV service is reachable.
 
-3. **OOM killed scanner pods**: Increase memory limits in resources configuration.
+3. **OOM killed scanner pods**: In standalone mode, the scanner needs ~800 Mi peak / ~400 Mi steady-state for the ClamAV signature database. Set `resources.limits.memory >= 1500Mi` in your ScanPolicy.
 
-4. **Slow scans**: Reduce `maxConcurrent` or increase resource limits.
+4. **Slow scans**: In standalone mode all files are scanned sequentially by a single clamscan process — scan duration scales with file count and I/O throughput. To reduce scope, tighten `paths` or add `excludePatterns`.
 
 ### Debug Mode
 

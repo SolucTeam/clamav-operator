@@ -380,7 +380,7 @@ defaultScanPolicy:
     excludePatterns:
       - "*.tmp"
       - "/var/lib/docker/*"
-    maxConcurrent: 10
+    maxConcurrent: 1  # standalone: ignored (single clamscan process); remote: clamd TCP connections
 ```
 
 ## Post-Installation Usage
@@ -551,7 +551,7 @@ spec:
   paths:
     - /var/lib
     - /opt
-  maxConcurrent: 5
+  maxConcurrent: 1  # standalone: ignored (single clamscan process); remote: clamd TCP connections
   notifications:
     slack:
       enabled: true

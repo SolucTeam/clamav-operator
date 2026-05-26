@@ -41,7 +41,7 @@ spec:
 | `scanPolicy` | string | — | Name of a `ScanPolicy` to inherit config from |
 | `paths` | []string | `["/"]` | Paths to scan on the node |
 | `excludePatterns` | []string | — | Regex patterns to exclude |
-| `maxConcurrent` | int32 | `5` | Max concurrent file scans |
+| `maxConcurrent` | int32 | `1` | **Remote mode only** — concurrent clamd TCP connections. Ignored in standalone mode (single clamscan process, DB loaded once). |
 | `fileTimeout` | int64 | `30000` | Per-file timeout in milliseconds |
 | `maxFileSize` | int64 | `104857600` | Max file size in bytes (100 MB) |
 | `resources` | ResourceRequirements | — | Override the priority-based defaults |

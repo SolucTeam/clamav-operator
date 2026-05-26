@@ -30,7 +30,7 @@ const fs = require('fs').promises;
 const { CONFIG, INCREMENTAL_CONFIG } = require('./config');
 const logger = require('./logger');
 const { initScanner } = require('./init-scanner');
-const { scanDirectory, getStats } = require('./scanner');
+const { scanPaths, getStats } = require('./scanner');
 const { generateReport, getDirSizeBytes, getFileSizeBytes } = require('./report');
 const {
   loadCache,
@@ -77,16 +77,10 @@ async function main() {
     // ── Init ClamAV scanner (standalone or remote) ────────────────────────
     const clamscan = await initScanner();
 
-    // ── Walk & scan every configured path ─────────────────────────────────
-    for (const scanPath of CONFIG.pathsToScan) {
-      try {
-        await fs.access(scanPath);
-        logger.info('Scanning path', { path: scanPath });
-        await scanDirectory(clamscan, scanPath, results, effectiveStrategy);
-      } catch {
-        logger.warn('Path not found — skipping', { path: scanPath });
-      }
-    }
+    // ── Scan all configured paths ──────────────────────────────────────────
+    // Standalone: walks all paths then runs a single clamscan --file-list
+    // subprocess (DB loaded once). Remote: per-file concurrent clamdscan calls.
+    await scanPaths(clamscan, CONFIG.pathsToScan, results, effectiveStrategy);
 
     // ── Save incremental cache for next run ───────────────────────────────
     const cacheEntriesPruned = await saveCache();

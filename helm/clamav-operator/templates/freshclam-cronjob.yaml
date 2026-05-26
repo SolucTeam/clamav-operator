@@ -57,8 +57,10 @@ spec:
               # Show database info
               ls -la /var/lib/clamav/
               echo "Update finished at $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+            {{- with .Values.scanner.freshclam.resources }}
             resources:
-              {{- toYaml .Values.scanner.freshclam.resources | nindent 14 }}
+              {{- toYaml . | nindent 14 }}
+            {{- end }}
             volumeMounts:
             - name: clamav-signatures
               mountPath: /var/lib/clamav
