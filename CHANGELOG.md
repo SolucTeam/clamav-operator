@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 
 
+## [v0.7.3] - 2026-06-18
+
+## 🚀 Features
+
+_No new features_
+
+## 🐛 Bug Fixes
+
+* Merge pull request #67 from SolucTeam/feat/clamav (4b69af7)
+* fix: clamav operator imcrementation config (7da6900)
+
+## 🔧 Other Changes
+
+* chore: update CHANGELOG for v0.7.2 (be2b023)
+
+
 ## [v0.7.2] - 2026-05-26
 
 ## 🚀 Features
