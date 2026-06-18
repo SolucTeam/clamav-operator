@@ -120,7 +120,6 @@ spec:
                 format: int32
                 type: integer
               strategy:
-                default: full
                 description: |-
                   Strategy defines the scan strategy to use.
                   full: scan every file. incremental: files modified since last scan.
@@ -140,7 +139,7 @@ spec:
                     format: int32
                     type: integer
                   maxFileAgeHours:
-                    default: 24
+                    default: 168
                     description: MaxFileAgeHours is the maximum age (in hours) of files to consider
                     format: int32
                     type: integer
@@ -485,13 +484,14 @@ spec:
                 format: int32
                 type: integer
               strategy:
-                default: full
                 description: |-
                   Strategy defines the scan strategy to use.
-                  full: scan every file on every run (default).
+                  full: scan every file on every run.
                   incremental: scan only files modified since the last scan.
-                  modified-only: scan only files modified in the last 24 h.
+                  modified-only: scan only files modified within the maxFileAgeHours window.
                   smart: alternate automatically between incremental and full scans.
+                  When unset, the operator falls back to the Helm-level
+                  SCANNER_SCAN_STRATEGY default.
                 enum:
                 - full
                 - incremental
@@ -524,7 +524,7 @@ spec:
                     minimum: 1
                     type: integer
                   maxAge:
-                    default: 24
+                    default: 168
                     description: MaxAge is the maximum file age (in hours) to consider for incremental scans
                     format: int32
                     type: integer

@@ -26,12 +26,102 @@ limitations under the License.
 package v1alpha1
 
 import (
+	"encoding/json"
 	"fmt"
 
 	"sigs.k8s.io/controller-runtime/pkg/conversion"
 
 	v1beta1 "github.com/SolucTeam/clamav-operator/api/v1beta1"
 )
+
+// ─── Lossless round-trip support ─────────────────────────────────────────────
+//
+// v1alpha1.IncrementalScanConfig carries four fields that have no equivalent in
+// the v1beta1 (storage) schema: Enabled, Strategy, MinTimeBetweenScans and
+// CacheExpiration. They were previously silently DROPPED on conversion, so any
+// value written via v1alpha1 was lost as soon as the object was persisted —
+// the controller always read them back as zero values.
+//
+// Kubernetes API conventions require conversions to be lossless. The standard
+// pattern (used by the kubebuilder book's CronJob example) is to stash the
+// fields that don't fit the hub schema in an annotation, and restore them when
+// converting back. Annotations live in ObjectMeta, are stored regardless of
+// the CRD schema, and are not pruned.
+const incrementalLossAnnotation = "clamav.io/v1alpha1-incremental-config"
+
+// lostIncrementalFields is the JSON payload stored in incrementalLossAnnotation.
+type lostIncrementalFields struct {
+	Enabled             bool         `json:"enabled,omitempty"`
+	Strategy            ScanStrategy `json:"strategy,omitempty"`
+	MinTimeBetweenScans int32        `json:"minTimeBetweenScans,omitempty"`
+	CacheExpiration     int32        `json:"cacheExpiration,omitempty"`
+}
+
+// stashIncrementalFields returns an annotations map (a copy — never mutates the
+// input, whose backing map is shared with the source object) in which the
+// v1alpha1-only IncrementalScanConfig fields are preserved as JSON. When there
+// is nothing to preserve, any stale annotation from a previous round-trip is
+// removed instead.
+func stashIncrementalFields(annotations map[string]string, cfg *IncrementalScanConfig) map[string]string {
+	var lost lostIncrementalFields
+	if cfg != nil {
+		lost = lostIncrementalFields{
+			Enabled:             cfg.Enabled,
+			Strategy:            cfg.Strategy,
+			MinTimeBetweenScans: cfg.MinTimeBetweenScans,
+			CacheExpiration:     cfg.CacheExpiration,
+		}
+	}
+	hasLost := lost.Enabled || lost.Strategy != "" || lost.MinTimeBetweenScans != 0 || lost.CacheExpiration != 0
+	_, hadKey := annotations[incrementalLossAnnotation]
+	if !hasLost && !hadKey {
+		return annotations // nothing to add, nothing to clean up
+	}
+
+	out := make(map[string]string, len(annotations)+1)
+	for k, v := range annotations {
+		out[k] = v
+	}
+	if !hasLost {
+		delete(out, incrementalLossAnnotation)
+		return out
+	}
+	if payload, err := json.Marshal(lost); err == nil {
+		out[incrementalLossAnnotation] = string(payload)
+	}
+	return out
+}
+
+// restoreIncrementalFields reads the stash annotation (if any) and restores the
+// v1alpha1-only fields onto cfg, allocating it when needed. Returns cfg.
+func restoreIncrementalFields(annotations map[string]string, cfg *IncrementalScanConfig) *IncrementalScanConfig {
+	raw, ok := annotations[incrementalLossAnnotation]
+	if !ok || raw == "" {
+		return cfg
+	}
+	var lost lostIncrementalFields
+	if err := json.Unmarshal([]byte(raw), &lost); err != nil {
+		return cfg // corrupted stash: keep what we have rather than failing the read
+	}
+	if cfg == nil {
+		cfg = &IncrementalScanConfig{}
+	}
+	cfg.Enabled = lost.Enabled
+	cfg.Strategy = lost.Strategy
+	cfg.MinTimeBetweenScans = lost.MinTimeBetweenScans
+	cfg.CacheExpiration = lost.CacheExpiration
+	return cfg
+}
+
+// copyBoolPtr returns a copy of b so the spoke and hub objects never share the
+// same *bool backing memory.
+func copyBoolPtr(b *bool) *bool {
+	if b == nil {
+		return nil
+	}
+	v := *b
+	return &v
+}
 
 // ─── NodeScan ────────────────────────────────────────────────────────────────
 
@@ -43,6 +133,10 @@ func (r *NodeScan) ConvertTo(dstRaw conversion.Hub) error {
 	}
 
 	dst.ObjectMeta = r.ObjectMeta
+	// Preserve the v1alpha1-only IncrementalConfig fields (Enabled, Strategy,
+	// MinTimeBetweenScans, CacheExpiration) across the round-trip — they have no
+	// equivalent in the v1beta1 schema and were previously dropped.
+	dst.Annotations = stashIncrementalFields(r.Annotations, r.Spec.IncrementalConfig)
 
 	// Spec
 	dst.Spec.NodeName = r.Spec.NodeName
@@ -64,7 +158,7 @@ func (r *NodeScan) ConvertTo(dstRaw conversion.Hub) error {
 		dst.Spec.IncrementalConfig = &v1beta1.IncrementalScanConfig{
 			FullScanInterval:   r.Spec.IncrementalConfig.BaselineInterval,
 			MaxFileAgeHours:    r.Spec.IncrementalConfig.MaxAge,
-			SkipUnchangedFiles: r.Spec.IncrementalConfig.SkipUnchangedFiles,
+			SkipUnchangedFiles: copyBoolPtr(r.Spec.IncrementalConfig.SkipUnchangedFiles),
 		}
 	}
 
@@ -134,9 +228,11 @@ func (r *NodeScan) ConvertFrom(srcRaw conversion.Hub) error {
 		r.Spec.IncrementalConfig = &IncrementalScanConfig{
 			BaselineInterval:   src.Spec.IncrementalConfig.FullScanInterval,
 			MaxAge:             src.Spec.IncrementalConfig.MaxFileAgeHours,
-			SkipUnchangedFiles: src.Spec.IncrementalConfig.SkipUnchangedFiles,
+			SkipUnchangedFiles: copyBoolPtr(src.Spec.IncrementalConfig.SkipUnchangedFiles),
 		}
 	}
+	// Restore the v1alpha1-only fields stashed by ConvertTo.
+	r.Spec.IncrementalConfig = restoreIncrementalFields(src.Annotations, r.Spec.IncrementalConfig)
 
 	// Status
 	r.Status.ObservedGeneration = src.Status.ObservedGeneration
@@ -184,6 +280,12 @@ func (r *ClusterScan) ConvertTo(dstRaw conversion.Hub) error {
 		return fmt.Errorf("expected *v1beta1.ClusterScan, got %T", dstRaw)
 	}
 	dst.ObjectMeta = r.ObjectMeta
+	// Preserve the v1alpha1-only template IncrementalConfig fields across the round-trip.
+	var templateCfg *IncrementalScanConfig
+	if r.Spec.NodeScanTemplate != nil {
+		templateCfg = r.Spec.NodeScanTemplate.IncrementalConfig
+	}
+	dst.Annotations = stashIncrementalFields(r.Annotations, templateCfg)
 	dst.Spec.NodeSelector = r.Spec.NodeSelector
 	dst.Spec.ScanPolicy = r.Spec.ScanPolicy
 	dst.Spec.Concurrent = r.Spec.Concurrent
@@ -208,7 +310,7 @@ func (r *ClusterScan) ConvertTo(dstRaw conversion.Hub) error {
 			t.IncrementalConfig = &v1beta1.IncrementalScanConfig{
 				FullScanInterval:   r.Spec.NodeScanTemplate.IncrementalConfig.BaselineInterval,
 				MaxFileAgeHours:    r.Spec.NodeScanTemplate.IncrementalConfig.MaxAge,
-				SkipUnchangedFiles: r.Spec.NodeScanTemplate.IncrementalConfig.SkipUnchangedFiles,
+				SkipUnchangedFiles: copyBoolPtr(r.Spec.NodeScanTemplate.IncrementalConfig.SkipUnchangedFiles),
 			}
 		}
 		dst.Spec.NodeScanTemplate = t
@@ -268,9 +370,11 @@ func (r *ClusterScan) ConvertFrom(srcRaw conversion.Hub) error {
 			t.IncrementalConfig = &IncrementalScanConfig{
 				BaselineInterval:   src.Spec.NodeScanTemplate.IncrementalConfig.FullScanInterval,
 				MaxAge:             src.Spec.NodeScanTemplate.IncrementalConfig.MaxFileAgeHours,
-				SkipUnchangedFiles: src.Spec.NodeScanTemplate.IncrementalConfig.SkipUnchangedFiles,
+				SkipUnchangedFiles: copyBoolPtr(src.Spec.NodeScanTemplate.IncrementalConfig.SkipUnchangedFiles),
 			}
 		}
+		// Restore the v1alpha1-only fields stashed by ConvertTo.
+		t.IncrementalConfig = restoreIncrementalFields(src.Annotations, t.IncrementalConfig)
 		r.Spec.NodeScanTemplate = t
 	}
 	r.Status.ObservedGeneration = src.Status.ObservedGeneration
@@ -307,6 +411,12 @@ func (r *ScanSchedule) ConvertTo(dstRaw conversion.Hub) error {
 		return fmt.Errorf("expected *v1beta1.ScanSchedule, got %T", dstRaw)
 	}
 	dst.ObjectMeta = r.ObjectMeta
+	// Preserve the v1alpha1-only template IncrementalConfig fields across the round-trip.
+	var schedTemplateCfg *IncrementalScanConfig
+	if r.Spec.ClusterScan.NodeScanTemplate != nil {
+		schedTemplateCfg = r.Spec.ClusterScan.NodeScanTemplate.IncrementalConfig
+	}
+	dst.Annotations = stashIncrementalFields(r.Annotations, schedTemplateCfg)
 	dst.Spec.Schedule = r.Spec.Schedule
 	dst.Spec.Suspend = r.Spec.Suspend
 	dst.Spec.SuccessfulScansHistoryLimit = r.Spec.SuccessfulScansHistoryLimit
@@ -339,7 +449,7 @@ func (r *ScanSchedule) ConvertTo(dstRaw conversion.Hub) error {
 			t.IncrementalConfig = &v1beta1.IncrementalScanConfig{
 				FullScanInterval:   r.Spec.ClusterScan.NodeScanTemplate.IncrementalConfig.BaselineInterval,
 				MaxFileAgeHours:    r.Spec.ClusterScan.NodeScanTemplate.IncrementalConfig.MaxAge,
-				SkipUnchangedFiles: r.Spec.ClusterScan.NodeScanTemplate.IncrementalConfig.SkipUnchangedFiles,
+				SkipUnchangedFiles: copyBoolPtr(r.Spec.ClusterScan.NodeScanTemplate.IncrementalConfig.SkipUnchangedFiles),
 			}
 		}
 		dst.Spec.ClusterScan.NodeScanTemplate = t
@@ -391,9 +501,11 @@ func (r *ScanSchedule) ConvertFrom(srcRaw conversion.Hub) error {
 			t.IncrementalConfig = &IncrementalScanConfig{
 				BaselineInterval:   src.Spec.ClusterScan.NodeScanTemplate.IncrementalConfig.FullScanInterval,
 				MaxAge:             src.Spec.ClusterScan.NodeScanTemplate.IncrementalConfig.MaxFileAgeHours,
-				SkipUnchangedFiles: src.Spec.ClusterScan.NodeScanTemplate.IncrementalConfig.SkipUnchangedFiles,
+				SkipUnchangedFiles: copyBoolPtr(src.Spec.ClusterScan.NodeScanTemplate.IncrementalConfig.SkipUnchangedFiles),
 			}
 		}
+		// Restore the v1alpha1-only fields stashed by ConvertTo.
+		t.IncrementalConfig = restoreIncrementalFields(src.Annotations, t.IncrementalConfig)
 		r.Spec.ClusterScan.NodeScanTemplate = t
 	}
 	r.Status.Active = src.Status.Active

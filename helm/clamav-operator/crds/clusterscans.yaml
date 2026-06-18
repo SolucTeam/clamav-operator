@@ -153,7 +153,6 @@ spec:
                     format: int32
                     type: integer
                   strategy:
-                    default: full
                     description: Strategy defines the scan strategy to use for each NodeScan
                     enum:
                     - full
@@ -170,7 +169,7 @@ spec:
                         format: int32
                         type: integer
                       maxFileAgeHours:
-                        default: 24
+                        default: 168
                         description: MaxFileAgeHours is the maximum file age (in hours) to consider
                         format: int32
                         type: integer
@@ -482,7 +481,6 @@ spec:
                     format: int32
                     type: integer
                   strategy:
-                    default: full
                     description: |-
                       Strategy defines the scan strategy to use for each NodeScan.
                       full: scan every file on every run (default).
@@ -521,7 +519,7 @@ spec:
                         minimum: 1
                         type: integer
                       maxAge:
-                        default: 24
+                        default: 168
                         description: MaxAge is the maximum file age (in hours) to consider for incremental scans
                         format: int32
                         type: integer

@@ -81,9 +81,14 @@ type NodeScanSpec struct {
 	// +optional
 	TTLSecondsAfterFinished *int32 `json:"ttlSecondsAfterFinished,omitempty"`
 
-	// Strategy defines the scan strategy to use
+	// Strategy defines the scan strategy to use.
+	// IMPORTANT: no CRD default here. When unset, the operator falls back to the
+	// Helm-level SCANNER_SCAN_STRATEGY env var. A `default=full` marker would make
+	// the API server persist "full" on every NodeScan created without an explicit
+	// strategy, silently disabling incremental scanning cluster-wide (the operator
+	// gives spec.strategy priority over the env var and cannot distinguish a
+	// user-set "full" from an API-server-defaulted one).
 	// +kubebuilder:validation:Enum=full;incremental;modified-only;smart
-	// +kubebuilder:default=full
 	// +optional
 	Strategy ScanStrategy `json:"strategy,omitempty"`
 
