@@ -33,6 +33,7 @@ import (
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/types"
 	"k8s.io/client-go/tools/record"
+	"k8s.io/utils/ptr"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 	"sigs.k8s.io/controller-runtime/pkg/log"
 
@@ -148,7 +149,8 @@ func (n *Notifier) SendWithRetry(ctx context.Context, nodeScan *clamavv1alpha1.N
 func (n *Notifier) sendSlack(ctx context.Context, nodeScan *clamavv1alpha1.NodeScan, scanPolicy *clamavv1alpha1.ScanPolicy) error {
 	config := scanPolicy.Spec.Notifications.Slack
 
-	if config.OnlyOnInfection && nodeScan.Status.FilesInfected == 0 {
+	// OnlyOnInfection is *bool; nil means unset → the CRD default (true) applies.
+	if ptr.Deref(config.OnlyOnInfection, true) && nodeScan.Status.FilesInfected == 0 {
 		return nil
 	}
 
@@ -234,7 +236,8 @@ func (n *Notifier) sendSlack(ctx context.Context, nodeScan *clamavv1alpha1.NodeS
 func (n *Notifier) sendEmail(ctx context.Context, nodeScan *clamavv1alpha1.NodeScan, scanPolicy *clamavv1alpha1.ScanPolicy) error {
 	config := scanPolicy.Spec.Notifications.Email
 
-	if config.OnlyOnInfection && nodeScan.Status.FilesInfected == 0 {
+	// OnlyOnInfection is *bool; nil means unset → the CRD default (true) applies.
+	if ptr.Deref(config.OnlyOnInfection, true) && nodeScan.Status.FilesInfected == 0 {
 		return nil
 	}
 
@@ -352,7 +355,8 @@ func (n *Notifier) sendEmail(ctx context.Context, nodeScan *clamavv1alpha1.NodeS
 func (n *Notifier) sendWebhook(ctx context.Context, nodeScan *clamavv1alpha1.NodeScan, scanPolicy *clamavv1alpha1.ScanPolicy) error {
 	config := scanPolicy.Spec.Notifications.Webhook
 
-	if config.OnlyOnInfection && nodeScan.Status.FilesInfected == 0 {
+	// OnlyOnInfection is *bool; nil means unset → the CRD default (true) applies.
+	if ptr.Deref(config.OnlyOnInfection, true) && nodeScan.Status.FilesInfected == 0 {
 		return nil
 	}
 
@@ -443,7 +447,8 @@ func (n *Notifier) sendWebhook(ctx context.Context, nodeScan *clamavv1alpha1.Nod
 func (n *Notifier) sendTeams(ctx context.Context, nodeScan *clamavv1alpha1.NodeScan, scanPolicy *clamavv1alpha1.ScanPolicy) error {
 	config := scanPolicy.Spec.Notifications.Teams
 
-	if config.OnlyOnInfection && nodeScan.Status.FilesInfected == 0 {
+	// OnlyOnInfection is *bool; nil means unset → the CRD default (true) applies.
+	if ptr.Deref(config.OnlyOnInfection, true) && nodeScan.Status.FilesInfected == 0 {
 		return nil
 	}
 

@@ -201,7 +201,11 @@ func (r *ClusterScanReconciler) Reconcile(ctx context.Context, req ctrl.Request)
 		clusterScan.Status.Phase == clamavv1alpha1.ClusterScanPhasePartiallyComplete ||
 		clusterScan.Status.Phase == clamavv1alpha1.ClusterScanPhaseFailed
 
-	if completed+failed == clusterScan.Status.TotalNodes {
+	// ">=" and not "==": if a node is deleted while its NodeScan is already
+	// terminal, TotalNodes (recomputed from the live node list) shrinks below
+	// completed+failed and strict equality would never hold — leaving the
+	// ClusterScan stuck in Running and requeueing every 30 s forever.
+	if completed+failed >= clusterScan.Status.TotalNodes && inFlight == 0 {
 		if failed == 0 {
 			clusterScan.Status.Phase = clamavv1alpha1.ClusterScanPhaseCompleted
 		} else if completed > 0 {

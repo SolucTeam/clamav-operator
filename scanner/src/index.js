@@ -180,15 +180,23 @@ async function main() {
 }
 
 // ── Graceful shutdown ─────────────────────────────────────────────────────────
-async function shutdown(signal) {
-  logger.info(`${signal} received — graceful shutdown`);
+async function shutdown(signal, exitCode) {
+  logger.warn(`${signal} received — scan interrupted, persisting cache and exiting`, {
+    exit_code: exitCode,
+  });
   // Best-effort: persist whatever incremental cache we have so the next run
   // can skip already-scanned files even if this run was interrupted.
   await saveCache().catch(() => {});
-  process.exit(0);
+  // Exit NON-zero (128+signal, the standard shell convention). Exiting 0 here
+  // made an interrupted scan count as a Succeeded pod: the Job (and therefore
+  // the NodeScan) was reported Completed even though the filesystem was only
+  // partially scanned — a false "clean" signal for a security tool. With a
+  // non-zero exit the Job records the failure and the NodeScan ends up Failed
+  // with an explicit exit code instead.
+  process.exit(exitCode);
 }
 
-process.on('SIGTERM', () => shutdown('SIGTERM'));
-process.on('SIGINT',  () => shutdown('SIGINT'));
+process.on('SIGTERM', () => shutdown('SIGTERM', 143)); // 128 + 15
+process.on('SIGINT',  () => shutdown('SIGINT',  130)); // 128 + 2
 
 main();

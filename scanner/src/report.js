@@ -139,7 +139,7 @@ async function generateReport(results, stats, incrementalStats, effectiveStrateg
  */
 async function rotateReports() {
   const limit = REPORT_CONFIG.maxReports;
-  if (limit <= 0) return; // rotation disabled
+  if (limit <= 0) return 0; // rotation disabled
 
   try {
     const entries = await fs.readdir(CONFIG.resultsDir);
@@ -151,7 +151,7 @@ async function rotateReports() {
       .sort(); // ISO date in filename → lexicographic = chronological
 
     const excess = jsonReports.length - limit;
-    if (excess <= 0) return;
+    if (excess <= 0) return 0;
 
     // Delete the oldest `excess` reports (and their matching .txt summaries)
     const toDelete = jsonReports.slice(0, excess);

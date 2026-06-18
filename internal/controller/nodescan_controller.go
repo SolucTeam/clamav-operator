@@ -285,6 +285,22 @@ func (r *NodeScanReconciler) Reconcile(ctx context.Context, req ctrl.Request) (c
 			}
 		}
 
+		// QuarantineConfig is accepted and validated by the ScanPolicy CRD but is
+		// NOT implemented by any component (neither the operator nor the scanner).
+		// Surface a Warning event instead of silently ignoring it, so users do not
+		// believe infected files are being moved or deleted when they are not.
+		// Emitted here (once per Job creation) rather than on every reconcile to
+		// avoid event spam.
+		if scanPolicy != nil && scanPolicy.Spec.Quarantine != nil &&
+			scanPolicy.Spec.Quarantine.Enabled &&
+			scanPolicy.Spec.Quarantine.Action != "" &&
+			scanPolicy.Spec.Quarantine.Action != "alert-only" {
+			r.Recorder.Event(&nodeScan, corev1.EventTypeWarning, "QuarantineNotImplemented",
+				fmt.Sprintf("ScanPolicy %q requests quarantine action %q, but quarantine is not implemented: "+
+					"infected files are only reported (alert-only behavior)",
+					scanPolicy.Name, scanPolicy.Spec.Quarantine.Action))
+		}
+
 		// Create the Job
 		job, err := r.constructJobForNodeScan(&nodeScan, scanPolicy)
 		if err != nil {
@@ -394,9 +410,9 @@ func (r *NodeScanReconciler) Reconcile(ctx context.Context, req ctrl.Request) (c
 					}
 
 					log.Error(err, "failed to parse job results, will retry",
-						"attempt", retryCount, "maxRetries", maxParseRetries)
+						"attempt", retryCount, "maxRetries", effectiveMaxRetries)
 					r.Recorder.Event(&nodeScan, corev1.EventTypeWarning, "ParseResultsFailed",
-						fmt.Sprintf("Failed to parse scan results (attempt %d/%d): %v", retryCount, maxParseRetries, err))
+						fmt.Sprintf("Failed to parse scan results (attempt %d/%d): %v", retryCount, effectiveMaxRetries, err))
 					// Requeue with exponential backoff
 					backoff := time.Duration(retryCount*effectiveBaseSeconds) * time.Second
 					return ctrl.Result{RequeueAfter: backoff}, nil
@@ -428,6 +444,13 @@ func (r *NodeScanReconciler) Reconcile(ctx context.Context, req ctrl.Request) (c
 			// completed successfully.  This prevents the next reconcile from
 			// triggering another reset loop.
 			r.removeForceFullScanAnnotation(ctx, &nodeScan, &existingJob)
+
+			// Clear the parse-retry annotation now that this scan is fully
+			// processed. Without this, the stale value is (a) re-added to the
+			// clamav_parse_retries_total counter on EVERY subsequent scan of this
+			// NodeScan, and (b) inherited as the starting retry count of the next
+			// scan, causing premature "max retries exceeded" partial results.
+			r.clearParseRetryAnnotation(ctx, &nodeScan)
 
 			// Record partial-results metric regardless of infection status.
 			recordPartialResults(nodeScan.Namespace, nodeScan.Spec.NodeName, nodeScan.Status.ResultsPartial)
@@ -511,6 +534,9 @@ func (r *NodeScanReconciler) Reconcile(ctx context.Context, req ctrl.Request) (c
 			// operator does not loop indefinitely resetting and re-scanning.
 			// The user can re-add the annotation manually to retry.
 			r.removeForceFullScanAnnotation(ctx, &nodeScan, &existingJob)
+
+			// Clear any leftover parse-retry counter so the next scan starts fresh.
+			r.clearParseRetryAnnotation(ctx, &nodeScan)
 		}
 		return ctrl.Result{}, nil
 	}
@@ -605,28 +631,47 @@ func (r *NodeScanReconciler) constructJobForNodeScan(nodeScan *clamavv1alpha1.No
 		scanStrategy = string(nodeScan.Spec.Strategy)
 	}
 
-	// Derive INCREMENTAL_ENABLED with the following priority:
+	// Derive INCREMENTAL_ENABLED / SCAN_STRATEGY with the following priority:
 	//
-	//  1. NodeScan.Spec.Strategy (explicit per-scan override, survives v1alpha1→v1beta1 round-trip)
-	//  2. SCANNER_SCAN_STRATEGY operator env var (Helm-level default, e.g. "smart")
-	//  3. SCANNER_INCREMENTAL_ENABLED operator env var (legacy boolean, fallback)
-	//
-	// Note: IncrementalConfig.Enabled is intentionally not used here. That field
-	// is dropped during the v1alpha1→v1beta1 conversion and is always zero-valued
-	// when the object is read back from storage.
+	//  1. NodeScan.Spec.Strategy (explicit per-scan override)
+	//  2. NodeScan.Spec.IncrementalConfig.Enabled/Strategy (v1alpha1 fields —
+	//     preserved across the v1alpha1↔v1beta1 round-trip via the
+	//     clamav.io/v1alpha1-incremental-config annotation since the lossless
+	//     conversion fix; previously they were dropped and always zero)
+	//  3. SCANNER_SCAN_STRATEGY operator env var (Helm-level default, e.g. "smart")
+	//  4. SCANNER_INCREMENTAL_ENABLED operator env var (legacy boolean, fallback)
 	incrEnabled := getEnvOrDefault("SCANNER_INCREMENTAL_ENABLED", "false")
 
-	if nodeScan.Spec.Strategy != "" {
+	switch {
+	case nodeScan.Spec.Strategy != "":
 		// Priority 1 — explicit strategy on the NodeScan CR.
 		if nodeScan.Spec.Strategy == clamavv1alpha1.ScanStrategyFull {
 			incrEnabled = "false"
 		} else {
 			incrEnabled = "true"
 		}
-	} else {
-		// Priority 2 — derive from SCANNER_SCAN_STRATEGY when no spec strategy is set.
-		// This ensures that setting strategy: smart in Helm values enables incremental
-		// even when the ScanSchedule/ClusterScan template does not carry a Strategy field.
+
+	case nodeScan.Spec.IncrementalConfig != nil && nodeScan.Spec.IncrementalConfig.Enabled:
+		// Priority 2 — incrementalConfig.enabled=true on the CR.
+		// Note: Enabled=false is indistinguishable from "not set" (bool zero
+		// value + CRD default false), so it falls through to the env defaults
+		// rather than force-disabling incremental.
+		cfgStrategy := nodeScan.Spec.IncrementalConfig.Strategy
+		if cfgStrategy == "" {
+			cfgStrategy = clamavv1alpha1.ScanStrategyIncremental
+		}
+		scanStrategy = string(cfgStrategy)
+		if cfgStrategy == clamavv1alpha1.ScanStrategyFull {
+			incrEnabled = "false"
+		} else {
+			incrEnabled = "true"
+		}
+
+	default:
+		// Priority 3 — derive from SCANNER_SCAN_STRATEGY when nothing is set on
+		// the CR. This ensures that setting strategy: smart in Helm values
+		// enables incremental even when the ScanSchedule/ClusterScan template
+		// does not carry a Strategy field.
 		envStrategy := getEnvOrDefault("SCANNER_SCAN_STRATEGY", "full")
 		if envStrategy != "" && envStrategy != string(clamavv1alpha1.ScanStrategyFull) {
 			incrEnabled = "true"
@@ -647,11 +692,14 @@ func (r *NodeScanReconciler) constructJobForNodeScan(nodeScan *clamavv1alpha1.No
 		if cfg.MaxAge > 0 {
 			maxFileAgeHours = fmt.Sprintf("%d", cfg.MaxAge)
 		}
-		// SkipUnchangedFiles survives the v1beta1 round-trip; always override.
-		if cfg.SkipUnchangedFiles {
-			skipUnchanged = "true"
-		} else {
-			skipUnchanged = "false"
+		// SkipUnchangedFiles is *bool: only override the env default when the
+		// field is explicitly set on the CR (nil = unset → keep the env value).
+		if cfg.SkipUnchangedFiles != nil {
+			if *cfg.SkipUnchangedFiles {
+				skipUnchanged = "true"
+			} else {
+				skipUnchanged = "false"
+			}
 		}
 	}
 
@@ -878,7 +926,12 @@ func (r *NodeScanReconciler) buildScannerVolumes() []corev1.Volume {
 func (r *NodeScanReconciler) parseJobResults(ctx context.Context, nodeScan *clamavv1alpha1.NodeScan, job *batchv1.Job) error {
 	log := log.FromContext(ctx)
 
-	// Get the Pod from the Job
+	// Get the Pod from the Job.
+	// Guard against a nil Selector (briefly possible right after Job creation,
+	// before the Job controller defaults it) — would panic otherwise.
+	if job.Spec.Selector == nil || len(job.Spec.Selector.MatchLabels) == 0 {
+		return fmt.Errorf("job %s has no selector yet; will retry", job.Name)
+	}
 	podList := &corev1.PodList{}
 	if err := r.List(ctx, podList, client.InNamespace(job.Namespace), client.MatchingLabels(job.Spec.Selector.MatchLabels)); err != nil {
 		return err
@@ -1191,7 +1244,13 @@ func (r *NodeScanReconciler) updateStatus(ctx context.Context, nodeScan *clamavv
 	for i, c := range nodeScan.Status.Conditions {
 		if c.Type == conditionType {
 			if c.Status != status {
+				// Real transition: replace fully (new LastTransitionTime).
 				nodeScan.Status.Conditions[i] = condition
+			} else if c.Reason != condition.Reason || c.Message != message {
+				// Same status but stale reason/message: refresh them while
+				// preserving the original LastTransitionTime (no transition).
+				nodeScan.Status.Conditions[i].Reason = condition.Reason
+				nodeScan.Status.Conditions[i].Message = message
 			}
 			found = true
 			break
@@ -1262,6 +1321,22 @@ func (r *NodeScanReconciler) removeForceFullScanAnnotation(ctx context.Context, 
 	}
 }
 
+// clearParseRetryAnnotation removes the clamav.io/parse-retries annotation once a scan
+// reaches a terminal state. Best-effort: errors are logged but do not affect the
+// reconcile result. Keeping the annotation around would inflate the
+// clamav_parse_retries_total counter on every later scan (parseJobResults re-reads it)
+// and make the next scan inherit a non-zero retry count.
+func (r *NodeScanReconciler) clearParseRetryAnnotation(ctx context.Context, nodeScan *clamavv1alpha1.NodeScan) {
+	if _, ok := nodeScan.Annotations[parseRetryAnnotation]; !ok {
+		return
+	}
+	base := nodeScan.DeepCopy()
+	delete(nodeScan.Annotations, parseRetryAnnotation)
+	if err := r.Patch(ctx, nodeScan, client.MergeFrom(base)); err != nil {
+		log.FromContext(ctx).Error(err, "failed to clear parse-retry annotation — will be cleared on next terminal reconcile")
+	}
+}
+
 // cleanupNodeScan cleans up resources when NodeScan is deleted
 func (r *NodeScanReconciler) cleanupNodeScan(ctx context.Context, nodeScan *clamavv1alpha1.NodeScan) error {
 	// Delete associated Job if it exists
@@ -1324,9 +1399,17 @@ func (r *NodeScanReconciler) SetupWithManager(mgr ctrl.Manager) error {
 	if r.Notifier == nil {
 		r.Notifier = notification.New(r.Client, r.Recorder)
 	}
+	// GenerationChangedPredicate alone would break the force-full-scan feature:
+	// annotation changes do NOT bump metadata.generation (only spec changes do),
+	// and a terminal NodeScan has no pending requeue — so annotating it would
+	// never trigger a reconcile. AnnotationChangedPredicate lets those events
+	// through while still filtering out status-only updates.
 	return ctrl.NewControllerManagedBy(mgr).
 		For(&clamavv1alpha1.NodeScan{},
-			builder.WithPredicates(predicate.GenerationChangedPredicate{})).
+			builder.WithPredicates(predicate.Or(
+				predicate.GenerationChangedPredicate{},
+				predicate.AnnotationChangedPredicate{},
+			))).
 		Owns(&batchv1.Job{}).
 		Complete(r)
 }
