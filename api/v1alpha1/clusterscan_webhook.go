@@ -23,27 +23,39 @@ import (
 	ctrl "sigs.k8s.io/controller-runtime"
 	logf "sigs.k8s.io/controller-runtime/pkg/log"
 	"sigs.k8s.io/controller-runtime/pkg/webhook/admission"
+
+	apierrors "k8s.io/apimachinery/pkg/api/errors"
+	"k8s.io/apimachinery/pkg/types"
+	client "sigs.k8s.io/controller-runtime/pkg/client"
 )
 
 // log is for logging in this package.
 var clusterscanlog = logf.Log.WithName("clusterscan-resource")
 
 // SetupWebhookWithManager sets up the webhook with the Manager
+// clusterscanValidator implements admission.Validator for ClusterScan
+type clusterscanValidator struct {
+	client.Client
+}
+
+// SetupWebhookWithManager sets up the webhook with the Manager
 func (r *ClusterScan) SetupWebhookWithManager(mgr ctrl.Manager) error {
 	return ctrl.NewWebhookManagedBy(mgr, &ClusterScan{}).
-		WithValidator(r).
+		WithValidator(&clusterscanValidator{
+			Client: mgr.GetClient(),
+		}).
 		Complete()
 }
 
 // +kubebuilder:webhook:path=/validate-clamav-io-v1alpha1-clusterscan,mutating=false,failurePolicy=fail,sideEffects=None,groups=clamav.io,resources=clusterscans,verbs=create;update,versions=v1alpha1,name=vclusterscan.kb.io,admissionReviewVersions=v1
 
-var _ admission.Validator[*ClusterScan] = &ClusterScan{}
+var _ admission.Validator[*ClusterScan] = &clusterscanValidator{}
 
 // ValidateCreate implements admission.Validator so a webhook will be registered for the type
-func (r *ClusterScan) ValidateCreate(ctx context.Context, obj *ClusterScan) (admission.Warnings, error) {
+func (v *clusterscanValidator) ValidateCreate(ctx context.Context, obj *ClusterScan) (admission.Warnings, error) {
 	clusterscanlog.Info("validate create", "name", obj.Name)
 
-	allErrs := obj.validateClusterScan()
+	allErrs := obj.validateClusterScan(ctx, v.Client)
 
 	if len(allErrs) > 0 {
 		return nil, allErrs.ToAggregate()
@@ -53,10 +65,10 @@ func (r *ClusterScan) ValidateCreate(ctx context.Context, obj *ClusterScan) (adm
 }
 
 // ValidateUpdate implements admission.Validator so a webhook will be registered for the type
-func (r *ClusterScan) ValidateUpdate(ctx context.Context, oldObj, newObj *ClusterScan) (admission.Warnings, error) {
+func (v *clusterscanValidator) ValidateUpdate(ctx context.Context, oldObj, newObj *ClusterScan) (admission.Warnings, error) {
 	clusterscanlog.Info("validate update", "name", newObj.Name)
 
-	allErrs := newObj.validateClusterScan()
+	allErrs := newObj.validateClusterScan(ctx, v.Client)
 
 	if len(allErrs) > 0 {
 		return nil, allErrs.ToAggregate()
@@ -66,7 +78,7 @@ func (r *ClusterScan) ValidateUpdate(ctx context.Context, oldObj, newObj *Cluste
 }
 
 // ValidateDelete implements admission.Validator so a webhook will be registered for the type
-func (r *ClusterScan) ValidateDelete(ctx context.Context, obj *ClusterScan) (admission.Warnings, error) {
+func (v *clusterscanValidator) ValidateDelete(ctx context.Context, obj *ClusterScan) (admission.Warnings, error) {
 	clusterscanlog.Info("validate delete", "name", obj.Name)
 
 	// No validation needed for delete
@@ -74,7 +86,7 @@ func (r *ClusterScan) ValidateDelete(ctx context.Context, obj *ClusterScan) (adm
 }
 
 // validateClusterScan performs comprehensive validation of ClusterScan spec
-func (r *ClusterScan) validateClusterScan() field.ErrorList {
+func (r *ClusterScan) validateClusterScan(ctx context.Context, c client.Client) field.ErrorList {
 	var allErrs field.ErrorList
 	specPath := field.NewPath("spec")
 
@@ -122,6 +134,23 @@ func (r *ClusterScan) validateClusterScan() field.ErrorList {
 				specPath.Child("nodeSelector"),
 				r.Spec.NodeSelector,
 				"nodeSelector must have at least one matchLabel or matchExpression"))
+		}
+	}
+
+	// Validate ScanPolicy
+	if r.Spec.ScanPolicy != "" {
+		scanPolicy := &ScanPolicy{}
+		err := c.Get(ctx, types.NamespacedName{Name: r.Spec.ScanPolicy, Namespace: r.Namespace}, scanPolicy)
+		if err != nil {
+			if apierrors.IsNotFound(err) {
+				allErrs = append(allErrs, field.NotFound(
+					specPath.Child("scanPolicy"),
+					r.Spec.ScanPolicy))
+			} else {
+				allErrs = append(allErrs, field.InternalError(
+					specPath.Child("scanPolicy"),
+					err))
+			}
 		}
 	}
 

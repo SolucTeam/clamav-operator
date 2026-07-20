@@ -455,11 +455,14 @@ func (r *NodeScanReconciler) Reconcile(ctx context.Context, req ctrl.Request) (c
 			// Record partial-results metric regardless of infection status.
 			recordPartialResults(nodeScan.Namespace, nodeScan.Spec.NodeName, nodeScan.Status.ResultsPartial)
 
-			// Send notifications if infected files found.
+			// Send notifications.
 			// Runs in a goroutine so HTTP/SMTP retries never block the reconcile worker.
 			// SendWithRetry attempts each channel up to 3 times with exponential backoff.
 			// The 5-minute deadline gives 3 channels × ~35 s of retries comfortable headroom.
-			if nodeScan.Status.FilesInfected > 0 && scanPolicy != nil {
+			// Each channel's OnlyOnInfection flag controls whether to skip clean-scan
+			// notifications; we must call SendWithRetry regardless of FilesInfected so
+			// that channels with OnlyOnInfection=false still get delivered.
+			if scanPolicy != nil {
 				nodeScanSnap := nodeScan.DeepCopy()
 				scanPolicySnap := scanPolicy.DeepCopy()
 				namespace := nodeScan.Namespace

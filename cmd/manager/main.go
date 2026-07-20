@@ -271,6 +271,10 @@ func main() {
 		setupLog.Error(err, "unable to create webhook", "webhook", "ScanSchedule")
 		os.Exit(1)
 	}
+	if err = (&clamavv1alpha1.ScanPolicy{}).SetupWebhookWithManager(mgr); err != nil {
+		setupLog.Error(err, "unable to create webhook", "webhook", "ScanPolicy")
+		os.Exit(1)
+	}
 
 	// NOTE: /convert is registered automatically by controller-runtime when
 	// SetupWebhookWithManager is called for any type that implements

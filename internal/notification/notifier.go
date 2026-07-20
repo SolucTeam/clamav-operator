@@ -47,6 +47,13 @@ const (
 	retryBaseDelay = 5 * time.Second
 )
 
+// sanitizeEmailHeader strips CR and LF characters to prevent SMTP header injection.
+func sanitizeEmailHeader(s string) string {
+	s = strings.ReplaceAll(s, "\r", "")
+	s = strings.ReplaceAll(s, "\n", "")
+	return s
+}
+
 // NotifyResult carries the per-channel outcome of a SendWithRetry call.
 // It lets the caller (controller) decide what to record in the NodeScan status
 // without coupling the notifier to the API types.
@@ -295,9 +302,15 @@ func (n *Notifier) sendEmail(ctx context.Context, nodeScan *clamavv1alpha1.NodeS
 	buf.WriteString("This is an automated message from ClamAV Operator.\n")
 	buf.WriteString("================================================================================\n")
 
+	sanitizedFrom := sanitizeEmailHeader(config.From)
+	sanitizedRecipients := make([]string, len(config.Recipients))
+	for i, r := range config.Recipients {
+		sanitizedRecipients[i] = sanitizeEmailHeader(r)
+	}
+
 	msg := []byte(
-		"From: " + config.From + "\r\n" +
-			"To: " + strings.Join(config.Recipients, ",") + "\r\n" +
+		"From: " + sanitizedFrom + "\r\n" +
+			"To: " + strings.Join(sanitizedRecipients, ",") + "\r\n" +
 			"Subject: " + subject + "\r\n" +
 			"Content-Type: text/plain; charset=UTF-8\r\n\r\n" +
 			buf.String() + "\r\n",
@@ -417,8 +430,14 @@ func (n *Notifier) sendWebhook(ctx context.Context, nodeScan *clamavv1alpha1.Nod
 		}, secret); err != nil {
 			return fmt.Errorf("failed to get webhook secret: %w", err)
 		}
+		allowedHeaders := map[string]bool{
+			"Authorization": true,
+			"X-Api-Key":     true,
+		}
 		for k, v := range secret.Data {
-			req.Header.Set(k, string(v))
+			if allowedHeaders[k] {
+				req.Header.Set(k, string(v))
+			}
 		}
 	}
 
