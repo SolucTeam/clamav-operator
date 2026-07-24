@@ -11,6 +11,7 @@ import (
 
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/api/errors"
+	"k8s.io/apimachinery/pkg/api/meta"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/client-go/tools/record"
@@ -179,7 +180,14 @@ func (r *ClusterScanReconciler) Reconcile(ctx context.Context, req ctrl.Request)
 		}
 		if err := r.createNodeScanForNode(ctx, &clusterScan, node.Name); err != nil {
 			log.Error(err, "failed to create NodeScan", "node", node.Name)
-			continue
+
+			// Record event for the ClusterScan
+			r.Recorder.Eventf(&clusterScan, corev1.EventTypeWarning, "NodeScanCreationFailed", "Failed to create NodeScan for node %s: %v", node.Name, err)
+
+			// Add condition for partial failure
+			meta.SetStatusCondition(&clusterScan.Status.Conditions, metav1.Condition{Type: "NodeScanCreationFailed", Status: metav1.ConditionTrue, Reason: "NodeScanCreationFailed", Message: fmt.Sprintf("Failed to create NodeScan for node %s: %v", node.Name, err)})
+
+			continue // Continue to attempt creating other NodeScans, but don't count this as in-flight
 		}
 		inFlight++
 	}
@@ -201,7 +209,11 @@ func (r *ClusterScanReconciler) Reconcile(ctx context.Context, req ctrl.Request)
 		clusterScan.Status.Phase == clamavv1alpha1.ClusterScanPhasePartiallyComplete ||
 		clusterScan.Status.Phase == clamavv1alpha1.ClusterScanPhaseFailed
 
-	if completed+failed == clusterScan.Status.TotalNodes {
+	// ">=" and not "==": if a node is deleted while its NodeScan is already
+	// terminal, TotalNodes (recomputed from the live node list) shrinks below
+	// completed+failed and strict equality would never hold — leaving the
+	// ClusterScan stuck in Running and requeueing every 30 s forever.
+	if completed+failed >= clusterScan.Status.TotalNodes && inFlight == 0 {
 		if failed == 0 {
 			clusterScan.Status.Phase = clamavv1alpha1.ClusterScanPhaseCompleted
 		} else if completed > 0 {
@@ -258,7 +270,7 @@ func (r *ClusterScanReconciler) getNodesForScan(ctx context.Context, clusterScan
 func (r *ClusterScanReconciler) createNodeScanForNode(ctx context.Context, clusterScan *clamavv1alpha1.ClusterScan, nodeName string) error {
 	nodeScan := &clamavv1alpha1.NodeScan{
 		ObjectMeta: metav1.ObjectMeta{
-			Name:      fmt.Sprintf("%s-%s", clusterScan.Name, nodeName),
+			Name:      sanitizeLabelValue(fmt.Sprintf("%s-%s", clusterScan.Name, nodeName)),
 			Namespace: clusterScan.Namespace,
 			Labels: map[string]string{
 				"clamav.io/clusterscan": sanitizeLabelValue(clusterScan.Name),

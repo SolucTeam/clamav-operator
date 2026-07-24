@@ -320,6 +320,25 @@ function shouldScanFile(filePath, fileStats, effectiveStrategy) {
     return { shouldScan: true, reason: 'full_scan' };
   }
 
+  // modified-only: scan ONLY files whose mtime falls within the configured
+  // window (maxFileAgeHours / CRD incrementalConfig.maxAge), regardless of the
+  // cache. Previously this strategy was accepted by the CRD enum but never
+  // implemented here — it silently behaved exactly like "incremental".
+  if (effectiveStrategy === 'modified-only') {
+    const windowHours = INCREMENTAL_CONFIG.maxFileAgeHours > 0
+      ? INCREMENTAL_CONFIG.maxFileAgeHours
+      : 24;
+    const ageHours = (Date.now() - fileStats.mtimeMs) / 3600000;
+    if (ageHours <= windowHours) {
+      incrementalStats.modifiedFiles++;
+      return { shouldScan: true, reason: 'recently_modified' };
+    }
+    incrementalStats.filesSkipped++;
+    // Mark as seen so saveCache() keeps any existing cache entry for this file.
+    SEEN_FILES.add(filePath);
+    return { shouldScan: false, reason: 'outside_modified_window' };
+  }
+
   const cached = SCAN_CACHE[filePath];
 
   if (!cached) {
@@ -343,6 +362,15 @@ function shouldScanFile(filePath, fileStats, effectiveStrategy) {
     if (ageHours > INCREMENTAL_CONFIG.maxFileAgeHours) {
       return { shouldScan: true, reason: 'max_age_exceeded' };
     }
+  }
+
+  // SKIP_UNCHANGED_FILES=false disables the unchanged-file short-circuit:
+  // the file is re-scanned even though mtime+size match the cache.
+  // This flag is exposed in the CRD (incrementalConfig.skipUnchangedFiles) and
+  // Helm values but was previously never read here — setting it to false had
+  // no effect.
+  if (!INCREMENTAL_CONFIG.skipUnchangedFiles) {
+    return { shouldScan: true, reason: 'skip_unchanged_disabled' };
   }
 
   incrementalStats.filesSkipped++;

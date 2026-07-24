@@ -33,6 +33,7 @@ import (
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/types"
 	"k8s.io/client-go/tools/record"
+	"k8s.io/utils/ptr"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 	"sigs.k8s.io/controller-runtime/pkg/log"
 
@@ -45,6 +46,13 @@ const (
 	// retryBaseDelay is the initial backoff delay; doubled on each subsequent attempt.
 	retryBaseDelay = 5 * time.Second
 )
+
+// sanitizeEmailHeader strips CR and LF characters to prevent SMTP header injection.
+func sanitizeEmailHeader(s string) string {
+	s = strings.ReplaceAll(s, "\r", "")
+	s = strings.ReplaceAll(s, "\n", "")
+	return s
+}
 
 // NotifyResult carries the per-channel outcome of a SendWithRetry call.
 // It lets the caller (controller) decide what to record in the NodeScan status
@@ -220,7 +228,8 @@ func (n *Notifier) SendFailureWithRetry(ctx context.Context, nodeScan *clamavv1a
 func (n *Notifier) sendSlack(ctx context.Context, nodeScan *clamavv1alpha1.NodeScan, scanPolicy *clamavv1alpha1.ScanPolicy) error {
 	config := scanPolicy.Spec.Notifications.Slack
 
-	if config.OnlyOnInfection && nodeScan.Status.FilesInfected == 0 {
+	// OnlyOnInfection is *bool; nil means unset → the CRD default (true) applies.
+	if ptr.Deref(config.OnlyOnInfection, true) && nodeScan.Status.FilesInfected == 0 {
 		return nil
 	}
 
@@ -310,7 +319,8 @@ func (n *Notifier) sendSlack(ctx context.Context, nodeScan *clamavv1alpha1.NodeS
 func (n *Notifier) sendEmail(ctx context.Context, nodeScan *clamavv1alpha1.NodeScan, scanPolicy *clamavv1alpha1.ScanPolicy) error {
 	config := scanPolicy.Spec.Notifications.Email
 
-	if config.OnlyOnInfection && nodeScan.Status.FilesInfected == 0 {
+	// OnlyOnInfection is *bool; nil means unset → the CRD default (true) applies.
+	if ptr.Deref(config.OnlyOnInfection, true) && nodeScan.Status.FilesInfected == 0 {
 		return nil
 	}
 
@@ -368,9 +378,15 @@ func (n *Notifier) sendEmail(ctx context.Context, nodeScan *clamavv1alpha1.NodeS
 	buf.WriteString("This is an automated message from ClamAV Operator.\n")
 	buf.WriteString("================================================================================\n")
 
+	sanitizedFrom := sanitizeEmailHeader(config.From)
+	sanitizedRecipients := make([]string, len(config.Recipients))
+	for i, r := range config.Recipients {
+		sanitizedRecipients[i] = sanitizeEmailHeader(r)
+	}
+
 	msg := []byte(
-		"From: " + config.From + "\r\n" +
-			"To: " + strings.Join(config.Recipients, ",") + "\r\n" +
+		"From: " + sanitizedFrom + "\r\n" +
+			"To: " + strings.Join(sanitizedRecipients, ",") + "\r\n" +
 			"Subject: " + subject + "\r\n" +
 			"Content-Type: text/plain; charset=UTF-8\r\n\r\n" +
 			buf.String() + "\r\n",
@@ -428,7 +444,8 @@ func (n *Notifier) sendEmail(ctx context.Context, nodeScan *clamavv1alpha1.NodeS
 func (n *Notifier) sendWebhook(ctx context.Context, nodeScan *clamavv1alpha1.NodeScan, scanPolicy *clamavv1alpha1.ScanPolicy) error {
 	config := scanPolicy.Spec.Notifications.Webhook
 
-	if config.OnlyOnInfection && nodeScan.Status.FilesInfected == 0 {
+	// OnlyOnInfection is *bool; nil means unset → the CRD default (true) applies.
+	if ptr.Deref(config.OnlyOnInfection, true) && nodeScan.Status.FilesInfected == 0 {
 		return nil
 	}
 
@@ -489,8 +506,14 @@ func (n *Notifier) sendWebhook(ctx context.Context, nodeScan *clamavv1alpha1.Nod
 		}, secret); err != nil {
 			return fmt.Errorf("failed to get webhook secret: %w", err)
 		}
+		allowedHeaders := map[string]bool{
+			"Authorization": true,
+			"X-Api-Key":     true,
+		}
 		for k, v := range secret.Data {
-			req.Header.Set(k, string(v))
+			if allowedHeaders[k] {
+				req.Header.Set(k, string(v))
+			}
 		}
 	}
 
@@ -519,7 +542,8 @@ func (n *Notifier) sendWebhook(ctx context.Context, nodeScan *clamavv1alpha1.Nod
 func (n *Notifier) sendTeams(ctx context.Context, nodeScan *clamavv1alpha1.NodeScan, scanPolicy *clamavv1alpha1.ScanPolicy) error {
 	config := scanPolicy.Spec.Notifications.Teams
 
-	if config.OnlyOnInfection && nodeScan.Status.FilesInfected == 0 {
+	// OnlyOnInfection is *bool; nil means unset → the CRD default (true) applies.
+	if ptr.Deref(config.OnlyOnInfection, true) && nodeScan.Status.FilesInfected == 0 {
 		return nil
 	}
 

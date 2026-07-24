@@ -112,7 +112,10 @@ type SlackConfig struct {
 	// OnlyOnInfection sends notifications only when malware is detected
 	// +kubebuilder:default=true
 	// +optional
-	OnlyOnInfection bool `json:"onlyOnInfection,omitempty"`
+	// Pointer (not plain bool): with a plain bool + omitempty, an explicit
+	// `false` is dropped at serialization and re-defaulted to true by the API
+	// server on any client-side rewrite. nil = unset (default true applies).
+	OnlyOnInfection *bool `json:"onlyOnInfection,omitempty"`
 }
 
 // EmailConfig defines email notification settings
@@ -138,7 +141,10 @@ type EmailConfig struct {
 	// OnlyOnInfection sends emails only when malware is detected
 	// +kubebuilder:default=true
 	// +optional
-	OnlyOnInfection bool `json:"onlyOnInfection,omitempty"`
+	// Pointer (not plain bool): with a plain bool + omitempty, an explicit
+	// `false` is dropped at serialization and re-defaulted to true by the API
+	// server on any client-side rewrite. nil = unset (default true applies).
+	OnlyOnInfection *bool `json:"onlyOnInfection,omitempty"`
 }
 
 // WebhookConfig defines webhook notification settings
@@ -160,7 +166,10 @@ type WebhookConfig struct {
 	// OnlyOnInfection sends webhooks only when malware is detected
 	// +kubebuilder:default=true
 	// +optional
-	OnlyOnInfection bool `json:"onlyOnInfection,omitempty"`
+	// Pointer (not plain bool): with a plain bool + omitempty, an explicit
+	// `false` is dropped at serialization and re-defaulted to true by the API
+	// server on any client-side rewrite. nil = unset (default true applies).
+	OnlyOnInfection *bool `json:"onlyOnInfection,omitempty"`
 }
 
 // TeamsConfig defines Microsoft Teams notification settings via Incoming Webhook.
@@ -185,10 +194,20 @@ type TeamsConfig struct {
 	// OnlyOnInfection sends notifications only when malware is detected.
 	// +kubebuilder:default=true
 	// +optional
-	OnlyOnInfection bool `json:"onlyOnInfection,omitempty"`
+	// Pointer (not plain bool): with a plain bool + omitempty, an explicit
+	// `false` is dropped at serialization and re-defaulted to true by the API
+	// server on any client-side rewrite. nil = unset (default true applies).
+	OnlyOnInfection *bool `json:"onlyOnInfection,omitempty"`
 }
 
-// QuarantineConfig defines quarantine settings for infected files
+// QuarantineConfig defines quarantine settings for infected files.
+//
+// NOT IMPLEMENTED YET: the operator and the scanner currently only report
+// infected files (alert-only behavior) regardless of these settings. Setting
+// action to "move" or "delete" emits a QuarantineNotImplemented Warning event
+// on the NodeScan instead of silently pretending to quarantine. The API is
+// kept so that existing ScanPolicy objects remain valid and the feature can be
+// implemented without a breaking CRD change.
 type QuarantineConfig struct {
 	// Enabled indicates if quarantine is enabled
 	Enabled bool `json:"enabled"`
@@ -203,10 +222,11 @@ type QuarantineConfig struct {
 	// +optional
 	QuarantineDir string `json:"quarantineDir,omitempty"`
 
-	// NotifyAdmin sends notification when files are quarantined
+	// NotifyAdmin sends notification when files are quarantined.
+	// Pointer for the same omitempty/default=true reason as OnlyOnInfection.
 	// +kubebuilder:default=true
 	// +optional
-	NotifyAdmin bool `json:"notifyAdmin,omitempty"`
+	NotifyAdmin *bool `json:"notifyAdmin,omitempty"`
 }
 
 // ScanPolicyStatus defines the observed state of ScanPolicy

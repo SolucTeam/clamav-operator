@@ -98,7 +98,7 @@ jobs:
       - name: golangci-lint
         uses: golangci/golangci-lint-action@v7
         with:
-          version: latest
+          version: v2.12.2
           args: --timeout=5m
 
   # ===========================================================================
@@ -154,7 +154,45 @@ jobs:
         run: helm template . > /dev/null
 
   # ===========================================================================
-  # Job 4 — E2E tests (envtest — no real cluster required)
+  # Job 4 — Check generated code is up to date
+  # ===========================================================================
+  # Catches drift when API types or RBAC are modified without running
+  # `make manifests` and `make generate`.
+  check-generate:
+    name: "Go — Check Generated Code"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+          cache: true
+
+      - name: Check manifests are up to date
+        run: |
+          make manifests
+          if ! git diff --quiet -- config/; then
+            echo "❌ CRD/RBAC manifests are out of date. Run 'make manifests' and commit the changes."
+            git diff --stat -- config/
+            exit 1
+          fi
+          echo "✅ Manifests are up to date"
+
+      - name: Check generated code is up to date
+        run: |
+          make generate
+          if ! git diff --quiet; then
+            echo "❌ Generated code is out of date. Run 'make generate' and commit the changes."
+            git diff --stat
+            exit 1
+          fi
+          echo "✅ Generated code is up to date"
+
+  # ===========================================================================
+  # Job 5 — E2E tests (envtest — no real cluster required)
   # Uses controller-runtime's envtest which spins up an in-process
   # etcd + kube-apiserver. Tests exercise the full reconcile loop including
   # Job lifecycle simulation, finalizer cleanup, and CRD conversion.
@@ -162,6 +200,7 @@ jobs:
   e2e-test:
     name: "Go — E2E Tests (envtest)"
     runs-on: ubuntu-latest
+    needs: [go-test, go-lint]
     steps:
       - name: Checkout
         uses: actions/checkout@v4

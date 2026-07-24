@@ -39,15 +39,21 @@ type IncrementalScanConfig struct {
 	// +optional
 	FullScanInterval int32 `json:"fullScanInterval,omitempty"`
 
-	// MaxFileAgeHours is the maximum age (in hours) of files to consider for incremental scans
-	// +kubebuilder:default=24
+	// MaxFileAgeHours is the maximum age (in hours) of files to consider for incremental scans.
+	// 168h (7 days) — must exceed the scan interval. A 24h default broke daily
+	// scans: every cached entry expired before the next run and each "incremental"
+	// scan silently became a full scan.
+	// +kubebuilder:default=168
 	// +optional
 	MaxFileAgeHours int32 `json:"maxFileAgeHours,omitempty"`
 
-	// SkipUnchangedFiles skips files whose mtime+size haven't changed since last scan
+	// SkipUnchangedFiles skips files whose mtime+size haven't changed since last scan.
+	// Pointer (not plain bool): with a plain bool + omitempty, an explicit `false`
+	// was dropped at serialization and re-defaulted to true by the API server on
+	// any client-side rewrite. nil = unset (default true applies).
 	// +kubebuilder:default=true
 	// +optional
-	SkipUnchangedFiles bool `json:"skipUnchangedFiles,omitempty"`
+	SkipUnchangedFiles *bool `json:"skipUnchangedFiles,omitempty"`
 }
 
 // NodeScanSpec defines the desired state of NodeScan
@@ -101,9 +107,12 @@ type NodeScanSpec struct {
 	// +optional
 	TTLSecondsAfterFinished *int32 `json:"ttlSecondsAfterFinished,omitempty"`
 
-	// Strategy defines the scan strategy to use
+	// Strategy defines the scan strategy to use.
+	// IMPORTANT: no CRD default here. When unset, the operator falls back to the
+	// Helm-level SCANNER_SCAN_STRATEGY env var. A `default=full` marker would make
+	// the API server persist "full" on every NodeScan created without an explicit
+	// strategy, silently disabling incremental scanning cluster-wide.
 	// +kubebuilder:validation:Enum=full;incremental;modified-only;smart
-	// +kubebuilder:default=full
 	// +optional
 	Strategy ScanStrategy `json:"strategy,omitempty"`
 

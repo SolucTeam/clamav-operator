@@ -21,7 +21,8 @@ const (
 	// ScanStrategyIncremental scans only files modified since the last successful scan
 	ScanStrategyIncremental ScanStrategy = "incremental"
 
-	// ScanStrategyModifiedOnly scans only files modified within the last 24 h
+	// ScanStrategyModifiedOnly scans only files modified within the configured
+	// window (incrementalConfig.maxAge hours; 24 h when unset/zero)
 	ScanStrategyModifiedOnly ScanStrategy = "modified-only"
 
 	// ScanStrategySmart alternates between incremental and full scans automatically
@@ -49,8 +50,11 @@ type IncrementalScanConfig struct {
 	BaselineInterval int32 `json:"baselineInterval,omitempty"`
 
 	// MaxAge defines the maximum age (in hours) of files to consider for incremental scans.
-	// Used with the modified-only and smart strategies
-	// +kubebuilder:default=24
+	// Used with the modified-only and smart strategies.
+	// 168h (7 days) — must exceed the scan interval. A 24h default broke daily
+	// scans: every cached entry expired before the next run and each "incremental"
+	// scan silently became a full scan.
+	// +kubebuilder:default=168
 	// +optional
 	MaxAge int32 `json:"maxAge,omitempty"`
 
@@ -66,10 +70,14 @@ type IncrementalScanConfig struct {
 	// +optional
 	CacheExpiration int32 `json:"cacheExpiration,omitempty"`
 
-	// SkipUnchangedFiles skips files whose mtime+size have not changed since the last scan
+	// SkipUnchangedFiles skips files whose mtime+size have not changed since the last scan.
+	// Pointer (not plain bool): with a plain bool + omitempty, an explicit `false`
+	// was dropped at serialization and re-defaulted to true by the API server —
+	// e.g. when the ClusterScan controller copied a template carrying false into
+	// a new NodeScan. nil = unset (default true applies).
 	// +kubebuilder:default=true
 	// +optional
-	SkipUnchangedFiles bool `json:"skipUnchangedFiles,omitempty"`
+	SkipUnchangedFiles *bool `json:"skipUnchangedFiles,omitempty"`
 }
 
 // FileMetadata holds the metadata of a scanned file
