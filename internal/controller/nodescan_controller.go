@@ -180,6 +180,9 @@ func (r *NodeScanReconciler) Reconcile(ctx context.Context, req ctrl.Request) (c
 	// Handle deletion
 	if !nodeScan.DeletionTimestamp.IsZero() {
 		if controllerutil.ContainsFinalizer(&nodeScan, nodeScanFinalizer) {
+			if nodeScan.Status.Phase == clamavv1alpha1.NodeScanPhaseRunning {
+				decNodeScanRunning(nodeScan.Namespace)
+			}
 			if err := r.cleanupNodeScan(ctx, &nodeScan); err != nil {
 				return ctrl.Result{}, err
 			}
@@ -203,6 +206,9 @@ func (r *NodeScanReconciler) Reconcile(ctx context.Context, req ctrl.Request) (c
 	var node corev1.Node
 	if err := r.Get(ctx, types.NamespacedName{Name: nodeScan.Spec.NodeName}, &node); err != nil {
 		if errors.IsNotFound(err) {
+			if nodeScan.Status.Phase == clamavv1alpha1.NodeScanPhaseRunning {
+				decNodeScanRunning(nodeScan.Namespace)
+			}
 			r.Recorder.Event(&nodeScan, corev1.EventTypeWarning, "NodeNotFound",
 				fmt.Sprintf("Node %s not found", nodeScan.Spec.NodeName))
 			nodeNotFoundBase := nodeScan.DeepCopy()
@@ -432,16 +438,15 @@ func (r *NodeScanReconciler) Reconcile(ctx context.Context, req ctrl.Request) (c
 			// Record partial-results metric regardless of infection status.
 			recordPartialResults(nodeScan.Namespace, nodeScan.Spec.NodeName, nodeScan.Status.ResultsPartial)
 
-			// Send notifications if infected files found.
+			// Send notifications for completed scan.
 			// Runs in a goroutine so HTTP/SMTP retries never block the reconcile worker.
 			// SendWithRetry attempts each channel up to 3 times with exponential backoff.
 			// The 5-minute deadline gives 3 channels × ~35 s of retries comfortable headroom.
-			if nodeScan.Status.FilesInfected > 0 && scanPolicy != nil {
+			// Each channel decides independently whether to notify based on OnlyOnInfection.
+			if scanPolicy != nil && scanPolicy.Spec.Notifications != nil {
 				nodeScanSnap := nodeScan.DeepCopy()
 				scanPolicySnap := scanPolicy.DeepCopy()
 				namespace := nodeScan.Namespace
-				// context.WithoutCancel keeps tracing/log values without inheriting
-				// the reconcile-loop cancellation.
 				baseCtx := context.WithoutCancel(ctx)
 				go func() {
 					notifCtx, cancel := context.WithTimeout(baseCtx, 5*time.Minute)
@@ -511,6 +516,25 @@ func (r *NodeScanReconciler) Reconcile(ctx context.Context, req ctrl.Request) (c
 			// operator does not loop indefinitely resetting and re-scanning.
 			// The user can re-add the annotation manually to retry.
 			r.removeForceFullScanAnnotation(ctx, &nodeScan, &existingJob)
+
+			// Send failure notifications if enabled.
+			if scanPolicy != nil && scanPolicy.Spec.Notifications != nil && scanPolicy.Spec.Notifications.NotifyOnFailure {
+				nodeScanSnap := nodeScan.DeepCopy()
+				scanPolicySnap := scanPolicy.DeepCopy()
+				namespace := nodeScan.Namespace
+				baseCtx := context.WithoutCancel(ctx)
+				go func() {
+					notifCtx, cancel := context.WithTimeout(baseCtx, 5*time.Minute)
+					defer cancel()
+					results := r.Notifier.SendFailureWithRetry(notifCtx, nodeScanSnap, scanPolicySnap)
+					for _, res := range results {
+						recordNotificationAttempt(namespace, res.Channel)
+						if res.Err != nil {
+							recordNotificationFailed(namespace, res.Channel)
+						}
+					}
+				}()
+			}
 		}
 		return ctrl.Result{}, nil
 	}
@@ -1207,14 +1231,13 @@ func (r *NodeScanReconciler) updateStatus(ctx context.Context, nodeScan *clamavv
 // updatePolicyStats updates the usage statistics of a ScanPolicy and records
 // the clamav_scanpolicy_usage_total Prometheus metric.
 func (r *NodeScanReconciler) updatePolicyStats(ctx context.Context, scanPolicy *clamavv1alpha1.ScanPolicy) {
+	base := scanPolicy.DeepCopy()
 	now := metav1.Now()
 	scanPolicy.Status.LastUsed = &now
 	scanPolicy.Status.UsageCount++
-	if err := r.Status().Update(ctx, scanPolicy); err != nil {
+	if err := r.Status().Patch(ctx, scanPolicy, client.MergeFrom(base)); err != nil {
 		log.FromContext(ctx).Error(err, "failed to update ScanPolicy stats")
 	}
-	// Record the Prometheus metric — was previously dead code because
-	// recordScanPolicyUsage was never called anywhere in production.
 	recordScanPolicyUsage(scanPolicy.Namespace, scanPolicy.Name)
 }
 

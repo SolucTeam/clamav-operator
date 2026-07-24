@@ -718,8 +718,11 @@ defaultScanPolicy:
     #     limits: { cpu: 1000m, memory: 2Gi }
     resources: {}
 
-    # Notifications (configure for production)
+    # Notifications configuration
+    # notifyOnFailure sends alerts when a scan job fails (OOMKill, timeout, error).
+    # Default: true. Set to false to only notify on malware detection.
     # notifications:
+    #   notifyOnFailure: true
     #   slack:
     #     enabled: true
     #     webhookSecretRef:

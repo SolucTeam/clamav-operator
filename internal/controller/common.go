@@ -49,8 +49,13 @@ func sanitizeLabelValue(s string) string {
 		return s
 	}
 	sum := sha256.Sum256([]byte(s))
-	// Trim trailing separators so the hash suffix is never preceded by '.-'
-	// or '--', which would violate RFC 1123 subdomain rules.
 	prefix := strings.TrimRight(s[:52], "-.")
-	return fmt.Sprintf("%s-%x", prefix, sum[:5])
+	result := fmt.Sprintf("%s-%x", prefix, sum[:5])
+	if len(result) > 0 && (result[0] == '-' || result[0] == '.') {
+		result = "x" + result[1:]
+	}
+	if len(result) > 63 {
+		result = result[:63]
+	}
+	return result
 }

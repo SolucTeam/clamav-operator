@@ -135,6 +135,12 @@ spec:
                     - recipients
                     - smtpServer
                     type: object
+                  notifyOnFailure:
+                    default: true
+                    description: |-
+                      NotifyOnFailure sends notifications when a scan job fails (not just on infection).
+                      This covers operational failures such as OOMKills, scanner errors, timeouts, etc.
+                    type: boolean
                   slack:
                     description: Slack notification settings
                     properties:
@@ -159,8 +165,12 @@ spec:
                               be a valid secret key.
                             type: string
                           name:
+                            default: ""
                             description: |-
                               Name of the referent.
+                              This field is effectively required, but due to backwards compatibility is
+                              allowed to be empty. Instances of this type with an empty value here are
+                              almost certainly wrong.
                               More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
                             type: string
                           optional:
@@ -179,9 +189,60 @@ spec:
                     required:
                     - enabled
                     type: object
+                  teams:
+                    description: Teams notification settings (Microsoft Teams Incoming
+                      Webhook)
+                    properties:
+                      enabled:
+                        description: Enabled indicates if Teams notifications are
+                          enabled
+                        type: boolean
+                      onlyOnInfection:
+                        default: true
+                        description: OnlyOnInfection sends notifications only when
+                          malware is detected.
+                        type: boolean
+                      webhookSecretRef:
+                        description: |-
+                          WebhookSecretRef references a Secret containing the webhook URL.
+                          The Secret must have a key matching the Key field below.
+                        properties:
+                          key:
+                            description: The key of the secret to select from.  Must
+                              be a valid secret key.
+                            type: string
+                          name:
+                            default: ""
+                            description: |-
+                              Name of the referent.
+                              This field is effectively required, but due to backwards compatibility is
+                              allowed to be empty. Instances of this type with an empty value here are
+                              almost certainly wrong.
+                              More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
+                            type: string
+                          optional:
+                            description: Specify whether the Secret or its key must
+                              be defined
+                            type: boolean
+                        required:
+                        - key
+                        type: object
+                        x-kubernetes-map-type: atomic
+                      webhookURL:
+                        description: |-
+                          WebhookURL is the Teams Incoming Webhook URL.
+                          Store in a Secret and use WebhookSecretRef instead for production.
+                        type: string
+                    required:
+                    - enabled
+                    type: object
                   webhook:
                     description: Webhook notification settings
                     properties:
+                      enabled:
+                        description: Enabled indicates if webhook notifications are
+                          enabled
+                        type: boolean
                       headers:
                         additionalProperties:
                           type: string
@@ -210,6 +271,7 @@ spec:
                         description: URL to send webhook notifications to
                         type: string
                     required:
+                    - enabled
                     - url
                     type: object
                 type: object
@@ -254,7 +316,7 @@ spec:
                       Claims lists the names of resources, defined in spec.resourceClaims,
                       that are used by this container.
 
-                      This is an alpha field and requires enabling the
+                      This field depends on the
                       DynamicResourceAllocation feature gate.
 
                       This field is immutable. It can only be set for containers.
@@ -266,6 +328,12 @@ spec:
                             Name must match the name of one entry in pod.spec.resourceClaims of
                             the Pod where this field is used. It makes that resource available
                             inside a container.
+                          type: string
+                        request:
+                          description: |-
+                            Request is the name chosen for a request in the referenced claim.
+                            If empty, everything from the claim is made available, otherwise
+                            only the result of this request.
                           type: string
                       required:
                       - name

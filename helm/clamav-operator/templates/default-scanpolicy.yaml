@@ -33,15 +33,37 @@ metadata:
     "helm.sh/hook-weight": "10"
 spec:
   {{- /*
-    Render spec fields individually so that empty maps (e.g. resources: {})
-    are omitted rather than serialised as "{}" — which would cause the API
-    server to store a non-nil Resources pointer and override any cluster
-    LimitRange defaults.
+    Render spec fields individually so that empty maps (e.g. resources: {},
+    notifications with no enabled channels) are omitted rather than serialised
+    as "{}" — which would cause the API server to store a non-nil pointer and
+    override any cluster LimitRange defaults or block notification defaulting.
   */}}
-  {{- $spec := omit .Values.defaultScanPolicy.spec "resources" }}
+  {{- $spec := omit .Values.defaultScanPolicy.spec "resources" "notifications" }}
   {{- toYaml $spec | nindent 2 }}
   {{- with .Values.defaultScanPolicy.spec.resources }}
   resources:
     {{- toYaml . | nindent 4 }}
+  {{- end }}
+  {{- with .Values.defaultScanPolicy.spec.notifications }}
+  notifications:
+    {{- if .notifyOnFailure }}
+    notifyOnFailure: {{ .notifyOnFailure }}
+    {{- end }}
+    {{- with .slack }}
+    slack:
+      {{- toYaml . | nindent 6 }}
+    {{- end }}
+    {{- with .email }}
+    email:
+      {{- toYaml . | nindent 6 }}
+    {{- end }}
+    {{- with .webhook }}
+    webhook:
+      {{- toYaml . | nindent 6 }}
+    {{- end }}
+    {{- with .teams }}
+    teams:
+      {{- toYaml . | nindent 6 }}
+    {{- end }}
   {{- end }}
 {{- end }}
