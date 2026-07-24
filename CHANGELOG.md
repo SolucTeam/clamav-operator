@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 
 
+## [v0.8.0] - 2026-07-24
+
+## 🚀 Features
+
+* Merge pull request #74 from SolucTeam/fix/notifications-failure-alerting-and-operator-bugs (b29e732)
+* feat(notifications): alert on scan failures + fix 8 operator bugs + update Helm chart (eb72c4b)
+
+## 🐛 Bug Fixes
+
+_No bug fixes_
+
+## 🔧 Other Changes
+
+* chore: update CHANGELOG for v0.7.4 (cc1409d)
+
+
 ## [v0.7.4] - 2026-07-20
 
 ## 🚀 Features
