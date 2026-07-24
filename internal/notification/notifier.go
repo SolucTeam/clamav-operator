@@ -151,6 +151,78 @@ func (n *Notifier) SendWithRetry(ctx context.Context, nodeScan *clamavv1alpha1.N
 	return results
 }
 
+// SendFailureWithRetry dispatches failure notifications for a NodeScan whose
+// job has failed.  It follows the same retry pattern as SendWithRetry but uses
+// failure-specific formatting (reason, exit code) instead of infection details.
+func (n *Notifier) SendFailureWithRetry(ctx context.Context, nodeScan *clamavv1alpha1.NodeScan, scanPolicy *clamavv1alpha1.ScanPolicy) []NotifyResult {
+	logger := log.FromContext(ctx)
+
+	if scanPolicy.Spec.Notifications == nil {
+		return nil
+	}
+
+	var results []NotifyResult
+
+	type channelFn struct {
+		name string
+		fn   func(context.Context, *clamavv1alpha1.NodeScan, *clamavv1alpha1.ScanPolicy) error
+	}
+
+	var channels []channelFn
+	if slack := scanPolicy.Spec.Notifications.Slack; slack != nil && slack.Enabled {
+		channels = append(channels, channelFn{"slack", n.sendSlackFailure})
+	}
+	if email := scanPolicy.Spec.Notifications.Email; email != nil && email.Enabled {
+		channels = append(channels, channelFn{"email", n.sendEmailFailure})
+	}
+	if wh := scanPolicy.Spec.Notifications.Webhook; wh != nil && wh.Enabled {
+		channels = append(channels, channelFn{"webhook", n.sendWebhookFailure})
+	}
+	if teams := scanPolicy.Spec.Notifications.Teams; teams != nil && teams.Enabled {
+		channels = append(channels, channelFn{"teams", n.sendTeamsFailure})
+	}
+
+	for _, ch := range channels {
+		var lastErr error
+		delay := retryBaseDelay
+
+		for attempt := 1; attempt <= maxRetries; attempt++ {
+			if err := ch.fn(ctx, nodeScan, scanPolicy); err == nil {
+				lastErr = nil
+				logger.V(1).Info("Failure notification delivered",
+					"channel", ch.name, "attempt", attempt)
+				break
+			} else {
+				lastErr = err
+				logger.Error(err, "Failure notification attempt failed — will retry",
+					"channel", ch.name, "attempt", attempt, "maxRetries", maxRetries)
+
+				if attempt < maxRetries {
+					select {
+					case <-ctx.Done():
+						lastErr = fmt.Errorf("context canceled during retry: %w", ctx.Err())
+						goto done
+					case <-time.After(delay):
+					}
+					delay *= 2
+				}
+			}
+		}
+	done:
+		result := NotifyResult{Channel: ch.name, Err: lastErr}
+		if lastErr != nil {
+			logger.Error(lastErr, "Failure notification delivery failed after all retries",
+				"channel", ch.name, "attempts", maxRetries)
+			n.Recorder.Event(nodeScan, corev1.EventTypeWarning, "NotificationFailed",
+				fmt.Sprintf("Failed to send %s failure notification after %d attempts: %v",
+					ch.name, maxRetries, lastErr))
+		}
+		results = append(results, result)
+	}
+
+	return results
+}
+
 // ─── Slack ────────────────────────────────────────────────────────────────────
 
 func (n *Notifier) sendSlack(ctx context.Context, nodeScan *clamavv1alpha1.NodeScan, scanPolicy *clamavv1alpha1.ScanPolicy) error {
@@ -226,7 +298,11 @@ func (n *Notifier) sendSlack(ctx context.Context, nodeScan *clamavv1alpha1.NodeS
 		return fmt.Errorf("failed to create Slack request: %w", err)
 	}
 	req.Header.Set("Content-Type", "application/json")
-	resp, err := http.DefaultClient.Do(req) //nolint:gosec
+	httpClient := &http.Client{
+		Timeout:   30 * time.Second,
+		Transport: &http.Transport{TLSClientConfig: &tls.Config{MinVersion: tls.VersionTLS12}},
+	}
+	resp, err := httpClient.Do(req) //nolint:gosec
 	if err != nil {
 		return fmt.Errorf("failed to send Slack request: %w", err)
 	}
@@ -605,6 +681,324 @@ func (n *Notifier) sendTeams(ctx context.Context, nodeScan *clamavv1alpha1.NodeS
 	defer resp.Body.Close()
 
 	// Teams webhooks return 200 with body "1" on success, or 400/429 on errors.
+	if resp.StatusCode < 200 || resp.StatusCode >= 300 {
+		return fmt.Errorf("teams webhook returned status %d", resp.StatusCode)
+	}
+	return nil
+}
+
+// ─── Failure notification senders ────────────────────────────────────────────
+
+func (n *Notifier) sendSlackFailure(ctx context.Context, nodeScan *clamavv1alpha1.NodeScan, scanPolicy *clamavv1alpha1.ScanPolicy) error {
+	config := scanPolicy.Spec.Notifications.Slack
+
+	webhookURL := config.WebhookURL
+	if config.WebhookSecretRef != nil {
+		secret := &corev1.Secret{}
+		if err := n.Client.Get(ctx, types.NamespacedName{
+			Name:      config.WebhookSecretRef.Name,
+			Namespace: scanPolicy.Namespace,
+		}, secret); err != nil {
+			return fmt.Errorf("failed to get webhook secret: %w", err)
+		}
+		webhookURL = string(secret.Data[config.WebhookSecretRef.Key])
+	}
+
+	if webhookURL == "" {
+		return fmt.Errorf("webhook URL not configured")
+	}
+
+	fields := []map[string]interface{}{
+		{"title": "Node", "value": nodeScan.Spec.NodeName, "short": true},
+		{"title": "Status", "value": string(nodeScan.Status.Phase), "short": true},
+		{"title": "Failure Reason", "value": nodeScan.Status.FailureReason, "short": false},
+		{"title": "Exit Code", "value": fmt.Sprintf("%d", nodeScan.Status.ExitCode), "short": true},
+		{"title": "Duration", "value": fmt.Sprintf("%d seconds", nodeScan.Status.Duration), "short": true},
+	}
+
+	message := map[string]interface{}{
+		"channel":    config.Channel,
+		"username":   "ClamAV Operator",
+		"icon_emoji": ":shield:",
+		"text":       "❌ ClamAV Scan Failed",
+		"attachments": []map[string]interface{}{
+			{"color": "danger", "fields": fields, "footer": "ClamAV Operator", "ts": time.Now().Unix()},
+		},
+	}
+
+	body, err := json.Marshal(message)
+	if err != nil {
+		return fmt.Errorf("failed to marshal Slack failure message: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, http.MethodPost, webhookURL, bytes.NewBuffer(body))
+	if err != nil {
+		return fmt.Errorf("failed to create Slack request: %w", err)
+	}
+	req.Header.Set("Content-Type", "application/json")
+	httpClient := &http.Client{
+		Timeout:   30 * time.Second,
+		Transport: &http.Transport{TLSClientConfig: &tls.Config{MinVersion: tls.VersionTLS12}},
+	}
+	resp, err := httpClient.Do(req) //nolint:gosec
+	if err != nil {
+		return fmt.Errorf("failed to send Slack request: %w", err)
+	}
+	defer resp.Body.Close()
+
+	if resp.StatusCode != http.StatusOK {
+		return fmt.Errorf("slack API returned status %d", resp.StatusCode)
+	}
+	return nil
+}
+
+func (n *Notifier) sendEmailFailure(ctx context.Context, nodeScan *clamavv1alpha1.NodeScan, scanPolicy *clamavv1alpha1.ScanPolicy) error {
+	config := scanPolicy.Spec.Notifications.Email
+
+	var username, password string
+	if config.SMTPAuthSecretRef != nil {
+		secret := &corev1.Secret{}
+		if err := n.Client.Get(ctx, types.NamespacedName{
+			Name:      config.SMTPAuthSecretRef.Name,
+			Namespace: scanPolicy.Namespace,
+		}, secret); err != nil {
+			return fmt.Errorf("failed to get SMTP secret: %w", err)
+		}
+		username = string(secret.Data["username"])
+		password = string(secret.Data["password"])
+	}
+
+	subject := "❌ ALERT: ClamAV Scan Failed"
+
+	var buf strings.Builder
+	buf.WriteString("================================================================================\n")
+	buf.WriteString("                    ClamAV SCAN FAILURE REPORT\n")
+	buf.WriteString("================================================================================\n\n")
+	fmt.Fprintf(&buf, "Node:              %s\n", nodeScan.Spec.NodeName)
+	fmt.Fprintf(&buf, "Scan Name:         %s\n", nodeScan.Name)
+	fmt.Fprintf(&buf, "Status:            %s\n", nodeScan.Status.Phase)
+	fmt.Fprintf(&buf, "Failure Reason:    %s\n", nodeScan.Status.FailureReason)
+	fmt.Fprintf(&buf, "Exit Code:         %d\n", nodeScan.Status.ExitCode)
+	scanDate := "unknown"
+	if nodeScan.Status.StartTime != nil {
+		scanDate = nodeScan.Status.StartTime.Format(time.RFC3339)
+	}
+	fmt.Fprintf(&buf, "Scan Date:         %s\n", scanDate)
+	fmt.Fprintf(&buf, "Duration:          %d seconds\n\n", nodeScan.Status.Duration)
+	buf.WriteString("⚠️  The scan job did not complete successfully.\n")
+	buf.WriteString("    Please investigate the failure and consider re-running the scan.\n\n")
+	buf.WriteString("--------------------------------------------------------------------------------\n")
+	buf.WriteString("This is an automated message from ClamAV Operator.\n")
+	buf.WriteString("================================================================================\n")
+
+	msg := []byte(
+		"From: " + config.From + "\r\n" +
+			"To: " + strings.Join(config.Recipients, ",") + "\r\n" +
+			"Subject: " + subject + "\r\n" +
+			"Content-Type: text/plain; charset=UTF-8\r\n\r\n" +
+			buf.String() + "\r\n",
+	)
+
+	host := strings.Split(config.SMTPServer, ":")[0]
+	auth := smtp.PlainAuth("", username, password, host)
+
+	tlsDialer := &tls.Dialer{Config: &tls.Config{
+		ServerName: host,
+		MinVersion: tls.VersionTLS12,
+	}} //nolint:gosec
+	conn, err := tlsDialer.DialContext(ctx, "tcp", config.SMTPServer)
+	if err != nil {
+		return fmt.Errorf("failed to establish TLS connection to SMTP server %s: %w "+
+			"(plaintext SMTP is not supported for security reasons; "+
+			"ensure your SMTP server supports TLS on this port)", config.SMTPServer, err)
+	}
+	defer conn.Close()
+
+	smtpClient, err := smtp.NewClient(conn, host)
+	if err != nil {
+		return fmt.Errorf("failed to create SMTP client: %w", err)
+	}
+	if err = smtpClient.Auth(auth); err != nil {
+		return fmt.Errorf("SMTP auth failed: %w", err)
+	}
+	if err = smtpClient.Mail(config.From); err != nil {
+		return fmt.Errorf("SMTP MAIL FROM failed: %w", err)
+	}
+	for _, rcpt := range config.Recipients {
+		if err = smtpClient.Rcpt(rcpt); err != nil {
+			return fmt.Errorf("SMTP RCPT TO %s failed: %w", rcpt, err)
+		}
+	}
+	w, err := smtpClient.Data()
+	if err != nil {
+		return fmt.Errorf("SMTP DATA failed: %w", err)
+	}
+	if _, err = w.Write(msg); err != nil {
+		return fmt.Errorf("failed to write email body: %w", err)
+	}
+	if err = w.Close(); err != nil {
+		return fmt.Errorf("failed to close SMTP writer: %w", err)
+	}
+	smtpClient.Quit() //nolint:errcheck
+	return nil
+}
+
+func (n *Notifier) sendWebhookFailure(ctx context.Context, nodeScan *clamavv1alpha1.NodeScan, scanPolicy *clamavv1alpha1.ScanPolicy) error {
+	config := scanPolicy.Spec.Notifications.Webhook
+
+	payload := map[string]interface{}{
+		"type":      "clamav.scan.failed",
+		"timestamp": time.Now().Format(time.RFC3339),
+		"scan": map[string]interface{}{
+			"name":           nodeScan.Name,
+			"namespace":      nodeScan.Namespace,
+			"node":           nodeScan.Spec.NodeName,
+			"phase":          nodeScan.Status.Phase,
+			"failureReason":  nodeScan.Status.FailureReason,
+			"exitCode":       nodeScan.Status.ExitCode,
+			"duration":       nodeScan.Status.Duration,
+			"startTime":      nodeScan.Status.StartTime,
+			"completionTime": nodeScan.Status.CompletionTime,
+		},
+		"severity": "error",
+	}
+
+	body, err := json.Marshal(payload)
+	if err != nil {
+		return fmt.Errorf("failed to marshal webhook failure payload: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, http.MethodPost, config.URL, bytes.NewBuffer(body))
+	if err != nil {
+		return fmt.Errorf("failed to create webhook request: %w", err)
+	}
+	req.Header.Set("Content-Type", "application/json")
+	req.Header.Set("User-Agent", "ClamAV-Operator/1.0")
+	for k, v := range config.Headers {
+		req.Header.Set(k, v)
+	}
+
+	if config.SecretRef != nil {
+		secret := &corev1.Secret{}
+		if err := n.Client.Get(ctx, types.NamespacedName{
+			Name:      config.SecretRef.Name,
+			Namespace: scanPolicy.Namespace,
+		}, secret); err != nil {
+			return fmt.Errorf("failed to get webhook secret: %w", err)
+		}
+		for k, v := range secret.Data {
+			req.Header.Set(k, string(v))
+		}
+	}
+
+	httpClient := &http.Client{
+		Timeout:   30 * time.Second,
+		Transport: &http.Transport{TLSClientConfig: &tls.Config{MinVersion: tls.VersionTLS12}},
+	}
+	resp, err := httpClient.Do(req) //nolint:gosec // G704: URL comes from operator CRD config, not user input
+	if err != nil {
+		return fmt.Errorf("webhook request failed: %w", err)
+	}
+	defer resp.Body.Close()
+
+	if resp.StatusCode < 200 || resp.StatusCode >= 300 {
+		return fmt.Errorf("webhook returned status %d", resp.StatusCode)
+	}
+	return nil
+}
+
+func (n *Notifier) sendTeamsFailure(ctx context.Context, nodeScan *clamavv1alpha1.NodeScan, scanPolicy *clamavv1alpha1.ScanPolicy) error {
+	config := scanPolicy.Spec.Notifications.Teams
+
+	webhookURL := config.WebhookURL
+	if config.WebhookSecretRef != nil {
+		secret := &corev1.Secret{}
+		if err := n.Client.Get(ctx, types.NamespacedName{
+			Name:      config.WebhookSecretRef.Name,
+			Namespace: scanPolicy.Namespace,
+		}, secret); err != nil {
+			return fmt.Errorf("failed to get Teams webhook secret: %w", err)
+		}
+		webhookURL = string(secret.Data[config.WebhookSecretRef.Key])
+	}
+	if webhookURL == "" {
+		return fmt.Errorf("teams webhook URL not configured")
+	}
+
+	themeColor := "FF0000"
+	status := fmt.Sprintf("❌ Scan failed: %s (exit %d)", nodeScan.Status.FailureReason, nodeScan.Status.ExitCode)
+
+	facts := []map[string]string{
+		{"title": "Node", "value": nodeScan.Spec.NodeName},
+		{"title": "Status", "value": string(nodeScan.Status.Phase)},
+		{"title": "Failure Reason", "value": nodeScan.Status.FailureReason},
+		{"title": "Exit Code", "value": fmt.Sprintf("%d", nodeScan.Status.ExitCode)},
+		{"title": "Duration", "value": fmt.Sprintf("%ds", nodeScan.Status.Duration)},
+	}
+
+	factItems := make([]map[string]interface{}, len(facts))
+	for i, f := range facts {
+		factItems[i] = map[string]interface{}{"title": f["title"], "value": f["value"]}
+	}
+
+	bodyBlocks := []map[string]interface{}{
+		{
+			"type":   "TextBlock",
+			"size":   "Large",
+			"weight": "Bolder",
+			"color":  "Attention",
+			"text":   fmt.Sprintf("ClamAV Scan — %s", status),
+		},
+		{
+			"type":  "FactSet",
+			"facts": factItems,
+		},
+	}
+
+	payload := map[string]interface{}{
+		"type": "message",
+		"attachments": []map[string]interface{}{
+			{
+				"contentType": "application/vnd.microsoft.card.adaptive",
+				"content": map[string]interface{}{
+					"$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+					"type":    "AdaptiveCard",
+					"version": "1.2",
+					"body":    bodyBlocks,
+					"msteams": map[string]interface{}{
+						"width": "Full",
+					},
+				},
+			},
+		},
+		"@type":      "MessageCard",
+		"@context":   "http://schema.org/extensions",
+		"themeColor": themeColor,
+		"summary":    fmt.Sprintf("ClamAV Scan — %s", status),
+	}
+
+	body, err := json.Marshal(payload)
+	if err != nil {
+		return fmt.Errorf("failed to marshal Teams failure payload: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, http.MethodPost, webhookURL, bytes.NewBuffer(body))
+	if err != nil {
+		return fmt.Errorf("failed to create Teams request: %w", err)
+	}
+	req.Header.Set("Content-Type", "application/json")
+	req.Header.Set("User-Agent", "ClamAV-Operator/1.0")
+
+	httpClient := &http.Client{
+		Timeout:   30 * time.Second,
+		Transport: &http.Transport{TLSClientConfig: &tls.Config{MinVersion: tls.VersionTLS12}},
+	}
+	resp, err := httpClient.Do(req) //nolint:gosec
+	if err != nil {
+		return fmt.Errorf("teams request failed: %w", err)
+	}
+	defer resp.Body.Close()
+
 	if resp.StatusCode < 200 || resp.StatusCode >= 300 {
 		return fmt.Errorf("teams webhook returned status %d", resp.StatusCode)
 	}

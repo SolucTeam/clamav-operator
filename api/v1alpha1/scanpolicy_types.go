@@ -68,6 +68,12 @@ type ScanPolicySpec struct {
 
 // NotificationConfig defines notification settings
 type NotificationConfig struct {
+	// NotifyOnFailure sends notifications when a scan job fails (not just on infection).
+	// This covers operational failures such as OOMKills, scanner errors, timeouts, etc.
+	// +kubebuilder:default=true
+	// +optional
+	NotifyOnFailure bool `json:"notifyOnFailure,omitempty"`
+
 	// Slack notification settings
 	// +optional
 	Slack *SlackConfig `json:"slack,omitempty"`

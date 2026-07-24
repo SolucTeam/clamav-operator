@@ -112,18 +112,15 @@ func (c *StartupChecker) checkScannerServiceAccount(ctx context.Context) error {
 
 // checkOperatorRBACPermissions verifies the operator has required permissions
 func (c *StartupChecker) checkOperatorRBACPermissions(ctx context.Context) error {
-	logger := log.FromContext(ctx)
-
 	var missingPermissions []string
 
 	for _, rule := range c.requiredRBACRules {
 		for _, verb := range rule.Verbs {
 			allowed, err := c.canI(ctx, rule.APIGroup, rule.Resource, verb, rule.Namespace)
 			if err != nil {
-				logger.Error(err, "Failed to check permission",
-					"resource", rule.Resource,
-					"verb", verb)
-				continue
+				return fmt.Errorf("cannot verify permission %s/%s:%s: %w. "+
+					"Use --skip-startup-checks to bypass this check if the API server is temporarily unavailable",
+					rule.APIGroup, rule.Resource, verb, err)
 			}
 
 			if !allowed {

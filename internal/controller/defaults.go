@@ -26,14 +26,16 @@ const (
 	//
 	// In standalone mode each concurrent slot spawns a separate /usr/bin/clamscan
 	// subprocess that loads the full signature database (~300-400 Mi) into its own
-	// address space. Setting this to 3 therefore triples peak memory consumption
-	// and virtually guarantees OOMKill with the default resource limits.
+	// address space. Setting this too high can cause OOMKill with default resource
+	// limits.
 	//
-	// Default: 1 (safe for both standalone and daemon modes).
-	// Raise only when resources.limits.memory is increased proportionally:
+	// Default: 5 (aligned with the kubebuilder CRD default).
+	// For standalone mode with limited memory, consider lowering and increasing
+	// resources.limits.memory proportionally:
+	//   MaxConcurrent=1 → limits.memory ≥ 1.5 Gi
 	//   MaxConcurrent=2 → limits.memory ≥ 2.5 Gi
 	//   MaxConcurrent=3 → limits.memory ≥ 3.5 Gi
-	DefaultMaxConcurrent = 1
+	DefaultMaxConcurrent = 5
 
 	// DefaultFileTimeout is the default timeout for scanning a single file (ms)
 	DefaultFileTimeout = 300000 // 5 minutes

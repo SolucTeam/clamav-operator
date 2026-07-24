@@ -99,10 +99,13 @@ spec:
                     description: Enabled activates incremental scanning
                     type: boolean
                   maxAge:
-                    default: 24
+                    default: 168
                     description: |-
                       MaxAge defines the maximum age (in hours) of files to consider for incremental scans.
-                      Used with the modified-only and smart strategies
+                      Used with the modified-only and smart strategies.
+                      168h (7 days) — must exceed the scan interval. A 24h default broke daily
+                      scans: every cached entry expired before the next run and each "incremental"
+                      scan silently became a full scan.
                     format: int32
                     type: integer
                   minTimeBetweenScans:
@@ -114,8 +117,12 @@ spec:
                     type: integer
                   skipUnchangedFiles:
                     default: true
-                    description: SkipUnchangedFiles skips files whose mtime+size have
-                      not changed since the last scan
+                    description: |-
+                      SkipUnchangedFiles skips files whose mtime+size have not changed since the last scan.
+                      Pointer (not plain bool): with a plain bool + omitempty, an explicit `false`
+                      was dropped at serialization and re-defaulted to true by the API server —
+                      e.g. when the ClusterScan controller copied a template carrying false into
+                      a new NodeScan. nil = unset (default true applies).
                     type: boolean
                   strategy:
                     default: incremental
@@ -237,8 +244,14 @@ spec:
                   - incremental
                   - modified-only
                   - smart
-                default: full
-                description: Strategy defines the scan strategy to use
+                description: |-
+                  Strategy defines the scan strategy to use.
+                  IMPORTANT: no CRD default here. When unset, the operator falls back to the
+                  Helm-level SCANNER_SCAN_STRATEGY env var. A `default=full` marker would make
+                  the API server persist "full" on every NodeScan created without an explicit
+                  strategy, silently disabling incremental scanning cluster-wide (the operator
+                  gives spec.strategy priority over the env var and cannot distinguish a
+                  user-set "full" from an API-server-defaulted one).
                 type: string
               ttlSecondsAfterFinished:
                 default: 86400
@@ -582,15 +595,21 @@ spec:
                     format: int32
                     type: integer
                   maxFileAgeHours:
-                    default: 24
-                    description: MaxFileAgeHours is the maximum age (in hours) of
-                      files to consider for incremental scans
+                    default: 168
+                    description: |-
+                      MaxFileAgeHours is the maximum age (in hours) of files to consider for incremental scans.
+                      168h (7 days) — must exceed the scan interval. A 24h default broke daily
+                      scans: every cached entry expired before the next run and each "incremental"
+                      scan silently became a full scan.
                     format: int32
                     type: integer
                   skipUnchangedFiles:
                     default: true
-                    description: SkipUnchangedFiles skips files whose mtime+size haven't
-                      changed since last scan
+                    description: |-
+                      SkipUnchangedFiles skips files whose mtime+size haven't changed since last scan.
+                      Pointer (not plain bool): with a plain bool + omitempty, an explicit `false`
+                      was dropped at serialization and re-defaulted to true by the API server on
+                      any client-side rewrite. nil = unset (default true applies).
                     type: boolean
                 type: object
               maxConcurrent:
@@ -697,8 +716,12 @@ spec:
                   - incremental
                   - modified-only
                   - smart
-                default: full
-                description: Strategy defines the scan strategy to use
+                description: |-
+                  Strategy defines the scan strategy to use.
+                  IMPORTANT: no CRD default here. When unset, the operator falls back to the
+                  Helm-level SCANNER_SCAN_STRATEGY env var. A `default=full` marker would make
+                  the API server persist "full" on every NodeScan created without an explicit
+                  strategy, silently disabling incremental scanning cluster-wide.
                 type: string
               ttlSecondsAfterFinished:
                 default: 86400
