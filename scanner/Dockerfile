@@ -97,7 +97,7 @@ RUN ls -la /var/lib/clamav/ && \
     }
 
 # ─── Stage 2: Node.js application ────────────────────────────────────────────
-FROM node:20-bookworm-slim AS app-builder
+FROM node:26-bookworm-slim AS app-builder
 
 WORKDIR /app
 COPY package.json package-lock.json ./
@@ -105,7 +105,7 @@ RUN npm ci --omit=dev --ignore-scripts
 COPY src/ src/
 
 # ─── Stage 3: Final runtime image ────────────────────────────────────────────
-FROM node:20-bookworm-slim
+FROM node:26-bookworm-slim
 
 LABEL maintainer="SolucTeam <contact@solucteam.com>"
 LABEL description="ClamAV standalone node scanner for Kubernetes"
