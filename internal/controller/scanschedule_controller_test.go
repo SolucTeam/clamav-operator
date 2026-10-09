@@ -302,3 +302,62 @@ func TestScanScheduleReconciler_HistoryCleanup(t *testing.T) {
 	assert.LessOrEqual(t, len(remaining.Items), int(limit),
 		"history cleanup should prune to SuccessfulScansHistoryLimit")
 }
+
+// TestScanScheduleReconciler_PartiallyCompletedCountsAsSuccessful verifies that
+// a ClusterScan ending in PartiallyCompleted phase (some nodes failed, e.g.
+// node under memory pressure) still updates lastSuccessfulTime and is counted
+// against successfulScansHistoryLimit — not failedScansHistoryLimit.
+func TestScanScheduleReconciler_PartiallyCompletedCountsAsSuccessful(t *testing.T) {
+	completion := metav1.NewTime(time.Date(2026, 10, 9, 2, 11, 44, 0, time.UTC))
+	cs := &clamavv1alpha1.ClusterScan{
+		ObjectMeta: metav1.ObjectMeta{
+			Name:      "scan-partial",
+			Namespace: "default",
+			Labels:    map[string]string{"clamav.io/schedule": "partial-schedule"},
+		},
+		Status: clamavv1alpha1.ClusterScanStatus{
+			Phase:          clamavv1alpha1.ClusterScanPhasePartiallyComplete,
+			CompletionTime: &completion,
+		},
+	}
+
+	failedLimit := int32(0) // would delete the scan immediately if counted as failed
+	successLimit := int32(5)
+	schedule := &clamavv1alpha1.ScanSchedule{
+		ObjectMeta: metav1.ObjectMeta{
+			Name:      "partial-schedule",
+			Namespace: "default",
+		},
+		Spec: clamavv1alpha1.ScanScheduleSpec{
+			Schedule:                    "0 3 * * *", // daily at 3am — won't trigger now
+			FailedScansHistoryLimit:     &failedLimit,
+			SuccessfulScansHistoryLimit: &successLimit,
+		},
+		Status: clamavv1alpha1.ScanScheduleStatus{
+			LastScheduleTime: &metav1.Time{Time: metav1.Now().Time},
+		},
+	}
+
+	r := newTestScanScheduleReconciler(cs, schedule)
+
+	_, err := r.Reconcile(context.Background(), ctrl.Request{
+		NamespacedName: types.NamespacedName{Name: "partial-schedule", Namespace: "default"},
+	})
+	require.NoError(t, err)
+
+	var updated clamavv1alpha1.ScanSchedule
+	require.NoError(t, r.Get(context.Background(), types.NamespacedName{Name: "partial-schedule", Namespace: "default"}, &updated))
+
+	require.NotNil(t, updated.Status.LastSuccessfulTime,
+		"PartiallyCompleted scan must refresh lastSuccessfulTime")
+	assert.True(t, updated.Status.LastSuccessfulTime.Equal(&completion),
+		"lastSuccessfulTime should equal the PartiallyCompleted scan completionTime")
+
+	// The scan survives failedScansHistoryLimit=0 because it is successful.
+	var remaining clamavv1alpha1.ClusterScanList
+	require.NoError(t, r.List(context.Background(), &remaining,
+		client.InNamespace("default"),
+		client.MatchingLabels{"clamav.io/schedule": "partial-schedule"},
+	))
+	assert.Len(t, remaining.Items, 1, "PartiallyCompleted scan must not be pruned as failed")
+}

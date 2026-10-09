@@ -589,7 +589,13 @@ helm upgrade clamav-operator ./helm/clamav-operator \
 
 ### Upgrading CRDs
 
-CRDs must be upgraded separately (Helm does not update CRDs on `helm upgrade` by design):
+Since chart 1.1.1, the chart upgrades its own CRDs automatically on every
+install/upgrade (post-install/post-upgrade Job applying the manifests from
+`crds/`, toggle `crdsUpgrade.enabled`). Helm's `crds/` directory remains
+install-only by design — with older chart versions CRD schemas stayed stale
+and the API server silently pruned newly added fields on admission.
+
+Manual CRD upgrade (only needed with `crdsUpgrade.enabled=false`):
 
 ```bash
 # Re-apply CRDs

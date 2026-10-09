@@ -328,9 +328,14 @@ func (r *ScanScheduleReconciler) cleanupHistory(ctx context.Context, scanSchedul
 		}
 
 		switch cs.Status.Phase {
-		case clamavv1alpha1.ClusterScanPhaseCompleted:
+		// PartiallyCompleted counts as successful: the scan ran to completion
+		// and only some nodes failed (e.g. a node under memory pressure).
+		// Treating it as failed caused lastSuccessfulTime to freeze at the last
+		// 100%-clean run and pruned history via failedScansHistoryLimit instead
+		// of successfulScansHistoryLimit.
+		case clamavv1alpha1.ClusterScanPhaseCompleted, clamavv1alpha1.ClusterScanPhasePartiallyComplete:
 			successful = append(successful, cs)
-		case clamavv1alpha1.ClusterScanPhaseFailed, clamavv1alpha1.ClusterScanPhasePartiallyComplete:
+		case clamavv1alpha1.ClusterScanPhaseFailed:
 			failed = append(failed, cs)
 		default:
 			active = append(active, corev1.ObjectReference{

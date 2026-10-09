@@ -64,7 +64,9 @@ func (r *ClusterScanReconciler) Reconcile(ctx context.Context, req ctrl.Request)
 				return ctrl.Result{}, err
 			}
 			controllerutil.RemoveFinalizer(&clusterScan, clusterScanFinalizer)
-			if err := r.Patch(ctx, &clusterScan, client.MergeFrom(original)); err != nil {
+			// NotFound is a benign race with the ScanSchedule history cleanup:
+			// the object was deleted after our cached read, nothing to patch.
+			if err := r.Patch(ctx, &clusterScan, client.MergeFrom(original)); err != nil && !errors.IsNotFound(err) {
 				return ctrl.Result{}, err
 			}
 		}
@@ -74,7 +76,8 @@ func (r *ClusterScanReconciler) Reconcile(ctx context.Context, req ctrl.Request)
 	// Add finalizer
 	if !controllerutil.ContainsFinalizer(&clusterScan, clusterScanFinalizer) {
 		controllerutil.AddFinalizer(&clusterScan, clusterScanFinalizer)
-		if err := r.Patch(ctx, &clusterScan, client.MergeFrom(original)); err != nil {
+		// See the deletion-path comment: NotFound here is a benign race.
+		if err := r.Patch(ctx, &clusterScan, client.MergeFrom(original)); err != nil && !errors.IsNotFound(err) {
 			return ctrl.Result{}, err
 		}
 	}
@@ -87,7 +90,7 @@ func (r *ClusterScanReconciler) Reconcile(ctx context.Context, req ctrl.Request)
 		clusterScan.Status.Phase = clamavv1alpha1.ClusterScanPhasePending
 		now := metav1.Now()
 		clusterScan.Status.StartTime = &now
-		if err := r.Status().Patch(ctx, &clusterScan, client.MergeFrom(initBase)); err != nil {
+		if err := r.Status().Patch(ctx, &clusterScan, client.MergeFrom(initBase)); err != nil && !errors.IsNotFound(err) {
 			return ctrl.Result{}, err
 		}
 	}
@@ -235,7 +238,11 @@ func (r *ClusterScanReconciler) Reconcile(ctx context.Context, req ctrl.Request)
 
 	// Inform GitOps tools (ArgoCD, Flux…) that this generation has been fully processed.
 	clusterScan.Status.ObservedGeneration = clusterScan.Generation
-	if err := r.Status().Patch(ctx, &clusterScan, client.MergeFrom(statusBase)); err != nil {
+	// NotFound is a benign race with the ScanSchedule history cleanup: this
+	// (old) ClusterScan was deleted between the cached read and the status
+	// write. Returning the error would only log a misleading
+	// "Reconciler error: ... not found" every time history is pruned.
+	if err := r.Status().Patch(ctx, &clusterScan, client.MergeFrom(statusBase)); err != nil && !errors.IsNotFound(err) {
 		return ctrl.Result{}, err
 	}
 

@@ -1377,7 +1377,17 @@ func (r *NodeScanReconciler) cleanupNodeScan(ctx context.Context, nodeScan *clam
 // getJobFailureInfo reads the scanner container's termination state from the Job's pods
 // and returns a human-readable reason and the container exit code.
 // This information is captured into the NodeScan Status so it survives Job / Pod GC.
+//
+// Pods whose container never ran (kubelet admission rejection, unschedulable
+// pod, image pull failure) carry no Terminated state — their cause lives in
+// the container Waiting state, the pod-level reason, or the PodScheduled
+// condition. Reporting all of those as "UnknownError (exit 0)" made failures
+// such as node memory exhaustion impossible to diagnose from the NodeScan
+// status, hence the pod-level fallbacks below. For those cases the returned
+// exit code is -1: no container ever ran, so no real exit code exists.
 func (r *NodeScanReconciler) getJobFailureInfo(ctx context.Context, job *batchv1.Job) (reason string, exitCode int32) {
+	const containerNeverRan = int32(-1)
+
 	if job.Spec.Selector == nil {
 		return "UnknownError", 0
 	}
@@ -1388,13 +1398,46 @@ func (r *NodeScanReconciler) getJobFailureInfo(ctx context.Context, job *batchv1
 		return "UnknownError", 0
 	}
 	for _, pod := range podList.Items {
+		// Pod-level rejection (kubelet admission: OutOfmemory; eviction; node
+		// loss). These fire before any container state exists.
+		switch pod.Status.Reason {
+		case "OutOfmemory", "Evicted", "NodeLost", "Shutdown":
+			return pod.Status.Reason, containerNeverRan
+		}
+
+		// Never scheduled (insufficient resources, taints, affinity conflicts).
+		for _, cond := range pod.Status.Conditions {
+			if cond.Type == corev1.PodScheduled && cond.Status == corev1.ConditionFalse && cond.Reason != "" {
+				return cond.Reason, containerNeverRan
+			}
+		}
+
 		for _, cs := range pod.Status.ContainerStatuses {
-			if cs.Name == "scanner" && cs.State.Terminated != nil {
-				failReason := cs.State.Terminated.Reason
+			if cs.Name != "scanner" {
+				continue
+			}
+			// Authoritative: the container ran and exited.
+			if t := cs.State.Terminated; t != nil {
+				failReason := t.Reason
 				if failReason == "" {
 					failReason = "Error"
 				}
-				return failReason, cs.State.Terminated.ExitCode
+				return failReason, t.ExitCode
+			}
+			// Restarted container (e.g. restartPolicy: OnFailure): the previous
+			// termination explains the failure while State.Waiting only shows
+			// the restart wrapper (CrashLoopBackOff).
+			if t := cs.LastTerminationState.Terminated; t != nil {
+				failReason := t.Reason
+				if failReason == "" {
+					failReason = "Error"
+				}
+				return failReason, t.ExitCode
+			}
+			// Stuck before start: image pull, config error, backoff.
+			// ContainerCreating is a normal transient state — not a failure.
+			if w := cs.State.Waiting; w != nil && w.Reason != "" && w.Reason != "ContainerCreating" {
+				return w.Reason, containerNeverRan
 			}
 		}
 	}
