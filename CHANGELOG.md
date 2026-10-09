@@ -3,6 +3,57 @@
 All notable changes to this project will be documented in this file.
 
 
+## [v1.1.1] - 2026-10-09 (helm chart 1.1.1)
+
+## 🐛 Bug Fixes
+
+* fix(operator): diagnose never-started scan pods instead of "UnknownError (exit 0)"
+  * `getJobFailureInfo` only read `State.Terminated`. A pod rejected by kubelet
+    admission (node out of memory), unschedulable, or stuck on image pull has
+    no terminated container, so every such failure was reported as
+    `UnknownError (exit 0)`. It now reports the pod-level reason
+    (OutOfmemory/Evicted/NodeLost), the PodScheduled=False reason
+    (Unschedulable), the container Waiting reason (ImagePullBackOff, …) and
+    the previous termination of a restarted container, with exit code -1 when
+    the container never ran.
+* fix(operator): PartiallyCompleted ClusterScans treated as successful for
+  history retention and lastSuccessfulTime
+  * A ClusterScan with a single failed node (PartiallyCompleted) was filed
+    under the failed history: `lastSuccessfulTime` froze at the last 100%-clean
+    run and history was pruned by `failedScansHistoryLimit` (3) instead of
+    `successfulScansHistoryLimit` (5).
+* fix(operator): stop logging "Reconciler error: … not found" on ClusterScan
+  history pruning
+  * The ScanSchedule history cleanup deletes old ClusterScans while the
+    ClusterScan controller may still hold a queued reconcile for them; the
+    status Patch then fails with NotFound and logs an error-level "Reconciler
+    error". NotFound on the four ClusterScan patches is now treated as the
+    benign race it is.
+* fix(helm): CRDs never upgraded and smart strategy silently pruned
+  * **Duplicate CRD manifests removed** — `crds/` shipped two divergent copies
+    of each CRD (`nodescans.yaml` next to `clamav.io_nodescans.yaml`, …). Helm
+    applies `crds/` alphabetically, so the stale copies (missing `smart`
+    strategy, `maxAge` default 24) were applied LAST and won at install time.
+    Only the canonical controller-gen files (`clamav.io_*.yaml`) remain.
+  * **CRD auto-upgrade hook added** (`templates/crds-upgrade.yaml`, toggle
+    `crdsUpgrade.enabled`) — Helm treats `crds/` as install-only and Flux
+    helm-controller defaults to the same behaviour, so schema changes never
+    reached existing clusters and the API server silently pruned new fields on
+    admission. The hook applies the CRD manifests on every install/upgrade
+    (`kubectl apply --server-side`) and waits for the Established condition,
+    before the default ScanPolicy/ScanSchedule hooks run.
+  * **default-scanschedule.yaml: strategy/incrementalConfig rendered at the
+    wrong nesting level** — they were emitted directly under `clusterScan`
+    while the CRDs (and Go types) expect them under
+    `clusterScan.nodeScanTemplate`; the API server pruned them, every NodeScan
+    fell back to the `full` strategy and incremental scanning never activated.
+  * **`fullScanInterval` accepted as alias** of `baselineInterval` in
+    `defaultScanSchedule.incrementalConfig` (matches the v1beta1 CRD field
+    name; explicit values win over the chart default), and
+    `skipUnchangedFiles` is only rendered when the key exists (an absent key
+    previously rendered the literal string `<no value>`).
+
+
 ## [v0.8.0] - 2026-07-24
 
 ## 🚀 Features

@@ -413,6 +413,25 @@ rbac:
         - update
 
 # =============================================================================
+# CRD UPGRADE HOOK
+# =============================================================================
+# Post-install/post-upgrade Job that applies the CRD manifests shipped in
+# crds/ so schema changes reach the cluster on every upgrade.
+#
+# WHY THIS EXISTS
+#   Helm treats the crds/ directory as install-only: `helm upgrade` (and Flux
+#   helm-controller with the default crds policy) never updates CRDs that
+#   already exist. When the chart's CRD schema evolves, stale CRDs silently
+#   prune new fields on admission (e.g. strategy/incrementalConfig on
+#   ScanSchedule), breaking features without any visible error. This hook
+#   re-applies the full CRD manifests on every install/upgrade.
+#
+#   Set crdsUpgrade.enabled=false to manage CRD upgrades yourself (e.g. GitOps
+#   controller applying CRDs separately).
+crdsUpgrade:
+  enabled: true
+
+# =============================================================================
 # CRD PATCHER HOOK
 # =============================================================================
 # Post-install/post-upgrade Job that patches the three CRDs (NodeScan,

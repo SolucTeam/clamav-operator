@@ -67,23 +67,43 @@ spec:
     nodeSelector:
       {{- toYaml . | nindent 6 }}
     {{- end }}
-    {{- if .Values.defaultScanSchedule.strategy }}
-    strategy: {{ .Values.defaultScanSchedule.strategy }}
-    {{- end }}
-    {{- /* incrementalConfig is only meaningful for incremental/smart strategies.
-         Skip it entirely when strategy is "full" or not set to avoid pushing
-         no-op config fields into every NodeScan CR. */}}
+    {{- /* Strategy and incrementalConfig belong under clusterScan.nodeScanTemplate
+         (see the ScanSchedule/ClusterScan CRDs — ClusterScanSpec has no Strategy
+         field of its own). Rendering them directly under clusterScan makes the
+         API server silently prune them, so every NodeScan falls back to the
+         CRD/env default and incremental scanning never activates. */}}
     {{- $strat := .Values.defaultScanSchedule.strategy }}
-    {{- if and $strat (ne $strat "full") }}
-    {{- with .Values.defaultScanSchedule.incrementalConfig }}
-    incrementalConfig:
-      {{- if .baselineInterval }}
-      baselineInterval: {{ .baselineInterval }}
+    {{- $incr := and $strat (ne $strat "full") }}
+    {{- if or $strat $incr }}
+    nodeScanTemplate:
+      {{- if $strat }}
+      strategy: {{ $strat }}
       {{- end }}
-      {{- if .maxAge }}
-      maxAge: {{ .maxAge }}
+      {{- /* incrementalConfig is only meaningful for incremental/smart strategies.
+           Skip it entirely when strategy is "full" or not set to avoid pushing
+           no-op config fields into every NodeScan CR. */}}
+      {{- if $incr }}
+      {{- with .Values.defaultScanSchedule.incrementalConfig }}
+      incrementalConfig:
+        {{- /* baselineInterval is the canonical key; fullScanInterval is accepted
+             as an alias because older values files (and the v1beta1 CRD field
+             name) use it. The conversion webhook maps it to FullScanInterval.
+             fullScanInterval takes precedence so an explicit override wins over
+             the chart-default baselineInterval. */}}
+        {{- $interval := .fullScanInterval | default .baselineInterval }}
+        {{- if $interval }}
+        baselineInterval: {{ $interval }}
+        {{- end }}
+        {{- if .maxAge }}
+        maxAge: {{ .maxAge }}
+        {{- end }}
+        {{- /* Plain {{ .skipUnchangedFiles }} renders "<no value>" when the key
+             is absent from values, producing an invalid manifest. hasKey keeps
+             an explicit false from being overridden by a default. */}}
+        {{- if hasKey . "skipUnchangedFiles" }}
+        skipUnchangedFiles: {{ .skipUnchangedFiles }}
+        {{- end }}
       {{- end }}
-      skipUnchangedFiles: {{ .skipUnchangedFiles }}
-    {{- end }}
+      {{- end }}
     {{- end }}
 {{- end }}

@@ -321,3 +321,143 @@ func TestGetResourcesForPriority(t *testing.T) {
 		})
 	}
 }
+
+// TestGetJobFailureInfo verifies failure diagnosis for both classic
+// (container terminated) and never-started (OOM admission rejection,
+// unschedulable, image pull) Job failures. Pods that never ran a container
+// must NOT be reported as "UnknownError (exit 0)".
+func TestGetJobFailureInfo(t *testing.T) {
+	jobLabels := map[string]string{"job-name": "scan-job"}
+	newJob := func() *batchv1.Job {
+		return &batchv1.Job{
+			ObjectMeta: metav1.ObjectMeta{Name: "scan-job", Namespace: "default"},
+			Spec: batchv1.JobSpec{
+				Selector: &metav1.LabelSelector{MatchLabels: jobLabels},
+			},
+		}
+	}
+	newPod := func(mutate func(*corev1.Pod)) *corev1.Pod {
+		pod := &corev1.Pod{
+			ObjectMeta: metav1.ObjectMeta{
+				Name:      "scan-job-pod",
+				Namespace: "default",
+				Labels:    jobLabels,
+			},
+		}
+		if mutate != nil {
+			mutate(pod)
+		}
+		return pod
+	}
+
+	tests := []struct {
+		name         string
+		pods         []*corev1.Pod
+		wantReason   string
+		wantExitCode int32
+	}{
+		{
+			name: "terminated container returns real reason and exit code",
+			pods: []*corev1.Pod{newPod(func(p *corev1.Pod) {
+				p.Status.ContainerStatuses = []corev1.ContainerStatus{{
+					Name: "scanner",
+					State: corev1.ContainerState{Terminated: &corev1.ContainerStateTerminated{
+						Reason:   "Error",
+						ExitCode: 2,
+					}},
+				}}
+			})},
+			wantReason:   "Error",
+			wantExitCode: 2,
+		},
+		{
+			name: "terminated container without reason defaults to Error",
+			pods: []*corev1.Pod{newPod(func(p *corev1.Pod) {
+				p.Status.ContainerStatuses = []corev1.ContainerStatus{{
+					Name: "scanner",
+					State: corev1.ContainerState{Terminated: &corev1.ContainerStateTerminated{
+						ExitCode: 1,
+					}},
+				}}
+			})},
+			wantReason:   "Error",
+			wantExitCode: 1,
+		},
+		{
+			name: "kubelet admission rejection (OutOfmemory) is reported with exit -1",
+			pods: []*corev1.Pod{newPod(func(p *corev1.Pod) {
+				p.Status.Reason = "OutOfmemory"
+			})},
+			wantReason:   "OutOfmemory",
+			wantExitCode: -1,
+		},
+		{
+			name: "evicted pod is reported with exit -1",
+			pods: []*corev1.Pod{newPod(func(p *corev1.Pod) {
+				p.Status.Reason = "Evicted"
+			})},
+			wantReason:   "Evicted",
+			wantExitCode: -1,
+		},
+		{
+			name: "unschedulable pod is reported with exit -1",
+			pods: []*corev1.Pod{newPod(func(p *corev1.Pod) {
+				p.Status.Conditions = []corev1.PodCondition{{
+					Type:   corev1.PodScheduled,
+					Status: corev1.ConditionFalse,
+					Reason: "Unschedulable",
+				}}
+			})},
+			wantReason:   "Unschedulable",
+			wantExitCode: -1,
+		},
+		{
+			name: "stuck image pull is reported with exit -1",
+			pods: []*corev1.Pod{newPod(func(p *corev1.Pod) {
+				p.Status.ContainerStatuses = []corev1.ContainerStatus{{
+					Name:  "scanner",
+					State: corev1.ContainerState{Waiting: &corev1.ContainerStateWaiting{Reason: "ImagePullBackOff"}},
+				}}
+			})},
+			wantReason:   "ImagePullBackOff",
+			wantExitCode: -1,
+		},
+		{
+			name: "last termination state wins over restart wrapper",
+			pods: []*corev1.Pod{newPod(func(p *corev1.Pod) {
+				p.Status.ContainerStatuses = []corev1.ContainerStatus{{
+					Name: "scanner",
+					State: corev1.ContainerState{Waiting: &corev1.ContainerStateWaiting{
+						Reason: "CrashLoopBackOff",
+					}},
+					LastTerminationState: corev1.ContainerState{Terminated: &corev1.ContainerStateTerminated{
+						Reason:   "OOMKilled",
+						ExitCode: 137,
+					}},
+				}}
+			})},
+			wantReason:   "OOMKilled",
+			wantExitCode: 137,
+		},
+		{
+			name:         "no pods falls back to UnknownError exit 0",
+			pods:         nil,
+			wantReason:   "UnknownError",
+			wantExitCode: 0,
+		},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			objs := make([]client.Object, 0, len(tt.pods))
+			for _, p := range tt.pods {
+				objs = append(objs, p)
+			}
+			r := newTestNodeScanReconciler(objs...)
+
+			reason, exitCode := r.getJobFailureInfo(context.Background(), newJob())
+			assert.Equal(t, tt.wantReason, reason)
+			assert.Equal(t, tt.wantExitCode, exitCode)
+		})
+	}
+}

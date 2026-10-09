@@ -1,0 +1,192 @@
+{{- /*
+crds-upgrade.yaml
+
+Applies the CRD manifests shipped in crds/ on every install/upgrade.
+
+WHY THIS EXISTS
+  Helm treats the crds/ directory as install-only: `helm upgrade` never
+  updates CRDs that already exist, and Flux helm-controller defaults to the
+  same behaviour (crds policy = CreateOnly). When the chart's CRD schema
+  evolves, the stale CRD silently prunes the new fields on admission — for
+  example strategy/incrementalConfig on ScanSchedule — which disables
+  features without any visible error.
+
+HOW IT WORKS
+  A ConfigMap embeds the canonical CRD manifests (crds/clamav.io_*.yaml)
+  via .Files.Get. A short-lived Job runs `kubectl apply --server-side` on
+  that directory, then waits for each CRD to reach the Established
+  condition before the rest of the post-install hooks run.
+
+  Hook weights:
+    -10  ConfigMap with the CRD manifests
+     -5  ServiceAccount / ClusterRole / ClusterRoleBinding
+     -1  apply Job
+      0  crd-conversion-hook (patches spec.conversion on top)
+     10  default ScanPolicy (referenced by the ScanSchedule)
+     15  default ScanSchedule
+
+DEPENDENCIES
+  Reuses crdPatcher.image / crdPatcher.imagePullSecrets — same kubectl
+  image as the conversion patcher Job.
+
+TOGGLE
+  Set crdsUpgrade.enabled=false to manage CRD upgrades externally.
+*/}}
+{{- if .Values.crdsUpgrade.enabled }}
+{{- /* (file, CRD resource name) pairs — the file names under crds/ are NOT
+     the CRD names (clamav.io_nodescans.yaml vs nodescans.clamav.io). */}}
+{{- $crds := list
+  (dict "file" "clamav.io_clusterscans.yaml" "name" "clusterscans.clamav.io")
+  (dict "file" "clamav.io_nodescans.yaml" "name" "nodescans.clamav.io")
+  (dict "file" "clamav.io_scanpolicies.yaml" "name" "scanpolicies.clamav.io")
+  (dict "file" "scancacheresources.yaml" "name" "scancacheresources.clamav.io")
+  (dict "file" "clamav.io_scanschedules.yaml" "name" "scanschedules.clamav.io")
+}}
+{{- $crdNames := list }}
+{{- range $crds }}
+{{- $crdNames = append $crdNames .name }}
+{{- end }}
+---
+# ConfigMap holding the CRD manifests applied by the upgrade Job
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "clamav-operator.fullname" . }}-crds
+  namespace: {{ .Release.Namespace }}
+  labels:
+    {{- include "clamav-operator.labels" . | nindent 4 }}
+    app.kubernetes.io/component: crd-upgrader
+  annotations:
+    "helm.sh/hook": post-install,post-upgrade
+    "helm.sh/hook-weight": "-10"
+    "helm.sh/hook-delete-policy": before-hook-creation,hook-succeeded
+data:
+  {{- range $crds }}
+  {{ .file }}: |-
+{{ $.Files.Get (printf "crds/%s" .file) | indent 4 }}
+  {{- end }}
+---
+# ServiceAccount for the CRD-upgrade Job
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: {{ include "clamav-operator.fullname" . }}-crd-upgrader
+  namespace: {{ .Release.Namespace }}
+  labels:
+    {{- include "clamav-operator.labels" . | nindent 4 }}
+    app.kubernetes.io/component: crd-upgrader
+  annotations:
+    "helm.sh/hook": post-install,post-upgrade
+    "helm.sh/hook-weight": "-5"
+    "helm.sh/hook-delete-policy": before-hook-creation,hook-succeeded
+---
+# ClusterRole: apply/wait on the chart's CRDs.
+# No resourceNames: `create` requests carry no name in the URL, so a
+# resourceName constraint would silently block the initial install.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: {{ include "clamav-operator.fullname" . }}-crd-upgrader
+  labels:
+    {{- include "clamav-operator.labels" . | nindent 4 }}
+    app.kubernetes.io/component: crd-upgrader
+  annotations:
+    "helm.sh/hook": post-install,post-upgrade
+    "helm.sh/hook-weight": "-5"
+    "helm.sh/hook-delete-policy": before-hook-creation,hook-succeeded
+rules:
+  - apiGroups: ["apiextensions.k8s.io"]
+    resources: ["customresourcedefinitions"]
+    verbs: ["get", "list", "watch", "create", "patch", "update"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: {{ include "clamav-operator.fullname" . }}-crd-upgrader
+  labels:
+    {{- include "clamav-operator.labels" . | nindent 4 }}
+    app.kubernetes.io/component: crd-upgrader
+  annotations:
+    "helm.sh/hook": post-install,post-upgrade
+    "helm.sh/hook-weight": "-5"
+    "helm.sh/hook-delete-policy": before-hook-creation,hook-succeeded
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: {{ include "clamav-operator.fullname" . }}-crd-upgrader
+subjects:
+  - kind: ServiceAccount
+    name: {{ include "clamav-operator.fullname" . }}-crd-upgrader
+    namespace: {{ .Release.Namespace }}
+---
+# Job: apply the CRD manifests, then wait for Established
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: {{ include "clamav-operator.fullname" . }}-crd-upgrader
+  namespace: {{ .Release.Namespace }}
+  labels:
+    {{- include "clamav-operator.labels" . | nindent 4 }}
+    app.kubernetes.io/component: crd-upgrader
+  annotations:
+    "helm.sh/hook": post-install,post-upgrade
+    "helm.sh/hook-weight": "-1"
+    "helm.sh/hook-delete-policy": before-hook-creation,hook-succeeded
+spec:
+  backoffLimit: 3
+  ttlSecondsAfterFinished: 300
+  template:
+    metadata:
+      labels:
+        {{- include "clamav-operator.selectorLabels" . | nindent 8 }}
+        app.kubernetes.io/component: crd-upgrader
+    spec:
+      restartPolicy: OnFailure
+      serviceAccountName: {{ include "clamav-operator.fullname" . }}-crd-upgrader
+      {{- with .Values.crdPatcher.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 65532
+        seccompProfile:
+          type: RuntimeDefault
+      containers:
+        - name: applier
+          image: {{ .Values.crdPatcher.image.repository }}:{{ .Values.crdPatcher.image.tag }}
+          imagePullPolicy: {{ .Values.crdPatcher.image.pullPolicy }}
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop: ["ALL"]
+            readOnlyRootFilesystem: true
+          volumeMounts:
+            - name: crds
+              mountPath: /crds
+              readOnly: true
+          command:
+            - /bin/sh
+            - -c
+            - |
+              set -eu
+
+              CRDS="{{ join " " $crdNames }}"
+
+              # --server-side --force-conflicts: the CRDs may have been created
+              # by helm/flux with a different field manager; take ownership of
+              # the spec fields this chart owns.
+              echo "Applying CRD manifests..."
+              kubectl apply --server-side --force-conflicts -f /crds/
+
+              echo "Waiting for CRDs to become Established..."
+              for CRD in ${CRDS}; do
+                kubectl wait --for=condition=Established "crd/${CRD}" --timeout=60s
+              done
+
+              echo "All CRDs applied successfully."
+      volumes:
+        - name: crds
+          configMap:
+            name: {{ include "clamav-operator.fullname" . }}-crds
+{{- end }}
