@@ -17,6 +17,7 @@ limitations under the License.
 package v1beta1
 
 import (
+	corev1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 
@@ -41,7 +42,84 @@ type ClusterScanSpec struct {
 	Priority string `json:"priority,omitempty"`
 	// NodeScanTemplate contains the template for creating NodeScans
 	// +optional
-	NodeScanTemplate *NodeScanSpec `json:"nodeScanTemplate,omitempty"`
+	NodeScanTemplate *NodeScanTemplateSpec `json:"nodeScanTemplate,omitempty"`
+}
+
+// NodeScanTemplateSpec is the template applied to every NodeScan created from
+// a ClusterScan.
+//
+// It deliberately does not reuse NodeScanSpec: NodeScan requires nodeName (a
+// NodeScan targets exactly one node), but inside a template the node name is
+// meaningless — the ClusterScan controller always sets the real node name when
+// it fans out. Inheriting the required marker made the API server reject any
+// ClusterScan/ScanSchedule carrying a nodeScanTemplate without nodeName,
+// which broke chart-rendered default ScanSchedules.
+type NodeScanTemplateSpec struct {
+	// NodeName is the name of the node to scan. Ignored: overwritten by the
+	// ClusterScan controller with the name of each scanned node.
+	// +optional
+	NodeName string `json:"nodeName,omitempty"`
+
+	// ScanPolicy references a ScanPolicy to use for this scan
+	// +optional
+	ScanPolicy string `json:"scanPolicy,omitempty"`
+
+	// Priority of the scan (high, medium, low)
+	// +kubebuilder:validation:Enum=high;medium;low
+	// +kubebuilder:default=medium
+	// +optional
+	Priority string `json:"priority,omitempty"`
+
+	// Paths to scan on the node
+	// +optional
+	Paths []string `json:"paths,omitempty"`
+
+	// ExcludePatterns are regex patterns for paths to exclude
+	// +optional
+	ExcludePatterns []string `json:"excludePatterns,omitempty"`
+
+	// MaxConcurrent files to scan in parallel
+	// +kubebuilder:validation:Minimum=1
+	// +kubebuilder:validation:Maximum=20
+	// +kubebuilder:default=5
+	// +optional
+	MaxConcurrent int32 `json:"maxConcurrent,omitempty"`
+
+	// FileTimeout in milliseconds for scanning each file
+	// +kubebuilder:default=300000
+	// +optional
+	FileTimeout int64 `json:"fileTimeout,omitempty"`
+
+	// MaxFileSize in bytes — files larger than this will be skipped
+	// +kubebuilder:default=104857600
+	// +optional
+	MaxFileSize int64 `json:"maxFileSize,omitempty"`
+
+	// Resources for the scan job
+	// +optional
+	Resources *corev1.ResourceRequirements `json:"resources,omitempty"`
+
+	// TTLSecondsAfterFinished limits the lifetime of a finished Job
+	// +kubebuilder:default=86400
+	// +optional
+	TTLSecondsAfterFinished *int32 `json:"ttlSecondsAfterFinished,omitempty"`
+
+	// Strategy defines the scan strategy to use.
+	// IMPORTANT: no CRD default here. When unset, the operator falls back to the
+	// Helm-level SCANNER_SCAN_STRATEGY env var. A `default=full` marker would make
+	// the API server persist "full" on every NodeScan created without an explicit
+	// strategy, silently disabling incremental scanning cluster-wide.
+	// +kubebuilder:validation:Enum=full;incremental;modified-only;smart
+	// +optional
+	Strategy ScanStrategy `json:"strategy,omitempty"`
+
+	// IncrementalConfig configures incremental scan behavior
+	// +optional
+	IncrementalConfig *IncrementalScanConfig `json:"incrementalConfig,omitempty"`
+
+	// ForceFullScan forces a full scan even if incremental is enabled
+	// +optional
+	ForceFullScan bool `json:"forceFullScan,omitempty"`
 }
 
 // ClusterScanPhase represents the current phase of a ClusterScan

@@ -163,8 +163,9 @@ spec:
                         format: int64
                         type: integer
                       nodeName:
-                        description: NodeName is the name of the node to scan
-                        minLength: 1
+                        description: |-
+                          NodeName is the name of the node to scan. Ignored: the ClusterScan
+                          controller overwrites it with the name of each scanned node.
                         type: string
                       paths:
                         description: |-
@@ -175,9 +176,7 @@ spec:
                         type: array
                       priority:
                         default: medium
-                        description: |-
-                          Priority of the scan (high, medium, low)
-                          Affects scheduling and resource allocation
+                        description: Priority of the scan (high, medium, low)
                         enum:
                         - high
                         - medium
@@ -277,8 +276,6 @@ spec:
                           automatically deleted.
                         format: int32
                         type: integer
-                    required:
-                    - nodeName
                     type: object
                   nodeSelector:
                     description: |-
@@ -627,8 +624,9 @@ spec:
                         format: int64
                         type: integer
                       nodeName:
-                        description: NodeName is the name of the node to scan
-                        minLength: 1
+                        description: |-
+                          NodeName is the name of the node to scan. Ignored: overwritten by the
+                          ClusterScan controller with the name of each scanned node.
                         type: string
                       paths:
                         description: Paths to scan on the node
@@ -731,8 +729,6 @@ spec:
                           a finished Job
                         format: int32
                         type: integer
-                    required:
-                    - nodeName
                     type: object
                   nodeSelector:
                     description: NodeSelector selects which nodes to scan

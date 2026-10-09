@@ -236,7 +236,7 @@ func (r *ClusterScan) ConvertTo(dstRaw conversion.Hub) error {
 	dst.Spec.Concurrent = r.Spec.Concurrent
 	dst.Spec.Priority = r.Spec.Priority
 	if r.Spec.NodeScanTemplate != nil {
-		t := &v1beta1.NodeScanSpec{
+		t := &v1beta1.NodeScanTemplateSpec{
 			NodeName:                r.Spec.NodeScanTemplate.NodeName,
 			ScanPolicy:              r.Spec.NodeScanTemplate.ScanPolicy,
 			Priority:                r.Spec.NodeScanTemplate.Priority,
@@ -302,7 +302,7 @@ func (r *ClusterScan) ConvertFrom(srcRaw conversion.Hub) error {
 	r.Spec.Concurrent = src.Spec.Concurrent
 	r.Spec.Priority = src.Spec.Priority
 	if src.Spec.NodeScanTemplate != nil {
-		t := &NodeScanSpec{
+		t := &NodeScanTemplateSpec{
 			NodeName:                src.Spec.NodeScanTemplate.NodeName,
 			ScanPolicy:              src.Spec.NodeScanTemplate.ScanPolicy,
 			Priority:                src.Spec.NodeScanTemplate.Priority,
@@ -404,7 +404,7 @@ func (r *ScanSchedule) ConvertTo(dstRaw conversion.Hub) error {
 		Priority:     r.Spec.ClusterScan.Priority,
 	}
 	if r.Spec.ClusterScan.NodeScanTemplate != nil {
-		t := &v1beta1.NodeScanSpec{
+		t := &v1beta1.NodeScanTemplateSpec{
 			NodeName:                r.Spec.ClusterScan.NodeScanTemplate.NodeName,
 			ScanPolicy:              r.Spec.ClusterScan.NodeScanTemplate.ScanPolicy,
 			Priority:                r.Spec.ClusterScan.NodeScanTemplate.Priority,
@@ -462,7 +462,7 @@ func (r *ScanSchedule) ConvertFrom(srcRaw conversion.Hub) error {
 		Priority:     src.Spec.ClusterScan.Priority,
 	}
 	if src.Spec.ClusterScan.NodeScanTemplate != nil {
-		t := &NodeScanSpec{
+		t := &NodeScanTemplateSpec{
 			NodeName:                src.Spec.ClusterScan.NodeScanTemplate.NodeName,
 			ScanPolicy:              src.Spec.ClusterScan.NodeScanTemplate.ScanPolicy,
 			Priority:                src.Spec.ClusterScan.NodeScanTemplate.Priority,
