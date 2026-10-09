@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 
 
+## [v0.8.1] - 2026-10-09
+
+## 🚀 Features
+
+_No new features_
+
+## 🐛 Bug Fixes
+
+* Merge pull request #75 from SolucTeam/fix/incremental-crds-and-scan-failure-reporting (6373832)
+* fix(chart+operator): auto-upgrade CRDs, propagate smart strategy, diagnose scan failures (3a649f3)
+
+## 🔧 Other Changes
+
+* chore: update CHANGELOG for v0.8.0 (47a8456)
+
+
 ## [v1.1.1] - 2026-10-09 (helm chart 1.1.1)
 
 ## 🐛 Bug Fixes
