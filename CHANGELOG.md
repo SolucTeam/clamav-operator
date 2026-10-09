@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 
 
+## [v0.8.2] - 2026-10-09
+
+## 🚀 Features
+
+_No new features_
+
+## 🐛 Bug Fixes
+
+* Merge pull request #76 from SolucTeam/fix/nodescantemplate-optional-nodename (971cfaa)
+* fix(chart+operator): make nodeName optional in clusterScan.nodeScanTemplate (5b11aeb)
+
+## 🔧 Other Changes
+
+* chore: update CHANGELOG for v0.8.1 (1b767c3)
+
+
 ## [v0.8.1] - 2026-10-09
 
 ## 🚀 Features
