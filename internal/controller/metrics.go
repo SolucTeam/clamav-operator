@@ -6,6 +6,7 @@ package controller
 
 import (
 	"github.com/prometheus/client_golang/prometheus"
+	dto "github.com/prometheus/client_model/go"
 	"sigs.k8s.io/controller-runtime/pkg/metrics"
 
 	clamavv1alpha1 "github.com/SolucTeam/clamav-operator/api/v1alpha1"
@@ -157,10 +158,15 @@ var (
 	// nodeScanLastCompletionTimestamp is the Unix timestamp of the last successful
 	// NodeScan completion per node.  Used by the ClamAVNoRecentScans alert:
 	//   time() - clamav_nodescan_last_completion_timestamp > 86400
+	//
+	// Semantics: the series is created when a scan is ATTEMPTED on a node.
+	// Value 0 means "attempted but never completed successfully" (seeded on the
+	// Failed transition).  Nodes with no scan attempt at all have no series —
+	// they are covered by the ClamAVNodeNeverScanned alert instead.
 	nodeScanLastCompletionTimestamp = prometheus.NewGaugeVec(
 		prometheus.GaugeOpts{
 			Name: "clamav_nodescan_last_completion_timestamp",
-			Help: "Unix timestamp of the last successful NodeScan completion per node",
+			Help: "Unix timestamp of the last successful NodeScan completion per node. 0 = scan attempted but never completed.",
 		},
 		[]string{"namespace", "node"},
 	)
@@ -381,8 +387,12 @@ func init() {
 }
 
 // recordNotificationAttempt increments the sent counter for a given channel.
+// It also zero-seeds the failure counter for that channel so dashboards and
+// the ClamAVNotificationFailed alert can distinguish "0 failures" (series at
+// 0) from "series absent" (notification never attempted).
 func recordNotificationAttempt(namespace, channel string) {
 	notificationsTotal.WithLabelValues(namespace, channel).Inc()
+	notificationsFailed.WithLabelValues(namespace, channel).Add(0)
 }
 
 // recordNotificationFailed increments the failure counter for a given channel.
@@ -407,13 +417,21 @@ func recordNodeScanMetrics(nodeScan *clamavv1alpha1.NodeScan, phase clamavv1alph
 
 	nodeScansTotal.WithLabelValues(namespace, node, status).Inc()
 
+	// Terminal phases: zero-seed the OOM-kill counter so that the
+	// ClamAVOOMKillsElevated alert and Grafana panels can distinguish
+	// "0 OOMKills" (series present at 0) from "series absent" (lazy
+	// CounterVec semantics — the family is registered but has no children
+	// until the first event).
+	if phase == clamavv1alpha1.NodeScanPhaseCompleted || phase == clamavv1alpha1.NodeScanPhaseFailed {
+		jobOOMKillsTotal.WithLabelValues(namespace, node).Add(0)
+	}
+
 	if phase == clamavv1alpha1.NodeScanPhaseCompleted {
-		if nodeScan.Status.FilesScanned > 0 {
-			filesScannedTotal.WithLabelValues(namespace, node).Add(float64(nodeScan.Status.FilesScanned))
-		}
-		if nodeScan.Status.FilesInfected > 0 {
-			filesInfectedTotal.WithLabelValues(namespace, node).Add(float64(nodeScan.Status.FilesInfected))
-		}
+		// Always create the series — even for 0 files / 0 infections — so
+		// dashboards can distinguish a clean scan (series at 0) from a
+		// missing series (scan never ran).
+		filesScannedTotal.WithLabelValues(namespace, node).Add(float64(nodeScan.Status.FilesScanned))
+		filesInfectedTotal.WithLabelValues(namespace, node).Add(float64(nodeScan.Status.FilesInfected))
 		if nodeScan.Status.Duration > 0 {
 			scanDuration.WithLabelValues(namespace, node).Observe(float64(nodeScan.Status.Duration))
 		}
@@ -450,6 +468,21 @@ func recordNodeScanMetrics(nodeScan *clamavv1alpha1.NodeScan, phase clamavv1alph
 			if nodeScan.Status.TimeSaved > 0 {
 				timeSavedSeconds.WithLabelValues(namespace, node).Add(float64(nodeScan.Status.TimeSaved))
 			}
+		}
+	} else if phase == clamavv1alpha1.NodeScanPhaseFailed {
+		// Seed the staleness gauge at 0 when a scan ATTEMPT fails, but never
+		// clobber a real timestamp: a node that completed a scan yesterday and
+		// failed today must keep yesterday's completion time (the failure is
+		// already covered by ClamAVScanFailed).  Only nodes whose scans never
+		// completed (series absent or 0) get seeded, so the
+		// ClamAVNoRecentScans alert (time() - gauge > 86400) also fires for
+		// chronically failing nodes.  Nodes with no scan attempt at all have
+		// no series and stay covered by ClamAVNodeNeverScanned — this keeps
+		// the permanent-firing bug that the old `> 0` guard fixed at bay.
+		completionGauge := nodeScanLastCompletionTimestamp.WithLabelValues(namespace, node)
+		var current dto.Metric
+		if err := completionGauge.Write(&current); err != nil || current.GetGauge().GetValue() == 0 {
+			completionGauge.Set(0)
 		}
 	}
 }

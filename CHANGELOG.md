@@ -225,7 +225,9 @@ _No bug fixes_
 ## 🐛 Bug Fixes
 
 * fix(alerts): `ClamAVScanFailed` — changed `increase([5m]) for: 5m` to `increase([10m]) for: 0m` to prevent the counter window expiring before the `for` clause fires.
-* fix(alerts): `ClamAVNoRecentScans` — added `clamav_nodescan_last_completion_timestamp > 0` guard to prevent permanent firing on nodes that have never completed a scan.
+* fix(alerts): `ClamAVNoRecentScans` — removed the `> 0` guard that created a blind spot: nodes whose scans were attempted but never completed (e.g. unschedulable scanner pods, admission OOM) were never alerted. The operator now seeds `clamav_nodescan_last_completion_timestamp` at 0 when a scan attempt fails (without clobbering real completion timestamps), so a series only exists for nodes with at least one scan attempt.
+* fix(alerts): implemented the missing `ClamAVNodeNeverScanned` alert referenced by the old `> 0` guard comment — alerts on nodes present in the cluster (kube_node_info) with no completion-timestamp series.
+* fix(observability): zero-seed lazy metric series so dashboards and alerts can distinguish "0" from "series absent" — `clamav_files_scanned_total` / `clamav_files_infected_total` are now created on every completed scan (even with 0 files), `clamav_job_oom_kills_total` on every terminal phase, and `clamav_notifications_failed_total` on every notification attempt.
 * fix(alerts): `ClamAVWebhookCertExpiringSoon` — wrapped with `unless absent(...)` to silence the alert when cert-manager is not installed and the metric does not exist.
 * fix(dashboard): removed hardcoded `strategy="smart"` target from the strategy panel (scanner only emits `full` or `incremental`).
 * fix(dashboard): datasource template variable — added `"query": "prometheus"` so Grafana correctly lists Prometheus datasources only.

@@ -17,9 +17,11 @@ limitations under the License.
 package controller
 
 import (
+	"fmt"
 	"testing"
 	"time"
 
+	"github.com/prometheus/client_golang/prometheus/testutil"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
@@ -311,6 +313,116 @@ func TestRecordNodeScanMetrics_Completed_SetsLastCompletionTimestamp(t *testing.
 	assert.NotPanics(t, func() {
 		recordNodeScanMetrics(nodeScan, clamavv1alpha1.NodeScanPhaseCompleted)
 	})
+}
+
+func TestRecordNodeScanMetrics_Failed_SeedsZeroTimestamp(t *testing.T) {
+	// A failed scan attempt on a node that never completed a scan must seed
+	// the staleness gauge at 0 so the ClamAVNoRecentScans alert
+	// (time() - gauge > 86400) fires for chronically failing nodes.
+	nodeScan := &clamavv1alpha1.NodeScan{
+		ObjectMeta: metav1.ObjectMeta{
+			Name:      "failed-seed-test",
+			Namespace: "default",
+		},
+		Spec: clamavv1alpha1.NodeScanSpec{
+			NodeName: "worker-failed-seed",
+		},
+	}
+
+	recordNodeScanMetrics(nodeScan, clamavv1alpha1.NodeScanPhaseFailed)
+
+	val := testutil.ToFloat64(nodeScanLastCompletionTimestamp.WithLabelValues("default", "worker-failed-seed"))
+	assert.Equal(t, 0.0, val, "failed scan must seed the completion timestamp at 0")
+}
+
+func TestRecordNodeScanMetrics_Failed_PreservesPriorCompletion(t *testing.T) {
+	// A node that completed a scan yesterday and failed today must KEEP its
+	// real completion timestamp — the failure is covered by ClamAVScanFailed.
+	nodeScan := &clamavv1alpha1.NodeScan{
+		ObjectMeta: metav1.ObjectMeta{
+			Name:      "failed-preserve-test",
+			Namespace: "default",
+		},
+		Spec: clamavv1alpha1.NodeScanSpec{
+			NodeName: "worker-failed-preserve",
+		},
+		Status: clamavv1alpha1.NodeScanStatus{
+			FilesScanned: 5,
+			Duration:     10,
+		},
+	}
+
+	recordNodeScanMetrics(nodeScan, clamavv1alpha1.NodeScanPhaseCompleted)
+	before := testutil.ToFloat64(nodeScanLastCompletionTimestamp.WithLabelValues("default", "worker-failed-preserve"))
+	require.Greater(t, before, 0.0, "completed scan must set a real timestamp")
+
+	recordNodeScanMetrics(nodeScan, clamavv1alpha1.NodeScanPhaseFailed)
+	after := testutil.ToFloat64(nodeScanLastCompletionTimestamp.WithLabelValues("default", "worker-failed-preserve"))
+	assert.Equal(t, before, after, "failed transition must not clobber a real completion timestamp")
+}
+
+func TestRecordNodeScanMetrics_Completed_ZeroFiles_CreatesSeries(t *testing.T) {
+	// A completed scan with 0 files must still create the counter series at 0
+	// so dashboards distinguish "clean scan" from "missing series".
+	nodeScan := &clamavv1alpha1.NodeScan{
+		ObjectMeta: metav1.ObjectMeta{
+			Name:      "zero-files-test",
+			Namespace: "default",
+		},
+		Spec: clamavv1alpha1.NodeScanSpec{
+			NodeName: "worker-zero-files",
+		},
+		Status: clamavv1alpha1.NodeScanStatus{
+			FilesScanned:  0,
+			FilesInfected: 0,
+			Duration:      3,
+		},
+	}
+
+	recordNodeScanMetrics(nodeScan, clamavv1alpha1.NodeScanPhaseCompleted)
+
+	assert.Equal(t, 0.0,
+		testutil.ToFloat64(filesScannedTotal.WithLabelValues("default", "worker-zero-files")),
+		"filesScannedTotal series must exist at 0 for a clean scan")
+	assert.Equal(t, 0.0,
+		testutil.ToFloat64(filesInfectedTotal.WithLabelValues("default", "worker-zero-files")),
+		"filesInfectedTotal series must exist at 0 for a clean scan")
+}
+
+func TestRecordNodeScanMetrics_TerminalPhase_SeedsOOMCounter(t *testing.T) {
+	// Terminal phases must zero-seed clamav_job_oom_kills_total so the
+	// ClamAVOOMKillsElevated alert can rely on the series existing.
+	for i, phase := range []clamavv1alpha1.NodeScanPhase{
+		clamavv1alpha1.NodeScanPhaseCompleted,
+		clamavv1alpha1.NodeScanPhaseFailed,
+	} {
+		nodeName := fmt.Sprintf("worker-oom-seed-%d", i)
+		nodeScan := &clamavv1alpha1.NodeScan{
+			ObjectMeta: metav1.ObjectMeta{
+				Name:      "oom-seed-test-" + nodeName,
+				Namespace: "default",
+			},
+			Spec: clamavv1alpha1.NodeScanSpec{
+				NodeName: nodeName,
+			},
+		}
+
+		recordNodeScanMetrics(nodeScan, phase)
+
+		assert.Equal(t, 0.0,
+			testutil.ToFloat64(jobOOMKillsTotal.WithLabelValues("default", nodeName)),
+			"jobOOMKillsTotal must be zero-seeded on terminal phase %s", phase)
+	}
+}
+
+func TestRecordNotificationAttempt_SeedsFailureCounter(t *testing.T) {
+	// Every notification attempt must zero-seed the failure counter for that
+	// channel so the ClamAVNotificationFailed alert can rely on the series.
+	recordNotificationAttempt("default", "test-channel")
+
+	assert.Equal(t, 0.0,
+		testutil.ToFloat64(notificationsFailed.WithLabelValues("default", "test-channel")),
+		"notificationsFailed must be zero-seeded by a successful attempt")
 }
 
 // ── requeueWithJitter ─────────────────────────────────────────────────────

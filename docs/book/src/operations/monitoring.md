@@ -73,7 +73,7 @@ All metrics are exposed on `:8080/metrics` by the operator pod.
 | `clamav_files_scanned_total` | Counter | `namespace`, `node` | Total files scanned (cumulative) |
 | `clamav_files_infected_total` | Counter | `namespace`, `node` | Total infected files detected |
 | `clamav_scan_duration_seconds` | Histogram | `namespace`, `node` | Scan duration — buckets: 30s 1m 2m 5m 10m 20m 30m 60m |
-| `clamav_nodescan_last_completion_timestamp` | Gauge | `namespace`, `node` | Unix timestamp of last successful scan completion |
+| `clamav_nodescan_last_completion_timestamp` | Gauge | `namespace`, `node` | Unix timestamp of last successful scan completion. `0` = scan attempted but never completed (seeded on failure) |
 | `clamav_nodescan_partial_results` | Gauge | `namespace`, `node` | 1 if last scan has partial/unreliable results |
 
 ### Performance
@@ -143,7 +143,8 @@ The Helm chart ships 14 pre-built alert rules when `monitoring.prometheusRule.en
 | Alert | Severity | Condition | Description |
 |-------|----------|-----------|-------------|
 | `ClamAVMalwareDetected` | critical | `clamav_files_infected_total > 0` | Malware detected on a node |
-| `ClamAVNoRecentScans` | warning | No completed scan in last 24 h | Nodes not being scanned |
+| `ClamAVNoRecentScans` | warning | No completed scan in last 24 h (or last attempt failed) | Nodes not being scanned / scans chronically failing |
+| `ClamAVNodeNeverScanned` | warning | Node present in the cluster but no completion record (needs kube-state-metrics) | Node excluded from the ScanSchedule or unschedulable |
 | `ClamAVScanFailed` | warning | Scan failures in the last 10 min | Scanner Job exiting non-zero |
 | `ClamAVPartialScanResults` | warning | `clamav_nodescan_partial_results == 1` | Result parsing incomplete — data unreliable |
 | `ClamAVSignaturesStale` | warning | Signature age > 24 h for 1 h | ClamAV signatures not updated — missed detections possible |

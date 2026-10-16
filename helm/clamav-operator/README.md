@@ -666,6 +666,7 @@ clamav_nodescan_partial_results
 | `ClamAVMalwareDetected` | `clamav_files_infected_total > 0` | critical |
 | `ClamAVScanFailed` | Scanner Job exited non-zero | warning |
 | `ClamAVNoRecentScans` | No node scanned in the last 24 h | warning |
+| `ClamAVNodeNeverScanned` | Node present in the cluster but never scanned (requires kube-state-metrics) | warning |
 | `ClamAVOperatorDown` | Operator deployment has 0 ready replicas | critical |
 | `ClamAVNotificationFailed` | Notification not delivered after 3 retries | warning |
 | `ClamAVPartialScanResults` | NodeScan has `resultsPartial: true` — data unreliable | warning |

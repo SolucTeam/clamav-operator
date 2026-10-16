@@ -534,21 +534,44 @@ monitoring:
       # FIX: was `time() - clamav_nodescan_last_completion_timestamp > 86400`
       # which fired permanently on nodes that have NEVER scanned (timestamp=0,
       # so time()-0 = now ≈ 1.7B seconds >> 86400).
-      # Added `> 0` guard: only alert on nodes that have completed at least one
-      # scan and then went silent. Nodes that have never scanned are a separate
-      # concern covered by ClamAVNodeNeverScanned below.
+      # The historical `> 0` guard fixed the permanent firing but created a
+      # blind spot: nodes whose scans are ATTEMPTED but never COMPLETE (e.g.
+      # unschedulable scanner pods, OOM on admission) have no real timestamp
+      # and were never alerted — a node could fail every night with no alert.
+      # The operator now seeds the gauge at 0 only when a scan attempt FAILS
+      # (and never clobbers a real completion timestamp), so dropping the
+      # guard is safe: a series exists only for nodes with at least one scan
+      # attempt.  Nodes never attempted at all are covered by
+      # ClamAVNodeNeverScanned below.
       - alert: ClamAVNoRecentScans
         expr: |
-          (clamav_nodescan_last_completion_timestamp > 0)
-          and
-          (time() - clamav_nodescan_last_completion_timestamp > 86400)
+          (time() - clamav_nodescan_last_completion_timestamp) > 86400
         for: 1h
         labels:
           severity: warning
           team: platform
         annotations:
           summary: "No recent ClamAV scan on node {{ $labels.node }}"
-          description: "Node {{ $labels.node }} last completed a scan {{ $value | humanizeDuration }} ago (> 24 h). Check the ScanSchedule and scanner Job logs."
+          description: "Node {{ $labels.node }} last completed a scan {{ $value | humanizeDuration }} ago (> 24 h). An implausibly large age (years) means scans are attempted but never complete — check the scanner Job logs and ClamAVScanFailed."
+
+      # Nodes that never had a single completed scan (no completion-timestamp
+      # series at all) — e.g. nodes that joined after the last schedule window
+      # or silently excluded from ClusterScans.  Requires kube-state-metrics
+      # (kube_node_info, also used by the Grafana coverage panel); if
+      # kube-state-metrics is absent the expression is empty and the alert
+      # stays silent (fail-safe, no false positives).
+      - alert: ClamAVNodeNeverScanned
+        expr: |
+          count by (node) (kube_node_info)
+            unless on (node)
+          count by (node) (clamav_nodescan_last_completion_timestamp)
+        for: 24h
+        labels:
+          severity: warning
+          team: platform
+        annotations:
+          summary: "ClamAV has never scanned node {{ $labels.node }}"
+          description: "Node {{ $labels.node }} has no ClamAV scan completion record. Verify it is covered by the ScanSchedule and that scanner Jobs can be scheduled on it (see ClamAVNoRecentScans / ClamAVScanFailed)."
 
       - alert: ClamAVNotificationFailed
         expr: increase(clamav_notifications_failed_total[15m]) > 0
