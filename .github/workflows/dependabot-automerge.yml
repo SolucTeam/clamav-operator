@@ -2,11 +2,14 @@
 # Auto-merge Dependabot PRs
 # =============================================================================
 # Automatically merges Dependabot PRs when:
-#   1. All tests pass successfully
-#   2. The update is minor or patch (not major)
-#   3. Security checks pass
+#   1. All required checks pass
+#   2. The update is minor or patch, OR a major bump of a GitHub Action
+#      (validated by CI itself — the PR runs with the new action versions)
 #
-# Major updates always require a manual review
+# Runtime major updates (Docker base images, Go deps majors, ...) always
+# require a manual review: CI cannot prove behavioral compatibility.
+#
+# Requires the repo setting "Allow auto-merge" to be enabled.
 # =============================================================================
 
 name: Dependabot Auto-merge
@@ -33,27 +36,42 @@ jobs:
     steps:
       - name: Dependabot metadata
         id: metadata
-        uses: dependabot/fetch-metadata@v1
+        uses: dependabot/fetch-metadata@v3
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
 
       - name: Check if eligible for auto-merge
         id: check
+        env:
+          UPDATE_TYPE: ${{ steps.metadata.outputs.update-type }}
+          PR_TITLE: ${{ github.event.pull_request.title }}
         run: |
-          UPDATE_TYPE="${{ steps.metadata.outputs.update-type }}"
-          
           echo "Update type: $UPDATE_TYPE"
-          
-          # Auto-merge only for patch and minor updates
+          echo "PR title:    $PR_TITLE"
+
+          # Auto-merge for patch and minor updates
           if [[ "$UPDATE_TYPE" == "version-update:semver-patch" ]] || \
              [[ "$UPDATE_TYPE" == "version-update:semver-minor" ]]; then
             echo "✅ Eligible for auto-merge (update type: $UPDATE_TYPE)"
             echo "is_eligible=true" >> $GITHUB_OUTPUT
-          else
-            echo "❌ Not eligible for auto-merge (update type: $UPDATE_TYPE)"
-            echo "ℹ️  Major updates require manual review"
-            echo "is_eligible=false" >> $GITHUB_OUTPUT
+            exit 0
           fi
+
+          # Major updates on GitHub Actions are also eligible: the PR's own
+          # workflows execute with the bumped action versions, so green
+          # required checks ARE the breaking-change validation.
+          if [[ "$UPDATE_TYPE" == "version-update:semver-major" ]] && \
+             [[ "$PR_TITLE" =~ bump\ (actions|dependabot|softprops)/ ]]; then
+            echo "✅ Eligible for auto-merge (GitHub Action major — validated by CI)"
+            echo "is_eligible=true" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+          # Runtime majors (Docker base images, Go deps majors, ...) require
+          # manual review — CI alone cannot prove behavioral compatibility.
+          echo "❌ Not eligible for auto-merge (update type: $UPDATE_TYPE)"
+          echo "ℹ️  Runtime major updates require manual review"
+          echo "is_eligible=false" >> $GITHUB_OUTPUT
 
   # ===========================================================================
   # Job 2 - Wait for all checks to pass
@@ -188,7 +206,8 @@ jobs:
               repo: context.repo.repo,
               issue_number: context.issue.number,
               body: '⚠️ **Manual review required**\n\n' +
-                    'This PR contains a major update and requires a manual review.\n\n' +
+                    'This PR contains a runtime major update (Docker base image, Go dependency, ...) ' +
+                    'and requires a manual review — CI alone cannot prove behavioral compatibility.\n\n' +
                     '**Update type:** `${{ needs.check-dependabot.outputs.update_type }}`\n\n' +
                     '**Required actions:**\n' +
                     '1. ✅ Check for breaking changes in the changelog\n' +
