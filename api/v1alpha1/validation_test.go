@@ -437,3 +437,51 @@ func TestIsValidDNS1123Name(t *testing.T) {
 		})
 	}
 }
+
+// TestValidateNotificationURL covers the SSRF defense-in-depth added to the
+// ScanPolicy admission webhook (Slack/Teams/generic webhook URLs).
+func TestValidateNotificationURL(t *testing.T) {
+	tests := []struct {
+		name    string
+		url     string
+		wantErr bool
+	}{
+		// Valid
+		{"slack", "https://hooks.slack.com/services/T000/B000/XXXX", false},
+		{"teams", "https://outlook.office.com/webhook/aaa", false},
+		{"generic", "https://alerts.example.com/hooks/clamav", false},
+		{"https with port", "https://alerts.example.com:8443/hook", false},
+
+		// Scheme
+		{"http rejected", "http://hooks.slack.com/services/T000/B000/XXXX", true},
+		{"no scheme", "hooks.slack.com/services/x", true},
+		{"file scheme", "file:///etc/passwd", true},
+
+		// SSRF targets
+		{"metadata service", "http://169.254.169.254/latest/meta-data/", true},
+		{"metadata https", "https://169.254.169.254/latest/meta-data/", true},
+		{"loopback", "http://127.0.0.1:10250/pods", true},
+		{"ipv6 loopback", "https://[::1]:9443/hook", true},
+		{"private range", "https://10.0.0.5/hook", true},
+		{"in-cluster service", "https://kubernetes.default.svc/api", true},
+		{"cluster.local", "https://api.cluster.local/x", true},
+		{"localhost", "https://localhost:8080/hook", true},
+		{"mdns", "https://printer.local/hook", true},
+
+		// userinfo
+		{"userinfo", "https://user:secret@hooks.example.com/x", true},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			errs := ValidateNotificationURL(tt.url, field.NewPath("test"))
+			if gotErr := len(errs) > 0; gotErr != tt.wantErr {
+				t.Errorf("ValidateNotificationURL(%q) error = %v, wantErr %v", tt.url, errs, tt.wantErr)
+			}
+		})
+	}
+}
+
+func TestValidateNotificationURL_Empty(t *testing.T) {
+	// Empty URL is the caller's (presence check) responsibility.
+	assert.Empty(t, ValidateNotificationURL("", field.NewPath("test")))
+}

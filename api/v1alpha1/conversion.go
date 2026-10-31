@@ -28,6 +28,7 @@ package v1alpha1
 import (
 	"fmt"
 
+	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"sigs.k8s.io/controller-runtime/pkg/conversion"
 
 	v1beta1 "github.com/SolucTeam/clamav-operator/api/v1beta1"
@@ -38,9 +39,122 @@ const (
 	// so they survive a round-trip through v1beta1 (the hub version).
 	annotationPrefix       = "clamav.io/conversion-v1alpha1-"
 	annEnabled             = annotationPrefix + "incremental-enabled"
+	annIncrementalStrategy = annotationPrefix + "incremental-strategy"
 	annMinTimeBetweenScans = annotationPrefix + "incremental-min-time-between-scans"
 	annCacheExpiration     = annotationPrefix + "incremental-cache-expiration"
 )
+
+// Defaults applied by the v1beta1 CRD schema — reused when deriving
+// v1alpha1-only fields for objects created natively in v1beta1 (which carry
+// no conversion annotations).
+const (
+	defaultMinTimeBetweenScans = int32(6)   // hours — matches v1alpha1 CRD default
+	defaultCacheExpiration     = int32(168) // hours (7 days)
+)
+
+// incrementalConfigFromHub reconstructs the richer v1alpha1 IncrementalScanConfig
+// from the hub (v1beta1) representation.
+//
+// v1beta1 cannot store Enabled, MinTimeBetweenScans, CacheExpiration or the
+// per-config Strategy. Two reconstruction paths:
+//
+//   - Object previously round-tripped through v1alpha1: the conversion
+//     annotations written by ConvertTo carry the original values.
+//   - Object created natively in v1beta1 (no annotations): values are derived —
+//     Enabled from the strategy (v1beta1 semantics: incremental is active
+//     unless strategy is "full"), Strategy from the hub strategy, and the
+//     v1alpha1-only timers from their CRD defaults instead of a misleading 0.
+//
+// hubAnnotations is the annotation map of the HUB object (read-only); the
+// annotations are NOT copied onto the spoke object (they are stripped below).
+func incrementalConfigFromHub(hubCfg *v1beta1.IncrementalScanConfig, hubStrategy v1beta1.ScanStrategy, hubAnnotations map[string]string) *IncrementalScanConfig {
+	if hubCfg == nil {
+		// No hub config: restore a config only if conversion annotations exist
+		// (i.e. the object carried v1alpha1-only fields through the hub).
+		if _, hasAnn := hubAnnotations[annEnabled]; !hasAnn {
+			return nil
+		}
+		hubCfg = &v1beta1.IncrementalScanConfig{}
+	}
+
+	cfg := &IncrementalScanConfig{
+		BaselineInterval:   hubCfg.FullScanInterval,
+		MaxAge:             hubCfg.MaxFileAgeHours,
+		SkipUnchangedFiles: copyBoolPtr(hubCfg.SkipUnchangedFiles),
+	}
+
+	// Restore v1alpha1-only fields from annotations written by ConvertTo.
+	if v, ok := hubAnnotations[annEnabled]; ok {
+		cfg.Enabled = v == "true"
+	} else {
+		// Native v1beta1 object: derive intent from the strategy.
+		// In v1beta1 the strategy is the activator; the presence of an
+		// incrementalConfig block alone does not enable incremental scanning.
+		cfg.Enabled = hubStrategy != "" && hubStrategy != v1beta1.ScanStrategyFull
+	}
+	if v, ok := hubAnnotations[annIncrementalStrategy]; ok && v != "" {
+		cfg.Strategy = ScanStrategy(v)
+	} else if string(hubStrategy) != "" {
+		cfg.Strategy = ScanStrategy(hubStrategy)
+	} else {
+		cfg.Strategy = ScanStrategyIncremental
+	}
+	if v, ok := hubAnnotations[annMinTimeBetweenScans]; ok {
+		if _, err := fmt.Sscanf(v, "%d", &cfg.MinTimeBetweenScans); err != nil {
+			cfg.MinTimeBetweenScans = 0
+		}
+	} else if cfg.MinTimeBetweenScans == 0 {
+		// v1beta1-native object: apply the v1alpha1 CRD default instead of 0.
+		cfg.MinTimeBetweenScans = defaultMinTimeBetweenScans
+	}
+	if v, ok := hubAnnotations[annCacheExpiration]; ok {
+		if _, err := fmt.Sscanf(v, "%d", &cfg.CacheExpiration); err != nil {
+			cfg.CacheExpiration = 0
+		}
+	} else if cfg.CacheExpiration == 0 {
+		cfg.CacheExpiration = defaultCacheExpiration
+	}
+	return cfg
+}
+
+// setIncrementalAnnotations writes the v1alpha1-only incremental fields into
+// the hub object's annotations so they survive the round-trip. Shared by the
+// NodeScan / ClusterScan / ScanSchedule ConvertTo implementations.
+func setIncrementalAnnotations(dst metav1.Object, cfg *IncrementalScanConfig) {
+	if cfg == nil {
+		return
+	}
+	if dst.GetAnnotations() == nil {
+		dst.SetAnnotations(map[string]string{})
+	}
+	ann := dst.GetAnnotations()
+	ann[annEnabled] = fmt.Sprintf("%v", cfg.Enabled)
+	ann[annIncrementalStrategy] = string(cfg.Strategy)
+	ann[annMinTimeBetweenScans] = fmt.Sprintf("%d", cfg.MinTimeBetweenScans)
+	ann[annCacheExpiration] = fmt.Sprintf("%d", cfg.CacheExpiration)
+}
+
+// stripConversionAnnotations removes the conversion annotations from the spoke
+// object's OWN annotation map and returns the cleaned map (nil when empty, to
+// keep omitempty semantics). Callers must pass a map they own — the conversion
+// code copies ObjectMeta first so the hub's map is never aliased nor mutated.
+func stripConversionAnnotations(annotations map[string]string) map[string]string {
+	delete(annotations, annEnabled)
+	delete(annotations, annIncrementalStrategy)
+	delete(annotations, annMinTimeBetweenScans)
+	delete(annotations, annCacheExpiration)
+	if len(annotations) == 0 {
+		return nil
+	}
+	return annotations
+}
+
+// conversionObjectMeta returns a deep copy of the source ObjectMeta. Conversion
+// functions must never alias the hub's maps: the later annotation cleanup would
+// otherwise mutate the hub object in place.
+func conversionObjectMeta(src metav1.ObjectMeta) metav1.ObjectMeta {
+	return *src.DeepCopy()
+}
 
 // ─── NodeScan ────────────────────────────────────────────────────────────────
 
@@ -51,16 +165,9 @@ func (r *NodeScan) ConvertTo(dstRaw conversion.Hub) error {
 		return fmt.Errorf("expected *v1beta1.NodeScan, got %T", dstRaw)
 	}
 
-	dst.ObjectMeta = r.ObjectMeta
+	dst.ObjectMeta = conversionObjectMeta(r.ObjectMeta)
 
-	if r.Spec.IncrementalConfig != nil {
-		if dst.Annotations == nil {
-			dst.Annotations = make(map[string]string)
-		}
-		dst.Annotations[annEnabled] = fmt.Sprintf("%v", r.Spec.IncrementalConfig.Enabled)
-		dst.Annotations[annMinTimeBetweenScans] = fmt.Sprintf("%d", r.Spec.IncrementalConfig.MinTimeBetweenScans)
-		dst.Annotations[annCacheExpiration] = fmt.Sprintf("%d", r.Spec.IncrementalConfig.CacheExpiration)
-	}
+	setIncrementalAnnotations(dst, r.Spec.IncrementalConfig)
 	dst.Spec.NodeName = r.Spec.NodeName
 	dst.Spec.ScanPolicy = r.Spec.ScanPolicy
 	dst.Spec.Priority = r.Spec.Priority
@@ -128,7 +235,7 @@ func (r *NodeScan) ConvertFrom(srcRaw conversion.Hub) error {
 		return fmt.Errorf("expected *v1beta1.NodeScan, got %T", srcRaw)
 	}
 
-	r.ObjectMeta = src.ObjectMeta
+	r.ObjectMeta = conversionObjectMeta(src.ObjectMeta)
 
 	// Spec
 	r.Spec.NodeName = src.Spec.NodeName
@@ -143,46 +250,15 @@ func (r *NodeScan) ConvertFrom(srcRaw conversion.Hub) error {
 	r.Spec.TTLSecondsAfterFinished = src.Spec.TTLSecondsAfterFinished
 	r.Spec.Strategy = ScanStrategy(src.Spec.Strategy)
 	r.Spec.ForceFullScan = src.Spec.ForceFullScan
-	if src.Spec.IncrementalConfig != nil {
-		r.Spec.IncrementalConfig = &IncrementalScanConfig{
-			BaselineInterval:   src.Spec.IncrementalConfig.FullScanInterval,
-			MaxAge:             src.Spec.IncrementalConfig.MaxFileAgeHours,
-			SkipUnchangedFiles: copyBoolPtr(src.Spec.IncrementalConfig.SkipUnchangedFiles),
-		}
-	}
-	// Restore v1alpha1-only fields from annotations saved during ConvertTo.
-	if ann := src.Annotations; ann != nil {
-		if r.Spec.IncrementalConfig == nil {
-			if _, hasAnn := ann[annEnabled]; hasAnn {
-				r.Spec.IncrementalConfig = &IncrementalScanConfig{}
-			}
-		}
-		if r.Spec.IncrementalConfig != nil {
-			if v, ok := ann[annEnabled]; ok {
-				r.Spec.IncrementalConfig.Enabled = v == "true"
-			}
-			if v, ok := ann[annMinTimeBetweenScans]; ok {
-				if _, err := fmt.Sscanf(v, "%d", &r.Spec.IncrementalConfig.MinTimeBetweenScans); err != nil {
-					r.Spec.IncrementalConfig.MinTimeBetweenScans = 0
-				}
-			}
-			if v, ok := ann[annCacheExpiration]; ok {
-				if _, err := fmt.Sscanf(v, "%d", &r.Spec.IncrementalConfig.CacheExpiration); err != nil {
-					r.Spec.IncrementalConfig.CacheExpiration = 0
-				}
-			}
-		}
-	}
-	// Clean up conversion annotations from our own ObjectMeta so they don't
-	// accumulate on the v1alpha1 object.
-	if r.Annotations != nil {
-		delete(r.Annotations, annEnabled)
-		delete(r.Annotations, annMinTimeBetweenScans)
-		delete(r.Annotations, annCacheExpiration)
-		if len(r.Annotations) == 0 {
-			r.Annotations = nil
-		}
-	}
+	// Rebuild the richer v1alpha1 IncrementalScanConfig: mapped fields plus the
+	// v1alpha1-only fields restored from conversion annotations when present,
+	// or derived from v1beta1 semantics for natively-v1beta1 objects (previously
+	// Enabled=false / timers=0 silently disabled incremental scanning).
+	r.Spec.IncrementalConfig = incrementalConfigFromHub(
+		src.Spec.IncrementalConfig, src.Spec.Strategy, src.Annotations)
+	// Clean up conversion annotations from our own (deep-copied) ObjectMeta so
+	// they don't accumulate on the v1alpha1 object.
+	r.Annotations = stripConversionAnnotations(r.Annotations)
 
 	// Status
 	r.Status.ObservedGeneration = src.Status.ObservedGeneration
@@ -229,7 +305,7 @@ func (r *ClusterScan) ConvertTo(dstRaw conversion.Hub) error {
 	if !ok {
 		return fmt.Errorf("expected *v1beta1.ClusterScan, got %T", dstRaw)
 	}
-	dst.ObjectMeta = r.ObjectMeta
+	dst.ObjectMeta = conversionObjectMeta(r.ObjectMeta)
 
 	dst.Spec.NodeSelector = r.Spec.NodeSelector
 	dst.Spec.ScanPolicy = r.Spec.ScanPolicy
@@ -256,13 +332,8 @@ func (r *ClusterScan) ConvertTo(dstRaw conversion.Hub) error {
 				MaxFileAgeHours:    r.Spec.NodeScanTemplate.IncrementalConfig.MaxAge,
 				SkipUnchangedFiles: copyBoolPtr(r.Spec.NodeScanTemplate.IncrementalConfig.SkipUnchangedFiles),
 			}
-			if dst.Annotations == nil {
-				dst.Annotations = make(map[string]string)
-			}
-			dst.Annotations[annEnabled] = fmt.Sprintf("%v", r.Spec.NodeScanTemplate.IncrementalConfig.Enabled)
-			dst.Annotations[annMinTimeBetweenScans] = fmt.Sprintf("%d", r.Spec.NodeScanTemplate.IncrementalConfig.MinTimeBetweenScans)
-			dst.Annotations[annCacheExpiration] = fmt.Sprintf("%d", r.Spec.NodeScanTemplate.IncrementalConfig.CacheExpiration)
 		}
+		setIncrementalAnnotations(dst, r.Spec.NodeScanTemplate.IncrementalConfig)
 		dst.Spec.NodeScanTemplate = t
 	}
 	dst.Status.ObservedGeneration = r.Status.ObservedGeneration
@@ -296,7 +367,7 @@ func (r *ClusterScan) ConvertFrom(srcRaw conversion.Hub) error {
 	if !ok {
 		return fmt.Errorf("expected *v1beta1.ClusterScan, got %T", srcRaw)
 	}
-	r.ObjectMeta = src.ObjectMeta
+	r.ObjectMeta = conversionObjectMeta(src.ObjectMeta)
 	r.Spec.NodeSelector = src.Spec.NodeSelector
 	r.Spec.ScanPolicy = src.Spec.ScanPolicy
 	r.Spec.Concurrent = src.Spec.Concurrent
@@ -323,38 +394,15 @@ func (r *ClusterScan) ConvertFrom(srcRaw conversion.Hub) error {
 				SkipUnchangedFiles: copyBoolPtr(src.Spec.NodeScanTemplate.IncrementalConfig.SkipUnchangedFiles),
 			}
 		}
-		if ann := src.Annotations; ann != nil {
-			if t.IncrementalConfig == nil {
-				if _, hasAnn := ann[annEnabled]; hasAnn {
-					t.IncrementalConfig = &IncrementalScanConfig{}
-				}
-			}
-			if t.IncrementalConfig != nil {
-				if v, ok := ann[annEnabled]; ok {
-					t.IncrementalConfig.Enabled = v == "true"
-				}
-				if v, ok := ann[annMinTimeBetweenScans]; ok {
-					if _, err := fmt.Sscanf(v, "%d", &t.IncrementalConfig.MinTimeBetweenScans); err != nil {
-						t.IncrementalConfig.MinTimeBetweenScans = 0
-					}
-				}
-				if v, ok := ann[annCacheExpiration]; ok {
-					if _, err := fmt.Sscanf(v, "%d", &t.IncrementalConfig.CacheExpiration); err != nil {
-						t.IncrementalConfig.CacheExpiration = 0
-					}
-				}
-			}
-		}
+		// Same rationale as NodeScan.ConvertFrom: restore v1alpha1-only fields
+		// from annotations, or derive them for natively-v1beta1 objects.
+		t.IncrementalConfig = incrementalConfigFromHub(
+			src.Spec.NodeScanTemplate.IncrementalConfig,
+			src.Spec.NodeScanTemplate.Strategy,
+			src.Annotations)
 		r.Spec.NodeScanTemplate = t
 	}
-	if r.Annotations != nil {
-		delete(r.Annotations, annEnabled)
-		delete(r.Annotations, annMinTimeBetweenScans)
-		delete(r.Annotations, annCacheExpiration)
-		if len(r.Annotations) == 0 {
-			r.Annotations = nil
-		}
-	}
+	r.Annotations = stripConversionAnnotations(r.Annotations)
 	r.Status.ObservedGeneration = src.Status.ObservedGeneration
 	r.Status.Phase = ClusterScanPhase(src.Status.Phase)
 	r.Status.StartTime = src.Status.StartTime
@@ -388,7 +436,7 @@ func (r *ScanSchedule) ConvertTo(dstRaw conversion.Hub) error {
 	if !ok {
 		return fmt.Errorf("expected *v1beta1.ScanSchedule, got %T", dstRaw)
 	}
-	dst.ObjectMeta = r.ObjectMeta
+	dst.ObjectMeta = conversionObjectMeta(r.ObjectMeta)
 
 	dst.Spec.Schedule = r.Spec.Schedule
 	dst.Spec.Suspend = r.Spec.Suspend
@@ -424,13 +472,8 @@ func (r *ScanSchedule) ConvertTo(dstRaw conversion.Hub) error {
 				MaxFileAgeHours:    r.Spec.ClusterScan.NodeScanTemplate.IncrementalConfig.MaxAge,
 				SkipUnchangedFiles: copyBoolPtr(r.Spec.ClusterScan.NodeScanTemplate.IncrementalConfig.SkipUnchangedFiles),
 			}
-			if dst.Annotations == nil {
-				dst.Annotations = make(map[string]string)
-			}
-			dst.Annotations[annEnabled] = fmt.Sprintf("%v", r.Spec.ClusterScan.NodeScanTemplate.IncrementalConfig.Enabled)
-			dst.Annotations[annMinTimeBetweenScans] = fmt.Sprintf("%d", r.Spec.ClusterScan.NodeScanTemplate.IncrementalConfig.MinTimeBetweenScans)
-			dst.Annotations[annCacheExpiration] = fmt.Sprintf("%d", r.Spec.ClusterScan.NodeScanTemplate.IncrementalConfig.CacheExpiration)
 		}
+		setIncrementalAnnotations(dst, r.Spec.ClusterScan.NodeScanTemplate.IncrementalConfig)
 		dst.Spec.ClusterScan.NodeScanTemplate = t
 	}
 	dst.Status.Active = r.Status.Active
@@ -448,7 +491,7 @@ func (r *ScanSchedule) ConvertFrom(srcRaw conversion.Hub) error {
 	if !ok {
 		return fmt.Errorf("expected *v1beta1.ScanSchedule, got %T", srcRaw)
 	}
-	r.ObjectMeta = src.ObjectMeta
+	r.ObjectMeta = conversionObjectMeta(src.ObjectMeta)
 	r.Spec.Schedule = src.Spec.Schedule
 	r.Spec.Suspend = src.Spec.Suspend
 	r.Spec.SuccessfulScansHistoryLimit = src.Spec.SuccessfulScansHistoryLimit
@@ -483,38 +526,15 @@ func (r *ScanSchedule) ConvertFrom(srcRaw conversion.Hub) error {
 				SkipUnchangedFiles: copyBoolPtr(src.Spec.ClusterScan.NodeScanTemplate.IncrementalConfig.SkipUnchangedFiles),
 			}
 		}
-		if ann := src.Annotations; ann != nil {
-			if t.IncrementalConfig == nil {
-				if _, hasAnn := ann[annEnabled]; hasAnn {
-					t.IncrementalConfig = &IncrementalScanConfig{}
-				}
-			}
-			if t.IncrementalConfig != nil {
-				if v, ok := ann[annEnabled]; ok {
-					t.IncrementalConfig.Enabled = v == "true"
-				}
-				if v, ok := ann[annMinTimeBetweenScans]; ok {
-					if _, err := fmt.Sscanf(v, "%d", &t.IncrementalConfig.MinTimeBetweenScans); err != nil {
-						t.IncrementalConfig.MinTimeBetweenScans = 0
-					}
-				}
-				if v, ok := ann[annCacheExpiration]; ok {
-					if _, err := fmt.Sscanf(v, "%d", &t.IncrementalConfig.CacheExpiration); err != nil {
-						t.IncrementalConfig.CacheExpiration = 0
-					}
-				}
-			}
-		}
+		// Same rationale as NodeScan.ConvertFrom: restore v1alpha1-only fields
+		// from annotations, or derive them for natively-v1beta1 objects.
+		t.IncrementalConfig = incrementalConfigFromHub(
+			src.Spec.ClusterScan.NodeScanTemplate.IncrementalConfig,
+			src.Spec.ClusterScan.NodeScanTemplate.Strategy,
+			src.Annotations)
 		r.Spec.ClusterScan.NodeScanTemplate = t
 	}
-	if r.Annotations != nil {
-		delete(r.Annotations, annEnabled)
-		delete(r.Annotations, annMinTimeBetweenScans)
-		delete(r.Annotations, annCacheExpiration)
-		if len(r.Annotations) == 0 {
-			r.Annotations = nil
-		}
-	}
+	r.Annotations = stripConversionAnnotations(r.Annotations)
 	r.Status.Active = src.Status.Active
 	r.Status.LastScheduleTime = src.Status.LastScheduleTime
 	r.Status.LastSuccessfulTime = src.Status.LastSuccessfulTime
