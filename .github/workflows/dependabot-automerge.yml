@@ -157,11 +157,17 @@ jobs:
   # ===========================================================================
   # Job 3 - Approuver et merger la PR
   # ===========================================================================
-  # NOTE: GITHUB_TOKEN is not allowed to merge PRs that modify files under
-  # .github/workflows (GitHub blocks it to prevent privilege escalation).
-  # To automate those PRs too, create a fine-grained PAT (contents: write,
-  # pull-requests: write, workflows: read&write) and store it as the
-  # AUTOMERGE_TOKEN repository secret. Falls back to GITHUB_TOKEN otherwise.
+  # Two GitHub restrictions shape this job:
+  #   1. GITHUB_TOKEN can never APPROVE pull requests (by design).
+  #   2. GITHUB_TOKEN can never merge PRs touching .github/workflows files
+  #      (anti privilege-escalation).
+  # The main ruleset also requires 1 approving review on every PR.
+  # => To fully automate, create a fine-grained PAT (contents: read&write,
+  #    pull-requests: read&write, workflows: read&write) owned by a human
+  #    who is NOT the PR author (Dependabot PRs are authored by the bot, so
+  #    the PAT owner can approve them), and store it as AUTOMERGE_TOKEN.
+  # Without AUTOMERGE_TOKEN, PRs are still auto-merge-enabled but wait for a
+  # manual approval before GitHub merges them.
   # ===========================================================================
   auto-merge:
     name: Auto-merge PR
@@ -169,6 +175,14 @@ jobs:
     needs: [check-dependabot, wait-for-checks]
     if: needs.check-dependabot.outputs.is_eligible == 'true'
     steps:
+      - name: Approve PR (AUTOMERGE_TOKEN only)
+        continue-on-error: true
+        if: ${{ secrets.AUTOMERGE_TOKEN != '' }}
+        env:
+          GH_TOKEN: ${{ secrets.AUTOMERGE_TOKEN }}
+          PR_URL: ${{ github.event.pull_request.html_url }}
+        run: gh pr review "$PR_URL" --approve
+
       - name: Enable auto-merge
         run: |
           gh pr merge "$PR_URL" --auto --squash --delete-branch
