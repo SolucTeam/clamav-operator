@@ -2,11 +2,14 @@
 # Auto-merge Dependabot PRs
 # =============================================================================
 # Automatically merges Dependabot PRs when:
-#   1. All tests pass successfully
-#   2. The update is minor or patch (not major)
-#   3. Security checks pass
+#   1. All required checks pass
+#   2. The update is minor or patch, OR a major bump of a GitHub Action
+#      (validated by CI itself — the PR runs with the new action versions)
 #
-# Major updates always require a manual review
+# Runtime major updates (Docker base images, Go deps majors, ...) always
+# require a manual review: CI cannot prove behavioral compatibility.
+#
+# Requires the repo setting "Allow auto-merge" to be enabled.
 # =============================================================================
 
 name: Dependabot Auto-merge
@@ -39,21 +42,36 @@ jobs:
 
       - name: Check if eligible for auto-merge
         id: check
+        env:
+          UPDATE_TYPE: ${{ steps.metadata.outputs.update-type }}
+          PR_TITLE: ${{ github.event.pull_request.title }}
         run: |
-          UPDATE_TYPE="${{ steps.metadata.outputs.update-type }}"
-          
           echo "Update type: $UPDATE_TYPE"
-          
-          # Auto-merge only for patch and minor updates
+          echo "PR title:    $PR_TITLE"
+
+          # Auto-merge for patch and minor updates
           if [[ "$UPDATE_TYPE" == "version-update:semver-patch" ]] || \
              [[ "$UPDATE_TYPE" == "version-update:semver-minor" ]]; then
             echo "✅ Eligible for auto-merge (update type: $UPDATE_TYPE)"
             echo "is_eligible=true" >> $GITHUB_OUTPUT
-          else
-            echo "❌ Not eligible for auto-merge (update type: $UPDATE_TYPE)"
-            echo "ℹ️  Major updates require manual review"
-            echo "is_eligible=false" >> $GITHUB_OUTPUT
+            exit 0
           fi
+
+          # Major updates on GitHub Actions are also eligible: the PR's own
+          # workflows execute with the bumped action versions, so green
+          # required checks ARE the breaking-change validation.
+          if [[ "$UPDATE_TYPE" == "version-update:semver-major" ]] && \
+             [[ "$PR_TITLE" =~ bump\ (actions|dependabot|softprops)/ ]]; then
+            echo "✅ Eligible for auto-merge (GitHub Action major — validated by CI)"
+            echo "is_eligible=true" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+          # Runtime majors (Docker base images, Go deps majors, ...) require
+          # manual review — CI alone cannot prove behavioral compatibility.
+          echo "❌ Not eligible for auto-merge (update type: $UPDATE_TYPE)"
+          echo "ℹ️  Runtime major updates require manual review"
+          echo "is_eligible=false" >> $GITHUB_OUTPUT
 
   # ===========================================================================
   # Job 2 - Wait for all checks to pass
@@ -139,18 +157,38 @@ jobs:
   # ===========================================================================
   # Job 3 - Approuver et merger la PR
   # ===========================================================================
+  # Two GitHub restrictions shape this job:
+  #   1. GITHUB_TOKEN can never APPROVE pull requests (by design).
+  #   2. GITHUB_TOKEN can never merge PRs touching .github/workflows files
+  #      (anti privilege-escalation).
+  # The main ruleset also requires 1 approving review on every PR.
+  # => To fully automate, create a fine-grained PAT (contents: read&write,
+  #    pull-requests: read&write, workflows: read&write) owned by a human
+  #    who is NOT the PR author (Dependabot PRs are authored by the bot, so
+  #    the PAT owner can approve them), and store it as AUTOMERGE_TOKEN.
+  # Without AUTOMERGE_TOKEN, PRs are still auto-merge-enabled but wait for a
+  # manual approval before GitHub merges them.
+  # ===========================================================================
   auto-merge:
     name: Auto-merge PR
     runs-on: ubuntu-latest
     needs: [check-dependabot, wait-for-checks]
     if: needs.check-dependabot.outputs.is_eligible == 'true'
     steps:
+      - name: Approve PR (AUTOMERGE_TOKEN only)
+        continue-on-error: true
+        if: ${{ secrets.AUTOMERGE_TOKEN != '' }}
+        env:
+          GH_TOKEN: ${{ secrets.AUTOMERGE_TOKEN }}
+          PR_URL: ${{ github.event.pull_request.html_url }}
+        run: gh pr review "$PR_URL" --approve
+
       - name: Enable auto-merge
         run: |
           gh pr merge "$PR_URL" --auto --squash --delete-branch
         env:
           PR_URL: ${{ github.event.pull_request.html_url }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.AUTOMERGE_TOKEN || secrets.GITHUB_TOKEN }}
 
       - name: Comment on PR
         uses: actions/github-script@v8
@@ -188,7 +226,8 @@ jobs:
               repo: context.repo.repo,
               issue_number: context.issue.number,
               body: '⚠️ **Manual review required**\n\n' +
-                    'This PR contains a major update and requires a manual review.\n\n' +
+                    'This PR contains a runtime major update (Docker base image, Go dependency, ...) ' +
+                    'and requires a manual review — CI alone cannot prove behavioral compatibility.\n\n' +
                     '**Update type:** `${{ needs.check-dependabot.outputs.update_type }}`\n\n' +
                     '**Required actions:**\n' +
                     '1. ✅ Check for breaking changes in the changelog\n' +
