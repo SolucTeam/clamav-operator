@@ -1,0 +1,25 @@
+# Certificat TLS du serveur webhook (self-signed, injecté par cainjector dans
+# les caBundle des CRDs et de la ValidatingWebhookConfiguration).
+# Requiert cert-manager (issuer, certificate + cainjector) dans le cluster.
+---
+apiVersion: cert-manager.io/v1
+kind: Issuer
+metadata:
+  name: clamav-operator-selfsigned-issuer
+  namespace: clamav-operator-system
+spec:
+  selfSigned: {}
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: clamav-operator-webhook-serving-cert
+  namespace: clamav-operator-system
+spec:
+  dnsNames:
+    - webhook-service.clamav-operator-system.svc
+    - webhook-service.clamav-operator-system.svc.cluster.local
+  issuerRef:
+    kind: Issuer
+    name: clamav-operator-selfsigned-issuer
+  secretName: clamav-operator-webhook-server-cert

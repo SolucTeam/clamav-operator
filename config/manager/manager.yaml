@@ -40,6 +40,13 @@ spec:
             - name: health
               containerPort: 8081
               protocol: TCP
+            - name: webhook
+              containerPort: 9443
+              protocol: TCP
+          volumeMounts:
+            - name: webhook-cert
+              mountPath: /tmp/k8s-webhook-server/serving-certs
+              readOnly: true
           livenessProbe:
             httpGet:
               path: /healthz
@@ -64,6 +71,10 @@ spec:
             capabilities:
               drop: ["ALL"]
             readOnlyRootFilesystem: true
+      volumes:
+        - name: webhook-cert
+          secret:
+            secretName: clamav-operator-webhook-server-cert
 ---
 apiVersion: v1
 kind: ServiceAccount

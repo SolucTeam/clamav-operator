@@ -1,0 +1,15 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: webhook-service
+  namespace: clamav-operator-system
+  labels:
+    app.kubernetes.io/name: clamav-operator
+    app.kubernetes.io/component: webhook
+spec:
+  ports:
+    - port: 443
+      targetPort: webhook
+  selector:
+    app.kubernetes.io/name: clamav-operator

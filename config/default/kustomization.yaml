@@ -9,6 +9,8 @@ resources:
   - ../rbac
   - ../manager
   - ../webhook
+  # Certificat TLS du webhook (cert-manager requis : issuer + certificate).
+  - ../certmanager
 
 namespace: clamav-operator-system
 
