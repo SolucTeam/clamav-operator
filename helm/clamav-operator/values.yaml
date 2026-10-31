@@ -178,7 +178,10 @@ scanner:
     schedule: "0 */6 * * *"
     image:
       repository: clamav/clamav
-      tag: "1.3"
+      # Track the ClamAV 1.4 LTS line. The floating "1.3" tag was removed from
+      # Docker Hub (clamav/clamav now ships 1.4/1.5 + -debian variants only),
+      # which broke Artifact Hub security scanning and fresh image pulls.
+      tag: "1.4"
       pullPolicy: IfNotPresent
     # Resources for the freshclam CronJob pod.
     # Not set by default — define in your own values file.
