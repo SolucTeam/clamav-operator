@@ -33,7 +33,11 @@ spec:
           type: RuntimeDefault
       containers:
         - name: manager
-          image: ghcr.io/solucteam/clamav-operator:latest
+          # Kubebuilder placeholder: 'make dist' / 'make deploy' rewrite it via
+          # `kustomize edit set image controller=${IMG}` (Makefile). Keep the
+          # name 'controller' — a hardcoded image here makes that sed a no-op
+          # and release artifacts shipped :latest (audit 2026-10).
+          image: controller:latest
           args:
             - --metrics-bind-address=:8080
             - --health-probe-bind-address=:8081

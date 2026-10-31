@@ -21,13 +21,17 @@ kubectl apply -f \
 
 The `install.yaml` bundle includes, in order:
 
-1. CRD definitions (`NodeScan`, `ClusterScan`, `ScanSchedule`, `ScanPolicy`)
-2. Namespace (`clamav-system`)
+1. CRD definitions (`NodeScan`, `ClusterScan`, `ScanSchedule`, `ScanPolicy`, `ScanCacheResource`)
+2. Namespace (`clamav-operator-system`)
 3. ServiceAccount, ClusterRole, ClusterRoleBinding
-4. Deployment (operator)
+4. Deployment (operator, 2 replicas + PodDisruptionBudget)
 5. Service (webhook + metrics)
 6. ValidatingWebhookConfiguration
-7. cert-manager `Certificate` and `Issuer` resources
+7. cert-manager `Certificate` and `Issuer` resources (cert-manager required)
+
+> **Note**: unlike the Helm chart, the raw manifests do not include the
+> NetworkPolicy, ServiceMonitor, freshclam CronJob or the default
+> ScanPolicy / ScanSchedule hooks — deploy via Helm for the full feature set.
 
 ## GitOps with ArgoCD
 

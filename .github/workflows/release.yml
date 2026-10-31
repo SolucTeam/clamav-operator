@@ -263,7 +263,10 @@ jobs:
           sudo mv kustomize /usr/local/bin/kustomize
 
       - name: Install controller-gen
-        run: go install sigs.k8s.io/controller-tools/cmd/controller-gen@latest
+        # Pinned (audit 2026-10): @latest could regenerate CRDs/manifests with
+        # an incompatible controller-gen at release time. Keep in sync with
+        # CONTROLLER_TOOLS_VERSION in the Makefile.
+        run: go install sigs.k8s.io/controller-tools/cmd/controller-gen@v0.17.0
 
       - name: Generate dist/install.yaml
         run: |

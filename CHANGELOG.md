@@ -3,6 +3,42 @@
 All notable changes to this project will be documented in this file.
 
 
+## [Unreleased]
+
+## 🐛 Bug Fixes
+
+* fix(rbac): regenerate ClusterRole — startup checks (namespaces, serviceaccounts,
+  services, endpoints) and scanpolicies/status were missing from the kustomize
+  path, causing exit(1) at startup
+* fix(helm): certManager.enabled=false was a dead path (webhook Secret never
+  rendered, empty caBundle + failurePolicy=Fail rejected all CR writes);
+  BYO certificates now work and the render fails fast when misconfigured
+* fix(helm): defaultScanPolicy scanner jobs now get mandatory memory defaults
+  (requests 1Gi / limits 2Gi); operator resources defaulted; ghost
+  scanner.resources value removed
+* fix(helm): freshclam image 1.3 (EOL) → 1.4
+* fix(api): IncrementalConfig (Enabled/Strategy/MinTimeBetweenScans/
+  CacheExpiration) now survives v1alpha1↔v1beta1 conversion for objects
+  created natively in v1beta1 — incremental scans were silently disabled
+* fix(api): SSRF validation of Slack/Teams/webhook notification URLs
+  (https-only, private/metadata/loopback/in-cluster targets rejected)
+* fix(api): /host/proc-style paths no longer bypass the dangerous-paths check
+* fix(security): webhook URLs (containing Slack/Teams tokens) redacted from
+  logs and Kubernetes Events
+* fix(security): scanner Jobs drop HostPID/HostIPC/SYS_ADMIN (audit: no file
+  scanning use, pure attack surface)
+* fix(kustomize): 2 operator replicas + PodDisruptionBudget (failurePolicy=Fail
+  availability during drains)
+* fix(metrics): per-ClusterScan gauge series purged on deletion (unbounded
+  growth with schedule-created scans)
+
+## 🔧 Other Changes
+
+* chore: pin all floating images (manager placeholder restored for
+  `kustomize edit set image`, helm test kubectl, controller-gen in release)
+* chore: add helm.sh/resource-policy: keep to the packaged CRDs
+* docs: sync installation docs (5 CRDs, operator.replicaCount, namespaces)
+
 ## [v0.8.2] - 2026-10-09
 
 ## 🚀 Features
