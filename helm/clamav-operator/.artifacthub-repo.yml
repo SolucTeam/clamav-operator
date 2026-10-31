@@ -1,0 +1,6 @@
+# Artifact Hub repository metadata
+# https://artifacthub.io/docs/topics/repositories/helm-charts/#oci-container-registries
+# This file must be packaged at the root of the chart for OCI-based repositories.
+owners:
+  - name: SolucTeam
+    email: k.aziz.k@live.fr
