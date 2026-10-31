@@ -426,7 +426,8 @@ func recordNodeScanMetrics(nodeScan *clamavv1alpha1.NodeScan, phase clamavv1alph
 		jobOOMKillsTotal.WithLabelValues(namespace, node).Add(0)
 	}
 
-	if phase == clamavv1alpha1.NodeScanPhaseCompleted {
+	switch phase {
+	case clamavv1alpha1.NodeScanPhaseCompleted:
 		// Always create the series — even for 0 files / 0 infections — so
 		// dashboards can distinguish a clean scan (series at 0) from a
 		// missing series (scan never ran).
@@ -469,7 +470,7 @@ func recordNodeScanMetrics(nodeScan *clamavv1alpha1.NodeScan, phase clamavv1alph
 				timeSavedSeconds.WithLabelValues(namespace, node).Add(float64(nodeScan.Status.TimeSaved))
 			}
 		}
-	} else if phase == clamavv1alpha1.NodeScanPhaseFailed {
+	case clamavv1alpha1.NodeScanPhaseFailed:
 		// Seed the staleness gauge at 0 when a scan ATTEMPT fails, but never
 		// clobber a real timestamp: a node that completed a scan yesterday and
 		// failed today must keep yesterday's completion time (the failure is

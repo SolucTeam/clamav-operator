@@ -35,9 +35,9 @@ import (
 //   - namespaces (list) — checkAPIServerConnectivity
 //   - services, endpoints (get) — ValidateClamAVConnectivity (mode remote)
 //
-// NB : les markers +kubebuilder:rbac correspondants sont déclarés dans
-// nodescan_controller.go (bloc de markers du Reconciler) — controller-gen
-// ignore silencieusement ceux placés dans ce fichier.
+// NB : the corresponding +kubebuilder:rbac markers are declared in
+// nodescan_controller.go (Reconciler marker block) — controller-gen
+// silently ignores the ones placed in this file.
 type StartupChecker struct {
 	clientset         kubernetes.Interface
 	namespace         string
