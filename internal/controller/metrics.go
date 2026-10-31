@@ -526,6 +526,16 @@ func recordScanPolicyUsage(namespace, policyName string) {
 	scanPolicyUsageTotal.WithLabelValues(namespace, policyName).Inc()
 }
 
+// purgeClusterScanMetrics removes the per-ClusterScan gauge series when the
+// object is deleted (finalizer path). Schedules create timestamped
+// ClusterScans and prune them via history limits; without purging, the
+// {namespace, clusterscan} series accumulated for the operator's lifetime.
+func purgeClusterScanMetrics(namespace, name string) {
+	_ = clusterScanNodesTotal.DeleteLabelValues(namespace, name)
+	_ = clusterScanNodesCompleted.DeleteLabelValues(namespace, name)
+	_ = clusterScanNodesFailed.DeleteLabelValues(namespace, name)
+}
+
 // recordScanScheduleExecution records when a ScanSchedule executes
 func recordScanScheduleExecution(namespace, scheduleName, status string) {
 	scanScheduleExecutionsTotal.WithLabelValues(namespace, scheduleName, status).Inc()
