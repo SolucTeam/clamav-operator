@@ -51,39 +51,45 @@ jobs:
           fetch-depth: 0  # Required to access the full commit history
 
       - name: Validate commit messages
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           #!/bin/bash
           set -e
-          
+
           echo "🔍 Validating commit messages..."
           echo ""
-          
+
           # Conventional Commits pattern
           PATTERN='^(feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert)(\(.+\))?(!)?: .{1,100}'
-          
-          # Get the list of commits to validate
+
+          # Get the list of commits to validate.
+          # For pull_request events we use the GitHub API instead of
+          # `git rev-list base..head`: on rebased/force-pushed branches (or
+          # when the runner checks out the base branch instead of the merge
+          # ref), the PR head objects may not exist in the local clone and
+          # rev-list fails with "fatal: Invalid revision range".
           if [ "${{ github.event_name }}" = "pull_request" ]; then
-            BASE_SHA="${{ github.event.pull_request.base.sha }}"
-            HEAD_SHA="${{ github.event.pull_request.head.sha }}"
-            COMMITS=$(git rev-list $BASE_SHA..$HEAD_SHA)
-            
             # Skip validation for Dependabot PRs
             if [ "${{ github.actor }}" = "dependabot[bot]" ]; then
               echo "✅ Dependabot PR - commits are automatically validated"
               exit 0
             fi
+
+            COMMITS=$(gh api "repos/${{ github.repository }}/pulls/${{ github.event.pull_request.number }}/commits" \
+              --paginate --jq '.[] | .sha + "\t" + (.commit.message | split("\n")[0])')
           else
             # For a push event, validate only the latest commit
-            COMMITS="${{ github.sha }}"
+            COMMITS="${{ github.sha }}	$(git log -1 --format=%s "${{ github.sha }}")"
           fi
-          
+
           INVALID_COMMITS=()
           VALID_COUNT=0
-          
-          for COMMIT in $COMMITS; do
-            MESSAGE=$(git log -1 --format=%s $COMMIT)
-            COMMIT_SHORT=$(git rev-parse --short $COMMIT)
-            
+
+          while IFS=$'\t' read -r COMMIT MESSAGE; do
+            [ -z "$COMMIT" ] && continue
+            COMMIT_SHORT="${COMMIT:0:7}"
+
             # Accept GitHub automatic merge commits
             if echo "$MESSAGE" | grep -qE '^Merge (branch|pull request) '; then
               echo "✅ $COMMIT_SHORT: $MESSAGE (merge commit)"
@@ -95,7 +101,7 @@ jobs:
               echo "❌ $COMMIT_SHORT: $MESSAGE"
               INVALID_COMMITS+=("$COMMIT_SHORT: $MESSAGE")
             fi
-          done
+          done <<< "$COMMITS"
           
           echo ""
           echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
@@ -223,17 +229,15 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event_name == 'pull_request'
     steps:
-      - name: Checkout
-        uses: actions/checkout@v6
-        with:
-          fetch-depth: 0
-
       - name: Check for sensitive files
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
-          BASE_SHA="${{ github.event.pull_request.base.sha }}"
-          HEAD_SHA="${{ github.event.pull_request.head.sha }}"
-          
-          CHANGED_FILES=$(git diff --name-only "$BASE_SHA" "$HEAD_SHA")
+          # List changed files via the GitHub API — independent of the local
+          # checkout (rebased branches / base-branch checkouts can make
+          # `git diff base head` fail or miss the PR objects).
+          CHANGED_FILES=$(gh api "repos/${{ github.repository }}/pulls/${{ github.event.pull_request.number }}/files" \
+            --paginate --jq '.[].filename')
           
           SENSITIVE_FILES=(
             ".env"
