@@ -157,6 +157,12 @@ jobs:
   # ===========================================================================
   # Job 3 - Approuver et merger la PR
   # ===========================================================================
+  # NOTE: GITHUB_TOKEN is not allowed to merge PRs that modify files under
+  # .github/workflows (GitHub blocks it to prevent privilege escalation).
+  # To automate those PRs too, create a fine-grained PAT (contents: write,
+  # pull-requests: write, workflows: read&write) and store it as the
+  # AUTOMERGE_TOKEN repository secret. Falls back to GITHUB_TOKEN otherwise.
+  # ===========================================================================
   auto-merge:
     name: Auto-merge PR
     runs-on: ubuntu-latest
@@ -168,7 +174,7 @@ jobs:
           gh pr merge "$PR_URL" --auto --squash --delete-branch
         env:
           PR_URL: ${{ github.event.pull_request.html_url }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.AUTOMERGE_TOKEN || secrets.GITHUB_TOKEN }}
 
       - name: Comment on PR
         uses: actions/github-script@v8
