@@ -16,7 +16,8 @@ helm install clamav-operator oci://ghcr.io/solucteam/charts/clamav-operator \
 Create a `values-override.yaml`:
 
 ```yaml
-replicaCount: 2
+operator:
+  replicaCount: 2
 
 webhook:
   certManager:

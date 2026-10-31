@@ -18,6 +18,8 @@ package v1alpha1
 
 import (
 	"fmt"
+	"net"
+	"net/url"
 	"path/filepath"
 	"regexp"
 	"strings"
@@ -103,9 +105,17 @@ func ValidatePaths(paths []string, fldPath *field.Path) field.ErrorList {
 			allErrs = append(allErrs, field.Invalid(pathField, path, "path cannot contain '..' (path traversal)"))
 		}
 
-		// Warn about dangerous paths (but allow with /host prefix for container mounts)
+		// Reject dangerous pseudo-filesystems (audit 2026-10): the check must
+		// apply to the HOST path, not just the container path. The scanner
+		// mounts the node root at /host and strips that prefix, so a CR with
+		// /host/proc previously passed validation while triggering a scan of
+		// the host's /proc (massive latency, thousands of false positives).
+		//
+		// /host/var-style mounts are legitimate; /host/{proc,sys,dev} are not.
+		hostRel := strings.TrimPrefix(path, "/host")
 		for _, dangerous := range dangerousPaths {
-			if path == dangerous || strings.HasPrefix(path, dangerous+"/") {
+			if path == dangerous || strings.HasPrefix(path, dangerous+"/") ||
+				hostRel == dangerous || strings.HasPrefix(hostRel, dangerous+"/") {
 				allErrs = append(allErrs, field.Invalid(pathField, path,
 					fmt.Sprintf("scanning %s is not recommended and may cause system issues", dangerous)))
 			}
@@ -320,6 +330,74 @@ func validateResources(resources *corev1.ResourceRequirements, fldPath *field.Pa
 				fldPath.Child("limits").Child("memory"),
 				memLimit.String(),
 				"memory limit must be at least 64Mi for scanner to function"))
+		}
+	}
+
+	return allErrs
+}
+
+// ValidateNotificationURL validates an outgoing notification URL (Slack,
+// Teams or generic webhook) as a defense-in-depth against SSRF.
+//
+// The operator process holds a privileged ServiceAccount (nodes, pods,
+// pods/log, secrets). Anyone able to create or update a ScanPolicy can make
+// the operator POST to an arbitrary URL — a textbook SSRF vector against the
+// cluster's internal network (kubelet, metadata services, in-cluster APIs).
+//
+// Enforcement (cheap and deterministic — no DNS resolution in the webhook):
+//   - scheme must be https (plaintext HTTP would also leak scan payloads);
+//   - userinfo (user:pass@host) is rejected — never a legitimate target and
+//     a common URL-parsing confusion vector;
+//   - loopback, link-local (incl. cloud metadata 169.254.169.254), unspecified
+//     and private IP literals are rejected;
+//   - in-cluster hostnames (localhost, *.svc, *.cluster.local, *.local) are
+//     rejected.
+//
+// NOTE: URLs supplied via a Secret reference (WebhookSecretRef) cannot be
+// validated here — pair this with an egress NetworkPolicy for full coverage.
+func ValidateNotificationURL(rawURL string, fldPath *field.Path) field.ErrorList {
+	var allErrs field.ErrorList
+
+	if rawURL == "" {
+		return allErrs // presence is enforced by the caller
+	}
+
+	u, err := url.Parse(rawURL)
+	if err != nil {
+		allErrs = append(allErrs, field.Invalid(fldPath, rawURL, "URL is not parseable"))
+		return allErrs
+	}
+
+	if u.Scheme != "https" {
+		allErrs = append(allErrs, field.Invalid(fldPath, rawURL,
+			"notification URLs must use https:// (http would send scan payloads in cleartext and enables SSRF against internal services)"))
+		return allErrs
+	}
+
+	if u.User != nil {
+		allErrs = append(allErrs, field.Invalid(fldPath, rawURL,
+			"userinfo (user:password@host) is not allowed in notification URLs"))
+	}
+
+	host := strings.ToLower(u.Hostname())
+	if host == "" {
+		allErrs = append(allErrs, field.Invalid(fldPath, rawURL, "URL has no host"))
+		return allErrs
+	}
+
+	if host == "localhost" || strings.HasSuffix(host, ".localhost") ||
+		strings.HasSuffix(host, ".svc") || strings.HasSuffix(host, ".svc.cluster.local") ||
+		strings.HasSuffix(host, ".cluster.local") || strings.HasSuffix(host, ".local") {
+		allErrs = append(allErrs, field.Invalid(fldPath, rawURL,
+			fmt.Sprintf("notification URLs must not target in-cluster or local names (%s): this is an SSRF vector", host)))
+		return allErrs
+	}
+
+	if ip := net.ParseIP(host); ip != nil {
+		if ip.IsLoopback() || ip.IsLinkLocalUnicast() || ip.IsLinkLocalMulticast() ||
+			ip.IsUnspecified() || ip.IsPrivate() {
+			allErrs = append(allErrs, field.Invalid(fldPath, rawURL,
+				fmt.Sprintf("notification URLs must not target private, loopback, link-local (metadata) or unspecified addresses (%s)", ip)))
 		}
 	}
 

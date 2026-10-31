@@ -29,6 +29,15 @@ import (
 )
 
 // StartupChecker performs validation checks at operator startup
+//
+// RBAC requises par les checks eux-mêmes (indépendantes des contrôleurs) :
+//   - serviceaccounts (get) — checkScannerServiceAccount
+//   - namespaces (list) — checkAPIServerConnectivity
+//   - services, endpoints (get) — ValidateClamAVConnectivity (mode remote)
+//
+// NB : the corresponding +kubebuilder:rbac markers are declared in
+// nodescan_controller.go (Reconciler marker block) — controller-gen
+// silently ignores the ones placed in this file.
 type StartupChecker struct {
 	clientset         kubernetes.Interface
 	namespace         string

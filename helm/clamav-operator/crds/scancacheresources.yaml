@@ -4,6 +4,10 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.17.0
+    # Keep CRDs on helm uninstall: they hold scan history and deleting
+    # them cascades to all NodeScan/ClusterScan data (values.yaml promises
+    # this behavior — the annotation was missing, audit 2026-10).
+    helm.sh/resource-policy: keep
   name: scancacheresources.clamav.io
 spec:
   group: clamav.io

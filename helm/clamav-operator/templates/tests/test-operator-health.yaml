@@ -14,7 +14,12 @@ spec:
   serviceAccountName: {{ include "clamav-operator.serviceAccountName" . }}
   containers:
     - name: test
-      image: bitnami/kubectl:latest
+      # Pinned (audit 2026-10): a floating :latest on a test pod running with
+      # the chart's ServiceAccount is unnecessary risk. Reuses the same
+      # official kubectl image + tag as the crdPatcher/operator-wait hooks
+      # (registry.k8s.io/kubectl:1.29 by default).
+      image: {{ .Values.crdPatcher.image.repository }}:{{ .Values.crdPatcher.image.tag }}
+      imagePullPolicy: {{ .Values.crdPatcher.image.pullPolicy }}
       command:
         - sh
         - -c

@@ -72,6 +72,7 @@ helm test $RELEASE -n $NS --logs
 | `ClamAVMalwareDetected` | critical | Infected files detected on a node | [#3](#3-infected-file-detected) |
 | `ClamAVScanFailed` | warning | A scanner Job exited non-zero | [#2](#2-scanner-job-stuck--never-completes) |
 | `ClamAVNoRecentScans` | warning | No node completed a scan in the last 24 h | [#1](#1-operator-not-reconciling), [#2](#2-scanner-job-stuck--never-completes) |
+| `ClamAVNodeNeverScanned` | warning | Node present in the cluster but never scanned | [#2](#2-scanner-job-stuck--never-completes) |
 | `ClamAVNotificationFailed` | warning | Notification not delivered after retries | [#8](#8-notifications-not-delivered) |
 | `ClamAVPartialScanResults` | warning | NodeScan has `resultsPartial: true` — data unreliable | [#9](#9-partial-scan-results) |
 | `ClamAVWebhookCertExpiringSoon` | warning | Webhook TLS cert expires in < 7 days | [#10](#10-emergency--webhook-certificate-expired) |

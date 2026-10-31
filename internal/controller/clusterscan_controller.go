@@ -338,6 +338,12 @@ func (r *ClusterScanReconciler) createNodeScanForNode(ctx context.Context, clust
 }
 
 func (r *ClusterScanReconciler) cleanupClusterScan(ctx context.Context, clusterScan *clamavv1alpha1.ClusterScan) error {
+	// Purge the per-ClusterScan gauge series (audit 2026-10): schedules create
+	// ClusterScans with timestamped names and prune them via history limits —
+	// without this the {namespace, clusterscan} series accumulated in the
+	// operator process for its whole lifetime.
+	purgeClusterScanMetrics(clusterScan.Namespace, clusterScan.Name)
+
 	// Delete all NodeScans owned by this ClusterScan
 	nodeScans := &clamavv1alpha1.NodeScanList{}
 	if err := r.List(ctx, nodeScans, client.InNamespace(clusterScan.Namespace),

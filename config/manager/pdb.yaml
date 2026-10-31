@@ -1,0 +1,25 @@
+# PodDisruptionBudget for the operator Deployment (audit 2026-10).
+#
+# The admission webhooks use failurePolicy=Fail: if every operator replica is
+# evicted simultaneously (node drain, cluster upgrade), all writes to
+# NodeScan/ClusterScan/ScanPolicy/ScanSchedule objects are rejected until the
+# pod reschedules. minAvailable=1 guarantees one replica keeps serving the
+# webhook during voluntary disruptions.
+#
+# Works with replicas >= 2 (see manager.yaml). With a single replica a PDB
+# with minAvailable=1 would block all drains — deploy at least 2 replicas.
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: clamav-operator
+  namespace: clamav-operator-system
+  labels:
+    app.kubernetes.io/name: clamav-operator
+    app.kubernetes.io/component: manager
+spec:
+  minAvailable: 1
+  selector:
+    matchLabels:
+      # Must match the Deployment pod template labels (manager.yaml) — pods
+      # carry only app.kubernetes.io/name.
+      app.kubernetes.io/name: clamav-operator

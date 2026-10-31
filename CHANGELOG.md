@@ -3,6 +3,42 @@
 All notable changes to this project will be documented in this file.
 
 
+## [Unreleased]
+
+## 🐛 Bug Fixes
+
+* fix(rbac): regenerate ClusterRole — startup checks (namespaces, serviceaccounts,
+  services, endpoints) and scanpolicies/status were missing from the kustomize
+  path, causing exit(1) at startup
+* fix(helm): certManager.enabled=false was a dead path (webhook Secret never
+  rendered, empty caBundle + failurePolicy=Fail rejected all CR writes);
+  BYO certificates now work and the render fails fast when misconfigured
+* fix(helm): defaultScanPolicy scanner jobs now get mandatory memory defaults
+  (requests 1Gi / limits 2Gi); operator resources defaulted; ghost
+  scanner.resources value removed
+* fix(helm): freshclam image 1.3 (EOL) → 1.4
+* fix(api): IncrementalConfig (Enabled/Strategy/MinTimeBetweenScans/
+  CacheExpiration) now survives v1alpha1↔v1beta1 conversion for objects
+  created natively in v1beta1 — incremental scans were silently disabled
+* fix(api): SSRF validation of Slack/Teams/webhook notification URLs
+  (https-only, private/metadata/loopback/in-cluster targets rejected)
+* fix(api): /host/proc-style paths no longer bypass the dangerous-paths check
+* fix(security): webhook URLs (containing Slack/Teams tokens) redacted from
+  logs and Kubernetes Events
+* fix(security): scanner Jobs drop HostPID/HostIPC/SYS_ADMIN (audit: no file
+  scanning use, pure attack surface)
+* fix(kustomize): 2 operator replicas + PodDisruptionBudget (failurePolicy=Fail
+  availability during drains)
+* fix(metrics): per-ClusterScan gauge series purged on deletion (unbounded
+  growth with schedule-created scans)
+
+## 🔧 Other Changes
+
+* chore: pin all floating images (manager placeholder restored for
+  `kustomize edit set image`, helm test kubectl, controller-gen in release)
+* chore: add helm.sh/resource-policy: keep to the packaged CRDs
+* docs: sync installation docs (5 CRDs, operator.replicaCount, namespaces)
+
 ## [v0.8.3] - 2026-10-31
 
 ## 🚀 Features
@@ -20,7 +56,6 @@ _No new features_
 * chore: add Artifact Hub repository ID to metadata file (e73e897)
 * chore: add community foundation files (contributing, CoC, security, templates, adopters, artifacthub metadata) (5a60c30)
 * chore: update CHANGELOG for v0.8.2 (e4a83aa)
-
 
 ## [v0.8.2] - 2026-10-09
 
@@ -244,7 +279,9 @@ _No bug fixes_
 ## 🐛 Bug Fixes
 
 * fix(alerts): `ClamAVScanFailed` — changed `increase([5m]) for: 5m` to `increase([10m]) for: 0m` to prevent the counter window expiring before the `for` clause fires.
-* fix(alerts): `ClamAVNoRecentScans` — added `clamav_nodescan_last_completion_timestamp > 0` guard to prevent permanent firing on nodes that have never completed a scan.
+* fix(alerts): `ClamAVNoRecentScans` — removed the `> 0` guard that created a blind spot: nodes whose scans were attempted but never completed (e.g. unschedulable scanner pods, admission OOM) were never alerted. The operator now seeds `clamav_nodescan_last_completion_timestamp` at 0 when a scan attempt fails (without clobbering real completion timestamps), so a series only exists for nodes with at least one scan attempt.
+* fix(alerts): implemented the missing `ClamAVNodeNeverScanned` alert referenced by the old `> 0` guard comment — alerts on nodes present in the cluster (kube_node_info) with no completion-timestamp series.
+* fix(observability): zero-seed lazy metric series so dashboards and alerts can distinguish "0" from "series absent" — `clamav_files_scanned_total` / `clamav_files_infected_total` are now created on every completed scan (even with 0 files), `clamav_job_oom_kills_total` on every terminal phase, and `clamav_notifications_failed_total` on every notification attempt.
 * fix(alerts): `ClamAVWebhookCertExpiringSoon` — wrapped with `unless absent(...)` to silence the alert when cert-manager is not installed and the metric does not exist.
 * fix(dashboard): removed hardcoded `strategy="smart"` target from the strategy panel (scanner only emits `full` or `incremental`).
 * fix(dashboard): datasource template variable — added `"query": "prometheus"` so Grafana correctly lists Prometheus datasources only.

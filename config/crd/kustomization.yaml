@@ -6,3 +6,9 @@ resources:
   - bases/clamav.io_scanpolicies.yaml
   - bases/clamav.io_scanschedules.yaml
   - bases/clamav.io_scancacheresources.yaml
+patches:
+  # Webhooks de conversion v1alpha1 <-> v1beta1 (hub = v1beta1).
+  # ScanPolicy et ScanCacheResource sont mono-version : pas de conversion nécessaire.
+  - path: patches/webhook_in_nodescans.yaml
+  - path: patches/webhook_in_clusterscans.yaml
+  - path: patches/webhook_in_scanschedules.yaml

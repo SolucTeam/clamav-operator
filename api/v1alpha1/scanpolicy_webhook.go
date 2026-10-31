@@ -89,6 +89,12 @@ func (r *ScanPolicy) validateScanPolicy() field.ErrorList {
 					notifPath.Child("slack").Child("webhookURL"),
 					"webhookURL or webhookSecretRef is required when Slack is enabled"))
 			}
+			// SSRF defense-in-depth (URLs from Secret refs cannot be validated here).
+			if r.Spec.Notifications.Slack.WebhookURL != "" {
+				allErrs = append(allErrs, ValidateNotificationURL(
+					r.Spec.Notifications.Slack.WebhookURL,
+					notifPath.Child("slack").Child("webhookURL"))...)
+			}
 		}
 		if r.Spec.Notifications.Email != nil && r.Spec.Notifications.Email.Enabled {
 			emailPath := notifPath.Child("email")
@@ -108,12 +114,21 @@ func (r *ScanPolicy) validateScanPolicy() field.ErrorList {
 					notifPath.Child("webhook").Child("url"),
 					"url is required when Webhook is enabled"))
 			}
+			allErrs = append(allErrs, ValidateNotificationURL(
+				r.Spec.Notifications.Webhook.URL,
+				notifPath.Child("webhook").Child("url"))...)
 		}
 		if r.Spec.Notifications.Teams != nil && r.Spec.Notifications.Teams.Enabled {
 			if r.Spec.Notifications.Teams.WebhookURL == "" && r.Spec.Notifications.Teams.WebhookSecretRef == nil {
 				allErrs = append(allErrs, field.Required(
 					notifPath.Child("teams").Child("webhookURL"),
 					"webhookURL or webhookSecretRef is required when Teams is enabled"))
+			}
+			// SSRF defense-in-depth (URLs from Secret refs cannot be validated here).
+			if r.Spec.Notifications.Teams.WebhookURL != "" {
+				allErrs = append(allErrs, ValidateNotificationURL(
+					r.Spec.Notifications.Teams.WebhookURL,
+					notifPath.Child("teams").Child("webhookURL"))...)
 			}
 		}
 	}

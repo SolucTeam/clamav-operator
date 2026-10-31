@@ -1,9 +1,9 @@
 {{- /*
 webhook-tls.yaml — Certificate management for the admission webhook TLS.
 
-Active uniquement si webhook.enabled=true ET webhook.certManager.enabled=true.
+Deux modes mutuellement exclusifs, pilotés par webhook.certManager.enabled :
 
-Chaîne de confiance créée :
+MODE A — certManager.enabled=true (recommandé en production)
   SelfSigned Issuer
     → CA Certificate (isCA: true)
       → CA Issuer
@@ -12,6 +12,14 @@ Chaîne de confiance créée :
                                    cert-manager cainjector injecte le caBundle
                                    dans la ValidatingWebhookConfiguration
                                    via l'annotation cert-manager.io/inject-ca-from
+
+MODE B — certManager.enabled=false : certificats fournis par l'opérateur
+  Requis : webhook.certificates.{tlsCert,tlsKey,caBundle} (PEM / base64 du DER).
+  Le Secret "...-webhook-server-cert" est rendu depuis ces valeurs.
+  Sans ces trois valeurs le rendu ÉCHOUE explicitement (fail) : sans caBundle
+  valide, la ValidatingWebhookConfiguration (failurePolicy: Fail) rejetterait
+  tous les CREATE/UPDATE sur les CRDs et le pod ne pourrait pas démarrer
+  (Secret de certificat absent du volume).
 */}}
 {{- if and .Values.webhook.enabled .Values.webhook.certManager.enabled }}
 ---
@@ -97,4 +105,23 @@ spec:
     name: {{ include "clamav-operator.fullname" . }}-ca-issuer
     kind: Issuer
     group: cert-manager.io
+{{- else if and .Values.webhook.enabled (not .Values.webhook.certManager.enabled) }}
+{{- $c := .Values.webhook.certificates }}
+{{- if not (and $c.tlsCert $c.tlsKey $c.caBundle) }}
+{{- fail (printf "webhook: certManager.enabled=false requires webhook.certificates.tlsCert, tlsKey AND caBundle (PEM) to be set. Without them the webhook Secret is never created (the operator pod cannot start) and the ValidatingWebhookConfiguration has an empty caBundle with failurePolicy=Fail, rejecting all CR writes. Either enable cert-manager, or generate certs with: openssl req -x509 -newkey ec -pkeyopt ec_paramgen_curve:prime256v1 -nodes -keyout tls.key -out tls.crt -days 3650 -subj '/CN=%s-webhook-service' -addext 'subjectAltName=DNS:%s-webhook-service,DNS:%s-webhook-service.%s,DNS:%s-webhook-service.%s.svc,DNS:%s-webhook-service.%s.svc.cluster.local'" (include "clamav-operator.fullname" .) (include "clamav-operator.fullname" .) (include "clamav-operator.fullname" .) .Release.Namespace (include "clamav-operator.fullname" .) .Release.Namespace (include "clamav-operator.fullname" .) .Release.Namespace) }}
+{{- end }}
+---
+# Mode B — Secret TLS rendu depuis les valeurs fournies par l'opérateur du cluster.
+apiVersion: v1
+kind: Secret
+metadata:
+  name: {{ include "clamav-operator.fullname" . }}-webhook-server-cert
+  namespace: {{ .Release.Namespace }}
+  labels:
+    {{- include "clamav-operator.labels" . | nindent 4 }}
+    app.kubernetes.io/component: webhook
+type: kubernetes.io/tls
+data:
+  tls.crt: {{ required "webhook.certificates.tlsCert is required (PEM)" $c.tlsCert | b64enc }}
+  tls.key: {{ required "webhook.certificates.tlsKey is required (PEM)" $c.tlsKey | b64enc }}
 {{- end }}

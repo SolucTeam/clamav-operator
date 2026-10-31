@@ -12,7 +12,12 @@ metadata:
     app.kubernetes.io/name: clamav-operator
     app.kubernetes.io/component: manager
 spec:
-  replicas: 1
+  # 2 replicas (audit 2026-10): with the ValidatingWebhookConfiguration using
+  # failurePolicy=Fail, a single replica means a node drain of the operator
+  # pod blocks all NodeScan/ClusterScan/ScanPolicy/ScanSchedule writes
+  # cluster-wide until rescheduling. Leader election keeps reconciliation
+  # single-active; the standby serves the webhook.
+  replicas: 2
   selector:
     matchLabels:
       app.kubernetes.io/name: clamav-operator
@@ -28,7 +33,11 @@ spec:
           type: RuntimeDefault
       containers:
         - name: manager
-          image: ghcr.io/solucteam/clamav-operator:latest
+          # Kubebuilder placeholder: 'make dist' / 'make deploy' rewrite it via
+          # `kustomize edit set image controller=${IMG}` (Makefile). Keep the
+          # name 'controller' — a hardcoded image here makes that sed a no-op
+          # and release artifacts shipped :latest (audit 2026-10).
+          image: controller:latest
           args:
             - --metrics-bind-address=:8080
             - --health-probe-bind-address=:8081
@@ -40,6 +49,13 @@ spec:
             - name: health
               containerPort: 8081
               protocol: TCP
+            - name: webhook
+              containerPort: 9443
+              protocol: TCP
+          volumeMounts:
+            - name: webhook-cert
+              mountPath: /tmp/k8s-webhook-server/serving-certs
+              readOnly: true
           livenessProbe:
             httpGet:
               path: /healthz
@@ -64,6 +80,10 @@ spec:
             capabilities:
               drop: ["ALL"]
             readOnlyRootFilesystem: true
+      volumes:
+        - name: webhook-cert
+          secret:
+            secretName: clamav-operator-webhook-server-cert
 ---
 apiVersion: v1
 kind: ServiceAccount

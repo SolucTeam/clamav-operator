@@ -73,12 +73,16 @@ operator:
     healthPort: 8081
 
   # Resource limits and requests for the operator pod.
-  # Not set by default — define in your own values file.
-  # Example:
-  #   resources:
-  #     requests: { cpu: 100m, memory: 128Mi }
-  #     limits: { cpu: 500m, memory: 256Mi }
-  resources: {}
+  # Defaults sized for the webhook + reconcile loop (matches the kustomize
+  # profile). BestEffort pods are evicted first — unacceptable for a pod that
+  # hosts a failurePolicy=Fail admission webhook.
+  resources:
+    requests:
+      cpu: 100m
+      memory: 128Mi
+    limits:
+      cpu: 500m
+      memory: 256Mi
 
   # Leader election settings
   leaderElection:
@@ -469,18 +473,29 @@ webhook:
   certManager:
     enabled: true
 
-  # If certManager is disabled, use these certificates.
-  # WARNING: autoGenerate=true produces self-signed certs stored in a Secret.
-  # These certs are NOT rotated automatically and do NOT survive Secret deletion
-  # or namespace recreation. For production, use certManager.enabled=true or
-  # supply your own long-lived certs via caBundle/tlsCert/tlsKey.
+  # If certManager is disabled, you MUST supply your own certificates.
+  # All three values below are required (PEM). The chart renders the webhook
+  # Secret and the ValidatingWebhookConfiguration caBundle from them, and the
+  # render FAILS if any is missing (fail-safe: no silent broken deploy).
+  #
+  # Generate a self-signed pair (development only):
+  #   openssl req -x509 -newkey ec -pkeyopt ec_paramgen_curve:prime256v1 -nodes \
+  #     -keyout tls.key -out tls.crt -days 3650 \
+  #     -subj "/CN=<release>-webhook-service" \
+  #     -addext "subjectAltName=DNS:<release>-webhook-service,DNS:<release>-webhook-service.<ns>.svc,DNS:<release>-webhook-service.<ns>.svc.cluster.local"
+  #   kubectl create secret generic <release>-webhook-server-cert ... # (or paste PEMs below)
+  # WARNING: self-signed certs are NOT rotated automatically. For production,
+  # prefer webhook.certManager.enabled=true.
   certificates:
-    # Auto-generate self-signed certificates (development only)
-    autoGenerate: true
-    # Or provide your own
-    caBundle: ""
+    # PEM-encoded serving certificate (must include SANs for
+    # <release>-webhook-service.<namespace>.svc and shorter forms).
     tlsCert: ""
+    # PEM-encoded private key matching tlsCert.
     tlsKey: ""
+    # PEM (or base64 DER) of the CA that signed tlsCert — injected into the
+    # ValidatingWebhookConfiguration caBundle. For a self-signed pair, use the
+    # contents of tls.crt.
+    caBundle: ""
 
 # =============================================================================
 # MONITORING CONFIGURATION
@@ -537,21 +552,44 @@ monitoring:
       # FIX: was `time() - clamav_nodescan_last_completion_timestamp > 86400`
       # which fired permanently on nodes that have NEVER scanned (timestamp=0,
       # so time()-0 = now ≈ 1.7B seconds >> 86400).
-      # Added `> 0` guard: only alert on nodes that have completed at least one
-      # scan and then went silent. Nodes that have never scanned are a separate
-      # concern covered by ClamAVNodeNeverScanned below.
+      # The historical `> 0` guard fixed the permanent firing but created a
+      # blind spot: nodes whose scans are ATTEMPTED but never COMPLETE (e.g.
+      # unschedulable scanner pods, OOM on admission) have no real timestamp
+      # and were never alerted — a node could fail every night with no alert.
+      # The operator now seeds the gauge at 0 only when a scan attempt FAILS
+      # (and never clobbers a real completion timestamp), so dropping the
+      # guard is safe: a series exists only for nodes with at least one scan
+      # attempt.  Nodes never attempted at all are covered by
+      # ClamAVNodeNeverScanned below.
       - alert: ClamAVNoRecentScans
         expr: |
-          (clamav_nodescan_last_completion_timestamp > 0)
-          and
-          (time() - clamav_nodescan_last_completion_timestamp > 86400)
+          (time() - clamav_nodescan_last_completion_timestamp) > 86400
         for: 1h
         labels:
           severity: warning
           team: platform
         annotations:
           summary: "No recent ClamAV scan on node {{ $labels.node }}"
-          description: "Node {{ $labels.node }} last completed a scan {{ $value | humanizeDuration }} ago (> 24 h). Check the ScanSchedule and scanner Job logs."
+          description: "Node {{ $labels.node }} last completed a scan {{ $value | humanizeDuration }} ago (> 24 h). An implausibly large age (years) means scans are attempted but never complete — check the scanner Job logs and ClamAVScanFailed."
+
+      # Nodes that never had a single completed scan (no completion-timestamp
+      # series at all) — e.g. nodes that joined after the last schedule window
+      # or silently excluded from ClusterScans.  Requires kube-state-metrics
+      # (kube_node_info, also used by the Grafana coverage panel); if
+      # kube-state-metrics is absent the expression is empty and the alert
+      # stays silent (fail-safe, no false positives).
+      - alert: ClamAVNodeNeverScanned
+        expr: |
+          count by (node) (kube_node_info)
+            unless on (node)
+          count by (node) (clamav_nodescan_last_completion_timestamp)
+        for: 24h
+        labels:
+          severity: warning
+          team: platform
+        annotations:
+          summary: "ClamAV has never scanned node {{ $labels.node }}"
+          description: "Node {{ $labels.node }} has no ClamAV scan completion record. Verify it is covered by the ScanSchedule and that scanner Jobs can be scheduled on it (see ClamAVNoRecentScans / ClamAVScanFailed)."
 
       - alert: ClamAVNotificationFailed
         expr: increase(clamav_notifications_failed_total[15m]) > 0
@@ -733,12 +771,19 @@ defaultScanPolicy:
     # Resources for scan jobs — THIS is the canonical place to define scanner resources.
     # Applied to every scanner Job that uses this ScanPolicy.
     # Override per-scan via NodeScan.spec.resources or ClusterScan nodeScanTemplate.resources.
-    # Not set by default — define in your own values file.
-    # Example:
-    #   resources:
-    #     requests: { cpu: 500m, memory: 1Gi }
-    #     limits: { cpu: 1000m, memory: 2Gi }
-    resources: {}
+    #
+    # Defaults are MANDATORY here, not optional: clamscan loads the signature
+    # database (~300-400 MiB RSS before scanning anything) and spikes to
+    # ~1.5 GiB on large filesystems. Jobs without limits are the #1 cause of
+    # OOMKill alerts (clamav_job_oomkills_total) and node memory pressure.
+    # Tighten per-ScanPolicy or per-scan as needed; do not set to {}.
+    resources:
+      requests:
+        cpu: 500m
+        memory: 1Gi
+      limits:
+        cpu: 1000m
+        memory: 2Gi
 
     # Notifications configuration
     # notifyOnFailure sends alerts when a scan job fails (OOMKill, timeout, error).

@@ -154,11 +154,17 @@ func (r *NodeScanReconciler) parseRetrySettings() (maxRetries int, baseSeconds i
 // +kubebuilder:rbac:groups=clamav.io,resources=nodescans/status,verbs=get;update;patch
 // +kubebuilder:rbac:groups=clamav.io,resources=nodescans/finalizers,verbs=update
 // +kubebuilder:rbac:groups=clamav.io,resources=scanpolicies,verbs=get;list;watch
+// +kubebuilder:rbac:groups=clamav.io,resources=scanpolicies/status,verbs=get;update;patch
 // +kubebuilder:rbac:groups=batch,resources=jobs,verbs=get;list;watch;create;update;patch;delete
 // +kubebuilder:rbac:groups="",resources=nodes,verbs=get;list;watch
 // +kubebuilder:rbac:groups="",resources=events,verbs=create;patch
 // +kubebuilder:rbac:groups="",resources=pods,verbs=get;list;watch
 // +kubebuilder:rbac:groups="",resources=pods/log,verbs=get
+// RBAC utilisées par les startup checks (cf. startup_checks.go) :
+// +kubebuilder:rbac:groups="",resources=serviceaccounts,verbs=get
+// +kubebuilder:rbac:groups="",resources=namespaces,verbs=list
+// +kubebuilder:rbac:groups="",resources=services,verbs=get
+// +kubebuilder:rbac:groups="",resources=endpoints,verbs=get
 
 // Reconcile is part of the main kubernetes reconciliation loop
 func (r *NodeScanReconciler) Reconcile(ctx context.Context, req ctrl.Request) (ctrl.Result, error) {
@@ -839,9 +845,12 @@ func (r *NodeScanReconciler) constructJobForNodeScan(nodeScan *clamavv1alpha1.No
 					// ServiceAccountName is set via --scanner-service-account CLI flag (Helm: scanner.serviceAccount.name).
 					ServiceAccountName: getEnvOrDefault("SCANNER_SERVICE_ACCOUNT", r.ScannerServiceAccount),
 					NodeName:           nodeScan.Spec.NodeName,
-					HostPID:            true,
-					HostIPC:            true,
-					DNSPolicy:          corev1.DNSClusterFirst,
+					// HostPID / HostIPC were removed (audit 2026-10): clamscan only
+					// needs filesystem read access to the host via the read-only
+					// /host hostPath mount — process and IPC namespace sharing add
+					// attack surface (the scanner could signal/inspect host
+					// processes) with zero benefit for file scanning.
+					DNSPolicy: corev1.DNSClusterFirst,
 					SecurityContext: &corev1.PodSecurityContext{
 						RunAsNonRoot: ptr.To(false),
 						RunAsUser:    ptr.To(int64(0)),
@@ -866,7 +875,13 @@ func (r *NodeScanReconciler) constructJobForNodeScan(nodeScan *clamavv1alpha1.No
 								ReadOnlyRootFilesystem: ptr.To(false),
 								Capabilities: &corev1.Capabilities{
 									Add: []corev1.Capability{
-										"SYS_ADMIN",
+										// DAC_READ_SEARCH: bypass file read permission
+										// checks so clamscan can read every host file.
+										// SYS_ADMIN was removed (audit 2026-10): never
+										// needed for file scanning and it is already
+										// implied by privileged=true — kept listed here
+										// only so a future privileged=false switch does
+										// not silently lose mount/read access.
 										"DAC_READ_SEARCH",
 									},
 								},
