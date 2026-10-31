@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Questions & Discussions
+    url: https://github.com/SolucTeam/clamav-operator/discussions
+    about: Ask questions, share your setup, or propose ideas in GitHub Discussions
+  - name: 🔒 Security vulnerability
+    url: https://github.com/SolucTeam/clamav-operator/security/advisories/new
+    about: Please report security issues privately — do not open a public issue
+  - name: 📖 Documentation
+    url: https://solucteam.github.io/clamav-operator/
+    about: Official documentation site

@@ -39,6 +39,24 @@ All notable changes to this project will be documented in this file.
 * chore: add helm.sh/resource-policy: keep to the packaged CRDs
 * docs: sync installation docs (5 CRDs, operator.replicaCount, namespaces)
 
+## [v0.8.3] - 2026-10-31
+
+## 🚀 Features
+
+_No new features_
+
+## 🐛 Bug Fixes
+
+* Merge pull request #80 from SolucTeam/fix/clamav-image-tag-removed-from-dockerhub (0282b1f)
+* fix(helm): bump clamav image tag from removed 1.3 to 1.4 (6e5d130)
+
+## 🔧 Other Changes
+
+* Merge pull request #78 from SolucTeam/chore/community-foundations (f98537b)
+* chore: add Artifact Hub repository ID to metadata file (e73e897)
+* chore: add community foundation files (contributing, CoC, security, templates, adopters, artifacthub metadata) (5a60c30)
+* chore: update CHANGELOG for v0.8.2 (e4a83aa)
+
 ## [v0.8.2] - 2026-10-09
 
 ## 🚀 Features
