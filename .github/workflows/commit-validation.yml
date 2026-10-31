@@ -63,15 +63,21 @@ jobs:
           
           # Get the list of commits to validate
           if [ "${{ github.event_name }}" = "pull_request" ]; then
-            BASE_SHA="${{ github.event.pull_request.base.sha }}"
-            HEAD_SHA="${{ github.event.pull_request.head.sha }}"
-            COMMITS=$(git rev-list $BASE_SHA..$HEAD_SHA)
-            
             # Skip validation for Dependabot PRs
             if [ "${{ github.actor }}" = "dependabot[bot]" ]; then
               echo "✅ Dependabot PR - commits are automatically validated"
               exit 0
             fi
+
+            BASE_SHA="${{ github.event.pull_request.base.sha }}"
+            HEAD_SHA="${{ github.event.pull_request.head.sha }}"
+
+            # On rebased/force-pushed branches (e.g. after "@dependabot
+            # rebase"), base.sha is no longer an ancestor of head.sha and
+            # `git rev-list base..head` fails with "fatal: Invalid revision
+            # range". Use the merge-base (common ancestor) instead.
+            BASE_SHA=$(git merge-base "$BASE_SHA" "$HEAD_SHA")
+            COMMITS=$(git rev-list $BASE_SHA..$HEAD_SHA)
           else
             # For a push event, validate only the latest commit
             COMMITS="${{ github.sha }}"
@@ -232,7 +238,11 @@ jobs:
         run: |
           BASE_SHA="${{ github.event.pull_request.base.sha }}"
           HEAD_SHA="${{ github.event.pull_request.head.sha }}"
-          
+
+          # Rebased/force-pushed branches: base.sha is not an ancestor of
+          # head.sha anymore -> `git diff base head` fails. Use merge-base.
+          BASE_SHA=$(git merge-base "$BASE_SHA" "$HEAD_SHA")
+
           CHANGED_FILES=$(git diff --name-only "$BASE_SHA" "$HEAD_SHA")
           
           SENSITIVE_FILES=(
