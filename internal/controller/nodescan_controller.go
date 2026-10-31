@@ -154,11 +154,17 @@ func (r *NodeScanReconciler) parseRetrySettings() (maxRetries int, baseSeconds i
 // +kubebuilder:rbac:groups=clamav.io,resources=nodescans/status,verbs=get;update;patch
 // +kubebuilder:rbac:groups=clamav.io,resources=nodescans/finalizers,verbs=update
 // +kubebuilder:rbac:groups=clamav.io,resources=scanpolicies,verbs=get;list;watch
+// +kubebuilder:rbac:groups=clamav.io,resources=scanpolicies/status,verbs=get;update;patch
 // +kubebuilder:rbac:groups=batch,resources=jobs,verbs=get;list;watch;create;update;patch;delete
 // +kubebuilder:rbac:groups="",resources=nodes,verbs=get;list;watch
 // +kubebuilder:rbac:groups="",resources=events,verbs=create;patch
 // +kubebuilder:rbac:groups="",resources=pods,verbs=get;list;watch
 // +kubebuilder:rbac:groups="",resources=pods/log,verbs=get
+// RBAC utilisées par les startup checks (cf. startup_checks.go) :
+// +kubebuilder:rbac:groups="",resources=serviceaccounts,verbs=get
+// +kubebuilder:rbac:groups="",resources=namespaces,verbs=list
+// +kubebuilder:rbac:groups="",resources=services,verbs=get
+// +kubebuilder:rbac:groups="",resources=endpoints,verbs=get
 
 // Reconcile is part of the main kubernetes reconciliation loop
 func (r *NodeScanReconciler) Reconcile(ctx context.Context, req ctrl.Request) (ctrl.Result, error) {
