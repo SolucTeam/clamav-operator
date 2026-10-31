@@ -1,0 +1,82 @@
+name: 🐞 Bug report
+description: Report a problem with the operator, the scanner, or the Helm chart
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time to report a bug!
+        Please fill in the details below so we can reproduce and fix it quickly.
+  - type: dropdown
+    id: component
+    attributes:
+      label: Affected component
+      options:
+        - Operator (controllers / reconciliation)
+        - Scanner (scan Job / incremental cache)
+        - Helm chart
+        - Kustomize manifests
+        - CRDs / API
+        - Metrics / dashboards / alerts
+        - Notifications (Slack / Teams / SMTP / webhook)
+        - Documentation
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Operator version
+      description: Output of `kubectl get deploy -n clamav-system clamav-operator-controller-manager -o jsonpath='{.spec.template.spec.containers[0].image}'`
+      placeholder: e.g. 0.8.2
+    validations:
+      required: true
+  - type: input
+    id: k8s-version
+    attributes:
+      label: Kubernetes version
+      placeholder: e.g. 1.30.5 (kubectl version --short)
+    validations:
+      required: true
+  - type: dropdown
+    id: install-method
+    attributes:
+      label: Installation method
+      options:
+        - Helm (OCI chart)
+        - Kustomize
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Also tell us what you expected to happen.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Apply this ClusterScan...
+        2. Observe...
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs or events
+      description: |
+        Please **redact any sensitive data** (tokens, URLs with credentials).
+        ```bash
+        kubectl logs -n clamav-system deploy/clamav-operator-controller-manager | grep -i error
+        kubectl get events -n clamav-system --sort-by=.lastTimestamp
+        ```
+      render: shell
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Cluster specifics that may matter — air-gapped? CNI? pod security admission? SELinux?
