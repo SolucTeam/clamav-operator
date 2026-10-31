@@ -485,3 +485,27 @@ func TestValidateNotificationURL_Empty(t *testing.T) {
 	// Empty URL is the caller's (presence check) responsibility.
 	assert.Empty(t, ValidateNotificationURL("", field.NewPath("test")))
 }
+
+// TestValidatePaths_HostPrefixBypass guards the audit 2026-10 fix: the scanner
+// mounts the node root at /host and strips the prefix, so /host/proc used to
+// bypass the dangerousPaths validation while scanning the host pseudo-FS.
+func TestValidatePaths_HostPrefixBypass(t *testing.T) {
+	rejected := []string{
+		"/proc", "/proc/self", "/sys", "/sys/kernel", "/dev",
+		// The previously-missed bypasses:
+		"/host/proc", "/host/proc/self", "/host/sys", "/host/dev",
+	}
+	for _, p := range rejected {
+		errs := ValidatePaths([]string{p}, field.NewPath("spec").Child("paths"))
+		assert.NotEmpty(t, errs, "path %q must be rejected", p)
+	}
+
+	allowed := []string{
+		"/var/lib", "/opt", "/host/var/lib", "/host/opt", "/host/etc",
+		"/host/procinfo", // prefix collision must NOT be rejected (not /host/proc/)
+	}
+	for _, p := range allowed {
+		errs := ValidatePaths([]string{p}, field.NewPath("spec").Child("paths"))
+		assert.Empty(t, errs, "path %q must be allowed: %v", p, errs)
+	}
+}

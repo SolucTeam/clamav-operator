@@ -105,9 +105,17 @@ func ValidatePaths(paths []string, fldPath *field.Path) field.ErrorList {
 			allErrs = append(allErrs, field.Invalid(pathField, path, "path cannot contain '..' (path traversal)"))
 		}
 
-		// Warn about dangerous paths (but allow with /host prefix for container mounts)
+		// Reject dangerous pseudo-filesystems (audit 2026-10): the check must
+		// apply to the HOST path, not just the container path. The scanner
+		// mounts the node root at /host and strips that prefix, so a CR with
+		// /host/proc previously passed validation while triggering a scan of
+		// the host's /proc (massive latency, thousands of false positives).
+		//
+		// /host/var-style mounts are legitimate; /host/{proc,sys,dev} are not.
+		hostRel := strings.TrimPrefix(path, "/host")
 		for _, dangerous := range dangerousPaths {
-			if path == dangerous || strings.HasPrefix(path, dangerous+"/") {
+			if path == dangerous || strings.HasPrefix(path, dangerous+"/") ||
+				hostRel == dangerous || strings.HasPrefix(hostRel, dangerous+"/") {
 				allErrs = append(allErrs, field.Invalid(pathField, path,
 					fmt.Sprintf("scanning %s is not recommended and may cause system issues", dangerous)))
 			}
