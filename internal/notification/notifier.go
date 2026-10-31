@@ -24,9 +24,11 @@ import (
 	"context"
 	"crypto/tls"
 	"encoding/json"
+	"errors"
 	"fmt"
 	"net/http"
 	"net/smtp"
+	"net/url"
 	"strings"
 	"time"
 
@@ -46,6 +48,29 @@ const (
 	// retryBaseDelay is the initial backoff delay; doubled on each subsequent attempt.
 	retryBaseDelay = 5 * time.Second
 )
+
+// redactURLError rewrites transport errors (*url.Error and wrapped chains) so
+// that secrets carried in the URL path — Slack/Teams incoming-webhook tokens,
+// private API paths — never leak into operator logs or Kubernetes Events.
+//
+// Go's http.Client wraps failures as `&url.Error{URL: ..., Err: ...}` and
+// err.Error() renders the FULL URL, e.g.:
+//
+//	Post "https://hooks.slack.com/services/T000/B000/gobbled-token": context deadline exceeded
+//
+// Anyone with `kubectl get events` in the namespace would read the token.
+// We keep only scheme://host and the underlying cause.
+func redactURLError(err error) error {
+	var ue *url.Error
+	if errors.As(err, &ue) {
+		target := "unknown-target"
+		if u, perr := url.Parse(ue.URL); perr == nil && u.Host != "" {
+			target = u.Scheme + "://" + u.Host
+		}
+		return fmt.Errorf("request to %s failed: %w", target, ue.Err)
+	}
+	return err
+}
 
 // sanitizeEmailHeader strips CR and LF characters to prevent SMTP header injection.
 func sanitizeEmailHeader(s string) string {
@@ -121,8 +146,8 @@ func (n *Notifier) SendWithRetry(ctx context.Context, nodeScan *clamavv1alpha1.N
 					"channel", ch.name, "attempt", attempt)
 				break
 			} else {
-				lastErr = err
-				logger.Error(err, "Notification attempt failed — will retry",
+				lastErr = redactURLError(err)
+				logger.Error(lastErr, "Notification attempt failed — will retry",
 					"channel", ch.name, "attempt", attempt, "maxRetries", maxRetries)
 
 				if attempt < maxRetries {
@@ -193,8 +218,8 @@ func (n *Notifier) SendFailureWithRetry(ctx context.Context, nodeScan *clamavv1a
 					"channel", ch.name, "attempt", attempt)
 				break
 			} else {
-				lastErr = err
-				logger.Error(err, "Failure notification attempt failed — will retry",
+				lastErr = redactURLError(err)
+				logger.Error(lastErr, "Failure notification attempt failed — will retry",
 					"channel", ch.name, "attempt", attempt, "maxRetries", maxRetries)
 
 				if attempt < maxRetries {
@@ -417,10 +442,10 @@ func (n *Notifier) sendEmail(ctx context.Context, nodeScan *clamavv1alpha1.NodeS
 	if err = smtpClient.Auth(auth); err != nil {
 		return fmt.Errorf("SMTP auth failed: %w", err)
 	}
-	if err = smtpClient.Mail(config.From); err != nil {
+	if err = smtpClient.Mail(sanitizedFrom); err != nil {
 		return fmt.Errorf("SMTP MAIL FROM failed: %w", err)
 	}
-	for _, rcpt := range config.Recipients {
+	for _, rcpt := range sanitizedRecipients {
 		if err = smtpClient.Rcpt(rcpt); err != nil {
 			return fmt.Errorf("SMTP RCPT TO %s failed: %w", rcpt, err)
 		}
@@ -440,6 +465,23 @@ func (n *Notifier) sendEmail(ctx context.Context, nodeScan *clamavv1alpha1.NodeS
 }
 
 // ─── Webhook ──────────────────────────────────────────────────────────────────
+
+// applyWebhookSecretHeaders copie uniquement les en-têtes d'authentification
+// whitelistés du Secret sur la requête. Copier toutes les clés (comme c'était
+// le cas sur le chemin d'échec) transformerait n'importe quel champ du Secret
+// en en-tête HTTP — ex. un "Content-Length" présent dans le Secret corrompait
+// la requête sortante.
+func applyWebhookSecretHeaders(header http.Header, data map[string][]byte) {
+	allowedHeaders := map[string]bool{
+		"Authorization": true,
+		"X-Api-Key":     true,
+	}
+	for k, v := range data {
+		if allowedHeaders[k] {
+			header.Set(k, string(v))
+		}
+	}
+}
 
 func (n *Notifier) sendWebhook(ctx context.Context, nodeScan *clamavv1alpha1.NodeScan, scanPolicy *clamavv1alpha1.ScanPolicy) error {
 	config := scanPolicy.Spec.Notifications.Webhook
@@ -506,15 +548,7 @@ func (n *Notifier) sendWebhook(ctx context.Context, nodeScan *clamavv1alpha1.Nod
 		}, secret); err != nil {
 			return fmt.Errorf("failed to get webhook secret: %w", err)
 		}
-		allowedHeaders := map[string]bool{
-			"Authorization": true,
-			"X-Api-Key":     true,
-		}
-		for k, v := range secret.Data {
-			if allowedHeaders[k] {
-				req.Header.Set(k, string(v))
-			}
-		}
+		applyWebhookSecretHeaders(req.Header, secret.Data)
 	}
 
 	httpClient := &http.Client{
@@ -791,9 +825,18 @@ func (n *Notifier) sendEmailFailure(ctx context.Context, nodeScan *clamavv1alpha
 	buf.WriteString("This is an automated message from ClamAV Operator.\n")
 	buf.WriteString("================================================================================\n")
 
+	// Header injection defense (same as sendEmail): From/Recipients come from a
+	// ScanPolicy CR and must never carry CRLF into the message headers or the
+	// SMTP envelope.
+	sanitizedFrom := sanitizeEmailHeader(config.From)
+	sanitizedRecipients := make([]string, len(config.Recipients))
+	for i, r := range config.Recipients {
+		sanitizedRecipients[i] = sanitizeEmailHeader(r)
+	}
+
 	msg := []byte(
-		"From: " + config.From + "\r\n" +
-			"To: " + strings.Join(config.Recipients, ",") + "\r\n" +
+		"From: " + sanitizedFrom + "\r\n" +
+			"To: " + strings.Join(sanitizedRecipients, ",") + "\r\n" +
 			"Subject: " + subject + "\r\n" +
 			"Content-Type: text/plain; charset=UTF-8\r\n\r\n" +
 			buf.String() + "\r\n",
@@ -821,10 +864,10 @@ func (n *Notifier) sendEmailFailure(ctx context.Context, nodeScan *clamavv1alpha
 	if err = smtpClient.Auth(auth); err != nil {
 		return fmt.Errorf("SMTP auth failed: %w", err)
 	}
-	if err = smtpClient.Mail(config.From); err != nil {
+	if err = smtpClient.Mail(sanitizedFrom); err != nil {
 		return fmt.Errorf("SMTP MAIL FROM failed: %w", err)
 	}
-	for _, rcpt := range config.Recipients {
+	for _, rcpt := range sanitizedRecipients {
 		if err = smtpClient.Rcpt(rcpt); err != nil {
 			return fmt.Errorf("SMTP RCPT TO %s failed: %w", rcpt, err)
 		}
@@ -886,9 +929,7 @@ func (n *Notifier) sendWebhookFailure(ctx context.Context, nodeScan *clamavv1alp
 		}, secret); err != nil {
 			return fmt.Errorf("failed to get webhook secret: %w", err)
 		}
-		for k, v := range secret.Data {
-			req.Header.Set(k, string(v))
-		}
+		applyWebhookSecretHeaders(req.Header, secret.Data)
 	}
 
 	httpClient := &http.Client{

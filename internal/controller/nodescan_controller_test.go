@@ -297,7 +297,11 @@ func TestConstructJobForNodeScan(t *testing.T) {
 			// Verify job properties
 			assert.Equal(t, tt.nodeScan.Spec.NodeName, job.Spec.Template.Spec.NodeName)
 			assert.Equal(t, "clamav-scanner", job.Spec.Template.Spec.ServiceAccountName)
-			assert.True(t, job.Spec.Template.Spec.HostPID)
+			// HostPID was removed (audit 2026-10): file scanning does not need
+			// host process visibility. Assert it stays OFF — re-enabling it
+			// should be a deliberate, reviewed decision, not a regression.
+			assert.False(t, job.Spec.Template.Spec.HostPID)
+			assert.False(t, job.Spec.Template.Spec.HostIPC)
 
 			// Resources are intentionally not set by the operator — the user
 			// controls them via ScanPolicy.spec.resources or NodeScan.spec.resources.
