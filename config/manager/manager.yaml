@@ -12,7 +12,12 @@ metadata:
     app.kubernetes.io/name: clamav-operator
     app.kubernetes.io/component: manager
 spec:
-  replicas: 1
+  # 2 replicas (audit 2026-10): with the ValidatingWebhookConfiguration using
+  # failurePolicy=Fail, a single replica means a node drain of the operator
+  # pod blocks all NodeScan/ClusterScan/ScanPolicy/ScanSchedule writes
+  # cluster-wide until rescheduling. Leader election keeps reconciliation
+  # single-active; the standby serves the webhook.
+  replicas: 2
   selector:
     matchLabels:
       app.kubernetes.io/name: clamav-operator
