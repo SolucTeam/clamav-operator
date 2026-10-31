@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 
 
+## [v0.8.5] - 2026-10-31
+
+## 🚀 Features
+
+_No new features_
+
+## 🐛 Bug Fixes
+
+* fix(ci): use merge-base in commit validation and sensitive-files checks (#82) (1c325ff)
+
+## 🔧 Other Changes
+
+* ci: auto-merge Dependabot majors for GitHub Actions, bump fetch-metadata to v3 (#81) (d67e920)
+
+
 ## [Unreleased]
 
 ## 🐛 Bug Fixes
