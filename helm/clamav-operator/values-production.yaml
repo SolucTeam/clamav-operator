@@ -60,18 +60,11 @@ operator:
 # =============================================================================
 # SCANNER JOBS
 # =============================================================================
+# NB: scanner job resources are configured in defaultScanPolicy.spec.resources
+# (the canonical place — applied via the default ScanPolicy CR to every scanner
+# Job). There used to be a `scanner.resources` key here, but no template ever
+# read it: a silently inoperative setting.
 scanner:
-  # Production resource sizing for scanner jobs.
-  # clamscan is memory-hungry when loading signatures (~300-400 MiB RSS).
-  # Nodes with many files may spike to 1.5 GiB — 2 GiB limit provides headroom.
-  resources:
-    requests:
-      cpu: 1000m
-      memory: 1Gi
-    limits:
-      cpu: 4000m
-      memory: 2Gi
-
   freshclam:
     # Refresh signatures every 4 hours in production (ClamAV updates ~several/day)
     schedule: "0 */4 * * *"

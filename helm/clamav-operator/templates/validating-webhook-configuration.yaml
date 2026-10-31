@@ -1,9 +1,10 @@
 {{- /*
 validating-webhook-configuration.yaml
 
-Crée la ValidatingWebhookConfiguration pour les trois types admis par le chart :
+Crée la ValidatingWebhookConfiguration pour les quatre types admis par le chart :
   - ClusterScan   → /validate-clamav-io-v1alpha1-clusterscan
   - NodeScan      → /validate-clamav-io-v1alpha1-nodescan
+  - ScanPolicy    → /validate-clamav-io-v1alpha1-scanpolicy
   - ScanSchedule  → /validate-clamav-io-v1alpha1-scanschedule
 
 Deux modes de gestion du caBundle :
@@ -42,8 +43,10 @@ webhooks:
         namespace: {{ .Release.Namespace }}
         path: /validate-clamav-io-v1alpha1-clusterscan
         port: 443
-      {{- if and (not .Values.webhook.certManager.enabled) .Values.webhook.certificates.caBundle }}
-      caBundle: {{ .Values.webhook.certificates.caBundle }}
+      {{- /* Mode sans cert-manager : caBundle obligatoire (garanti non vide par
+             le garde-fou fail de webhook-tls.yaml — sinon le rendu échoue). */}}
+      {{- if not .Values.webhook.certManager.enabled }}
+      caBundle: {{ required "webhook.certificates.caBundle is required when certManager is disabled" .Values.webhook.certificates.caBundle }}
       {{- end }}
     failurePolicy: Fail
     matchPolicy: Equivalent
@@ -73,8 +76,10 @@ webhooks:
         namespace: {{ .Release.Namespace }}
         path: /validate-clamav-io-v1alpha1-nodescan
         port: 443
-      {{- if and (not .Values.webhook.certManager.enabled) .Values.webhook.certificates.caBundle }}
-      caBundle: {{ .Values.webhook.certificates.caBundle }}
+      {{- /* Mode sans cert-manager : caBundle obligatoire (garanti non vide par
+             le garde-fou fail de webhook-tls.yaml — sinon le rendu échoue). */}}
+      {{- if not .Values.webhook.certManager.enabled }}
+      caBundle: {{ required "webhook.certificates.caBundle is required when certManager is disabled" .Values.webhook.certificates.caBundle }}
       {{- end }}
     failurePolicy: Fail
     matchPolicy: Equivalent
@@ -93,6 +98,39 @@ webhooks:
     timeoutSeconds: 10
 
   # --------------------------------------------------------------------------
+  # ScanPolicy — validation des chemins, exclusions et ressources
+  # --------------------------------------------------------------------------
+  - name: vscanpolicy.kb.io
+    admissionReviewVersions:
+      - v1
+    clientConfig:
+      service:
+        name: {{ include "clamav-operator.fullname" . }}-webhook-service
+        namespace: {{ .Release.Namespace }}
+        path: /validate-clamav-io-v1alpha1-scanpolicy
+        port: 443
+      {{- /* Mode sans cert-manager : caBundle obligatoire (garanti non vide par
+             le garde-fou fail de webhook-tls.yaml — sinon le rendu échoue). */}}
+      {{- if not .Values.webhook.certManager.enabled }}
+      caBundle: {{ required "webhook.certificates.caBundle is required when certManager is disabled" .Values.webhook.certificates.caBundle }}
+      {{- end }}
+    failurePolicy: Fail
+    matchPolicy: Equivalent
+    rules:
+      - apiGroups:
+          - clamav.io
+        apiVersions:
+          - v1alpha1
+        operations:
+          - CREATE
+          - UPDATE
+        resources:
+          - scanpolicies
+        scope: Namespaced
+    sideEffects: None
+    timeoutSeconds: 10
+
+  # --------------------------------------------------------------------------
   # ScanSchedule — validation de l'expression cron et des champs liés
   # --------------------------------------------------------------------------
   - name: vscanschedule.kb.io
@@ -104,8 +142,10 @@ webhooks:
         namespace: {{ .Release.Namespace }}
         path: /validate-clamav-io-v1alpha1-scanschedule
         port: 443
-      {{- if and (not .Values.webhook.certManager.enabled) .Values.webhook.certificates.caBundle }}
-      caBundle: {{ .Values.webhook.certificates.caBundle }}
+      {{- /* Mode sans cert-manager : caBundle obligatoire (garanti non vide par
+             le garde-fou fail de webhook-tls.yaml — sinon le rendu échoue). */}}
+      {{- if not .Values.webhook.certManager.enabled }}
+      caBundle: {{ required "webhook.certificates.caBundle is required when certManager is disabled" .Values.webhook.certificates.caBundle }}
       {{- end }}
     failurePolicy: Fail
     matchPolicy: Equivalent
