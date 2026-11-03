@@ -1,7 +1,7 @@
 # Build the manager binary
 # --platform=$BUILDPLATFORM : the build runs natively on the host (no QEMU overhead)
 # Cross-compilation is handled via GOARCH=$TARGETARCH, natively by the Go toolchain
-FROM --platform=$BUILDPLATFORM golang:1.26 as builder
+FROM --platform=$BUILDPLATFORM golang:1.27 as builder
 ARG TARGETOS
 ARG TARGETARCH
 
