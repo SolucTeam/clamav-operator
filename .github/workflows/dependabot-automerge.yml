@@ -83,7 +83,7 @@ jobs:
     if: needs.check-dependabot.outputs.is_eligible == 'true'
     steps:
       - name: Wait for required checks
-        uses: actions/github-script@v8
+        uses: actions/github-script@v9
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
@@ -191,7 +191,7 @@ jobs:
           GH_TOKEN: ${{ secrets.AUTOMERGE_TOKEN || secrets.GITHUB_TOKEN }}
 
       - name: Comment on PR
-        uses: actions/github-script@v8
+        uses: actions/github-script@v9
         with:
           script: |
             await github.rest.issues.createComment({
@@ -218,7 +218,7 @@ jobs:
       needs.check-dependabot.outputs.is_eligible == 'false'
     steps:
       - name: Comment on PR
-        uses: actions/github-script@v8
+        uses: actions/github-script@v9
         with:
           script: |
             await github.rest.issues.createComment({
@@ -237,7 +237,7 @@ jobs:
             });
 
       - name: Add label
-        uses: actions/github-script@v8
+        uses: actions/github-script@v9
         with:
           script: |
             await github.rest.issues.addLabels({
