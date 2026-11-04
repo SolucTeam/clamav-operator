@@ -153,7 +153,7 @@ jobs:
       # ── Docker meta (tags & labels) ──────────────────────────────────────
       - name: Docker meta
         id: meta
-        uses: docker/metadata-action@v5
+        uses: docker/metadata-action@v6
         with:
           images: ${{ env.OPERATOR_IMAGE }}
           tags: |
@@ -226,7 +226,7 @@ jobs:
       # ── Docker meta ───────────────────────────────────────────────────────
       - name: Docker meta
         id: meta
-        uses: docker/metadata-action@v5
+        uses: docker/metadata-action@v6
         with:
           images: ${{ env.SCANNER_IMAGE }}
           tags: |
@@ -339,7 +339,7 @@ jobs:
       # ── Docker meta ───────────────────────────────────────────────────────────
       - name: Docker meta
         id: meta
-        uses: docker/metadata-action@v5
+        uses: docker/metadata-action@v6
         with:
           images: ${{ env.SCANNER_IMAGE }}
           flavor: |
