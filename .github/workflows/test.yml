@@ -225,7 +225,7 @@ jobs:
             -count=1 2>&1 | tee e2e-output.txt
 
       - name: Upload E2E test output
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         if: always()
         with:
           name: e2e-test-output
