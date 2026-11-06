@@ -101,6 +101,15 @@ type NodeScanReconciler struct {
 	// Set via --job-active-deadline-seconds flag (Helm: scanner.jobActiveDeadlineSeconds).
 	JobActiveDeadlineSecs int64
 
+	// SignatureRegistry configures registry-based signature delivery for
+	// scanner Jobs (Helm: scanner.signature.*). When Source is "registry",
+	// scanner Job pods receive SIGNATURE_* env vars and download CVD
+	// databases at boot from OCI artifacts pushed by clamav-signature-sync,
+	// instead of relying on signatures baked into the image (which stay as
+	// the fallback). Registry credentials are referenced through a Secret
+	// (secretKeyRef) — never inlined into the Job spec.
+	SignatureRegistry *SignatureRegistryConfig
+
 	// JobTTLAfterSucceeded is the TTL before Kubernetes auto-deletes a succeeded Job.
 	// When zero, falls back to TTLSecondsAfterSucceeded (3600 s).
 	// Set via --job-ttl-after-succeeded flag (Helm: scanner.jobTTLSecondsAfterSucceeded).
@@ -134,6 +143,70 @@ func parsePullPolicy(s string) corev1.PullPolicy {
 	default:
 		return corev1.PullIfNotPresent
 	}
+}
+
+// SignatureRegistryConfig describes how scanner Jobs pull CVD signature
+// databases from an OCI registry at boot (see clamav-scanner-image
+// SIGNATURE_SOURCE=registry).
+type SignatureRegistryConfig struct {
+	// Source selects the signature delivery mechanism.
+	//   • "registry" — pull CVDs from the OCI registry at boot (SIGNATURE_SOURCE=registry)
+	//   • "" or "image" — use the signatures baked into the scanner image (default)
+	Source string
+	// RegistryURL is the registry v2 base URL, e.g.
+	// "https://registry.tooling.example.internal".
+	RegistryURL string
+	// Refs is the list of artifact references to pull, e.g.
+	// "platform-iac/clamav-main:latest,platform-iac/clamav-daily:latest".
+	// Tags must include the Harbor project. The scanner derives the local
+	// filename (main.cvd, daily.cvd, …) from the ORAS title annotation.
+	Refs []string
+	// SecretName is the name of a Secret in the operator namespace holding
+	// the registry robot credentials, with keys "username" and "password".
+	// When empty, the registry is accessed anonymously (public project).
+	SecretName string
+}
+
+// signatureRegistryEnvVars builds the SIGNATURE_* env vars injected into
+// scanner Job pods when registry-based signature delivery is enabled.
+// Returns nil when disabled (baked-in signatures).
+func (r *NodeScanReconciler) signatureRegistryEnvVars() []corev1.EnvVar {
+	if r.SignatureRegistry == nil || r.SignatureRegistry.Source != "registry" {
+		return nil
+	}
+	vars := []corev1.EnvVar{
+		{Name: "SIGNATURE_SOURCE", Value: "registry"},
+	}
+	if r.SignatureRegistry.RegistryURL != "" {
+		vars = append(vars, corev1.EnvVar{Name: "SIGNATURE_REGISTRY_URL", Value: r.SignatureRegistry.RegistryURL})
+	}
+	if len(r.SignatureRegistry.Refs) > 0 {
+		vars = append(vars, corev1.EnvVar{Name: "SIGNATURE_REFS", Value: strings.Join(r.SignatureRegistry.Refs, ",")})
+	}
+	if r.SignatureRegistry.SecretName != "" {
+		secretRef := corev1.LocalObjectReference{Name: r.SignatureRegistry.SecretName}
+		vars = append(vars,
+			corev1.EnvVar{
+				Name: "SIGNATURE_REGISTRY_USER",
+				ValueFrom: &corev1.EnvVarSource{
+					SecretKeyRef: &corev1.SecretKeySelector{
+						LocalObjectReference: secretRef,
+						Key:                  "username",
+					},
+				},
+			},
+			corev1.EnvVar{
+				Name: "SIGNATURE_REGISTRY_PASSWORD",
+				ValueFrom: &corev1.EnvVarSource{
+					SecretKeyRef: &corev1.SecretKeySelector{
+						LocalObjectReference: secretRef,
+						Key:                  "password",
+					},
+				},
+			},
+		)
+	}
+	return vars
 }
 
 // parseRetrySettings returns the effective retry ceiling and backoff multiplier,
@@ -768,6 +841,12 @@ func (r *NodeScanReconciler) constructJobForNodeScan(nodeScan *clamavv1alpha1.No
 		// The scanner merges these with its built-in system exclusions.
 		{Name: "EXCLUDE_PATTERNS", Value: excludePatternsJSON},
 	}
+
+	// Registry-based signature delivery (scanner.signature.source=registry):
+	// scanner pods pull CVD databases from the OCI registry at boot instead of
+	// relying on the image-baked copies. Credentials, when configured, are
+	// injected as secretKeyRef — never as plain values.
+	envVars = append(envVars, r.signatureRegistryEnvVars()...)
 
 	// Resources - apply in priority order:
 	// 1. NodeScan.Spec.Resources  (explicit per-scan override)

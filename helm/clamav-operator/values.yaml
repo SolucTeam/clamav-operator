@@ -155,6 +155,39 @@ scanner:
     clamavDbPath: /var/lib/clamav
 
   # ---------------------------------------------------------------------------
+  # Signature delivery from an OCI registry (clamav-signature-sync)
+  #
+  # This is the air-gap friendly alternative to image-baked signatures: the
+  # clamav-signature-sync pipeline downloads the CVD files daily and pushes
+  # them to a registry (Harbor) as OCI artifacts; every scanner Job then
+  # pulls the databases at boot. No daily image rebuild, no Renovate MR, no
+  # MEP to update signatures.
+  #
+  #   source: "registry"  → scanner Jobs receive SIGNATURE_SOURCE=registry and
+  #                         pull the refs below at boot.
+  #   source: "image"     → use the signatures baked into the scanner image
+  #                         (default; also the automatic fallback if the
+  #                         registry pull fails — a stale scan beats no scan).
+  # ---------------------------------------------------------------------------
+  signature:
+    source: image
+    # Registry v2 base URL (e.g. Harbor). Must be reachable from every node.
+    registryURL: ""
+    # Comma-separated artifact refs, Harbor project included. Tags are
+    # resolved by the scanner: `latest` picks the newest YYYYMMDD-HHMMSS tag
+    # (Harbor projects are commonly tag-immutable, which would freeze
+    # `latest` on the first sync run).
+    # Example: "platform-iac/clamav-main:latest,platform-iac/clamav-daily:latest,platform-iac/clamav-bytecode:latest"
+    refs: ""
+    # Name of a Secret holding the registry robot credentials, with keys
+    # "username" and "password". Referenced via secretKeyRef — the operator
+    # never reads the values. Leave empty for an anonymous (public) registry.
+    # Example: kubectl create secret generic clamav-registry-auth \
+    #            --from-literal=username='robot$clamav-scanner' \
+    #            --from-literal=password='<token>'
+    existingSecret: ""
+
+  # ---------------------------------------------------------------------------
   # Freshclam – ClamAV signature updates
   # ---------------------------------------------------------------------------
   freshclam:
