@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 
 
+## [v0.9.0] - 2026-11-06
+
+## 🚀 Features
+
+* feat: registry-based signature delivery for scanner Jobs (#91) (2c2682a)
+
+## 🐛 Bug Fixes
+
+_No bug fixes_
+
+## 🔧 Other Changes
+
+* ci(deps): bump actions/checkout from 4 to 6 (#4) (18df70a)
+* build(docker): bump node in /scanner (#56) (4c98f08)
+* chore: update CHANGELOG for v0.8.5 (1ddc0cb)
+
+
 ## [v0.8.5] - 2026-10-31
 
 ## 🚀 Features
