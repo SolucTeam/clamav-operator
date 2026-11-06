@@ -115,6 +115,23 @@ spec:
         - name: SCANNER_SIGNATURES_PVC_NAME
           value: {{ .Values.scanner.signatures.pvcName | quote }}
         {{- end }}
+        {{- if eq .Values.scanner.signature.source "registry" }}
+        # Registry-based signature delivery (clamav-signature-sync → Harbor).
+        # Scanner Job pods pull CVD databases at boot; image-baked signatures
+        # remain the non-fatal fallback (see clamav-scanner-image README).
+        - name: SCANNER_SIGNATURE_SOURCE
+          value: "registry"
+        - name: SCANNER_SIGNATURE_REGISTRY_URL
+          value: {{ .Values.scanner.signature.registryURL | quote }}
+        {{- if .Values.scanner.signature.refs }}
+        - name: SCANNER_SIGNATURE_REFS
+          value: {{ .Values.scanner.signature.refs | quote }}
+        {{- end }}
+        {{- if .Values.scanner.signature.existingSecret }}
+        - name: SCANNER_SIGNATURE_REGISTRY_SECRET
+          value: {{ .Values.scanner.signature.existingSecret | quote }}
+        {{- end }}
+        {{- end }}
         {{- with .Values.env }}
         {{- toYaml . | nindent 8 }}
         {{- end }}

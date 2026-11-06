@@ -220,6 +220,35 @@ func main() {
 	// Empty string means signatures are expected to be baked into the scanner image.
 	signaturesPVCName := os.Getenv("SCANNER_SIGNATURES_PVC_NAME")
 
+	// Registry-based signature delivery (Helm: scanner.signature.*).
+	// When SCANNER_SIGNATURE_SOURCE=registry, scanner Jobs pull CVD databases
+	// at boot from OCI artifacts pushed by clamav-signature-sync. Refs are
+	// comma-separated registry paths including the Harbor project. The secret
+	// (keys "username"/"password") is referenced by name only.
+	var signatureRegistry *controller.SignatureRegistryConfig
+	if source := os.Getenv("SCANNER_SIGNATURE_SOURCE"); source != "" && source != "image" {
+		refs := []string{}
+		if raw := os.Getenv("SCANNER_SIGNATURE_REFS"); raw != "" {
+			for _, ref := range strings.Split(raw, ",") {
+				if ref = strings.TrimSpace(ref); ref != "" {
+					refs = append(refs, ref)
+				}
+			}
+		}
+		signatureRegistry = &controller.SignatureRegistryConfig{
+			Source:      source,
+			RegistryURL: os.Getenv("SCANNER_SIGNATURE_REGISTRY_URL"),
+			Refs:        refs,
+			SecretName:  os.Getenv("SCANNER_SIGNATURE_REGISTRY_SECRET"),
+		}
+		setupLog.Info("Signature delivery via OCI registry",
+			"source", source,
+			"registry", signatureRegistry.RegistryURL,
+			"refs", strings.Join(refs, ","),
+			"secret", signatureRegistry.SecretName,
+		)
+	}
+
 	// Setup controllers
 	if err = (&controller.NodeScanReconciler{
 		Client:                  mgr.GetClient(),
@@ -232,6 +261,7 @@ func main() {
 		ClamavPort:              clamavPort,
 		ScannerImagePullSecrets: scannerPullSecrets,
 		SignaturesPVCName:       signaturesPVCName,
+		SignatureRegistry:       signatureRegistry,
 		JobActiveDeadlineSecs:   int64(jobActiveDeadlineSeconds), //nolint:gosec // value is a user-supplied duration, never negative in practice
 		JobTTLAfterSucceeded:    int32(jobTTLAfterSucceeded),     //nolint:gosec // TTL is always a small positive integer
 		JobTTLAfterFailed:       int32(jobTTLAfterFailed),        //nolint:gosec // TTL is always a small positive integer

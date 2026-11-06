@@ -311,6 +311,134 @@ func TestConstructJobForNodeScan(t *testing.T) {
 	}
 }
 
+// envMap flattens the scanner container's env vars for lookups.
+func envMap(t *testing.T, job *batchv1.Job) map[string]corev1.EnvVar {
+	t.Helper()
+	require.NotEmpty(t, job.Spec.Template.Spec.Containers)
+	env := make(map[string]corev1.EnvVar, len(job.Spec.Template.Spec.Containers[0].Env))
+	for _, e := range job.Spec.Template.Spec.Containers[0].Env {
+		env[e.Name] = e
+	}
+	return env
+}
+
+func TestSignatureRegistryEnvVars(t *testing.T) {
+	t.Run("disabled when SignatureRegistry is nil (baked-in signatures)", func(t *testing.T) {
+		r := newTestNodeScanReconciler()
+		assert.Nil(t, r.signatureRegistryEnvVars())
+	})
+
+	t.Run("disabled when source is image", func(t *testing.T) {
+		r := newTestNodeScanReconciler()
+		r.SignatureRegistry = &SignatureRegistryConfig{Source: "image"}
+		assert.Nil(t, r.signatureRegistryEnvVars())
+	})
+
+	t.Run("registry source without secret injects refs and url", func(t *testing.T) {
+		r := newTestNodeScanReconciler()
+		r.SignatureRegistry = &SignatureRegistryConfig{
+			Source:      "registry",
+			RegistryURL: "https://registry.tooling.example.internal",
+			Refs:        []string{"platform-iac/clamav-main:latest", "platform-iac/clamav-daily:latest"},
+		}
+		vars := r.signatureRegistryEnvVars()
+
+		names := make([]string, 0, len(vars))
+		for _, v := range vars {
+			names = append(names, v.Name)
+		}
+		assert.ElementsMatch(t,
+			[]string{"SIGNATURE_SOURCE", "SIGNATURE_REGISTRY_URL", "SIGNATURE_REFS"}, names)
+		assert.Equal(t, "registry", vars[0].Value)
+		assert.Equal(t, "https://registry.tooling.example.internal", vars[1].Value)
+		assert.Equal(t,
+			"platform-iac/clamav-main:latest,platform-iac/clamav-daily:latest", vars[2].Value)
+	})
+
+	t.Run("existingSecret injects username/password via secretKeyRef", func(t *testing.T) {
+		r := newTestNodeScanReconciler()
+		r.SignatureRegistry = &SignatureRegistryConfig{
+			Source:      "registry",
+			RegistryURL: "https://registry.tooling.example.internal",
+			Refs:        []string{"platform-iac/clamav-daily:latest"},
+			SecretName:  "clamav-registry-auth",
+		}
+		vars := r.signatureRegistryEnvVars()
+		require.Len(t, vars, 5)
+
+		byName := make(map[string]corev1.EnvVar, len(vars))
+		for _, v := range vars {
+			byName[v.Name] = v
+		}
+		for _, key := range []string{"SIGNATURE_REGISTRY_USER", "SIGNATURE_REGISTRY_PASSWORD"} {
+			e, ok := byName[key]
+			require.True(t, ok, "%s must be present", key)
+			require.NotNil(t, e.ValueFrom, "%s must use ValueFrom", key)
+			require.NotNil(t, e.ValueFrom.SecretKeyRef)
+			assert.Equal(t, "clamav-registry-auth", e.ValueFrom.SecretKeyRef.Name)
+			// Values must never be inlined into the Job spec.
+			assert.Empty(t, e.Value)
+		}
+		assert.Equal(t, "username", byName["SIGNATURE_REGISTRY_USER"].ValueFrom.SecretKeyRef.Key)
+		assert.Equal(t, "password", byName["SIGNATURE_REGISTRY_PASSWORD"].ValueFrom.SecretKeyRef.Key)
+	})
+}
+
+func TestConstructJobForNodeScan_SignatureRegistry(t *testing.T) {
+	nodeScan := &clamavv1alpha1.NodeScan{
+		ObjectMeta: metav1.ObjectMeta{
+			Name:      "test-scan",
+			Namespace: "default",
+			UID:       "test-uid",
+		},
+		Spec: clamavv1alpha1.NodeScanSpec{
+			NodeName: "test-node",
+			Priority: "medium",
+		},
+	}
+
+	t.Run("no SIGNATURE_* env vars when disabled", func(t *testing.T) {
+		r := newTestNodeScanReconciler(nodeScan)
+		job, err := r.constructJobForNodeScan(nodeScan, nil)
+		require.NoError(t, err)
+
+		env := envMap(t, job)
+		for _, name := range []string{
+			"SIGNATURE_SOURCE", "SIGNATURE_REGISTRY_URL", "SIGNATURE_REFS",
+			"SIGNATURE_REGISTRY_USER", "SIGNATURE_REGISTRY_PASSWORD",
+		} {
+			assert.NotContains(t, env, name)
+		}
+	})
+
+	t.Run("SIGNATURE_* env vars injected when registry source enabled", func(t *testing.T) {
+		r := newTestNodeScanReconciler(nodeScan)
+		r.SignatureRegistry = &SignatureRegistryConfig{
+			Source:      "registry",
+			RegistryURL: "https://registry.tooling.example.internal",
+			Refs: []string{
+				"platform-iac/clamav-main:latest",
+				"platform-iac/clamav-daily:latest",
+				"platform-iac/clamav-bytecode:latest",
+			},
+			SecretName: "clamav-registry-auth",
+		}
+		job, err := r.constructJobForNodeScan(nodeScan, nil)
+		require.NoError(t, err)
+
+		env := envMap(t, job)
+		assert.Equal(t, "registry", env["SIGNATURE_SOURCE"].Value)
+		assert.Equal(t, "https://registry.tooling.example.internal", env["SIGNATURE_REGISTRY_URL"].Value)
+		assert.Equal(t,
+			"platform-iac/clamav-main:latest,platform-iac/clamav-daily:latest,platform-iac/clamav-bytecode:latest",
+			env["SIGNATURE_REFS"].Value)
+		assert.Equal(t, "clamav-registry-auth",
+			env["SIGNATURE_REGISTRY_USER"].ValueFrom.SecretKeyRef.Name)
+		assert.Equal(t, "password",
+			env["SIGNATURE_REGISTRY_PASSWORD"].ValueFrom.SecretKeyRef.Key)
+	})
+}
+
 func TestGetResourcesForPriority(t *testing.T) {
 	// GetResourcesForPriority intentionally returns empty ResourceRequirements
 	// regardless of priority. The operator imposes no resource constraints;
