@@ -110,6 +110,19 @@ helm install clamav-operator ./helm/clamav-operator \
 
 > **`ReadWriteMany` is required** when `signatures.persistent=true`. Scanner jobs run on different nodes; a `ReadWriteOnce` PVC can only be mounted by pods on the single node where it is bound — all other scanner pods fail with *"Multi-Attach error"*. RWX requires a storage backend that supports it: NFS, CephFS, Azure Files, AWS EFS, GCP Filestore. Standard block storage (EBS, GCP Persistent Disk) does **not** support RWX — use the image-embedded approach instead (`persistent: false`).
 
+### Registry Signature Parameters
+
+| Parameter | Description | Default |
+|-----------|-------------|---------|
+| `scanner.signature.source` | Signature delivery: `image` (baked-in, default) or `registry` (pull CVDs at boot) | `image` |
+| `scanner.signature.registryURL` | Registry v2 base URL (e.g. Harbor) | `""` |
+| `scanner.signature.refs` | Comma-separated artifact refs (Harbor project included) | `""` |
+| `scanner.signature.existingSecret` | Secret with registry credentials (keys `username`/`password`) | `""` |
+| `scanner.signature.caSecret.name` | Secret holding the registry TLS CA bundle (private CA). Scanner Job pods mount it and receive `NODE_EXTRA_CA_CERTS`. | `""` |
+| `scanner.signature.caSecret.key` | Secret data key holding the PEM bundle | `ca.crt` |
+
+> **Private CA:** when the registry certificate is signed by a private CA (e.g. internal Harbor), set `caSecret.name` to a Secret containing the PEM bundle. Scanner Job pods mount it and get `NODE_EXTRA_CA_CERTS` pointing at the mounted file — Node's `fetch` (undici) trusts the private CA natively, no scanner-side change needed. The image-baked signatures remain the automatic fallback if the pull fails.
+
 ### Incremental Scan Parameters
 
 | Parameter | Description | Default |

@@ -52,6 +52,14 @@ const (
 	// parseRetryAnnotation tracks the number of parse retry attempts
 	parseRetryAnnotation = "clamav.io/parse-retries"
 
+	// registryCAVolumeName / registryCAMountPath: the scanner Job pod mounts
+	// the registry TLS CA bundle (Secret) at a fixed path and Node fetch
+	// (undici) trusts it via NODE_EXTRA_CA_CERTS.
+	registryCAVolumeName = "registry-ca"
+	registryCAMountPath  = "/etc/ssl/certs/clamav-registry-ca.pem"
+	// registryCADefaultKey is the Secret data key used when CAKey is unset.
+	registryCADefaultKey = "ca.crt"
+
 	// ForceFullScanAnnotation can be set to "true" on a NodeScan to trigger an
 	// immediate forced full scan — bypassing the incremental cache — without
 	// deleting and recreating the NodeScan resource.
@@ -165,6 +173,25 @@ type SignatureRegistryConfig struct {
 	// the registry robot credentials, with keys "username" and "password".
 	// When empty, the registry is accessed anonymously (public project).
 	SecretName string
+	// CASecretName is the name of a Secret in the operator namespace holding
+	// the TLS CA bundle used to verify the registry certificate (private
+	// CA, e.g. internal Harbor). When set, scanner Job pods mount the CA
+	// file and receive NODE_EXTRA_CA_CERTS pointing at it, so Node's fetch
+	// (undici) trusts the private CA. When empty, the default system trust
+	// store is used.
+	CASecretName string
+	// CAKey is the Secret data key holding the PEM bundle. Defaults to
+	// "ca.crt" when empty. Only meaningful when CASecretName is set.
+	CAKey string
+}
+
+// effectiveCAKey returns the Secret data key holding the PEM CA bundle,
+// defaulting to "ca.crt" when CAKey is unset.
+func (c *SignatureRegistryConfig) effectiveCAKey() string {
+	if c.CAKey != "" {
+		return c.CAKey
+	}
+	return registryCADefaultKey
 }
 
 // signatureRegistryEnvVars builds the SIGNATURE_* env vars injected into
@@ -205,6 +232,16 @@ func (r *NodeScanReconciler) signatureRegistryEnvVars() []corev1.EnvVar {
 				},
 			},
 		)
+	}
+	if r.SignatureRegistry.CASecretName != "" {
+		// Node (undici/fetch) honours NODE_EXTRA_CA_CERTS natively: the
+		// scanner's HTTPS pulls trust the private registry CA without any
+		// scanner-side code change. The matching volume + mount are added
+		// by buildScannerVolumes/buildScannerVolumeMounts.
+		vars = append(vars, corev1.EnvVar{
+			Name:  "NODE_EXTRA_CA_CERTS",
+			Value: registryCAMountPath,
+		})
 	}
 	return vars
 }
@@ -996,6 +1033,14 @@ func (r *NodeScanReconciler) buildScannerVolumeMounts(dbPath string) []corev1.Vo
 			ReadOnly:  true,
 		})
 	}
+	if r.SignatureRegistry != nil && r.SignatureRegistry.CASecretName != "" {
+		mounts = append(mounts, corev1.VolumeMount{
+			Name:      registryCAVolumeName,
+			MountPath: registryCAMountPath,
+			SubPath:   r.SignatureRegistry.effectiveCAKey(),
+			ReadOnly:  true,
+		})
+	}
 	return mounts
 }
 
@@ -1030,6 +1075,22 @@ func (r *NodeScanReconciler) buildScannerVolumes() []corev1.Volume {
 				PersistentVolumeClaim: &corev1.PersistentVolumeClaimVolumeSource{
 					ClaimName: r.SignaturesPVCName,
 					ReadOnly:  true,
+				},
+			},
+		})
+	}
+	if r.SignatureRegistry != nil && r.SignatureRegistry.CASecretName != "" {
+		volumes = append(volumes, corev1.Volume{
+			Name: registryCAVolumeName,
+			VolumeSource: corev1.VolumeSource{
+				Secret: &corev1.SecretVolumeSource{
+					SecretName: r.SignatureRegistry.CASecretName,
+					Items: []corev1.KeyToPath{
+						{
+							Key:  r.SignatureRegistry.effectiveCAKey(),
+							Path: r.SignatureRegistry.effectiveCAKey(),
+						},
+					},
 				},
 			},
 		})

@@ -382,6 +382,39 @@ func TestSignatureRegistryEnvVars(t *testing.T) {
 		assert.Equal(t, "username", byName["SIGNATURE_REGISTRY_USER"].ValueFrom.SecretKeyRef.Key)
 		assert.Equal(t, "password", byName["SIGNATURE_REGISTRY_PASSWORD"].ValueFrom.SecretKeyRef.Key)
 	})
+
+	t.Run("CA secret injects NODE_EXTRA_CA_CERTS with fixed mount path", func(t *testing.T) {
+		r := newTestNodeScanReconciler()
+		r.SignatureRegistry = &SignatureRegistryConfig{
+			Source:       "registry",
+			RegistryURL:  "https://registry.tooling.example.internal",
+			Refs:         []string{"platform-iac/clamav-main:latest"},
+			SecretName:   "clamav-registry-auth",
+			CASecretName: "numspot-ca-bundle",
+		}
+		vars := r.signatureRegistryEnvVars()
+
+		var ca *corev1.EnvVar
+		for i := range vars {
+			if vars[i].Name == "NODE_EXTRA_CA_CERTS" {
+				ca = &vars[i]
+			}
+		}
+		require.NotNil(t, ca, "NODE_EXTRA_CA_CERTS must be present when CASecretName is set")
+		assert.Equal(t, "/etc/ssl/certs/clamav-registry-ca.pem", ca.Value)
+	})
+
+	t.Run("no NODE_EXTRA_CA_CERTS when CASecretName is empty", func(t *testing.T) {
+		r := newTestNodeScanReconciler()
+		r.SignatureRegistry = &SignatureRegistryConfig{
+			Source:      "registry",
+			RegistryURL: "https://registry.tooling.example.internal",
+			Refs:        []string{"platform-iac/clamav-main:latest"},
+		}
+		for _, v := range r.signatureRegistryEnvVars() {
+			assert.NotEqual(t, "NODE_EXTRA_CA_CERTS", v.Name)
+		}
+	})
 }
 
 func TestConstructJobForNodeScan_SignatureRegistry(t *testing.T) {
@@ -436,6 +469,45 @@ func TestConstructJobForNodeScan_SignatureRegistry(t *testing.T) {
 			env["SIGNATURE_REGISTRY_USER"].ValueFrom.SecretKeyRef.Name)
 		assert.Equal(t, "password",
 			env["SIGNATURE_REGISTRY_PASSWORD"].ValueFrom.SecretKeyRef.Key)
+	})
+
+	t.Run("CA secret mounts bundle and sets NODE_EXTRA_CA_CERTS", func(t *testing.T) {
+		r := newTestNodeScanReconciler(nodeScan)
+		r.SignatureRegistry = &SignatureRegistryConfig{
+			Source:       "registry",
+			RegistryURL:  "https://registry.tooling.example.internal",
+			Refs:         []string{"platform-iac/clamav-main:latest"},
+			CASecretName: "numspot-ca-bundle",
+			CAKey:        "ca.crt",
+		}
+		job, err := r.constructJobForNodeScan(nodeScan, nil)
+		require.NoError(t, err)
+
+		env := envMap(t, job)
+		assert.Equal(t, "/etc/ssl/certs/clamav-registry-ca.pem", env["NODE_EXTRA_CA_CERTS"].Value)
+
+		// Volume: Secret source with the configured key.
+		var caVol *corev1.Volume
+		for i := range job.Spec.Template.Spec.Volumes {
+			if job.Spec.Template.Spec.Volumes[i].Name == "registry-ca" {
+				caVol = &job.Spec.Template.Spec.Volumes[i]
+			}
+		}
+		require.NotNil(t, caVol, "registry-ca volume must be present")
+		require.NotNil(t, caVol.Secret)
+		assert.Equal(t, "numspot-ca-bundle", caVol.Secret.SecretName)
+
+		// Container mount: subPath so the PEM lands as a single file.
+		var caMount *corev1.VolumeMount
+		for i := range job.Spec.Template.Spec.Containers[0].VolumeMounts {
+			if job.Spec.Template.Spec.Containers[0].VolumeMounts[i].Name == "registry-ca" {
+				caMount = &job.Spec.Template.Spec.Containers[0].VolumeMounts[i]
+			}
+		}
+		require.NotNil(t, caMount, "registry-ca volumeMount must be present")
+		assert.Equal(t, "/etc/ssl/certs/clamav-registry-ca.pem", caMount.MountPath)
+		assert.Equal(t, "ca.crt", caMount.SubPath)
+		assert.True(t, caMount.ReadOnly)
 	})
 }
 
