@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 
 
+## [v0.10.0] - 2026-11-09
+
+## 🚀 Features
+
+* feat: TLS CA bundle support for private signature registries (#94) (1530386)
+
+## 🐛 Bug Fixes
+
+_No bug fixes_
+
+## 🔧 Other Changes
+
+* chore: update CHANGELOG for v0.9.0 (984bc14)
+
+
 ## [v0.9.0] - 2026-11-06
 
 ## 🚀 Features
