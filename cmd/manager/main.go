@@ -235,11 +235,24 @@ func main() {
 				}
 			}
 		}
+		// CA for private registries (Helm: scanner.signature.caSecret.*).
+		// When set, scanner Job pods mount the CA bundle and receive
+		// NODE_EXTRA_CA_CERTS so Node fetch trusts the private CA.
+		caSecret := os.Getenv("SCANNER_SIGNATURE_CA_SECRET")
+		caKey := os.Getenv("SCANNER_SIGNATURE_CA_KEY")
+		if caSecret != "" {
+			setupLog.Info("Registry TLS CA configured for scanner Jobs",
+				"secret", caSecret,
+				"key", caKey,
+			)
+		}
 		signatureRegistry = &controller.SignatureRegistryConfig{
-			Source:      source,
-			RegistryURL: os.Getenv("SCANNER_SIGNATURE_REGISTRY_URL"),
-			Refs:        refs,
-			SecretName:  os.Getenv("SCANNER_SIGNATURE_REGISTRY_SECRET"),
+			Source:       source,
+			RegistryURL:  os.Getenv("SCANNER_SIGNATURE_REGISTRY_URL"),
+			Refs:         refs,
+			SecretName:   os.Getenv("SCANNER_SIGNATURE_REGISTRY_SECRET"),
+			CASecretName: caSecret,
+			CAKey:        caKey,
 		}
 		setupLog.Info("Signature delivery via OCI registry",
 			"source", source,

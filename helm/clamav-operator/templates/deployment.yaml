@@ -131,6 +131,15 @@ spec:
         - name: SCANNER_SIGNATURE_REGISTRY_SECRET
           value: {{ .Values.scanner.signature.existingSecret | quote }}
         {{- end }}
+        {{- if .Values.scanner.signature.caSecret.name }}
+        # TLS CA bundle for registries signed by a private CA. Scanner Job
+        # pods mount the bundle and receive NODE_EXTRA_CA_CERTS (undici/fetch
+        # trusts it natively — no scanner-side change needed).
+        - name: SCANNER_SIGNATURE_CA_SECRET
+          value: {{ .Values.scanner.signature.caSecret.name | quote }}
+        - name: SCANNER_SIGNATURE_CA_KEY
+          value: {{ .Values.scanner.signature.caSecret.key | default "ca.crt" | quote }}
+        {{- end }}
         {{- end }}
         {{- with .Values.env }}
         {{- toYaml . | nindent 8 }}

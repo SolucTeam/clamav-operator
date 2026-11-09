@@ -186,6 +186,15 @@ scanner:
     #            --from-literal=username='robot$clamav-scanner' \
     #            --from-literal=password='<token>'
     existingSecret: ""
+    # TLS CA bundle for registries signed by a private CA (e.g. internal
+    # Harbor). Scanner Job pods mount the Secret's key and receive
+    # NODE_EXTRA_CA_CERTS pointing at it, so the scanner's HTTPS pulls trust
+    # the private CA (Node's fetch/undici honours this variable natively).
+    # Leave empty when the registry certificate chains to a public CA.
+    caSecret:
+      name: ""
+      # Secret data key holding the PEM bundle. Defaults to "ca.crt".
+      key: ca.crt
 
   # ---------------------------------------------------------------------------
   # Freshclam – ClamAV signature updates
