@@ -234,7 +234,7 @@ func (r *NodeScanReconciler) signatureRegistryEnvVars() []corev1.EnvVar {
 		)
 	}
 	if r.SignatureRegistry.CASecretName != "" {
-		// Node (undici/fetch) honours NODE_EXTRA_CA_CERTS natively: the
+		// Node (undici/fetch) honors NODE_EXTRA_CA_CERTS natively: the
 		// scanner's HTTPS pulls trust the private registry CA without any
 		// scanner-side code change. The matching volume + mount are added
 		// by buildScannerVolumes/buildScannerVolumeMounts.
