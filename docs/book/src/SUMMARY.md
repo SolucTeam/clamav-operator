@@ -35,6 +35,7 @@
   - [Monitoring & Alerting](./operations/monitoring.md)
   - [Runbook](./operations/runbook.md)
   - [Upgrade Guide](./operations/upgrade.md)
+  - [MCP Server](./operations/mcp-server.md)
 
 # Developer
 
