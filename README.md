@@ -22,6 +22,15 @@ It reconciles a set of custom resources (`NodeScan`, `ClusterScan`, `ScanSchedul
 
 Please see our [documentation site](https://solucteam.github.io/clamav-operator) for in-depth documentation.
 
+## 🤖 MCP Server
+
+A read-only [MCP server](docs/mcp-server.md) (`bin/clamav-operator-mcp`) lets AI agents (Claude Code, Claude Desktop, ...) inspect scans, infections, schedules and policies through the Model Context Protocol:
+
+```bash
+make build-mcp
+claude mcp add clamav-operator -- ./bin/clamav-operator-mcp
+```
+
 ## ✨ Features
 
 - **Standalone mode** — `clamscan` + signatures embedded in the scanner image; no central ClamAV service, no single point of failure

@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## Unreleased
+
+## 🚀 Features
+
+* feat: read-only MCP server (`cmd/mcp-server`) exposing scans, infections, schedules and policies to AI agents over stdio (`list_scans`, `get_scan`, `list_infections`, `get_cluster_status`, `list_schedules`, `list_policies`)
+
 
 ## [v0.10.0] - 2026-11-09
 
