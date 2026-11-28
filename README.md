@@ -36,7 +36,7 @@ mcpServer:
     host: mcp.clamav.example.com
 ```
 
-Users connect their MCP client to `https://mcp.clamav.example.com/mcp` with a Kubernetes token — no local build, no local kubeconfig for the agent. Token renewal patterns (long-lived token, launch wrapper) are documented in the [MCP documentation](docs/book/src/operations/mcp-server.md).
+Users connect their MCP client to `https://mcp.clamav.example.com/mcp` with a Kubernetes token — no local build, no agent kubeconfig needed.
 
 ## ✨ Features
 

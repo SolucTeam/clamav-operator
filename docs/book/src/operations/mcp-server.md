@@ -138,49 +138,6 @@ Unauthenticated requests get `401` before any MCP processing. The MCP ServiceAcc
 needs `system:auth-delegator` — a sensitive but standard delegation right, scoped
 to this dedicated ServiceAccount.
 
-## Token lifetime & renewal
-
-Kubernetes tokens are short-lived by design. Two supported options:
-
-### Option 1 — Long-lived token (documented shortcut)
-
-Create a token Secret without expiry for the user's ServiceAccount:
-
-```bash
-kubectl -n clamav-system create secret generic mcp-alice-token \
-  --type kubernetes.io/service-account-token \
-  --from-literal=token="" \
-  $(kubectl -n clamav-system get sa mcp-alice -o name | sed 's/serviceaccount/service-account/')
-# K8s populates the "token" key in the Secret; retrieve it:
-kubectl -n clamav-system get secret mcp-alice-token -o jsonpath='{.data.token}' | base64 -d
-```
-
-- Zero renewal friction; rotation is manual (delete and re-create the Secret, then
-  distribute the new token).
-- Revocation = delete the Secret.
-- Requires `kubernetes.io/service-account-token` secrets to be enabled for the
-  ServiceAccount (legacy token generation enabled cluster-wide or per-SA via the
-  `kubernetes.io/enforce-mountable-secrets` equivalent — see the Kubernetes docs for
-  your version).
-
-### Option 2 — Wrapper shell (fresh token on every launch)
-
-```sh
-# ~/.zshrc
-opencode() {
-  export CLAMAV_MCP_TOKEN=$(kubectl create token mcp-alice -n clamav-system --duration=12h)
-  command opencode "$@"
-}
-```
-
-Every launch starts with a fresh 12 h token — nothing to remember, nothing stored on
-disk beyond the shell environment. Same pattern for any MCP client.
-
-### Notes
-
-- MCP Streamable HTTP sessions are stateful (`Mcp-Session-Id`): keep 1 replica or use
-  a sticky-session load balancer. Token renewal does not break active sessions.
-
 ### Multi-cluster
 
 Run **one MCP server per cluster**, each registered as a separate MCP server in your
@@ -247,5 +204,7 @@ log collection, stderr in stdio mode):
 
 - In **stdio** mode all logging goes to **stderr**; stdout is reserved for the MCP
   protocol. In **http** mode logs go to **stdout** for container log collection.
+- MCP Streamable HTTP sessions are stateful (`Mcp-Session-Id`): keep 1 replica or use
+  a sticky-session load balancer.
 - Infected-file lists in `NodeScan.status` are capped by the operator (first 100
   entries); `list_infections` reports `truncated: true` when that limit was hit.
