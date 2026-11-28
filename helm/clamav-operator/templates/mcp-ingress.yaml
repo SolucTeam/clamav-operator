@@ -1,0 +1,35 @@
+{{- if and .Values.mcpServer.enabled .Values.mcpServer.ingress.enabled }}
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: {{ include "clamav-operator.fullname" . }}-mcp
+  namespace: {{ .Release.Namespace }}
+  labels:
+    {{- include "clamav-operator.labels" . | nindent 4 }}
+    app.kubernetes.io/component: mcp-server
+  {{- with .Values.mcpServer.ingress.annotations }}
+  annotations:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+spec:
+  {{- with .Values.mcpServer.ingress.className }}
+  ingressClassName: {{ . }}
+  {{- end }}
+  {{- if .Values.mcpServer.ingress.tls.enabled }}
+  tls:
+  - hosts:
+    - {{ .Values.mcpServer.ingress.host | quote }}
+    secretName: {{ .Values.mcpServer.ingress.tls.secretName }}
+  {{- end }}
+  rules:
+  - host: {{ .Values.mcpServer.ingress.host | quote }}
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: {{ include "clamav-operator.fullname" . }}-mcp
+            port:
+              number: {{ .Values.mcpServer.service.port }}
+{{- end }}

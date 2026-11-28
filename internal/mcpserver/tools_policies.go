@@ -99,3 +99,6 @@ func (s *Server) listPolicies(ctx context.Context, req *mcp.CallToolRequest, in 
 	out.Count = len(out.Policies)
 	return nil, out, nil
 }
+
+// auditInfo exposes list_policies counters for the audit trail.
+func (o listPoliciesOut) auditInfo() []any { return []any{"count", o.Count} }

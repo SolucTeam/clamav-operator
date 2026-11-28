@@ -98,3 +98,24 @@ operator image convention so both images stay in sync on every release.
 {{- $tag := .Values.scanner.image.tag | default .Chart.AppVersion -}}
 {{- printf "%s:%s" .Values.scanner.image.repository $tag -}}
 {{- end -}}
+
+{{/*
+Return the MCP server image.
+Falls back to Chart.AppVersion when no explicit tag is set, mirroring the
+operator image convention so images stay in sync on every release.
+*/}}
+{{- define "clamav-operator.mcpImage" -}}
+{{- $tag := .Values.mcpServer.image.tag | default .Chart.AppVersion -}}
+{{- printf "%s:%s" .Values.mcpServer.image.repository $tag -}}
+{{- end -}}
+
+{{/*
+Create the name of the MCP server service account to use.
+*/}}
+{{- define "clamav-operator.mcpServiceAccountName" -}}
+{{- if .Values.mcpServer.serviceAccount.create }}
+{{- printf "%s-mcp" (include "clamav-operator.fullname" .) }}
+{{- else }}
+{{- default "default" .Values.mcpServer.serviceAccount.name }}
+{{- end }}
+{{- end }}

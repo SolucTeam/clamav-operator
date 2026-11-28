@@ -252,3 +252,11 @@ func sortedKeys(m map[string]bool) []string {
 	sort.Strings(out)
 	return out
 }
+
+// auditInfo exposes list_infections counters for the audit trail.
+func (o listInfectionsOut) auditInfo() []any { return []any{"count", o.Count} }
+
+// auditInfo exposes get_cluster_status counters for the audit trail.
+func (o getClusterStatusOut) auditInfo() []any {
+	return []any{"totalFilesInfected", o.TotalFilesInfected, "infectedNodes", o.InfectedNodes}
+}

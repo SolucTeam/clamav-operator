@@ -26,6 +26,7 @@ package mcpserver
 
 import (
 	"k8s.io/apimachinery/pkg/runtime"
+	"k8s.io/client-go/rest"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 	ctrlcfg "sigs.k8s.io/controller-runtime/pkg/client/config"
 
@@ -51,10 +52,21 @@ func Scheme() *runtime.Scheme {
 //  3. the in-cluster service account config
 //  4. $HOME/.kube/config
 func NewClient() (client.Client, error) {
-	cfg := ctrlcfg.GetConfigOrDie()
-	c, err := client.New(cfg, client.Options{Scheme: Scheme()})
+	c, _, err := NewClientWithConfig()
 	if err != nil {
 		return nil, err
 	}
 	return c, nil
+}
+
+// NewClientWithConfig is NewClient but also returns the underlying
+// rest.Config, needed e.g. by the HTTP authenticator to create
+// TokenReviews and to clone per-caller configs.
+func NewClientWithConfig() (client.Client, *rest.Config, error) {
+	cfg := ctrlcfg.GetConfigOrDie()
+	c, err := client.New(cfg, client.Options{Scheme: Scheme()})
+	if err != nil {
+		return nil, nil, err
+	}
+	return c, cfg, nil
 }

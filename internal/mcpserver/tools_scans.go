@@ -298,3 +298,11 @@ func clusterScanDetailOut(c *clamavv1beta1.ClusterScan) getScanOut {
 	}
 	return o
 }
+
+// auditInfo exposes list_scans counters for the audit trail.
+func (o listScansOut) auditInfo() []any { return []any{"count", o.Count} }
+
+// auditInfo exposes get_scan counters for the audit trail.
+func (o getScanOut) auditInfo() []any {
+	return []any{"phase", o.Phase, "filesInfected", o.FilesInfected}
+}

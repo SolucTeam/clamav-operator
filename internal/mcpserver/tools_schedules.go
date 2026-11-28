@@ -79,3 +79,6 @@ func (s *Server) listSchedules(ctx context.Context, req *mcp.CallToolRequest, in
 	out.Count = len(out.Schedules)
 	return nil, out, nil
 }
+
+// auditInfo exposes list_schedules counters for the audit trail.
+func (o listSchedulesOut) auditInfo() []any { return []any{"count", o.Count} }

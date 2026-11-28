@@ -1,0 +1,79 @@
+{{- if .Values.mcpServer.enabled }}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "clamav-operator.fullname" . }}-mcp
+  namespace: {{ .Release.Namespace }}
+  labels:
+    {{- include "clamav-operator.labels" . | nindent 4 }}
+    app.kubernetes.io/component: mcp-server
+spec:
+  replicas: {{ .Values.mcpServer.replicaCount }}
+  selector:
+    matchLabels:
+      {{- include "clamav-operator.selectorLabels" . | nindent 6 }}
+      app.kubernetes.io/component: mcp-server
+  template:
+    metadata:
+      annotations:
+        kubectl.kubernetes.io/default-container: mcp-server
+        {{- with .Values.mcpServer.podAnnotations }}
+        {{- toYaml . | nindent 8 }}
+        {{- end }}
+      labels:
+        {{- include "clamav-operator.labels" . | nindent 8 }}
+        {{- with .Values.mcpServer.podLabels }}
+        {{- toYaml . | nindent 8 }}
+        {{- end }}
+        app.kubernetes.io/component: mcp-server
+    spec:
+      {{- with .Values.mcpServer.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      serviceAccountName: {{ include "clamav-operator.mcpServiceAccountName" . }}
+      securityContext:
+        {{- toYaml .Values.mcpServer.podSecurityContext | nindent 8 }}
+      containers:
+      - name: mcp-server
+        image: {{ include "clamav-operator.mcpImage" . }}
+        imagePullPolicy: {{ .Values.mcpServer.image.pullPolicy }}
+        args:
+        - --transport=http
+        - --http-addr={{ .Values.mcpServer.httpAddr }}
+        - --auth={{ .Values.mcpServer.auth }}
+        {{- if .Values.mcpServer.namespace }}
+        - --namespace={{ .Values.mcpServer.namespace }}
+        {{- end }}
+        ports:
+        - name: http
+          containerPort: {{ regexFind "[0-9]+$" (.Values.mcpServer.httpAddr | default ":8080") }}
+        livenessProbe:
+          httpGet:
+            path: /healthz
+            port: http
+          initialDelaySeconds: 5
+          periodSeconds: 15
+        readinessProbe:
+          httpGet:
+            path: /readyz
+            port: http
+          initialDelaySeconds: 3
+          periodSeconds: 10
+        securityContext:
+          {{- toYaml .Values.mcpServer.securityContext | nindent 10 }}
+        resources:
+          {{- toYaml .Values.mcpServer.resources | nindent 10 }}
+      {{- with .Values.mcpServer.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.mcpServer.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.mcpServer.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+{{- end }}

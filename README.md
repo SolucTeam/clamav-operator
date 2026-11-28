@@ -24,12 +24,16 @@ Please see our [documentation site](https://solucteam.github.io/clamav-operator)
 
 ## 🤖 MCP Server
 
-A read-only [MCP server](docs/mcp-server.md) (`bin/clamav-operator-mcp`) lets AI agents (Claude Code, Claude Desktop, ...) inspect scans, infections, schedules and policies through the Model Context Protocol:
+A read-only [MCP server](docs/book/src/operations/mcp-server.md) (`bin/clamav-operator-mcp`) lets AI agents (Claude Code, Claude Desktop, OpenCode, ...) inspect scans, infections, schedules and policies through the Model Context Protocol:
 
 ```bash
 make build-mcp
 claude mcp add clamav-operator -- ./bin/clamav-operator-mcp
 ```
+
+It can also run as an **in-cluster HTTP service** (`--transport=http`) with
+TokenReview authentication (per-user RBAC), audit logging and a Helm chart
+(`mcpServer.enabled=true`) — see the [MCP documentation](docs/book/src/operations/mcp-server.md).
 
 ## ✨ Features
 
