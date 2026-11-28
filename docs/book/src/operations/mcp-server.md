@@ -88,7 +88,7 @@ subjects:
 
 ### 1. Get a token
 
-See [Token lifetime & renewal](#token-lifetime--renewal) below. Quick start:
+Quick start:
 
 ```bash
 export CLAMAV_MCP_TOKEN=$(kubectl create token mcp-alice -n clamav-system --duration=12h)
