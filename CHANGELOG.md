@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file.
 * feat: MCP server HTTP transport (`--transport=http`) for in-cluster team deployment, with Bearer token authentication via the Kubernetes TokenReview API (per-user RBAC) and `--auth=none` for local dev
 * feat: MCP audit logging — one structured JSON line per tool call (caller identity, arguments, outcome, counters, duration), never containing secrets
 * feat: Helm chart `mcpServer.enabled` — Deployment, Service, dedicated ServiceAccount, read-only Role on the 4 CRDs, `system:auth-delegator` binding, optional Ingress (TLS) and NetworkPolicy
+* docs: HTTP-first onboarding for AI agents (client config, per-user ServiceAccount manifests, token renewal patterns — long-lived token and launch wrapper)
 * build: multi-arch `clamav-operator-mcp` image (`build/Dockerfile.mcp`, distroless), `docker-build-mcp`/`docker-push-mcp` targets, dedicated GHCR CI job
 
 
