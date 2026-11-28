@@ -193,7 +193,7 @@ func (s *Server) getClusterStatus(ctx context.Context, req *mcp.CallToolRequest,
 			continue
 		}
 		if latest == nil ||
-			scan.Status.CompletionTime.Time.After(latest.Status.CompletionTime.Time) {
+			scan.Status.CompletionTime.After(latest.Status.CompletionTime.Time) {
 			latest = scan
 		}
 	}

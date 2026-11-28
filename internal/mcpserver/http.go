@@ -18,6 +18,7 @@ package mcpserver
 
 import (
 	"context"
+	"encoding/json"
 	"fmt"
 	"net/http"
 	"time"
@@ -127,6 +128,11 @@ func handleHealth(w http.ResponseWriter, _ *http.Request) {
 func writeJSONError(w http.ResponseWriter, status int, msg string) {
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(status)
-	// Best effort: nothing useful to do on write failure.
-	_, _ = fmt.Fprintf(w, `{"error":%q}`+"\n", msg)
+	// Encoding through encoding/json keeps the message safe whatever it
+	// contains; nothing useful to do on a marshal failure.
+	payload, err := json.Marshal(map[string]string{"error": msg})
+	if err != nil {
+		return
+	}
+	_, _ = w.Write(append(payload, '\n'))
 }

@@ -79,7 +79,9 @@ func TestHTTP_HealthEndpoints(t *testing.T) {
 	defer ts.Close()
 
 	for _, path := range []string{"/healthz", "/readyz"} {
-		resp, err := http.Get(ts.URL + path)
+		req, err := http.NewRequestWithContext(context.Background(), http.MethodGet, ts.URL+path, nil)
+		require.NoError(t, err)
+		resp, err := http.DefaultClient.Do(req)
 		require.NoError(t, err)
 		defer resp.Body.Close()
 		assert.Equal(t, http.StatusOK, resp.StatusCode, path)
@@ -91,7 +93,7 @@ func TestHTTP_MCP_NoAuthRequiredInNoneMode(t *testing.T) {
 	defer ts.Close()
 
 	body := strings.NewReader(`{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-06-18","capabilities":{},"clientInfo":{"name":"test","version":"0"}}}`)
-	req, _ := http.NewRequest("POST", ts.URL+"/mcp", body)
+	req, _ := http.NewRequestWithContext(context.Background(), http.MethodPost, ts.URL+"/mcp", body)
 	req.Header.Set("Content-Type", "application/json")
 	req.Header.Set("Accept", "application/json, text/event-stream")
 	resp, err := http.DefaultClient.Do(req)
@@ -105,13 +107,15 @@ func TestHTTP_MCP_TokenReview(t *testing.T) {
 	defer ts.Close()
 
 	// Missing Authorization -> 401 before any MCP processing.
-	resp, err := http.Post(ts.URL+"/mcp", "application/json", strings.NewReader("{}"))
+	req, _ := http.NewRequestWithContext(context.Background(), http.MethodPost, ts.URL+"/mcp", strings.NewReader("{}"))
+	req.Header.Set("Content-Type", "application/json")
+	resp, err := http.DefaultClient.Do(req)
 	require.NoError(t, err)
 	assert.Equal(t, http.StatusUnauthorized, resp.StatusCode)
 	resp.Body.Close()
 
 	// Invalid token -> 401.
-	req, _ := http.NewRequest("POST", ts.URL+"/mcp", strings.NewReader("{}"))
+	req, _ = http.NewRequestWithContext(context.Background(), http.MethodPost, ts.URL+"/mcp", strings.NewReader("{}"))
 	req.Header.Set("Authorization", "Bearer bad-token")
 	req.Header.Set("Content-Type", "application/json")
 	resp, err = http.DefaultClient.Do(req)
@@ -120,7 +124,7 @@ func TestHTTP_MCP_TokenReview(t *testing.T) {
 	resp.Body.Close()
 
 	// Valid token -> MCP handshake succeeds.
-	req, _ = http.NewRequest("POST", ts.URL+"/mcp",
+	req, _ = http.NewRequestWithContext(context.Background(), http.MethodPost, ts.URL+"/mcp",
 		strings.NewReader(`{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-06-18","capabilities":{},"clientInfo":{"name":"test","version":"0"}}}`))
 	req.Header.Set("Authorization", "Bearer valid-token")
 	req.Header.Set("Content-Type", "application/json")
@@ -175,7 +179,8 @@ func TestHTTP_MCP_ToolCallEndToEnd(t *testing.T) {
 	require.NotEmpty(t, sessionID, "stateful handler must return a session ID")
 
 	// 2. initialized notification (same session)
-	postJSONSession(t, ts.URL+"/mcp", `{"jsonrpc":"2.0","method":"notifications/initialized"}`, "valid-token", sessionID)
+	notifResp := postJSONSession(t, ts.URL+"/mcp", `{"jsonrpc":"2.0","method":"notifications/initialized"}`, "valid-token", sessionID)
+	notifResp.Body.Close()
 
 	// 3. tools/call (same session) -> audited list_scans against the fake client
 	callResp := postJSONSession(t, ts.URL+"/mcp",
@@ -214,7 +219,7 @@ func postJSON(t *testing.T, url, body, token string) *http.Response {
 
 func postJSONSession(t *testing.T, url, body, token, sessionID string) *http.Response {
 	t.Helper()
-	req, err := http.NewRequest("POST", url, strings.NewReader(body))
+	req, err := http.NewRequestWithContext(context.Background(), http.MethodPost, url, strings.NewReader(body))
 	require.NoError(t, err)
 	req.Header.Set("Authorization", "Bearer "+token)
 	req.Header.Set("Content-Type", "application/json")

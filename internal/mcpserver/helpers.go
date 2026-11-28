@@ -41,8 +41,8 @@ func ageOf(creation time.Time, completion *metav1.Time) string {
 	if creation.IsZero() {
 		return ""
 	}
-	if completion != nil && !completion.Time.IsZero() {
-		return humanizeDuration(completion.Time.Sub(creation))
+	if completion != nil && !completion.IsZero() {
+		return humanizeDuration(completion.Sub(creation))
 	}
 	return humanizeDuration(time.Since(creation))
 }

@@ -108,7 +108,7 @@ func newMCPServer(c client.Client, identity string, fixedNamespace string) *mcp.
 }
 
 // Run serves the MCP server over the stdio transport until the context is
-// cancelled, using the ambient Kubernetes credentials.
+// canceled, using the ambient Kubernetes credentials.
 func Run(ctx context.Context, c client.Client, fixedNamespace string) error {
 	logf := log.Log.WithName("mcp")
 	logf.Info("starting MCP server", "version", version, "transport", "stdio", "namespace", fixedNamespace)
