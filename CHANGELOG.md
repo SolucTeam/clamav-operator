@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## Unreleased
+
+## 🚀 Features
+
+* feat: read-only MCP server (`cmd/mcp-server`) exposing scans, infections, schedules and policies to AI agents (`list_scans`, `get_scan`, `list_infections`, `get_cluster_status`, `list_schedules`, `list_policies`)
+* feat: MCP server HTTP transport (`--transport=http`) for in-cluster team deployment, with Bearer token authentication via the Kubernetes TokenReview API (per-user RBAC) and `--auth=none` for local dev
+* feat: MCP audit logging — one structured JSON line per tool call (caller identity, arguments, outcome, counters, duration), never containing secrets
+* feat: Helm chart `mcpServer.enabled` — Deployment, Service, dedicated ServiceAccount, read-only Role on the 4 CRDs, `system:auth-delegator` binding, optional Ingress (TLS) and NetworkPolicy
+* docs: HTTP-first onboarding for AI agents (client config, per-user ServiceAccount manifests)
+* build: multi-arch `clamav-operator-mcp` image (`build/Dockerfile.mcp`, distroless), `docker-build-mcp`/`docker-push-mcp` targets, dedicated GHCR CI job
+
 
 ## [v0.10.0] - 2026-11-09
 

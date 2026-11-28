@@ -4,6 +4,7 @@
 # Builds two images:
 #   1. clamav-operator        — Go operator (build/Dockerfile)
 #   2. clamav-node-scanner    — Node.js standalone scanner (scanner/Dockerfile)
+#   3. clamav-operator-mcp    — Go read-only MCP server (build/Dockerfile.mcp)
 #
 # Triggers:
 #   • push to main / release branches  → build + push (latest tag)
@@ -91,6 +92,7 @@ env:
   REGISTRY: ghcr.io
   OPERATOR_IMAGE: ghcr.io/${{ github.repository_owner }}/clamav-operator
   SCANNER_IMAGE: ghcr.io/${{ github.repository_owner }}/clamav-node-scanner
+  MCP_IMAGE: ghcr.io/${{ github.repository_owner }}/clamav-operator-mcp
 
 jobs:
   # ===========================================================================
@@ -208,7 +210,81 @@ jobs:
           echo '```' >> $GITHUB_STEP_SUMMARY
 
   # ===========================================================================
-  # Job 3 — Build & Push: clamav-node-scanner (Node.js + ClamAV standalone)
+  # Job 3 — Build & Push: clamav-operator-mcp (Go read-only MCP server)
+  # ===========================================================================
+  build-mcp:
+    name: "Build: clamav-operator-mcp"
+    runs-on: ubuntu-latest
+    needs: test
+    outputs:
+      image_digest: ${{ steps.build-push.outputs.digest }}
+      image_tags: ${{ steps.meta.outputs.tags }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      # ── Docker meta ───────────────────────────────────────────────────────
+      - name: Docker meta
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.MCP_IMAGE }}
+          tags: |
+            type=ref,event=branch
+            type=ref,event=pr
+            type=semver,pattern={{version}},value=${{ inputs.release_tag }},enable=${{ inputs.release_tag != '' }}
+            type=semver,pattern={{major}}.{{minor}},value=${{ inputs.release_tag }},enable=${{ inputs.release_tag != '' }}
+            type=semver,pattern={{major}},value=${{ inputs.release_tag }},enable=${{ inputs.release_tag != '' }}
+            type=sha,prefix=sha-
+            type=raw,value=latest,enable=${{ github.ref == 'refs/heads/main' || inputs.release_tag != '' }}
+
+      # ── Buildx setup ─────────────────────────────────────────────────────
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      # ── Registry login ───────────────────────────────────────────────────
+      - name: Login to GHCR
+        if: github.event_name != 'pull_request'
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      # ── Build & push ─────────────────────────────────────────────────────
+      - name: Build and push MCP server image
+        id: build-push
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: build/Dockerfile.mcp
+          platforms: linux/amd64,linux/arm64
+          push: ${{ github.event_name != 'pull_request' && (github.event_name != 'workflow_dispatch' || github.event.inputs.push_images == 'true') }}
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=gha,scope=mcp
+          cache-to: type=gha,mode=max,scope=mcp
+          build-args: |
+            TARGETOS=linux
+            VERSION=${{ inputs.release_tag || github.sha }}
+
+      # ── Summary ──────────────────────────────────────────────────────────
+      - name: Image summary
+        run: |
+          echo "## MCP Server Image" >> $GITHUB_STEP_SUMMARY
+          echo "**Digest:** \`${{ steps.build-push.outputs.digest }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "**Tags:**" >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+          echo "${{ steps.meta.outputs.tags }}" >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+
+  # ===========================================================================
+  # Job 4 — Build & Push: clamav-node-scanner (Node.js + ClamAV standalone)
   # ===========================================================================
   build-scanner:
     name: "Build: clamav-node-scanner"

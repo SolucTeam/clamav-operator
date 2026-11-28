@@ -1,6 +1,7 @@
 # Image URL to use all building/pushing image targets
 IMG ?= registry.tooling.cloudgouv-eu-west-1.numspot.cloud/platform-iac/clamav-operator:latest
 SCANNER_IMG ?= ghcr.io/solucteam/clamav-node-scanner:latest
+MCP_IMG ?= ghcr.io/solucteam/clamav-operator-mcp:latest
 
 # ENVTEST_K8S_VERSION refers to the version of kubebuilder assets to be downloaded by envtest binary.
 ENVTEST_K8S_VERSION = 1.29.0
@@ -86,10 +87,13 @@ lint-fix: golangci-lint ## Run golangci-lint linter and perform fixes
 build: manifests generate fmt vet ## Build manager binary.
 	go build -o bin/manager cmd/manager/main.go
 
+.PHONY: build-mcp
+build-mcp: ## Build the read-only MCP server binary.
+	go build -ldflags "-X main.mcpVersion=$(VERSION)" -o bin/clamav-operator-mcp ./cmd/mcp-server
+
 .PHONY: run
 run: manifests generate fmt vet ## Run a controller from your host.
 	go run ./cmd/manager/main.go
-
 # If you wish to build the manager image targeting other platforms you can use the --platform flag.
 # (i.e. docker build --platform linux/arm64). However, you must enable docker buildKit for it.
 # More info: https://docs.docker.com/develop/develop-images/build_enhancements/
@@ -112,6 +116,14 @@ docker-build-scanner-airgap: ## Build scanner image without downloading signatur
 .PHONY: docker-push-scanner
 docker-push-scanner: ## Push the standalone scanner image.
 	$(CONTAINER_TOOL) push ${SCANNER_IMG}
+
+.PHONY: docker-build-mcp
+docker-build-mcp: ## Build the MCP server image (multi-arch ready via buildx).
+	$(CONTAINER_TOOL) build --build-arg VERSION=$(VERSION) -t ${MCP_IMG} -f build/Dockerfile.mcp .
+
+.PHONY: docker-push-mcp
+docker-push-mcp: ## Push the MCP server image.
+	$(CONTAINER_TOOL) push ${MCP_IMG}
 
 .PHONY: docker-build-all
 docker-build-all: docker-build docker-build-scanner ## Build all docker images (operator + scanner).
@@ -181,6 +193,7 @@ KUSTOMIZE_VERSION ?= v5.3.0
 CONTROLLER_TOOLS_VERSION ?= v0.17.0
 ENVTEST_VERSION ?= release-0.17
 GOLANGCI_LINT_VERSION ?= v2.12.2
+VERSION ?= $(shell git describe --tags --always --dirty 2>/dev/null || echo dev)
 
 .PHONY: kustomize
 kustomize: $(KUSTOMIZE) ## Download kustomize locally if necessary.

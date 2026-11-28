@@ -1,0 +1,61 @@
+{{- if and .Values.mcpServer.enabled .Values.mcpServer.rbac.create }}
+{{- /* Read-only access to the operator CRDs, scoped to the release namespace. */ -}}
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: {{ include "clamav-operator.fullname" . }}-mcp-reader
+  namespace: {{ .Release.Namespace }}
+  labels:
+    {{- include "clamav-operator.labels" . | nindent 4 }}
+    app.kubernetes.io/component: mcp-server
+rules:
+- apiGroups:
+  - clamav.io
+  resources:
+  - nodescans
+  - clusterscans
+  - scanschedules
+  - scanpolicies
+  verbs:
+  - get
+  - list
+  - watch
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: {{ include "clamav-operator.fullname" . }}-mcp-reader
+  namespace: {{ .Release.Namespace }}
+  labels:
+    {{- include "clamav-operator.labels" . | nindent 4 }}
+    app.kubernetes.io/component: mcp-server
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: {{ include "clamav-operator.fullname" . }}-mcp-reader
+subjects:
+- kind: ServiceAccount
+  name: {{ include "clamav-operator.mcpServiceAccountName" . }}
+  namespace: {{ .Release.Namespace }}
+{{- if eq .Values.mcpServer.auth "tokenreview" }}
+---
+{{- /* TokenReview delegation: lets the MCP server validate callers'
+tokens. ClusterRoleBinding required — system:auth-delegator is
+cluster-scoped by design. */ -}}
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: {{ include "clamav-operator.fullname" . }}-mcp-auth-delegator
+  labels:
+    {{- include "clamav-operator.labels" . | nindent 4 }}
+    app.kubernetes.io/component: mcp-server
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: system:auth-delegator
+subjects:
+- kind: ServiceAccount
+  name: {{ include "clamav-operator.mcpServiceAccountName" . }}
+  namespace: {{ .Release.Namespace }}
+{{- end }}
+{{- end }}

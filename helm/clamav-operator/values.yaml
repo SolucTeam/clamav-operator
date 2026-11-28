@@ -1024,3 +1024,97 @@ volumes: []
 
 # Additional volume mounts
 volumeMounts: []
+
+# =============================================================================
+# MCP SERVER (read-only MCP endpoint for AI agents)
+# =============================================================================
+# Deploys the clamav-operator-mcp sidecar-free binary as a separate
+# Deployment exposing a Streamable HTTP MCP endpoint. Strictly read-only.
+# Callers authenticate with a Kubernetes Bearer token validated via the
+# TokenReview API; every request then runs under the caller's own RBAC.
+mcpServer:
+  # Enable the MCP server deployment (default false: opt-in component).
+  enabled: false
+
+  replicaCount: 1
+
+  image:
+    repository: ghcr.io/solucteam/clamav-operator-mcp
+    pullPolicy: IfNotPresent
+    # Overrides the image tag whose default is the chart appVersion.
+    tag: ""
+
+  # Listen address inside the container.
+  httpAddr: ":8080"
+
+  # Caller authentication:
+  #   tokenreview — Bearer token validated via TokenReview (recommended).
+  #     Requires system:auth-delegator on the MCP ServiceAccount (created
+  #     automatically below when mcpServer.rbac.create is true).
+  #   none       — no caller authentication: requests run with the pod's
+  #     ServiceAccount credentials. Only for local dev behind a port-forward.
+  auth: tokenreview
+
+  # Restrict every tool to a single namespace. Empty = all namespaces the
+  # caller's RBAC allows.
+  namespace: ""
+
+  serviceAccount:
+    create: true
+    name: ""
+    automount: true
+
+  # RBAC for the MCP server: read-only on the operator CRDs, plus
+  # system:auth-delegator (needed for TokenReview when auth=tokenreview).
+  rbac:
+    create: true
+
+  service:
+    type: ClusterIP
+    port: 8080
+
+  # Optional Ingress in front of the MCP endpoint (TLS recommended).
+  # Use an LB/sticky session or keep 1 replica: MCP Streamable HTTP sessions
+  # are stateful (Mcp-Session-Id header must land on the same pod).
+  ingress:
+    enabled: false
+    className: nginx
+    annotations:
+      cert-manager.io/cluster-issuer: letsencrypt-prod
+    host: mcp.clamav.example.com
+    tls:
+      enabled: true
+      secretName: clamav-operator-mcp-tls
+
+  # NetworkPolicy: by default the MCP pod may only talk to the Kubernetes
+  # API server (TokenReview + CRD reads). Ingress is handled separately.
+  networkPolicy:
+    enabled: true
+
+  resources:
+    requests:
+      cpu: 50m
+      memory: 64Mi
+    limits:
+      cpu: 200m
+      memory: 128Mi
+
+  podAnnotations: {}
+  podLabels: {}
+  nodeSelector: {}
+  tolerations: []
+  affinity: {}
+
+  # Security context (same hardening as the operator).
+  podSecurityContext:
+    runAsNonRoot: true
+    seccompProfile:
+      type: RuntimeDefault
+  securityContext:
+    allowPrivilegeEscalation: false
+    capabilities:
+      drop:
+      - ALL
+    readOnlyRootFilesystem: true
+    runAsNonRoot: true
+    runAsUser: 65532

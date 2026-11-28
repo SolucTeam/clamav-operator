@@ -22,6 +22,22 @@ It reconciles a set of custom resources (`NodeScan`, `ClusterScan`, `ScanSchedul
 
 Please see our [documentation site](https://solucteam.github.io/clamav-operator) for in-depth documentation.
 
+## 🤖 MCP Server
+
+A read-only [MCP server](docs/book/src/operations/mcp-server.md) lets AI agents (Claude Code, Claude Desktop, OpenCode, ...) inspect scans, infections, schedules and policies through the Model Context Protocol.
+
+Deployed **in-cluster as a shared team service** (HTTP + TokenReview, per-user RBAC, audit logging):
+
+```yaml
+mcpServer:
+  enabled: true
+  ingress:
+    enabled: true
+    host: mcp.clamav.example.com
+```
+
+Users connect their MCP client to `https://mcp.clamav.example.com/mcp` with a Kubernetes token — no local build, no agent kubeconfig needed.
+
 ## ✨ Features
 
 - **Standalone mode** — `clamscan` + signatures embedded in the scanner image; no central ClamAV service, no single point of failure

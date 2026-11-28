@@ -1,0 +1,53 @@
+{{- if and .Values.mcpServer.enabled .Values.mcpServer.networkPolicy.enabled }}
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: {{ include "clamav-operator.fullname" . }}-mcp
+  namespace: {{ .Release.Namespace }}
+  labels:
+    {{- include "clamav-operator.labels" . | nindent 4 }}
+    app.kubernetes.io/component: mcp-server
+spec:
+  podSelector:
+    matchLabels:
+      {{- include "clamav-operator.selectorLabels" . | nindent 6 }}
+      app.kubernetes.io/component: mcp-server
+  policyTypes:
+  - Ingress
+  - Egress
+  ingress:
+  # From inside the cluster namespace (prometheus scraping, port-forward,
+  # ingress controller if it runs in this namespace). Cross-namespace
+  # ingress (e.g. shared nginx) can be added per environment.
+  - from:
+    - podSelector: {}
+  egress:
+  # Kubernetes API server only: TokenReview + CRD reads.
+  - to:
+    {{- if .Values.controlPlaneCIDR }}
+    - ipBlock:
+        cidr: {{ .Values.controlPlaneCIDR }}
+    {{- else }}
+    # Fallback: allow egress to any IPv4 but only on HTTPS — the CNI may
+    # not expose the API server IPs as a label. Tighten per environment.
+    - ipBlock:
+        cidr: 0.0.0.0/0
+        except:
+        - 10.0.0.0/8
+        - 172.16.0.0/12
+        - 192.168.0.0/16
+    {{- end }}
+    ports:
+    - protocol: TCP
+      port: 443
+  # DNS for service discovery.
+  - to:
+    - namespaceSelector:
+        matchLabels:
+          kubernetes.io/metadata.name: kube-system
+    ports:
+    - protocol: UDP
+      port: 53
+    - protocol: TCP
+      port: 53
+{{- end }}
