@@ -140,8 +140,7 @@ to this dedicated ServiceAccount.
 
 ## Token lifetime & renewal
 
-Kubernetes tokens are short-lived by design. Three supported patterns, from simplest
-to most automated:
+Kubernetes tokens are short-lived by design. Two supported options:
 
 ### Option 1 — Long-lived token (documented shortcut)
 
